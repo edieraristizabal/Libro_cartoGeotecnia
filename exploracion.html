@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Taller 2 &#8212; Cartografía Geotécnica</title>
+    <title>Análisis exploratorio de variables &#8212; Cartografía Geotécnica</title>
     
   <link href="_static/css/theme.css" rel="stylesheet">
   <link href="_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -51,8 +51,8 @@
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Taller 3" href="heuristico.html" />
-    <link rel="prev" title="TALLER 1" href="inventario.html" />
+    <link rel="next" title="Métodos basados en el conocimiento" href="heuristico.html" />
+    <link rel="prev" title="Inventario de movimientos en masa" href="inventario.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -92,34 +92,39 @@
         <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="intro.html">
-   Welcome to your Jupyter Book
+   Cartografía Geotécnica
   </a>
  </li>
 </ul>
 <ul class="current nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="inventario.html">
-   TALLER 1
+   Inventario de movimientos en masa
   </a>
  </li>
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   Taller 2
+   Análisis exploratorio de variables
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="heuristico.html">
-   Taller 3
+   Métodos basados en el conocimiento
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="bivariado.html">
-   Taller 4
+   Métodos basados en datos
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="regresionLogistica.html">
+   Métodos basados en datos
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="machinelearning.html">
-   Taller 5
+   Métodos basados en datos
   </a>
  </li>
 </ul>
@@ -263,7 +268,7 @@
         <div class="col-12 col-md-9 pl-md-3 pr-md-0">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Taller 2</h1>
+                <h1>Análisis exploratorio de variables</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -309,8 +314,8 @@
             
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="taller-2">
-<h1>Taller 2<a class="headerlink" href="#taller-2" title="Permalink to this headline">¶</a></h1>
+  <div class="tex2jax_ignore mathjax_ignore section" id="analisis-exploratorio-de-variables">
+<h1>Análisis exploratorio de variables<a class="headerlink" href="#analisis-exploratorio-de-variables" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="objetivos">
 <h2>Objetivos<a class="headerlink" href="#objetivos" title="Permalink to this headline">¶</a></h2>
 <p>Levantamiento de las variables predictoras, y selección de las mejores variables acorde al modelo.</p>
@@ -355,7 +360,7 @@
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
-<span class="o">~</span>\<span class="n">AppData</span>\<span class="n">Local</span>\<span class="n">Temp</span><span class="o">/</span><span class="n">ipykernel_37284</span><span class="o">/</span><span class="mf">299852370.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="o">~</span>\<span class="n">AppData</span>\<span class="n">Local</span>\<span class="n">Temp</span><span class="o">/</span><span class="n">ipykernel_44528</span><span class="o">/</span><span class="mf">299852370.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <span class="ne">----&gt; </span><span class="mi">1</span> <span class="kn">import</span> <span class="nn">rasterio</span> <span class="k">as</span> <span class="nn">rio</span>
 <span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="kn">from</span> <span class="nn">rasterio.plot</span> <span class="kn">import</span> <span class="n">show</span>
 <span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
@@ -1512,13 +1517,13 @@ geologia
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">TALLER 1</p>
+            <p class="prev-next-title">Inventario de movimientos en masa</p>
         </div>
     </a>
     <a class='right-next' id="next-link" href="heuristico.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Taller 3</p>
+        <p class="prev-next-title">Métodos basados en el conocimiento</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>

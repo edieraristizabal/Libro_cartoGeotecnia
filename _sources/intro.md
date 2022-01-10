@@ -1,16 +1,10 @@
-# Welcome to your Jupyter Book
-
-This is a small sample book to give you a feel for how book content is
-structured.
+# Cartografía Geotécnica
+### Evaluación y zonificación de la susceptibilidad y amenaza por movimientos en masa
 
 :::{note}
-Here is a note!
+Este libro se encuentra en construcción, por lo tanto su contenido se encuentra en constante cambio y ajuste.
 :::
 
-And here is a code block:
+El presente libro corresponde al contenido del curso de Cartografía Geotécnica de la Universidad Nacional de Colombia, sede Medellín; dictado por el profesor Edier Aristizábal del Departamento de Geociencias y Medio Ambiente de la Facultad de Minas.
 
-```
-e = mc^2
-```
 
-Check out the content pages bundled with this sample book to see more.
