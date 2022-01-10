@@ -313,16 +313,34 @@
 <h1>TALLER 1<a class="headerlink" href="#taller-1" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="objetivos">
 <h2>Objetivos<a class="headerlink" href="#objetivos" title="Permalink to this headline">¶</a></h2>
+<p>Elaborar el inventario de movimientos en masa y/o avenidas torrenciales en el área de estudio.</p>
 </div>
 <div class="section" id="alcance">
 <h2>Alcance<a class="headerlink" href="#alcance" title="Permalink to this headline">¶</a></h2>
+<p>El equipo deberá elaborar el inventario de eventos, el cual corresponde a la variable dependiente del modelo a construir,  combinando diferentes técnicas descritas en la clase teórica.</p>
+<ul class="simple">
+<li><p>Inventario histórico</p></li>
+<li><p>Fotografías aéreas</p></li>
+<li><p>Imágenes satelitales</p></li>
+<li><p>Modelos digitales de elevación</p></li>
+</ul>
 </div>
 <div class="section" id="actividades-a-realizar">
 <h2>Actividades a realizar<a class="headerlink" href="#actividades-a-realizar" title="Permalink to this headline">¶</a></h2>
+<ol class="simple">
+<li><p>El estudiante deberá seleccionar una cuenca como zona de estudio. Para fines pedagógicos se recomienda realizar la búsqueda en una cuenca que no esté muy intervenida antrópicamente.</p></li>
+<li><p>En la cuenca seleccionada el estudiante deberá realizar un inventario histórico de movimientos en masa, utilizando herramientas como bases de datos (DESINVENTAR, SIMMA), oficinas locales de gestión del riesgo, periódicos y medios locales. Dichos eventos deberán ser localizados especial y temporalmente en la cartografía base de la cuenca al mayor detalle existente.</p></li>
+<li><p>También deberá realizar una búsqueda de fotografías aéreas de la cuenca de estudio, y la fotointerpretación de movimientos en masa. Para esto se deberán utilizar fotografías escalas detalladas que permitan identificar los eventos y cicatrices.</p></li>
+<li><p>El inventario también deberá incluir el uso de imágenes de satélite, tipo LANDSAT, SPOT, ortofotos, y demás imágenes disponibles y útiles a la escala de trabajo. En esta parte se recomienda la exploración de la herramienta de Google Earth Engine.</p></li>
+<li><p>Como parte del levantamiento del inventario de eventos se deberá utilizar la herramienta Geoogle Earth para el levantamiento del inventario y para su digitalización.</p></li>
+<li><p>Finalmente se deberá digitalizar dicho levantamiento y entregar un mapa formato raster del inventario.</p></li>
+</ol>
 </div>
 </div>
 <div class="tex2jax_ignore mathjax_ignore section" id="python">
 <h1>Python<a class="headerlink" href="#python" title="Permalink to this headline">¶</a></h1>
+<p>A continuación se presenta como se pueden importar y manipular el mapa raster del inventario de eventos en python:</p>
+<p>Primero se deben importar los modulos que se necesitan. La libreria denominada rasterio sirve para importar y trabajar con mapas tipo raster, y numpy para trabajar con matrices y métodos matemáticos. la funcion %matplotlib funciona para mostrar las figuras en los archivos de Jupiter.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">rasterio</span> <span class="k">as</span> <span class="nn">rio</span>
@@ -336,7 +354,7 @@
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
-<span class="o">~</span>\<span class="n">AppData</span>\<span class="n">Local</span>\<span class="n">Temp</span><span class="o">/</span><span class="n">ipykernel_26332</span><span class="o">/</span><span class="mf">3104719158.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="o">~</span>\<span class="n">AppData</span>\<span class="n">Local</span>\<span class="n">Temp</span><span class="o">/</span><span class="n">ipykernel_40024</span><span class="o">/</span><span class="mf">3104719158.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <span class="ne">----&gt; </span><span class="mi">1</span> <span class="kn">import</span> <span class="nn">rasterio</span> <span class="k">as</span> <span class="nn">rio</span>
 <span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="kn">from</span> <span class="nn">rasterio.plot</span> <span class="kn">import</span> <span class="n">show</span>

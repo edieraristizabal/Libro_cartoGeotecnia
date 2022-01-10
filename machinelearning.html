@@ -338,12 +338,15 @@
 <h1>Taller 5<a class="headerlink" href="#taller-5" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="objetivos">
 <h2>Objetivos<a class="headerlink" href="#objetivos" title="Permalink to this headline">¶</a></h2>
+<p>Implementar los diferentes métodos de Machine Learning en Python utilizados para la evaluación de la susceptibilidad por movimientos en masa.</p>
 </div>
 <div class="section" id="actividades-a-realizar">
 <h2>Actividades a realizar<a class="headerlink" href="#actividades-a-realizar" title="Permalink to this headline">¶</a></h2>
+<p>Cada grupo deberá implementar al menos tres métodos de machine learning y comparar los resultados obtenidos.</p>
 </div>
 <div class="section" id="python">
 <h2>Python<a class="headerlink" href="#python" title="Permalink to this headline">¶</a></h2>
+<p>Como primer paso se deben importar algunas librerias con las funciones generales que se utilizarán. Las funciones específicas de cada método se importarán en su momento.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
@@ -360,7 +363,7 @@
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
-<span class="o">~</span>\<span class="n">AppData</span>\<span class="n">Local</span>\<span class="n">Temp</span><span class="o">/</span><span class="n">ipykernel_43768</span><span class="o">/</span><span class="mf">3319729417.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="o">~</span>\<span class="n">AppData</span>\<span class="n">Local</span>\<span class="n">Temp</span><span class="o">/</span><span class="n">ipykernel_26572</span><span class="o">/</span><span class="mf">3319729417.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <span class="ne">----&gt; </span><span class="mi">1</span> <span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
 <span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
 <span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
@@ -372,6 +375,7 @@
 </div>
 </div>
 </div>
+<p>Posteriormente se deben importar los mapas de las variables predictoras a utilizar. En este caso se utilizará la libreria de gdal y solo se utilizarán variables morfométricas. Cada grupo deberá importar todas las variables del an´slisis de selección de variables.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">driver</span> <span class="o">=</span> <span class="n">gdal</span><span class="o">.</span><span class="n">GetDriverByName</span><span class="p">(</span><span class="s1">&#39;GTiff&#39;</span><span class="p">)</span>
@@ -421,6 +425,7 @@
 </div>
 </div>
 </div>
+<p>Lugo se debe construir un dataframe con los vectores de cada variable, y separando el dataframe para las variables independientes (predictoras) y un vector con la variable dependiente (inventario). Tambien se crea un dataframe con los vectores de cada variable incluyendo todas las celdas del mapa, es decir las NaN.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Dataframe con las variables filtradas </span>
