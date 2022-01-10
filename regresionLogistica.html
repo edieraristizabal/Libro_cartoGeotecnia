@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Métodos basados en datos &#8212; Cartografía Geotécnica</title>
+    <title>Métodos basados en datos -Regresión logística- &#8212; Cartografía Geotécnica</title>
     
   <link href="_static/css/theme.css" rel="stylesheet">
   <link href="_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -51,8 +51,8 @@
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Métodos basados en datos" href="machinelearning.html" />
-    <link rel="prev" title="Métodos basados en datos" href="bivariado.html" />
+    <link rel="next" title="Métodos basados en datos -machine learning-" href="machinelearning.html" />
+    <link rel="prev" title="Métodos basados en datos -bivariados-" href="bivariado.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -114,17 +114,21 @@
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="bivariado.html">
-   Métodos basados en datos
+   Métodos basados en datos -bivariados-
   </a>
  </li>
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   Métodos basados en datos
+   Métodos basados en datos -Regresión logística-
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="machinelearning.html">
-   Métodos basados en datos
+   Métodos basados en datos -
+   <em>
+    machine learning
+   </em>
+   -
   </a>
  </li>
 </ul>
@@ -232,11 +236,6 @@
             <nav id="bd-toc-nav" aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#regresion-logistica-metodos-estadisticos-multivariados">
-   Regresion Logística -Métodos estadísticos multivariados-
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#objetivo">
    Objetivo
   </a>
@@ -273,7 +272,7 @@
         <div class="col-12 col-md-9 pl-md-3 pr-md-0">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Métodos basados en datos</h1>
+                <h1>Métodos basados en datos -Regresión logística-</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -283,11 +282,6 @@
                         </div>
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#regresion-logistica-metodos-estadisticos-multivariados">
-   Regresion Logística -Métodos estadísticos multivariados-
-  </a>
- </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#objetivo">
    Objetivo
@@ -324,11 +318,8 @@
             
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="metodos-basados-en-datos">
-<h1>Métodos basados en datos<a class="headerlink" href="#metodos-basados-en-datos" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="regresion-logistica-metodos-estadisticos-multivariados">
-<h2>Regresion Logística -Métodos estadísticos multivariados-<a class="headerlink" href="#regresion-logistica-metodos-estadisticos-multivariados" title="Permalink to this headline">¶</a></h2>
-</div>
+  <div class="tex2jax_ignore mathjax_ignore section" id="metodos-basados-en-datos-regresion-logistica">
+<h1>Métodos basados en datos -Regresión logística-<a class="headerlink" href="#metodos-basados-en-datos-regresion-logistica" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="objetivo">
 <h2>Objetivo<a class="headerlink" href="#objetivo" title="Permalink to this headline">¶</a></h2>
 <p>En el presente taller tiene como objetivo implementar en python el metodo estadístico multivariado denominado Regresión Logística</p>
@@ -361,7 +352,7 @@
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
-<span class="o">~</span>\<span class="n">AppData</span>\<span class="n">Local</span>\<span class="n">Temp</span><span class="o">/</span><span class="n">ipykernel_25924</span><span class="o">/</span><span class="mf">1728708192.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="o">~</span>\<span class="n">AppData</span>\<span class="n">Local</span>\<span class="n">Temp</span><span class="o">/</span><span class="n">ipykernel_26496</span><span class="o">/</span><span class="mf">1728708192.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <span class="ne">----&gt; </span><span class="mi">1</span> <span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
 <span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
 <span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
@@ -537,11 +528,11 @@ C:\Users\Edier\Anaconda3\envs\edier\lib\site-packages\numpy\core\_methods.py:26:
   return umr_maximum(a, axis, None, out, keepdims)
 </pre></div>
 </div>
-<img alt="_images/regresionLogistica_16_1.png" src="_images/regresionLogistica_16_1.png" />
-<img alt="_images/regresionLogistica_16_2.png" src="_images/regresionLogistica_16_2.png" />
-<img alt="_images/regresionLogistica_16_3.png" src="_images/regresionLogistica_16_3.png" />
-<img alt="_images/regresionLogistica_16_4.png" src="_images/regresionLogistica_16_4.png" />
-<img alt="_images/regresionLogistica_16_5.png" src="_images/regresionLogistica_16_5.png" />
+<img alt="_images/regresionLogistica_15_1.png" src="_images/regresionLogistica_15_1.png" />
+<img alt="_images/regresionLogistica_15_2.png" src="_images/regresionLogistica_15_2.png" />
+<img alt="_images/regresionLogistica_15_3.png" src="_images/regresionLogistica_15_3.png" />
+<img alt="_images/regresionLogistica_15_4.png" src="_images/regresionLogistica_15_4.png" />
+<img alt="_images/regresionLogistica_15_5.png" src="_images/regresionLogistica_15_5.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -1159,7 +1150,7 @@ weighted avg       0.97      0.68      0.79     79248
 <span class="ne">TypeError</span>: &#39;str&#39; object is not callable
 </pre></div>
 </div>
-<img alt="_images/regresionLogistica_41_1.png" src="_images/regresionLogistica_41_1.png" />
+<img alt="_images/regresionLogistica_40_1.png" src="_images/regresionLogistica_40_1.png" />
 </div>
 </div>
 <div class="section" id="capacidad-de-prediccion">
@@ -1217,7 +1208,7 @@ weighted avg       0.97      0.68      0.78     19812
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0.7, 0.1, &#39;AUC=0.8052%&#39;)
 </pre></div>
 </div>
-<img alt="_images/regresionLogistica_45_1.png" src="_images/regresionLogistica_45_1.png" />
+<img alt="_images/regresionLogistica_44_1.png" src="_images/regresionLogistica_44_1.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -1258,7 +1249,7 @@ C:\Users\usuario\.conda\envs\ml\lib\site-packages\sklearn\utils\optimize.py:204:
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/regresionLogistica_48_0.png" src="_images/regresionLogistica_48_0.png" />
+<img alt="_images/regresionLogistica_47_0.png" src="_images/regresionLogistica_47_0.png" />
 </div>
 </div>
 </div>
@@ -1388,13 +1379,13 @@ C:\Users\usuario\.conda\envs\ml\lib\site-packages\sklearn\utils\optimize.py:204:
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Métodos basados en datos</p>
+            <p class="prev-next-title">Métodos basados en datos -bivariados-</p>
         </div>
     </a>
     <a class='right-next' id="next-link" href="machinelearning.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Métodos basados en datos</p>
+        <p class="prev-next-title">Métodos basados en datos -<em>machine learning</em>-</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>

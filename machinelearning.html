@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Métodos basados en datos &#8212; Cartografía Geotécnica</title>
+    <title>Métodos basados en datos -machine learning- &#8212; Cartografía Geotécnica</title>
     
   <link href="_static/css/theme.css" rel="stylesheet">
   <link href="_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -51,7 +51,7 @@
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="prev" title="Métodos basados en datos" href="regresionLogistica.html" />
+    <link rel="prev" title="Métodos basados en datos -Regresión logística-" href="regresionLogistica.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -113,17 +113,21 @@
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="bivariado.html">
-   Métodos basados en datos
+   Métodos basados en datos -bivariados-
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="regresionLogistica.html">
-   Métodos basados en datos
+   Métodos basados en datos -Regresión logística-
   </a>
  </li>
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   Métodos basados en datos
+   Métodos basados en datos -
+   <em>
+    machine learning
+   </em>
+   -
   </a>
  </li>
 </ul>
@@ -231,15 +235,6 @@
             <nav id="bd-toc-nav" aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#metodos-de-aprendizaje-automatico-de-maquinas-machine-learning">
-   Métodos de aprendizaje automático de máquinas (
-   <em>
-    machine learning
-   </em>
-   )
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#objetivos">
    Objetivos
   </a>
@@ -289,7 +284,7 @@
         <div class="col-12 col-md-9 pl-md-3 pr-md-0">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Métodos basados en datos</h1>
+                <h1>Métodos basados en datos -machine learning-</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -299,15 +294,6 @@
                         </div>
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#metodos-de-aprendizaje-automatico-de-maquinas-machine-learning">
-   Métodos de aprendizaje automático de máquinas (
-   <em>
-    machine learning
-   </em>
-   )
-  </a>
- </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#objetivos">
    Objetivos
@@ -357,11 +343,8 @@
             
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="metodos-basados-en-datos">
-<h1>Métodos basados en datos<a class="headerlink" href="#metodos-basados-en-datos" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="metodos-de-aprendizaje-automatico-de-maquinas-machine-learning">
-<h2>Métodos de aprendizaje automático de máquinas (<em>machine learning</em>)<a class="headerlink" href="#metodos-de-aprendizaje-automatico-de-maquinas-machine-learning" title="Permalink to this headline">¶</a></h2>
-</div>
+  <div class="tex2jax_ignore mathjax_ignore section" id="metodos-basados-en-datos-machine-learning">
+<h1>Métodos basados en datos -<em>machine learning</em>-<a class="headerlink" href="#metodos-basados-en-datos-machine-learning" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="objetivos">
 <h2>Objetivos<a class="headerlink" href="#objetivos" title="Permalink to this headline">¶</a></h2>
 <p>Implementar los diferentes métodos de Machine Learning en Python utilizados para la evaluación de la susceptibilidad por movimientos en masa.</p>
@@ -389,7 +372,7 @@
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
-<span class="o">~</span>\<span class="n">AppData</span>\<span class="n">Local</span>\<span class="n">Temp</span><span class="o">/</span><span class="n">ipykernel_36932</span><span class="o">/</span><span class="mf">3319729417.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="o">~</span>\<span class="n">AppData</span>\<span class="n">Local</span>\<span class="n">Temp</span><span class="o">/</span><span class="n">ipykernel_34448</span><span class="o">/</span><span class="mf">3319729417.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <span class="ne">----&gt; </span><span class="mi">1</span> <span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
 <span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
 <span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
@@ -714,7 +697,7 @@ Variable: flujo_acum           Importance: 0.06
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/machinelearning_26_0.png" src="_images/machinelearning_26_0.png" />
+<img alt="_images/machinelearning_25_0.png" src="_images/machinelearning_25_0.png" />
 </div>
 </div>
 </div>
@@ -749,7 +732,7 @@ Variable: flujo_acum           Importance: 0.06
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Métodos basados en datos</p>
+            <p class="prev-next-title">Métodos basados en datos -Regresión logística-</p>
         </div>
     </a>
 </div>
