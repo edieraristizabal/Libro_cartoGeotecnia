@@ -1,1 +1,20 @@
-theme: jekyll-theme-minimal
+# Site wide configuration
+
+title: Libro Cartografía Geotécnica
+locale: Colombia
+logo: # filename of a logo image that has been placed into your images directory
+
+# Enter the following platform usernames if you would like for them to appear on your site.
+owner:
+  name: Edier Aristizábal
+  avatar: 
+  bio: "Libro del curso Cartografía Geotécnica"
+  email: evaristizabalg@unal.edu.edu
+  github: edieraristizabal
+  orcid: 0000-0002-2648-2197
+  researchgate: Edier-Aristizabal
+  google:
+    plus: 
+    analytics:
+    verify:
+    scholar: jelk50QAAAAJ
