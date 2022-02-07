@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Análisis exploratorio de variables &#8212; Cartografía Geotécnica</title>
+    <title>Análisis exploratorio y selección de variables &#8212; Cartografía Geotécnica</title>
     
   <link href="_static/css/theme.css" rel="stylesheet">
   <link href="_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -52,7 +52,7 @@
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Métodos basados en el conocimiento" href="heuristico.html" />
-    <link rel="prev" title="Inventario de movimientos en masa" href="inventario.html" />
+    <link rel="prev" title="Variables condicionantes" href="variables.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -98,13 +98,28 @@
 </ul>
 <ul class="current nav bd-sidenav">
  <li class="toctree-l1">
+  <a class="reference internal" href="introduccion.html">
+   Introducción
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="modelo.html">
+   Modelo
+  </a>
+ </li>
+ <li class="toctree-l1">
   <a class="reference internal" href="inventario.html">
    Inventario de movimientos en masa
   </a>
  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="variables.html">
+   Variables condicionantes
+  </a>
+ </li>
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   Análisis exploratorio de variables
+   Análisis exploratorio y selección de variables
   </a>
  </li>
  <li class="toctree-l1">
@@ -129,6 +144,41 @@
     machine learning
    </em>
    -
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="clasificacion.html">
+   Clasificación y zonificación
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="fisica.html">
+   Métodos con base física
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="evaluacion.html">
+   Evaluación del desempeño y capacidad de predicción del modelo
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="detonante.html">
+   Factores detonantes
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="amenaza.html">
+   Evaluación de la amenaza
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="flujos.html">
+   Movimientos en masa tipo flujos
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="roca.html">
+   Movimientos en masa en roca
   </a>
  </li>
 </ul>
@@ -272,7 +322,7 @@
         <div class="col-12 col-md-9 pl-md-3 pr-md-0">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Análisis exploratorio de variables</h1>
+                <h1>Análisis exploratorio y selección de variables</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -318,8 +368,8 @@
             
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="analisis-exploratorio-de-variables">
-<h1>Análisis exploratorio de variables<a class="headerlink" href="#analisis-exploratorio-de-variables" title="Permalink to this headline">¶</a></h1>
+  <div class="tex2jax_ignore mathjax_ignore section" id="analisis-exploratorio-y-seleccion-de-variables">
+<h1>Análisis exploratorio y selección de variables<a class="headerlink" href="#analisis-exploratorio-y-seleccion-de-variables" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="objetivos">
 <h2>Objetivos<a class="headerlink" href="#objetivos" title="Permalink to this headline">¶</a></h2>
 <p>Levantamiento de las variables predictoras, y selección de las mejores variables acorde al modelo.</p>
@@ -364,7 +414,7 @@
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
-<span class="o">~</span>\<span class="n">AppData</span>\<span class="n">Local</span>\<span class="n">Temp</span><span class="o">/</span><span class="n">ipykernel_33768</span><span class="o">/</span><span class="mf">299852370.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="o">~</span>\<span class="n">AppData</span>\<span class="n">Local</span>\<span class="n">Temp</span><span class="o">/</span><span class="n">ipykernel_25072</span><span class="o">/</span><span class="mf">299852370.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <span class="ne">----&gt; </span><span class="mi">1</span> <span class="kn">import</span> <span class="nn">rasterio</span> <span class="k">as</span> <span class="nn">rio</span>
 <span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="kn">from</span> <span class="nn">rasterio.plot</span> <span class="kn">import</span> <span class="n">show</span>
 <span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
@@ -1517,11 +1567,11 @@ geologia
             
                 <!-- Previous / next buttons -->
 <div class='prev-next-area'> 
-    <a class='left-prev' id="prev-link" href="inventario.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="variables.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Inventario de movimientos en masa</p>
+            <p class="prev-next-title">Variables condicionantes</p>
         </div>
     </a>
     <a class='right-next' id="next-link" href="heuristico.html" title="next page">

@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Cartografía Geotécnica &#8212; Cartografía Geotécnica</title>
+    <title>Evaluación de la amenaza &#8212; Cartografía Geotécnica</title>
     
   <link href="_static/css/theme.css" rel="stylesheet">
   <link href="_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -51,7 +51,8 @@
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Introducción" href="introduccion.html" />
+    <link rel="next" title="Movimientos en masa tipo flujos" href="flujos.html" />
+    <link rel="prev" title="Factores detonantes" href="detonante.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -89,13 +90,13 @@
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item active">
         <ul class="nav bd-sidenav">
- <li class="toctree-l1 current">
-  <a class="reference internal" href="#">
+ <li class="toctree-l1">
+  <a class="reference internal" href="intro.html">
    Cartografía Geotécnica
   </a>
  </li>
 </ul>
-<ul class="nav bd-sidenav">
+<ul class="current nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="introduccion.html">
    Introducción
@@ -165,8 +166,8 @@
    Factores detonantes
   </a>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="amenaza.html">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
    Evaluación de la amenaza
   </a>
  </li>
@@ -221,7 +222,7 @@
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="_sources/intro.md"><button type="button"
+        <a class="dropdown-buttons" href="_sources/amenaza.md"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
                 data-placement="left">.md</button></a>
         <!-- Download PDF via print -->
@@ -241,7 +242,7 @@
                 data-toggle="tooltip" data-placement="left" title="Source repository"><i
                     class="fab fa-github"></i>repository</button></a>
         <a class="issues-button"
-            href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fintro.html&body=Your%20issue%20content%20here."><button
+            href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Famenaza.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
         
@@ -268,8 +269,13 @@
             <nav id="bd-toc-nav" aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#evaluacion-y-zonificacion-de-la-susceptibilidad-y-amenaza-por-movimientos-en-masa">
-   Evaluación y zonificación de la susceptibilidad y amenaza por movimientos en masa
+  <a class="reference internal nav-link" href="#estimacion-de-la-probabilidad-temporal">
+   Estimación de la probabilidad temporal
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#estimacion-de-la-probabilidad-de-magnitud">
+   Estimación de la probabilidad de magnitud
   </a>
  </li>
 </ul>
@@ -282,7 +288,7 @@
         <div class="col-12 col-md-9 pl-md-3 pr-md-0">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Cartografía Geotécnica</h1>
+                <h1>Evaluación de la amenaza</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -293,8 +299,13 @@
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#evaluacion-y-zonificacion-de-la-susceptibilidad-y-amenaza-por-movimientos-en-masa">
-   Evaluación y zonificación de la susceptibilidad y amenaza por movimientos en masa
+  <a class="reference internal nav-link" href="#estimacion-de-la-probabilidad-temporal">
+   Estimación de la probabilidad temporal
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#estimacion-de-la-probabilidad-de-magnitud">
+   Estimación de la probabilidad de magnitud
   </a>
  </li>
 </ul>
@@ -306,17 +317,109 @@
             
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="cartografia-geotecnica">
-<h1>Cartografía Geotécnica<a class="headerlink" href="#cartografia-geotecnica" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="evaluacion-y-zonificacion-de-la-susceptibilidad-y-amenaza-por-movimientos-en-masa">
-<h2>Evaluación y zonificación de la susceptibilidad y amenaza por movimientos en masa<a class="headerlink" href="#evaluacion-y-zonificacion-de-la-susceptibilidad-y-amenaza-por-movimientos-en-masa" title="Permalink to this headline">¶</a></h2>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Este libro se encuentra en construcción, por lo tanto su contenido se encuentra en constante cambio y ajuste.</p>
+  <div class="tex2jax_ignore mathjax_ignore section" id="evaluacion-de-la-amenaza">
+<h1>Evaluación de la amenaza<a class="headerlink" href="#evaluacion-de-la-amenaza" title="Permalink to this headline">¶</a></h1>
+<p>La amenaza se define como la probabilidad de
+ocurrencia de un fenómeno potencialmente dañino
+dentro de un periodo de tiempo específico y dentro de un
+área dada (Varnes, 1984). A dicha definición, Guzzetti
+et al. (1999) le adiciona la inclusión de la magnitud
+del evento. Por lo tanto, la definición de la amenaza
+por movimientos en masa incorpora los conceptos de
+localización, tiempo y magnitud. Como consecuencia,
+una completa evaluación de la amenaza debe predecir
+de forma cuantitativa dónde un movimiento en masa
+ocurrirá, cuándo o qué tan frecuente será su ocurrencia,
+y qué tan grande será el evento.</p>
+<p>Considerando estos tres elementos, la probabilidad de
+amenaza por movimientos en masa en una área dada
+puede ser obtenida a partir de la probabilidad espacial
+(PS
+), que señala la probabilidad de ocurrencia de un
+movimiento en masa en un determinado lugar; de la
+probabilidad temporal (PT), que señala la probabilidad
+de ocurrencia de un factor detonante que genera
+movimientos en masa; y de la probabilidad de magnitud
+(PM), que señala la probabilidad que un movimiento en masa pueda ser de un cierto tamaño (Guzzetti y Tonelli,
+2004; Jaiswal et al., 2010; Wu y Chen, 2013). La
+amenaza (H) entonces puede ser calculada asumiendo
+independencia entre las tres probabilidades utilizando
+la siguiente ecuación:</p>
+<p>H = PM x PS x PT</p>
+<div class="section" id="estimacion-de-la-probabilidad-temporal">
+<h2>Estimación de la probabilidad temporal<a class="headerlink" href="#estimacion-de-la-probabilidad-temporal" title="Permalink to this headline">¶</a></h2>
+<p>La lluvia es el factor desencadenante principal que
+promueve la ocurrencia de movimientos en masa en
+ambientes tropicales y terrenos montañosos como los
+Andes colombianos (Sánchez y Aristizábal, 2017).
+Por esta razón, la herramienta principal para estimar la
+probabilidad temporal de la ocurrencia de movimientos
+en masa son los umbrales de lluvia, los cuales son
+definidos como las condiciones de precipitación que,
+al ser alcanzadas, muy posiblemente desencadenen
+movimientos en masa (Glade et al., 2000; Guzzetti et
+al., 2008). Los umbrales deben ser establecidos para
+regiones específicas, ya que varían dependiendo de la
+influencia de factores de estabilidad inherentes a cada
+región, como geología, cobertura de suelos, nivel de
+intervención antrópica, entre otras (Bai et al., 2014).
+Los umbrales de lluvia se pueden definir desde un punto
+de vista físico (basados en los procesos o umbrales
+conceptuales), o desde un punto de vista empírico
+(históricos o umbrales estadísticos) (Corominas, 2000;
+Aleotti, 2004; Wieczorek y Glade, 2005; Guzzetti et al.,
+2007).</p>
+<p>De esta forma, y de
+acuerdo con Düzgün y Grimstad (2007), la probabilidad
+temporal de ocurrencia de movimientos en masa
+detonados por lluvias PT
+está dada por la probabilidad
+de que se supere un umbral de lluvia definido P(B), y la
+probabilidad condicionada de que dado que se supere
+dicho umbral de lluvia se presente un movimiento en
+P(A|B), mediante la siguiente ecuación:
+Para estimar la probabilidad temporal PT
+, es necesario
+definir en primera instancia un umbral de lluvia crítico
+(B) asociado a la zona de estudio. Para esto, se realizó
+un análisis de umbrales de lluvia acumulada (LA),
+también conocida como lluvia detonante o de corto
+plazo, y lluvia acumulada antecedente (LAA), también
+conocida como lluvia histórica o lluvia de largo plazo
+(Aristizábal et al., 2011). De esta forma, el umbral
+de lluvia crítico (B) describe el cumplimiento de dos
+condiciones de precipitación en simultáneo, es decir,
+que se exceda una cantidad de lluvia detonante LA ≥ Xi
+y a su vez se exceda una cantidad de lluvia antecedente
+LAA ≥ Xi .</p>
 </div>
-<p>El presente libro corresponde al contenido del curso de Cartografía Geotécnica de la Universidad Nacional de Colombia, sede Medellín; dictado por el profesor Edier Aristizábal del Departamento de Geociencias y Medio Ambiente de la Facultad de Minas.</p>
-</div>
-<div class="toctree-wrapper compound">
+<div class="section" id="estimacion-de-la-probabilidad-de-magnitud">
+<h2>Estimación de la probabilidad de magnitud<a class="headerlink" href="#estimacion-de-la-probabilidad-de-magnitud" title="Permalink to this headline">¶</a></h2>
+<p>Para la probabilidad de magnitud, se utilizó la
+metodología estadística propuesta por Malamud et
+al. (2004), que relaciona la frecuencia de ocurrencia
+de los movimientos en masa del inventario con el
+área deslizada. La frecuencia se expresa mediante la
+siguiente función de densidad de probabilidad:
+Donde P(AL) es la función de densidad de probabilidad,
+NTL es el número total de movimientos, ∂NL es el número
+total de movimientos contemplados en un intervalo y
+∂AL es el tamaño del intervalo. Malamud et al. (2004)
+utilizan múltiples inventarios de movimientos en
+masa alrededor del mundo, con el fin de calibrar una
+distribución de densidad de probabilidad que se ajuste
+al comportamiento de las áreas con su probabilidad
+de frecuencia. Esta probabilidad es expresada por
+medio de la función Gamma Inversa que se presenta
+a continuación:</p>
+<p>Donde γ(ρ) es la función gamma y los parámetros a, s y
+ρ son coeficientes que influencian la forma de la curva
+de distribución. El parámetro ρ controla la disminución
+de la ley potencial para las áreas de movimientos en
+masa grandes y medianos, el parámetro a controla
+la ubicación del valor máximo de la distribución
+de probabilidad y el parámetro s controla la caída
+exponencial para movimientos de zonas pequeñas.</p>
 </div>
 </div>
 
@@ -344,11 +447,18 @@
               
             
                 <!-- Previous / next buttons -->
-<div class='prev-next-area'>
-    <a class='right-next' id="next-link" href="introduccion.html" title="next page">
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="detonante.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Factores detonantes</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="flujos.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Introducción</p>
+        <p class="prev-next-title">Movimientos en masa tipo flujos</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>

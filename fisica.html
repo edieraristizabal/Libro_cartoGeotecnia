@@ -51,8 +51,8 @@
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Factores detonantes" href="detonante.html" />
-    <link rel="prev" title="Métodos basados en datos -machine learning-" href="machinelearning.html" />
+    <link rel="next" title="Evaluación del desempeño y capacidad de predicción del modelo" href="evaluacion.html" />
+    <link rel="prev" title="Clasificación y zonificación" href="clasificacion.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -113,8 +113,13 @@
   </a>
  </li>
  <li class="toctree-l1">
+  <a class="reference internal" href="variables.html">
+   Variables condicionantes
+  </a>
+ </li>
+ <li class="toctree-l1">
   <a class="reference internal" href="exploracion.html">
-   Análisis exploratorio de variables
+   Análisis exploratorio y selección de variables
   </a>
  </li>
  <li class="toctree-l1">
@@ -141,14 +146,39 @@
    -
   </a>
  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="clasificacion.html">
+   Clasificación y zonificación
+  </a>
+ </li>
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
    Métodos con base física
   </a>
  </li>
  <li class="toctree-l1">
+  <a class="reference internal" href="evaluacion.html">
+   Evaluación del desempeño y capacidad de predicción del modelo
+  </a>
+ </li>
+ <li class="toctree-l1">
   <a class="reference internal" href="detonante.html">
    Factores detonantes
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="amenaza.html">
+   Evaluación de la amenaza
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="flujos.html">
+   Movimientos en masa tipo flujos
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="roca.html">
+   Movimientos en masa en roca
   </a>
  </li>
 </ul>
@@ -317,12 +347,13 @@ movimientos en masa superficiales detonados por lluvia a través del cálculo de
 cambios transitorios de la presión de poros
 y su incidencia en la variación del factor de
 seguridad, debido a la infiltración de la
-lluvia [18]. El modelo de infiltración está
+lluvia [18].</p>
+<p>El modelo de infiltración está
 basado en la solución lineal de las ecuaciones de Richards [19], [18], y el flujo de
 agua en el suelo es el resultado de la sumatoria del estado estacionario y el componente transitorio asociado al evento de
 lluvia modelado. La solución para el caso
-de frontera basal impermeable a una profundidad finita está dada por (1).
-Donde 𝜓 es la cabeza de presión, 𝑡 el
+de frontera basal impermeable a una profundidad finita está dada por:</p>
+<p>Donde 𝜓 es la cabeza de presión, 𝑡 el
 tiempo. 𝑍 = 𝑧/𝑐𝑜𝑠 𝛿, 𝑍 es la coordenada en
 dirección vertical (positiva hacia abajo), 𝑧
 la coordenada en dirección normal al talud
@@ -333,25 +364,16 @@ dirección 𝑍, 𝐼𝑍𝐿𝑇 la tasa de infiltración estacionaria (inicial
 𝐼𝑛𝑍 es la tasa de infiltración a una intensidad dada para el n-ésimo intervalo de
 tiempo. 𝐷1 = 𝐷0/𝑐𝑜𝑠2𝛿, 𝐷0 es la difusividad
 hidráulica saturada (𝐷0 = 𝐾𝑠/𝑆𝑠
-, donde 𝑆𝑠
-es el almacenamiento especifico). 𝑁 es el
-número total de intervalos y 𝐻(𝑡 − 𝑡𝑛
-) es la
-función de paso de Heaviside, donde 𝑡𝑛 es
-el tiempo en el n-ésimo intervalo en la
-secuencia de infiltración de lluvia. La función 𝑖𝑒𝑟𝑓𝑐 tiene la forma 𝑖𝑒𝑟𝑐𝑓 (𝜂) =
-1
-√𝜋
-exp(−𝜂
-2
-) − 𝜂 𝑒𝑟𝑓𝑐 (𝜂), donde 𝑒𝑟𝑓𝑐(𝜂) es
-la función de error complementario [20].
-El modelo geotécnico empleado en
+, donde 𝑆𝑠 es el almacenamiento especifico). 𝑁 es el
+número total de intervalos y 𝐻(𝑡 − 𝑡𝑛) es la función de paso de Heaviside, donde 𝑡𝑛 es
+el tiempo en el n-ésimo intervalo en la secuencia de infiltración de lluvia. La función 𝑖𝑒𝑟𝑓𝑐 tiene la forma
+𝑖𝑒𝑟𝑐𝑓 (𝜂) = 1√𝜋exp(−𝜂2) − 𝜂 𝑒𝑟𝑓𝑐 (𝜂), donde 𝑒𝑟𝑓𝑐(𝜂) es
+la función de error complementario [20].</p>
+<p>El modelo geotécnico empleado en
 TRIGRS es un modelo de talud infinito
 unidimensional. El factor de seguridad FS
-se determina a partir de (2) propuesta por
-[21].
-Donde 𝑐
+se determina a partir de (2) propuesta por:</p>
+<p>Donde 𝑐
 ′ es la cohesión efectiva del suelo, 𝜙′ el ángulo de fricción efectivo, 𝛾𝑤 el
 peso unitario del agua, 𝛾𝑠 el peso unitario
 del suelo y 𝜓(𝑍,𝑡) la cabeza de presión en
@@ -427,17 +449,17 @@ espesor de suelo en el factor de seguridad.</p>
             
                 <!-- Previous / next buttons -->
 <div class='prev-next-area'> 
-    <a class='left-prev' id="prev-link" href="machinelearning.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="clasificacion.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Métodos basados en datos -<em>machine learning</em>-</p>
+            <p class="prev-next-title">Clasificación y zonificación</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="detonante.html" title="next page">
+    <a class='right-next' id="next-link" href="evaluacion.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Factores detonantes</p>
+        <p class="prev-next-title">Evaluación del desempeño y capacidad de predicción del modelo</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>

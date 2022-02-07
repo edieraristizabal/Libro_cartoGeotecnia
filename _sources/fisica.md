@@ -29,11 +29,15 @@ movimientos en masa superficiales detonados por lluvia a través del cálculo de
 cambios transitorios de la presión de poros 
 y su incidencia en la variación del factor de 
 seguridad, debido a la infiltración de la 
-lluvia [18]. El modelo de infiltración está 
+lluvia [18]. 
+
+El modelo de infiltración está 
 basado en la solución lineal de las ecuaciones de Richards [19], [18], y el flujo de 
 agua en el suelo es el resultado de la sumatoria del estado estacionario y el componente transitorio asociado al evento de 
 lluvia modelado. La solución para el caso
-de frontera basal impermeable a una profundidad finita está dada por (1).
+de frontera basal impermeable a una profundidad finita está dada por:
+
+
 Donde 𝜓 es la cabeza de presión, 𝑡 el 
 tiempo. 𝑍 = 𝑧/𝑐𝑜𝑠 𝛿, 𝑍 es la coordenada en 
 dirección vertical (positiva hacia abajo), 𝑧
@@ -45,24 +49,17 @@ dirección 𝑍, 𝐼𝑍𝐿𝑇 la tasa de infiltración estacionaria (inicial
 𝐼𝑛𝑍 es la tasa de infiltración a una intensidad dada para el n-ésimo intervalo de 
 tiempo. 𝐷1 = 𝐷0/𝑐𝑜𝑠2𝛿, 𝐷0 es la difusividad 
 hidráulica saturada (𝐷0 = 𝐾𝑠/𝑆𝑠
-, donde 𝑆𝑠
-es el almacenamiento especifico). 𝑁 es el 
-número total de intervalos y 𝐻(𝑡 − 𝑡𝑛
-) es la 
-función de paso de Heaviside, donde 𝑡𝑛 es 
-el tiempo en el n-ésimo intervalo en la 
-secuencia de infiltración de lluvia. La función 𝑖𝑒𝑟𝑓𝑐 tiene la forma 𝑖𝑒𝑟𝑐𝑓 (𝜂) =
-1
-√𝜋
-exp(−𝜂
-2
-) − 𝜂 𝑒𝑟𝑓𝑐 (𝜂), donde 𝑒𝑟𝑓𝑐(𝜂) es 
+, donde 𝑆𝑠 es el almacenamiento especifico). 𝑁 es el 
+número total de intervalos y 𝐻(𝑡 − 𝑡𝑛) es la función de paso de Heaviside, donde 𝑡𝑛 es 
+el tiempo en el n-ésimo intervalo en la secuencia de infiltración de lluvia. La función 𝑖𝑒𝑟𝑓𝑐 tiene la forma 
+𝑖𝑒𝑟𝑐𝑓 (𝜂) = 1√𝜋exp(−𝜂2) − 𝜂 𝑒𝑟𝑓𝑐 (𝜂), donde 𝑒𝑟𝑓𝑐(𝜂) es 
 la función de error complementario [20].
+
 El modelo geotécnico empleado en 
 TRIGRS es un modelo de talud infinito 
 unidimensional. El factor de seguridad FS 
-se determina a partir de (2) propuesta por 
-[21].
+se determina a partir de (2) propuesta por:
+
 Donde 𝑐
 ′ es la cohesión efectiva del suelo, 𝜙′ el ángulo de fricción efectivo, 𝛾𝑤 el 
 peso unitario del agua, 𝛾𝑠 el peso unitario 
