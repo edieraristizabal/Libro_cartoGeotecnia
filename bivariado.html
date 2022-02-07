@@ -98,6 +98,16 @@
 </ul>
 <ul class="current nav bd-sidenav">
  <li class="toctree-l1">
+  <a class="reference internal" href="introduccion.html">
+   Introducción
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="modelo.html">
+   Modelo
+  </a>
+ </li>
+ <li class="toctree-l1">
   <a class="reference internal" href="inventario.html">
    Inventario de movimientos en masa
   </a>
@@ -129,6 +139,16 @@
     machine learning
    </em>
    -
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="fisica.html">
+   Métodos con base física
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="detonante.html">
+   Factores detonantes
   </a>
  </li>
 </ul>
@@ -236,6 +256,11 @@
             <nav id="bd-toc-nav" aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#peso-de-la-evidencia-wofe">
+   Peso de la evidencia (WofE)
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#objetivos">
    Objetivos
   </a>
@@ -271,6 +296,11 @@
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#peso-de-la-evidencia-wofe">
+   Peso de la evidencia (WofE)
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#objetivos">
    Objetivos
   </a>
@@ -296,6 +326,46 @@
                 
   <div class="tex2jax_ignore mathjax_ignore section" id="metodos-basados-en-datos-bivariados">
 <h1>Métodos basados en datos -bivariados-<a class="headerlink" href="#metodos-basados-en-datos-bivariados" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="peso-de-la-evidencia-wofe">
+<h2>Peso de la evidencia (WofE)<a class="headerlink" href="#peso-de-la-evidencia-wofe" title="Permalink to this headline">¶</a></h2>
+<p>Peso de la
+Evidencia (Chung y Fabbri, 1999; Van Westen et al.,
+2003), basado en la teoría de la probabilidad Bayesiana,
+donde se analiza la relación entre las áreas afectadas
+por los movimientos en masa y la distribución espacial
+de los factores condicionantes del terreno (Sujatha
+et al., 2014; Regmi et al., 2010). Este método arroja
+los pesos de las clases que conforman las variables
+condicionantes (Van Westen et al., 2003), indicando
+la presencia e influencia de la clase como parámetro
+en la ocurrencia del movimiento en masa (Regmi et
+al., 2010; Oh y Lee, 2011). Los pesos positivos (W+)
+indican la presencia de la clase como parámetro que
+favorece los movimientos en masa y su magnitud
+indica su correlación. El peso negativo (W-
+) indica la
+ausencia de la clase en la ocurrencia de mo</p>
+<p>Dónde A1
+es el número de pixeles con movimientos en
+masa en la clase, A2
+número de pixeles con movimientos
+en masa que no están presentes en la misma clase, A3
+número de pixeles en la clase que no hay movimientos
+en masa y A4
+es el número de pixeles en la clase donde
+no hay movimientos en masa y que no está presente en
+vimientos
+en masa. Los pesos son definidos por:</p>
+<p>la misma clase (Ozdemir y Altural, 2013). Para cada
+variable, entonces, se estima el Peso de Contraste (C)
+dado por:</p>
+<p>Donde C refleja el espacio de asociación respecto a la
+clase en la predicción del movimiento en masa, la cual
+es cero cuando la clase no afecta, es positivo cuando
+existe una correlación directa y negativo cuando
+existe una correlación inversa con la distribución de
+movimientos en masa (Rodríguez et al., 2017).</p>
+</div>
 <div class="section" id="objetivos">
 <h2>Objetivos<a class="headerlink" href="#objetivos" title="Permalink to this headline">¶</a></h2>
 </div>
@@ -319,7 +389,7 @@
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
-<span class="o">~</span>\<span class="n">AppData</span>\<span class="n">Local</span>\<span class="n">Temp</span><span class="o">/</span><span class="n">ipykernel_44960</span><span class="o">/</span><span class="mf">268380773.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="o">~</span>\<span class="n">AppData</span>\<span class="n">Local</span>\<span class="n">Temp</span><span class="o">/</span><span class="n">ipykernel_15664</span><span class="o">/</span><span class="mf">268380773.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1">#import rasterio as rio</span>
 <span class="ne">----&gt; </span><span class="mi">2</span> <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="kn">from</span> <span class="nn">rasterio.plot</span> <span class="kn">import</span> <span class="n">show</span>

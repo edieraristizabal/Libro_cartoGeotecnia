@@ -1,0 +1,514 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Factores detonantes &#8212; Cartografía Geotécnica</title>
+    
+  <link href="_static/css/theme.css" rel="stylesheet">
+  <link href="_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/togglebutton.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script>
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Métodos con base física" href="fisica.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Cartografía Geotécnica</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="intro.html">
+   Cartografía Geotécnica
+  </a>
+ </li>
+</ul>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="introduccion.html">
+   Introducción
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="modelo.html">
+   Modelo
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="inventario.html">
+   Inventario de movimientos en masa
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="exploracion.html">
+   Análisis exploratorio de variables
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="heuristico.html">
+   Métodos basados en el conocimiento
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="bivariado.html">
+   Métodos basados en datos -bivariados-
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="regresionLogistica.html">
+   Métodos basados en datos -Regresión logística-
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="machinelearning.html">
+   Métodos basados en datos -
+   <em>
+    machine learning
+   </em>
+   -
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="fisica.html">
+   Métodos con base física
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Factores detonantes
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="_sources/detonante.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/executablebooks/jupyter-book"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fdetonante.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#la-precipitacion-como-factor-detonante">
+   La precipitación como factor detonante
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#los-sismos-como-factor-detonante">
+   Los sismos como factor detonante
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#analisis-seudoestatico">
+     Análisis seudoestático
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#desplazamientos-permanentes">
+     Desplazamientos permanentes
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Factores detonantes</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#la-precipitacion-como-factor-detonante">
+   La precipitación como factor detonante
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#los-sismos-como-factor-detonante">
+   Los sismos como factor detonante
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#analisis-seudoestatico">
+     Análisis seudoestático
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#desplazamientos-permanentes">
+     Desplazamientos permanentes
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="factores-detonantes">
+<h1>Factores detonantes<a class="headerlink" href="#factores-detonantes" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="la-precipitacion-como-factor-detonante">
+<h2>La precipitación como factor detonante<a class="headerlink" href="#la-precipitacion-como-factor-detonante" title="Permalink to this headline">¶</a></h2>
+<p>Los movimientos en masa detonados por lluvias, generalmente denominados deslizamientos superficiales planares o soil slip, se caracterizan por su pequeño espesor (0,3 – 2 m) mucho menor a la longitud del movimiento, superficie de falla sub paralela a la pendiente y escarpe de área reducida (Anderson  &amp; Sitar, 1995). Estos movimientos son generados durante eventos intensos de lluvia por el aumento rápido de la presión de poros o por la pérdida del componente de cohesión aparente (Wang &amp; Sassa, 2003; Terlien, 1998; Crosta, 1998; Crosta &amp; Frattini, 2003). Posteriormente el material desplazado, por procesos de licuefacción  o reducción rápida de la resistencia al cortante en condiciones no drenadas (Anderson &amp; Sitar, 1995), se convierte en un flujo que se propaga ladera abajo erodando y trasportando sedimentos del canal, incrementando el volumen de material inicial desplazado (Wang &amp; Sassa, 2003; Wieczorek et al., 2000). Para suelos parcialmente saturados, Li et al. (2005) describen dicho proceso como el resultado de la infiltración de lluvia que reduce la succión de la matriz de los suelos en la ladera, esa reducción reduce a su vez la resistencia al cortante del material. Una vez el suelo está completamente saturado, la succión desaparece completamente, y un nivel freático colgado con presión de poros positiva se desarrolla. Esta presión de poros positiva reduce aun más la resistencia al cortante aumentando la probabilidad de ocurrencia de un movimiento.
+Gostelow (1991) e Iiritano et al. (1998) consideran que la lluvia puede actuar de dos formas diferentes en la estabilidad de las laderas: (1) eventos de lluvia muy intensos que causan una reducción de la resistencia al cortante por reducción de la cohesión aparente generando movimientos inicialmente superficiales y (2) eventos de lluvia de larga duración que causan el incremento en la presión de poros sobre una superficie de falla potencial generando movimientos de masa mucho más profundos y frecuentemente a lo largo de superficies de cizalla pre-existentes. Los movimientos superficiales son usualmente detonados por lluvias cortas e intensas (Crosta, 1998), en tanto que los movimientos profundos están más relacionados con la distribución y variación de la lluvia en periodos largos (Aleotti, 2004).</p>
+<p>Wilson &amp; Wieczorek (1995) sugieren que la precipitación puede inducir la generación de una zona saturada con el incremento lógico del nivel freático, especialmente para perfiles poco profundos; y por otro lado, Rahardjo et al. (1995) sugieren que un nivel freático colgado y temporal se forma en perfiles de suelo profundos, entre la superficie del terreno y el frente húmedo, reduciendo la presión de poros negativa e iniciando un flujo paralelo a la ladera que contribuye a la inestabilidad de la vertiente (Crosta, 1998). Estas consideraciones permiten evaluar la presión de poros generada por el aumento de una capa saturada sobre una superficie de falla crítica predefinida, o por el contrario evaluar el desarrollo de la presión de poros a partir del avance de un frente húmedo.</p>
+<p>Collins &amp; Znidarcic (2004) proponen dos distintos mecanismos de falla generados por la infiltración. En el primer mecanismo la falla ocurre el aumento en la presión de poros positiva originando licuefacción del material, en tanto el segundo mecanismo la falla ocurre en presiones de poros negativas donde el material está aun en estado no saturado y la falla ocurre por reducción de la succión y la masa se comporta similar a un cuerpo rígido. Suelos de grano fino y baja infiltración no tienden a desarrollar presiones de poros positivas y la falla ocurre generalmente por reducción de la resistencia al cortante causada por pérdida de succión. En general los movimientos en masa superficiales están asociados con el desarrollo de presiones de poros positivas mientras movimientos más profundos están asociados a pérdida de succión (Collins &amp; Znidarcic, 2006).</p>
+<p>Las propiedades del suelo y la intensidad de la lluvia (I) son un factor primario que controla la inestabilidad de los taludes; la magnitud y rata de reducción en el factor de seguridad (FS) es directamente proporcional a la magnitud de la intensidad de lluvia, a mayor intensidad más rápidamente decrece el factor de seguridad (Rahardjo et al., 2007). Adicionalmente pequeñas variaciones en la conductividad hidráulica (k) controlan la localización de la ocurrencia de movimientos en masa, lo que explica de cierta forma el carácter aleatorio en la distribución de los movimientos sobre una misma ladera aparentemente homogénea (Reid, 1997). Cho &amp; Lee (2001) y Cho &amp; Lee (2002) estudian los mecanismos de falla en taludes conformados por suelos residuales no saturados donde encuentran que el campo de los esfuerzos es modificado por la distribución de la presión de poros (Ψ), la cual es controlada por las variaciones espaciales de la conductividad hidráulica durante la infiltración de la lluvia. Y aunque el talud es homogéneo texturalmente, la conductividad hidráulica tiene una distribución no homogénea ya que es una función del contenido de agua o de la succión</p>
+</div>
+<div class="section" id="los-sismos-como-factor-detonante">
+<h2>Los sismos como factor detonante<a class="headerlink" href="#los-sismos-como-factor-detonante" title="Permalink to this headline">¶</a></h2>
+<p>a zonificación de la amenaza por movimientos en masa implementa diversas metodologías de
+carácter heurístico [20]-[22], estadístico [23]-[25] o
+con base física [26]-[29]. Sin embargo, un número
+importante de dichas metodologías evalúa realmente la susceptibilidad, ya que no consideran el
+factor detonante. En cuanto a los métodos que incorporan en su análisis el factor detonante, estos
+han sido enfocados a la lluvia. Para el detonante
+sísmico, los métodos disponibles son escasos y
+han abordado clásicamente análisis seudoestáticos, análisis esfuerzo-deformación y análisis de
+desplazamientos acumulados permanentes [30].
+El análisis seudoestático de laderas fue desarrollado inicialmente por Terzaghi [31], para modelar
+la sacudida sísmica como una fuerza permanente
+que es aplicada al diagrama de fuerzas del análisis
+convencional de equilibrio límite estático [30], y se
+ha convertido en uno de los análisis más usados
+debido a su simplicidad [32]. Los métodos esfuerzo-deformación permiten aproximaciones coherentes a las deformaciones permanentes que sufren
+las laderas ante un sismo; sin embargo, se requiere
+una exigente parametrización, con una alta sensibilidad a dichos valores de entrada. En cuanto a los
+métodos de desplazamiento permanentes, Newmark (1965) [33] propuso un método simple inicialmente concebido para embalses y represas, que
+permite modelar la ladera como un bloque rígido,
+que se desliza sobre un plano inclinado bajo una
+aceleración crítica conocida del sismo, arrojando
+el umbral requerido para superar la resistencia
+al corte y causar la falla [1], [30]. Existen también en el estado del arte algunas aproximaciones
+estadísticas [34]-[38], determinísticas [26], [33],
+[39] o combinación de ambas [40], [41] e incluso
+como parte de análisis multi-amenaza de estructuras [42].</p>
+<div class="section" id="analisis-seudoestatico">
+<h3>Análisis seudoestático<a class="headerlink" href="#analisis-seudoestatico" title="Permalink to this headline">¶</a></h3>
+<p>El método seudoestático es una generalización del
+análisis de estabilidad por equilibrio límite, en el
+cual los efectos de los sismos son representados
+por una fuerza estática equivalente cuya magnitud
+es producto del coeficiente sísmico k y el peso de
+la masa que potencialmente se va a deslizar [48].
+Este método evalúa los efectos sísmicos como una
+fuerza permanente unidireccional, mediante la simulación del incremento de las fuerzas inerciales
+debido a la aceleración de un sismo, suponiendo
+que las fuerzas sísmicas son proporcionales al peso
+de la masa deslizante. Usualmente, solo se adiciona la fuerza sísmica en la componente horizontal
+en el análisis de equilibrio límite y se consideran
+los efectos de las fuerzas verticales cercanos a cero
+[31]. Para calcular el Factor de Seguridad (fs), Matasovic [49] propone la ecuación (1):</p>
+<p>donde c es la cohesión, φ es el ángulo de fricción efectiva, γs
+es el peso unitario de los materiales, θ es el ángulo de la pendiente, z es el espesor
+del estrato deslizable, γw es el peso unitario del
+agua, kh es el coeficiente horizontal seudoestático
+y hw es la distancia al nivel freático medido desde
+la superficie.
+Para la parametrización de las propiedades
+geomecánicas de los suelos que conforman el área
+urbana del municipio de Barbosa se utilizó la zonificación geotécnica elaborada en los estudios de
+microzonificación sísmica para el Valle de Aburrá,
+donde se realizaron perforaciones y ensayos de laboratorio con correlaciones de ensayos de penetración estándar [7], [18]. Esta zonificación se detalló
+a partir de información geotécnica suministrada por el municipio de estudios locales de suelos
+para propósitos constructivos. Para la pendiente
+se utilizó el modelo digital de elevación con resolución espacial de 2 m elaborado por el Instituto
+Geográfico Agustín Codazzi (igac) en el proyecto
+CartoAntioquia.
+Para la selección del coeficiente horizontal seudoestático, se desarrolló la metodología propuesta
+por la Norma nsr-10 [50] para análisis seudoestáticos, en la cual se evalúa las condiciones sísmicas
+locales mediante las características de la zona de
+estudio. En el título H de la 10 se describe el diseño y estabilidad de taludes teniendo en cuenta los
+efectos sísmicos mediante el análisis seudoestático.
+Esta metodología plantea determinar el coeficiente
+sísmico horizontal seudoestático (kh) en función de
+la aceleración máxima del terreno (Amax), obtenida
+del espectro de diseño para el periodo de vibración
+cero establecida por el estudio de microzonificación sísmica del sitio. En el presente estudio se emplea el espectro de aceleración superficial para el
+periodo de retorno de 475 años y amortiguamiento
+del 5%, tomado de los estudios de microzonificación sísmica detallada del municipio de Barbosa
+elaborados por [7].
+La nsr-10 define las aceleraciones máximas de
+acuerdo con el espectro de diseño, donde presenta
+la formulación de la aceleración máxima del terreno para un periodo de vibración igual a cero, dada
+por la ecuación (2):</p>
+<p>donde Aa es la aceleración pico efectiva de diseño, Fa es el coeficiente de amplificación que afecta la aceleración en la zona de períodos cortos e
+I representa el coeficiente de importancia. Estas
+variables fueron obtenidas a partir de los espectros de respuesta a nivel de superficie del terreno
+realizados por [7]. El coeficiente de importancia se
+determina a partir del uso de las edificaciones expuestas; en el presente proyecto se emplea el valor
+unitario, correspondiente al grupo de importancia I:
+estructuras de ocupación normal (Tabla 1).</p>
+<p>A partir de Amax se obtiene el kh con la ecuación
+(3) teniendo en cuenta los criterios para el análisis
+seudoestático dados en la tabla de la nsr-10 [50,
+H.5.2.5]. Para este estudio se adopta el valor 0,8
+que representa “Suelos, enrocados y macizos rocosos muy fracturados (rqd1
+&lt;50%)” (Tabla 2).</p>
+<p>Finalmente, los escenarios modelados con el
+análisis seudoestático corresponden a las condiciones seca y saturada del terreno, como escenarios que contrastan las condiciones de amenaza.
+Aunque ambos escenarios no corresponden al
+escenario más frecuente y probable, sí permiten
+enmarcar las condiciones de amenaza del municipio entre el escenario de menor criticidad y el de
+mayor criticidad.</p>
+</div>
+<div class="section" id="desplazamientos-permanentes">
+<h3>Desplazamientos permanentes<a class="headerlink" href="#desplazamientos-permanentes" title="Permalink to this headline">¶</a></h3>
+<p>Este método ha dado útiles resultados modelando
+el comportamiento dinámico de las laderas a nivel
+regional [51], aunque no necesariamente predice
+los desplazamientos medidos, sino que establece un índice útil de cómo una ladera se podría
+comportar durante un evento sísmico [1].
+En el presente trabajo se utilizó el método de
+Newmark [33]. Múltiples variaciones del método
+de Newmark han sido propuestas para obtener resultados precisos en términos de desplazamientos
+al modelar rigurosamente la respuesta dinámica de la ladera [1], [30], [52]. El método requiere
+evaluar el factor de seguridad, la aceleración crítica del terreno y la aceleración máxima en roca
+(Peak Ground Acceleration o pga). Jibson et al.
+[1] proponen un modelo de equilibrio límite de
+talud infinito en material friccionante y cohesivo
+para obtener el factor de seguridad a partir de la
+ecuación (4):
+donde z es el espesor del suelo y m es la
+proporción del suelo que está saturado. Newmark
+[33] señala que la aceleración crítica ac de un bloque
+que potencialmente se puede deslizar es función
+del factor de seguridad estático y de la geometría
+del bloque expresado en la ecuación (5):</p>
+<p>donde ac es la aceleración crítica en términos
+de la aceleración de la gravedad g, y el ángulo que
+forma la horizontal con el centro de masa del bloque, que generalmente se aproxima a la pendiente.
+Finalmente, a partir de ac y la aceleración máxima en roca (pga) se calculan los desplazamientos
+de Newmark a través de una regresión logarítmica
+estimada por Jibson [52](2 en la ecuación (6):</p>
+<p>La pga es la máxima amplitud de la aceleración
+registrada en el acelerograma en un sitio durante
+un sismo en particular. Para este estudio se tomó
+la pga del estudio de microzonificación sísmica
+detallada del municipio de Barbosa [18], de donde se tomaron dos escenarios, uno considerado el
+evento más crítico que coincide con sismofuentes
+cercanas y gran magnitud, y un segundo escenario
+de menor criticidad que corresponde con sismofuentes lejanas y menor magnitud (Tabla 3)</p>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="fisica.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Métodos con base física</p>
+        </div>
+    </a>
+</div>
+            
+        </div>
+    </div>
+    <footer class="footer">
+  <p>
+    
+      By Edier V. Aristizábal G.<br/>
+    
+        &copy; Copyright 2021.<br/>
+  </p>
+</footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>

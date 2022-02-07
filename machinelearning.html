@@ -51,6 +51,7 @@
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Métodos con base física" href="fisica.html" />
     <link rel="prev" title="Métodos basados en datos -Regresión logística-" href="regresionLogistica.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
@@ -97,6 +98,16 @@
 </ul>
 <ul class="current nav bd-sidenav">
  <li class="toctree-l1">
+  <a class="reference internal" href="introduccion.html">
+   Introducción
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="modelo.html">
+   Modelo
+  </a>
+ </li>
+ <li class="toctree-l1">
   <a class="reference internal" href="inventario.html">
    Inventario de movimientos en masa
   </a>
@@ -128,6 +139,16 @@
     machine learning
    </em>
    -
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="fisica.html">
+   Métodos con base física
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="detonante.html">
+   Factores detonantes
   </a>
  </li>
 </ul>
@@ -345,6 +366,43 @@
                 
   <div class="tex2jax_ignore mathjax_ignore section" id="metodos-basados-en-datos-machine-learning">
 <h1>Métodos basados en datos -<em>machine learning</em>-<a class="headerlink" href="#metodos-basados-en-datos-machine-learning" title="Permalink to this headline">¶</a></h1>
+<p>Los algoritmos buscan aprender y
+extraer conocimiento para formar una función objetivo hipotética (f)
+que relaciona las variables de entrada o predictoras (xi) con la variable
+de salida o variable objetivo (y), como se observa en la ecuación 1.
+y = f (xi) (1)
+Como en muchas otras ramas, estas técnicas han sido implementadas para el desarrollo de modelos de susceptibilidad por movimientos
+en masa (Pham et al., 2016; Pourghasemi y Rahmati, 2018; Reichenbach
+et al., 2018). Para este caso, las variables predictoras corresponden a
+variables del terreno, variables de los materiales de la ladera y variables
+ambientales.
+Una gran cantidad de variables se han utilizado en la literatura
+(Van Westen et al., 2008). La variable de salida (y), se refiere a la
+ocurrencia de movimientos en masa identificados, para lo cual se
+utiliza generalmente un inventario de movimientos en masa (Guzzetti
+et al., 2012). Para problemas donde la variable de salida, es decir el
+inventario, no se tenga y sólo se cuente con un conjunto de variables
+predictoras, se implementan métodos no supervisados, y tienen como
+objetivo identificar patrones entre los datos (análisis tipo cluster), o
+reducir el número de variables (Análisis de Componentes Principales).
+Para movimientos en masa, este tipo de métodos de ML no permiten
+construir modelos de predicción, sin embargo, son muy útiles para
+seleccionar y evaluar la importancia de las diferentes variables predictoras a utilizar en el modelo (Melchiorre et al., 2008; Sabatakakis
+et al., 2013). Para problemas donde se cuente tanto con las variables
+de entrada y salida, se implementan métodos supervisados, que están
+especializados en predecir nuevos eventos a partir del entrenamiento
+y aprendizaje que obtuvo el modelo con los datos históricos (Moreno,
+1994). Estos métodos se clasifican de acuerdo con la característica de
+la variable objetivo (y). Los casos en que la variable de salida es de
+carácter continua, se denominan problemas de regresión y, cuando la variable de salida es de carácter categórica, se denominan problemas de
+clasificación (Alpaydin, 2010). De acuerdo con el número de posibilidades que pueda tomar la variable objetivo, se denomina clasificación
+binaria o multiclase. Para el caso de modelos de susceptibilidad por
+movimiento en masa, donde por definición tienen que predecir la
+ocurrencia espacial de movimientos en masa, se debe contar entonces
+con un inventario, el cual es transformado a una variable categórica,
+con valores de 1 en celdas con presencia de movimientos en masa y 0
+con no presencia. Por lo tanto, corresponden a modelos supervisados
+de clasificación binarios.</p>
 <div class="section" id="objetivos">
 <h2>Objetivos<a class="headerlink" href="#objetivos" title="Permalink to this headline">¶</a></h2>
 <p>Implementar los diferentes métodos de Machine Learning en Python utilizados para la evaluación de la susceptibilidad por movimientos en masa.</p>
@@ -372,7 +430,7 @@
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
-<span class="o">~</span>\<span class="n">AppData</span>\<span class="n">Local</span>\<span class="n">Temp</span><span class="o">/</span><span class="n">ipykernel_34448</span><span class="o">/</span><span class="mf">3319729417.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="o">~</span>\<span class="n">AppData</span>\<span class="n">Local</span>\<span class="n">Temp</span><span class="o">/</span><span class="n">ipykernel_2428</span><span class="o">/</span><span class="mf">3319729417.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <span class="ne">----&gt; </span><span class="mi">1</span> <span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
 <span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
 <span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
@@ -697,7 +755,7 @@ Variable: flujo_acum           Importance: 0.06
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/machinelearning_25_0.png" src="_images/machinelearning_25_0.png" />
+<img alt="_images/machinelearning_27_0.png" src="_images/machinelearning_27_0.png" />
 </div>
 </div>
 </div>
@@ -734,6 +792,13 @@ Variable: flujo_acum           Importance: 0.06
             <p class="prev-next-subtitle">previous</p>
             <p class="prev-next-title">Métodos basados en datos -Regresión logística-</p>
         </div>
+    </a>
+    <a class='right-next' id="next-link" href="fisica.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Métodos con base física</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
     </a>
 </div>
             
