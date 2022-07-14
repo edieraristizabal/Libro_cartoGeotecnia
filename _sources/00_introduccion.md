@@ -1,6 +1,6 @@
 # Introducción
 
-Los movimientos en masa constituyen una de las causas más frecuentes de pérdidas humanas y económicas alrededor del mundo (Schuster,  1996; Sidle & Ochiai, 2006), por lo que la evaluación de la amenaza por movimientos en masa y la capacidad de predecir dichos movimientos ha sido un tema de gran interés para la comunidad científica [@Aleotti1999]; Chacón et al., 2006. 
+Los movimientos en masa constituyen una de las causas más frecuentes de pérdidas humanas y económicas alrededor del mundo (Schuster,  1996; Sidle & Ochiai, 2006), por lo que la evaluación de la amenaza por movimientos en masa y la capacidad de predecir dichos movimientos ha sido un tema de gran interés para la comunidad científica {cite:p}`Aleotti1999`; Chacón et al., 2006. 
 
 La evaluación de la amenaza por 
 movimientos en masa es una herramienta 
@@ -74,5 +74,7 @@ Los movimientos en masa son el producto del debilitamiento progresivo de las pro
 De esta forma los factores que controlan la ocurrencia y distribución de los movimientos en masa pueden dividirse en dos categorías: las variables cuasi-estáticas o condicionantes y las variables dinámicas o detonantes. Las variables cuasi-estáticas, tales como las propiedades de los suelos, la topografía contribuyen a la susceptibilidad de las vertientes y definen la distribución espacial de los movimientos en masa. En tanto, las variables dinámicas, tales como el grado de saturación del suelo y la cohesión controlan los factores detonantes de laderas susceptibles. La climatología, los procesos hidrológicos, y las actividades humanas controlan a su vez las variables dinámicas, y caracterizan el patrón temporal de los movimientos en masa (Crosta & Fratiini, 2003).
 
 
-
+```{bibliography}
+:filter: docname in docnames
+```
 
