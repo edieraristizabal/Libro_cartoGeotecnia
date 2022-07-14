@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Index &#8212; Cartografía Geotécnica</title>
+    <title>Modelo &#8212; Cartografía Geotécnica</title>
     
   <link href="_static/css/theme.css" rel="stylesheet">
   <link href="_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -42,8 +42,17 @@
     <script src="_static/copybutton.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
-    <link rel="index" title="Index" href="#" />
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script>
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Inventario de movimientos en masa" href="inventario.html" />
+    <link rel="prev" title="Introducción" href="00_introduccion.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -87,14 +96,14 @@
   </a>
  </li>
 </ul>
-<ul class="nav bd-sidenav">
+<ul class="current nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="00_introduccion.html">
    Introducción
   </a>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="01_metodos.html">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
    Modelo
   </a>
  </li>
@@ -205,6 +214,23 @@
             </button>
             
             
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="_sources/01_metodos.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
             <!-- Source interaction buttons -->
 
 <div class="dropdown-buttons-trigger">
@@ -216,7 +242,7 @@
                 data-toggle="tooltip" data-placement="left" title="Source repository"><i
                     class="fab fa-github"></i>repository</button></a>
         <a class="issues-button"
-            href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fgenindex.html&body=Your%20issue%20content%20here."><button
+            href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2F01_metodos.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
         
@@ -244,7 +270,7 @@
         <div class="col-12 col-md-9 pl-md-3 pr-md-0">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1></h1>
+                <h1>Modelo</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -255,19 +281,87 @@
             
               <div>
                 
-
-<h1 id="index">Index</h1>
-
-<div class="genindex-jumpbox">
- 
+  <div class="tex2jax_ignore mathjax_ignore section" id="modelo">
+<h1>Modelo<a class="headerlink" href="#modelo" title="Permalink to this headline">¶</a></h1>
+<p>Existen en la literatura múltiples
+métodos para evaluar la susceptibilidad o amenaza por movimientos
+en masa, los cuales pueden ser divididos en cuantitativos y cualitativos
+(Aleotti y Chowdhury, 1999; Carrara et al., 1995; Guzzetti et al., 1999;
+Van Westen et al., 2006). Los métodos cualitativos utilizan técnicas de
+cartografía geomorfológica y álgebra de mapas, mediante la asignación
+de pesos relativos de las variables que influyen en la ocurrencia
+de movimientos en masa. Es decir, se basan en el conocimiento o
+criterio de algún experto en el tema y, por lo tanto, son altamente
+subjetivos (Barredo et al., 2000; Castellanos Abella y Van Westen, 2001 van Westen et al., 2003;). Los métodos cuantitativos pueden ser
+clasificados en métodos basados en datos o estadísticos, y métodos
+con base física, o también conocidos como métodos determinísticos
+o probabilísticos (Palacio et al., 2020). Los métodos con base física,
+en general, utilizan modelos geotécnicos acoplados con modelos
+hidrológicos, dando como resultado un factor de seguridad o
+probabilidades de ocurrencia. Su principal desventaja es que necesitan
+información geotécnica detallada, por lo que no son recomendables
+para grandes escalas (Borga et al., 1998; Pourghasemi y Rahmati,
+2018; Sorbino et al., 2010; Zieher et al., 2017). Los métodos basados
+en datos tratan de explicar la relación entre factores de inestabilidad
+conocidos y la distribución pasada y presente de movimientos en
+masa, estableciendo relaciones entre variables explicativas (pendiente,
+geología, aspecto, etc.) y una variable dependiente (ocurrencia de
+movimientos en masa). Sin embargo, los métodos estadísticos más
+utilizados en los últimos años hacen asunciones estadísticas sobre la
+distribución de los datos, lo que los convierte en modelos paramétricos
+que consideran estrictamente funciones lineales.
+Como parte de los métodos estadísticos, en los últimos años se han
+desarrollado aceleradamente técnicas de Inteligencia Artificial (IA),
+entre las cuales destaca el Aprendizaje Automático (ML por sus siglas
+en inglés, Machine Learning) que se caracteriza por ser una amplia
+colección de algoritmos utilizados para crear modelos que aprendan
+de los datos históricos, con el objetivo de hacer predicciones o conocer
+las relaciones que pueden existir entre variables de entrada y salida
+(ocurrencia de un evento); estos modelos tienen varias ventajas, tales
+como no hacer ninguna asunción estadística de los datos, considerar
+que no existe linealidad entre las variables y permitir el uso de un amplio tipo de variables (Alpaydin, 2010; Beam y Kohane, 2018; El Naqa
+y Murphy, 2015; Moreno, 1994).</p>
 </div>
 
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
 
               </div>
               
             
                 <!-- Previous / next buttons -->
-<div class='prev-next-area'>
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="00_introduccion.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Introducción</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="inventario.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Inventario de movimientos en masa</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
 </div>
             
         </div>

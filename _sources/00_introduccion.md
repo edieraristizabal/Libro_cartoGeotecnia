@@ -1,6 +1,6 @@
 # Introducción
 
-Los movimientos en masa constituyen una de las causas más frecuentes de pérdidas humanas y económicas alrededor del mundo (Schuster,  1996; Sidle & Ochiai, 2006), por lo que la evaluación de la amenaza por movimientos en masa y la capacidad de predecir dichos movimientos ha sido un tema de gran interés para la comunidad científica (Aleotti & Chowdhry, 1999; Chacón et al., 2006). 
+Los movimientos en masa constituyen una de las causas más frecuentes de pérdidas humanas y económicas alrededor del mundo (Schuster,  1996; Sidle & Ochiai, 2006), por lo que la evaluación de la amenaza por movimientos en masa y la capacidad de predecir dichos movimientos ha sido un tema de gran interés para la comunidad científica [@Aleotti1999]; Chacón et al., 2006. 
 
 La evaluación de la amenaza por 
 movimientos en masa es una herramienta 
