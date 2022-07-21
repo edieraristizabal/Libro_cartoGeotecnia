@@ -13,13 +13,14 @@ placas (Nazca, Sur América, Caribe), y su densa ocupación poblacional de área
 
 Según la Base de Datos Internacional de Desastres (EM-DAT), en el periodo transcurrido entre 1901 y 2011, en Colombia ocurrieron 
 41 desastres por movimiento en masa ocasionando 3,171 víctimas fatales, es decir, 77.34 víctimas por evento, superado únicamente por 
-Perú en donde ocurrieron 318 víctimas por evento. {cite:p}`Aristizabal2019a`, utilizando la base de datos del 
+Perú en donde ocurrieron 318 víctimas por evento. {cite:t}`Aristizabal2019a`, utilizando la base de datos del 
 DesInventar y el Sistema de Información de Movimientos en Masa (SIMMA) del Servicio Geológico Colombiano (SGC), destacan que 
 en el periodo comprendido entre los años 1900 y 2018 han ocurrido al menos 30730 movimientos en masa en Colombia, que han dejado un saldo de 31198 víctimas fatales y pérdidas económicas por USD$ 654 millones.
 
 Para el caso del Valle de Aburrá, una de las áreas más afectadas en Colombia por este tipo de eventos y que concentran un total de 3.4 millones de habitantes, los movimientos en masa corresponden a 3 de cada 10 desastres que ocurren en la región y dejan como saldo trágico el 75% de la totalidad de victimas anuales. Sólo los movimientos en masa le han reportado a la región 1390 personas fallecidas y pérdidas económicas superiores a los 21 mil millones de pesos en el periodo 1880-2007 ({cite:p}`aristizabal2007`). 
 
 ```{bibliography}
+:style: plain
 :filter: docname in docnames
 ```
 
