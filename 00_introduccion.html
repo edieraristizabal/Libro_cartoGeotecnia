@@ -42,6 +42,8 @@
     <script src="_static/copybutton.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
     <script>
         const thebe_selector = ".thebe"
@@ -51,7 +53,7 @@
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Modelo" href="01_metodos.html" />
+    <link rel="next" title="Amenaza &amp; ordenamiento territorial" href="01_normatividad.html" />
     <link rel="prev" title="Cartografía Geotécnica" href="intro.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
@@ -103,7 +105,12 @@
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="01_metodos.html">
+  <a class="reference internal" href="01_normatividad.html">
+   Amenaza &amp; ordenamiento territorial
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="02_metodos.html">
    Modelo
   </a>
  </li>
@@ -283,68 +290,52 @@
                 
   <div class="tex2jax_ignore mathjax_ignore section" id="introduccion">
 <h1>Introducción<a class="headerlink" href="#introduccion" title="Permalink to this headline">¶</a></h1>
-<p>Los movimientos en masa constituyen una de las causas más frecuentes de pérdidas humanas y económicas alrededor del mundo (Schuster,  1996; Sidle &amp; Ochiai, 2006), por lo que la evaluación de la amenaza por movimientos en masa y la capacidad de predecir dichos movimientos ha sido un tema de gran interés para la comunidad científica <span id="id1">[<a class="reference internal" href="#id3">AC99</a>]</span>; Chacón et al., 2006.</p>
-<p>La evaluación de la amenaza por
-movimientos en masa es una herramienta
-fundamental en la planeación y
-distribución del territorio. En Colombia,
-mediante la expedición de la Ley 1523 de
-2012, que organiza el Sistema Nacional de
-Gestión del Riesgo de Desastre, se exigió a
-los municipios la elaboración de estudios
-de amenaza como parte de los elementos
-estructurantes en la formulación de los
-Planes de Ordenamiento Territorial (POT).
-El alcance de estos estudios es delimitado
-mediante el Decreto 1807 de 2014, en el
-cual se establece las escalas y metodologías
-requeridas en la elaboración de los estudios
-básicos de amenaza para los POT [6]</p>
-<p>Pérdidas humanas y económicas generadas por movimientos en masa se presentan cada año en todos los países del mundo, sin embargo el nivel de impacto varía considerablemente de acuerdo con las condiciones geológicas locales y la vulnerabilidad socio-económica (Alcantara - Ayala, 2002; Harp et al., 2009). Datos presentados por Sidle &amp; Ochiai (2006) señalan al continente asiático con el de mayor número de víctimas, donde Nepal sobresale con 186 víctimas mortales por año, seguido por Japón y China, con 170 y 140-150 respectivamente; en Latinoamérica, Brasil ocupa el primer lugar con un promedio de 88 personas muertas por año. En términos económicos  Japón es la nación más afectada por movimientos en masa, con un estimado de pérdidas de 4 mil millones de dólares anuales; seguido por Italia, Estado Unidos e India con pérdidas que varían entre 1 a 2 mil millones de dólares al año (Cruden et al., 1989; Schuster,  1996; Schuster &amp; Highland, 2001; Sidle &amp; Ochiai, 2006).</p>
-<p>Aunque los movimientos en masa representan modificaciones del terreno dentro del ciclo geomorfológico natural y continuo (Scheidegger, 1998) su ocurrencia en las últimas décadas ha estado íntimamente ligada al crecimiento de la población mundial y consecuente expansión urbana sobre laderas susceptibles a este tipo de procesos. La población urbana de los países en vía de desarrollo se ha incrementado por 5 en tan sólo 40 años y continuará aumentando rápidamente (ONU, 1994; UNFP, 2007), donde las mayores pérdidas se presentan en países de la región circunpacífica, conocida como el Cinturón de Fuego (Alcantara - Ayala, 2002), estimativos realizados por Varnes (1981) indican que el  89% de las muertes a causa de movimientos en masa se localizan en estos países.</p>
-<p>De acuerdo con Dilley et al. (2005), 820.000 km2
-del
-planeta son considerados como zonas de alto riesgo
-por la ocurrencia de movimientos en masa, donde se
-localizan 66 millones de habitantes que corresponden
-aproximadamente al 5% de la población mundial. Entre
-tanto, en la base de datos de desastres (EM-DAT) del
-Centro de Investigaciones en Epidemiologia y Desastres
-(CRED por sus siglas en inglés), los movimientos
-en masa corresponden al 17% del total de víctimas
-mortales por amenazas de origen natural. Entre los años
-2004 y 2010, Petley (2012) registra en el mundo 2.620
-movimientos en masa fatales que dejaron un saldo de
-32.322 muertos, y resalta, entre los países más afectados
-por movimientos en masa, a Italia, Japón, China, Nepal,
-Brasil y Colombia, encontrando como elementos
-comunes de dichos países: terrenos montañosos, lluvias
-intensas y una alta densidad poblacional urbana</p>
-<p>Entre los países que conforman la región Andina, Colombia es
-uno de los más afectados por este tipo de amenaza natural, debido
-a factores como las condiciones tropicales húmedas, derivadas de su
-localización ecuatorial, su ambiente tectónico de convergencia de tres
+<p>El aumento en pérdidas humanas y económicas por fenómenos de origen natural, como consecuencia de la ocupación de la población sobre áreas susceptibles a movimientos en masa, avenidas torrenciales e inundaciones, requiere de la evaluación y zonificación de la amenaza como herramienta fundamental para la ordenación del territorio (<span id="id1">[<a class="reference internal" href="#id15">AC99</a>]</span>, <span id="id2">[<a class="reference internal" href="#id16">CPC+00</a>]</span>, <span id="id3">[<a class="reference internal" href="#id17">eHP06</a>]</span>; <span id="id4">[<a class="reference internal" href="#id18">MWMD11</a>]</span>). Según el Fondo de Población de las Naciones Unidas (UNFPA, por sus siglas en inglés) la población urbana ha incrementado dramáticamente en el último siglo, aumentando de 200 millones en el año 1900 a cerca de 2,900 millones en el año 2000, donde el 54% de la población mundial reside en áreas urbanas y se espera que llegue al 70% para el año 2050 (<a class="reference external" href="https://www.un-ilibrary.org/content/books/9789210015004">UNPF, 2022</a>). El caso de Colombia es aún más crítico, se estima que de una población cercana a los 49 millones de habitantes, el 75% la población es urbana, muy por encima del promedio mundial (<a class="reference external" href="https://www.dane.gov.co/">DANE, 2017</a>).</p>
+<p>Pérdidas humanas y económicas generadas por movimientos en masa se presentan cada año en todos los países del mundo, sin embargo el nivel de impacto varía considerablemente de acuerdo con las condiciones geológicas locales y la vulnerabilidad socio-económica (<span id="id5">[<a class="reference internal" href="#id19">AA02</a>]</span>). Datos presentados por <span id="id6">[<a class="reference internal" href="#id20">SO06</a>]</span> señalan al continente asiático con el de mayor número de víctimas, donde Nepal sobresale con 186 víctimas mortales por año, seguido por Japón y China, con 170 y 140-150 respectivamente; en Latinoamérica, Brasil ocupa el primer lugar con un promedio de 88 personas muertas por año. En términos económicos  Japón es la nación más afectada por movimientos en masa, con un estimado de pérdidas de 4 mil millones de dólares anuales; seguido por Italia, Estado Unidos e India con pérdidas que varían entre 1 a 2 mil millones de dólares al año (<span id="id7">[<a class="reference internal" href="#id20">SO06</a>]</span>).</p>
+<p>De acuerdo con <span id="id8">[<a class="reference internal" href="#id21">DCD+05</a>]</span>, 820.000<span class="math notranslate nohighlight">\(km^2\)</span> del planeta son considerados como zonas de alto riesgo por la ocurrencia de movimientos en masa, donde se localizan 66 millones de habitantes que corresponden aproximadamente al 5% de la población mundial. Entre tanto, en la base de datos de desastres (<a class="reference external" href="https://www.emdat.be/">EM-DAT</a>) del Centro de Investigaciones en Epidemiologia y Desastres (CRED por sus siglas en inglés), los movimientos en masa corresponden al 17% del total de víctimas mortales por amenazas de origen natural. Entre los años 2004 y 2010, <span id="id9">[<a class="reference internal" href="#id22">Pet12</a>]</span> registra en el mundo 2.620 movimientos en masa fatales que dejaron un saldo de 32.322 muertos, y resalta, entre los países más afectados por movimientos en masa, a Italia, Japón, China, Nepal, Brasil y Colombia, encontrando como elementos comunes de dichos países: terrenos montañosos, lluvias intensas y una alta densidad poblacional urbana.</p>
+<p>Entre los países que conforman la región Andina, Colombia es uno de los más afectados por este tipo de amenaza natural, debido
+a factores como las condiciones tropicales húmedas, derivadas de su localización ecuatorial, su ambiente tectónico de convergencia de tres
 placas (Nazca, Sur América, Caribe), y su densa ocupación poblacional de áreas susceptibles a la ocurrencia de movimientos en masa
-(Aristizábal y Sanchez, 2020; Sepúlveda y Petley, 2015).</p>
-<p>Según la Base de Datos Internacional de Desastres (EM-DAT), en
-el periodo transcurrido entre 1901 y 2011, en Colombia ocurrieron
-41 desastres por movimiento en masa ocasionando 3,171 víctimas
-fatales, es decir, 77.34 víctimas por evento, superado únicamente por
-Perú en donde ocurrieron 318 víctimas por evento (Mergili et al.,
-2015). Aristizábal y Sánchez (2020), utilizando la base de datos del
-DesInventar y el Sistema de Información de Movimientos en Masa
-(SIMMA) del Servicio Geológico Colombiano (SGC), destacan que
-en el periodo comprendido entre los años 1900 y 2018 han ocurrido
-al menos 30730 movimientos en masa en Colombia, que han dejado un saldo de 31198 víctimas fatales y pérdidas económicas por
-USD$ 654 millones.</p>
-<p>Para el caso del Valle de Aburrá, una de las áreas más afectadas en Colombia por este tipo de eventos y que concentran un total de 3.4 millones de habitantes, los movimientos en masa corresponden a 3 de cada 10 desastres que ocurren en la región y dejan como saldo trágico el 75% de la totalidad de victimas anuales. Sólo los movimientos en masa le han reportado a la región 1390 personas fallecidas y pérdidas económicas superiores a los 21 mil millones de pesos en el periodo 1880-2007 (Aristizábal &amp; Gómez, 2007). Para Colombia, estudios recientes han estimado que el 70% de la red vial nacional se ve afectado por la ocurrencia de movimientos en masa  (Montero, 2005). De acuerdo a la Base de Datos Internacional sobre Desastres (EM-DAT por sus siglas en inglés) elaborado por la Universidad Católica de Louvain (<a class="reference external" href="http://www.emdat.be">www.emdat.be</a>), en Colombia se han reportado durante el último siglo 36 desastres generados por movimientos en masa de magnitud considerable, el más catastrófico corresponde a Villatina, ocurrido el 27 de septiembre de 1987 en la ciudad de Medellín, con un estimado de 640 personas muertas.</p>
-<p>Debido a esta grave problemática numerosos estudios se han adelantado en los últimos años, que han permitido entender las causas que involucran dichos procesos morfodinámicos. Sidle &amp; Ochiai (2008) presentan una excelente revisión al respecto. Sin embargo debido a la complejidad que envuelve este tipo de eventos aún existe gran incertidumbre específicamente en la predicción de su ocurrencia.</p>
-<p>Los movimientos en masa son el producto de diversos elementos, donde la configuración morfológica y evolución de las laderas juegan un papel determinante (Brunsden, 2002; Griffiths et al., 2002; Hutchinson, 1995). La definición más simple y ampliamente aceptada es la dada por Cruden (1991), quien define el término como el movimiento de una masa de roca, escombros o tierra a lo largo de una ladera. Bajo esta definición existe una gran variedad de movimientos en masa. Algunos son lentos, pequeños e imperceptibles, en tanto otros involucran grandes volúmenes de material y alcanzan altas velocidades con una gran poder destructivo (GEMMA, 2007). La clasificación de movimientos en masa más ampliamente conocida y aceptada es propuesta por Varnes (1978) y actualizada por Cruden &amp; Varnes (1996). Estos autores emplean como criterio principal para la clasificación, el tipo de movimiento y el tipo de material. Los tipos de movimientos definidos por estos autores son caídas, volcamientos, deslizamientos, flujos, y propagación lateral. En tanto los materiales los dividen en suelo y roca. Una gran complejidad de movimientos puede surgir de la combinación de estos criterios sencillos.</p>
-<p>Los movimientos en masa son el producto del debilitamiento progresivo de las propiedades mecánicas de los materiales de las vertientes por procesos naturales tales como meteorización, levantamientos tectónicos y actividades humanas que activan movimientos lentos, generalmente imperceptibles (Costa &amp; Baker, 1981; Soeteres &amp; van Westen, 1996), sin embargo, un solo factor, comúnmente la precipitación o un sismo, es considerado como el estimulo externo que puede generar una respuesta casi inmediata de movilizar los materiales que conforman la ladera, sea por el rápido incremento de los esfuerzos o por la reducción de la resistencia (Wang &amp; Sassa, 2006).</p>
-<p>De esta forma los factores que controlan la ocurrencia y distribución de los movimientos en masa pueden dividirse en dos categorías: las variables cuasi-estáticas o condicionantes y las variables dinámicas o detonantes. Las variables cuasi-estáticas, tales como las propiedades de los suelos, la topografía contribuyen a la susceptibilidad de las vertientes y definen la distribución espacial de los movimientos en masa. En tanto, las variables dinámicas, tales como el grado de saturación del suelo y la cohesión controlan los factores detonantes de laderas susceptibles. La climatología, los procesos hidrológicos, y las actividades humanas controlan a su vez las variables dinámicas, y caracterizan el patrón temporal de los movimientos en masa (Crosta &amp; Fratiini, 2003).</p>
-<p id="id2"><dl class="citation">
-<dt class="label" id="id3"><span class="brackets"><a class="fn-backref" href="#id1">AC99</a></span></dt>
+(<span id="id10">[<a class="reference internal" href="#id23">AS19</a>]</span>; <span id="id11">[<a class="reference internal" href="#id24">SP15</a>]</span>).</p>
+<p>Según la Base de Datos Internacional de Desastres (EM-DAT), en el periodo transcurrido entre 1901 y 2011, en Colombia ocurrieron
+41 desastres por movimiento en masa ocasionando 3,171 víctimas fatales, es decir, 77.34 víctimas por evento, superado únicamente por
+Perú en donde ocurrieron 318 víctimas por evento. <span id="id12">[<a class="reference internal" href="#id23">AS19</a>]</span>, utilizando la base de datos del
+DesInventar y el Sistema de Información de Movimientos en Masa (SIMMA) del Servicio Geológico Colombiano (SGC), destacan que
+en el periodo comprendido entre los años 1900 y 2018 han ocurrido al menos 30730 movimientos en masa en Colombia, que han dejado un saldo de 31198 víctimas fatales y pérdidas económicas por USD$ 654 millones.</p>
+<p>Para el caso del Valle de Aburrá, una de las áreas más afectadas en Colombia por este tipo de eventos y que concentran un total de 3.4 millones de habitantes, los movimientos en masa corresponden a 3 de cada 10 desastres que ocurren en la región y dejan como saldo trágico el 75% de la totalidad de victimas anuales. Sólo los movimientos en masa le han reportado a la región 1390 personas fallecidas y pérdidas económicas superiores a los 21 mil millones de pesos en el periodo 1880-2007 (<span id="id13">[<a class="reference internal" href="#id25">JA07</a>]</span>).</p>
+<p id="id14"><dl class="citation">
+<dt class="label" id="id19"><span class="brackets"><a class="fn-backref" href="#id5">AA02</a></span></dt>
+<dd><p>I Alcantara-Ayala. Geomorphology, natural hazards, vulnerability and prevention of natural disasters in developing countries. <em>Geomorphology</em>, 2002.</p>
+</dd>
+<dt class="label" id="id15"><span class="brackets"><a class="fn-backref" href="#id1">AC99</a></span></dt>
 <dd><p>Pietro Aleotti and Robin Chowdhury. <em>Landslide hazard assessment: Summary review and new perspectives</em>. Volume 58. Springer, 1999. <a class="reference external" href="https://doi.org/10.1007/s100640050066">doi:10.1007/s100640050066</a>.</p>
+</dd>
+<dt class="label" id="id23"><span class="brackets">AS19</span><span class="fn-backref">(<a href="#id10">1</a>,<a href="#id12">2</a>)</span></dt>
+<dd><p>Edier Aristizábal and Oscar Sánchez. Spatial and temporal patterns and socioeconomic impact of landslides in the tropical and mountainous colombian andes. <em>Disasters</em>, 2019. <a class="reference external" href="https://doi.org/10.1111/disa.12391">doi:10.1111/disa.12391</a>.</p>
+</dd>
+<dt class="label" id="id16"><span class="brackets"><a class="fn-backref" href="#id2">CPC+00</a></span></dt>
+<dd><p>Stanley A. Changnon, Roger A. Pielke, David Changnon, Richard T Sylves, and Roger Pulwarty. Human factors explain the increased losses from weather and climate extremes. <em>Bulletin of the American Meteorological Society</em>, 81:437–442, 2000. <a class="reference external" href="https://doi.org/10.1175/1520-0477(2000)081&lt;0437:HFETIL&gt;2.3.CO;2">doi:10.1175/1520-0477(2000)081&lt;0437:HFETIL&gt;2.3.CO;2</a>.</p>
+</dd>
+<dt class="label" id="id21"><span class="brackets"><a class="fn-backref" href="#id8">DCD+05</a></span></dt>
+<dd><p><strong>missing publisher in Dilley2005</strong></p>
+</dd>
+<dt class="label" id="id17"><span class="brackets"><a class="fn-backref" href="#id3">eHP06</a></span></dt>
+<dd><p><strong>missing journal in hoppe</strong></p>
+</dd>
+<dt class="label" id="id25"><span class="brackets"><a class="fn-backref" href="#id13">JA07</a></span></dt>
+<dd><p>E. y Gómez J Aristizábal. Inventario de emergencias y desastres en el valle de aburrá originados por fenómenos naturales y antrópicos en el período 1880-2007. <em>Revista Gestión y Ambiente</em>, vol. 10, N:17–30, 2007.</p>
+</dd>
+<dt class="label" id="id18"><span class="brackets"><a class="fn-backref" href="#id4">MWMD11</a></span></dt>
+<dd><p>Rebecca E Morss, Olga V Wilhelmi, Gerald A Meehl, and Lisa Dilling. Improving societal outcomes of extreme weather in a changing climate: an integrated perspective. <em>SSRN</em>, 2011. <a class="reference external" href="https://doi.org/10.1146/annurev-environ-060809-100145">doi:10.1146/annurev-environ-060809-100145</a>.</p>
+</dd>
+<dt class="label" id="id22"><span class="brackets"><a class="fn-backref" href="#id9">Pet12</a></span></dt>
+<dd><p>David Petley. Global patterns of loss of life from landslides. <em>Geology</em>, 40:927–930, 10 2012. <a class="reference external" href="https://doi.org/10.1130/G33217.1">doi:10.1130/G33217.1</a>.</p>
+</dd>
+<dt class="label" id="id24"><span class="brackets"><a class="fn-backref" href="#id11">SP15</a></span></dt>
+<dd><p>S. A. Sepúlveda and D. N. Petley. Regional trends and controlling factors of fatal landslides in latin america and the caribbean. <em>Natural Hazards and Earth System Sciences</em>, 15:1821–1833, 8 2015. <a class="reference external" href="https://doi.org/10.5194/nhess-15-1821-2015">doi:10.5194/nhess-15-1821-2015</a>.</p>
+</dd>
+<dt class="label" id="id20"><span class="brackets">SO06</span><span class="fn-backref">(<a href="#id6">1</a>,<a href="#id7">2</a>)</span></dt>
+<dd><p><strong>missing publisher in Sidle2006</strong></p>
 </dd>
 </dl>
 </p>
@@ -382,10 +373,10 @@ USD$ 654 millones.</p>
             <p class="prev-next-title">Cartografía Geotécnica</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="01_metodos.html" title="next page">
+    <a class='right-next' id="next-link" href="01_normatividad.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Modelo</p>
+        <p class="prev-next-title">Amenaza &amp; ordenamiento territorial</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>
