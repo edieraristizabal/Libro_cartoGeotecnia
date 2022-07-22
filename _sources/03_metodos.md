@@ -19,6 +19,12 @@ La base de datos de desastres ([EM-DAT](https://www.emdat.be/)) del Centro de In
 
 ![EM-DAT](https://www.researchgate.net/profile/Laurent-Boissier/publication/269278988/figure/fig6/AS:614403984596997@1523496733187/Classification-des-catastrophes-naturelles-utilisee-par-le-CRED-dans-la-base-EM-DAT_W640.jpg)
 
+:::{figure-md} clasificacion
+<img src="https://www.researchgate.net/profile/Laurent-Boissier/publication/269278988/figure/fig6/AS:614403984596997@1523496733187/Classification-des-catastrophes-naturelles-utilisee-par-le-CRED-dans-la-base-EM-DAT_W640.jpg" alt="clasificacion" width="200px">
+
+Clasificacion de desastres por fenómenos de origen natural. Tomado de EM-DAT.
+:::
+
 La clasificación de movimientos en masa más ampliamente conocida y aceptada es propuesta por Varnes (1978) y actualizada por Cruden & Varnes (1996). Estos autores emplean como criterio principal para la clasificación, el tipo de movimiento y el tipo de material. Los tipos de movimientos definidos por estos autores son caídas, volcamientos, deslizamientos, flujos, y propagación lateral. En tanto los materiales los dividen en suelo y roca. Una gran complejidad de movimientos puede surgir de la combinación de estos criterios sencillos. 
 
 ## Definición de los conceptos de susceptibilidad y amenaza
