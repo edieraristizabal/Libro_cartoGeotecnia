@@ -63,10 +63,10 @@ plt.imshow(pend_menm)
 np.unique(pend_menm)
 ------------------
 
-[1;36m  File [1;32m"C:\Users\usuario\AppData\Local\Temp/ipykernel_30260/2189466134.py"[1;36m, line [1;32m1[0m
+[1;36m  File [1;32m"C:\Users\usuario\AppData\Local\Temp/ipykernel_15668/2189466134.py"[1;36m, line [1;32m1[0m
 [1;33m    A continuación se presenta como se pueden importar y manipular el mapa raster del inventario de eventos en python:[0m
 [1;37m      ^[0m
 [1;31mSyntaxError[0m[1;31m:[0m invalid syntax
 
-SyntaxError: invalid syntax (Temp/ipykernel_30260/2189466134.py, line 1)
+SyntaxError: invalid syntax (Temp/ipykernel_15668/2189466134.py, line 1)
 
