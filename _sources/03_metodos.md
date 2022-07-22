@@ -62,13 +62,16 @@ Clasificacion de movimientos en masa tipo flujos de acuerdo con Varnes & Cruden 
 
 Las laderas conformadas en roca generalmente presentan movimientos en masa tipo caída y volcamiento, los cuales suelen presentarse en conjunto. El volcamiento se refiere a la rotación del material con respecto un punto o eje por debajo del centro de gravedad, y la caída corresponde al descenso por el aire del material, dodne se incluye además el rebote y/o rodamiento del material al caer.
 
-:::{figure-md} flujos2
-<img src="https://earthwise.bgs.ac.uk/images/thumb/3/39/OR17031fig2.jpg/600px-OR17031fig2.jpg" alt="flujos2" width="800px">
+:::{figure-md} toppling
+<img src="https://online.blasttraining.com.au/pluginfile.php/94/mod_glossary/entry/268/rockTopple.jpg" alt="flujos2" width="800px">
 
-Clasificacion de movimientos en masa tipo flujos de acuerdo con Varnes & Cruden (1996).
+Volcamiento y caida en laderas en roca.
 :::
 
-{cite:t}`cruden1996` define la **actividad** de un movimiento en masa de acuerdo con tres criterios asociados a la superficie de falla: estado, distribución y estado. El estado de la actividad describe el tiempo en que se ha presentado el movimiento, y se subdivide en *activos*, que está actualmente en movimiento, *reactivado*, que nuevamente es activo luego de estar inactivo, *suspendido*, que se ha movido dentro del último ciclo anual pero que no se está moviendo actualmente, y los *inactivos*, los cuales no presentan movimiento en un periodo mayor a un ciclo anual, entre ellos están los *latentes* (*dormant*) donde las causas que lo originaron permanecen, *abandonados*, donde las causas del movimiento han cambiando, *estabilizado*, cuando se han realizado obras de mitigación que impiden su movimiento, y *relicto*, los cuales se presentaron bajo condiciones climáticas y geomorfológicas diferentes a las actuales.
+Finalmente se encuentran los movimientos en masa tipo extensión lateral, los cuales se dan en superficies planas y materiales cohesivos o roca que se encuentran sobre materiales de menor consistencia. 
+
+## Actividad de los movimientos en masa
+{cite:t}`cruden1996` definen la **actividad** de un movimiento en masa de acuerdo con tres criterios asociados a la superficie de falla: estado, distribución y estado. El estado de la actividad describe el tiempo en que se ha presentado el movimiento, y se subdivide en *activos*, que está actualmente en movimiento, *reactivado*, que nuevamente es activo luego de estar inactivo, *suspendido*, que se ha movido dentro del último ciclo anual pero que no se está moviendo actualmente, y los *inactivos*, los cuales no presentan movimiento en un periodo mayor a un ciclo anual, entre ellos están los *latentes* (*dormant*) donde las causas que lo originaron permanecen, *abandonados*, donde las causas del movimiento han cambiando, *estabilizado*, cuando se han realizado obras de mitigación que impiden su movimiento, y *relicto*, los cuales se presentaron bajo condiciones climáticas y geomorfológicas diferentes a las actuales.
 
 :::{figure-md} estado
 <img src="https://www.researchgate.net/profile/Pierluigi-Confuorto/publication/303377557/figure/fig4/AS:669001558528004@1536513809220/Scheme-of-the-state-of-activity-of-a-landslide-modified-from-WP-WLI-1993-1-Active.ppm" alt="estado" width="800px">
@@ -80,7 +83,7 @@ La distribución de la actividad se refiere hacia dónde se está mpviendo o des
 
 Finalmente, el estilo de la actividad se refiere a la forma en la cual diferentes movimientos contribuyen al movimiento en masa. Se subdivide en *complejo* cuando exhibe al menos dos tipos de movimientos en secuencia, es decir una partícula presenta dos tipos de movimientos en momentos diferentes, *compuesto* cuando exhibe al menos dos tipos de movimientos en diferentes partes de la masa desplazada, algunas veces simultaneamente. Adicionalmente se presentan estiso *sencillo* cuando solo existe un tipo de movimiento y *multiple* cuandos e presentan diferentes movimientos del mismo tipo.
 
-En cuanto a la escala de la velocidad de los movimientso en masa {cite:t}`cruden1996` proponen la siguiente [Figura](velocidad) con velocidades en términos de m/s para movimientos extremadamente rápidos, m/min para muy rápidos, hr/min para rápidos, m/meses para moderados,, m/año para lentos y muy lento para magnitudes alrededor de mm/año.
+En cuanto a la escala de la velocidad de los movimientos en masa {cite:t}`cruden1996` proponen la siguiente [Figura](velocidad) con velocidades en términos de m/s para movimientos extremadamente rápidos, m/min para muy rápidos, hr/min para rápidos, m/meses para moderados,, m/año para lentos y muy lento para magnitudes alrededor de mm/año.
 
 :::{figure-md} velocidad
 <img src="https://www.researchgate.net/profile/Pierluigi-Confuorto/publication/303377557/figure/fig7/AS:669001558540305@1536513809956/Velocity-of-a-landside-according-to-Cruden-and-Varnes-classification-modified-from.ppm" alt="velocidad" width="800px">
