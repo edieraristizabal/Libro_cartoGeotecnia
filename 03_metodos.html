@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Los movimientos en masa &#8212; Cartografía Geotécnica</title>
+    <title>Caracterización de movimientos en masa &#8212; Cartografía Geotécnica</title>
     
   <link href="_static/css/theme.css" rel="stylesheet">
   <link href="_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -42,8 +42,6 @@
     <script src="_static/copybutton.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
-    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
     <script>
         const thebe_selector = ".thebe"
@@ -53,7 +51,7 @@
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Inventario de movimientos en masa" href="04_inventario.html" />
+    <link rel="next" title="Susceptibilidad y amenaza" href="04_susceptibilidad.html" />
     <link rel="prev" title="Estudios de zonificación de movimientos en masa en el Valle de Aburrá" href="02_estadoarte.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
@@ -116,11 +114,16 @@
  </li>
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   Los movimientos en masa
+   Caracterización de movimientos en masa
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="04_inventario.html">
+  <a class="reference internal" href="04_susceptibilidad.html">
+   Susceptibilidad y amenaza
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="05_inventario.html">
    Inventario de movimientos en masa
   </a>
  </li>
@@ -290,16 +293,6 @@
    Clasificación de movimientos en masa
   </a>
  </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#definicion-de-los-conceptos-de-susceptibilidad-y-amenaza">
-   Definición de los conceptos de susceptibilidad y amenaza
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#metodologias-para-la-evaluacion-de-la-susceptibildiad-y-o-amenaza">
-   Metodologías para la evaluación de la susceptibildiad y/o amenaza
-  </a>
- </li>
 </ul>
 
             </nav>
@@ -310,7 +303,7 @@
         <div class="col-12 col-md-9 pl-md-3 pr-md-0">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Los movimientos en masa</h1>
+                <h1>Caracterización de movimientos en masa</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -330,16 +323,6 @@
    Clasificación de movimientos en masa
   </a>
  </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#definicion-de-los-conceptos-de-susceptibilidad-y-amenaza">
-   Definición de los conceptos de susceptibilidad y amenaza
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#metodologias-para-la-evaluacion-de-la-susceptibildiad-y-o-amenaza">
-   Metodologías para la evaluación de la susceptibildiad y/o amenaza
-  </a>
- </li>
 </ul>
 
                         </nav>
@@ -349,54 +332,74 @@
             
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="los-movimientos-en-masa">
-<h1>Los movimientos en masa<a class="headerlink" href="#los-movimientos-en-masa" title="Permalink to this headline">¶</a></h1>
+  <div class="tex2jax_ignore mathjax_ignore section" id="caracterizacion-de-movimientos-en-masa">
+<h1>Caracterización de movimientos en masa<a class="headerlink" href="#caracterizacion-de-movimientos-en-masa" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="definicion-de-movimientos-en-masa">
 <h2>Definición de movimientos en masa<a class="headerlink" href="#definicion-de-movimientos-en-masa" title="Permalink to this headline">¶</a></h2>
-<p>Los movimientos en masa son el producto de diversos elementos, donde la configuración morfológica y evolución de las laderas juegan un papel determinante (Brunsden, 2002; Griffiths et al., 2002; Hutchinson, 1995). La definición más simple y ampliamente aceptada es la dada por Cruden (1991), quien define el término como el movimiento de una masa de roca, escombros o tierra a lo largo de una ladera. Bajo esta definición existe una gran variedad de movimientos en masa. Algunos son lentos, pequeños e imperceptibles, en tanto otros involucran grandes volúmenes de material y alcanzan altas velocidades con una gran poder destructivo (GEMMA, 2007). En tanto, Scheidegger (1998)
+<p>Los movimientos en masa son el producto de diversos elementos, donde la configuración morfológica y evolución de las laderas juegan un papel determinante (<span id="id1">Hutchinson [<a class="reference internal" href="#id39">1988</a>]</span>). La definición más simple y ampliamente aceptada es la dada por <span id="id2">Cruden and Varnes [<a class="reference internal" href="#id40">1996</a>]</span>, quienes definen el término como el movimiento de una masa de roca, escombros o tierra a lo largo de una ladera. Bajo esta definición existe una gran variedad de movimientos en masa. Algunos son lentos, pequeños e imperceptibles, en tanto otros involucran grandes volúmenes de material y alcanzan altas velocidades con una gran poder destructivo. En tanto, <span id="id3">Scheidegger [<a class="reference internal" href="#id41">1998</a>]</span>
 interpreta los deslizamientos como modificaciones del terreno dentro del ciclo geomorfológico continuo, y que corresponden a la respuesta normal del sistema debido a complejos parámetros exogénicos (meteóricos) y endogénicos (tectónicos).</p>
-<p>Los movimientos en masa son el producto del debilitamiento progresivo de las propiedades mecánicas de los materiales de las vertientes por procesos naturales tales como meteorización, levantamientos tectónicos y actividades humanas que activan movimientos lentos, generalmente imperceptibles (Costa &amp; Baker, 1981; Soeteres &amp; van Westen, 1996), sin embargo, un solo factor, comúnmente la precipitación o un sismo, es considerado como el estimulo externo que puede generar una respuesta casi inmediata de movilizar los materiales que conforman la ladera, sea por el rápido incremento de los esfuerzos o por la reducción de la resistencia (Wang &amp; Sassa, 2006).</p>
-<p>De esta forma los factores que controlan la ocurrencia y distribución de los movimientos en masa pueden dividirse en dos categorías: las variables cuasi-estáticas o condicionantes y las variables dinámicas o detonantes. Las variables cuasi-estáticas, tales como las propiedades de los suelos, la topografía contribuyen a la susceptibilidad de las vertientes y definen la distribución espacial de los movimientos en masa. En tanto, las variables dinámicas, tales como el grado de saturación del suelo y la cohesión controlan los factores detonantes de laderas susceptibles. La climatología, los procesos hidrológicos, y las actividades humanas controlan a su vez las variables dinámicas, y caracterizan el patrón temporal de los movimientos en masa (Crosta &amp; Fratiini, 2003).</p>
-<p>Es importante resaltar que las amenazas naturales denominadas avenidas torrenciales no son consideradas en este documento como movimientos en masa estrictamente. En realidad corresponden a fenómenos intermedios entre proceso gravitacionales y procesos hidrológicos, donde el origen, la concentración y características de los sedimentos controla el comportamiento del flujo. La descripción que más se ajusta a los procesos denominados localmente como avenidas torrenciales corresponde a una de las primeras definiciones de flujos de escombros realizada por Stiny (1910) donde los describe como fenómenos que inician como una inundación en torrentes de montaña, con una importante carga de sedimentos de fondo y en suspensión, y que, de acuerdo con el incremento en el volumen de sedimentos, cambia a una masa viscosa de agua, sedimentos y madera mezclados. En esta misma dirección Hungr (2005) propone utilizar el término flujo de escombros para cubrir un rango amplio de flujos, que incluyen los fenómenos iniciales de origen gravitacional en las laderas de la cuenca, que aportan una gran cantidad de
-sedimentos a los cauces de montaña, y que se transforman a flujos rápidos a lo largo de cauces confinados de fuerte pendiente, que terminan depositándose como abanicos. En conclusión, los términos avenida torrencial y flujo de escombros representan un proceso amplio que va desde la ocurrencia de movimientos en masa en las laderas, hasta los diferentes flujos que se presentan a lo largo de los cauces de montaña, de acuerdo con la concentración de agua y sedimentos.</p>
+<div class="figure align-default" id="rotacional">
+<a class="reference internal image-reference" href="https://www.researchgate.net/profile/Thorsten-Hoeser/publication/327939547/figure/fig3/AS:675827549224960&#64;1538141252953/Conceptual-description-of-the-morphology-of-a-landslide-of-type-rotational-The-two-main.png"><img alt="variables" src="https://www.researchgate.net/profile/Thorsten-Hoeser/publication/327939547/figure/fig3/AS:675827549224960&#64;1538141252953/Conceptual-description-of-the-morphology-of-a-landslide-of-type-rotational-The-two-main.png" style="width: 800px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 1 </span><span class="caption-text">Descripción conceptual de la morfología de un deslizamiento rotacional. Tomado de Glade and Crozier (2005).</span><a class="headerlink" href="#rotacional" title="Permalink to this image">¶</a></p>
+</div>
+<p>Los movimientos en masa son el producto del debilitamiento progresivo de las propiedades mecánicas de los materiales de las vertientes por procesos naturales tales como meteorización, levantamientos tectónicos y actividades humanas que activan movimientos lentos, generalmente imperceptibles (<span id="id4"></span>, <span id="id5">M.J Glade [<a class="reference internal" href="#id47">2005</a>]</span>), sin embargo, un solo factor, comúnmente la precipitación o un sismo, es considerado como el estimulo externo que puede generar una respuesta casi inmediata de movilizar los materiales que conforman la ladera, sea por el rápido incremento de los esfuerzos o por la reducción de la resistencia (<span id="id6">Wang <em>et al.</em> [<a class="reference internal" href="#id43">2002</a>]</span>).</p>
+<p>De esta forma los factores que controlan la ocurrencia y distribución de los movimientos en masa pueden dividirse en dos categorías: las <strong>variables cuasi-estáticas o condicionantes</strong> y las <strong>variables dinámicas o detonantes</strong>. Las variables cuasi-estáticas, tales como las propiedades de los suelos, la topografía contribuyen a la susceptibilidad de las vertientes y definen la distribución espacial de los movimientos en masa. En tanto, las variables dinámicas, tales como el grado de saturación del suelo y la cohesión controlan los factores detonantes de laderas susceptibles. La climatología, los procesos hidrológicos, y las actividades humanas controlan a su vez las variables dinámicas, y caracterizan el patrón temporal de los movimientos en masa (<span id="id7">Crosta and Frattini [<a class="reference internal" href="#id44">2003</a>]</span>).</p>
+<div class="figure align-default" id="variables">
+<a class="reference internal image-reference" href="https://www.researchgate.net/profile/Thorsten-Hoeser/publication/327939547/figure/fig1/AS:675827549208578&#64;1538141252865/Conceptual-states-of-stability-of-a-landslide-differentiated-into-three-major-states-and.png"><img alt="variables" src="https://www.researchgate.net/profile/Thorsten-Hoeser/publication/327939547/figure/fig1/AS:675827549208578&#64;1538141252865/Conceptual-states-of-stability-of-a-landslide-differentiated-into-three-major-states-and.png" style="width: 800px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 2 </span><span class="caption-text">Evolución de los movimientos en masa. Tomado de Glade and Crozier (2005).</span><a class="headerlink" href="#variables" title="Permalink to this image">¶</a></p>
+</div>
+<p>Es importante resaltar que las amenazas naturales denominadas avenidas torrenciales no son consideradas en este documento como movimientos en masa estrictamente. En realidad corresponden a fenómenos intermedios entre proceso gravitacionales y procesos hidrológicos, donde el origen, la concentración y características de los sedimentos controla el comportamiento del flujo. La descripción que más se ajusta a los procesos denominados localmente como avenidas torrenciales corresponde a una de las primeras definiciones de flujos de escombros realizada por <span id="id8"></span> donde los describe como fenómenos que inician como una inundación en torrentes de montaña, con una importante carga de sedimentos de fondo y en suspensión, y que, de acuerdo con el incremento en el volumen de sedimentos, cambia a una masa viscosa de agua, sedimentos y madera mezclados. En esta misma dirección <span id="id9">Hungr [<a class="reference internal" href="#id46">2005</a>]</span> propone utilizar el término flujo de escombros para cubrir un rango amplio de flujos, que incluyen los fenómenos iniciales de origen gravitacional en las laderas de la cuenca, que aportan una gran cantidad de sedimentos a los cauces de montaña, y que se transforman a flujos rápidos a lo largo de cauces confinados de fuerte pendiente, que terminan depositándose como abanicos. En conclusión, los términos avenida torrencial y flujo de escombros representan un proceso amplio que va desde la ocurrencia de movimientos en masa en las laderas, hasta los diferentes flujos que se presentan a lo largo de los cauces de montaña, de acuerdo con la concentración de agua y sedimentos.</p>
 <p>Esta distinción es importante desde lo práctico, ya que implica que los métodos de evaluación de la susceptibilidad y amenaza para avenidas torrenciales no corresponden a las aproximaciones presentadas en este documento. Considerando la dinámica compleja entre las vertientes
 y el cauce que da origen a las avenidas torrenciales, los métodos más apropiados para la evalaucion de la ameanza por avenidas torrenciales deben tener en cuenta las interconexiones y los efectos concatenados. En este caso, a partir de la evaluación de la respuesta hidrológica de la cuenca, combinado con el análisis del potencial aporte de sedimentos de las laderas de la cuenca, y el tránsito hidráulico de la mezcla de agua y sedimento resultante.</p>
 </div>
 <div class="section" id="clasificacion-de-movimientos-en-masa">
 <h2>Clasificación de movimientos en masa<a class="headerlink" href="#clasificacion-de-movimientos-en-masa" title="Permalink to this headline">¶</a></h2>
-<p>La base de datos de desastres (<a class="reference external" href="https://www.emdat.be/">EM-DAT</a>) del Centro de Investigaciones en Epidemiologia y Desastres (CRED por sus siglas en inglés) clasifica los desastres por fenomenos de origen natural en biológicos, geofísicos e hidrometerológicos. Entre los geofísicos se encuentran los sismos, volcanes, y movimientos en masa secos (caída de rocas, deslizamientos, avalancha y subsidencia). Por su parte los eventos hidrometeorológicos se subdividen en hidrologicos, meteorológicos y climatológicos. Dentro del subgrupo de hidrológicos se encuentra otro grupo de movimientos en masa con agua.</p>
+<p>La base de datos de desastres (<a class="reference external" href="https://www.emdat.be/">EM-DAT</a>) del Centro de Investigaciones en Epidemiologia y Desastres (CRED por sus siglas en inglés) clasifica los desastres por fenomenos de origen natural en biológicos, geofísicos e hidrometeorológicos. Entre los geofísicos se encuentran los sismos, volcanes, y movimientos en masa secos (caída de rocas, deslizamientos, avalancha y subsidencia). Por su parte los eventos hidrometeorológicos se subdividen en hidrologicos, meteorológicos y climatológicos. Dentro del subgrupo de hidrológicos se encuentran los movimientos en masa con agua.</p>
 <div class="figure align-default" id="clasificacion">
-<a class="reference internal image-reference" href="https://www.researchgate.net/profile/Laurent-Boissier/publication/269278988/figure/fig6/AS:614403984596997&#64;1523496733187/Classification-des-catastrophes-naturelles-utilisee-par-le-CRED-dans-la-base-EM-DAT_W640.jpg"><img alt="clasificacion" src="https://www.researchgate.net/profile/Laurent-Boissier/publication/269278988/figure/fig6/AS:614403984596997&#64;1523496733187/Classification-des-catastrophes-naturelles-utilisee-par-le-CRED-dans-la-base-EM-DAT_W640.jpg" style="width: 500px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 1 </span><span class="caption-text">Clasificacion de desastres por fenómenos de origen natural. Tomado de EM-DAT.</span><a class="headerlink" href="#clasificacion" title="Permalink to this image">¶</a></p>
+<a class="reference internal image-reference" href="https://www.researchgate.net/profile/Laurent-Boissier/publication/269278988/figure/fig6/AS:614403984596997&#64;1523496733187/Classification-des-catastrophes-naturelles-utilisee-par-le-CRED-dans-la-base-EM-DAT_W640.jpg"><img alt="clasificacion" src="https://www.researchgate.net/profile/Laurent-Boissier/publication/269278988/figure/fig6/AS:614403984596997&#64;1523496733187/Classification-des-catastrophes-naturelles-utilisee-par-le-CRED-dans-la-base-EM-DAT_W640.jpg" style="width: 800px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 3 </span><span class="caption-text">Clasificacion de desastres por fenómenos de origen natural. Tomado de EM-DAT.</span><a class="headerlink" href="#clasificacion" title="Permalink to this image">¶</a></p>
 </div>
-<p>La clasificación de movimientos en masa más ampliamente conocida y aceptada es propuesta por Varnes (1978) y actualizada por Cruden &amp; Varnes (1996). Estos autores emplean como criterio principal para la clasificación, el tipo de movimiento y el tipo de material. Los tipos de movimientos definidos por estos autores son caídas, volcamientos, deslizamientos, flujos, y propagación lateral. En tanto los materiales los dividen en suelo y roca. Una gran complejidad de movimientos puede surgir de la combinación de estos criterios sencillos.</p>
+<p>La clasificación de movimientos en masa más ampliamente conocida y aceptada es propuesta por Varnes (1978) y actualizada por <span id="id10">Cruden and Varnes [<a class="reference internal" href="#id40">1996</a>]</span>. Estos autores emplean como criterio principal para la clasificación, el tipo de movimiento y el tipo de material. Los tipos de movimientos definidos por estos autores son caídas, volcamientos, deslizamientos, flujos, y propagación lateral. En tanto los materiales los dividen en suelo y roca. Una gran complejidad de movimientos puede surgir de la combinación de estos criterios sencillos.</p>
+<div class="figure align-default" id="clasificacionmenm">
+<a class="reference internal image-reference" href="http://3.bp.blogspot.com/-_EbkOIQYDk8/T0UjeiN34ZI/AAAAAAAAAuA/YPdU7wsk2UE/s1600/422278_327194590659660_106361689409619_902557_797164760_n.jpg"><img alt="clasificacionMenM" src="http://3.bp.blogspot.com/-_EbkOIQYDk8/T0UjeiN34ZI/AAAAAAAAAuA/YPdU7wsk2UE/s1600/422278_327194590659660_106361689409619_902557_797164760_n.jpg" style="width: 800px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 4 </span><span class="caption-text">Clasificacion de movimientos en masa de acuerdo con Varnes &amp; Cruden (1996).</span><a class="headerlink" href="#clasificacionmenm" title="Permalink to this image">¶</a></p>
 </div>
-<div class="section" id="definicion-de-los-conceptos-de-susceptibilidad-y-amenaza">
-<h2>Definición de los conceptos de susceptibilidad y amenaza<a class="headerlink" href="#definicion-de-los-conceptos-de-susceptibilidad-y-amenaza" title="Permalink to this headline">¶</a></h2>
-<p>La susceptibilidad de un terreno a fallar es definida por Brabb (1984) como la tendencia de un deslizamiento a ser generado en el
-futuro en una área específica. En el mismo sentido, Soeters y van Westen (1996) definen susceptibilidad como la posibilidad de que un
-fenómeno ocurra en un área de acuerdo con las condiciones locales del terreno, y especifican que factores detonantes tales
-como precipitación o sismicidad no son considerados. Entre tanto, la amenaza se define como la probabilidad de ocurrencia de un fenómeno potencialmente dañino dentro de un periodo de tiempo específico y dentro de un área dada (Varnes, 1984). Concretamente, el término amenaza expresa la probabilidad de ocurrencia de un potencial fenómeno destructivo en espacio y tiempo
-definidos.</p>
-<p>En este sentido, la susceptibilidad es el primer acercamiento hacia la evaluación de la amenaza, debido a que debe explicar la
-distribución de los deslizamientos de acuerdo con la evolución geomorfológica del terreno (Griffiths y otros,
-2002). El entendimiento de la ocurrencia de deslizamientos corresponde a un proceso comprensivo, donde cada paisaje es
-caracterizado por una jerarquía de movimientos en masa distribuidos como una secuencia en tiempo y espacio, entendido como susceptibilidad, y
-descrito por la frecuencia y magnitud incluyendo la duración y secuencia de los eventos del proceso, entendido como
-amenaza (Brunsden, 2002).</p>
-<p>Los términos amenaza y susceptibilidad han sido erróneamente usados como sinónimos. Los mapas de susceptibilidad zonifican el
-terreno de acuerdo a la favorabilidad a fallar de una ladera, con el propósito de analizar posteriormente los mecanismos detonantes. En tanto, amenaza es la probabilidad de ocurrencia de deslizamientos en áreas susceptibles, y que a diferencia de susceptibilidad involucra frecuencia y magnitud. Esta definición de amenaza considera tiempo y espacio, dos factores que involucran la cuantificación de las causas
-detonantes.</p>
-<p>A la definición de amenaza Guzzetti et al., (1999) le adiciona la inclusión de la magnitud del evento. Por lo tanto, la definición de la amenaza por movimientos en masa incorpora los conceptos de localización, tiempo y magnitud. Como consecuencia, una completa evaluación de la amenaza debe predecir de forma cuantitativa dónde un movimiento en masa ocurrirá, cuándo o qué tan frecuente será su ocurrencia, y qué tan grande será el evento.</p>
-<p>Considerando estos tres elementos, la probabilidad de amenaza por movimientos en masa en una área dada puede ser obtenida a partir de la probabilidad espacial (PS), que señala la probabilidad espacial relativa de ocurrencia de un movimiento en masa;  de la probabilidad temporal (PT), que señala la probabilidad de ocurrencia de un factor detonante que genera movimientos en masa; y de la probabilidad de magnitud (PM), que señala la probabilidad que un movimiento en masa pueda ser de un cierto tamaño (Guzzetti, 2004; Jaiswal et al., 2010; Wu y Chen, 2013). La amenaza (H) entonces puede ser calculada asumiendo independencia entre las tres probabilidades utilizando la siguiente ecuación:</p>
-<p><span class="math notranslate nohighlight">\(H = PM x PS x PT\)</span></p>
+<p><span id="id11">Cruden and Varnes [<a class="reference internal" href="#id40">1996</a>]</span> define la <strong>actividad</strong> de un movimiento en masa de acuerdo con tres criterios asociados a la superficie de falla: estado, distribución y estado. El estado de la actividad describe el tiempo en que se ha presentado el movimiento, y se subdivide en <em>activos</em>, que está actualmente en movimiento, <em>reactivado</em>, que nuevamente es activo luego de estar inactivo, <em>suspendido</em>, que se ha movido dentro del último ciclo anual pero que no se está moviendo actualmente, y los <em>inactivos</em>, los cuales no presentan movimiento en un periodo mayor a un ciclo anual, entre ellos están los <em>latentes</em> (<em>dormant</em>) donde las causas que lo originaron permanecen, <em>abandonados</em>, donde las causas del movimiento han cambiando, <em>estabilizado</em>, cuando se han realizado obras de mitigación que impiden su movimiento, y <em>relicto</em>, los cuales se presentaron bajo condiciones climáticas y geomorfológicas diferentes a las actuales.</p>
+<div class="figure align-default" id="estado">
+<a class="reference internal image-reference" href="http://www.ukgeohazards.info/images/Landslides/Diagrams/GCRv33c01f006_small.jpg"><img alt="estado" src="http://www.ukgeohazards.info/images/Landslides/Diagrams/GCRv33c01f006_small.jpg" style="width: 800px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 5 </span><span class="caption-text">Estado de la actividad de movimientos en masa de acuerdo con Varnes &amp; Cruden (1996). (1) activo, (2) suspendido, (3) reactivado, (4) Latente (<em>dormant</em>), (6) abandonado, (7) estabilizado, (8) relicto. El estado (4) inactivo se subdivide en los estados (5) al (8).</span><a class="headerlink" href="#estado" title="Permalink to this image">¶</a></p>
 </div>
-<div class="section" id="metodologias-para-la-evaluacion-de-la-susceptibildiad-y-o-amenaza">
-<h2>Metodologías para la evaluación de la susceptibildiad y/o amenaza<a class="headerlink" href="#metodologias-para-la-evaluacion-de-la-susceptibildiad-y-o-amenaza" title="Permalink to this headline">¶</a></h2>
-<p>Existen en la literatura múltiples métodos para evaluar la susceptibilidad o amenaza por movimientos en masa, los cuales pueden ser divididos en cuantitativos y cualitativos (Aleotti y Chowdhury, 1999; Carrara et al., 1995; Guzzetti et al., 1999; Van Westen et al., 2006). Los métodos cualitativos utilizan técnicas de cartografía geomorfológica y álgebra de mapas, mediante la asignación de pesos relativos de las variables que influyen en la ocurrencia de movimientos en masa. Es decir, se basan en el conocimiento o criterio de algún experto en el tema y, por lo tanto, son altamente subjetivos (Barredo et al., 2000; Castellanos Abella y Van Westen, 2001 van Westen et al., 2003;). Los métodos cuantitativos pueden ser clasificados en métodos basados en datos o estadísticos, y métodos con base física, o también conocidos como métodos determinísticos o probabilísticos (Palacio et al., 2020). Los métodos con base física, en general, utilizan modelos geotécnicos acoplados con modelos hidrológicos, dando como resultado un factor de seguridad o probabilidades de ocurrencia. Su principal desventaja es que necesitan información geotécnica detallada, por lo que no son recomendables para grandes escalas (Borga et al., 1998; Pourghasemi y Rahmati, 2018; Sorbino et al., 2010; Zieher et al., 2017). Los métodos basados en datos tratan de explicar la relación entre factores de inestabilidad conocidos y la distribución pasada y presente de movimientos en masa, estableciendo relaciones entre variables explicativas (pendiente, geología, aspecto, etc.) y una variable dependiente (ocurrencia de movimientos en masa). Sin embargo, los métodos estadísticos más utilizados en los últimos años hacen asunciones estadísticas sobre la distribución de los datos, lo que los convierte en modelos paramétricos que consideran estrictamente funciones lineales. Como parte de los métodos estadísticos, en los últimos años se han
-desarrollado aceleradamente técnicas de Inteligencia Artificial (IA), entre las cuales destaca el Aprendizaje Automático (ML por sus siglas
-en inglés, Machine Learning) que se caracteriza por ser una amplia colección de algoritmos utilizados para crear modelos que aprendan
-de los datos históricos, con el objetivo de hacer predicciones o conocer las relaciones que pueden existir entre variables de entrada y salida (ocurrencia de un evento); estos modelos tienen varias ventajas, tales como no hacer ninguna asunción estadística de los datos, considerar que no existe linealidad entre las variables y permitir el uso de un amplio tipo de variables (Alpaydin, 2010; Beam y Kohane, 2018; El Naqa y Murphy, 2015; Moreno, 1994).</p>
+<p>La distribución de la actividad se refiere hacia dónde se está mpviendo o desplazando la superficie de falla. Se define como <em>avanzando</em> sí la superficie de ruptura se extiende en la dirección del movimiento, <em>retrogresivo</em> cuando se mueve la superficie de falla hacia la dirección opuesta al movimiento en masa, <em>ampliandose</em> cuando se mueve hacia ambas márgenes, <em>alargandose</em> cuando el material desplazado está continuamente adicionando mas volumen de material, <em>reduciendoce</em> cuando ocurre lo contrario, finalmente se utiliza el término <em>confinado</em> cuadno se observa el escarpe pero la superficie de falla no es visible en la pata del movimiento.</p>
+<p>Finalmente, el estilo de la actividad se refiere a la forma en la cual diferentes movimientos contribuyen al movimiento en masa. Se subdivide en <em>complejo</em> cuando exhibe al menos dos tipos de movimientos en secuencia, es decir una partícula presenta dos tipos de movimientos en momentos diferentes, <em>compuesto</em> cuando exhibe al menos dos tipos de movimientos en diferentes partes de la masa desplazada, algunas veces simultaneamente. Adicionalmente se presentan estiso <em>sencillo</em> cuando solo existe un tipo de movimiento y <em>multiple</em> cuandos e presentan diferentes movimientos del mismo tipo.</p>
+<p>En cuanto a la escala de la velocidad de los movimientso en masa <span id="id12">Cruden and Varnes [<a class="reference internal" href="#id40">1996</a>]</span> proponen la  <a class="reference internal" href="#velocidad"><span class="std std-ref">Fig</span></a> con velocidades en términos de m/s para movimientos extremadamente rápidos, m/min para muy rápidos, hr/min para rápidos, m/meses para moderados,, m/año para lentos y muy lento para magnitudes alrededor de mm/año.</p>
+<div class="figure align-default" id="velocidad">
+<a class="reference internal image-reference" href="http://www.ukgeohazards.info/images/Landslides/Diagrams/eng_ge1a.gif"><img alt="velocidad" src="http://www.ukgeohazards.info/images/Landslides/Diagrams/eng_ge1a.gif" style="width: 800px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 6 </span><span class="caption-text">Escala de velocidad de movimientos en masa de acuerdo con Varnes &amp; Cruden (1996).</span><a class="headerlink" href="#velocidad" title="Permalink to this image">¶</a></p>
+</div>
+<p id="id13"><dl class="citation">
+<dt class="label" id="id44"><span class="brackets"><a class="fn-backref" href="#id7">1</a></span></dt>
+<dd><p>G B Crosta and P Frattini. Distributed modelling of shallow landslides triggered by intense rainfall. <em>Natural Hazards and Earth System Sciences</em>, 3:81–93, 2003.</p>
+</dd>
+<dt class="label" id="id40"><span class="brackets">2</span><span class="fn-backref">(<a href="#id2">1</a>,<a href="#id10">2</a>,<a href="#id11">3</a>,<a href="#id12">4</a>)</span></dt>
+<dd><p>David Cruden and D Varnes. Cruden,d.m., varnes, d.j., 1996, landslide types and processes, special report , transportation research board, national academy of sciences, 247:36-75. <em>Special Report - National Research Council, Transportation Research Board</em>, 247:76, 1996.</p>
+</dd>
+<dt class="label" id="id46"><span class="brackets"><a class="fn-backref" href="#id9">3</a></span></dt>
+<dd><p>Oldrich Hungr. <em>Classificaction and terminology</em>. Springer, 2005.</p>
+</dd>
+<dt class="label" id="id39"><span class="brackets"><a class="fn-backref" href="#id1">4</a></span></dt>
+<dd><p>JH Hutchinson. Morphological and geotechnical parameters of landslides in relation to geology and hydrogeology, landslides. <em>Proceedings of the fifth international symposium on</em>, 1988.</p>
+</dd>
+<dt class="label" id="id47"><span class="brackets"><a class="fn-backref" href="#id5">5</a></span></dt>
+<dd><p>Crozier M.J Glade, T. A review of scale dependency in landslide hazard and risk analysis. <em>Landslide Hazard and Risk</em>, In: Glade,:75–138, 2005.</p>
+</dd>
+<dt class="label" id="id41"><span class="brackets"><a class="fn-backref" href="#id3">6</a></span></dt>
+<dd><p>Adrian E. Scheidegger. Tectonic predesign of mass movements, with examples from the chinese himalaya. <em>Geomorphology</em>, 26(1):37–46, 1998. URL: <a class="reference external" href="https://www.sciencedirect.com/science/article/pii/S0169555X98000506">https://www.sciencedirect.com/science/article/pii/S0169555X98000506</a>, <a class="reference external" href="https://doi.org/https://doi.org/10.1016/S0169-555X(98)00050-6">doi:https://doi.org/10.1016/S0169-555X(98)00050-6</a>.</p>
+</dd>
+<dt class="label" id="id43"><span class="brackets"><a class="fn-backref" href="#id6">7</a></span></dt>
+<dd><p><strong>missing journal in wang2002</strong></p>
+</dd>
+</dl>
+</p>
 </div>
 </div>
 
@@ -432,10 +435,10 @@ de los datos históricos, con el objetivo de hacer predicciones o conocer las re
             <p class="prev-next-title">Estudios de zonificación de movimientos en masa en el Valle de Aburrá</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="04_inventario.html" title="next page">
+    <a class='right-next' id="next-link" href="04_susceptibilidad.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Inventario de movimientos en masa</p>
+        <p class="prev-next-title">Susceptibilidad y amenaza</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>

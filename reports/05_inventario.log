@@ -1,0 +1,72 @@
+Traceback (most recent call last):
+  File "C:\Python39\lib\site-packages\jupyter_cache\executors\utils.py", line 51, in single_nb_execution
+    executenb(
+  File "C:\Python39\lib\site-packages\nbclient\client.py", line 1093, in execute
+    return NotebookClient(nb=nb, resources=resources, km=km, **kwargs).execute()
+  File "C:\Python39\lib\site-packages\nbclient\util.py", line 84, in wrapped
+    return just_run(coro(*args, **kwargs))
+  File "C:\Python39\lib\site-packages\nbclient\util.py", line 62, in just_run
+    return loop.run_until_complete(coro)
+  File "C:\Python39\lib\asyncio\base_events.py", line 642, in run_until_complete
+    return future.result()
+  File "C:\Python39\lib\site-packages\nbclient\client.py", line 559, in async_execute
+    await self.async_execute_cell(
+  File "C:\Python39\lib\site-packages\nbclient\client.py", line 854, in async_execute_cell
+    self._check_raise_for_error(cell, exec_reply)
+  File "C:\Python39\lib\site-packages\nbclient\client.py", line 756, in _check_raise_for_error
+    raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
+nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
+------------------
+A continuación se presenta como se pueden importar y manipular el mapa raster del inventario de eventos en python:
+Primero se deben importar los modulos que se necesitan. La libreria denominada rasterio sirve para importar y trabajar con mapas tipo raster, y numpy para trabajar con matrices y métodos matemáticos. la funcion %matplotlib funciona para mostrar las figuras en los archivos de Jupiter.
+import rasterio as rio
+import numpy as np
+from rasterio.plot import show
+import matplotlib.pyplot as plt
+%matplotlib inline
+!pip install rasterio
+Se importa el archivo, indicando la ruta y abriendo el archivo, y posteriormente leyendo con la funcion read. Se debe especificar el numero de la capa. en algunos casos los mapas raster tienen diferentes capas, por ejemplo las imágenes de satelite. y la funcion show permite ver el mapa.
+from google.colab import drive
+drive.mount('/content/drive')
+raster = rio.open(r'content/\My Drive\CATEDRA\MACHINE LEARNING\datos\raster/inventario.tif')
+type(raster)
+show(raster)
+raster
+inventario=raster.read(1)
+type(inventario)
+inventario.shape
+plt.imshow(inventario);
+inventario
+np.unique(inventario)
+inve=np.where(inventario==1,np.nan,inventario)
+np.unique(inve)
+plt.imshow(inve);
+El mapa que se importó tiene como valores 1 para celdas sin movimientos en masa y 2 para celdas con movimientos en masa. Es mas adecuado tener el mapa con celdas con valor 0 para celdas sin MenM y con valor 1 para celdas con MenM, esto se puede reclasificar desde ArcGIS antes de exportarlo o guardarlo. en este caso debemos crear una máscara que tenga el área de la cuenca, a partir de otro mapa, en este caso el mapa de pendientes. La máscara por defecto genera un mapa de valores cero para cualquier celda fuera de la cuenca y 255 para celdas que son parte de la cuenca. Modificamos esta máscara para que las celdas por fuera de la cuenca tengan un valor NaN.
+raster = rio.open(r'G:\My Drive\CATEDRA\MACHINE LEARNING\datos\raster/slope_rad')
+msk=raster.read_masks(1)
+plt.imshow(msk)
+msk
+msk=np.where(msk==255,1,np.nan)
+show(msk);
+Y multiplicamos el inventario por la mascara y obtenemos el siguiente mapa, donde las celdas dentro de la cuenca que tienen MenM tienen un valor de 2 y sin MenM tienen un valor de 1.
+inventario=msk*inventario
+show(inventario);
+inve=msk*inve
+show(inve)
+inventario=np.where(inventario==1,0,inventario)
+inventario=np.where(inventario==2,1,inventario)
+show(inventario);
+np.unique(inventario)
+pend=raster.read(1)
+pend_menm=inventario*pend
+plt.imshow(pend_menm)
+np.unique(pend_menm)
+------------------
+
+[1;36m  File [1;32m"C:\Users\usuario\AppData\Local\Temp/ipykernel_20444/2189466134.py"[1;36m, line [1;32m1[0m
+[1;33m    A continuación se presenta como se pueden importar y manipular el mapa raster del inventario de eventos en python:[0m
+[1;37m      ^[0m
+[1;31mSyntaxError[0m[1;31m:[0m invalid syntax
+
+SyntaxError: invalid syntax (Temp/ipykernel_20444/2189466134.py, line 1)
+
