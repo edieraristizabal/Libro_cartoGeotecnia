@@ -15,6 +15,10 @@ Esta distinción es importante desde lo práctico, ya que implica que los métod
 y el cauce que da origen a las avenidas torrenciales, los métodos más apropiados para la evalaucion de la ameanza por avenidas torrenciales deben tener en cuenta las interconexiones y los efectos concatenados. En este caso, a partir de la evaluación de la respuesta hidrológica de la cuenca, combinado con el análisis del potencial aporte de sedimentos de las laderas de la cuenca, y el tránsito hidráulico de la mezcla de agua y sedimento resultante.
 
 ## Clasificación de movimientos en masa
+La base de datos de desastres ([EM-DAT](https://www.emdat.be/)) del Centro de Investigaciones en Epidemiologia y Desastres (CRED por sus siglas en inglés) clasifica los desastres por fenomenos de origen natural en biológicos, geofísicos e hidrometerológicos. Entre los geofísicos se encuentran los sismos, volcanes, y movimientos en masa secos (caída de rocas, deslizamientos, avalancha y subsidencia). Por su parte los eventos hidrometeorológicos se subdividen en hidrologicos, meteorológicos y climatológicos. Dentro del subgrupo de hidrológicos se encuentra otro grupo de movimientos en masa con agua.
+
+![EM-DAT](https://www.researchgate.net/profile/Laurent-Boissier/publication/269278988/figure/fig6/AS:614403984596997@1523496733187/Classification-des-catastrophes-naturelles-utilisee-par-le-CRED-dans-la-base-EM-DAT_W640.jpg)
+
 La clasificación de movimientos en masa más ampliamente conocida y aceptada es propuesta por Varnes (1978) y actualizada por Cruden & Varnes (1996). Estos autores emplean como criterio principal para la clasificación, el tipo de movimiento y el tipo de material. Los tipos de movimientos definidos por estos autores son caídas, volcamientos, deslizamientos, flujos, y propagación lateral. En tanto los materiales los dividen en suelo y roca. Una gran complejidad de movimientos puede surgir de la combinación de estos criterios sencillos. 
 
 ## Definición de los conceptos de susceptibilidad y amenaza
