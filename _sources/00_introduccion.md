@@ -4,6 +4,8 @@ El aumento en pérdidas humanas y económicas por fenómenos de origen natural, 
 
 :::{figure-md} markdown-fig
 <iframe src="https://ourworldindata.org/grapher/number-of-natural-disaster-events" loading="lazy" style="width: 80%; height: 600px; border: 0px none;"></iframe>
+
+prueba.
 :::
 
 Pérdidas humanas y económicas generadas por movimientos en masa se presentan cada año en todos los países del mundo, sin embargo el nivel de impacto varía considerablemente de acuerdo con las condiciones geológicas locales y la vulnerabilidad socio-económica ({cite:t}`alcantara`). Datos presentados por {cite:t}`Sidle2006` señalan al continente asiático con el de mayor número de víctimas, donde Nepal sobresale con 186 víctimas mortales por año, seguido por Japón y China, con 170 y 140-150 respectivamente; en Latinoamérica, Brasil ocupa el primer lugar con un promedio de 88 personas muertas por año. En términos económicos  Japón es la nación más afectada por movimientos en masa, con un estimado de pérdidas de 4 mil millones de dólares anuales; seguido por Italia, Estado Unidos e India con pérdidas que varían entre 1 a 2 mil millones de dólares al año ({cite:t}`Sidle2006`). 

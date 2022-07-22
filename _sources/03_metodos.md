@@ -19,6 +19,7 @@ La base de datos de desastres ([EM-DAT](https://www.emdat.be/)) del Centro de In
 
 :::{figure-md} clasificacion
 <img src="https://www.researchgate.net/profile/Laurent-Boissier/publication/269278988/figure/fig6/AS:614403984596997@1523496733187/Classification-des-catastrophes-naturelles-utilisee-par-le-CRED-dans-la-base-EM-DAT_W640.jpg" alt="clasificacion" width="500px">
+
 Clasificacion de desastres por fenómenos de origen natural. Tomado de EM-DAT.
 :::
 
