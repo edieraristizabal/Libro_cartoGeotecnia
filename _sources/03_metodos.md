@@ -17,11 +17,8 @@ y el cauce que da origen a las avenidas torrenciales, los métodos más apropiad
 ## Clasificación de movimientos en masa
 La base de datos de desastres ([EM-DAT](https://www.emdat.be/)) del Centro de Investigaciones en Epidemiologia y Desastres (CRED por sus siglas en inglés) clasifica los desastres por fenomenos de origen natural en biológicos, geofísicos e hidrometerológicos. Entre los geofísicos se encuentran los sismos, volcanes, y movimientos en masa secos (caída de rocas, deslizamientos, avalancha y subsidencia). Por su parte los eventos hidrometeorológicos se subdividen en hidrologicos, meteorológicos y climatológicos. Dentro del subgrupo de hidrológicos se encuentra otro grupo de movimientos en masa con agua.
 
-![EM-DAT](https://www.researchgate.net/profile/Laurent-Boissier/publication/269278988/figure/fig6/AS:614403984596997@1523496733187/Classification-des-catastrophes-naturelles-utilisee-par-le-CRED-dans-la-base-EM-DAT_W640.jpg)
-
 :::{figure-md} clasificacion
-<img src="https://www.researchgate.net/profile/Laurent-Boissier/publication/269278988/figure/fig6/AS:614403984596997@1523496733187/Classification-des-catastrophes-naturelles-utilisee-par-le-CRED-dans-la-base-EM-DAT_W640.jpg" alt="clasificacion" width="200px">
-
+<img src="https://www.researchgate.net/profile/Laurent-Boissier/publication/269278988/figure/fig6/AS:614403984596997@1523496733187/Classification-des-catastrophes-naturelles-utilisee-par-le-CRED-dans-la-base-EM-DAT_W640.jpg" alt="clasificacion" width="500px">
 Clasificacion de desastres por fenómenos de origen natural. Tomado de EM-DAT.
 :::
 
