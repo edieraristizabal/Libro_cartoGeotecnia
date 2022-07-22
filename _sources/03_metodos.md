@@ -60,6 +60,14 @@ Estos flujos pueden desplazarse simplemente sobre las laderas, o propagarse por 
 Clasificacion de movimientos en masa tipo flujos de acuerdo con Varnes & Cruden (1996).
 :::
 
+Las laderas conformadas en roca generalmente presentan movimientos en masa tipo caída y volcamiento, los cuales suelen presentarse en conjunto. El volcamiento se refiere a la rotación del material con respecto un punto o eje por debajo del centro de gravedad, y la caída corresponde al descenso por el aire del material, dodne se incluye además el rebote y/o rodamiento del material al caer.
+
+:::{figure-md} flujos2
+<img src="https://earthwise.bgs.ac.uk/images/thumb/3/39/OR17031fig2.jpg/600px-OR17031fig2.jpg" alt="flujos2" width="800px">
+
+Clasificacion de movimientos en masa tipo flujos de acuerdo con Varnes & Cruden (1996).
+:::
+
 {cite:t}`cruden1996` define la **actividad** de un movimiento en masa de acuerdo con tres criterios asociados a la superficie de falla: estado, distribución y estado. El estado de la actividad describe el tiempo en que se ha presentado el movimiento, y se subdivide en *activos*, que está actualmente en movimiento, *reactivado*, que nuevamente es activo luego de estar inactivo, *suspendido*, que se ha movido dentro del último ciclo anual pero que no se está moviendo actualmente, y los *inactivos*, los cuales no presentan movimiento en un periodo mayor a un ciclo anual, entre ellos están los *latentes* (*dormant*) donde las causas que lo originaron permanecen, *abandonados*, donde las causas del movimiento han cambiando, *estabilizado*, cuando se han realizado obras de mitigación que impiden su movimiento, y *relicto*, los cuales se presentaron bajo condiciones climáticas y geomorfológicas diferentes a las actuales.
 
 :::{figure-md} estado
