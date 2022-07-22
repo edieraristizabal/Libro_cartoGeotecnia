@@ -42,10 +42,28 @@ La clasificación de movimientos en masa más ampliamente conocida y aceptada es
 Clasificacion de movimientos en masa de acuerdo con Varnes & Cruden (1996).
 :::
 
+Los movimientos en masa más comúnes en laderas en suelo son los deslizamientos y flujos. A diferencia de los flujos, los deslizamientos presentan superficie de falla; cuando esta superficie es curva y concava se denominan deslizamientos rotacionales y ocurren frecuentemente en suelos finos y homogeneos, mientras que cuando la superficie de falla es plana se denominan deslizamientos translacionales o planares, los cuales son generalmente superficiales y suelen estar controlados por discontinuidades como diaclasas, foliación o planos de depositación. En algunos casos la superficie de ruptura puede estar formada por dos discontinuidades, lo que genera que el deslizamiento se presente en la dirección de la linea de intersección formando una cuña, razón por la cual reciben este nombre.
+
+Los flujos corresponden a la deformación progresiva del material. Para el caso de laderas en suelo, donde son mas comunes, se presentan por la pérdida de resistencia al cortante dado el aumento de las presiones de poros positivas por infiltración del agua en el suelo. Lo que genera que al momento de falla se transforme en una mezcla hetereogenea de agua y sedimentos donde su comportamiento o reología es función de la proporcion agua/sedimentos y de la granulometría. En este sentido, {cite:t}`coussot1996`  utilizan la siguiente clasificación, donde contenidos en proporción de agua muy alto se tranforman de flujos de escombros a  flujos hiperconcetrados, cuando los materiales son finos se presentan flujos de una fase, donde el agua y los sedimentos viajan a la misma velocidad, y cuando los materiales son granulares se presentan flujos de dos fases, donde el agua viaja a velocidades mas altas a los materiales sólidos.
+
+:::{figure-md} flujos1
+<img src="https://www.hec.usace.army.mil/confluence/rasdocs/rasmuddebris/files/43818444/43818443/1/1608274139394/worddave886aef821f8118d5239635c0d002ffb.png" alt="flujos1" width="800px">
+
+Clasificación de flujos de acuerdo con Coussot y Meuniers (1996).
+:::
+
+Estos flujos pueden desplazarse simplemente sobre las laderas, o propagarse por largas distancias a lo largo de cauces estrechos, hasta alcanzar valles abiertos donde se deposita, o incluso alcanzar la desembocadura de la cuenca donde da lugar a geoformas tipo abanicos. estos flujos canalizados representan esencialmente lo que se denominan avenidas torrenciales en nuestro medio ({cite:t}`aristizabalarango2020`).
+
+:::{figure-md} flujos2
+<img src="https://earthwise.bgs.ac.uk/images/thumb/3/39/OR17031fig2.jpg/600px-OR17031fig2.jpg" alt="flujos2" width="800px">
+
+Clasificacion de movimientos en masa tipo flujos de acuerdo con Varnes & Cruden (1996).
+:::
+
 {cite:t}`cruden1996` define la **actividad** de un movimiento en masa de acuerdo con tres criterios asociados a la superficie de falla: estado, distribución y estado. El estado de la actividad describe el tiempo en que se ha presentado el movimiento, y se subdivide en *activos*, que está actualmente en movimiento, *reactivado*, que nuevamente es activo luego de estar inactivo, *suspendido*, que se ha movido dentro del último ciclo anual pero que no se está moviendo actualmente, y los *inactivos*, los cuales no presentan movimiento en un periodo mayor a un ciclo anual, entre ellos están los *latentes* (*dormant*) donde las causas que lo originaron permanecen, *abandonados*, donde las causas del movimiento han cambiando, *estabilizado*, cuando se han realizado obras de mitigación que impiden su movimiento, y *relicto*, los cuales se presentaron bajo condiciones climáticas y geomorfológicas diferentes a las actuales.
 
 :::{figure-md} estado
-<img src="http://www.ukgeohazards.info/images/Landslides/Diagrams/GCRv33c01f006_small.jpg" alt="estado" width="800px">
+<img src="https://www.researchgate.net/profile/Pierluigi-Confuorto/publication/303377557/figure/fig4/AS:669001558528004@1536513809220/Scheme-of-the-state-of-activity-of-a-landslide-modified-from-WP-WLI-1993-1-Active.ppm" alt="estado" width="800px">
 
 Estado de la actividad de movimientos en masa de acuerdo con Varnes & Cruden (1996). (1) activo, (2) suspendido, (3) reactivado, (4) Latente (*dormant*), (6) abandonado, (7) estabilizado, (8) relicto. El estado (4) inactivo se subdivide en los estados (5) al (8).
 :::
@@ -54,13 +72,15 @@ La distribución de la actividad se refiere hacia dónde se está mpviendo o des
 
 Finalmente, el estilo de la actividad se refiere a la forma en la cual diferentes movimientos contribuyen al movimiento en masa. Se subdivide en *complejo* cuando exhibe al menos dos tipos de movimientos en secuencia, es decir una partícula presenta dos tipos de movimientos en momentos diferentes, *compuesto* cuando exhibe al menos dos tipos de movimientos en diferentes partes de la masa desplazada, algunas veces simultaneamente. Adicionalmente se presentan estiso *sencillo* cuando solo existe un tipo de movimiento y *multiple* cuandos e presentan diferentes movimientos del mismo tipo.
 
-En cuanto a la escala de la velocidad de los movimientso en masa {cite:t}`cruden1996` proponen la  [Fig](velocidad) con velocidades en términos de m/s para movimientos extremadamente rápidos, m/min para muy rápidos, hr/min para rápidos, m/meses para moderados,, m/año para lentos y muy lento para magnitudes alrededor de mm/año.
+En cuanto a la escala de la velocidad de los movimientso en masa {cite:t}`cruden1996` proponen la siguiente [Figura](velocidad) con velocidades en términos de m/s para movimientos extremadamente rápidos, m/min para muy rápidos, hr/min para rápidos, m/meses para moderados,, m/año para lentos y muy lento para magnitudes alrededor de mm/año.
 
 :::{figure-md} velocidad
-<img src="http://www.ukgeohazards.info/images/Landslides/Diagrams/eng_ge1a.gif" alt="velocidad" width="800px">
+<img src="https://www.researchgate.net/profile/Pierluigi-Confuorto/publication/303377557/figure/fig7/AS:669001558540305@1536513809956/Velocity-of-a-landside-according-to-Cruden-and-Varnes-classification-modified-from.ppm" alt="velocidad" width="800px">
 
 Escala de velocidad de movimientos en masa de acuerdo con Varnes & Cruden (1996).
 :::
+
+Dos elementos importantes en amenazas naturales son la magnitud e intensidad de los fenómenos. Para el caso de los movimientos en masa la intensidad de un evento se refiere a parámetros relacionados con el poder destructivo, tales como la velocidad o el desplazamiento total; mientras que la magnitud de los movimientos en masa hace referencia a la medida del tamaño del evento, tal como el volumen o el área.
 
 ```{bibliography}
 :style: plain
