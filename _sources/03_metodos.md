@@ -63,7 +63,7 @@ Clasificacion de movimientos en masa tipo flujos de acuerdo con Varnes & Cruden 
 Las laderas conformadas en roca generalmente presentan movimientos en masa tipo caída y volcamiento, los cuales suelen presentarse en conjunto. El volcamiento se refiere a la rotación del material con respecto un punto o eje por debajo del centro de gravedad, y la caída corresponde al descenso por el aire del material, dodne se incluye además el rebote y/o rodamiento del material al caer.
 
 :::{figure-md} toppling
-<img src="https://online.blasttraining.com.au/pluginfile.php/94/mod_glossary/entry/268/rockTopple.jpg" alt="flujos2" width="800px">
+<img src="https://online.blasttraining.com.au/pluginfile.php/94/mod_glossary/entry/268/rockTopple.jpg" alt="flujos2" width="500px">
 
 Volcamiento y caida en laderas en roca.
 :::
