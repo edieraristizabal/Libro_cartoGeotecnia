@@ -52,13 +52,13 @@ Existen diferentes unidades de mapeo, sin embargo las mas extendidas son unidad 
 A diferencia la unidad de análisis tipo UCU o unidad de ladera si implica la segmentacion del terreno de acuerdo con criterios físicos. En el caso de la UCU corresponde a las combinaciones únicas resultado del álgebra de mapas de las variables a utilizar. En el caso de las unidades de ladera corresponden a la definición de ladera, es decir la unidad mínima del terreno con una superficie inclinada homogenea separada por cambios de pendiente. 
 
 :::{figure-md} unidad de laderas
-<img src="https://i.pinimg.com/originals/03/d9/d6/03d9d614d4d063a42283b3d3274beed1.jpg" alt="unidad de laderas" width="700px">
+<img src="https://i.pinimg.com/originals/03/d9/d6/03d9d614d4d063a42283b3d3274beed1.jpg" alt="unidad de laderas" width="500px">
 
 Unidad de análisis tipo (a) celdas regulares (b) unidad de ladera.
 :::
 
 :::{figure-md} UCU
-<img src="https://i.pinimg.com/564x/27/e2/02/27e20275df23bde601ff21512f47ccc9.jpg" alt="UCU" width="700px">
+<img src="https://i.pinimg.com/564x/27/e2/02/27e20275df23bde601ff21512f47ccc9.jpg" alt="UCU" width="500px">
 
 Unidad de análisis tipo unidad de condiciones únicas.
 :::
