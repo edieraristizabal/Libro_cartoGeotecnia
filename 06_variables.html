@@ -1,0 +1,1580 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Selección de variables predictoras &#8212; Cartografía Geotécnica</title>
+    
+  <link href="_static/css/theme.css" rel="stylesheet">
+  <link href="_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/togglebutton.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script>
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Métodos basados en el conocimiento" href="heuristico.html" />
+    <link rel="prev" title="Inventario de movimientos en masa" href="05_inventario.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Cartografía Geotécnica</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="intro.html">
+   Cartografía Geotécnica
+  </a>
+ </li>
+</ul>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="00_introduccion.html">
+   Introducción
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="01_normatividad.html">
+   Amenaza &amp; ordenamiento territorial
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="02_estadoarte.html">
+   Estudios de zonificación de movimientos en masa en el Valle de Aburrá
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="03_metodos.html">
+   Caracterización de movimientos en masa
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="04_susceptibilidad.html">
+   Susceptibilidad y amenaza
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="05_inventario.html">
+   Inventario de movimientos en masa
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Selección de variables predictoras
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="heuristico.html">
+   Métodos basados en el conocimiento
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="bivariado.html">
+   Métodos basados en datos -bivariados-
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="regresionLogistica.html">
+   Métodos basados en datos -Regresión logística-
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="machinelearning.html">
+   Métodos basados en datos -
+   <em>
+    machine learning
+   </em>
+   -
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="clasificacion.html">
+   Clasificación y zonificación
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="fisica.html">
+   Métodos con base física
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="evaluacion.html">
+   Evaluación del desempeño y capacidad de predicción del modelo
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="detonante.html">
+   Factores detonantes
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="amenaza.html">
+   Evaluación de la amenaza
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="flujos.html">
+   Movimientos en masa tipo flujos
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="roca.html">
+   Movimientos en masa en roca
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="_sources/06_variables.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/edieraristizabal/Libro_cartoGeotecnia"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/edieraristizabal/Libro_cartoGeotecnia/issues/new?title=Issue%20on%20page%20%2F06_variables.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/edieraristizabal/Libro_cartoGeotecnia/master?urlpath=tree/docs/06_variables.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#seleccion-de-la-variable-dependiente">
+   Selección de la variable dependiente
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#seleccion-de-variables-independientes">
+   Selección de variables independientes
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#python">
+   Python
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#analisis-de-componentes-principales-pca">
+     Análisis de Componentes Principales (PCA)
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Selección de variables predictoras</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#seleccion-de-la-variable-dependiente">
+   Selección de la variable dependiente
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#seleccion-de-variables-independientes">
+   Selección de variables independientes
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#python">
+   Python
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#analisis-de-componentes-principales-pca">
+     Análisis de Componentes Principales (PCA)
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="seleccion-de-variables-predictoras">
+<h1>Selección de variables predictoras<a class="headerlink" href="#seleccion-de-variables-predictoras" title="Permalink to this headline">¶</a></h1>
+<p>La elaboración de un mapa de susceptibilidad y/o amenaza por movimientos en masa se refiere a la construcción de un modelo predictivo de la siguiente forma:</p>
+<p><span class="math notranslate nohighlight">\(Y = f(X) \)</span></p>
+<p>Donde <span class="math notranslate nohighlight">\(Y\)</span> es la variable dependiente, es decir la ocurrencia o no de movimientos en masa; y <span class="math notranslate nohighlight">\(X\)</span> correponde a las variables independientes, o tambien llamadas condicionantes, preparatorias, explicativas, cuasi-estáticas, predictoras, entre otros nombres asignados. y <span class="math notranslate nohighlight">\(f\)</span> representa la relación, función o el mecanismo que explica la ocurrencia de movimientos en masa.</p>
+<div class="section" id="seleccion-de-la-variable-dependiente">
+<h2>Selección de la variable dependiente<a class="headerlink" href="#seleccion-de-la-variable-dependiente" title="Permalink to this headline">¶</a></h2>
+<p>De esta forma, la variable dependiente <span class="math notranslate nohighlight">\(Y\)</span> sale parcialmente del inventario de movimientos en masa, donde las celdas con ocurrencia de uno o mas eventos representa un 1. Para que el modelo no esté sesgado se debe alimentar con celdas estables, es decir que no hayan presentado movimientos en masa en el pasado. Estas celdas se pueden representar con un valor igual a 0.</p>
+<p>Sin embargo, si se seleccionan todas las celdas del área de estudio que no han presentado movimientos en masa en el pasado se crearía un modelo desbalanceado, ya que las celdas estables son mucho mas numerosas que las celdas inestables. La mayor parte del terreno es estable, pero precisamente en este tipo de modelos nos interesa principalmente las celdas donde es probable que ocurra el evento, es decir las celdas minoritarias. Este tipo de modelos es comun en la evaluación de amenazas, donde la no ocurrencia es mucho mas común o frecuente que la ocurrencia, sin embargo el interés se centra en la ocurrencia. Estos modelos desbalanceados no necesariamente significan sesgados, ya que la suscpetibildiad o probabilidad espacial corresponden realmente a valores muy pequeños, sin embargo las técnicas utilizadas para establecer la función <span class="math notranslate nohighlight">\(f\)</span> son sencibles a este desbalance, por lo que requieren que sea balanceado el modelo, de tal forma que puedan <em>aprender</em> de igual forma de las celdas inestables como de las estables. Para esto no necesariamente las celdas estables e inestables deben ser un número igual, puede mantenerse relaciones entre ambso tipos de celdas 2:1 ó hasta 10:1, lo importante es que el modelo a utilizar pueda aprender de las celdas inestables, por eso se debe verificar hasta que relación de desbalance es posible utilizar. Probablemnte la relación mas utilizada por los autores es 1:1, es decir seleccionar un número de celdas estables igual al número de celdas inestables que se obtiene del inventario de movimientos en masa. Luego de establecer la relacion de celdas estables:inestables se debe ser cuidadoso con el muestreo para las celdas estables. Debe ser un muestreo aleatorio de tal forma que no se vaya a sesgar el modelo, pero que al mismo tiempo se representativo de la zona de estudio.</p>
+<div class="figure align-default" id="variables">
+<a class="reference internal image-reference" href="https://www.cdema.org/virtuallibrary/images/description/23%20table%201.jpg"><img alt="variables" src="https://www.cdema.org/virtuallibrary/images/description/23%20table%201.jpg" style="width: 800px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 19 </span><span class="caption-text">Variables para la evaluación de la susceptibilidad por movimientos en masa. Tomado de CDEMA &amp; CRIS.</span><a class="headerlink" href="#variables" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+<div class="section" id="seleccion-de-variables-independientes">
+<h2>Selección de variables independientes<a class="headerlink" href="#seleccion-de-variables-independientes" title="Permalink to this headline">¶</a></h2>
+<p>Existe un gran abanico de variables predictoras utilizadas en la evaluación de la susceptibilidad y/o amenaza por movimientos en masa. Estas se definen como características o propiedades que se supone son parte de la causa de los movimientos en masa.  Por lo tanto tienden a estar asociadas con el terreno, tales como los materiales que la componen o la morfometría como la pendiente. Pero tambien es común incluir variables de las coberturas o proximidad a elementos como drenajes, vias entre otros.</p>
+<div class="figure align-default" id="variables-independientes">
+<a class="reference internal image-reference" href="https://ars.els-cdn.com/content/image/1-s2.0-S0012825217305652-gr6.jpg"><img alt="variables independientes" src="https://ars.els-cdn.com/content/image/1-s2.0-S0012825217305652-gr6.jpg" style="width: 800px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 20 </span><span class="caption-text">Variables más utilizadas de la susceptibilidad por movimientos en masa. Reichenbach et al., (2015).</span><a class="headerlink" href="#variables-independientes" title="Permalink to this image">¶</a></p>
+</div>
+<p>Existen diferentes categorías de datos con niveles o escalas de medida que varían. En cuanto a la categoría de las variables existen variables cualitativas, tales como geología, o cuantitativas. Las variables cuantitativas se dividen entre variables discretas y continuas. Las variables continuas se caracterizan por que no son contables y presentan valores infinitos de precisión, se pueden dividir en variables de intervalo, que son aquellas que no presentan un cero natural o con sentido físico, tal como la temperatura en grados Celsius; y las variables tipo radio, las cuales tienen un cero con sentido fisico, como la temperatura en grados Kelvin, la cohesión, la pendiente. Las variables discretas, que pueden ser cuantitativas y cualitativas, son contables, finitas, y se dividen en nominales, las cuales no tienen un orden, tal como el uso del suelo; y ordinales, las cuales tienen un orden, tal como acumulación del flujo. Es importante señalar que las variables continuas pueden ser reclasificadas a variables discretas, un ejemplo es la pendiente expresada como variable continua de 0° a 90°, o como variable discreta reclasificada en rangos de 0° - 10°, 11 - 20°, etc, etc.</p>
+<div class="figure align-default" id="categorias-de-datos">
+<a class="reference internal image-reference" href="https://i.stack.imgur.com/J8Ged.jpg"><img alt="categorias de datos" src="https://i.stack.imgur.com/J8Ged.jpg" style="width: 800px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 21 </span><span class="caption-text">Categorías de datos y niveles o escalas de medida.</span><a class="headerlink" href="#categorias-de-datos" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+<div class="section" id="python">
+<h2>Python<a class="headerlink" href="#python" title="Permalink to this headline">¶</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">rasterio</span> <span class="k">as</span> <span class="nn">rio</span>
+<span class="kn">from</span> <span class="nn">rasterio.plot</span> <span class="kn">import</span> <span class="n">show</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
+<span class="kn">from</span> <span class="nn">pandas</span> <span class="kn">import</span> <span class="n">DataFrame</span>
+<span class="c1">#import statsmodels.graphics.api as smg</span>
+<span class="o">%</span><span class="k">matplotlib</span> inline
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
+<span class="o">~</span>\<span class="n">AppData</span>\<span class="n">Local</span>\<span class="n">Temp</span><span class="o">/</span><span class="n">ipykernel_9132</span><span class="o">/</span><span class="mf">299852370.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="kn">import</span> <span class="nn">rasterio</span> <span class="k">as</span> <span class="nn">rio</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="kn">from</span> <span class="nn">rasterio.plot</span> <span class="kn">import</span> <span class="n">show</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+
+<span class="ne">ModuleNotFoundError</span>: No module named &#39;rasterio&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">raster</span> <span class="o">=</span> <span class="n">rio</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;G:\My Drive\CATEDRA\MACHINE LEARNING/datos/raster/slope_rad&#39;</span><span class="p">)</span>
+<span class="n">pendiente</span><span class="o">=</span><span class="n">raster</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">show</span><span class="p">(</span><span class="n">pendiente</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/06_variables_8_0.png" src="_images/06_variables_8_0.png" />
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.axes._subplots.AxesSubplot at 0x1d88d06dd60&gt;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">unique</span><span class="p">(</span><span class="n">pendiente</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([-3.4028235e+38,  1.5114122e-03,  3.2166885e-03, ...,
+        1.0705483e+00,  1.0721574e+00,  1.0760385e+00], dtype=float32)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pendiente</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">pendiente</span><span class="o">==-</span><span class="mf">3.4028234663852886e+38</span><span class="p">,</span><span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">,</span><span class="n">pendiente</span><span class="p">);</span>
+<span class="n">show</span><span class="p">(</span><span class="n">pendiente</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/06_variables_11_0.png" src="_images/06_variables_11_0.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">nanmean</span><span class="p">(</span><span class="n">pendiente</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.49100024
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">pendiente</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">colorbar</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.colorbar.Colorbar at 0x1d88f2200d0&gt;
+</pre></div>
+</div>
+<img alt="_images/06_variables_14_1.png" src="_images/06_variables_14_1.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pendiente</span><span class="o">=</span><span class="n">pendiente</span><span class="o">*</span><span class="mi">180</span><span class="o">/</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">pendiente</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">colorbar</span><span class="p">()</span>
+<span class="n">pendiente</span><span class="o">.</span><span class="n">shape</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(456, 435)
+</pre></div>
+</div>
+<img alt="_images/06_variables_16_1.png" src="_images/06_variables_16_1.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pendiente_vector</span><span class="o">=</span><span class="n">pendiente</span><span class="o">.</span><span class="n">ravel</span><span class="p">()</span>
+<span class="n">pendiente_vector_MenM</span><span class="o">=</span><span class="n">pendiente_vector</span><span class="p">[</span><span class="o">~</span><span class="n">np</span><span class="o">.</span><span class="n">isnan</span><span class="p">(</span><span class="n">pendiente_vector</span><span class="p">)]</span> <span class="c1"># para eliminar  del vector los datos NaN</span>
+<span class="n">pendiente_vector_MenM</span><span class="o">.</span><span class="n">shape</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(99060,)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">raster</span> <span class="o">=</span> <span class="n">rio</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;G:\My Drive\CATEDRA\MACHINE LEARNING/datos/raster/curvatura&#39;</span><span class="p">)</span>
+<span class="n">curvatura</span><span class="o">=</span><span class="n">raster</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">curvatura</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">curvatura</span><span class="o">==-</span><span class="mf">3.4028234663852886e+38</span><span class="p">,</span><span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">,</span><span class="n">curvatura</span><span class="p">)</span>
+<span class="n">curvatura_vector</span><span class="o">=</span><span class="n">curvatura</span><span class="o">.</span><span class="n">ravel</span><span class="p">()</span>
+<span class="n">curvatura_vector_MenM</span><span class="o">=</span><span class="n">curvatura_vector</span><span class="p">[</span><span class="o">~</span><span class="n">np</span><span class="o">.</span><span class="n">isnan</span><span class="p">(</span><span class="n">curvatura_vector</span><span class="p">)]</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">curvatura</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">colorbar</span><span class="p">()</span>
+<span class="n">curvatura_vector_MenM</span><span class="o">.</span><span class="n">shape</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(99060,)
+</pre></div>
+</div>
+<img alt="_images/06_variables_20_1.png" src="_images/06_variables_20_1.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">raster</span> <span class="o">=</span> <span class="n">rio</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;G:\My Drive\CATEDRA\MACHINE LEARNING/datos/raster/aspecto&#39;</span><span class="p">)</span>
+<span class="n">aspecto</span><span class="o">=</span><span class="n">raster</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">aspecto</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">aspecto</span><span class="o">==-</span><span class="mf">3.4028234663852886e+38</span><span class="p">,</span><span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">,</span><span class="n">aspecto</span><span class="p">)</span>
+<span class="n">aspecto_vector</span><span class="o">=</span><span class="n">aspecto</span><span class="o">.</span><span class="n">ravel</span><span class="p">()</span>
+<span class="n">aspecto_vector_MenM</span><span class="o">=</span><span class="n">aspecto_vector</span><span class="p">[</span><span class="o">~</span><span class="n">np</span><span class="o">.</span><span class="n">isnan</span><span class="p">(</span><span class="n">aspecto_vector</span><span class="p">)]</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">aspecto</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">colorbar</span><span class="p">()</span>
+<span class="n">aspecto_vector_MenM</span><span class="o">.</span><span class="n">shape</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(99060,)
+</pre></div>
+</div>
+<img alt="_images/06_variables_21_1.png" src="_images/06_variables_21_1.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">raster</span> <span class="o">=</span> <span class="n">rio</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;G:\My Drive\CATEDRA\MACHINE LEARNING/datos/raster/flowacum_m2&#39;</span><span class="p">)</span>
+<span class="n">flujo</span><span class="o">=</span><span class="n">raster</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">flujo</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">flujo</span><span class="o">==-</span><span class="mf">3.4028234663852886e+38</span><span class="p">,</span><span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">,</span><span class="n">flujo</span><span class="p">)</span>
+<span class="n">flujo_vector</span><span class="o">=</span><span class="n">flujo</span><span class="o">.</span><span class="n">ravel</span><span class="p">()</span>
+<span class="n">flujo_vector_MenM</span><span class="o">=</span><span class="n">flujo_vector</span><span class="p">[</span><span class="o">~</span><span class="n">np</span><span class="o">.</span><span class="n">isnan</span><span class="p">(</span><span class="n">flujo_vector</span><span class="p">)]</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">flujo</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">colorbar</span><span class="p">()</span>
+<span class="n">flujo</span><span class="o">.</span><span class="n">shape</span>
+<span class="n">flujo_vector_MenM</span><span class="o">.</span><span class="n">shape</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(99060,)
+</pre></div>
+</div>
+<img alt="_images/06_variables_22_1.png" src="_images/06_variables_22_1.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">raster</span> <span class="o">=</span> <span class="n">rio</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;G:\My Drive\CATEDRA\MACHINE LEARNING/datos/raster/inventario.tif&#39;</span><span class="p">)</span>
+<span class="n">inventario</span><span class="o">=</span><span class="n">raster</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">raster_mask</span> <span class="o">=</span> <span class="n">rio</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;G:\My Drive\CATEDRA\MACHINE LEARNING/datos/raster/slope_rad&#39;</span><span class="p">)</span>
+<span class="n">msk</span><span class="o">=</span><span class="n">raster_mask</span><span class="o">.</span><span class="n">read_masks</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">msk</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">msk</span><span class="o">==</span><span class="mi">255</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">)</span>
+<span class="n">inventario</span><span class="o">=</span><span class="n">msk</span><span class="o">*</span><span class="n">inventario</span>
+<span class="n">inventario</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">inventario</span><span class="o">==</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="n">inventario</span><span class="p">)</span>
+<span class="n">inventario</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">inventario</span><span class="o">==</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="n">inventario</span><span class="p">)</span>
+<span class="n">inventario_vector</span><span class="o">=</span><span class="n">inventario</span><span class="o">.</span><span class="n">ravel</span><span class="p">()</span>
+<span class="n">inventario_vector_MenM</span><span class="o">=</span><span class="n">inventario_vector</span><span class="p">[</span><span class="o">~</span><span class="n">np</span><span class="o">.</span><span class="n">isnan</span><span class="p">(</span><span class="n">inventario_vector</span><span class="p">)]</span>
+<span class="n">show</span><span class="p">(</span><span class="n">inventario</span><span class="p">)</span>
+<span class="n">inventario_vector_MenM</span><span class="o">.</span><span class="n">shape</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/06_variables_23_0.png" src="_images/06_variables_23_0.png" />
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(99060,)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">geologia</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">loadtxt</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;G:\My Drive\CATEDRA\MACHINE LEARNING/datos/raster/gamma.asc&#39;</span><span class="p">,</span> <span class="n">skiprows</span><span class="o">=</span><span class="mi">6</span><span class="p">)</span>
+<span class="n">np</span><span class="o">.</span><span class="n">unique</span><span class="p">(</span><span class="n">geologia</span><span class="p">)</span>
+<span class="n">geologia</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">geologia</span><span class="o">==-</span><span class="mf">9999.</span><span class="p">,</span><span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">,</span><span class="n">geologia</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">geologia</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">colorbar</span><span class="p">()</span>
+<span class="n">geologia_vector</span><span class="o">=</span><span class="n">geologia</span><span class="o">.</span><span class="n">ravel</span><span class="p">()</span>
+<span class="n">geologia_vector_MenM</span><span class="o">=</span><span class="n">geologia_vector</span><span class="p">[</span><span class="o">~</span><span class="n">np</span><span class="o">.</span><span class="n">isnan</span><span class="p">(</span><span class="n">geologia_vector</span><span class="p">)]</span>
+<span class="n">geologia_vector_MenM</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">delete</span><span class="p">(</span><span class="n">geologia_vector_MenM</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">geologia_vector_MenM</span><span class="o">.</span><span class="n">shape</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(99060,)
+</pre></div>
+</div>
+<img alt="_images/06_variables_26_1.png" src="_images/06_variables_26_1.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">osgeo</span> <span class="kn">import</span> <span class="n">gdal</span>
+
+<span class="n">driver</span> <span class="o">=</span> <span class="n">gdal</span><span class="o">.</span><span class="n">GetDriverByName</span><span class="p">(</span><span class="s1">&#39;GTiff&#39;</span><span class="p">)</span>
+<span class="n">file</span> <span class="o">=</span> <span class="n">gdal</span><span class="o">.</span><span class="n">Open</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;G:\My Drive\CATEDRA\MACHINE LEARNING/datos/raster/Coberturas_Arenosa.tif&#39;</span><span class="p">)</span>
+<span class="n">band</span> <span class="o">=</span> <span class="n">file</span><span class="o">.</span><span class="n">GetRasterBand</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">coberturas</span> <span class="o">=</span> <span class="n">band</span><span class="o">.</span><span class="n">ReadAsArray</span><span class="p">()</span>
+<span class="n">coberturas</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">coberturas</span><span class="o">==</span><span class="mi">2147483647</span><span class="p">,</span><span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">,</span><span class="n">coberturas</span><span class="p">)</span>
+<span class="n">coberturas_vector</span><span class="o">=</span><span class="n">coberturas</span><span class="o">.</span><span class="n">ravel</span><span class="p">()</span>
+<span class="n">coberturas_vector_MenM</span><span class="o">=</span><span class="n">coberturas_vector</span><span class="p">[</span><span class="o">~</span><span class="n">np</span><span class="o">.</span><span class="n">isnan</span><span class="p">(</span><span class="n">coberturas_vector</span><span class="p">)]</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">coberturas</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">colorbar</span><span class="p">()</span>
+<span class="n">coberturas</span><span class="o">.</span><span class="n">shape</span>
+<span class="n">coberturas_vector_MenM</span><span class="o">.</span><span class="n">shape</span>
+
+<span class="n">cob</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="o">.</span><span class="n">tolist</span><span class="p">(</span><span class="n">coberturas_vector_MenM</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">174</span><span class="p">):</span>
+    <span class="n">a</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">4</span><span class="p">)</span>
+    <span class="n">cob</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+    
+<span class="n">coberturas_vector_MenM</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">asarray</span><span class="p">(</span><span class="n">cob</span><span class="p">)</span>
+<span class="n">coberturas_vector_MenM</span><span class="o">.</span><span class="n">shape</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(98886,)
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(99060,)
+</pre></div>
+</div>
+<img alt="_images/06_variables_28_2.png" src="_images/06_variables_28_2.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">unique</span><span class="p">(</span><span class="n">coberturas</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([ 1.,  2.,  3., ..., nan, nan, nan])
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">d</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;inventario&#39;</span><span class="p">:</span><span class="n">inventario_vector_MenM</span><span class="p">,</span><span class="s1">&#39;pendiente&#39;</span><span class="p">:</span><span class="n">pendiente_vector_MenM</span><span class="p">,</span><span class="s1">&#39;flujo_acum&#39;</span><span class="p">:</span><span class="n">flujo_vector_MenM</span><span class="p">,</span><span class="s1">&#39;aspecto&#39;</span><span class="p">:</span><span class="n">aspecto_vector_MenM</span><span class="p">,</span>
+   <span class="s1">&#39;curvatura&#39;</span><span class="p">:</span><span class="n">curvatura_vector_MenM</span><span class="p">,</span> <span class="s1">&#39;geologia&#39;</span><span class="p">:</span><span class="n">geologia_vector_MenM</span><span class="p">,</span> <span class="s1">&#39;coberturas&#39;</span><span class="p">:</span><span class="n">coberturas_vector_MenM</span><span class="p">}</span>
+<span class="n">data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">d</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">columns</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;inventario&#39;, &#39;pendiente&#39;, &#39;flujo_acum&#39;, &#39;aspecto&#39;, &#39;curvatura&#39;, &#39;geologia&#39;, &#39;coberturas&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data</span><span class="o">.</span><span class="n">tail</span><span class="p">(</span><span class="mi">6</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>inventario</th>
+      <th>pendiente</th>
+      <th>flujo_acum</th>
+      <th>aspecto</th>
+      <th>curvatura</th>
+      <th>geologia</th>
+      <th>coberturas</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>99054</th>
+      <td>0.0</td>
+      <td>23.620783</td>
+      <td>0.0</td>
+      <td>300.963745</td>
+      <td>5.0</td>
+      <td>15.0</td>
+      <td>3.0</td>
+    </tr>
+    <tr>
+      <th>99055</th>
+      <td>0.0</td>
+      <td>28.622263</td>
+      <td>0.0</td>
+      <td>290.095245</td>
+      <td>-0.0</td>
+      <td>15.0</td>
+      <td>3.0</td>
+    </tr>
+    <tr>
+      <th>99056</th>
+      <td>0.0</td>
+      <td>30.439892</td>
+      <td>0.0</td>
+      <td>299.291351</td>
+      <td>11.0</td>
+      <td>15.0</td>
+      <td>3.0</td>
+    </tr>
+    <tr>
+      <th>99057</th>
+      <td>0.0</td>
+      <td>16.970293</td>
+      <td>0.0</td>
+      <td>304.992035</td>
+      <td>5.0</td>
+      <td>15.0</td>
+      <td>2.0</td>
+    </tr>
+    <tr>
+      <th>99058</th>
+      <td>0.0</td>
+      <td>4.044690</td>
+      <td>0.0</td>
+      <td>315.000000</td>
+      <td>3.0</td>
+      <td>15.0</td>
+      <td>3.0</td>
+    </tr>
+    <tr>
+      <th>99059</th>
+      <td>0.0</td>
+      <td>4.289152</td>
+      <td>0.0</td>
+      <td>180.000000</td>
+      <td>-3.0</td>
+      <td>15.0</td>
+      <td>3.0</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">resumen</span><span class="o">=</span><span class="n">data</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span><span class="o">.</span><span class="n">T</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">resumen</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>              count          mean            std        min        25%  \
+inventario  99060.0      0.026560       0.160793   0.000000   0.000000   
+pendiente   99060.0     28.132240      10.509834   0.086598  21.137832   
+flujo_acum  99060.0  23187.123047  257582.718750   0.000000   0.000000   
+aspecto     99060.0    186.726166     121.806618   0.000000  67.163525   
+curvatura   99060.0      0.000000       5.812411 -41.000000  -2.744537   
+geologia    99060.0     15.712871       1.276889  15.000000  15.000000   
+coberturas  99060.0      2.425813       1.155212   1.000000   2.000000   
+
+                   50%         75%           max  
+inventario    0.000000    0.000000  1.000000e+00  
+pendiente    29.295362   35.876204  6.165246e+01  
+flujo_acum  200.000000  600.000000  9.865900e+06  
+aspecto     191.743095  306.869904  3.599956e+02  
+curvatura     0.349487    3.226929  3.385083e+01  
+geologia     15.000000   15.000000  1.800000e+01  
+coberturas    2.000000    2.000000  5.000000e+00  
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">matriz</span><span class="o">=</span><span class="n">data</span><span class="o">.</span><span class="n">drop</span><span class="p">([</span><span class="s1">&#39;inventario&#39;</span><span class="p">],</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">matriz_array</span><span class="o">=</span><span class="n">matriz</span><span class="o">.</span><span class="n">values</span>
+<span class="n">matriz</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>pendiente</th>
+      <th>flujo_acum</th>
+      <th>aspecto</th>
+      <th>curvatura</th>
+      <th>geologia</th>
+      <th>coberturas</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>3.194784</td>
+      <td>0.0</td>
+      <td>80.800842</td>
+      <td>0.909546</td>
+      <td>15.0</td>
+      <td>2.0</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>4.556033</td>
+      <td>100.0</td>
+      <td>80.072861</td>
+      <td>-1.191040</td>
+      <td>15.0</td>
+      <td>2.0</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>15.029085</td>
+      <td>0.0</td>
+      <td>114.904884</td>
+      <td>5.199097</td>
+      <td>15.0</td>
+      <td>2.0</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>10.056046</td>
+      <td>0.0</td>
+      <td>101.990807</td>
+      <td>-1.439331</td>
+      <td>15.0</td>
+      <td>2.0</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>7.235751</td>
+      <td>0.0</td>
+      <td>30.782837</td>
+      <td>-2.977417</td>
+      <td>15.0</td>
+      <td>2.0</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">matriz_array</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[  3.19478416,   0.        ,  80.80084229,   0.9095459 ,
+         15.        ,   2.        ],
+       [  4.55603266, 100.        ,  80.07286072,  -1.19104004,
+         15.        ,   2.        ],
+       [ 15.02908516,   0.        , 114.90488434,   5.19909668,
+         15.        ,   2.        ],
+       ...,
+       [ 16.97029305,   0.        , 304.99203491,   5.        ,
+         15.        ,   2.        ],
+       [  4.04469013,   0.        , 315.        ,   3.        ,
+         15.        ,   3.        ],
+       [  4.28915215,   0.        , 180.        ,  -3.        ,
+         15.        ,   3.        ]])
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">matriz_cont</span><span class="o">=</span><span class="n">matriz</span><span class="o">.</span><span class="n">drop</span><span class="p">([</span><span class="s1">&#39;geologia&#39;</span><span class="p">,</span> <span class="s1">&#39;coberturas&#39;</span><span class="p">],</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">matriz_array_cont</span><span class="o">=</span><span class="n">matriz_cont</span><span class="o">.</span><span class="n">values</span>
+<span class="n">matriz_cont</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>pendiente</th>
+      <th>flujo_acum</th>
+      <th>aspecto</th>
+      <th>curvatura</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>3.194784</td>
+      <td>0.0</td>
+      <td>80.800842</td>
+      <td>0.909546</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>4.556033</td>
+      <td>100.0</td>
+      <td>80.072861</td>
+      <td>-1.191040</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>15.029085</td>
+      <td>0.0</td>
+      <td>114.904884</td>
+      <td>5.199097</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>10.056046</td>
+      <td>0.0</td>
+      <td>101.990807</td>
+      <td>-1.439331</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>7.235751</td>
+      <td>0.0</td>
+      <td>30.782837</td>
+      <td>-2.977417</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Para contar el numero de celdas con y sin MenM</span>
+<span class="n">data</span><span class="p">[</span><span class="s1">&#39;inventario&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.0    96429
+1.0     2631
+Name: inventario, dtype: int64
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Para saber la media de cada variable independiente de acuerdo con la variable dependiente</span>
+<span class="n">media</span><span class="o">=</span><span class="n">matriz</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;geologia&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">media</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>          pendiente    flujo_acum     aspecto  curvatura  coberturas
+geologia                                                            
+15.0      30.900507   8983.827148  181.633057   0.007699    2.446181
+18.0      19.250719  68756.070312  203.066696  -0.024702    2.360466
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#matriz de scattering con panda</span>
+<span class="n">pd</span><span class="o">.</span><span class="n">plotting</span><span class="o">.</span><span class="n">scatter_matrix</span><span class="p">(</span><span class="n">matriz_cont</span><span class="p">,</span> <span class="n">alpha</span> <span class="o">=</span> <span class="mf">0.3</span><span class="p">,</span> <span class="n">figsize</span> <span class="o">=</span> <span class="p">(</span><span class="mi">14</span><span class="p">,</span><span class="mi">10</span><span class="p">),</span> <span class="n">diagonal</span><span class="o">=</span><span class="s1">&#39;kde&#39;</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[&lt;matplotlib.axes._subplots.AxesSubplot object at 0x000000000CA212B0&gt;,
+        &lt;matplotlib.axes._subplots.AxesSubplot object at 0x000000000C5409B0&gt;,
+        &lt;matplotlib.axes._subplots.AxesSubplot object at 0x000000000BC41198&gt;,
+        &lt;matplotlib.axes._subplots.AxesSubplot object at 0x000000000B37C048&gt;],
+       [&lt;matplotlib.axes._subplots.AxesSubplot object at 0x000000000C4F9400&gt;,
+        &lt;matplotlib.axes._subplots.AxesSubplot object at 0x000000000CA8BF98&gt;,
+        &lt;matplotlib.axes._subplots.AxesSubplot object at 0x000000000C5040B8&gt;,
+        &lt;matplotlib.axes._subplots.AxesSubplot object at 0x000000000BBFD320&gt;],
+       [&lt;matplotlib.axes._subplots.AxesSubplot object at 0x000000000BBFD358&gt;,
+        &lt;matplotlib.axes._subplots.AxesSubplot object at 0x000000000BBAEDA0&gt;,
+        &lt;matplotlib.axes._subplots.AxesSubplot object at 0x000000000CD11A20&gt;,
+        &lt;matplotlib.axes._subplots.AxesSubplot object at 0x000000000C55C0B8&gt;],
+       [&lt;matplotlib.axes._subplots.AxesSubplot object at 0x000000000C541EF0&gt;,
+        &lt;matplotlib.axes._subplots.AxesSubplot object at 0x000000000BBD2390&gt;,
+        &lt;matplotlib.axes._subplots.AxesSubplot object at 0x000000000BBCC908&gt;,
+        &lt;matplotlib.axes._subplots.AxesSubplot object at 0x000000000C9F1E80&gt;]],
+      dtype=object)
+</pre></div>
+</div>
+<img alt="_images/06_variables_43_1.png" src="_images/06_variables_43_1.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Matriz de scattering utilizando seaborn</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">pairplot</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">hue</span><span class="o">=</span><span class="s1">&#39;geologia&#39;</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/06_variables_44_0.png" src="_images/06_variables_44_0.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sns</span><span class="o">.</span><span class="n">jointplot</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="s1">&#39;aspecto&#39;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s1">&#39;curvatura&#39;</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">data</span><span class="p">,</span> <span class="n">kind</span><span class="o">=</span><span class="s1">&#39;scatter&#39;</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/06_variables_46_0.png" src="_images/06_variables_46_0.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sns</span><span class="o">.</span><span class="n">jointplot</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="s1">&#39;pendiente&#39;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s1">&#39;curvatura&#39;</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">data</span><span class="p">,</span> <span class="n">kind</span><span class="o">=</span><span class="s1">&#39;kde&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;g&#39;</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/06_variables_47_0.png" src="_images/06_variables_47_0.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sns</span><span class="o">.</span><span class="n">scatterplot</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="s2">&quot;curvatura&quot;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s2">&quot;aspecto&quot;</span><span class="p">,</span> <span class="n">hue</span><span class="o">=</span><span class="s2">&quot;inventario&quot;</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="s1">&#39;pendiente&#39;</span><span class="p">,</span><span class="n">data</span><span class="o">=</span><span class="n">data</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/06_variables_48_0.png" src="_images/06_variables_48_0.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sns</span><span class="o">.</span><span class="n">lmplot</span><span class="p">(</span><span class="s1">&#39;curvatura&#39;</span><span class="p">,</span> <span class="s1">&#39;pendiente&#39;</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">data</span><span class="p">,</span> <span class="n">hue</span><span class="o">=</span><span class="s1">&#39;inventario&#39;</span><span class="p">,</span> <span class="n">fit_reg</span><span class="o">=</span><span class="kc">False</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/06_variables_49_0.png" src="_images/06_variables_49_0.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#para histograma de una sola variable</span>
+<span class="n">data</span><span class="o">.</span><span class="n">pendiente</span><span class="o">.</span><span class="n">hist</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Histograma de Pendiente&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Pendiente&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Frecuencia&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0, 0.5, &#39;Frecuencia&#39;)
+</pre></div>
+</div>
+<img alt="_images/06_variables_50_1.png" src="_images/06_variables_50_1.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Histograma de frecuencia para CON y SIN MenM</span>
+<span class="n">data_sin</span><span class="o">=</span><span class="n">data</span><span class="p">[(</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;inventario&#39;</span><span class="p">]</span><span class="o">==</span><span class="mi">0</span><span class="p">)]</span>
+<span class="n">data_con</span><span class="o">=</span><span class="n">data</span><span class="p">[(</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;inventario&#39;</span><span class="p">]</span><span class="o">==</span><span class="mi">1</span><span class="p">)]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data_sin</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>inventario</th>
+      <th>pendiente</th>
+      <th>flujo_acum</th>
+      <th>aspecto</th>
+      <th>curvatura</th>
+      <th>geologia</th>
+      <th>coberturas</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>0.0</td>
+      <td>3.194784</td>
+      <td>0.0</td>
+      <td>80.800842</td>
+      <td>0.909546</td>
+      <td>15.0</td>
+      <td>2.0</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>0.0</td>
+      <td>4.556033</td>
+      <td>100.0</td>
+      <td>80.072861</td>
+      <td>-1.191040</td>
+      <td>15.0</td>
+      <td>2.0</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>0.0</td>
+      <td>15.029085</td>
+      <td>0.0</td>
+      <td>114.904884</td>
+      <td>5.199097</td>
+      <td>15.0</td>
+      <td>2.0</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>0.0</td>
+      <td>10.056046</td>
+      <td>0.0</td>
+      <td>101.990807</td>
+      <td>-1.439331</td>
+      <td>15.0</td>
+      <td>2.0</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>0.0</td>
+      <td>7.235751</td>
+      <td>0.0</td>
+      <td>30.782837</td>
+      <td>-2.977417</td>
+      <td>15.0</td>
+      <td>2.0</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data_con</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>inventario</th>
+      <th>pendiente</th>
+      <th>flujo_acum</th>
+      <th>aspecto</th>
+      <th>curvatura</th>
+      <th>geologia</th>
+      <th>coberturas</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>3087</th>
+      <td>1.0</td>
+      <td>48.456146</td>
+      <td>200.0</td>
+      <td>185.194580</td>
+      <td>6.083130</td>
+      <td>15.0</td>
+      <td>5.0</td>
+    </tr>
+    <tr>
+      <th>3088</th>
+      <td>1.0</td>
+      <td>49.761219</td>
+      <td>100.0</td>
+      <td>189.824493</td>
+      <td>2.952393</td>
+      <td>15.0</td>
+      <td>5.0</td>
+    </tr>
+    <tr>
+      <th>3089</th>
+      <td>1.0</td>
+      <td>47.416843</td>
+      <td>0.0</td>
+      <td>198.636536</td>
+      <td>1.242676</td>
+      <td>15.0</td>
+      <td>5.0</td>
+    </tr>
+    <tr>
+      <th>3090</th>
+      <td>1.0</td>
+      <td>40.080986</td>
+      <td>1000.0</td>
+      <td>212.276825</td>
+      <td>3.142700</td>
+      <td>15.0</td>
+      <td>5.0</td>
+    </tr>
+    <tr>
+      <th>3203</th>
+      <td>1.0</td>
+      <td>39.940807</td>
+      <td>300.0</td>
+      <td>181.749344</td>
+      <td>-1.636597</td>
+      <td>15.0</td>
+      <td>2.0</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
+<span class="n">data_sin</span><span class="p">[</span><span class="s1">&#39;pendiente&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">kde</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Sin MenM&#39;</span><span class="p">)</span>
+<span class="n">data_con</span><span class="p">[</span><span class="s1">&#39;pendiente&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">kde</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Con MenM&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xlim</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">90</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;Pendiente (grados)&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;k&#39;</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="mi">12</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;Densidad&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;k&#39;</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="mi">12</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">loc</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">tick_params</span><span class="p">(</span><span class="s1">&#39;y&#39;</span><span class="p">,</span> <span class="n">colors</span><span class="o">=</span><span class="s1">&#39;k&#39;</span><span class="p">,</span> <span class="n">labelsize</span><span class="o">=</span> <span class="mi">10</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/06_variables_54_0.png" src="_images/06_variables_54_0.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Matriz de correlacion de Pearson y mapa de calor</span>
+<span class="n">MatCorre</span><span class="o">=</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">corr</span><span class="p">())</span>
+<span class="n">smg</span><span class="o">.</span><span class="n">plot_corr</span><span class="p">(</span><span class="n">MatCorre</span><span class="p">,</span> <span class="n">xnames</span><span class="o">=</span><span class="nb">list</span><span class="p">(</span><span class="n">MatCorre</span><span class="o">.</span><span class="n">columns</span><span class="p">))</span> <span class="p">;</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/06_variables_55_0.png" src="_images/06_variables_55_0.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pendiente</span><span class="o">=</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;pendiente&#39;</span><span class="p">]</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">boxplot</span><span class="p">(</span><span class="n">pendiente</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/06_variables_57_0.png" src="_images/06_variables_57_0.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sns</span><span class="o">.</span><span class="n">boxplot</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="s1">&#39;pendiente&#39;</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">data</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/06_variables_58_0.png" src="_images/06_variables_58_0.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">_</span><span class="p">,</span> <span class="n">axes</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="n">sharey</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span> <span class="mi">4</span><span class="p">))</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">boxplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;pendiente&#39;</span><span class="p">],</span> <span class="n">ax</span><span class="o">=</span><span class="n">axes</span><span class="p">[</span><span class="mi">0</span><span class="p">]);</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">violinplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;pendiente&#39;</span><span class="p">],</span> <span class="n">ax</span><span class="o">=</span><span class="n">axes</span><span class="p">[</span><span class="mi">1</span><span class="p">]);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/06_variables_59_0.png" src="_images/06_variables_59_0.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">matriz</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">kind</span><span class="o">=</span><span class="s1">&#39;density&#39;</span><span class="p">,</span> <span class="n">subplots</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">layout</span><span class="o">=</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span> 
+                  <span class="n">sharex</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">4</span><span class="p">));</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/06_variables_60_0.png" src="_images/06_variables_60_0.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sns</span><span class="o">.</span><span class="n">distplot</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;aspecto&#39;</span><span class="p">]);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/06_variables_61_0.png" src="_images/06_variables_61_0.png" />
+</div>
+</div>
+<div class="section" id="analisis-de-componentes-principales-pca">
+<h3>Análisis de Componentes Principales (PCA)<a class="headerlink" href="#analisis-de-componentes-principales-pca" title="Permalink to this headline">¶</a></h3>
+<p>El PCA es un método de machine learning no supervisado  para reducir dimensionalmente un modelo con una gran cantidad de variables. Para esta reducción permite identificar las varibales que mas le aportan a la varianza del modelo. En este ejemplo vamso a utilizar un conjunto de variables importados desde una tabla de excel.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#se importan todas las librerias a utilizar</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">from</span> <span class="nn">PIL</span> <span class="kn">import</span> <span class="n">Image</span>
+<span class="kn">from</span> <span class="nn">sklearn.decomposition</span> <span class="kn">import</span> <span class="n">PCA</span>
+<span class="kn">from</span> <span class="nn">sklearn.preprocessing</span> <span class="kn">import</span> <span class="n">scale</span>
+
+<span class="c1">#Se defien la ruta de acceso</span>
+<span class="n">ruta_in</span><span class="o">=</span><span class="sa">r</span><span class="s2">&quot;G:\My Drive\INVESTIGACION\PAPERS\PUBLICADOS\Regresion vs WOE_Mariana&amp;Diana\Datos/&quot;</span>
+<span class="n">ruta_out</span><span class="o">=</span><span class="sa">r</span><span class="s2">&quot;G:\My Drive\INVESTIGACION\PAPERS\PUBLICADOS\Regresion vs WOE_Mariana&amp;Diana\Figuras/&quot;</span>
+
+<span class="c1">#Se importan los archivos</span>
+<span class="n">data</span><span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_excel</span><span class="p">(</span><span class="n">ruta_in</span><span class="o">+</span><span class="s1">&#39;PUNTOS.xlsx&#39;</span><span class="p">,</span> <span class="n">sheet_name</span><span class="o">=</span><span class="s1">&#39;PUNTOS&#39;</span><span class="p">)</span>
+<span class="n">puntos</span><span class="o">=</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;INVENTARIO&#39;</span><span class="p">]</span>
+<span class="n">data</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="s1">&#39;INVENTARIO&#39;</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="c1"># Se debe escalar los datos antes de aplicar PCA</span>
+<span class="n">data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">scale</span><span class="p">(</span><span class="n">data</span><span class="p">),</span> <span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;DV&#39;</span><span class="p">,</span> <span class="s1">&#39;A&#39;</span><span class="p">,</span> <span class="s1">&#39;CP&#39;</span><span class="p">,</span> <span class="s1">&#39;CT&#39;</span><span class="p">,</span> <span class="s1">&#39;DF&#39;</span><span class="p">,</span> <span class="s1">&#39;GEOLOGIA&#39;</span><span class="p">,</span><span class="s1">&#39;RR&#39;</span><span class="p">,</span><span class="s1">&#39;R&#39;</span><span class="p">,</span><span class="s1">&#39;S&#39;</span><span class="p">,</span><span class="s1">&#39;TPI&#39;</span><span class="p">,</span><span class="s1">&#39;WI&#39;</span><span class="p">,</span><span class="s1">&#39;COBERTURA&#39;</span><span class="p">,</span><span class="s1">&#39;DDS&#39;</span><span class="p">,</span><span class="s1">&#39;DI&#39;</span><span class="p">])</span>
+
+<span class="c1">## Se implementa el análisi PCA con la libreria sklearn de python</span>
+<span class="n">n</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">columns</span><span class="p">)</span>
+<span class="n">pca</span> <span class="o">=</span> <span class="n">PCA</span><span class="p">(</span><span class="n">n_components</span><span class="o">=</span><span class="n">n</span><span class="p">)</span>
+<span class="n">pca</span> <span class="o">=</span> <span class="n">pca</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+<span class="n">pca_samples</span> <span class="o">=</span> <span class="n">pca</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+
+<span class="c1">#Se puede graficar cuanto aporta a la varianza cada componente generado</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">pca</span><span class="o">.</span><span class="n">explained_variance_ratio_</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Number of components&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Explained variance&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+
+<span class="c1">#graficamos el acumulado de varianza explicada en las nuevas dimensiones</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">cumsum</span><span class="p">(</span><span class="n">pca</span><span class="o">.</span><span class="n">explained_variance_ratio_</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;number of components&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;cumulative explained variance&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+
+<span class="c1">#Para identificar cada variable como se relaciona con las componentes utilizamos las figuras byplot de python</span>
+<span class="c1"># 0,1 denota el componente princiapl 1 y 2 (PC1 and PC2); para otros componentes se modifica el número</span>
+<span class="n">xvector</span> <span class="o">=</span> <span class="n">pca</span><span class="o">.</span><span class="n">components_</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> 
+<span class="n">yvector</span> <span class="o">=</span> <span class="n">pca</span><span class="o">.</span><span class="n">components_</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+
+<span class="n">xs</span> <span class="o">=</span> <span class="n">pca</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="n">data</span><span class="p">)[:,</span><span class="mi">0</span><span class="p">]</span> 
+<span class="n">ys</span> <span class="o">=</span> <span class="n">pca</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="n">data</span><span class="p">)[:,</span><span class="mi">1</span><span class="p">]</span>
+
+<span class="n">mask1</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">ma</span><span class="o">.</span><span class="n">masked_where</span><span class="p">(</span><span class="n">puntos</span> <span class="o">&lt;</span> <span class="mi">1</span><span class="p">,</span><span class="n">xs</span> <span class="p">)</span>
+<span class="n">mask2</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">ma</span><span class="o">.</span><span class="n">masked_where</span><span class="p">(</span><span class="n">puntos</span> <span class="o">&lt;</span> <span class="mi">1</span><span class="p">,</span><span class="n">ys</span> <span class="p">)</span> 
+
+<span class="c1">## Para visualizar las proyecciones de cada variable en los componentes se utiliza la siguiente función</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">xvector</span><span class="p">)):</span>
+<span class="c1"># arrows project features (ie columns from csv) as vectors onto PC axes</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">arrow</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">xvector</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">*</span><span class="nb">max</span><span class="p">(</span><span class="n">xs</span><span class="p">),</span> <span class="n">yvector</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">*</span><span class="nb">max</span><span class="p">(</span><span class="n">ys</span><span class="p">),</span>
+              <span class="n">color</span><span class="o">=</span><span class="s1">&#39;r&#39;</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mf">0.0005</span><span class="p">,</span> <span class="n">head_width</span><span class="o">=</span><span class="mf">0.0025</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="n">xvector</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">*</span><span class="nb">max</span><span class="p">(</span><span class="n">xs</span><span class="p">)</span><span class="o">*</span><span class="mf">1.2</span><span class="p">,</span> <span class="n">yvector</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">*</span><span class="nb">max</span><span class="p">(</span><span class="n">ys</span><span class="p">)</span><span class="o">*</span><span class="mf">1.2</span><span class="p">,</span>
+             <span class="nb">list</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">columns</span><span class="o">.</span><span class="n">values</span><span class="p">)[</span><span class="n">i</span><span class="p">],</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;r&#39;</span><span class="p">)</span> 
+
+<span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">xs</span><span class="p">,</span> <span class="n">ys</span><span class="p">,</span> <span class="n">s</span><span class="o">=</span><span class="mi">70</span><span class="p">,</span><span class="n">marker</span><span class="o">=</span><span class="s1">&#39;x&#39;</span><span class="p">,</span><span class="n">c</span><span class="o">=</span><span class="s1">&#39;blue&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;MenM&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">mask1</span><span class="p">,</span><span class="n">mask2</span><span class="p">,</span><span class="n">facecolors</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">,</span> <span class="n">edgecolors</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">,</span> <span class="n">s</span><span class="o">=</span><span class="mi">70</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;No MenM&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">tick_params</span><span class="p">(</span><span class="s1">&#39;y&#39;</span><span class="p">,</span> <span class="n">colors</span><span class="o">=</span><span class="s1">&#39;k&#39;</span><span class="p">,</span> <span class="n">labelsize</span><span class="o">=</span><span class="mi">12</span><span class="p">,</span> <span class="n">length</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">tick_params</span><span class="p">(</span><span class="s1">&#39;x&#39;</span><span class="p">,</span> <span class="n">colors</span><span class="o">=</span><span class="s1">&#39;k&#39;</span><span class="p">,</span> <span class="n">labelsize</span><span class="o">=</span> <span class="mi">12</span><span class="p">,</span> <span class="n">length</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;Componente Principal 1&quot;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">16</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;Componente Principal 2&quot;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">16</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">fontsize</span><span class="o">=</span><span class="mi">14</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/06_variables_64_0.png" src="_images/06_variables_64_0.png" />
+<img alt="_images/06_variables_64_1.png" src="_images/06_variables_64_1.png" />
+<img alt="_images/06_variables_64_2.png" src="_images/06_variables_64_2.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">pca_results</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">pca</span><span class="p">):</span>
+    
+    <span class="n">dimensions</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Dim. </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="nb">len</span><span class="p">(</span><span class="n">pca</span><span class="o">.</span><span class="n">components_</span><span class="p">)</span><span class="o">+</span><span class="mi">1</span><span class="p">)]</span>
+    
+    <span class="n">components</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="n">pca</span><span class="o">.</span><span class="n">components_</span><span class="p">,</span> <span class="mi">4</span><span class="p">),</span> <span class="n">columns</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">keys</span><span class="p">())</span> 
+    <span class="n">components</span><span class="o">.</span><span class="n">index</span> <span class="o">=</span> <span class="n">dimensions</span>
+
+    <span class="n">ratios</span> <span class="o">=</span> <span class="n">pca</span><span class="o">.</span><span class="n">explained_variance_ratio_</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">pca</span><span class="o">.</span><span class="n">components_</span><span class="p">),</span> <span class="mi">1</span><span class="p">)</span> 
+    <span class="n">variance_ratios</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="n">ratios</span><span class="p">,</span> <span class="mi">4</span><span class="p">),</span> <span class="n">columns</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Explained Variance&#39;</span><span class="p">])</span> 
+    <span class="n">variance_ratios</span><span class="o">.</span><span class="n">index</span> <span class="o">=</span> <span class="n">dimensions</span>
+
+    <span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span> <span class="o">=</span> <span class="p">(</span><span class="mi">14</span><span class="p">,</span><span class="mi">8</span><span class="p">))</span>
+
+    <span class="n">components</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">ax</span> <span class="o">=</span> <span class="n">ax</span><span class="p">,</span> <span class="n">kind</span> <span class="o">=</span> <span class="s1">&#39;bar&#39;</span><span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">&quot;Feature Weights&quot;</span><span class="p">)</span> 
+    <span class="n">ax</span><span class="o">.</span><span class="n">set_xticklabels</span><span class="p">(</span><span class="n">dimensions</span><span class="p">,</span> <span class="n">rotation</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+
+    <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">ev</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">pca</span><span class="o">.</span><span class="n">explained_variance_ratio_</span><span class="p">):</span> 
+        <span class="n">ax</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="n">i</span><span class="o">-</span><span class="mf">0.40</span><span class="p">,</span> <span class="n">ax</span><span class="o">.</span><span class="n">get_ylim</span><span class="p">()[</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="mf">0.05</span><span class="p">,</span> <span class="s2">&quot;Expl. Var.</span><span class="se">\n</span><span class="s2"> </span><span class="si">%.4f</span><span class="s2">&quot;</span><span class="o">%</span><span class="p">(</span><span class="n">ev</span><span class="p">))</span>
+
+    <span class="k">return</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">variance_ratios</span><span class="p">,</span> <span class="n">components</span><span class="p">],</span> <span class="n">axis</span> <span class="o">=</span> <span class="mi">1</span><span class="p">)</span>
+
+<span class="n">pca_results</span> <span class="o">=</span> <span class="n">pca_results</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">pca</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/06_variables_65_0.png" src="_images/06_variables_65_0.png" />
+</div>
+</div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="05_inventario.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Inventario de movimientos en masa</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="heuristico.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Métodos basados en el conocimiento</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            
+        </div>
+    </div>
+    <footer class="footer">
+  <p>
+    
+      By Edier V. Aristizábal G.<br/>
+    
+        &copy; Copyright 2021.<br/>
+  </p>
+</footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>
