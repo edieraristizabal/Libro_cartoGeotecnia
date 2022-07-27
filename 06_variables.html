@@ -472,29 +472,28 @@
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Collecting rasterio
-  Downloading rasterio-1.3.0-cp39-cp39-win_amd64.whl (15.6 MB)
-Collecting affine
-  Downloading affine-2.3.1-py2.py3-none-any.whl (16 kB)
-Collecting numpy
-  Using cached numpy-1.23.1-cp39-cp39-win_amd64.whl (14.7 MB)
+  Using cached rasterio-1.3.0-cp39-cp39-win_amd64.whl (15.6 MB)
+Requirement already satisfied: setuptools in c:\python39\lib\site-packages (from rasterio) (57.4.0)
 Requirement already satisfied: attrs in c:\python39\lib\site-packages (from rasterio) (21.4.0)
-Collecting snuggs&gt;=1.4.1
-  Downloading snuggs-1.4.7-py3-none-any.whl (5.4 kB)
+Requirement already satisfied: click&gt;=4.0 in c:\python39\lib\site-packages (from rasterio) (7.1.2)
+Requirement already satisfied: numpy in c:\python39\lib\site-packages (from rasterio) (1.23.1)
+Collecting cligj&gt;=0.5
+  Using cached cligj-0.7.2-py3-none-any.whl (7.1 kB)
+Collecting affine
+  Using cached affine-2.3.1-py2.py3-none-any.whl (16 kB)
+Requirement already satisfied: certifi in c:\python39\lib\site-packages (from rasterio) (2021.10.8)
 Collecting click-plugins
   Using cached click_plugins-1.1.1-py2.py3-none-any.whl (7.5 kB)
-Requirement already satisfied: setuptools in c:\python39\lib\site-packages (from rasterio) (57.4.0)
-Requirement already satisfied: click&gt;=4.0 in c:\python39\lib\site-packages (from rasterio) (7.1.2)
-Collecting cligj&gt;=0.5
-  Downloading cligj-0.7.2-py3-none-any.whl (7.1 kB)
-Requirement already satisfied: certifi in c:\python39\lib\site-packages (from rasterio) (2021.10.8)
+Collecting snuggs&gt;=1.4.1
+  Using cached snuggs-1.4.7-py3-none-any.whl (5.4 kB)
 Requirement already satisfied: pyparsing&gt;=2.1.6 in c:\python39\lib\site-packages (from snuggs&gt;=1.4.1-&gt;rasterio) (3.0.6)
-Installing collected packages: numpy, snuggs, cligj, click-plugins, affine, rasterio
+Installing collected packages: snuggs, cligj, click-plugins, affine, rasterio
 </pre></div>
 </div>
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  WARNING: Failed to write executable - trying to use .deleteme logic
-ERROR: Could not install packages due to an OSError: [WinError 2] The system cannot find the file specified: &#39;C:\\Python39\\Scripts\\f2py.exe&#39; -&gt; &#39;C:\\Python39\\Scripts\\f2py.exe.deleteme&#39;
+ERROR: Could not install packages due to an OSError: [WinError 2] The system cannot find the file specified: &#39;C:\\Python39\\Scripts\\rio.exe&#39; -&gt; &#39;C:\\Python39\\Scripts\\rio.exe.deleteme&#39;
 
-WARNING: You are using pip version 21.2.3; however, version 22.1.2 is available.
+WARNING: You are using pip version 21.2.3; however, version 22.2.1 is available.
 You should consider upgrading via the &#39;C:\Python39\python.exe -m pip install --upgrade pip&#39; command.
 </pre></div>
 </div>
@@ -516,14 +515,14 @@ You should consider upgrading via the &#39;C:\Python39\python.exe -m pip install
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
-<span class="o">~</span>\<span class="n">AppData</span>\<span class="n">Local</span>\<span class="n">Temp</span><span class="o">/</span><span class="n">ipykernel_608</span><span class="o">/</span><span class="mf">3755426754.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="ne">----&gt; </span><span class="mi">1</span> <span class="kn">import</span> <span class="nn">rasterio</span> <span class="k">as</span> <span class="nn">rio</span>
+<span class="o">~</span>\<span class="n">AppData</span>\<span class="n">Local</span>\<span class="n">Temp</span><span class="o">/</span><span class="n">ipykernel_14808</span><span class="o">/</span><span class="mf">3755426754.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="kn">import</span> <span class="nn">rasterio</span> <span class="k">as</span> <span class="nn">rio</span>
 <span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="ne">----&gt; </span><span class="mi">3</span> <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
 <span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
 <span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
 
-<span class="ne">ModuleNotFoundError</span>: No module named &#39;rasterio&#39;
+<span class="ne">ModuleNotFoundError</span>: No module named &#39;matplotlib&#39;
 </pre></div>
 </div>
 </div>
@@ -1526,19 +1525,19 @@ dtype: int64
 <span class="kn">from</span> <span class="nn">sklearn.decomposition</span> <span class="kn">import</span> <span class="n">PCA</span>
 <span class="kn">from</span> <span class="nn">sklearn.preprocessing</span> <span class="kn">import</span> <span class="n">scale</span>
 
-<span class="n">Se</span> <span class="n">importan</span> <span class="n">los</span> <span class="n">archivos</span>
-<span class="c1">#data= pd.read_excel(ruta_in+&#39;PUNTOS.xlsx&#39;, sheet_name=&#39;PUNTOS&#39;)</span>
-<span class="c1">#puntos=data[&#39;INVENTARIO&#39;]</span>
-<span class="c1">#data.drop(&#39;INVENTARIO&#39;, axis=1, inplace=True)</span>
+<span class="c1">#Se importan los archivos</span>
+<span class="n">data</span><span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_excel</span><span class="p">(</span><span class="s2">&quot;https://github.com/edieraristizabal/Libro_cartoGeotecnia/blob/master/data/PUNTOS.xlsx?raw=true&quot;</span><span class="p">,</span> <span class="n">sheet_name</span><span class="o">=</span><span class="s1">&#39;PUNTOS&#39;</span><span class="p">)</span>
+<span class="n">puntos</span><span class="o">=</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;INVENTARIO&#39;</span><span class="p">]</span>
+<span class="n">data</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="s1">&#39;INVENTARIO&#39;</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 
 <span class="c1"># Se debe escalar los datos antes de aplicar PCA</span>
-<span class="c1">#data = pd.DataFrame(scale(data), columns=[&#39;DV&#39;, &#39;A&#39;, &#39;CP&#39;, &#39;CT&#39;, &#39;DF&#39;, &#39;GEOLOGIA&#39;,&#39;RR&#39;,&#39;R&#39;,&#39;S&#39;,&#39;TPI&#39;,&#39;WI&#39;,&#39;COBERTURA&#39;,&#39;DDS&#39;,&#39;DI&#39;])</span>
+<span class="n">data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">scale</span><span class="p">(</span><span class="n">data</span><span class="p">),</span> <span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;DV&#39;</span><span class="p">,</span> <span class="s1">&#39;A&#39;</span><span class="p">,</span> <span class="s1">&#39;CP&#39;</span><span class="p">,</span> <span class="s1">&#39;CT&#39;</span><span class="p">,</span> <span class="s1">&#39;DF&#39;</span><span class="p">,</span> <span class="s1">&#39;GEOLOGIA&#39;</span><span class="p">,</span><span class="s1">&#39;RR&#39;</span><span class="p">,</span><span class="s1">&#39;R&#39;</span><span class="p">,</span><span class="s1">&#39;S&#39;</span><span class="p">,</span><span class="s1">&#39;TPI&#39;</span><span class="p">,</span><span class="s1">&#39;WI&#39;</span><span class="p">,</span><span class="s1">&#39;COBERTURA&#39;</span><span class="p">,</span><span class="s1">&#39;DDS&#39;</span><span class="p">,</span><span class="s1">&#39;DI&#39;</span><span class="p">])</span>
 
 <span class="c1">## Se implementa el análisi PCA con la libreria sklearn de python</span>
-<span class="n">n</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">matriz</span><span class="o">.</span><span class="n">columns</span><span class="p">)</span>
+<span class="n">n</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">columns</span><span class="p">)</span>
 <span class="n">pca</span> <span class="o">=</span> <span class="n">PCA</span><span class="p">(</span><span class="n">n_components</span><span class="o">=</span><span class="n">n</span><span class="p">)</span>
-<span class="n">pca</span> <span class="o">=</span> <span class="n">pca</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">matriz</span><span class="p">)</span>
-<span class="n">pca_samples</span> <span class="o">=</span> <span class="n">pca</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="n">matriz</span><span class="p">)</span>
+<span class="n">pca</span> <span class="o">=</span> <span class="n">pca</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+<span class="n">pca_samples</span> <span class="o">=</span> <span class="n">pca</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
 
 <span class="c1">#Se puede graficar cuanto aporta a la varianza cada componente generado</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">pca</span><span class="o">.</span><span class="n">explained_variance_ratio_</span><span class="p">)</span>
@@ -1557,8 +1556,8 @@ dtype: int64
 <span class="n">xvector</span> <span class="o">=</span> <span class="n">pca</span><span class="o">.</span><span class="n">components_</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> 
 <span class="n">yvector</span> <span class="o">=</span> <span class="n">pca</span><span class="o">.</span><span class="n">components_</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
 
-<span class="n">xs</span> <span class="o">=</span> <span class="n">pca</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="n">matriz</span><span class="p">)[:,</span><span class="mi">0</span><span class="p">]</span> 
-<span class="n">ys</span> <span class="o">=</span> <span class="n">pca</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="n">matriz</span><span class="p">)[:,</span><span class="mi">1</span><span class="p">]</span>
+<span class="n">xs</span> <span class="o">=</span> <span class="n">pca</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="n">data</span><span class="p">)[:,</span><span class="mi">0</span><span class="p">]</span> <span class="c1"># Componente principal 1</span>
+<span class="n">ys</span> <span class="o">=</span> <span class="n">pca</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="n">data</span><span class="p">)[:,</span><span class="mi">1</span><span class="p">]</span> <span class="c1"># Componente principal 2</span>
 
 <span class="n">mask1</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">ma</span><span class="o">.</span><span class="n">masked_where</span><span class="p">(</span><span class="n">puntos</span> <span class="o">&lt;</span> <span class="mi">1</span><span class="p">,</span><span class="n">xs</span> <span class="p">)</span>
 <span class="n">mask2</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">ma</span><span class="o">.</span><span class="n">masked_where</span><span class="p">(</span><span class="n">puntos</span> <span class="o">&lt;</span> <span class="mi">1</span><span class="p">,</span><span class="n">ys</span> <span class="p">)</span> 
@@ -1569,7 +1568,7 @@ dtype: int64
     <span class="n">plt</span><span class="o">.</span><span class="n">arrow</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">xvector</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">*</span><span class="nb">max</span><span class="p">(</span><span class="n">xs</span><span class="p">),</span> <span class="n">yvector</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">*</span><span class="nb">max</span><span class="p">(</span><span class="n">ys</span><span class="p">),</span>
               <span class="n">color</span><span class="o">=</span><span class="s1">&#39;r&#39;</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mf">0.0005</span><span class="p">,</span> <span class="n">head_width</span><span class="o">=</span><span class="mf">0.0025</span><span class="p">)</span>
     <span class="n">plt</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="n">xvector</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">*</span><span class="nb">max</span><span class="p">(</span><span class="n">xs</span><span class="p">)</span><span class="o">*</span><span class="mf">1.2</span><span class="p">,</span> <span class="n">yvector</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">*</span><span class="nb">max</span><span class="p">(</span><span class="n">ys</span><span class="p">)</span><span class="o">*</span><span class="mf">1.2</span><span class="p">,</span>
-             <span class="nb">list</span><span class="p">(</span><span class="n">matriz</span><span class="o">.</span><span class="n">columns</span><span class="o">.</span><span class="n">values</span><span class="p">)[</span><span class="n">i</span><span class="p">],</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;r&#39;</span><span class="p">)</span> 
+             <span class="nb">list</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">columns</span><span class="o">.</span><span class="n">values</span><span class="p">)[</span><span class="n">i</span><span class="p">],</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;r&#39;</span><span class="p">)</span> 
 
 <span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">xs</span><span class="p">,</span> <span class="n">ys</span><span class="p">,</span> <span class="n">s</span><span class="o">=</span><span class="mi">70</span><span class="p">,</span><span class="n">marker</span><span class="o">=</span><span class="s1">&#39;x&#39;</span><span class="p">,</span><span class="n">c</span><span class="o">=</span><span class="s1">&#39;blue&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;MenM&#39;</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">mask1</span><span class="p">,</span><span class="n">mask2</span><span class="p">,</span><span class="n">facecolors</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">,</span> <span class="n">edgecolors</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">,</span> <span class="n">s</span><span class="o">=</span><span class="mi">70</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;No MenM&#39;</span><span class="p">)</span>
@@ -1585,18 +1584,7 @@ dtype: int64
 <div class="cell_output docutils container">
 <img alt="_images/06_variables_78_0.png" src="_images/06_variables_78_0.png" />
 <img alt="_images/06_variables_78_1.png" src="_images/06_variables_78_1.png" />
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="nn">&lt;ipython-input-13-4f1f5cd2823f&gt;</span> in <span class="ni">&lt;module&gt;</span><span class="nt">()</span>
-<span class="g g-Whitespace">     </span><span class="mi">42</span> <span class="n">ys</span> <span class="o">=</span> <span class="n">pca</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="n">matriz</span><span class="p">)[:,</span><span class="mi">1</span><span class="p">]</span>
-<span class="g g-Whitespace">     </span><span class="mi">43</span> 
-<span class="ne">---&gt; </span><span class="mi">44</span> <span class="n">mask1</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">ma</span><span class="o">.</span><span class="n">masked_where</span><span class="p">(</span><span class="n">puntos</span> <span class="o">&lt;</span> <span class="mi">1</span><span class="p">,</span><span class="n">xs</span> <span class="p">)</span>
-<span class="g g-Whitespace">     </span><span class="mi">45</span> <span class="n">mask2</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">ma</span><span class="o">.</span><span class="n">masked_where</span><span class="p">(</span><span class="n">puntos</span> <span class="o">&lt;</span> <span class="mi">1</span><span class="p">,</span><span class="n">ys</span> <span class="p">)</span>
-<span class="g g-Whitespace">     </span><span class="mi">46</span> 
-
-<span class="ne">NameError</span>: name &#39;puntos&#39; is not defined
-</pre></div>
-</div>
+<img alt="_images/06_variables_78_2.png" src="_images/06_variables_78_2.png" />
 </div>
 </div>
 <div class="cell docutils container">
