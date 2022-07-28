@@ -428,7 +428,7 @@
 <p>Los mapas basados en índices combian mapa de factores asocaidos con la ocurrencia de mvomientos en masa. Los pesos son determinados para cada factor basado en un estimativo de la influencia relativa de los movimientos en masa. LAs variables son generalmente divididas en clases, los cuales son ponderados utilizando el criterio de expertos. Finalmente un índice de susceptibilidad es obtenido para cada unidad.</p>
 <p>El metodo mas utilizado generalemnte es un promedio de las clases a la que pertenece cada celda ponderado por el peso de cada variable.</p>
 <div class="figure align-default" id="heuristico-index">
-<a class="reference internal image-reference" href="https://www.researchgate.net/profile/Lindsay-Ross-5/publication/229909627/figure/fig1/AS:271775443451907&#64;1441807724040/Example-of-the-weighted-linear-combination-method-redrawn-from-Barredo-1996.png"><img alt="heuristico index" src="https://www.researchgate.net/profile/Lindsay-Ross-5/publication/229909627/figure/fig1/AS:271775443451907&#64;1441807724040/Example-of-the-weighted-linear-combination-method-redrawn-from-Barredo-1996.png" style="width: 600px;" /></a>
+<a class="reference internal image-reference" href="https://www.researchgate.net/profile/Lindsay-Ross-5/publication/229909627/figure/fig1/AS:271775443451907&#64;1441807724040/Example-of-the-weighted-linear-combination-method-redrawn-from-Barredo-1996.png"><img alt="heuristico index" src="https://www.researchgate.net/profile/Lindsay-Ross-5/publication/229909627/figure/fig1/AS:271775443451907&#64;1441807724040/Example-of-the-weighted-linear-combination-method-redrawn-from-Barredo-1996.png" style="width: 500px;" /></a>
 <p class="caption"><span class="caption-number">Fig. 25 </span><span class="caption-text">Ejemplo de combinación lineal ponderada. Tomado de Perez et al., (2005).</span><a class="headerlink" href="#heuristico-index" title="Permalink to this image">¶</a></p>
 </div>
 </div>
@@ -437,9 +437,23 @@
 <p>Se define como el conjunto de aproximaciones, métodos, modelos, técnicas y herramientas dirigidas a mejorar a calidad integral de los procesos de decisión seguidos por los individuos y los sistemas, para mejorar la efectividad, eficacia y eficiencia de los proceso de decisión y a incrementar el conocimiento de los mismos. Se basa en el paradigma de la Racionalidad como una aproximación orientada al proceso, cuyo propósito es la comprensión y el consenso. Y pretende la incorporación a los modelos de aspectos subjetivos, intangibles y no considerados, que condicionan la toma de decisiones de los individuos y organizaciones (Moreno (2000)).</p>
 <p>Probablemente el método mas utilizado para movimientos en masa de este tipo se denomina <em>Análisis Jerarquico de Procesos</em> (AHP por sus siglas en inglés). Fue desarrollado por Saaty en la decada de los 60. EL AHP utiliza comparaciones entre pares de elementos, construyendo una matriz a partir de estas comparaciones, que mide el juicio del tomador de decisiones de la importancia concerniente a cada criterio, agregando homogeneidad y cierto grado de certeza. Es una técnica multi-objetivo y multi-criteria para toma de decisiones que permite al usuario llegar a una escala de preferencias a partir de un determinado numero de alternativas. Consiste en organizar una serie de factores en orden de jerarquía, asignando valores numéricos a valoraciones subjetivas sobre la relativa importancia de cada factor. Los pesos son obtenidos generalmente a través de los valores y vectores propios de la matriz. El vector propio que corresponde al mayor valor propio genera la prioridad relativa de los factores. También puede ser obtenido normalizando cada columna de la matriz de comparación, y calculando el promedio de las filas para resolver la matriz.</p>
 <p>La escala utilizada en las comparaciones fue diseñada por Saaty. Esta escala incorporar los juicios o valoraciones del decisor. La escala es estrictamente positiva y elimina las ambigüedades que tiene el ser humano en comparar elementos en la proximidad del cero o del infinito. Los individuos son mas preciso al comparar elementos de la misma magnitud, número mágico de Miller –&gt; 7(+/-2).</p>
-<div class="figure align-default" id="id5">
-<a class="reference internal image-reference" href="https://www.redalyc.org/journal/104/10461231005/10461231005_gt3.png"><img alt="heuristico index" src="https://www.redalyc.org/journal/104/10461231005/10461231005_gt3.png" style="width: 600px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 26 </span><span class="caption-text">Escala de Saaty.</span><a class="headerlink" href="#id5" title="Permalink to this image">¶</a></p>
+<div class="figure align-default" id="ahp">
+<a class="reference internal image-reference" href="https://www.redalyc.org/journal/104/10461231005/10461231005_gt3.png"><img alt="AHP" src="https://www.redalyc.org/journal/104/10461231005/10461231005_gt3.png" style="width: 600px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 26 </span><span class="caption-text">Escala de Saaty.</span><a class="headerlink" href="#ahp" title="Permalink to this image">¶</a></p>
+</div>
+<p>Para evaluar la consistencia del análisis se estima el Radio de Consistencia (CR) de la siguiente forma:
+<span class="math notranslate nohighlight">\(CR=\frac{CI}{ICA}\)</span></p>
+<p>Donde el CI es el indice de consistencia del análisis evaluado de la siguiente forma:
+<span class="math notranslate nohighlight">\(\frac{\lambda_{max}-n}{n-1}\)</span></p>
+<p>Donde <span class="math notranslate nohighlight">\(\lambda_{max}\)</span> es el valor propio máximo de la matriz, n es el orden de la matriz. y el ICA se refiere al indice de consistencia aleatorio que se obtiene de la siguiente tabla de acuerdo con el n:</p>
+<div class="figure align-default" id="ahp1">
+<a class="reference internal image-reference" href="https://www.researchgate.net/profile/Luciano-Franca/publication/342899316/figure/tbl1/AS:912867821891586&#64;1594656057440/RI-Random-Index-values-for-matrices-of-different-sizes-SAATY-2005-Tabela-2-Valores.png"><img alt="AHP1" src="https://www.researchgate.net/profile/Luciano-Franca/publication/342899316/figure/tbl1/AS:912867821891586&#64;1594656057440/RI-Random-Index-values-for-matrices-of-different-sizes-SAATY-2005-Tabela-2-Valores.png" style="width: 600px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 27 </span><span class="caption-text">Indice de consistencia aleatoria.</span><a class="headerlink" href="#ahp1" title="Permalink to this image">¶</a></p>
+</div>
+<p>El Radio de Consistencia debe ser &lt;0.1</p>
+<div class="figure align-default" id="ahp2">
+<a class="reference internal image-reference" href="https://i.pinimg.com/564x/c9/4d/dd/c94ddd0de53c695374c906b97b9f948c.jpg"><img alt="AHP2" src="https://i.pinimg.com/564x/c9/4d/dd/c94ddd0de53c695374c906b97b9f948c.jpg" style="width: 600px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 28 </span><span class="caption-text">Ejemplo de la aplicación del método de AHP para movimientos en masa tomado de <span id="id5">Ayalew and Yamagishi [<a class="reference internal" href="#id62">2004</a>]</span>.</span><a class="headerlink" href="#ahp2" title="Permalink to this image">¶</a></p>
 </div>
 </div>
 </div>
@@ -518,7 +532,7 @@ esto son los vectores propios normalizados [[ 0.40540007+0.j          0.53513271
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
-<span class="o">~</span>\<span class="n">AppData</span>\<span class="n">Local</span>\<span class="n">Temp</span><span class="o">/</span><span class="n">ipykernel_2128</span><span class="o">/</span><span class="mf">368748304.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="o">~</span>\<span class="n">AppData</span>\<span class="n">Local</span>\<span class="n">Temp</span><span class="o">/</span><span class="n">ipykernel_19068</span><span class="o">/</span><span class="mf">368748304.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="kn">import</span> <span class="nn">rasterio</span> <span class="k">as</span> <span class="nn">rio</span>
 <span class="ne">----&gt; </span><span class="mi">2</span> <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
 <span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="n">raster</span> <span class="o">=</span> <span class="n">rio</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;G:\My Drive\CATEDRA\MACHINE LEARNING\datos\raster/slope_rad&#39;</span><span class="p">)</span>
@@ -735,10 +749,13 @@ esto son los vectores propios normalizados [[ 0.40540007+0.j          0.53513271
 </div>
 </div>
 <p id="id6"><dl class="citation">
-<dt class="label" id="id20"><span class="brackets"><a class="fn-backref" href="#id2">1</a></span></dt>
+<dt class="label" id="id62"><span class="brackets"><a class="fn-backref" href="#id5">1</a></span></dt>
+<dd><p>Lulseged Ayalew and Hiromitsu Yamagishi. Slope failures in the blue nile basin, as seen from landscape evolution perspective. <em>Geomorphology</em>, 57:95–116, 2004. <a class="reference external" href="https://doi.org/10.1016/S0169-555X(03)00085-0">doi:10.1016/S0169-555X(03)00085-0</a>.</p>
+</dd>
+<dt class="label" id="id20"><span class="brackets"><a class="fn-backref" href="#id2">2</a></span></dt>
 <dd><p>A. Chica. Apuntes de geotecnia. <em>cursos de geotecnia y prácticas geotécnicas, Facultad Nacional de Minas</em>, :, 1989.</p>
 </dd>
-<dt class="label" id="id61"><span class="brackets">2</span><span class="fn-backref">(<a href="#id3">1</a>,<a href="#id4">2</a>)</span></dt>
+<dt class="label" id="id61"><span class="brackets">3</span><span class="fn-backref">(<a href="#id3">1</a>,<a href="#id4">2</a>)</span></dt>
 <dd><p><strong>missing journal in Aristizabal2011</strong></p>
 </dd>
 </dl>
