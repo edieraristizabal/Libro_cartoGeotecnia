@@ -502,7 +502,7 @@
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
-<span class="o">~</span>\<span class="n">AppData</span>\<span class="n">Local</span>\<span class="n">Temp</span><span class="o">/</span><span class="n">ipykernel_42024</span><span class="o">/</span><span class="mf">1877902076.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="o">~</span>\<span class="n">AppData</span>\<span class="n">Local</span>\<span class="n">Temp</span><span class="o">/</span><span class="n">ipykernel_28868</span><span class="o">/</span><span class="mf">1877902076.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="kn">import</span> <span class="nn">rasterio</span> <span class="k">as</span> <span class="nn">rio</span>
 <span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="ne">----&gt; </span><span class="mi">3</span> <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
@@ -588,49 +588,50 @@
 <img alt="_images/08_bivariado_10_0.png" src="_images/08_bivariado_10_0.png" />
 </div>
 </div>
-<p>Para implementar el método de <em>Frequency ratio</em> se deben conocer para cada clase de las variables, el número de celdas que pertenecen a dicha clase y el número de celdas con MenM.</p>
-<p>A continuación se presenta el procedimiento para el mapa de pendiente, el cual es una variable continua. Como se mencionó anteriormente en los metodos estadísticos bivariados se deben transformar las variables continuas a categóricas. En este caso el mapa de pendientes se convierte a 5 clases [0-10, 10-20, 20-30, 30-35, &gt;35]. Para realizar este procedimiento se utiliza el vector que se generó con el mapa de pendiente, y se convierte a una serie de Pandas, de tal forma que permita iterar.</p>
+<p>Para implementar todos lo métodos estadísticos bivariados se deben conocer para cada clase de las variables, el número de celdas que pertenecen a dicha clase y el número de celdas con MenM.</p>
+<p>A continuación se presenta el procedimiento para el mapa de pendiente, el cual es una variable continua. Como se mencionó anteriormente en los metodos estadísticos bivariados se deben transformar las variables continuas a categóricas. En este caso el mapa de pendientes se convierte a 5 clases [0-10, 10-20, 20-30, 30-35, &gt;35].</p>
+<p>Para realizar este procedimiento se utiliza el vector que se generó con el mapa de pendiente, y se convierte a una serie de Pandas, de tal forma que permita iterar.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pendiente_serie</span><span class="o">=</span><span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">pendiente_vector_MenM</span><span class="p">)</span>
-<span class="n">a</span><span class="o">=</span><span class="n">b</span><span class="o">=</span><span class="n">c</span><span class="o">=</span><span class="n">d</span><span class="o">=</span><span class="n">e</span><span class="o">=</span><span class="mi">0</span>
+<span class="n">ap</span><span class="o">=</span><span class="n">bp</span><span class="o">=</span><span class="n">cp</span><span class="o">=</span><span class="n">dp</span><span class="o">=</span><span class="n">ep</span><span class="o">=</span><span class="mi">0</span>
 <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">pendiente_serie</span><span class="p">:</span>
         <span class="k">if</span> <span class="p">(</span><span class="mi">0</span> <span class="o">&lt;=</span> <span class="n">row</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">row</span> <span class="o">&lt;</span> <span class="mi">10</span><span class="p">):</span>
-          <span class="n">a</span><span class="o">+=</span><span class="mi">1</span>
+          <span class="n">ap</span><span class="o">+=</span><span class="mi">1</span>
         <span class="k">elif</span> <span class="p">(</span><span class="mi">10</span> <span class="o">&lt;=</span> <span class="n">row</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">row</span> <span class="o">&lt;</span> <span class="mi">20</span><span class="p">):</span>
-          <span class="n">b</span><span class="o">+=</span><span class="mi">1</span>
+          <span class="n">bp</span><span class="o">+=</span><span class="mi">1</span>
         <span class="k">elif</span> <span class="p">(</span><span class="mi">20</span> <span class="o">&lt;=</span> <span class="n">row</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">row</span> <span class="o">&lt;</span> <span class="mi">30</span><span class="p">):</span>
-          <span class="n">c</span><span class="o">+=</span><span class="mi">1</span>
+          <span class="n">cp</span><span class="o">+=</span><span class="mi">1</span>
         <span class="k">elif</span> <span class="p">(</span><span class="mi">30</span> <span class="o">&lt;=</span> <span class="n">row</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">row</span> <span class="o">&lt;</span> <span class="mi">35</span><span class="p">):</span>
-          <span class="n">d</span><span class="o">+=</span><span class="mi">1</span>
+          <span class="n">dp</span><span class="o">+=</span><span class="mi">1</span>
         <span class="k">if</span> <span class="p">(</span><span class="n">row</span><span class="o">&gt;=</span><span class="mi">35</span><span class="p">):</span>
-          <span class="n">e</span><span class="o">+=</span><span class="mi">1</span>
+          <span class="n">ep</span><span class="o">+=</span><span class="mi">1</span>
 
-<span class="n">total</span><span class="o">=</span><span class="n">a</span><span class="o">+</span><span class="n">b</span><span class="o">+</span><span class="n">c</span><span class="o">+</span><span class="n">d</span><span class="o">+</span><span class="n">e</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;total:&quot;</span><span class="p">,</span> <span class="n">total</span><span class="p">,</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">,</span><span class="n">c</span><span class="p">,</span><span class="n">d</span><span class="p">,</span><span class="n">e</span><span class="p">)</span>
+<span class="n">totalp</span><span class="o">=</span><span class="n">ap</span><span class="o">+</span><span class="n">bp</span><span class="o">+</span><span class="n">cp</span><span class="o">+</span><span class="n">dp</span><span class="o">+</span><span class="n">ep</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;total:&quot;</span><span class="p">,</span> <span class="n">totalp</span><span class="p">,</span><span class="n">ap</span><span class="p">,</span><span class="n">bp</span><span class="p">,</span><span class="n">cp</span><span class="p">,</span><span class="n">dp</span><span class="p">,</span><span class="n">ep</span><span class="p">)</span>
 
 <span class="n">pendienteconMenM</span><span class="o">=</span><span class="n">pendiente_vector_MenM</span><span class="o">*</span><span class="n">inventario_vector_MenM</span>
-<span class="n">a1</span><span class="o">=</span><span class="n">b1</span><span class="o">=</span><span class="n">c1</span><span class="o">=</span><span class="n">d1</span><span class="o">=</span><span class="n">e1</span><span class="o">=</span><span class="mi">0</span>
+<span class="n">ap1</span><span class="o">=</span><span class="n">bp1</span><span class="o">=</span><span class="n">cp1</span><span class="o">=</span><span class="n">dp1</span><span class="o">=</span><span class="n">ep1</span><span class="o">=</span><span class="mi">0</span>
 <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">pendienteconMenM</span><span class="p">:</span>
         <span class="k">if</span> <span class="p">(</span><span class="mi">0</span> <span class="o">&lt;</span> <span class="n">row</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">row</span> <span class="o">&lt;</span> <span class="mi">10</span><span class="p">):</span>
-          <span class="n">a1</span><span class="o">+=</span><span class="mi">1</span>
+          <span class="n">ap1</span><span class="o">+=</span><span class="mi">1</span>
         <span class="k">elif</span> <span class="p">(</span><span class="mi">10</span> <span class="o">&lt;=</span> <span class="n">row</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">row</span> <span class="o">&lt;</span> <span class="mi">20</span><span class="p">):</span>
-          <span class="n">b1</span><span class="o">+=</span><span class="mi">1</span>
+          <span class="n">bp1</span><span class="o">+=</span><span class="mi">1</span>
         <span class="k">elif</span> <span class="p">(</span><span class="mi">20</span> <span class="o">&lt;=</span> <span class="n">row</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">row</span> <span class="o">&lt;</span> <span class="mi">30</span><span class="p">):</span>
-          <span class="n">c1</span><span class="o">+=</span><span class="mi">1</span>
+          <span class="n">cp1</span><span class="o">+=</span><span class="mi">1</span>
         <span class="k">elif</span> <span class="p">(</span><span class="mi">30</span> <span class="o">&lt;=</span> <span class="n">row</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">row</span> <span class="o">&lt;</span> <span class="mi">35</span><span class="p">):</span>
-          <span class="n">d1</span><span class="o">+=</span><span class="mi">1</span>
+          <span class="n">dp1</span><span class="o">+=</span><span class="mi">1</span>
         <span class="k">if</span> <span class="p">(</span><span class="n">row</span><span class="o">&gt;=</span><span class="mi">35</span><span class="p">):</span>
-          <span class="n">e1</span><span class="o">+=</span><span class="mi">1</span>
+          <span class="n">ep1</span><span class="o">+=</span><span class="mi">1</span>
 
-<span class="n">total1</span><span class="o">=</span><span class="n">a1</span><span class="o">+</span><span class="n">b1</span><span class="o">+</span><span class="n">c1</span><span class="o">+</span><span class="n">d1</span><span class="o">+</span><span class="n">e1</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;total1:&quot;</span><span class="p">,</span> <span class="n">total1</span><span class="p">,</span><span class="n">a1</span><span class="p">,</span><span class="n">b1</span><span class="p">,</span><span class="n">c1</span><span class="p">,</span><span class="n">d1</span><span class="p">,</span><span class="n">e1</span><span class="p">)</span>
+<span class="n">total1p</span><span class="o">=</span><span class="n">ap1</span><span class="o">+</span><span class="n">bp1</span><span class="o">+</span><span class="n">cp1</span><span class="o">+</span><span class="n">dp1</span><span class="o">+</span><span class="n">ep1</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;total1:&quot;</span><span class="p">,</span> <span class="n">total1p</span><span class="p">,</span><span class="n">ap1</span><span class="p">,</span><span class="n">bp1</span><span class="p">,</span><span class="n">cp1</span><span class="p">,</span><span class="n">dp1</span><span class="p">,</span><span class="n">ep1</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>total 910801 53805 138684 279488 158011 280813
-total1 1620 13 108 411 301 787
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>total: 910801 53805 138684 279488 158011 280813
+total1: 1620 13 108 411 301 787
 </pre></div>
 </div>
 </div>
@@ -638,11 +639,11 @@ total1 1620 13 108 411 301 787
 <p>Ahora se calcula el <em>Frequency ratio</em> para cada clase a partir de los valores estimados previamente:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">w_a</span><span class="o">=</span><span class="p">(</span><span class="n">a1</span><span class="o">/</span><span class="n">total1</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="n">a</span><span class="o">/</span><span class="n">total</span><span class="p">)</span>
-<span class="n">w_b</span><span class="o">=</span><span class="p">(</span><span class="n">b1</span><span class="o">/</span><span class="n">total1</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="n">b</span><span class="o">/</span><span class="n">total</span><span class="p">)</span>
-<span class="n">w_c</span><span class="o">=</span><span class="p">(</span><span class="n">c1</span><span class="o">/</span><span class="n">total1</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="n">c</span><span class="o">/</span><span class="n">total</span><span class="p">)</span>
-<span class="n">w_d</span><span class="o">=</span><span class="p">(</span><span class="n">d1</span><span class="o">/</span><span class="n">total1</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="n">d</span><span class="o">/</span><span class="n">total</span><span class="p">)</span>
-<span class="n">w_e</span><span class="o">=</span><span class="p">(</span><span class="n">e1</span><span class="o">/</span><span class="n">total1</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="n">e</span><span class="o">/</span><span class="n">total</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">w_a</span><span class="o">=</span><span class="p">(</span><span class="n">ap1</span><span class="o">/</span><span class="n">total1</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="n">ap</span><span class="o">/</span><span class="n">total</span><span class="p">)</span>
+<span class="n">w_b</span><span class="o">=</span><span class="p">(</span><span class="n">bp1</span><span class="o">/</span><span class="n">total1</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="n">bp</span><span class="o">/</span><span class="n">total</span><span class="p">)</span>
+<span class="n">w_c</span><span class="o">=</span><span class="p">(</span><span class="n">cp1</span><span class="o">/</span><span class="n">total1</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="n">cp</span><span class="o">/</span><span class="n">total</span><span class="p">)</span>
+<span class="n">w_d</span><span class="o">=</span><span class="p">(</span><span class="n">dp1</span><span class="o">/</span><span class="n">total1</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="n">dp</span><span class="o">/</span><span class="n">total</span><span class="p">)</span>
+<span class="n">w_e</span><span class="o">=</span><span class="p">(</span><span class="n">ep1</span><span class="o">/</span><span class="n">total1</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="n">ep</span><span class="o">/</span><span class="n">total</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">w_a</span><span class="p">,</span><span class="n">w_b</span><span class="p">,</span><span class="n">w_c</span><span class="p">,</span><span class="n">w_d</span><span class="p">,</span><span class="n">w_e</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -679,39 +680,39 @@ total1 1620 13 108 411 301 787
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">aspecto_serie</span><span class="o">=</span><span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">aspecto_vector_MenM</span><span class="p">)</span>
-<span class="n">a</span><span class="o">=</span><span class="n">b</span><span class="o">=</span><span class="n">c</span><span class="o">=</span><span class="n">d</span><span class="o">=</span><span class="mi">0</span>
+<span class="n">aa</span><span class="o">=</span><span class="n">ba</span><span class="o">=</span><span class="n">ca</span><span class="o">=</span><span class="n">da</span><span class="o">=</span><span class="mi">0</span>
 <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">aspecto_serie</span><span class="p">:</span>
         <span class="k">if</span> <span class="p">(</span><span class="mi">0</span> <span class="o">&lt;=</span> <span class="n">row</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">row</span> <span class="o">&lt;</span> <span class="mi">90</span><span class="p">):</span>
-          <span class="n">a</span><span class="o">+=</span><span class="mi">1</span>
+          <span class="n">aa</span><span class="o">+=</span><span class="mi">1</span>
         <span class="k">elif</span> <span class="p">(</span><span class="mi">90</span> <span class="o">&lt;=</span> <span class="n">row</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">row</span> <span class="o">&lt;</span> <span class="mi">180</span><span class="p">):</span>
-          <span class="n">b</span><span class="o">+=</span><span class="mi">1</span>
+          <span class="n">ba</span><span class="o">+=</span><span class="mi">1</span>
         <span class="k">elif</span> <span class="p">(</span><span class="mi">180</span> <span class="o">&lt;=</span> <span class="n">row</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">row</span> <span class="o">&lt;</span> <span class="mi">270</span><span class="p">):</span>
-          <span class="n">c</span><span class="o">+=</span><span class="mi">1</span>
+          <span class="n">ca</span><span class="o">+=</span><span class="mi">1</span>
         <span class="k">if</span> <span class="p">(</span><span class="n">row</span><span class="o">&gt;=</span><span class="mi">270</span><span class="p">):</span>
-          <span class="n">d</span><span class="o">+=</span><span class="mi">1</span>
+          <span class="n">da</span><span class="o">+=</span><span class="mi">1</span>
 
-<span class="n">total</span><span class="o">=</span><span class="n">a</span><span class="o">+</span><span class="n">b</span><span class="o">+</span><span class="n">c</span><span class="o">+</span><span class="n">d</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;total:&quot;</span><span class="p">,</span> <span class="n">total</span><span class="p">,</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">,</span><span class="n">c</span><span class="p">,</span><span class="n">d</span><span class="p">)</span>
+<span class="n">totala</span><span class="o">=</span><span class="n">aa</span><span class="o">+</span><span class="n">ba</span><span class="o">+</span><span class="n">ca</span><span class="o">+</span><span class="n">da</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;total:&quot;</span><span class="p">,</span> <span class="n">totala</span><span class="p">,</span><span class="n">aa</span><span class="p">,</span><span class="n">ba</span><span class="p">,</span><span class="n">ca</span><span class="p">,</span><span class="n">da</span><span class="p">)</span>
 
 <span class="n">aspectoconMenM</span><span class="o">=</span><span class="n">aspecto_vector_MenM</span><span class="o">*</span><span class="n">inventario_vector_MenM</span>
-<span class="n">a1</span><span class="o">=</span><span class="n">b1</span><span class="o">=</span><span class="n">c1</span><span class="o">=</span><span class="n">d1</span><span class="o">=</span><span class="mi">0</span>
+<span class="n">aa1</span><span class="o">=</span><span class="n">ba1</span><span class="o">=</span><span class="n">ca1</span><span class="o">=</span><span class="n">da1</span><span class="o">=</span><span class="mi">0</span>
 <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">aspectoconMenM</span><span class="p">:</span>
         <span class="k">if</span> <span class="p">(</span><span class="mi">0</span> <span class="o">&lt;</span> <span class="n">row</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">row</span> <span class="o">&lt;</span> <span class="mi">90</span><span class="p">):</span>
-          <span class="n">a1</span><span class="o">+=</span><span class="mi">1</span>
+          <span class="n">aa1</span><span class="o">+=</span><span class="mi">1</span>
         <span class="k">elif</span> <span class="p">(</span><span class="mi">90</span> <span class="o">&lt;=</span> <span class="n">row</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">row</span> <span class="o">&lt;</span> <span class="mi">180</span><span class="p">):</span>
-          <span class="n">b1</span><span class="o">+=</span><span class="mi">1</span>
+          <span class="n">ba1</span><span class="o">+=</span><span class="mi">1</span>
         <span class="k">elif</span> <span class="p">(</span><span class="mi">180</span> <span class="o">&lt;=</span> <span class="n">row</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">row</span> <span class="o">&lt;</span> <span class="mi">270</span><span class="p">):</span>
-          <span class="n">c1</span><span class="o">+=</span><span class="mi">1</span>
+          <span class="n">ca1</span><span class="o">+=</span><span class="mi">1</span>
         <span class="k">if</span> <span class="p">(</span><span class="n">row</span><span class="o">&gt;=</span><span class="mi">270</span><span class="p">):</span>
-          <span class="n">d1</span><span class="o">+=</span><span class="mi">1</span>
+          <span class="n">da1</span><span class="o">+=</span><span class="mi">1</span>
 
-<span class="n">total1</span><span class="o">=</span><span class="n">a1</span><span class="o">+</span><span class="n">b1</span><span class="o">+</span><span class="n">c1</span><span class="o">+</span><span class="n">d1</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;total1:&quot;</span><span class="p">,</span> <span class="n">total1</span><span class="p">,</span><span class="n">a1</span><span class="p">,</span><span class="n">b1</span><span class="p">,</span><span class="n">c1</span><span class="p">,</span><span class="n">d1</span><span class="p">)</span>
+<span class="n">total1a</span><span class="o">=</span><span class="n">aa1</span><span class="o">+</span><span class="n">ba1</span><span class="o">+</span><span class="n">ca1</span><span class="o">+</span><span class="n">da1</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;total1:&quot;</span><span class="p">,</span> <span class="n">total1a</span><span class="p">,</span><span class="n">aa1</span><span class="p">,</span><span class="n">ba1</span><span class="p">,</span><span class="n">ca1</span><span class="p">,</span><span class="n">da1</span><span class="p">)</span>
 
-<span class="n">w_a</span><span class="o">=</span><span class="p">(</span><span class="n">a1</span><span class="o">/</span><span class="n">total1</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="n">a</span><span class="o">/</span><span class="n">total</span><span class="p">)</span>
-<span class="n">w_b</span><span class="o">=</span><span class="p">(</span><span class="n">b1</span><span class="o">/</span><span class="n">total1</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="n">b</span><span class="o">/</span><span class="n">total</span><span class="p">)</span>
-<span class="n">w_c</span><span class="o">=</span><span class="p">(</span><span class="n">c1</span><span class="o">/</span><span class="n">total1</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="n">c</span><span class="o">/</span><span class="n">total</span><span class="p">)</span>
-<span class="n">w_d</span><span class="o">=</span><span class="p">(</span><span class="n">d1</span><span class="o">/</span><span class="n">total1</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="n">d</span><span class="o">/</span><span class="n">total</span><span class="p">)</span>
+<span class="n">w_a</span><span class="o">=</span><span class="p">(</span><span class="n">aa1</span><span class="o">/</span><span class="n">total1</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="n">aa</span><span class="o">/</span><span class="n">total</span><span class="p">)</span>
+<span class="n">w_b</span><span class="o">=</span><span class="p">(</span><span class="n">ba1</span><span class="o">/</span><span class="n">total1</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="n">ba</span><span class="o">/</span><span class="n">total</span><span class="p">)</span>
+<span class="n">w_c</span><span class="o">=</span><span class="p">(</span><span class="n">ca1</span><span class="o">/</span><span class="n">total1</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="n">ca</span><span class="o">/</span><span class="n">total</span><span class="p">)</span>
+<span class="n">w_d</span><span class="o">=</span><span class="p">(</span><span class="n">da1</span><span class="o">/</span><span class="n">total1</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="n">da</span><span class="o">/</span><span class="n">total</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;w:&quot;</span><span class="p">,</span> <span class="n">w_a</span><span class="p">,</span><span class="n">w_b</span><span class="p">,</span><span class="n">w_c</span><span class="p">,</span><span class="n">w_d</span><span class="p">)</span>
 
 <span class="n">aspecto_c</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">where</span> <span class="p">(</span> <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">logical_and</span> <span class="p">(</span><span class="n">aspecto</span><span class="o">&gt;=</span><span class="mi">0</span><span class="p">,</span> <span class="n">aspecto</span><span class="o">&lt;</span><span class="mi">90</span> <span class="p">)),</span><span class="n">w_a</span><span class="p">,</span><span class="n">aspecto</span> <span class="p">)</span>
@@ -738,45 +739,45 @@ w: 1.0069572774636415 1.7527700266488904 0.8590431563124444 0.8314017909437948
 <p>Y el mismo procedimiento para la variable <em>geologia</em>, la cual es categórica por lo cual ligeramente varía el procedimiento.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span><span class="o">=</span><span class="p">(</span><span class="n">geologia</span> <span class="o">==</span> <span class="mi">2</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
-<span class="n">b</span><span class="o">=</span><span class="p">(</span><span class="n">geologia</span> <span class="o">==</span> <span class="mi">4</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
-<span class="n">c</span><span class="o">=</span><span class="p">(</span><span class="n">geologia</span> <span class="o">==</span> <span class="mi">6</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
-<span class="n">d</span><span class="o">=</span><span class="p">(</span><span class="n">geologia</span> <span class="o">==</span> <span class="mi">8</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
-<span class="n">e</span><span class="o">=</span><span class="p">(</span><span class="n">geologia</span> <span class="o">==</span> <span class="mi">9</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
-<span class="n">f</span><span class="o">=</span><span class="p">(</span><span class="n">geologia</span> <span class="o">==</span> <span class="mi">10</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
-<span class="n">g</span><span class="o">=</span><span class="p">(</span><span class="n">geologia</span> <span class="o">==</span> <span class="mi">11</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
-<span class="n">h</span><span class="o">=</span><span class="p">(</span><span class="n">geologia</span> <span class="o">==</span> <span class="mi">14</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
-<span class="n">i</span><span class="o">=</span><span class="p">(</span><span class="n">geologia</span> <span class="o">==</span> <span class="mi">15</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
-<span class="n">j</span><span class="o">=</span><span class="p">(</span><span class="n">geologia</span> <span class="o">==</span> <span class="mi">16</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ag</span><span class="o">=</span><span class="p">(</span><span class="n">geologia</span> <span class="o">==</span> <span class="mi">2</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+<span class="n">bg</span><span class="o">=</span><span class="p">(</span><span class="n">geologia</span> <span class="o">==</span> <span class="mi">4</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+<span class="n">cg</span><span class="o">=</span><span class="p">(</span><span class="n">geologia</span> <span class="o">==</span> <span class="mi">6</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+<span class="n">dg</span><span class="o">=</span><span class="p">(</span><span class="n">geologia</span> <span class="o">==</span> <span class="mi">8</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+<span class="n">eg</span><span class="o">=</span><span class="p">(</span><span class="n">geologia</span> <span class="o">==</span> <span class="mi">9</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+<span class="n">fg</span><span class="o">=</span><span class="p">(</span><span class="n">geologia</span> <span class="o">==</span> <span class="mi">10</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+<span class="n">gg</span><span class="o">=</span><span class="p">(</span><span class="n">geologia</span> <span class="o">==</span> <span class="mi">11</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+<span class="n">hg</span><span class="o">=</span><span class="p">(</span><span class="n">geologia</span> <span class="o">==</span> <span class="mi">14</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+<span class="n">ig</span><span class="o">=</span><span class="p">(</span><span class="n">geologia</span> <span class="o">==</span> <span class="mi">15</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+<span class="n">jg</span><span class="o">=</span><span class="p">(</span><span class="n">geologia</span> <span class="o">==</span> <span class="mi">16</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
 
-<span class="n">total</span><span class="o">=</span><span class="n">a</span><span class="o">+</span><span class="n">b</span><span class="o">+</span><span class="n">c</span><span class="o">+</span><span class="n">d</span><span class="o">+</span><span class="n">e</span><span class="o">+</span><span class="n">f</span><span class="o">+</span><span class="n">g</span><span class="o">+</span><span class="n">h</span><span class="o">+</span><span class="n">i</span><span class="o">+</span><span class="n">j</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;total&quot;</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">,</span><span class="n">c</span><span class="p">,</span><span class="n">d</span><span class="p">,</span><span class="n">e</span><span class="p">,</span><span class="n">f</span><span class="p">,</span><span class="n">g</span><span class="p">,</span><span class="n">h</span><span class="p">,</span><span class="n">i</span><span class="p">,</span><span class="n">j</span><span class="p">)</span>
+<span class="n">totalg</span><span class="o">=</span><span class="n">ag</span><span class="o">+</span><span class="n">bg</span><span class="o">+</span><span class="n">cg</span><span class="o">+</span><span class="n">dg</span><span class="o">+</span><span class="n">eg</span><span class="o">+</span><span class="n">fg</span><span class="o">+</span><span class="n">gg</span><span class="o">+</span><span class="n">hg</span><span class="o">+</span><span class="n">ig</span><span class="o">+</span><span class="n">jg</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;total&quot;</span><span class="p">,</span> <span class="n">totalg</span><span class="p">,</span><span class="n">ag</span><span class="p">,</span><span class="n">bg</span><span class="p">,</span><span class="n">cg</span><span class="p">,</span><span class="n">dg</span><span class="p">,</span><span class="n">eg</span><span class="p">,</span><span class="n">fg</span><span class="p">,</span><span class="n">gg</span><span class="p">,</span><span class="n">hg</span><span class="p">,</span><span class="n">ig</span><span class="p">,</span><span class="n">jg</span><span class="p">)</span>
 
 <span class="n">geologiaconMenM</span><span class="o">=</span><span class="n">geologia</span><span class="o">*</span><span class="n">inventario</span>
-<span class="n">a1</span><span class="o">=</span><span class="p">(</span><span class="n">geologiaconMenM</span> <span class="o">==</span> <span class="mi">2</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
-<span class="n">b1</span><span class="o">=</span><span class="p">(</span><span class="n">geologiaconMenM</span> <span class="o">==</span> <span class="mi">4</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
-<span class="n">c1</span><span class="o">=</span><span class="p">(</span><span class="n">geologiaconMenM</span> <span class="o">==</span> <span class="mi">6</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
-<span class="n">d1</span><span class="o">=</span><span class="p">(</span><span class="n">geologiaconMenM</span> <span class="o">==</span> <span class="mi">8</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
-<span class="n">e1</span><span class="o">=</span><span class="p">(</span><span class="n">geologiaconMenM</span> <span class="o">==</span> <span class="mi">9</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
-<span class="n">f1</span><span class="o">=</span><span class="p">(</span><span class="n">geologiaconMenM</span> <span class="o">==</span> <span class="mi">10</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
-<span class="n">g1</span><span class="o">=</span><span class="p">(</span><span class="n">geologiaconMenM</span> <span class="o">==</span> <span class="mi">11</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
-<span class="n">h1</span><span class="o">=</span><span class="p">(</span><span class="n">geologiaconMenM</span> <span class="o">==</span> <span class="mi">14</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
-<span class="n">i1</span><span class="o">=</span><span class="p">(</span><span class="n">geologiaconMenM</span> <span class="o">==</span> <span class="mi">15</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
-<span class="n">j1</span><span class="o">=</span><span class="p">(</span><span class="n">geologiaconMenM</span> <span class="o">==</span> <span class="mi">16</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+<span class="n">ag1</span><span class="o">=</span><span class="p">(</span><span class="n">geologiaconMenM</span> <span class="o">==</span> <span class="mi">2</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+<span class="n">bg1</span><span class="o">=</span><span class="p">(</span><span class="n">geologiaconMenM</span> <span class="o">==</span> <span class="mi">4</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+<span class="n">cg1</span><span class="o">=</span><span class="p">(</span><span class="n">geologiaconMenM</span> <span class="o">==</span> <span class="mi">6</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+<span class="n">dg1</span><span class="o">=</span><span class="p">(</span><span class="n">geologiaconMenM</span> <span class="o">==</span> <span class="mi">8</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+<span class="n">eg1</span><span class="o">=</span><span class="p">(</span><span class="n">geologiaconMenM</span> <span class="o">==</span> <span class="mi">9</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+<span class="n">fg1</span><span class="o">=</span><span class="p">(</span><span class="n">geologiaconMenM</span> <span class="o">==</span> <span class="mi">10</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+<span class="n">gg1</span><span class="o">=</span><span class="p">(</span><span class="n">geologiaconMenM</span> <span class="o">==</span> <span class="mi">11</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+<span class="n">hg1</span><span class="o">=</span><span class="p">(</span><span class="n">geologiaconMenM</span> <span class="o">==</span> <span class="mi">14</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+<span class="n">ig1</span><span class="o">=</span><span class="p">(</span><span class="n">geologiaconMenM</span> <span class="o">==</span> <span class="mi">15</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+<span class="n">jg1</span><span class="o">=</span><span class="p">(</span><span class="n">geologiaconMenM</span> <span class="o">==</span> <span class="mi">16</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
 
-<span class="n">total1</span><span class="o">=</span><span class="n">a1</span><span class="o">+</span><span class="n">b1</span><span class="o">+</span><span class="n">c1</span><span class="o">+</span><span class="n">d1</span><span class="o">+</span><span class="n">e1</span><span class="o">+</span><span class="n">f1</span><span class="o">+</span><span class="n">g1</span><span class="o">+</span><span class="n">h1</span><span class="o">+</span><span class="n">i1</span><span class="o">+</span><span class="n">j1</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;total1&quot;</span><span class="p">,</span> <span class="n">a1</span><span class="p">,</span><span class="n">b1</span><span class="p">,</span><span class="n">c1</span><span class="p">,</span><span class="n">d1</span><span class="p">,</span><span class="n">e1</span><span class="p">,</span><span class="n">f1</span><span class="p">,</span><span class="n">g1</span><span class="p">,</span><span class="n">h1</span><span class="p">,</span><span class="n">i1</span><span class="p">,</span><span class="n">j1</span><span class="p">)</span>
+<span class="n">totalg1</span><span class="o">=</span><span class="n">ag1</span><span class="o">+</span><span class="n">bg1</span><span class="o">+</span><span class="n">cg1</span><span class="o">+</span><span class="n">dg1</span><span class="o">+</span><span class="n">eg1</span><span class="o">+</span><span class="n">fg1</span><span class="o">+</span><span class="n">gg1</span><span class="o">+</span><span class="n">hg1</span><span class="o">+</span><span class="n">ig1</span><span class="o">+</span><span class="n">jg1</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;total1&quot;</span><span class="p">,</span> <span class="n">totalg1</span><span class="p">,</span><span class="n">ag1</span><span class="p">,</span><span class="n">bg1</span><span class="p">,</span><span class="n">cg1</span><span class="p">,</span><span class="n">dg1</span><span class="p">,</span><span class="n">eg1</span><span class="p">,</span><span class="n">fg1</span><span class="p">,</span><span class="n">gg1</span><span class="p">,</span><span class="n">hg1</span><span class="p">,</span><span class="n">ig1</span><span class="p">,</span><span class="n">jg1</span><span class="p">)</span>
 
-<span class="n">w_a</span><span class="o">=</span><span class="p">(</span><span class="n">a1</span><span class="o">/</span><span class="n">total1</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="n">a</span><span class="o">/</span><span class="n">total</span><span class="p">)</span>
-<span class="n">w_b</span><span class="o">=</span><span class="p">(</span><span class="n">b1</span><span class="o">/</span><span class="n">total1</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="n">b</span><span class="o">/</span><span class="n">total</span><span class="p">)</span>
-<span class="n">w_c</span><span class="o">=</span><span class="p">(</span><span class="n">c1</span><span class="o">/</span><span class="n">total1</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="n">c</span><span class="o">/</span><span class="n">total</span><span class="p">)</span>
-<span class="n">w_d</span><span class="o">=</span><span class="p">(</span><span class="n">d1</span><span class="o">/</span><span class="n">total1</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="n">d</span><span class="o">/</span><span class="n">total</span><span class="p">)</span>
-<span class="n">w_e</span><span class="o">=</span><span class="p">(</span><span class="n">e1</span><span class="o">/</span><span class="n">total1</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="n">e</span><span class="o">/</span><span class="n">total</span><span class="p">)</span>
-<span class="n">w_f</span><span class="o">=</span><span class="p">(</span><span class="n">f1</span><span class="o">/</span><span class="n">total1</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="n">f</span><span class="o">/</span><span class="n">total</span><span class="p">)</span>
-<span class="n">w_g</span><span class="o">=</span><span class="p">(</span><span class="n">g1</span><span class="o">/</span><span class="n">total1</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="n">g</span><span class="o">/</span><span class="n">total</span><span class="p">)</span>
-<span class="n">w_h</span><span class="o">=</span><span class="p">(</span><span class="n">h1</span><span class="o">/</span><span class="n">total1</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="n">h</span><span class="o">/</span><span class="n">total</span><span class="p">)</span>
-<span class="n">w_i</span><span class="o">=</span><span class="p">(</span><span class="n">i1</span><span class="o">/</span><span class="n">total1</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="n">i</span><span class="o">/</span><span class="n">total</span><span class="p">)</span>
-<span class="n">w_j</span><span class="o">=</span><span class="p">(</span><span class="n">j1</span><span class="o">/</span><span class="n">total1</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="n">j</span><span class="o">/</span><span class="n">total</span><span class="p">)</span>
+<span class="n">w_a</span><span class="o">=</span><span class="p">(</span><span class="n">ag1</span><span class="o">/</span><span class="n">total1</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="n">ag</span><span class="o">/</span><span class="n">total</span><span class="p">)</span>
+<span class="n">w_b</span><span class="o">=</span><span class="p">(</span><span class="n">bg1</span><span class="o">/</span><span class="n">total1</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="n">bg</span><span class="o">/</span><span class="n">total</span><span class="p">)</span>
+<span class="n">w_c</span><span class="o">=</span><span class="p">(</span><span class="n">cg1</span><span class="o">/</span><span class="n">total1</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="n">cg</span><span class="o">/</span><span class="n">total</span><span class="p">)</span>
+<span class="n">w_d</span><span class="o">=</span><span class="p">(</span><span class="n">dg1</span><span class="o">/</span><span class="n">total1</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="n">dg</span><span class="o">/</span><span class="n">total</span><span class="p">)</span>
+<span class="n">w_e</span><span class="o">=</span><span class="p">(</span><span class="n">eg1</span><span class="o">/</span><span class="n">total1</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="n">eg</span><span class="o">/</span><span class="n">total</span><span class="p">)</span>
+<span class="n">w_f</span><span class="o">=</span><span class="p">(</span><span class="n">fg1</span><span class="o">/</span><span class="n">total1</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="n">fg</span><span class="o">/</span><span class="n">total</span><span class="p">)</span>
+<span class="n">w_g</span><span class="o">=</span><span class="p">(</span><span class="n">gg1</span><span class="o">/</span><span class="n">total1</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="n">gg</span><span class="o">/</span><span class="n">total</span><span class="p">)</span>
+<span class="n">w_h</span><span class="o">=</span><span class="p">(</span><span class="n">hg1</span><span class="o">/</span><span class="n">total1</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="n">hg</span><span class="o">/</span><span class="n">total</span><span class="p">)</span>
+<span class="n">w_i</span><span class="o">=</span><span class="p">(</span><span class="n">ig1</span><span class="o">/</span><span class="n">total1</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="n">ig</span><span class="o">/</span><span class="n">total</span><span class="p">)</span>
+<span class="n">w_j</span><span class="o">=</span><span class="p">(</span><span class="n">jg1</span><span class="o">/</span><span class="n">total1</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="n">jg</span><span class="o">/</span><span class="n">total</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;w:&quot;</span><span class="p">,</span> <span class="n">w_a</span><span class="p">,</span><span class="n">w_b</span><span class="p">,</span><span class="n">w_c</span><span class="p">,</span><span class="n">w_d</span><span class="p">,</span><span class="n">w_e</span><span class="p">,</span><span class="n">w_f</span><span class="p">,</span><span class="n">w_g</span><span class="p">,</span><span class="n">w_h</span><span class="p">,</span><span class="n">w_i</span><span class="p">,</span><span class="n">w_j</span><span class="p">)</span>
 
 <span class="n">geologia_c</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">where</span> <span class="p">(</span> <span class="n">geologia</span><span class="o">==</span><span class="mi">2</span><span class="p">,</span><span class="n">w_a</span><span class="p">,</span><span class="n">geologia</span> <span class="p">)</span>
@@ -797,11 +798,11 @@ w: 1.0069572774636415 1.7527700266488904 0.8590431563124444 0.8314017909437948
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>total 237383 169 3060 32352 37658 22405 41720 515621 1850 18583
-total1 612 0 0 98 0 43 118 736 13 0
-w: 1.4494735418196658 0.0 0.0 1.703073635991745 0.0 1.0790262039172254 1.5901796515275262 0.8025196993073269 3.9507550884217553 0.0
-[0.         0.8025197  1.0790262  1.44947354 1.59017965 1.70307364
- 3.95075509        nan]
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>total 910801 237383 169 3060 32352 37658 22405 41720 515621 1850 18583
+total1 1620 612 0 0 98 0 43 118 736 13 0
+w: 1.447560646250527 0.0 0.0 1.7008260599455374 0.0 1.077602194175132 1.5880810636459406 0.8014606000325486 3.945541207874541 0.0
+[0.         0.8014606  1.07760219 1.44756065 1.58808106 1.70082606
+ 3.94554121        nan]
 </pre></div>
 </div>
 <img alt="_images/08_bivariado_20_1.png" src="_images/08_bivariado_20_1.png" />
@@ -831,7 +832,145 @@ w: 1.4494735418196658 0.0 0.0 1.703073635991745 0.0 1.0790262039172254 1.5901796
 <p><span class="math notranslate nohighlight">\(S^n = \sum w = w_{pendiente} + w_{geologia} + w_{coberturas} + ...w_{n} \)</span></p>
 <div class="section" id="id1">
 <h4>Python<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h4>
-<p>En el presente ejemplo, y solo con propósitos pedagógicos, se utilizarán solo tres variables (pendiente, geologia, aspecto) pero el procedimiento señalado se debera utilizar para todas las variables incorporadas en el modelo de susceptibilidad.</p>
+<p>Para el método de <em>Statistical index</em> se debe calcular la densidad de movimientos en masa, tanto para las clases de cada variable, como para el área total.</p>
+<p>La densidad total es igual a:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dt</span><span class="o">=</span><span class="n">total1</span><span class="o">/</span><span class="n">total</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">dt</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.0017810045965309987
+</pre></div>
+</div>
+</div>
+</div>
+<p>La densidad para las 5 clases de pendiente se estiman de la siguiente manera:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">w_a</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">((</span><span class="n">ap1</span><span class="o">/</span><span class="n">ap</span><span class="p">)</span><span class="o">/</span><span class="n">dt</span><span class="p">)</span>
+<span class="n">w_b</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">((</span><span class="n">bp1</span><span class="o">/</span><span class="n">bp</span><span class="p">)</span><span class="o">/</span><span class="n">dt</span><span class="p">)</span>
+<span class="n">w_c</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">((</span><span class="n">cp1</span><span class="o">/</span><span class="n">cp</span><span class="p">)</span><span class="o">/</span><span class="n">dt</span><span class="p">)</span>
+<span class="n">w_d</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">((</span><span class="n">dp1</span><span class="o">/</span><span class="n">dp</span><span class="p">)</span><span class="o">/</span><span class="n">dt</span><span class="p">)</span>
+<span class="n">w_e</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">((</span><span class="n">ep1</span><span class="o">/</span><span class="n">ep</span><span class="p">)</span><span class="o">/</span><span class="n">dt</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">w_a</span><span class="p">,</span><span class="n">w_b</span><span class="p">,</span><span class="n">w_c</span><span class="p">,</span><span class="n">w_d</span><span class="p">,</span><span class="n">w_e</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>-1.9975946273658713 -0.8272443218321374 -0.19154372854191365 0.0672680287170693 0.4533616958660388
+</pre></div>
+</div>
+</div>
+</div>
+<p>Con estos valores del <em>statistical index</em> se reclasifica el mapa de pendientes:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pendiente_c</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">where</span> <span class="p">(</span> <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">logical_and</span> <span class="p">(</span><span class="n">pendiente</span><span class="o">&gt;=</span><span class="mi">0</span><span class="p">,</span> <span class="n">pendiente</span><span class="o">&lt;</span><span class="mi">10</span> <span class="p">)),</span><span class="n">w_a</span><span class="p">,</span><span class="n">pendiente</span> <span class="p">)</span>
+<span class="n">pendiente_c</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">where</span> <span class="p">(</span> <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">logical_and</span> <span class="p">(</span><span class="n">pendiente_c</span><span class="o">&gt;=</span><span class="mi">10</span><span class="p">,</span> <span class="n">pendiente_c</span><span class="o">&lt;</span><span class="mi">20</span> <span class="p">)),</span><span class="n">w_b</span><span class="p">,</span><span class="n">pendiente_c</span> <span class="p">)</span>
+<span class="n">pendiente_c</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">where</span> <span class="p">(</span> <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">logical_and</span> <span class="p">(</span><span class="n">pendiente_c</span><span class="o">&gt;=</span><span class="mi">20</span><span class="p">,</span> <span class="n">pendiente_c</span><span class="o">&lt;</span><span class="mi">30</span> <span class="p">)),</span><span class="n">w_c</span><span class="p">,</span><span class="n">pendiente_c</span> <span class="p">)</span>
+<span class="n">pendiente_c</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">where</span> <span class="p">(</span> <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">logical_and</span> <span class="p">(</span><span class="n">pendiente_c</span><span class="o">&gt;=</span><span class="mi">30</span><span class="p">,</span> <span class="n">pendiente_c</span><span class="o">&lt;</span><span class="mi">35</span> <span class="p">)),</span><span class="n">w_d</span><span class="p">,</span><span class="n">pendiente_c</span> <span class="p">)</span>
+<span class="n">pendiente_c</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">where</span> <span class="p">(</span> <span class="n">pendiente_c</span><span class="o">&gt;=</span><span class="mi">35</span><span class="p">,</span><span class="n">w_e</span><span class="p">,</span><span class="n">pendiente_c</span> <span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">pendiente_c</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">colorbar</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">unique</span><span class="p">(</span><span class="n">pendiente_c</span><span class="p">));</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[-1.9975946  -0.82724434 -0.19154373  0.06726803  0.4533617          nan]
+</pre></div>
+</div>
+<img alt="_images/08_bivariado_30_1.png" src="_images/08_bivariado_30_1.png" />
+</div>
+</div>
+<p>Realizamos el mismo procedimiento para la variable <em>aspecto</em>:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">w_a</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">((</span><span class="n">aa1</span><span class="o">/</span><span class="n">aa</span><span class="p">)</span><span class="o">/</span><span class="n">dt</span><span class="p">)</span>
+<span class="n">w_b</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">((</span><span class="n">ba1</span><span class="o">/</span><span class="n">ba</span><span class="p">)</span><span class="o">/</span><span class="n">dt</span><span class="p">)</span>
+<span class="n">w_c</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">((</span><span class="n">ca1</span><span class="o">/</span><span class="n">ca</span><span class="p">)</span><span class="o">/</span><span class="n">dt</span><span class="p">)</span>
+<span class="n">w_d</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">((</span><span class="n">da1</span><span class="o">/</span><span class="n">da</span><span class="p">)</span><span class="o">/</span><span class="n">dt</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;w:&quot;</span><span class="p">,</span> <span class="n">w_a</span><span class="p">,</span><span class="n">w_b</span><span class="p">,</span><span class="n">w_c</span><span class="p">,</span><span class="n">w_d</span><span class="p">)</span>
+
+<span class="n">aspecto_c</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">where</span> <span class="p">(</span> <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">logical_and</span> <span class="p">(</span><span class="n">aspecto</span><span class="o">&gt;=</span><span class="mi">0</span><span class="p">,</span> <span class="n">aspecto</span><span class="o">&lt;</span><span class="mi">90</span> <span class="p">)),</span><span class="n">w_a</span><span class="p">,</span><span class="n">aspecto</span> <span class="p">)</span>
+<span class="n">aspecto_c</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">where</span> <span class="p">(</span> <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">logical_and</span> <span class="p">(</span><span class="n">aspecto_c</span><span class="o">&gt;=</span><span class="mi">90</span><span class="p">,</span> <span class="n">aspecto_c</span><span class="o">&lt;</span><span class="mi">180</span> <span class="p">)),</span><span class="n">w_b</span><span class="p">,</span><span class="n">aspecto_c</span> <span class="p">)</span>
+<span class="n">aspecto_c</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">where</span> <span class="p">(</span> <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">logical_and</span> <span class="p">(</span><span class="n">aspecto_c</span><span class="o">&gt;=</span><span class="mi">180</span><span class="p">,</span> <span class="n">aspecto_c</span><span class="o">&lt;</span><span class="mi">270</span> <span class="p">)),</span><span class="n">w_c</span><span class="p">,</span><span class="n">aspecto_c</span> <span class="p">)</span>
+<span class="n">aspecto_c</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">where</span> <span class="p">(</span> <span class="n">aspecto_c</span><span class="o">&gt;=</span><span class="mi">270</span><span class="p">,</span><span class="n">w_d</span><span class="p">,</span><span class="n">aspecto_c</span> <span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">aspecto_c</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">colorbar</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">unique</span><span class="p">(</span><span class="n">aspecto_c</span><span class="p">));</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>w: 0.006933187278979516 0.5611974088841332 -0.1519361180824098 -0.18464209803578424
+[-1.         -0.18464209 -0.15193611  0.00693319  0.5611974          nan]
+</pre></div>
+</div>
+<img alt="_images/08_bivariado_32_1.png" src="_images/08_bivariado_32_1.png" />
+</div>
+</div>
+<p>Para la variable geología se debe tener en cuenta que existen algunas clases que no presentan celdas con MenM, por lo tanto generan un error al calcular el logaritmo. Para superar est se le asigna un valor de 1 a dichas clases.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">bg1</span><span class="o">=</span><span class="n">cg1</span><span class="o">=</span><span class="n">eg1</span><span class="o">=</span><span class="n">jg1</span><span class="o">=</span><span class="mi">1</span>   <span class="c1">#clases que obtuvieron 0 celdas con movimientos en masa</span>
+
+<span class="n">w_a</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">((</span><span class="n">ag1</span><span class="o">/</span><span class="n">ag</span><span class="p">)</span><span class="o">/</span><span class="n">dt</span><span class="p">)</span>
+<span class="n">w_b</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">((</span><span class="n">bg1</span><span class="o">/</span><span class="n">bg</span><span class="p">)</span><span class="o">/</span><span class="n">dt</span><span class="p">)</span>
+<span class="n">w_c</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">((</span><span class="n">cg1</span><span class="o">/</span><span class="n">cg</span><span class="p">)</span><span class="o">/</span><span class="n">dt</span><span class="p">)</span>
+<span class="n">w_d</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">((</span><span class="n">dg1</span><span class="o">/</span><span class="n">dg</span><span class="p">)</span><span class="o">/</span><span class="n">dt</span><span class="p">)</span>
+<span class="n">w_e</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">((</span><span class="n">eg1</span><span class="o">/</span><span class="n">eg</span><span class="p">)</span><span class="o">/</span><span class="n">dt</span><span class="p">)</span>
+<span class="n">w_f</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">((</span><span class="n">fg1</span><span class="o">/</span><span class="n">fg</span><span class="p">)</span><span class="o">/</span><span class="n">dt</span><span class="p">)</span>
+<span class="n">w_g</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">((</span><span class="n">gg1</span><span class="o">/</span><span class="n">gg</span><span class="p">)</span><span class="o">/</span><span class="n">dt</span><span class="p">)</span>
+<span class="n">w_h</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">((</span><span class="n">hg1</span><span class="o">/</span><span class="n">hg</span><span class="p">)</span><span class="o">/</span><span class="n">dt</span><span class="p">)</span>
+<span class="n">w_i</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">((</span><span class="n">ig1</span><span class="o">/</span><span class="n">ig</span><span class="p">)</span><span class="o">/</span><span class="n">dt</span><span class="p">)</span>
+<span class="n">w_j</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">((</span><span class="n">jg1</span><span class="o">/</span><span class="n">jg</span><span class="p">)</span><span class="o">/</span><span class="n">dt</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;w:&quot;</span><span class="p">,</span> <span class="n">w_a</span><span class="p">,</span><span class="n">w_b</span><span class="p">,</span><span class="n">w_c</span><span class="p">,</span><span class="n">w_d</span><span class="p">,</span><span class="n">w_e</span><span class="p">,</span><span class="n">w_f</span><span class="p">,</span><span class="n">w_g</span><span class="p">,</span><span class="n">w_h</span><span class="p">,</span><span class="n">w_i</span><span class="p">,</span><span class="n">w_j</span><span class="p">)</span>
+
+<span class="n">geologia_c</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">where</span> <span class="p">(</span> <span class="n">geologia</span><span class="o">==</span><span class="mi">2</span><span class="p">,</span><span class="n">w_a</span><span class="p">,</span><span class="n">geologia</span> <span class="p">)</span>
+<span class="n">geologia_c</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">where</span> <span class="p">(</span> <span class="n">geologia_c</span><span class="o">==</span><span class="mi">4</span><span class="p">,</span><span class="n">w_b</span><span class="p">,</span><span class="n">geologia_c</span> <span class="p">)</span>
+<span class="n">geologia_c</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">where</span> <span class="p">(</span> <span class="n">geologia_c</span><span class="o">==</span><span class="mi">6</span><span class="p">,</span><span class="n">w_c</span><span class="p">,</span><span class="n">geologia_c</span> <span class="p">)</span>
+<span class="n">geologia_c</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">where</span> <span class="p">(</span> <span class="n">geologia_c</span><span class="o">==</span><span class="mi">8</span><span class="p">,</span><span class="n">w_d</span><span class="p">,</span><span class="n">geologia_c</span> <span class="p">)</span>
+<span class="n">geologia_c</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">where</span> <span class="p">(</span> <span class="n">geologia_c</span><span class="o">==</span><span class="mi">9</span><span class="p">,</span><span class="n">w_e</span><span class="p">,</span><span class="n">geologia_c</span> <span class="p">)</span>
+<span class="n">geologia_c</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">where</span> <span class="p">(</span> <span class="n">geologia_c</span><span class="o">==</span><span class="mi">10</span><span class="p">,</span><span class="n">w_f</span><span class="p">,</span><span class="n">geologia_c</span>  <span class="p">)</span>
+<span class="n">geologia_c</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">where</span> <span class="p">(</span> <span class="n">geologia_c</span><span class="o">==</span><span class="mi">11</span><span class="p">,</span><span class="n">w_g</span><span class="p">,</span><span class="n">geologia_c</span>  <span class="p">)</span>
+<span class="n">geologia_c</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">where</span> <span class="p">(</span> <span class="n">geologia_c</span><span class="o">==</span><span class="mi">14</span><span class="p">,</span><span class="n">w_h</span><span class="p">,</span><span class="n">geologia_c</span>  <span class="p">)</span>
+<span class="n">geologia_c</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">where</span> <span class="p">(</span> <span class="n">geologia_c</span><span class="o">==</span><span class="mi">15</span><span class="p">,</span><span class="n">w_i</span><span class="p">,</span><span class="n">geologia_c</span>  <span class="p">)</span>
+<span class="n">geologia_c</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">where</span> <span class="p">(</span> <span class="n">geologia_c</span><span class="o">==</span><span class="mi">16</span><span class="p">,</span><span class="n">w_j</span><span class="p">,</span><span class="n">geologia_c</span>  <span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">geologia_c</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">colorbar</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">unique</span><span class="p">(</span><span class="n">geologia_c</span><span class="p">));</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>w: 0.36987982682432763 1.200678978884011 -1.695592501139342 0.5311140506574584 -4.205723000249289 0.07473838228040365 0.4625264091580406 -0.22131946592927398 1.3725861331962508 -3.499424769466566
+[-4.205723   -3.49942477 -1.6955925  -0.22131947  0.07473838  0.36987983
+  0.46252641  0.53111405  1.20067898  1.37258613         nan]
+</pre></div>
+</div>
+<img alt="_images/08_bivariado_34_1.png" src="_images/08_bivariado_34_1.png" />
+</div>
+</div>
+<p>Con los mapas de cada variable reclasificados de acuerdo con el valor de <em>Statistical index</em> se procede entonces a sumar todas las variables y obtener el mapa de susceptibilidad:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">IS</span><span class="o">=</span><span class="n">pendiente_c</span><span class="o">+</span><span class="n">aspecto_c</span><span class="o">+</span><span class="n">geologia_c</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">IS</span><span class="p">);</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">colorbar</span><span class="p">();</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/08_bivariado_36_0.png" src="_images/08_bivariado_36_0.png" />
+</div>
+</div>
 </div>
 </div>
 <div class="section" id="peso-de-la-evidencia-woe">
@@ -855,59 +994,13 @@ la clase  <span class="math notranslate nohighlight">\(\hat{B}_i\)</span>.</p>
 es cero cuando la clase no afecta, es positivo cuando existe una correlación directa y negativo cuando existe una correlación inversa con la distribución de movimientos en masa.</p>
 <div class="section" id="id2">
 <h4>Python<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h4>
-<p>Para calcular el <span class="math notranslate nohighlight">\(W^+\)</span> (wp), <span class="math notranslate nohighlight">\(W^-\)</span> (wn), y <span class="math notranslate nohighlight">\(C\)</span> de cada clase del mapa de pendiente, el cual es un mapa continuo, se debe contar inicialmente cuantas celdas hay en los rangos que se establezcan.</p>
+<p>Para calcular el <span class="math notranslate nohighlight">\(W^+\)</span> (wp), <span class="math notranslate nohighlight">\(W^-\)</span> (wn), y <span class="math notranslate nohighlight">\(C\)</span> de cada clase se utilizan las siguientes ecuaciones del método WoE: <span class="math notranslate nohighlight">\(N_{pix1}\)</span>=a1, son las celdas que pertenecen a la clase a y tienen MenM. <span class="math notranslate nohighlight">\(N_{pix2}\)</span>=total1-a1, son las celdas que no pertenecen a la clase a y que tienen MenM, <span class="math notranslate nohighlight">\(N_{pix3}\)</span>=a-a1, son las celdas que pertenecen a la clase a pero que no tienen MenM. y <span class="math notranslate nohighlight">\(N_{pix4}\)</span>=(b+c+d+e)-(b1+c1+d1+e1), son las celdas que no pertenecen a la clase a y que no tienen MenM.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pendiente_serie</span><span class="o">=</span><span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">pendiente_vector_MenM</span><span class="p">)</span>
-<span class="n">a</span><span class="o">=</span><span class="n">b</span><span class="o">=</span><span class="n">c</span><span class="o">=</span><span class="n">d</span><span class="o">=</span><span class="n">e</span><span class="o">=</span><span class="mi">0</span>
-<span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">pendiente_serie</span><span class="p">:</span>
-        <span class="k">if</span> <span class="p">(</span><span class="mi">0</span> <span class="o">&lt;=</span> <span class="n">row</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">row</span> <span class="o">&lt;</span> <span class="mi">10</span><span class="p">):</span>
-          <span class="n">a</span><span class="o">+=</span><span class="mi">1</span>
-        <span class="k">elif</span> <span class="p">(</span><span class="mi">10</span> <span class="o">&lt;=</span> <span class="n">row</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">row</span> <span class="o">&lt;</span> <span class="mi">20</span><span class="p">):</span>
-          <span class="n">b</span><span class="o">+=</span><span class="mi">1</span>
-        <span class="k">elif</span> <span class="p">(</span><span class="mi">20</span> <span class="o">&lt;=</span> <span class="n">row</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">row</span> <span class="o">&lt;</span> <span class="mi">30</span><span class="p">):</span>
-          <span class="n">c</span><span class="o">+=</span><span class="mi">1</span>
-        <span class="k">elif</span> <span class="p">(</span><span class="mi">30</span> <span class="o">&lt;=</span> <span class="n">row</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">row</span> <span class="o">&lt;</span> <span class="mi">35</span><span class="p">):</span>
-          <span class="n">d</span><span class="o">+=</span><span class="mi">1</span>
-        <span class="k">if</span> <span class="p">(</span><span class="n">row</span><span class="o">&gt;=</span><span class="mi">35</span><span class="p">):</span>
-          <span class="n">e</span><span class="o">+=</span><span class="mi">1</span>
-
-<span class="n">total</span><span class="o">=</span><span class="n">a</span><span class="o">+</span><span class="n">b</span><span class="o">+</span><span class="n">c</span><span class="o">+</span><span class="n">d</span><span class="o">+</span><span class="n">e</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;total:&quot;</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">,</span><span class="n">c</span><span class="p">,</span><span class="n">d</span><span class="p">,</span><span class="n">e</span><span class="p">,</span><span class="n">total</span><span class="p">)</span>
-
-<span class="n">pendienteconMenM</span><span class="o">=</span><span class="n">pendiente_vector_MenM</span><span class="o">*</span><span class="n">inventario_vector_MenM</span>
-
-<span class="n">a1</span><span class="o">=</span><span class="n">b1</span><span class="o">=</span><span class="n">c1</span><span class="o">=</span><span class="n">d1</span><span class="o">=</span><span class="n">e1</span><span class="o">=</span><span class="mi">0</span>
-<span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">pendienteconMenM</span><span class="p">:</span>
-        <span class="k">if</span> <span class="p">(</span><span class="mi">0</span> <span class="o">&lt;</span> <span class="n">row</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">row</span> <span class="o">&lt;</span> <span class="mi">10</span><span class="p">):</span>
-          <span class="n">a1</span><span class="o">+=</span><span class="mi">1</span>
-        <span class="k">elif</span> <span class="p">(</span><span class="mi">10</span> <span class="o">&lt;=</span> <span class="n">row</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">row</span> <span class="o">&lt;</span> <span class="mi">20</span><span class="p">):</span>
-          <span class="n">b1</span><span class="o">+=</span><span class="mi">1</span>
-        <span class="k">elif</span> <span class="p">(</span><span class="mi">20</span> <span class="o">&lt;=</span> <span class="n">row</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">row</span> <span class="o">&lt;</span> <span class="mi">30</span><span class="p">):</span>
-          <span class="n">c1</span><span class="o">+=</span><span class="mi">1</span>
-        <span class="k">elif</span> <span class="p">(</span><span class="mi">30</span> <span class="o">&lt;=</span> <span class="n">row</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">row</span> <span class="o">&lt;</span> <span class="mi">35</span><span class="p">):</span>
-          <span class="n">d1</span><span class="o">+=</span><span class="mi">1</span>
-        <span class="k">if</span> <span class="p">(</span><span class="n">row</span><span class="o">&gt;=</span><span class="mi">35</span><span class="p">):</span>
-          <span class="n">e1</span><span class="o">+=</span><span class="mi">1</span>
-
-<span class="n">total1</span><span class="o">=</span><span class="n">a1</span><span class="o">+</span><span class="n">b1</span><span class="o">+</span><span class="n">c1</span><span class="o">+</span><span class="n">d1</span><span class="o">+</span><span class="n">e1</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;total1&quot;</span><span class="p">,</span> <span class="n">a1</span><span class="p">,</span><span class="n">b1</span><span class="p">,</span><span class="n">c1</span><span class="p">,</span><span class="n">d1</span><span class="p">,</span><span class="n">e1</span><span class="p">,</span><span class="n">total1</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>53805 138684 279488 158011 280813 910801
-</pre></div>
-</div>
-</div>
-</div>
-<p>De acuerdo con la ecuacion del método WoE: <span class="math notranslate nohighlight">\(N_{pix1}\)</span>=a1, son las celdas que pertenecen a la clase a y tienen MenM. <span class="math notranslate nohighlight">\(N_{pix2}\)</span>=total1-a1, son las celdas que no pertenecen a la clase a y que tienen MenM, <span class="math notranslate nohighlight">\(N_{pix3}\)</span>=a-a1, son las celdas que pertenecen a la clase a pero que no tienen MenM. y <span class="math notranslate nohighlight">\(N_{pix4}\)</span>=(b+c+d+e)-(b1+c1+d1+e1), son las celdas que no pertenecen a la clase a y que no tienen MenM.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x1</span><span class="o">=</span><span class="n">a1</span>
-<span class="n">x2</span><span class="o">=</span><span class="n">total1</span><span class="o">-</span><span class="n">a1</span>
-<span class="n">x3</span><span class="o">=</span><span class="n">a</span><span class="o">-</span><span class="n">a1</span>
-<span class="n">x4</span><span class="o">=</span><span class="p">(</span><span class="n">b</span><span class="o">+</span><span class="n">c</span><span class="o">+</span><span class="n">d</span><span class="o">+</span><span class="n">e</span><span class="p">)</span><span class="o">-</span><span class="p">(</span><span class="n">b1</span><span class="o">+</span><span class="n">c1</span><span class="o">+</span><span class="n">d1</span><span class="o">+</span><span class="n">e1</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x1</span><span class="o">=</span><span class="n">ap1</span>
+<span class="n">x2</span><span class="o">=</span><span class="n">total1</span><span class="o">-</span><span class="n">ap1</span>
+<span class="n">x3</span><span class="o">=</span><span class="n">ap</span><span class="o">-</span><span class="n">ap1</span>
+<span class="n">x4</span><span class="o">=</span><span class="p">(</span><span class="n">bp</span><span class="o">+</span><span class="n">cp</span><span class="o">+</span><span class="n">dp</span><span class="o">+</span><span class="n">ep</span><span class="p">)</span><span class="o">-</span><span class="p">(</span><span class="n">bp1</span><span class="o">+</span><span class="n">cp1</span><span class="o">+</span><span class="n">dp1</span><span class="o">+</span><span class="n">ep1</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -923,7 +1016,7 @@ es cero cuando la clase no afecta, es positivo cuando existe una correlación di
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>-2.365127685703442 0.08123986981187707 -2.4463675555153186
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>-1.9978126337233664 0.05293079554963469 -2.0507434292730014
 </pre></div>
 </div>
 </div>
@@ -940,10 +1033,10 @@ es cero cuando la clase no afecta, es positivo cuando existe una correlación di
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Clase b</span>
-<span class="n">x1</span><span class="o">=</span><span class="n">b1</span>
-<span class="n">x2</span><span class="o">=</span><span class="n">total1</span><span class="o">-</span><span class="n">b1</span>
-<span class="n">x3</span><span class="o">=</span><span class="n">b</span><span class="o">-</span><span class="n">b1</span>
-<span class="n">x4</span><span class="o">=</span><span class="p">(</span><span class="n">a</span><span class="o">+</span><span class="n">c</span><span class="o">+</span><span class="n">d</span><span class="o">+</span><span class="n">e</span><span class="p">)</span><span class="o">-</span><span class="p">(</span><span class="n">a1</span><span class="o">+</span><span class="n">c1</span><span class="o">+</span><span class="n">d1</span><span class="o">+</span><span class="n">e1</span><span class="p">)</span>
+<span class="n">x1</span><span class="o">=</span><span class="n">bp1</span>
+<span class="n">x2</span><span class="o">=</span><span class="n">total1</span><span class="o">-</span><span class="n">bp1</span>
+<span class="n">x3</span><span class="o">=</span><span class="n">bp</span><span class="o">-</span><span class="n">bp1</span>
+<span class="n">x4</span><span class="o">=</span><span class="p">(</span><span class="n">ap</span><span class="o">+</span><span class="n">cp</span><span class="o">+</span><span class="n">dp</span><span class="o">+</span><span class="n">ep</span><span class="p">)</span><span class="o">-</span><span class="p">(</span><span class="n">ap1</span><span class="o">+</span><span class="n">cp1</span><span class="o">+</span><span class="n">dp1</span><span class="o">+</span><span class="n">ep1</span><span class="p">)</span>
 
 <span class="n">wp_b</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">((</span><span class="n">x1</span><span class="o">/</span><span class="p">(</span><span class="n">x1</span><span class="o">+</span><span class="n">x2</span><span class="p">))</span><span class="o">/</span><span class="p">(</span><span class="n">x3</span><span class="o">/</span><span class="p">(</span><span class="n">x3</span><span class="o">+</span><span class="n">x4</span><span class="p">)))</span>
 <span class="n">wn_b</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">((</span><span class="n">x2</span><span class="o">/</span><span class="p">(</span><span class="n">x1</span><span class="o">+</span><span class="n">x2</span><span class="p">))</span><span class="o">/</span><span class="p">(</span><span class="n">x4</span><span class="o">/</span><span class="p">(</span><span class="n">x3</span><span class="o">+</span><span class="n">x4</span><span class="p">)))</span>
@@ -952,10 +1045,10 @@ es cero cuando la clase no afecta, es positivo cuando existe una correlación di
 <span class="n">pendiente_c</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">where</span> <span class="p">(</span> <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">logical_and</span> <span class="p">(</span><span class="n">pendiente_c</span><span class="o">&gt;=</span><span class="mi">10</span><span class="p">,</span> <span class="n">pendiente_c</span><span class="o">&lt;</span><span class="mi">20</span> <span class="p">)),</span><span class="n">cont</span><span class="p">,</span><span class="n">pendiente_c</span> <span class="p">)</span>
 
 <span class="c1">#Clase c</span>
-<span class="n">x1</span><span class="o">=</span><span class="n">c1</span>
-<span class="n">x2</span><span class="o">=</span><span class="n">total1</span><span class="o">-</span><span class="n">c1</span>
-<span class="n">x3</span><span class="o">=</span><span class="n">c</span><span class="o">-</span><span class="n">c1</span>
-<span class="n">x4</span><span class="o">=</span><span class="p">(</span><span class="n">a</span><span class="o">+</span><span class="n">b</span><span class="o">+</span><span class="n">d</span><span class="o">+</span><span class="n">e</span><span class="p">)</span><span class="o">-</span><span class="p">(</span><span class="n">a1</span><span class="o">+</span><span class="n">b1</span><span class="o">+</span><span class="n">d1</span><span class="o">+</span><span class="n">e1</span><span class="p">)</span>
+<span class="n">x1</span><span class="o">=</span><span class="n">cp1</span>
+<span class="n">x2</span><span class="o">=</span><span class="n">total1</span><span class="o">-</span><span class="n">cp1</span>
+<span class="n">x3</span><span class="o">=</span><span class="n">cp</span><span class="o">-</span><span class="n">cp1</span>
+<span class="n">x4</span><span class="o">=</span><span class="p">(</span><span class="n">ap</span><span class="o">+</span><span class="n">bp</span><span class="o">+</span><span class="n">dp</span><span class="o">+</span><span class="n">ep</span><span class="p">)</span><span class="o">-</span><span class="p">(</span><span class="n">ap1</span><span class="o">+</span><span class="n">bp1</span><span class="o">+</span><span class="n">dp1</span><span class="o">+</span><span class="n">ep1</span><span class="p">)</span>
 
 <span class="n">wp_c</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">((</span><span class="n">x1</span><span class="o">/</span><span class="p">(</span><span class="n">x1</span><span class="o">+</span><span class="n">x2</span><span class="p">))</span><span class="o">/</span><span class="p">(</span><span class="n">x3</span><span class="o">/</span><span class="p">(</span><span class="n">x3</span><span class="o">+</span><span class="n">x4</span><span class="p">)))</span>
 <span class="n">wn_c</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">((</span><span class="n">x2</span><span class="o">/</span><span class="p">(</span><span class="n">x1</span><span class="o">+</span><span class="n">x2</span><span class="p">))</span><span class="o">/</span><span class="p">(</span><span class="n">x4</span><span class="o">/</span><span class="p">(</span><span class="n">x3</span><span class="o">+</span><span class="n">x4</span><span class="p">)))</span>
@@ -964,10 +1057,10 @@ es cero cuando la clase no afecta, es positivo cuando existe una correlación di
 <span class="n">pendiente_c</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">where</span> <span class="p">(</span> <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">logical_and</span> <span class="p">(</span><span class="n">pendiente_c</span><span class="o">&gt;=</span><span class="mi">10</span><span class="p">,</span> <span class="n">pendiente_c</span><span class="o">&lt;</span><span class="mi">20</span> <span class="p">)),</span><span class="n">cont</span><span class="p">,</span><span class="n">pendiente_c</span> <span class="p">)</span>
 
 <span class="c1">#Clase d</span>
-<span class="n">x1</span><span class="o">=</span><span class="n">d1</span>
-<span class="n">x2</span><span class="o">=</span><span class="n">total1</span><span class="o">-</span><span class="n">d1</span>
-<span class="n">x3</span><span class="o">=</span><span class="n">d</span><span class="o">-</span><span class="n">d1</span>
-<span class="n">x4</span><span class="o">=</span><span class="p">(</span><span class="n">a</span><span class="o">+</span><span class="n">b</span><span class="o">+</span><span class="n">c</span><span class="o">+</span><span class="n">e</span><span class="p">)</span><span class="o">-</span><span class="p">(</span><span class="n">a1</span><span class="o">+</span><span class="n">b1</span><span class="o">+</span><span class="n">c1</span><span class="o">+</span><span class="n">e1</span><span class="p">)</span>
+<span class="n">x1</span><span class="o">=</span><span class="n">dp1</span>
+<span class="n">x2</span><span class="o">=</span><span class="n">total1</span><span class="o">-</span><span class="n">dp1</span>
+<span class="n">x3</span><span class="o">=</span><span class="n">dp</span><span class="o">-</span><span class="n">dp1</span>
+<span class="n">x4</span><span class="o">=</span><span class="p">(</span><span class="n">ap</span><span class="o">+</span><span class="n">bp</span><span class="o">+</span><span class="n">cp</span><span class="o">+</span><span class="n">ep</span><span class="p">)</span><span class="o">-</span><span class="p">(</span><span class="n">ap1</span><span class="o">+</span><span class="n">bp1</span><span class="o">+</span><span class="n">cp1</span><span class="o">+</span><span class="n">ep1</span><span class="p">)</span>
 
 <span class="n">wp_d</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">((</span><span class="n">x1</span><span class="o">/</span><span class="p">(</span><span class="n">x1</span><span class="o">+</span><span class="n">x2</span><span class="p">))</span><span class="o">/</span><span class="p">(</span><span class="n">x3</span><span class="o">/</span><span class="p">(</span><span class="n">x3</span><span class="o">+</span><span class="n">x4</span><span class="p">)))</span>
 <span class="n">wn_d</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">((</span><span class="n">x2</span><span class="o">/</span><span class="p">(</span><span class="n">x1</span><span class="o">+</span><span class="n">x2</span><span class="p">))</span><span class="o">/</span><span class="p">(</span><span class="n">x4</span><span class="o">/</span><span class="p">(</span><span class="n">x3</span><span class="o">+</span><span class="n">x4</span><span class="p">)))</span>
@@ -976,22 +1069,16 @@ es cero cuando la clase no afecta, es positivo cuando existe una correlación di
 <span class="n">pendiente_c</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">where</span> <span class="p">(</span> <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">logical_and</span> <span class="p">(</span><span class="n">pendiente_c</span><span class="o">&gt;=</span><span class="mi">20</span><span class="p">,</span> <span class="n">pendiente_c</span><span class="o">&lt;</span><span class="mi">30</span> <span class="p">)),</span><span class="n">cont</span><span class="p">,</span><span class="n">pendiente_c</span> <span class="p">)</span>
 
 <span class="c1">#Clase e</span>
-<span class="n">x1</span><span class="o">=</span><span class="n">e1</span>
-<span class="n">x2</span><span class="o">=</span><span class="n">total1</span><span class="o">-</span><span class="n">e1</span>
-<span class="n">x3</span><span class="o">=</span><span class="n">e</span><span class="o">-</span><span class="n">e1</span>
-<span class="n">x4</span><span class="o">=</span><span class="p">(</span><span class="n">a</span><span class="o">+</span><span class="n">b</span><span class="o">+</span><span class="n">c</span><span class="o">+</span><span class="n">d</span><span class="p">)</span><span class="o">-</span><span class="p">(</span><span class="n">a1</span><span class="o">+</span><span class="n">b1</span><span class="o">+</span><span class="n">c1</span><span class="o">+</span><span class="n">d1</span><span class="p">)</span>
+<span class="n">x1</span><span class="o">=</span><span class="n">ep1</span>
+<span class="n">x2</span><span class="o">=</span><span class="n">total1</span><span class="o">-</span><span class="n">ep1</span>
+<span class="n">x3</span><span class="o">=</span><span class="n">ep</span><span class="o">-</span><span class="n">ep1</span>
+<span class="n">x4</span><span class="o">=</span><span class="p">(</span><span class="n">ap</span><span class="o">+</span><span class="n">bp</span><span class="o">+</span><span class="n">cp</span><span class="o">+</span><span class="n">dp</span><span class="p">)</span><span class="o">-</span><span class="p">(</span><span class="n">ap1</span><span class="o">+</span><span class="n">bp1</span><span class="o">+</span><span class="n">cp1</span><span class="o">+</span><span class="n">dp1</span><span class="p">)</span>
 
 <span class="n">wp_e</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">((</span><span class="n">x1</span><span class="o">/</span><span class="p">(</span><span class="n">x1</span><span class="o">+</span><span class="n">x2</span><span class="p">))</span><span class="o">/</span><span class="p">(</span><span class="n">x3</span><span class="o">/</span><span class="p">(</span><span class="n">x3</span><span class="o">+</span><span class="n">x4</span><span class="p">)))</span>
 <span class="n">wn_e</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">((</span><span class="n">x2</span><span class="o">/</span><span class="p">(</span><span class="n">x1</span><span class="o">+</span><span class="n">x2</span><span class="p">))</span><span class="o">/</span><span class="p">(</span><span class="n">x4</span><span class="o">/</span><span class="p">(</span><span class="n">x3</span><span class="o">+</span><span class="n">x4</span><span class="p">)))</span>
 <span class="n">cont</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">(((</span><span class="n">x1</span><span class="o">/</span><span class="p">(</span><span class="n">x1</span><span class="o">+</span><span class="n">x2</span><span class="p">))</span><span class="o">/</span><span class="p">(</span><span class="n">x3</span><span class="o">/</span><span class="p">(</span><span class="n">x3</span><span class="o">+</span><span class="n">x4</span><span class="p">)))</span><span class="o">/</span><span class="p">((</span><span class="n">x2</span><span class="o">/</span><span class="p">(</span><span class="n">x1</span><span class="o">+</span><span class="n">x2</span><span class="p">))</span><span class="o">/</span><span class="p">(</span><span class="n">x4</span><span class="o">/</span><span class="p">(</span><span class="n">x3</span><span class="o">+</span><span class="n">x4</span><span class="p">))))</span>
 
-<span class="n">pendiente_c</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">where</span> <span class="p">(</span> <span class="n">pendiente_c</span><span class="o">&gt;=</span><span class="mi">30</span><span class="p">,</span><span class="n">cont</span><span class="p">,</span><span class="n">pendiente_c</span> <span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/usr/local/lib/python3.7/dist-packages/ipykernel_launcher.py:19: RuntimeWarning: invalid value encountered in log
-/usr/local/lib/python3.7/dist-packages/ipykernel_launcher.py:21: RuntimeWarning: invalid value encountered in log
+<span class="n">pendiente_c</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">where</span> <span class="p">(</span><span class="n">pendiente_c</span><span class="o">&gt;=</span><span class="mi">30</span><span class="p">,</span><span class="n">cont</span><span class="p">,</span><span class="n">pendiente_c</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1004,7 +1091,7 @@ es cero cuando la clase no afecta, es positivo cuando existe una correlación di
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>-2.365127685703442 0.08123986981187707 -1.1942405986864522 0.1795582351477149 -0.190531748869874 0.0740267315295358 -0.2986005529725735 0.0827384536897787 0.0883928781942713 -0.0768935487691998
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>-1.9978126337233664 0.05293079554963469 -0.8269249184231674 0.09637540215921472 -0.190531748869874 0.0740267315295358 0.06871512729071115 -0.015040700202127994 0.45570855845755603 -0.2969812410286435
 </pre></div>
 </div>
 </div>
@@ -1019,52 +1106,20 @@ es cero cuando la clase no afecta, es positivo cuando existe una correlación di
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[-2.0507433  -1.373798   -0.38133818  0.16528755         nan]
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[-2.0507433  -0.9233003   0.08375583  0.7526898          nan]
 </pre></div>
 </div>
-<img alt="_images/08_bivariado_41_1.png" src="_images/08_bivariado_41_1.png" />
+<img alt="_images/08_bivariado_50_1.png" src="_images/08_bivariado_50_1.png" />
 </div>
 </div>
 <p>Este mismo procedimiento se realiza para la variable <em>aspecto</em>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">aspecto_serie</span><span class="o">=</span><span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">aspecto_vector_MenM</span><span class="p">)</span>
-<span class="n">a</span><span class="o">=</span><span class="n">b</span><span class="o">=</span><span class="n">c</span><span class="o">=</span><span class="n">d</span><span class="o">=</span><span class="mi">0</span>
-<span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">aspecto_serie</span><span class="p">:</span>
-        <span class="k">if</span> <span class="p">(</span><span class="mi">0</span> <span class="o">&lt;=</span> <span class="n">row</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">row</span> <span class="o">&lt;</span> <span class="mi">90</span><span class="p">):</span>
-          <span class="n">a</span><span class="o">+=</span><span class="mi">1</span>
-        <span class="k">elif</span> <span class="p">(</span><span class="mi">90</span> <span class="o">&lt;=</span> <span class="n">row</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">row</span> <span class="o">&lt;</span> <span class="mi">180</span><span class="p">):</span>
-          <span class="n">b</span><span class="o">+=</span><span class="mi">1</span>
-        <span class="k">elif</span> <span class="p">(</span><span class="mi">180</span> <span class="o">&lt;=</span> <span class="n">row</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">row</span> <span class="o">&lt;</span> <span class="mi">270</span><span class="p">):</span>
-          <span class="n">c</span><span class="o">+=</span><span class="mi">1</span>
-        <span class="k">if</span> <span class="p">(</span><span class="n">row</span><span class="o">&gt;=</span><span class="mi">270</span><span class="p">):</span>
-          <span class="n">d</span><span class="o">+=</span><span class="mi">1</span>
-
-<span class="n">total</span><span class="o">=</span><span class="n">a</span><span class="o">+</span><span class="n">b</span><span class="o">+</span><span class="n">c</span><span class="o">+</span><span class="n">d</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">,</span><span class="n">c</span><span class="p">,</span><span class="n">d</span><span class="p">)</span>
-
-<span class="n">aspectoconMenM</span><span class="o">=</span><span class="n">aspecto_vector_MenM</span><span class="o">*</span><span class="n">inventario_vector_MenM</span>
-
-<span class="n">a1</span><span class="o">=</span><span class="n">b1</span><span class="o">=</span><span class="n">c1</span><span class="o">=</span><span class="n">d1</span><span class="o">=</span><span class="mi">0</span>
-<span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">aspectoconMenM</span><span class="p">:</span>
-        <span class="k">if</span> <span class="p">(</span><span class="mi">0</span> <span class="o">&lt;</span> <span class="n">row</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">row</span> <span class="o">&lt;</span> <span class="mi">90</span><span class="p">):</span>
-          <span class="n">a1</span><span class="o">+=</span><span class="mi">1</span>
-        <span class="k">elif</span> <span class="p">(</span><span class="mi">90</span> <span class="o">&lt;=</span> <span class="n">row</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">row</span> <span class="o">&lt;</span> <span class="mi">1800</span><span class="p">):</span>
-          <span class="n">b1</span><span class="o">+=</span><span class="mi">1</span>
-        <span class="k">elif</span> <span class="p">(</span><span class="mi">180</span> <span class="o">&lt;=</span> <span class="n">row</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">row</span> <span class="o">&lt;</span> <span class="mi">270</span><span class="p">):</span>
-          <span class="n">c1</span><span class="o">+=</span><span class="mi">1</span>
-        <span class="k">if</span> <span class="p">(</span><span class="n">row</span><span class="o">&gt;=</span><span class="mi">270</span><span class="p">):</span>
-          <span class="n">d1</span><span class="o">+=</span><span class="mi">1</span>
-
-<span class="n">total1</span><span class="o">=</span><span class="n">a1</span><span class="o">+</span><span class="n">b1</span><span class="o">+</span><span class="n">c1</span><span class="o">+</span><span class="n">d1</span>
-<span class="c1">#c1=1 #linea que se debe correr para este ejemplo, mas adelante se explica el motivo.</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">a1</span><span class="p">,</span><span class="n">b1</span><span class="p">,</span><span class="n">c1</span><span class="p">,</span><span class="n">d1</span><span class="p">)</span>
-
-<span class="c1">#Clase a</span>
-<span class="n">x1</span><span class="o">=</span><span class="n">a1</span>
-<span class="n">x2</span><span class="o">=</span><span class="n">total1</span><span class="o">-</span><span class="n">a1</span>
-<span class="n">x3</span><span class="o">=</span><span class="n">a</span><span class="o">-</span><span class="n">a1</span>
-<span class="n">x4</span><span class="o">=</span><span class="p">(</span><span class="n">b</span><span class="o">+</span><span class="n">c</span><span class="o">+</span><span class="n">d</span><span class="p">)</span><span class="o">-</span><span class="p">(</span><span class="n">b1</span><span class="o">+</span><span class="n">c1</span><span class="o">+</span><span class="n">d1</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Clase a</span>
+<span class="n">x1</span><span class="o">=</span><span class="n">aa1</span>
+<span class="n">x2</span><span class="o">=</span><span class="n">total1</span><span class="o">-</span><span class="n">aa1</span>
+<span class="n">x3</span><span class="o">=</span><span class="n">aa</span><span class="o">-</span><span class="n">aa1</span>
+<span class="n">x4</span><span class="o">=</span><span class="p">(</span><span class="n">ba</span><span class="o">+</span><span class="n">ca</span><span class="o">+</span><span class="n">da</span><span class="p">)</span><span class="o">-</span><span class="p">(</span><span class="n">ba1</span><span class="o">+</span><span class="n">ca1</span><span class="o">+</span><span class="n">da1</span><span class="p">)</span>
 
 <span class="n">wp_a</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">((</span><span class="n">x1</span><span class="o">/</span><span class="p">(</span><span class="n">x1</span><span class="o">+</span><span class="n">x2</span><span class="p">))</span><span class="o">/</span><span class="p">(</span><span class="n">x3</span><span class="o">/</span><span class="p">(</span><span class="n">x3</span><span class="o">+</span><span class="n">x4</span><span class="p">)))</span>
 <span class="n">wn_a</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">((</span><span class="n">x2</span><span class="o">/</span><span class="p">(</span><span class="n">x1</span><span class="o">+</span><span class="n">x2</span><span class="p">))</span><span class="o">/</span><span class="p">(</span><span class="n">x4</span><span class="o">/</span><span class="p">(</span><span class="n">x3</span><span class="o">+</span><span class="n">x4</span><span class="p">)))</span>
@@ -1073,10 +1128,10 @@ es cero cuando la clase no afecta, es positivo cuando existe una correlación di
 <span class="n">aspecto_c</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">where</span> <span class="p">((</span><span class="n">np</span><span class="o">.</span><span class="n">logical_and</span> <span class="p">(</span><span class="n">aspecto</span><span class="o">&gt;=</span><span class="mi">0</span><span class="p">,</span> <span class="n">aspecto</span><span class="o">&lt;</span><span class="mi">90</span> <span class="p">)),</span><span class="n">cont</span><span class="p">,</span><span class="n">aspecto</span> <span class="p">)</span>
 
 <span class="c1">#Clase b</span>
-<span class="n">x1</span><span class="o">=</span><span class="n">b1</span>
-<span class="n">x2</span><span class="o">=</span><span class="n">total1</span><span class="o">-</span><span class="n">b1</span>
-<span class="n">x3</span><span class="o">=</span><span class="n">b</span><span class="o">-</span><span class="n">b1</span>
-<span class="n">x4</span><span class="o">=</span><span class="p">(</span><span class="n">a</span><span class="o">+</span><span class="n">c</span><span class="o">+</span><span class="n">d</span><span class="p">)</span><span class="o">-</span><span class="p">(</span><span class="n">a1</span><span class="o">+</span><span class="n">c1</span><span class="o">+</span><span class="n">d1</span><span class="p">)</span>
+<span class="n">x1</span><span class="o">=</span><span class="n">ba1</span>
+<span class="n">x2</span><span class="o">=</span><span class="n">total1</span><span class="o">-</span><span class="n">ba1</span>
+<span class="n">x3</span><span class="o">=</span><span class="n">ba</span><span class="o">-</span><span class="n">ba1</span>
+<span class="n">x4</span><span class="o">=</span><span class="p">(</span><span class="n">aa</span><span class="o">+</span><span class="n">ca</span><span class="o">+</span><span class="n">da</span><span class="p">)</span><span class="o">-</span><span class="p">(</span><span class="n">aa1</span><span class="o">+</span><span class="n">ca1</span><span class="o">+</span><span class="n">da1</span><span class="p">)</span>
 
 <span class="n">wp_b</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">((</span><span class="n">x1</span><span class="o">/</span><span class="p">(</span><span class="n">x1</span><span class="o">+</span><span class="n">x2</span><span class="p">))</span><span class="o">/</span><span class="p">(</span><span class="n">x3</span><span class="o">/</span><span class="p">(</span><span class="n">x3</span><span class="o">+</span><span class="n">x4</span><span class="p">)))</span>
 <span class="n">wn_b</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">((</span><span class="n">x2</span><span class="o">/</span><span class="p">(</span><span class="n">x1</span><span class="o">+</span><span class="n">x2</span><span class="p">))</span><span class="o">/</span><span class="p">(</span><span class="n">x4</span><span class="o">/</span><span class="p">(</span><span class="n">x3</span><span class="o">+</span><span class="n">x4</span><span class="p">)))</span>
@@ -1085,10 +1140,10 @@ es cero cuando la clase no afecta, es positivo cuando existe una correlación di
 <span class="n">aspecto_c</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">where</span> <span class="p">((</span><span class="n">np</span><span class="o">.</span><span class="n">logical_and</span> <span class="p">(</span><span class="n">aspecto_c</span><span class="o">&gt;=</span><span class="mi">90</span><span class="p">,</span> <span class="n">aspecto_c</span><span class="o">&lt;</span><span class="mi">180</span> <span class="p">)),</span><span class="n">cont</span><span class="p">,</span><span class="n">aspecto_c</span> <span class="p">)</span>
 
 <span class="c1">#Clase c</span>
-<span class="n">x1</span><span class="o">=</span><span class="n">c1</span>
-<span class="n">x2</span><span class="o">=</span><span class="n">total1</span><span class="o">-</span><span class="n">c1</span>
-<span class="n">x3</span><span class="o">=</span><span class="n">c</span><span class="o">-</span><span class="n">c1</span>
-<span class="n">x4</span><span class="o">=</span><span class="p">(</span><span class="n">a</span><span class="o">+</span><span class="n">b</span><span class="o">+</span><span class="n">d</span><span class="p">)</span><span class="o">-</span><span class="p">(</span><span class="n">a1</span><span class="o">+</span><span class="n">b1</span><span class="o">+</span><span class="n">d1</span><span class="p">)</span>
+<span class="n">x1</span><span class="o">=</span><span class="n">ca1</span>
+<span class="n">x2</span><span class="o">=</span><span class="n">total1</span><span class="o">-</span><span class="n">ca1</span>
+<span class="n">x3</span><span class="o">=</span><span class="n">ca</span><span class="o">-</span><span class="n">ca1</span>
+<span class="n">x4</span><span class="o">=</span><span class="p">(</span><span class="n">aa</span><span class="o">+</span><span class="n">ba</span><span class="o">+</span><span class="n">da</span><span class="p">)</span><span class="o">-</span><span class="p">(</span><span class="n">aa1</span><span class="o">+</span><span class="n">ba1</span><span class="o">+</span><span class="n">da1</span><span class="p">)</span>
 
 <span class="n">wp_c</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">((</span><span class="n">x1</span><span class="o">/</span><span class="p">(</span><span class="n">x1</span><span class="o">+</span><span class="n">x2</span><span class="p">))</span><span class="o">/</span><span class="p">(</span><span class="n">x3</span><span class="o">/</span><span class="p">(</span><span class="n">x3</span><span class="o">+</span><span class="n">x4</span><span class="p">)))</span>
 <span class="n">wn_c</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">((</span><span class="n">x2</span><span class="o">/</span><span class="p">(</span><span class="n">x1</span><span class="o">+</span><span class="n">x2</span><span class="p">))</span><span class="o">/</span><span class="p">(</span><span class="n">x4</span><span class="o">/</span><span class="p">(</span><span class="n">x3</span><span class="o">+</span><span class="n">x4</span><span class="p">)))</span>
@@ -1097,22 +1152,16 @@ es cero cuando la clase no afecta, es positivo cuando existe una correlación di
 <span class="n">aspecto_c</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">where</span> <span class="p">((</span><span class="n">np</span><span class="o">.</span><span class="n">logical_and</span> <span class="p">(</span><span class="n">aspecto_c</span><span class="o">&gt;=</span><span class="mi">180</span><span class="p">,</span> <span class="n">aspecto_c</span><span class="o">&lt;</span><span class="mi">270</span> <span class="p">)),</span><span class="n">cont</span><span class="p">,</span><span class="n">aspecto_c</span> <span class="p">)</span>
 
 <span class="c1">#Clase d</span>
-<span class="n">x1</span><span class="o">=</span><span class="n">d1</span>
-<span class="n">x2</span><span class="o">=</span><span class="n">total1</span><span class="o">-</span><span class="n">d1</span>
-<span class="n">x3</span><span class="o">=</span><span class="n">d</span><span class="o">-</span><span class="n">d1</span>
-<span class="n">x4</span><span class="o">=</span><span class="p">(</span><span class="n">a</span><span class="o">+</span><span class="n">b</span><span class="o">+</span><span class="n">c</span><span class="p">)</span><span class="o">-</span><span class="p">(</span><span class="n">a1</span><span class="o">+</span><span class="n">b1</span><span class="o">+</span><span class="n">c1</span><span class="p">)</span>
+<span class="n">x1</span><span class="o">=</span><span class="n">da1</span>
+<span class="n">x2</span><span class="o">=</span><span class="n">total1</span><span class="o">-</span><span class="n">da1</span>
+<span class="n">x3</span><span class="o">=</span><span class="n">da</span><span class="o">-</span><span class="n">da1</span>
+<span class="n">x4</span><span class="o">=</span><span class="p">(</span><span class="n">aa</span><span class="o">+</span><span class="n">ba</span><span class="o">+</span><span class="n">ca</span><span class="p">)</span><span class="o">-</span><span class="p">(</span><span class="n">aa1</span><span class="o">+</span><span class="n">ba1</span><span class="o">+</span><span class="n">ca1</span><span class="p">)</span>
 
 <span class="n">wp_d</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">((</span><span class="n">x1</span><span class="o">/</span><span class="p">(</span><span class="n">x1</span><span class="o">+</span><span class="n">x2</span><span class="p">))</span><span class="o">/</span><span class="p">(</span><span class="n">x3</span><span class="o">/</span><span class="p">(</span><span class="n">x3</span><span class="o">+</span><span class="n">x4</span><span class="p">)))</span>
 <span class="n">wn_d</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">((</span><span class="n">x2</span><span class="o">/</span><span class="p">(</span><span class="n">x1</span><span class="o">+</span><span class="n">x2</span><span class="p">))</span><span class="o">/</span><span class="p">(</span><span class="n">x4</span><span class="o">/</span><span class="p">(</span><span class="n">x3</span><span class="o">+</span><span class="n">x4</span><span class="p">)))</span>
 <span class="n">cont</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">(((</span><span class="n">x1</span><span class="o">/</span><span class="p">(</span><span class="n">x1</span><span class="o">+</span><span class="n">x2</span><span class="p">))</span><span class="o">/</span><span class="p">(</span><span class="n">x3</span><span class="o">/</span><span class="p">(</span><span class="n">x3</span><span class="o">+</span><span class="n">x4</span><span class="p">)))</span><span class="o">/</span><span class="p">((</span><span class="n">x2</span><span class="o">/</span><span class="p">(</span><span class="n">x1</span><span class="o">+</span><span class="n">x2</span><span class="p">))</span><span class="o">/</span><span class="p">(</span><span class="n">x4</span><span class="o">/</span><span class="p">(</span><span class="n">x3</span><span class="o">+</span><span class="n">x4</span><span class="p">))))</span>
 
 <span class="n">aspecto_c</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">where</span> <span class="p">(</span><span class="n">aspecto_c</span><span class="o">&gt;=</span><span class="mi">270</span><span class="p">,</span><span class="n">cont</span><span class="p">,</span><span class="n">aspecto_c</span> <span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>151110 128456 306544 323489
-271 1349 1 479
 </pre></div>
 </div>
 </div>
@@ -1124,13 +1173,11 @@ es cero cuando la clase no afecta, es positivo cuando existe una correlación di
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>-0.252618077557853 0.04353988520764823 1.523565749174001 -0.8782470066234108 -6.5638818947844895 0.41169421280498103 -0.444506540695429 0.18091961138463641
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.006945600406864839 -0.0013894983310093806 0.5625413905302987 -0.13237052720363568 -0.15218757915959064 0.06932826692215219 -0.18494286273071125 0.08914131784141605
 </pre></div>
 </div>
 </div>
 </div>
-<p>En este caso wp_c arroja un valor de <em>-inf</em>. Lo cual era de esperarse ya que como habiamos obtenido en la linea de codigo anterior c1=0, es decir no hay celdas de la clase c con MenM.</p>
-<p>NOTA: Para eliminar este <em>-inf</em> se vuelve a correr el código para aspecto, pero en este caso se “descomenta” la linea donde se le asigna a c1 un valor de 1. De esta forma se elimina el <em>-inf</em>. Tenga en cuenta que en este caso corresponde a c1, pero para cada caso esto puede ser diferente, por lo tanto se debe realizar esta asignación con la clase que corresponda, o modificar el código de tal forma que si se obtiene un cero se asigna automáticamente un valor de 1. Se prefiere de esta forma manual para poder detectar donde se están realizando los ajustes.</p>
 <p>A continuación se presenta el mapa de aspecto reclasificado por el Contraste (C)</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1144,48 +1191,19 @@ es cero cuando la clase no afecta, es positivo cuando existe una correlación di
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[-6.975576   -1.         -0.6254262  -0.29615796  2.4018128          nan]
 </pre></div>
 </div>
-<img alt="_images/08_bivariado_47_1.png" src="_images/08_bivariado_47_1.png" />
+<img alt="_images/08_bivariado_55_1.png" src="_images/08_bivariado_55_1.png" />
 </div>
 </div>
-<p>Para el mapa de Geologia se realiza un procedimiento similar, pero se debe tener en cuenta en este caso que Geología es una variable categórica, por lo cual no es necesario reclasificarla.</p>
-<p>De forma similar se debe calcular el número de celdas que hay en cada clase, y el numero de celdas en cada clase con MenM. Los valores de x1, x2, x3, y x4 se calcula de forma similar, al igual que el <span class="math notranslate nohighlight">\(W^+\)</span>, <span class="math notranslate nohighlight">\(W^-\)</span> y el Contraste.</p>
+<p>En el método <em>Peso de la evidencia</em> se debe tener en cuenta que las clases que no presentan movimientos en masa generan un matemático, ya que no se puede estimar el logaritmo natural de cero. Por lo tanto, se debe proceder a esas clases qdoden se obtuvo cero celdas asignarles un valor de 1, de tal forma que se pueda ejecutar el cálculo.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span><span class="o">=</span><span class="p">(</span><span class="n">geologia</span> <span class="o">==</span> <span class="mi">2</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
-<span class="n">b</span><span class="o">=</span><span class="p">(</span><span class="n">geologia</span> <span class="o">==</span> <span class="mi">4</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
-<span class="n">c</span><span class="o">=</span><span class="p">(</span><span class="n">geologia</span> <span class="o">==</span> <span class="mi">6</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
-<span class="n">d</span><span class="o">=</span><span class="p">(</span><span class="n">geologia</span> <span class="o">==</span> <span class="mi">8</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
-<span class="n">e</span><span class="o">=</span><span class="p">(</span><span class="n">geologia</span> <span class="o">==</span> <span class="mi">9</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
-<span class="n">f</span><span class="o">=</span><span class="p">(</span><span class="n">geologia</span> <span class="o">==</span> <span class="mi">10</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
-<span class="n">g</span><span class="o">=</span><span class="p">(</span><span class="n">geologia</span> <span class="o">==</span> <span class="mi">11</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
-<span class="n">h</span><span class="o">=</span><span class="p">(</span><span class="n">geologia</span> <span class="o">==</span> <span class="mi">14</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
-<span class="n">i</span><span class="o">=</span><span class="p">(</span><span class="n">geologia</span> <span class="o">==</span> <span class="mi">15</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
-<span class="n">j</span><span class="o">=</span><span class="p">(</span><span class="n">geologia</span> <span class="o">==</span> <span class="mi">16</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
-
-<span class="n">total</span><span class="o">=</span><span class="n">a</span><span class="o">+</span><span class="n">b</span><span class="o">+</span><span class="n">c</span><span class="o">+</span><span class="n">d</span><span class="o">+</span><span class="n">e</span><span class="o">+</span><span class="n">f</span><span class="o">+</span><span class="n">g</span><span class="o">+</span><span class="n">h</span><span class="o">+</span><span class="n">i</span><span class="o">+</span><span class="n">j</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">,</span><span class="n">c</span><span class="p">,</span><span class="n">d</span><span class="p">,</span><span class="n">e</span><span class="p">,</span><span class="n">f</span><span class="p">,</span><span class="n">g</span><span class="p">,</span><span class="n">h</span><span class="p">,</span><span class="n">i</span><span class="p">,</span><span class="n">j</span><span class="p">)</span>
-
-<span class="n">geologiaconMenM</span><span class="o">=</span><span class="n">geologia</span><span class="o">*</span><span class="n">inventario</span>
-<span class="n">a1</span><span class="o">=</span><span class="p">(</span><span class="n">geologiaconMenM</span> <span class="o">==</span> <span class="mi">2</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
-<span class="n">b1</span><span class="o">=</span><span class="p">(</span><span class="n">geologiaconMenM</span> <span class="o">==</span> <span class="mi">4</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
-<span class="n">c1</span><span class="o">=</span><span class="p">(</span><span class="n">geologiaconMenM</span> <span class="o">==</span> <span class="mi">6</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
-<span class="n">d1</span><span class="o">=</span><span class="p">(</span><span class="n">geologiaconMenM</span> <span class="o">==</span> <span class="mi">8</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
-<span class="n">e1</span><span class="o">=</span><span class="p">(</span><span class="n">geologiaconMenM</span> <span class="o">==</span> <span class="mi">9</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
-<span class="n">f1</span><span class="o">=</span><span class="p">(</span><span class="n">geologiaconMenM</span> <span class="o">==</span> <span class="mi">10</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
-<span class="n">g1</span><span class="o">=</span><span class="p">(</span><span class="n">geologiaconMenM</span> <span class="o">==</span> <span class="mi">11</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
-<span class="n">h1</span><span class="o">=</span><span class="p">(</span><span class="n">geologiaconMenM</span> <span class="o">==</span> <span class="mi">14</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
-<span class="n">i1</span><span class="o">=</span><span class="p">(</span><span class="n">geologiaconMenM</span> <span class="o">==</span> <span class="mi">15</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
-<span class="n">j1</span><span class="o">=</span><span class="p">(</span><span class="n">geologiaconMenM</span> <span class="o">==</span> <span class="mi">16</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
-
-<span class="n">total1</span><span class="o">=</span><span class="n">a1</span><span class="o">+</span><span class="n">b1</span><span class="o">+</span><span class="n">c1</span><span class="o">+</span><span class="n">d1</span><span class="o">+</span><span class="n">e1</span><span class="o">+</span><span class="n">f1</span><span class="o">+</span><span class="n">g1</span><span class="o">+</span><span class="n">h1</span><span class="o">+</span><span class="n">i1</span><span class="o">+</span><span class="n">j1</span>
-<span class="c1">#b1, c1, e1, j1= 1,1,1,1  #linea que se debe correr para este ejemplo, mas adelante se explica el motivo.</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">a1</span><span class="p">,</span><span class="n">b1</span><span class="p">,</span><span class="n">c1</span><span class="p">,</span><span class="n">d1</span><span class="p">,</span><span class="n">e1</span><span class="p">,</span><span class="n">f1</span><span class="p">,</span><span class="n">g1</span><span class="p">,</span><span class="n">h1</span><span class="p">,</span><span class="n">i1</span><span class="p">,</span><span class="n">j1</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">bg1</span><span class="o">=</span><span class="n">cg1</span><span class="o">=</span><span class="n">eg1</span><span class="o">=</span><span class="n">jg1</span><span class="o">=</span><span class="mi">1</span>   <span class="c1">#clases que obtuvieron 0 celdas con movimientos en masa</span>
 
 <span class="c1">#Clase a</span>
-<span class="n">x1</span><span class="o">=</span><span class="n">a1</span>
-<span class="n">x2</span><span class="o">=</span><span class="n">total1</span><span class="o">-</span><span class="n">a1</span>
-<span class="n">x3</span><span class="o">=</span><span class="n">a</span><span class="o">-</span><span class="n">a1</span>
-<span class="n">x4</span><span class="o">=</span><span class="p">(</span><span class="n">b</span><span class="o">+</span><span class="n">c</span><span class="o">+</span><span class="n">d</span><span class="o">+</span><span class="n">e</span><span class="o">+</span><span class="n">f</span><span class="o">+</span><span class="n">g</span><span class="o">+</span><span class="n">h</span><span class="o">+</span><span class="n">i</span><span class="o">+</span><span class="n">j</span><span class="p">)</span><span class="o">-</span><span class="p">(</span><span class="n">b1</span><span class="o">+</span><span class="n">c1</span><span class="o">+</span><span class="n">d1</span><span class="o">+</span><span class="n">e1</span><span class="o">+</span><span class="n">f1</span><span class="o">+</span><span class="n">g1</span><span class="o">+</span><span class="n">h1</span><span class="o">+</span><span class="n">i1</span><span class="o">+</span><span class="n">j1</span><span class="p">)</span>
+<span class="n">x1</span><span class="o">=</span><span class="n">ag1</span>
+<span class="n">x2</span><span class="o">=</span><span class="n">total1</span><span class="o">-</span><span class="n">ag1</span>
+<span class="n">x3</span><span class="o">=</span><span class="n">ag</span><span class="o">-</span><span class="n">ag1</span>
+<span class="n">x4</span><span class="o">=</span><span class="p">(</span><span class="n">bg</span><span class="o">+</span><span class="n">cg</span><span class="o">+</span><span class="n">dg</span><span class="o">+</span><span class="n">eg</span><span class="o">+</span><span class="n">fg</span><span class="o">+</span><span class="n">gg</span><span class="o">+</span><span class="n">hg</span><span class="o">+</span><span class="n">ig</span><span class="o">+</span><span class="n">jg</span><span class="p">)</span><span class="o">-</span><span class="p">(</span><span class="n">bg1</span><span class="o">+</span><span class="n">cg1</span><span class="o">+</span><span class="n">dg1</span><span class="o">+</span><span class="n">eg1</span><span class="o">+</span><span class="n">fg1</span><span class="o">+</span><span class="n">gg1</span><span class="o">+</span><span class="n">hg1</span><span class="o">+</span><span class="n">ig1</span><span class="o">+</span><span class="n">jg1</span><span class="p">)</span>
 
 <span class="n">wp_a</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">((</span><span class="n">x1</span><span class="o">/</span><span class="p">(</span><span class="n">x1</span><span class="o">+</span><span class="n">x2</span><span class="p">))</span><span class="o">/</span><span class="p">(</span><span class="n">x3</span><span class="o">/</span><span class="p">(</span><span class="n">x3</span><span class="o">+</span><span class="n">x4</span><span class="p">)))</span>
 <span class="n">wn_a</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">((</span><span class="n">x2</span><span class="o">/</span><span class="p">(</span><span class="n">x1</span><span class="o">+</span><span class="n">x2</span><span class="p">))</span><span class="o">/</span><span class="p">(</span><span class="n">x4</span><span class="o">/</span><span class="p">(</span><span class="n">x3</span><span class="o">+</span><span class="n">x4</span><span class="p">)))</span>
@@ -1194,10 +1212,10 @@ es cero cuando la clase no afecta, es positivo cuando existe una correlación di
 <span class="n">geologia_c</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">geologia</span><span class="o">==</span><span class="mi">2</span><span class="p">,</span><span class="n">cont</span><span class="p">,</span><span class="n">geologia</span><span class="p">)</span>
 
 <span class="c1">#Clase b</span>
-<span class="n">x1</span><span class="o">=</span><span class="n">b1</span>
-<span class="n">x2</span><span class="o">=</span><span class="n">total1</span><span class="o">-</span><span class="n">b1</span>
-<span class="n">x3</span><span class="o">=</span><span class="n">b</span><span class="o">-</span><span class="n">b1</span>
-<span class="n">x4</span><span class="o">=</span><span class="p">(</span><span class="n">a</span><span class="o">+</span><span class="n">c</span><span class="o">+</span><span class="n">d</span><span class="o">+</span><span class="n">e</span><span class="o">+</span><span class="n">f</span><span class="o">+</span><span class="n">g</span><span class="o">+</span><span class="n">h</span><span class="o">+</span><span class="n">i</span><span class="o">+</span><span class="n">j</span><span class="p">)</span><span class="o">-</span><span class="p">(</span><span class="n">a1</span><span class="o">+</span><span class="n">c1</span><span class="o">+</span><span class="n">d1</span><span class="o">+</span><span class="n">e1</span><span class="o">+</span><span class="n">f1</span><span class="o">+</span><span class="n">g1</span><span class="o">+</span><span class="n">h1</span><span class="o">+</span><span class="n">i1</span><span class="o">+</span><span class="n">j1</span><span class="p">)</span>
+<span class="n">x1</span><span class="o">=</span><span class="n">bg1</span>
+<span class="n">x2</span><span class="o">=</span><span class="n">total1</span><span class="o">-</span><span class="n">bg1</span>
+<span class="n">x3</span><span class="o">=</span><span class="n">bg</span><span class="o">-</span><span class="n">bg1</span>
+<span class="n">x4</span><span class="o">=</span><span class="p">(</span><span class="n">ag</span><span class="o">+</span><span class="n">cg</span><span class="o">+</span><span class="n">dg</span><span class="o">+</span><span class="n">eg</span><span class="o">+</span><span class="n">fg</span><span class="o">+</span><span class="n">gg</span><span class="o">+</span><span class="n">hg</span><span class="o">+</span><span class="n">ig</span><span class="o">+</span><span class="n">jg</span><span class="p">)</span><span class="o">-</span><span class="p">(</span><span class="n">ag1</span><span class="o">+</span><span class="n">cg1</span><span class="o">+</span><span class="n">dg1</span><span class="o">+</span><span class="n">eg1</span><span class="o">+</span><span class="n">fg1</span><span class="o">+</span><span class="n">gg1</span><span class="o">+</span><span class="n">hg1</span><span class="o">+</span><span class="n">ig1</span><span class="o">+</span><span class="n">jg1</span><span class="p">)</span>
 
 <span class="n">wp_b</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">((</span><span class="n">x1</span><span class="o">/</span><span class="p">(</span><span class="n">x1</span><span class="o">+</span><span class="n">x2</span><span class="p">))</span><span class="o">/</span><span class="p">(</span><span class="n">x3</span><span class="o">/</span><span class="p">(</span><span class="n">x3</span><span class="o">+</span><span class="n">x4</span><span class="p">)))</span>
 <span class="n">wn_b</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">((</span><span class="n">x2</span><span class="o">/</span><span class="p">(</span><span class="n">x1</span><span class="o">+</span><span class="n">x2</span><span class="p">))</span><span class="o">/</span><span class="p">(</span><span class="n">x4</span><span class="o">/</span><span class="p">(</span><span class="n">x3</span><span class="o">+</span><span class="n">x4</span><span class="p">)))</span>
@@ -1206,10 +1224,10 @@ es cero cuando la clase no afecta, es positivo cuando existe una correlación di
 <span class="n">geologia_c</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">where</span> <span class="p">(</span><span class="n">geologia_c</span><span class="o">==</span><span class="mi">4</span><span class="p">,</span><span class="n">cont</span><span class="p">,</span><span class="n">geologia_c</span><span class="p">)</span>
 
 <span class="c1">#Clase c</span>
-<span class="n">x1</span><span class="o">=</span><span class="n">c1</span>
-<span class="n">x2</span><span class="o">=</span><span class="n">total1</span><span class="o">-</span><span class="n">c1</span>
-<span class="n">x3</span><span class="o">=</span><span class="n">c</span><span class="o">-</span><span class="n">c1</span>
-<span class="n">x4</span><span class="o">=</span><span class="p">(</span><span class="n">a</span><span class="o">+</span><span class="n">b</span><span class="o">+</span><span class="n">d</span><span class="o">+</span><span class="n">e</span><span class="o">+</span><span class="n">f</span><span class="o">+</span><span class="n">g</span><span class="o">+</span><span class="n">h</span><span class="o">+</span><span class="n">i</span><span class="o">+</span><span class="n">j</span><span class="p">)</span><span class="o">-</span><span class="p">(</span><span class="n">a1</span><span class="o">+</span><span class="n">b1</span><span class="o">+</span><span class="n">d1</span><span class="o">+</span><span class="n">e1</span><span class="o">+</span><span class="n">f1</span><span class="o">+</span><span class="n">g1</span><span class="o">+</span><span class="n">h1</span><span class="o">+</span><span class="n">i1</span><span class="o">+</span><span class="n">j1</span><span class="p">)</span>
+<span class="n">x1</span><span class="o">=</span><span class="n">cg1</span>
+<span class="n">x2</span><span class="o">=</span><span class="n">total1</span><span class="o">-</span><span class="n">cg1</span>
+<span class="n">x3</span><span class="o">=</span><span class="n">cg</span><span class="o">-</span><span class="n">cg1</span>
+<span class="n">x4</span><span class="o">=</span><span class="p">(</span><span class="n">ag</span><span class="o">+</span><span class="n">bg</span><span class="o">+</span><span class="n">dg</span><span class="o">+</span><span class="n">eg</span><span class="o">+</span><span class="n">fg</span><span class="o">+</span><span class="n">gg</span><span class="o">+</span><span class="n">hg</span><span class="o">+</span><span class="n">ig</span><span class="o">+</span><span class="n">jg</span><span class="p">)</span><span class="o">-</span><span class="p">(</span><span class="n">ag1</span><span class="o">+</span><span class="n">bg1</span><span class="o">+</span><span class="n">dg1</span><span class="o">+</span><span class="n">eg1</span><span class="o">+</span><span class="n">fg1</span><span class="o">+</span><span class="n">gg1</span><span class="o">+</span><span class="n">hg1</span><span class="o">+</span><span class="n">ig1</span><span class="o">+</span><span class="n">jg1</span><span class="p">)</span>
 
 <span class="n">wp_c</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">((</span><span class="n">x1</span><span class="o">/</span><span class="p">(</span><span class="n">x1</span><span class="o">+</span><span class="n">x2</span><span class="p">))</span><span class="o">/</span><span class="p">(</span><span class="n">x3</span><span class="o">/</span><span class="p">(</span><span class="n">x3</span><span class="o">+</span><span class="n">x4</span><span class="p">)))</span>
 <span class="n">wn_c</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">((</span><span class="n">x2</span><span class="o">/</span><span class="p">(</span><span class="n">x1</span><span class="o">+</span><span class="n">x2</span><span class="p">))</span><span class="o">/</span><span class="p">(</span><span class="n">x4</span><span class="o">/</span><span class="p">(</span><span class="n">x3</span><span class="o">+</span><span class="n">x4</span><span class="p">)))</span>
@@ -1218,10 +1236,10 @@ es cero cuando la clase no afecta, es positivo cuando existe una correlación di
 <span class="n">geologia_c</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">where</span> <span class="p">(</span><span class="n">geologia_c</span><span class="o">==</span><span class="mi">6</span><span class="p">,</span><span class="n">cont</span><span class="p">,</span><span class="n">geologia_c</span><span class="p">)</span>
 
 <span class="c1">#Clase d</span>
-<span class="n">x1</span><span class="o">=</span><span class="n">d1</span>
-<span class="n">x2</span><span class="o">=</span><span class="n">total1</span><span class="o">-</span><span class="n">d1</span>
-<span class="n">x3</span><span class="o">=</span><span class="n">d</span><span class="o">-</span><span class="n">d1</span>
-<span class="n">x4</span><span class="o">=</span><span class="p">(</span><span class="n">a</span><span class="o">+</span><span class="n">b</span><span class="o">+</span><span class="n">c</span><span class="o">+</span><span class="n">e</span><span class="o">+</span><span class="n">f</span><span class="o">+</span><span class="n">g</span><span class="o">+</span><span class="n">h</span><span class="o">+</span><span class="n">i</span><span class="o">+</span><span class="n">j</span><span class="p">)</span><span class="o">-</span><span class="p">(</span><span class="n">a1</span><span class="o">+</span><span class="n">b1</span><span class="o">+</span><span class="n">c1</span><span class="o">+</span><span class="n">e1</span><span class="o">+</span><span class="n">f1</span><span class="o">+</span><span class="n">g1</span><span class="o">+</span><span class="n">h1</span><span class="o">+</span><span class="n">i1</span><span class="o">+</span><span class="n">j1</span><span class="p">)</span>
+<span class="n">x1</span><span class="o">=</span><span class="n">dg1</span>
+<span class="n">x2</span><span class="o">=</span><span class="n">total1</span><span class="o">-</span><span class="n">dg1</span>
+<span class="n">x3</span><span class="o">=</span><span class="n">dg</span><span class="o">-</span><span class="n">dg1</span>
+<span class="n">x4</span><span class="o">=</span><span class="p">(</span><span class="n">ag</span><span class="o">+</span><span class="n">bg</span><span class="o">+</span><span class="n">cg</span><span class="o">+</span><span class="n">eg</span><span class="o">+</span><span class="n">fg</span><span class="o">+</span><span class="n">gg</span><span class="o">+</span><span class="n">hg</span><span class="o">+</span><span class="n">ig</span><span class="o">+</span><span class="n">jg</span><span class="p">)</span><span class="o">-</span><span class="p">(</span><span class="n">ag1</span><span class="o">+</span><span class="n">bg1</span><span class="o">+</span><span class="n">cg1</span><span class="o">+</span><span class="n">eg1</span><span class="o">+</span><span class="n">fg1</span><span class="o">+</span><span class="n">gg1</span><span class="o">+</span><span class="n">hg1</span><span class="o">+</span><span class="n">ig1</span><span class="o">+</span><span class="n">jg1</span><span class="p">)</span>
 
 <span class="n">wp_d</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">((</span><span class="n">x1</span><span class="o">/</span><span class="p">(</span><span class="n">x1</span><span class="o">+</span><span class="n">x2</span><span class="p">))</span><span class="o">/</span><span class="p">(</span><span class="n">x3</span><span class="o">/</span><span class="p">(</span><span class="n">x3</span><span class="o">+</span><span class="n">x4</span><span class="p">)))</span>
 <span class="n">wn_d</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">((</span><span class="n">x2</span><span class="o">/</span><span class="p">(</span><span class="n">x1</span><span class="o">+</span><span class="n">x2</span><span class="p">))</span><span class="o">/</span><span class="p">(</span><span class="n">x4</span><span class="o">/</span><span class="p">(</span><span class="n">x3</span><span class="o">+</span><span class="n">x4</span><span class="p">)))</span>
@@ -1230,10 +1248,10 @@ es cero cuando la clase no afecta, es positivo cuando existe una correlación di
 <span class="n">geologia_c</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">where</span> <span class="p">(</span><span class="n">geologia_c</span><span class="o">==</span><span class="mi">8</span><span class="p">,</span><span class="n">cont</span><span class="p">,</span><span class="n">geologia_c</span><span class="p">)</span>
 
 <span class="c1">#Clase e</span>
-<span class="n">x1</span><span class="o">=</span><span class="n">e1</span>
-<span class="n">x2</span><span class="o">=</span><span class="n">total1</span><span class="o">-</span><span class="n">e1</span>
-<span class="n">x3</span><span class="o">=</span><span class="n">e</span><span class="o">-</span><span class="n">e1</span>
-<span class="n">x4</span><span class="o">=</span><span class="p">(</span><span class="n">a</span><span class="o">+</span><span class="n">b</span><span class="o">+</span><span class="n">c</span><span class="o">+</span><span class="n">d</span><span class="o">+</span><span class="n">f</span><span class="o">+</span><span class="n">g</span><span class="o">+</span><span class="n">h</span><span class="o">+</span><span class="n">i</span><span class="o">+</span><span class="n">j</span><span class="p">)</span><span class="o">-</span><span class="p">(</span><span class="n">a1</span><span class="o">+</span><span class="n">b1</span><span class="o">+</span><span class="n">c1</span><span class="o">+</span><span class="n">d1</span><span class="o">+</span><span class="n">f1</span><span class="o">+</span><span class="n">g1</span><span class="o">+</span><span class="n">h1</span><span class="o">+</span><span class="n">i1</span><span class="o">+</span><span class="n">j1</span><span class="p">)</span>
+<span class="n">x1</span><span class="o">=</span><span class="n">eg1</span>
+<span class="n">x2</span><span class="o">=</span><span class="n">total1</span><span class="o">-</span><span class="n">eg1</span>
+<span class="n">x3</span><span class="o">=</span><span class="n">eg</span><span class="o">-</span><span class="n">eg1</span>
+<span class="n">x4</span><span class="o">=</span><span class="p">(</span><span class="n">ag</span><span class="o">+</span><span class="n">bg</span><span class="o">+</span><span class="n">cg</span><span class="o">+</span><span class="n">dg</span><span class="o">+</span><span class="n">fg</span><span class="o">+</span><span class="n">gg</span><span class="o">+</span><span class="n">hg</span><span class="o">+</span><span class="n">ig</span><span class="o">+</span><span class="n">jg</span><span class="p">)</span><span class="o">-</span><span class="p">(</span><span class="n">ag1</span><span class="o">+</span><span class="n">bg1</span><span class="o">+</span><span class="n">cg1</span><span class="o">+</span><span class="n">dg1</span><span class="o">+</span><span class="n">fg1</span><span class="o">+</span><span class="n">gg1</span><span class="o">+</span><span class="n">hg1</span><span class="o">+</span><span class="n">ig1</span><span class="o">+</span><span class="n">jg1</span><span class="p">)</span>
 
 <span class="n">wp_e</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">((</span><span class="n">x1</span><span class="o">/</span><span class="p">(</span><span class="n">x1</span><span class="o">+</span><span class="n">x2</span><span class="p">))</span><span class="o">/</span><span class="p">(</span><span class="n">x3</span><span class="o">/</span><span class="p">(</span><span class="n">x3</span><span class="o">+</span><span class="n">x4</span><span class="p">)))</span>
 <span class="n">wn_e</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">((</span><span class="n">x2</span><span class="o">/</span><span class="p">(</span><span class="n">x1</span><span class="o">+</span><span class="n">x2</span><span class="p">))</span><span class="o">/</span><span class="p">(</span><span class="n">x4</span><span class="o">/</span><span class="p">(</span><span class="n">x3</span><span class="o">+</span><span class="n">x4</span><span class="p">)))</span>
@@ -1242,10 +1260,10 @@ es cero cuando la clase no afecta, es positivo cuando existe una correlación di
 <span class="n">geologia_c</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">where</span> <span class="p">(</span><span class="n">geologia_c</span><span class="o">==</span><span class="mi">9</span><span class="p">,</span><span class="n">cont</span><span class="p">,</span><span class="n">geologia_c</span><span class="p">)</span>
 
 <span class="c1">#Clase f</span>
-<span class="n">x1</span><span class="o">=</span><span class="n">f1</span>
-<span class="n">x2</span><span class="o">=</span><span class="n">total1</span><span class="o">-</span><span class="n">f1</span>
-<span class="n">x3</span><span class="o">=</span><span class="n">f</span><span class="o">-</span><span class="n">f1</span>
-<span class="n">x4</span><span class="o">=</span><span class="p">(</span><span class="n">a</span><span class="o">+</span><span class="n">b</span><span class="o">+</span><span class="n">c</span><span class="o">+</span><span class="n">d</span><span class="o">+</span><span class="n">e</span><span class="o">+</span><span class="n">g</span><span class="o">+</span><span class="n">h</span><span class="o">+</span><span class="n">i</span><span class="o">+</span><span class="n">j</span><span class="p">)</span><span class="o">-</span><span class="p">(</span><span class="n">a1</span><span class="o">+</span><span class="n">b1</span><span class="o">+</span><span class="n">c1</span><span class="o">+</span><span class="n">d1</span><span class="o">+</span><span class="n">e1</span><span class="o">+</span><span class="n">g1</span><span class="o">+</span><span class="n">h1</span><span class="o">+</span><span class="n">i1</span><span class="o">+</span><span class="n">j1</span><span class="p">)</span>
+<span class="n">x1</span><span class="o">=</span><span class="n">fg1</span>
+<span class="n">x2</span><span class="o">=</span><span class="n">total1</span><span class="o">-</span><span class="n">fg1</span>
+<span class="n">x3</span><span class="o">=</span><span class="n">fg</span><span class="o">-</span><span class="n">fg1</span>
+<span class="n">x4</span><span class="o">=</span><span class="p">(</span><span class="n">ag</span><span class="o">+</span><span class="n">bg</span><span class="o">+</span><span class="n">cg</span><span class="o">+</span><span class="n">dg</span><span class="o">+</span><span class="n">eg</span><span class="o">+</span><span class="n">gg</span><span class="o">+</span><span class="n">hg</span><span class="o">+</span><span class="n">ig</span><span class="o">+</span><span class="n">jg</span><span class="p">)</span><span class="o">-</span><span class="p">(</span><span class="n">ag1</span><span class="o">+</span><span class="n">bg1</span><span class="o">+</span><span class="n">cg1</span><span class="o">+</span><span class="n">dg1</span><span class="o">+</span><span class="n">eg1</span><span class="o">+</span><span class="n">gg1</span><span class="o">+</span><span class="n">hg1</span><span class="o">+</span><span class="n">ig1</span><span class="o">+</span><span class="n">jg1</span><span class="p">)</span>
 
 <span class="n">wp_f</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">((</span><span class="n">x1</span><span class="o">/</span><span class="p">(</span><span class="n">x1</span><span class="o">+</span><span class="n">x2</span><span class="p">))</span><span class="o">/</span><span class="p">(</span><span class="n">x3</span><span class="o">/</span><span class="p">(</span><span class="n">x3</span><span class="o">+</span><span class="n">x4</span><span class="p">)))</span>
 <span class="n">wn_f</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">((</span><span class="n">x2</span><span class="o">/</span><span class="p">(</span><span class="n">x1</span><span class="o">+</span><span class="n">x2</span><span class="p">))</span><span class="o">/</span><span class="p">(</span><span class="n">x4</span><span class="o">/</span><span class="p">(</span><span class="n">x3</span><span class="o">+</span><span class="n">x4</span><span class="p">)))</span>
@@ -1254,10 +1272,10 @@ es cero cuando la clase no afecta, es positivo cuando existe una correlación di
 <span class="n">geologia_c</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">where</span> <span class="p">(</span><span class="n">geologia_c</span><span class="o">==</span><span class="mi">10</span><span class="p">,</span><span class="n">cont</span><span class="p">,</span><span class="n">geologia_c</span><span class="p">)</span>
 
 <span class="c1">#Clase g</span>
-<span class="n">x1</span><span class="o">=</span><span class="n">g1</span>
-<span class="n">x2</span><span class="o">=</span><span class="n">total1</span><span class="o">-</span><span class="n">g1</span>
-<span class="n">x3</span><span class="o">=</span><span class="n">g</span><span class="o">-</span><span class="n">g1</span>
-<span class="n">x4</span><span class="o">=</span><span class="p">(</span><span class="n">a</span><span class="o">+</span><span class="n">b</span><span class="o">+</span><span class="n">c</span><span class="o">+</span><span class="n">d</span><span class="o">+</span><span class="n">f</span><span class="o">+</span><span class="n">e</span><span class="o">+</span><span class="n">h</span><span class="o">+</span><span class="n">i</span><span class="o">+</span><span class="n">j</span><span class="p">)</span><span class="o">-</span><span class="p">(</span><span class="n">a1</span><span class="o">+</span><span class="n">b1</span><span class="o">+</span><span class="n">c1</span><span class="o">+</span><span class="n">d1</span><span class="o">+</span><span class="n">f1</span><span class="o">+</span><span class="n">e1</span><span class="o">+</span><span class="n">h1</span><span class="o">+</span><span class="n">i1</span><span class="o">+</span><span class="n">j1</span><span class="p">)</span>
+<span class="n">x1</span><span class="o">=</span><span class="n">gg1</span>
+<span class="n">x2</span><span class="o">=</span><span class="n">total1</span><span class="o">-</span><span class="n">gg1</span>
+<span class="n">x3</span><span class="o">=</span><span class="n">gg</span><span class="o">-</span><span class="n">gg1</span>
+<span class="n">x4</span><span class="o">=</span><span class="p">(</span><span class="n">ag</span><span class="o">+</span><span class="n">bg</span><span class="o">+</span><span class="n">cg</span><span class="o">+</span><span class="n">dg</span><span class="o">+</span><span class="n">fg</span><span class="o">+</span><span class="n">eg</span><span class="o">+</span><span class="n">hg</span><span class="o">+</span><span class="n">ig</span><span class="o">+</span><span class="n">jg</span><span class="p">)</span><span class="o">-</span><span class="p">(</span><span class="n">ag1</span><span class="o">+</span><span class="n">bg1</span><span class="o">+</span><span class="n">cg1</span><span class="o">+</span><span class="n">dg1</span><span class="o">+</span><span class="n">fg1</span><span class="o">+</span><span class="n">eg1</span><span class="o">+</span><span class="n">hg1</span><span class="o">+</span><span class="n">ig1</span><span class="o">+</span><span class="n">jg1</span><span class="p">)</span>
 
 <span class="n">wp_g</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">((</span><span class="n">x1</span><span class="o">/</span><span class="p">(</span><span class="n">x1</span><span class="o">+</span><span class="n">x2</span><span class="p">))</span><span class="o">/</span><span class="p">(</span><span class="n">x3</span><span class="o">/</span><span class="p">(</span><span class="n">x3</span><span class="o">+</span><span class="n">x4</span><span class="p">)))</span>
 <span class="n">wn_g</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">((</span><span class="n">x2</span><span class="o">/</span><span class="p">(</span><span class="n">x1</span><span class="o">+</span><span class="n">x2</span><span class="p">))</span><span class="o">/</span><span class="p">(</span><span class="n">x4</span><span class="o">/</span><span class="p">(</span><span class="n">x3</span><span class="o">+</span><span class="n">x4</span><span class="p">)))</span>
@@ -1266,10 +1284,10 @@ es cero cuando la clase no afecta, es positivo cuando existe una correlación di
 <span class="n">geologia_c</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">where</span> <span class="p">(</span><span class="n">geologia_c</span><span class="o">==</span><span class="mi">11</span><span class="p">,</span><span class="n">cont</span><span class="p">,</span><span class="n">geologia_c</span><span class="p">)</span>
 
 <span class="c1">#Clase h</span>
-<span class="n">x1</span><span class="o">=</span><span class="n">h1</span>
-<span class="n">x2</span><span class="o">=</span><span class="n">total1</span><span class="o">-</span><span class="n">h1</span>
-<span class="n">x3</span><span class="o">=</span><span class="n">h</span><span class="o">-</span><span class="n">h1</span>
-<span class="n">x4</span><span class="o">=</span><span class="p">(</span><span class="n">a</span><span class="o">+</span><span class="n">b</span><span class="o">+</span><span class="n">c</span><span class="o">+</span><span class="n">d</span><span class="o">+</span><span class="n">f</span><span class="o">+</span><span class="n">g</span><span class="o">+</span><span class="n">e</span><span class="o">+</span><span class="n">i</span><span class="o">+</span><span class="n">j</span><span class="p">)</span><span class="o">-</span><span class="p">(</span><span class="n">a1</span><span class="o">+</span><span class="n">b1</span><span class="o">+</span><span class="n">c1</span><span class="o">+</span><span class="n">d1</span><span class="o">+</span><span class="n">f1</span><span class="o">+</span><span class="n">g1</span><span class="o">+</span><span class="n">e1</span><span class="o">+</span><span class="n">i1</span><span class="o">+</span><span class="n">j1</span><span class="p">)</span>
+<span class="n">x1</span><span class="o">=</span><span class="n">hg1</span>
+<span class="n">x2</span><span class="o">=</span><span class="n">total1</span><span class="o">-</span><span class="n">hg1</span>
+<span class="n">x3</span><span class="o">=</span><span class="n">hg</span><span class="o">-</span><span class="n">hg1</span>
+<span class="n">x4</span><span class="o">=</span><span class="p">(</span><span class="n">ag</span><span class="o">+</span><span class="n">bg</span><span class="o">+</span><span class="n">cg</span><span class="o">+</span><span class="n">dg</span><span class="o">+</span><span class="n">fg</span><span class="o">+</span><span class="n">gg</span><span class="o">+</span><span class="n">eg</span><span class="o">+</span><span class="n">ig</span><span class="o">+</span><span class="n">jg</span><span class="p">)</span><span class="o">-</span><span class="p">(</span><span class="n">ag1</span><span class="o">+</span><span class="n">bg1</span><span class="o">+</span><span class="n">cg1</span><span class="o">+</span><span class="n">dg1</span><span class="o">+</span><span class="n">fg1</span><span class="o">+</span><span class="n">gg1</span><span class="o">+</span><span class="n">eg1</span><span class="o">+</span><span class="n">ig1</span><span class="o">+</span><span class="n">jg1</span><span class="p">)</span>
 
 <span class="n">wp_h</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">((</span><span class="n">x1</span><span class="o">/</span><span class="p">(</span><span class="n">x1</span><span class="o">+</span><span class="n">x2</span><span class="p">))</span><span class="o">/</span><span class="p">(</span><span class="n">x3</span><span class="o">/</span><span class="p">(</span><span class="n">x3</span><span class="o">+</span><span class="n">x4</span><span class="p">)))</span>
 <span class="n">wn_h</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">((</span><span class="n">x2</span><span class="o">/</span><span class="p">(</span><span class="n">x1</span><span class="o">+</span><span class="n">x2</span><span class="p">))</span><span class="o">/</span><span class="p">(</span><span class="n">x4</span><span class="o">/</span><span class="p">(</span><span class="n">x3</span><span class="o">+</span><span class="n">x4</span><span class="p">)))</span>
@@ -1278,10 +1296,10 @@ es cero cuando la clase no afecta, es positivo cuando existe una correlación di
 <span class="n">geologia_c</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">where</span> <span class="p">(</span><span class="n">geologia_c</span><span class="o">==</span><span class="mi">14</span><span class="p">,</span><span class="n">cont</span><span class="p">,</span><span class="n">geologia_c</span><span class="p">)</span>
 
 <span class="c1">#Clase i</span>
-<span class="n">x1</span><span class="o">=</span><span class="n">i1</span>
-<span class="n">x2</span><span class="o">=</span><span class="n">total1</span><span class="o">-</span><span class="n">i1</span>
-<span class="n">x3</span><span class="o">=</span><span class="n">i</span><span class="o">-</span><span class="n">i1</span>
-<span class="n">x4</span><span class="o">=</span><span class="p">(</span><span class="n">a</span><span class="o">+</span><span class="n">b</span><span class="o">+</span><span class="n">c</span><span class="o">+</span><span class="n">d</span><span class="o">+</span><span class="n">f</span><span class="o">+</span><span class="n">g</span><span class="o">+</span><span class="n">h</span><span class="o">+</span><span class="n">e</span><span class="o">+</span><span class="n">j</span><span class="p">)</span><span class="o">-</span><span class="p">(</span><span class="n">a1</span><span class="o">+</span><span class="n">b1</span><span class="o">+</span><span class="n">c1</span><span class="o">+</span><span class="n">d1</span><span class="o">+</span><span class="n">f1</span><span class="o">+</span><span class="n">g1</span><span class="o">+</span><span class="n">h1</span><span class="o">+</span><span class="n">e1</span><span class="o">+</span><span class="n">j1</span><span class="p">)</span>
+<span class="n">x1</span><span class="o">=</span><span class="n">ig1</span>
+<span class="n">x2</span><span class="o">=</span><span class="n">total1</span><span class="o">-</span><span class="n">ig1</span>
+<span class="n">x3</span><span class="o">=</span><span class="n">ig</span><span class="o">-</span><span class="n">ig1</span>
+<span class="n">x4</span><span class="o">=</span><span class="p">(</span><span class="n">ag</span><span class="o">+</span><span class="n">bg</span><span class="o">+</span><span class="n">cg</span><span class="o">+</span><span class="n">dg</span><span class="o">+</span><span class="n">fg</span><span class="o">+</span><span class="n">gg</span><span class="o">+</span><span class="n">hg</span><span class="o">+</span><span class="n">eg</span><span class="o">+</span><span class="n">jg</span><span class="p">)</span><span class="o">-</span><span class="p">(</span><span class="n">ag1</span><span class="o">+</span><span class="n">bg1</span><span class="o">+</span><span class="n">cg1</span><span class="o">+</span><span class="n">dg1</span><span class="o">+</span><span class="n">fg1</span><span class="o">+</span><span class="n">gg1</span><span class="o">+</span><span class="n">hg1</span><span class="o">+</span><span class="n">eg1</span><span class="o">+</span><span class="n">jg1</span><span class="p">)</span>
 
 <span class="n">wp_i</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">((</span><span class="n">x1</span><span class="o">/</span><span class="p">(</span><span class="n">x1</span><span class="o">+</span><span class="n">x2</span><span class="p">))</span><span class="o">/</span><span class="p">(</span><span class="n">x3</span><span class="o">/</span><span class="p">(</span><span class="n">x3</span><span class="o">+</span><span class="n">x4</span><span class="p">)))</span>
 <span class="n">wn_i</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">((</span><span class="n">x2</span><span class="o">/</span><span class="p">(</span><span class="n">x1</span><span class="o">+</span><span class="n">x2</span><span class="p">))</span><span class="o">/</span><span class="p">(</span><span class="n">x4</span><span class="o">/</span><span class="p">(</span><span class="n">x3</span><span class="o">+</span><span class="n">x4</span><span class="p">)))</span>
@@ -1290,22 +1308,16 @@ es cero cuando la clase no afecta, es positivo cuando existe una correlación di
 <span class="n">geologia_c</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">where</span> <span class="p">(</span><span class="n">geologia_c</span><span class="o">==</span><span class="mi">15</span><span class="p">,</span><span class="n">cont</span><span class="p">,</span><span class="n">geologia_c</span><span class="p">)</span>
 
 <span class="c1">#Clase j</span>
-<span class="n">x1</span><span class="o">=</span><span class="n">j1</span>
-<span class="n">x2</span><span class="o">=</span><span class="n">total1</span><span class="o">-</span><span class="n">j1</span>
-<span class="n">x3</span><span class="o">=</span><span class="n">j</span><span class="o">-</span><span class="n">j1</span>
-<span class="n">x4</span><span class="o">=</span><span class="p">(</span><span class="n">a</span><span class="o">+</span><span class="n">b</span><span class="o">+</span><span class="n">c</span><span class="o">+</span><span class="n">d</span><span class="o">+</span><span class="n">f</span><span class="o">+</span><span class="n">g</span><span class="o">+</span><span class="n">h</span><span class="o">+</span><span class="n">e</span><span class="o">+</span><span class="n">i</span><span class="p">)</span><span class="o">-</span><span class="p">(</span><span class="n">a1</span><span class="o">+</span><span class="n">b1</span><span class="o">+</span><span class="n">c1</span><span class="o">+</span><span class="n">d1</span><span class="o">+</span><span class="n">f1</span><span class="o">+</span><span class="n">g1</span><span class="o">+</span><span class="n">h1</span><span class="o">+</span><span class="n">e1</span><span class="o">+</span><span class="n">i1</span><span class="p">)</span>
+<span class="n">x1</span><span class="o">=</span><span class="n">jg1</span>
+<span class="n">x2</span><span class="o">=</span><span class="n">total1</span><span class="o">-</span><span class="n">jg1</span>
+<span class="n">x3</span><span class="o">=</span><span class="n">jg</span><span class="o">-</span><span class="n">jg1</span>
+<span class="n">x4</span><span class="o">=</span><span class="p">(</span><span class="n">ag</span><span class="o">+</span><span class="n">bg</span><span class="o">+</span><span class="n">cg</span><span class="o">+</span><span class="n">dg</span><span class="o">+</span><span class="n">fg</span><span class="o">+</span><span class="n">gg</span><span class="o">+</span><span class="n">hg</span><span class="o">+</span><span class="n">eg</span><span class="o">+</span><span class="n">ig</span><span class="p">)</span><span class="o">-</span><span class="p">(</span><span class="n">ag1</span><span class="o">+</span><span class="n">bg1</span><span class="o">+</span><span class="n">cg1</span><span class="o">+</span><span class="n">dg1</span><span class="o">+</span><span class="n">fg1</span><span class="o">+</span><span class="n">gg1</span><span class="o">+</span><span class="n">hg1</span><span class="o">+</span><span class="n">eg1</span><span class="o">+</span><span class="n">ig1</span><span class="p">)</span>
 
 <span class="n">wp_j</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">((</span><span class="n">x1</span><span class="o">/</span><span class="p">(</span><span class="n">x1</span><span class="o">+</span><span class="n">x2</span><span class="p">))</span><span class="o">/</span><span class="p">(</span><span class="n">x3</span><span class="o">/</span><span class="p">(</span><span class="n">x3</span><span class="o">+</span><span class="n">x4</span><span class="p">)))</span>
 <span class="n">wn_j</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">((</span><span class="n">x2</span><span class="o">/</span><span class="p">(</span><span class="n">x1</span><span class="o">+</span><span class="n">x2</span><span class="p">))</span><span class="o">/</span><span class="p">(</span><span class="n">x4</span><span class="o">/</span><span class="p">(</span><span class="n">x3</span><span class="o">+</span><span class="n">x4</span><span class="p">)))</span>
 <span class="n">cont</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">(((</span><span class="n">x1</span><span class="o">/</span><span class="p">(</span><span class="n">x1</span><span class="o">+</span><span class="n">x2</span><span class="p">))</span><span class="o">/</span><span class="p">(</span><span class="n">x3</span><span class="o">/</span><span class="p">(</span><span class="n">x3</span><span class="o">+</span><span class="n">x4</span><span class="p">)))</span><span class="o">/</span><span class="p">((</span><span class="n">x2</span><span class="o">/</span><span class="p">(</span><span class="n">x1</span><span class="o">+</span><span class="n">x2</span><span class="p">))</span><span class="o">/</span><span class="p">(</span><span class="n">x4</span><span class="o">/</span><span class="p">(</span><span class="n">x3</span><span class="o">+</span><span class="n">x4</span><span class="p">))))</span>
 
 <span class="n">geologia_c</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">where</span> <span class="p">(</span><span class="n">geologia_c</span><span class="o">==</span><span class="mi">16</span><span class="p">,</span><span class="n">cont</span><span class="p">,</span><span class="n">geologia_c</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>237383 169 3060 32352 37658 22405 41720 515621 1850 18583
-612 1 1 98 1 43 118 736 13 1
 </pre></div>
 </div>
 </div>
@@ -1336,7 +1348,7 @@ es cero cuando la clase no afecta, es positivo cuando existe una correlación di
   0.54477773  0.55996406  1.20658234  1.38520843         nan]
 </pre></div>
 </div>
-<img alt="_images/08_bivariado_52_1.png" src="_images/08_bivariado_52_1.png" />
+<img alt="_images/08_bivariado_60_1.png" src="_images/08_bivariado_60_1.png" />
 </div>
 </div>
 <p>Finalmente se calcula el Indice de Susceptibildiad (IS), el cual corresponde a la suma de los mapas reclasificados con el valor del Contraste, de la siguiente forma.</p>
@@ -1349,7 +1361,7 @@ es cero cuando la clase no afecta, es positivo cuando existe una correlación di
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/08_bivariado_54_0.png" src="_images/08_bivariado_54_0.png" />
+<img alt="_images/08_bivariado_62_0.png" src="_images/08_bivariado_62_0.png" />
 </div>
 </div>
 </div>
