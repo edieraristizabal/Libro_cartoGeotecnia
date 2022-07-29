@@ -325,6 +325,13 @@
     <a class="reference internal nav-link" href="#peso-de-la-evidencia-woe">
      Peso de la evidencia (WoE)
     </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#python">
+       Python
+      </a>
+     </li>
+    </ul>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#evidential-belief-funtion-ebf">
@@ -343,11 +350,6 @@
     </a>
    </li>
   </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#python">
-   Python
-  </a>
  </li>
 </ul>
 
@@ -397,6 +399,13 @@
     <a class="reference internal nav-link" href="#peso-de-la-evidencia-woe">
      Peso de la evidencia (WoE)
     </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#python">
+       Python
+      </a>
+     </li>
+    </ul>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#evidential-belief-funtion-ebf">
@@ -415,11 +424,6 @@
     </a>
    </li>
   </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#python">
-   Python
-  </a>
  </li>
 </ul>
 
@@ -478,36 +482,8 @@ la clase  <span class="math notranslate nohighlight">\(\hat{B}_i\)</span>.</p>
 <p><span class="math notranslate nohighlight">\(C = W^+ - W^-\)</span></p>
 <p>Y el contraste C refleja el espacio de asociación respecto a la clase en la predicción del movimiento en masa, la cual
 es cero cuando la clase no afecta, es positivo cuando existe una correlación directa y negativo cuando existe una correlación inversa con la distribución de movimientos en masa.</p>
-</div>
-<div class="section" id="evidential-belief-funtion-ebf">
-<h3><em>Evidential Belief Funtion</em> (EBF)<a class="headerlink" href="#evidential-belief-funtion-ebf" title="Permalink to this headline">¶</a></h3>
-<p>El modelo EBF (Dempster - Shafer) consiste en el grado de <em>Belief</em> (Bel), <em>Disbelief</em> (Dis), <em>Uncertainty</em> (Unc) y <em>Plausibility</em> (Pls), con valores entre 0 y 1. Bels y Pls representan el límite de probabilidad Bayesiana inferior y superior. Mientras que, Pls es mayor o igual que Bel, y Unc es la diferencia entre ellos, indicando la incertidumbre del resultado.</p>
-<p><span class="math notranslate nohighlight">\(Wc_{ij}L=\frac{N(c \cap L)/N(c)}{N(L)-N(c \cap L)/N(S)-N(c)}\)</span></p>
-<p><span class="math notranslate nohighlight">\(Belc_{ij}=\frac{Wc_{ij}L}{\sum{Wc_{ij}L}}\)</span></p>
-<p><span class="math notranslate nohighlight">\(Wc_{ij} \bar L=\frac{N(c)-N(c \cap L)/N(c)}{N(S)-N(L)-N(c)-N(c \cap L)/N(S)-N(c)}\)</span></p>
-<p><span class="math notranslate nohighlight">\(Disc_{ij}=\frac{Wc_{ij} \bar L}{\sum{Wc_{ij} \bar L}}\)</span></p>
-<p><span class="math notranslate nohighlight">\(Uncc_{ij}=1-Belc_{ij} - Disc_{ij}\)</span></p>
-<div class="figure align-default" id="ebf">
-<a class="reference internal image-reference" href="https://www.researchgate.net/profile/Hossein-Nazmfar-2/publication/234059633/figure/fig5/AS:637397922508801&#64;1528978915684/Schematic-relationships-of-evidential-belief-functions-Althuwaynee-et-al-2012.png"><img alt="ebf" src="https://www.researchgate.net/profile/Hossein-Nazmfar-2/publication/234059633/figure/fig5/AS:637397922508801&#64;1528978915684/Schematic-relationships-of-evidential-belief-functions-Althuwaynee-et-al-2012.png" style="width: 600px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 32 </span><span class="caption-text">Método <em>Evidential Belief Funtion</em>.</span><a class="headerlink" href="#ebf" title="Permalink to this image">¶</a></p>
-</div>
-<div class="figure align-default" id="ebf1">
-<a class="reference internal image-reference" href="https://i.pinimg.com/564x/4c/90/c3/4c90c30f26e6385e74bb00899a4f7110.jpg"><img alt="ebf1" src="https://i.pinimg.com/564x/4c/90/c3/4c90c30f26e6385e74bb00899a4f7110.jpg" style="width: 400px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 33 </span><span class="caption-text">Ejemplo del cálculo de <em>Evidential Belief Funtion</em>.</span><a class="headerlink" href="#ebf1" title="Permalink to this image">¶</a></p>
-</div>
-</div>
-<div class="section" id="certainty-factor-cf">
-<h3><em>Certainty Factor</em> (CF)<a class="headerlink" href="#certainty-factor-cf" title="Permalink to this headline">¶</a></h3>
-<p>El valor de CF varía entre -1 y +1. Un valor positivo significa un incremento en la certidumbre de la ocurrencia de deslizamientos, mientras que un valor negativo corresponde a una reducción en dicha certidumbre. Un valor cercano a 0 significa que la probabilidad priori es muy similar a la probabilidad condicional.</p>
-<div class="figure align-default" id="cf">
-<a class="reference internal image-reference" href="https://i.pinimg.com/originals/ae/1a/55/ae1a558572dffa10393f414d91a5bf24.jpg"><img alt="cf" src="https://i.pinimg.com/originals/ae/1a/55/ae1a558572dffa10393f414d91a5bf24.jpg" style="width: 400px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 34 </span><span class="caption-text">Método de <em>Certainty Factor</em>.</span><a class="headerlink" href="#cf" title="Permalink to this image">¶</a></p>
-</div>
-<p>Donde PPa es la probabilidad condicional de la ocurrencia de un deslizamiento en la clase a. PPs es la probabilidad priori del número total de deslizamientos en el área.</p>
-</div>
-</div>
 <div class="section" id="python">
-<h2>Python<a class="headerlink" href="#python" title="Permalink to this headline">¶</a></h2>
+<h4>Python<a class="headerlink" href="#python" title="Permalink to this headline">¶</a></h4>
 <p>En el presente ejemplo, y solo con propósitos pedagógicos, se utlizarán solo tres variables (pendiente, geologia, specto) pero el procedimiento señalado se debera utilizar para todas las variables incorporadas en el modelo de susceptibilidad.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -521,7 +497,7 @@ es cero cuando la clase no afecta, es positivo cuando existe una correlación di
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
-<span class="o">~</span>\<span class="n">AppData</span>\<span class="n">Local</span>\<span class="n">Temp</span><span class="o">/</span><span class="n">ipykernel_21984</span><span class="o">/</span><span class="mf">1877902076.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="o">~</span>\<span class="n">AppData</span>\<span class="n">Local</span>\<span class="n">Temp</span><span class="o">/</span><span class="n">ipykernel_10372</span><span class="o">/</span><span class="mf">1877902076.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="kn">import</span> <span class="nn">rasterio</span> <span class="k">as</span> <span class="nn">rio</span>
 <span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="ne">----&gt; </span><span class="mi">3</span> <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
@@ -553,7 +529,7 @@ es cero cuando la clase no afecta, es positivo cuando existe una correlación di
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(910801,)
 </pre></div>
 </div>
-<img alt="_images/08_bivariado_11_1.png" src="_images/08_bivariado_11_1.png" />
+<img alt="_images/08_bivariado_9_1.png" src="_images/08_bivariado_9_1.png" />
 </div>
 </div>
 <p>Para saber cuantas celdas son tipo MenM, es decir con valor 1, se puede utilizar la siguiente función.</p>
@@ -584,7 +560,7 @@ es cero cuando la clase no afecta, es positivo cuando existe una correlación di
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/08_bivariado_15_0.png" src="_images/08_bivariado_15_0.png" />
+<img alt="_images/08_bivariado_13_0.png" src="_images/08_bivariado_13_0.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -603,7 +579,7 @@ es cero cuando la clase no afecta, es positivo cuando existe una correlación di
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(910801,)
 </pre></div>
 </div>
-<img alt="_images/08_bivariado_16_1.png" src="_images/08_bivariado_16_1.png" />
+<img alt="_images/08_bivariado_14_1.png" src="_images/08_bivariado_14_1.png" />
 </div>
 </div>
 <p>Se importa el mapa de Geologia y se convierte en un vector.</p>
@@ -623,7 +599,7 @@ es cero cuando la clase no afecta, es positivo cuando existe una correlación di
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.colorbar.Colorbar at 0x7f0f62becd10&gt;
 </pre></div>
 </div>
-<img alt="_images/08_bivariado_18_1.png" src="_images/08_bivariado_18_1.png" />
+<img alt="_images/08_bivariado_16_1.png" src="_images/08_bivariado_16_1.png" />
 </div>
 </div>
 <p>Para saber cuantas celdas tiene el mapa de cada clase, se puede convertir el mapa a un dataframe y utilizar la función value_counts</p>
@@ -834,7 +810,7 @@ Name: geologia, dtype: int64
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[-2.0507433  -1.373798   -0.38133818  0.16528755         nan]
 </pre></div>
 </div>
-<img alt="_images/08_bivariado_37_1.png" src="_images/08_bivariado_37_1.png" />
+<img alt="_images/08_bivariado_35_1.png" src="_images/08_bivariado_35_1.png" />
 </div>
 </div>
 <p>Este mismo procedimiento se realiza para la variable Aspecto</p>
@@ -956,7 +932,7 @@ Name: geologia, dtype: int64
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[-6.975576   -1.         -0.6254262  -0.29615796  2.4018128          nan]
 </pre></div>
 </div>
-<img alt="_images/08_bivariado_43_1.png" src="_images/08_bivariado_43_1.png" />
+<img alt="_images/08_bivariado_41_1.png" src="_images/08_bivariado_41_1.png" />
 </div>
 </div>
 <p>Para el mapa de Geologia se realiza un procedimiento similar, pero se debe tener en cuenta en este caso que Geología es una variable categórica, por lo cual no es necesario reclasificarla.</p>
@@ -1148,7 +1124,7 @@ Name: geologia, dtype: int64
   0.54477773  0.55996406  1.20658234  1.38520843         nan]
 </pre></div>
 </div>
-<img alt="_images/08_bivariado_48_1.png" src="_images/08_bivariado_48_1.png" />
+<img alt="_images/08_bivariado_46_1.png" src="_images/08_bivariado_46_1.png" />
 </div>
 </div>
 <p>Finalmente se calcula el Indice de Susceptibildiad (IS), el cual corresponde a la suma de los mapas reclasificados con el valor del Contraste, de la siguiente forma.</p>
@@ -1161,9 +1137,36 @@ Name: geologia, dtype: int64
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/08_bivariado_50_0.png" src="_images/08_bivariado_50_0.png" />
+<img alt="_images/08_bivariado_48_0.png" src="_images/08_bivariado_48_0.png" />
 </div>
 </div>
+</div>
+</div>
+<div class="section" id="evidential-belief-funtion-ebf">
+<h3><em>Evidential Belief Funtion</em> (EBF)<a class="headerlink" href="#evidential-belief-funtion-ebf" title="Permalink to this headline">¶</a></h3>
+<p>El modelo EBF (Dempster - Shafer) consiste en el grado de <em>Belief</em> (Bel), <em>Disbelief</em> (Dis), <em>Uncertainty</em> (Unc) y <em>Plausibility</em> (Pls), con valores entre 0 y 1. Bels y Pls representan el límite de probabilidad Bayesiana inferior y superior. Mientras que, Pls es mayor o igual que Bel, y Unc es la diferencia entre ellos, indicando la incertidumbre del resultado.</p>
+<p><span class="math notranslate nohighlight">\(Wc_{ij}L=\frac{N(c \cap L)/N(c)}{N(L)-N(c \cap L)/N(S)-N(c)}\)</span></p>
+<p><span class="math notranslate nohighlight">\(Belc_{ij}=\frac{Wc_{ij}L}{\sum{Wc_{ij}L}}\)</span></p>
+<p><span class="math notranslate nohighlight">\(Wc_{ij} \bar L=\frac{N(c)-N(c \cap L)/N(c)}{N(S)-N(L)-N(c)-N(c \cap L)/N(S)-N(c)}\)</span></p>
+<p><span class="math notranslate nohighlight">\(Disc_{ij}=\frac{Wc_{ij} \bar L}{\sum{Wc_{ij} \bar L}}\)</span></p>
+<p><span class="math notranslate nohighlight">\(Uncc_{ij}=1-Belc_{ij} - Disc_{ij}\)</span></p>
+<div class="figure align-default" id="ebf">
+<a class="reference internal image-reference" href="https://www.researchgate.net/profile/Hossein-Nazmfar-2/publication/234059633/figure/fig5/AS:637397922508801&#64;1528978915684/Schematic-relationships-of-evidential-belief-functions-Althuwaynee-et-al-2012.png"><img alt="ebf" src="https://www.researchgate.net/profile/Hossein-Nazmfar-2/publication/234059633/figure/fig5/AS:637397922508801&#64;1528978915684/Schematic-relationships-of-evidential-belief-functions-Althuwaynee-et-al-2012.png" style="width: 600px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 32 </span><span class="caption-text">Método <em>Evidential Belief Funtion</em>.</span><a class="headerlink" href="#ebf" title="Permalink to this image">¶</a></p>
+</div>
+<div class="figure align-default" id="ebf1">
+<a class="reference internal image-reference" href="https://i.pinimg.com/564x/4c/90/c3/4c90c30f26e6385e74bb00899a4f7110.jpg"><img alt="ebf1" src="https://i.pinimg.com/564x/4c/90/c3/4c90c30f26e6385e74bb00899a4f7110.jpg" style="width: 400px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 33 </span><span class="caption-text">Ejemplo del cálculo de <em>Evidential Belief Funtion</em>.</span><a class="headerlink" href="#ebf1" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+<div class="section" id="certainty-factor-cf">
+<h3><em>Certainty Factor</em> (CF)<a class="headerlink" href="#certainty-factor-cf" title="Permalink to this headline">¶</a></h3>
+<p>El valor de CF varía entre -1 y +1. Un valor positivo significa un incremento en la certidumbre de la ocurrencia de deslizamientos, mientras que un valor negativo corresponde a una reducción en dicha certidumbre. Un valor cercano a 0 significa que la probabilidad priori es muy similar a la probabilidad condicional.</p>
+<div class="figure align-default" id="cf">
+<a class="reference internal image-reference" href="https://i.pinimg.com/originals/ae/1a/55/ae1a558572dffa10393f414d91a5bf24.jpg"><img alt="cf" src="https://i.pinimg.com/originals/ae/1a/55/ae1a558572dffa10393f414d91a5bf24.jpg" style="width: 400px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 34 </span><span class="caption-text">Método de <em>Certainty Factor</em>.</span><a class="headerlink" href="#cf" title="Permalink to this image">¶</a></p>
+</div>
+<p>Donde PPa es la probabilidad condicional de la ocurrencia de un deslizamiento en la clase a. PPs es la probabilidad priori del número total de deslizamientos en el área.</p>
 <p>Podemos exportar el mapa obtenido en formato Tif.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1176,6 +1179,7 @@ Name: geologia, dtype: int64
               <span class="n">dtype</span><span class="o">=</span><span class="s1">&#39;float64&#39;</span><span class="p">,</span><span class="n">nodata</span><span class="o">=-</span><span class="mi">999</span><span class="p">,</span><span class="n">crs</span><span class="o">=</span><span class="n">raster_crs</span><span class="p">,</span><span class="n">transform</span><span class="o">=</span><span class="n">raster_transform</span><span class="p">)</span> <span class="k">as</span> <span class="n">dst</span><span class="p">:</span>
     <span class="n">dst</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">IS</span><span class="p">,</span><span class="mi">1</span><span class="p">);</span>
 </pre></div>
+</div>
 </div>
 </div>
 </div>
