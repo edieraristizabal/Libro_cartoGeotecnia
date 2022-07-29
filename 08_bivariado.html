@@ -334,6 +334,14 @@
      (EBF)
     </a>
    </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#certainty-factor-cf">
+     <em>
+      Certainty Factor
+     </em>
+     (CF)
+    </a>
+   </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -396,6 +404,14 @@
       Evidential Belief Funtion
      </em>
      (EBF)
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#certainty-factor-cf">
+     <em>
+      Certainty Factor
+     </em>
+     (CF)
     </a>
    </li>
   </ul>
@@ -476,9 +492,18 @@ es cero cuando la clase no afecta, es positivo cuando existe una correlación di
 <p class="caption"><span class="caption-number">Fig. 32 </span><span class="caption-text">Método <em>Evidential Belief Funtion</em>.</span><a class="headerlink" href="#ebf" title="Permalink to this image">¶</a></p>
 </div>
 <div class="figure align-default" id="ebf1">
-<a class="reference internal image-reference" href="https://i.pinimg.com/564x/4c/90/c3/4c90c30f26e6385e74bb00899a4f7110.jpg"><img alt="ebf1" src="https://i.pinimg.com/564x/4c/90/c3/4c90c30f26e6385e74bb00899a4f7110.jpg" style="width: 600px;" /></a>
+<a class="reference internal image-reference" href="https://i.pinimg.com/564x/4c/90/c3/4c90c30f26e6385e74bb00899a4f7110.jpg"><img alt="ebf1" src="https://i.pinimg.com/564x/4c/90/c3/4c90c30f26e6385e74bb00899a4f7110.jpg" style="width: 400px;" /></a>
 <p class="caption"><span class="caption-number">Fig. 33 </span><span class="caption-text">Ejemplo del cálculo de <em>Evidential Belief Funtion</em>.</span><a class="headerlink" href="#ebf1" title="Permalink to this image">¶</a></p>
 </div>
+</div>
+<div class="section" id="certainty-factor-cf">
+<h3><em>Certainty Factor</em> (CF)<a class="headerlink" href="#certainty-factor-cf" title="Permalink to this headline">¶</a></h3>
+<p>El valor de CF varía entre -1 y +1. Un valor positivo significa un incremento en la certidumbre de la ocurrencia de deslizamientos, mientras que un valor negativo corresponde a una reducción en dicha certidumbre. Un valor cercano a 0 significa que la probabilidad priori es muy similar a la probabilidad condicional.</p>
+<div class="figure align-default" id="cf">
+<a class="reference internal image-reference" href="https://i.pinimg.com/originals/ae/1a/55/ae1a558572dffa10393f414d91a5bf24.jpg"><img alt="cf" src="https://i.pinimg.com/originals/ae/1a/55/ae1a558572dffa10393f414d91a5bf24.jpg" style="width: 600px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 34 </span><span class="caption-text">Método de <em>Certainty Factor</em>.</span><a class="headerlink" href="#cf" title="Permalink to this image">¶</a></p>
+</div>
+<p>Donde PPa es la probabilidad condicional de la ocurrencia de un deslizamiento en la clase a. PPs es la probabilidad priori del número total de deslizamientos en el área.</p>
 </div>
 </div>
 <div class="section" id="python">
@@ -498,7 +523,7 @@ es cero cuando la clase no afecta, es positivo cuando existe una correlación di
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
-<span class="o">~</span>\<span class="n">AppData</span>\<span class="n">Local</span>\<span class="n">Temp</span><span class="o">/</span><span class="n">ipykernel_15484</span><span class="o">/</span><span class="mf">268380773.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="o">~</span>\<span class="n">AppData</span>\<span class="n">Local</span>\<span class="n">Temp</span><span class="o">/</span><span class="n">ipykernel_16872</span><span class="o">/</span><span class="mf">268380773.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="kn">from</span> <span class="nn">rasterio.plot</span> <span class="kn">import</span> <span class="n">show</span>
 <span class="ne">----&gt; </span><span class="mi">4</span> <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
