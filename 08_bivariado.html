@@ -321,12 +321,12 @@
      </em>
     </a>
    </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#peso-de-la-evidencia-wofe">
+     Peso de la evidencia (WofE)
+    </a>
+   </li>
   </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#peso-de-la-evidencia-wofe">
-   Peso de la evidencia (WofE)
-  </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#python">
@@ -377,12 +377,12 @@
      </em>
     </a>
    </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#peso-de-la-evidencia-wofe">
+     Peso de la evidencia (WofE)
+    </a>
+   </li>
   </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#peso-de-la-evidencia-wofe">
-   Peso de la evidencia (WofE)
-  </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#python">
@@ -427,46 +427,26 @@
 <p>Finalmente la susceptibilidad a movimientos en masa de cada celda es igual a:</p>
 <p><span class="math notranslate nohighlight">\(S^n = \sum w = w_{pendiente} + w_{geologia} + w_{coberturas} + ...w_{n} \)</span></p>
 </div>
-</div>
 <div class="section" id="peso-de-la-evidencia-wofe">
-<h2>Peso de la evidencia (WofE)<a class="headerlink" href="#peso-de-la-evidencia-wofe" title="Permalink to this headline">¶</a></h2>
-<p>Peso de la
-Evidencia (Chung y Fabbri, 1999; Van Westen et al.,
-2003), basado en la teoría de la probabilidad Bayesiana,
-donde se analiza la relación entre las áreas afectadas
-por los movimientos en masa y la distribución espacial
-de los factores condicionantes del terreno (Sujatha
-et al., 2014; Regmi et al., 2010). Este método arroja
-los pesos de las clases que conforman las variables
-condicionantes (Van Westen et al., 2003), indicando
-la presencia e influencia de la clase como parámetro
-en la ocurrencia del movimiento en masa (Regmi et
-al., 2010; Oh y Lee, 2011). Los pesos positivos (W+)
-indican la presencia de la clase como parámetro que
-favorece los movimientos en masa y su magnitud
-indica su correlación. El peso negativo (W-
-) indica la
-ausencia de la clase en la ocurrencia de mo</p>
-<p>Dónde A1
-es el número de pixeles con movimientos en
-masa en la clase, A2
-número de pixeles con movimientos
-en masa que no están presentes en la misma clase, A3
-número de pixeles en la clase que no hay movimientos
-en masa y A4
-es el número de pixeles en la clase donde
-no hay movimientos en masa y que no está presente en
-vimientos
-en masa. Los pesos son definidos por:</p>
-<p>la misma clase (Ozdemir y Altural, 2013). Para cada
-variable, entonces, se estima el Peso de Contraste (C)
-dado por:</p>
-<p>Donde C refleja el espacio de asociación respecto a la
-clase en la predicción del movimiento en masa, la cual
-es cero cuando la clase no afecta, es positivo cuando
-existe una correlación directa y negativo cuando
-existe una correlación inversa con la distribución de
-movimientos en masa (Rodríguez et al., 2017).</p>
+<h3>Peso de la evidencia (WofE)<a class="headerlink" href="#peso-de-la-evidencia-wofe" title="Permalink to this headline">¶</a></h3>
+<p>El Peso de la Evidencia, basado en la teoría de la probabilidad Bayesiana, analiza la relación entre las áreas afectadas
+por los movimientos en masa y la distribución espacial de los factores condicionantes del terreno. Este método arroja
+los pesos de las clases que conforman las variables condicionantes, indicando la presencia e influencia de la clase como parámetro
+en la ocurrencia del movimiento en masa. Los pesos positivos (W+)  indican la presencia de la clase como parámetro que
+favorece los movimientos en masa y su magnitud indica su correlación. El peso negativo (W-) indica la ausencia de la clase en la ocurrencia de
+movimiento en masa.</p>
+<p>Dónde <span class="math notranslate nohighlight">\(N_{pix1}\)</span> es el número de pixeles con movimientos en masa (<span class="math notranslate nohighlight">\(S\)</span>) en la clase <span class="math notranslate nohighlight">\(B_i\)</span>, <span class="math notranslate nohighlight">\(N_{pix2}\)</span> número de pixeles con movimientos
+en masa que no están presentes en la misma clase <span class="math notranslate nohighlight">\(\hat{B}_i\)</span>, <span class="math notranslate nohighlight">\(N_{pix3}\)</span> es el número de pixeles en la clase que no hay movimientos
+en masa <span class="math notranslate nohighlight">\(\hat{S}\)</span> y <span class="math notranslate nohighlight">\(N_{pix4}\)</span> es el número de pixeles en la clase donde no hay movimientos en masa <span class="math notranslate nohighlight">\(\hat{S}\)</span> y que no está presente en
+la clase  <span class="math notranslate nohighlight">\(\hat{B}_i\)</span>.</p>
+<div class="figure align-default" id="woe">
+<a class="reference internal image-reference" href="https://i.pinimg.com/564x/70/a4/d5/70a4d5ecbab6d6bf9bdb0f914c91dba8.jpg"><img alt="woe" src="https://i.pinimg.com/564x/70/a4/d5/70a4d5ecbab6d6bf9bdb0f914c91dba8.jpg" style="width: 600px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 31 </span><span class="caption-text">Método de <em>Frequency ratio</em>. Tomado de Suh et al. (2015)</span><a class="headerlink" href="#woe" title="Permalink to this image">¶</a></p>
+</div>
+<p><span class="math notranslate nohighlight">\(C = W^+ - W^-\)</span></p>
+<p>Y el contraste C refleja el espacio de asociación respecto a la clase en la predicción del movimiento en masa, la cual
+es cero cuando la clase no afecta, es positivo cuando existe una correlación directa y negativo cuando existe una correlación inversa con la distribución de movimientos en masa.</p>
+</div>
 </div>
 <div class="section" id="python">
 <h2>Python<a class="headerlink" href="#python" title="Permalink to this headline">¶</a></h2>
@@ -485,7 +465,7 @@ movimientos en masa (Rodríguez et al., 2017).</p>
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
-<span class="o">~</span>\<span class="n">AppData</span>\<span class="n">Local</span>\<span class="n">Temp</span><span class="o">/</span><span class="n">ipykernel_15220</span><span class="o">/</span><span class="mf">268380773.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="o">~</span>\<span class="n">AppData</span>\<span class="n">Local</span>\<span class="n">Temp</span><span class="o">/</span><span class="n">ipykernel_15128</span><span class="o">/</span><span class="mf">268380773.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="kn">from</span> <span class="nn">rasterio.plot</span> <span class="kn">import</span> <span class="n">show</span>
 <span class="ne">----&gt; </span><span class="mi">4</span> <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
