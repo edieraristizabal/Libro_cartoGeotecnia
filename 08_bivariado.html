@@ -385,6 +385,53 @@
    </li>
   </ul>
  </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#multivariados-machine-learning">
+   Multivariados (
+   <em>
+    machine learning
+   </em>
+   )
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#metodo-de-analisis-condicional-matrix-assessment">
+     Método de análisis condicional (
+     <em>
+      matrix assessment
+     </em>
+     )
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#regresion-logistica">
+     Regresión logística
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#analisis-discriminante-lineal">
+     Análisis discriminante lineal
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#support-vector-machine">
+     <em>
+      Support vector machine
+     </em>
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#random-forest">
+     Random forest
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#redes-neuronales">
+     Redes neuronales
+    </a>
+   </li>
+  </ul>
+ </li>
 </ul>
 
             </nav>
@@ -493,6 +540,53 @@
    </li>
   </ul>
  </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#multivariados-machine-learning">
+   Multivariados (
+   <em>
+    machine learning
+   </em>
+   )
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#metodo-de-analisis-condicional-matrix-assessment">
+     Método de análisis condicional (
+     <em>
+      matrix assessment
+     </em>
+     )
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#regresion-logistica">
+     Regresión logística
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#analisis-discriminante-lineal">
+     Análisis discriminante lineal
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#support-vector-machine">
+     <em>
+      Support vector machine
+     </em>
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#random-forest">
+     Random forest
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#redes-neuronales">
+     Redes neuronales
+    </a>
+   </li>
+  </ul>
+ </li>
 </ul>
 
                         </nav>
@@ -538,7 +632,7 @@
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
-<span class="o">~</span>\<span class="n">AppData</span>\<span class="n">Local</span>\<span class="n">Temp</span><span class="o">/</span><span class="n">ipykernel_22452</span><span class="o">/</span><span class="mf">1877902076.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="o">~</span>\<span class="n">AppData</span>\<span class="n">Local</span>\<span class="n">Temp</span><span class="o">/</span><span class="n">ipykernel_38108</span><span class="o">/</span><span class="mf">1877902076.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="kn">import</span> <span class="nn">rasterio</span> <span class="k">as</span> <span class="nn">rio</span>
 <span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="ne">----&gt; </span><span class="mi">3</span> <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
@@ -1702,6 +1796,34 @@ Uncertainty: 0.7799834770480247 0.6685462775738931 0.8870797176808958 0.77830569
 </div>
 </div>
 </div>
+</div>
+</div>
+<div class="section" id="multivariados-machine-learning">
+<h2>Multivariados (<em>machine learning</em>)<a class="headerlink" href="#multivariados-machine-learning" title="Permalink to this headline">¶</a></h2>
+<p>A diferencia de los métodos estadísticos bivariados, que combinan el inventario de movimientos en masa con cada variable por separado, los métodos estadísticos multivariados evalúan la relación combinada entre la variable dependiente (la ocurrencia de movimientos en masa) y todas variables independientes (variables predictoras) en simultanea. Entre estos métodos se encuentra la regresión logística, la cual ha sido el método mas utilizado alrededor del mundo para evalaur la susceptibilidad por movimientos en masa; al igual que el método de análisis discriminante lineal, el cual es el exigido en los estudios de amenaza en los Planes de Ordenación y Manejo de Cuencas (POMCA) en Colombia. Adicionalmente, con la explosión de la era de los datos, ya se encuentran disponibles dentro de las técnicas de Inteligencia Artificial, especificamente aprendizaje automático de máquinas (<em>machine learning</em>) una gran cantidad de métodos supervisados de clasificación binarios, entre los cuales se encuentran regresión logística y análisis discriminante, pero adicionalmente algoritmos como <em>support vector machine</em>, métodos ensamblados tipo <em>bagging</em> como <em>random forest</em>, tipo boosting como <em>XGBoost</em>, y técnicas de <em>deep learning</em> como redes neuronales artificiales.</p>
+<div class="figure align-default" id="ml">
+<a class="reference internal image-reference" href="https://miro.medium.com/max/477/1*KFQI59Yv7m1f3fwG68KSEA.jpeg"><img alt="ml" src="https://miro.medium.com/max/477/1*KFQI59Yv7m1f3fwG68KSEA.jpeg" style="width: 600px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 35 </span><span class="caption-text">Algoritmos utilizados en <em>machine learning</em></span><a class="headerlink" href="#ml" title="Permalink to this image">¶</a></p>
+</div>
+<p>Entre las limitaciones que presentan los métodos estadísticos multivariados se encuentra que los resultados implican que los movimientos en masa ocurren por la misma combiacion de factores a lo largo del área de estudio. Esta generalización ignora el hecho que la ocurrencia de ciertos tipos de movimientos en masa están controlados por ciertos factores de causa que deben ser analizados o investigados individualmente.</p>
+<p>A continuación se describen cada uno de los métodos mas comúnes. Inicialmente se describe brevemente el método denominado Análisi condicional, el cual es el unico de lso métodos que no se considera uan técnica de <em>machine learning</em>. Posteriormente se procederá a presentar los métodos de <em>machine learning</em> utilizados para evaluar la susceptibilidad por movimientos en masa.</p>
+<div class="section" id="metodo-de-analisis-condicional-matrix-assessment">
+<h3>Método de análisis condicional (<em>matrix assessment</em>)<a class="headerlink" href="#metodo-de-analisis-condicional-matrix-assessment" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="regresion-logistica">
+<h3>Regresión logística<a class="headerlink" href="#regresion-logistica" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="analisis-discriminante-lineal">
+<h3>Análisis discriminante lineal<a class="headerlink" href="#analisis-discriminante-lineal" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="support-vector-machine">
+<h3><em>Support vector machine</em><a class="headerlink" href="#support-vector-machine" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="random-forest">
+<h3>Random forest<a class="headerlink" href="#random-forest" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="redes-neuronales">
+<h3>Redes neuronales<a class="headerlink" href="#redes-neuronales" title="Permalink to this headline">¶</a></h3>
 </div>
 </div>
 </div>
