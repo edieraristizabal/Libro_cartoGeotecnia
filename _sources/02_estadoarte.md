@@ -1,4 +1,4 @@
-# Estudios de zonificación de movimientos en masa en el Valle de Aburrá
+# Estado del arte
 
 Aunque la ocurrencia de movimientos en masa ha afectado la población del Valle de Aburrá desde principios del siglo pasado, estudios que evalúen las condiciones de susceptibilidad y amenaza ante movimientos en masa solo surgen a partir de la década de los 80. Los primeros estudios dirigidos en entender los depósitos originados por grandes movimientos en masa y su relación con el origen del valle iniciaron con los trabajos de {cite:t}`Shelmon1979` y {cite:t}`Hermelin1984`. Este último autor plantea la necesidad de llevar a cabo estudios de zonificación de amenaza en las laderas y establecer una reglamentación para la construcción basados en las condiciones de amenaza y riesgo del Valle de Aburrá. Sin embargo solo después de la ocurrencia del desastre de Villatina en 1987, se inician la elaboración de estudios de amenaza por movimientos en masa en el Valle de Aburra. 
 
