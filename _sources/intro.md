@@ -1,5 +1,7 @@
 # Evaluación y zonificación de la susceptibilidad y/o amenaza por movimientos en masa
 
+![](https://i.pinimg.com/564x/22/a6/ed/22a6ed4bda37e691f14b5e92fb6f86dd.jpg)
+
 :::{note}
 Este libro se encuentra en construcción, por lo tanto su contenido se encuentra en constante cambio y ajuste. Las recomendaciones y comentarios son bienvenidos al correo evaristizabalg@unal.edu.co.
 :::
