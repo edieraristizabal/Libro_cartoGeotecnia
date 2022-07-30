@@ -63,6 +63,14 @@ Unidad de análisis tipo (a) celdas regulares (b) unidad de ladera.
 Unidad de análisis tipo unidad de condiciones únicas.
 :::
 
+## Procedimiento
+Para la evaluación y zonificación de la susceptibilidad por movimientos en masa {\cite:t}`Guzzettti2002` recomienda la ejecución de cinco pasos: 
+* (i) la identificación y mapeo de los movimientos en masa en el área de estudio, 
+* (ii) la identificación y mapeo de los factores condicionantes que están directa o indirectamente correlacionados con la ocurrencia, 
+* (iii) la estimación de la contribución relativa de cada factor condicionante en la ocurrencia de los movimientos en masa, 
+* (iv) la zonificación del terreno en dominios con diferentes niveles de susceptibilidad, 
+* (v) evaluación del desempeño del modelo y su capacidad de predicción.
+
 ```{bibliography}
 :style: plain
 :filter: docname in docnames
