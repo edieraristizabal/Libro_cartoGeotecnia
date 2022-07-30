@@ -394,15 +394,6 @@
     <a class="reference internal nav-link" href="#metodo-de-analisis-condicional">
      Método de análisis condicional
     </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#id5">
-       <em>
-        Python
-       </em>
-      </a>
-     </li>
-    </ul>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#regresion-logistica">
@@ -410,7 +401,7 @@
     </a>
     <ul class="nav section-nav flex-column">
      <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#id6">
+      <a class="reference internal nav-link" href="#id5">
        <em>
         Python
        </em>
@@ -424,7 +415,7 @@
     </a>
     <ul class="nav section-nav flex-column">
      <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#id7">
+      <a class="reference internal nav-link" href="#id6">
        <em>
         Python
        </em>
@@ -440,7 +431,7 @@
     </a>
     <ul class="nav section-nav flex-column">
      <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#id8">
+      <a class="reference internal nav-link" href="#id7">
        <em>
         Python
        </em>
@@ -456,7 +447,7 @@
     </a>
     <ul class="nav section-nav flex-column">
      <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#id9">
+      <a class="reference internal nav-link" href="#id8">
        <em>
         Python
        </em>
@@ -470,7 +461,7 @@
     </a>
     <ul class="nav section-nav flex-column">
      <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#id10">
+      <a class="reference internal nav-link" href="#id9">
        <em>
         Python
        </em>
@@ -597,15 +588,6 @@
     <a class="reference internal nav-link" href="#metodo-de-analisis-condicional">
      Método de análisis condicional
     </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#id5">
-       <em>
-        Python
-       </em>
-      </a>
-     </li>
-    </ul>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#regresion-logistica">
@@ -613,7 +595,7 @@
     </a>
     <ul class="nav section-nav flex-column">
      <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#id6">
+      <a class="reference internal nav-link" href="#id5">
        <em>
         Python
        </em>
@@ -627,7 +609,7 @@
     </a>
     <ul class="nav section-nav flex-column">
      <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#id7">
+      <a class="reference internal nav-link" href="#id6">
        <em>
         Python
        </em>
@@ -643,7 +625,7 @@
     </a>
     <ul class="nav section-nav flex-column">
      <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#id8">
+      <a class="reference internal nav-link" href="#id7">
        <em>
         Python
        </em>
@@ -659,7 +641,7 @@
     </a>
     <ul class="nav section-nav flex-column">
      <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#id9">
+      <a class="reference internal nav-link" href="#id8">
        <em>
         Python
        </em>
@@ -673,7 +655,7 @@
     </a>
     <ul class="nav section-nav flex-column">
      <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#id10">
+      <a class="reference internal nav-link" href="#id9">
        <em>
         Python
        </em>
@@ -718,6 +700,32 @@
 <p>Inicialmente se procede a importar las librerías a utilizar:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>pip install rasterio
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: rasterio in c:\python39\lib\site-packages (1.3.0)
+Requirement already satisfied: cligj&gt;=0.5 in c:\python39\lib\site-packages (from rasterio) (0.7.2)
+Requirement already satisfied: certifi in c:\python39\lib\site-packages (from rasterio) (2021.10.8)
+Requirement already satisfied: numpy in c:\python39\lib\site-packages (from rasterio) (1.23.1)
+Requirement already satisfied: snuggs&gt;=1.4.1 in c:\python39\lib\site-packages (from rasterio) (1.4.7)
+Requirement already satisfied: attrs in c:\python39\lib\site-packages (from rasterio) (21.4.0)
+Requirement already satisfied: affine in c:\python39\lib\site-packages (from rasterio) (2.3.1)
+Requirement already satisfied: click-plugins in c:\python39\lib\site-packages (from rasterio) (1.1.1)
+Requirement already satisfied: setuptools in c:\python39\lib\site-packages (from rasterio) (57.4.0)
+Requirement already satisfied: click&gt;=4.0 in c:\python39\lib\site-packages (from rasterio) (7.1.2)
+Requirement already satisfied: pyparsing&gt;=2.1.6 in c:\python39\lib\site-packages (from snuggs&gt;=1.4.1-&gt;rasterio) (3.0.6)
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>WARNING: You are using pip version 21.2.3; however, version 22.2.1 is available.
+You should consider upgrading via the &#39;C:\Python39\python.exe -m pip install --upgrade pip&#39; command.
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">rasterio</span> <span class="k">as</span> <span class="nn">rio</span>
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
@@ -728,7 +736,7 @@
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
-<span class="o">~</span>\<span class="n">AppData</span>\<span class="n">Local</span>\<span class="n">Temp</span><span class="o">/</span><span class="n">ipykernel_5196</span><span class="o">/</span><span class="mf">1877902076.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="o">~</span>\<span class="n">AppData</span>\<span class="n">Local</span>\<span class="n">Temp</span><span class="o">/</span><span class="n">ipykernel_32112</span><span class="o">/</span><span class="mf">1877902076.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="kn">import</span> <span class="nn">rasterio</span> <span class="k">as</span> <span class="nn">rio</span>
 <span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="ne">----&gt; </span><span class="mi">3</span> <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
@@ -760,7 +768,7 @@
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(910801,)
 </pre></div>
 </div>
-<img alt="_images/08_bivariado_7_1.png" src="_images/08_bivariado_7_1.png" />
+<img alt="_images/08_bivariado_8_1.png" src="_images/08_bivariado_8_1.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -776,7 +784,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/08_bivariado_8_0.png" src="_images/08_bivariado_8_0.png" />
+<img alt="_images/08_bivariado_9_0.png" src="_images/08_bivariado_9_0.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -792,10 +800,10 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.colorbar.Colorbar at 0x7f0f60573890&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.colorbar.Colorbar at 0x7f7a64ab2d90&gt;
 </pre></div>
 </div>
-<img alt="_images/08_bivariado_9_1.png" src="_images/08_bivariado_9_1.png" />
+<img alt="_images/08_bivariado_10_1.png" src="_images/08_bivariado_10_1.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -811,7 +819,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/08_bivariado_10_0.png" src="_images/08_bivariado_10_0.png" />
+<img alt="_images/08_bivariado_11_0.png" src="_images/08_bivariado_11_0.png" />
 </div>
 </div>
 <p>Para implementar todos lo métodos estadísticos bivariados se deben conocer para cada clase de las variables, el número de celdas que pertenecen a dicha clase y el número de celdas con MenM.</p>
@@ -899,7 +907,7 @@ total1: 1620 13 108 411 301 787
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[0.13584048 0.43783036 0.82677466 1.0709956  1.5756727         nan]
 </pre></div>
 </div>
-<img alt="_images/08_bivariado_16_1.png" src="_images/08_bivariado_16_1.png" />
+<img alt="_images/08_bivariado_17_1.png" src="_images/08_bivariado_17_1.png" />
 </div>
 </div>
 <p>Ahora se realiza el mismo procedimiento para la variable <em>aspecto</em>, la cual tambien es continua, en este caso se divide en 4 clases [0-90, 90-180, 180-270, 270-360]:</p>
@@ -959,7 +967,7 @@ w: 1.0069572774636415 1.7527700266488904 0.8590431563124444 0.8314017909437948
 [-1.          0.83140177  0.8590432   1.0069573   1.7527701          nan]
 </pre></div>
 </div>
-<img alt="_images/08_bivariado_18_1.png" src="_images/08_bivariado_18_1.png" />
+<img alt="_images/08_bivariado_19_1.png" src="_images/08_bivariado_19_1.png" />
 </div>
 </div>
 <p>Y el mismo procedimiento para la variable <em>geologia</em>, la cual es categórica por lo cual ligeramente varía el procedimiento.</p>
@@ -1031,7 +1039,7 @@ w: 1.447560646250527 0.0 0.0 1.7008260599455374 0.0 1.077602194175132 1.58808106
  3.94554121        nan]
 </pre></div>
 </div>
-<img alt="_images/08_bivariado_20_1.png" src="_images/08_bivariado_20_1.png" />
+<img alt="_images/08_bivariado_21_1.png" src="_images/08_bivariado_21_1.png" />
 </div>
 </div>
 <p>Con los mapas de cada variable reclasificados de acuerdo con el valor de <em>Frequency ratio</em> se procede entonces a sumar todas las variables y obtener el mapa de susceptibilidad:</p>
@@ -1044,7 +1052,7 @@ w: 1.447560646250527 0.0 0.0 1.7008260599455374 0.0 1.077602194175132 1.58808106
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/08_bivariado_22_0.png" src="_images/08_bivariado_22_0.png" />
+<img alt="_images/08_bivariado_23_0.png" src="_images/08_bivariado_23_0.png" />
 </div>
 </div>
 </div>
@@ -1110,7 +1118,7 @@ w: 1.447560646250527 0.0 0.0 1.7008260599455374 0.0 1.077602194175132 1.58808106
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[-1.9975946  -0.82724434 -0.19154373  0.06726803  0.4533617          nan]
 </pre></div>
 </div>
-<img alt="_images/08_bivariado_30_1.png" src="_images/08_bivariado_30_1.png" />
+<img alt="_images/08_bivariado_31_1.png" src="_images/08_bivariado_31_1.png" />
 </div>
 </div>
 <p>Realizamos el mismo procedimiento para la variable <em>aspecto</em>:</p>
@@ -1138,7 +1146,7 @@ w: 1.447560646250527 0.0 0.0 1.7008260599455374 0.0 1.077602194175132 1.58808106
 [-1.         -0.18464209 -0.15193611  0.00693319  0.5611974          nan]
 </pre></div>
 </div>
-<img alt="_images/08_bivariado_32_1.png" src="_images/08_bivariado_32_1.png" />
+<img alt="_images/08_bivariado_33_1.png" src="_images/08_bivariado_33_1.png" />
 </div>
 </div>
 <p>Para la variable geología se debe tener en cuenta que existen algunas clases que no presentan celdas con MenM, por lo tanto generan un error al calcular el logaritmo. Para superar est se le asigna un valor de 1 a dichas clases.</p>
@@ -1181,7 +1189,7 @@ w: 1.447560646250527 0.0 0.0 1.7008260599455374 0.0 1.077602194175132 1.58808106
   0.46252641  0.53111405  1.20067898  1.37258613         nan]
 </pre></div>
 </div>
-<img alt="_images/08_bivariado_34_1.png" src="_images/08_bivariado_34_1.png" />
+<img alt="_images/08_bivariado_35_1.png" src="_images/08_bivariado_35_1.png" />
 </div>
 </div>
 <p>Con los mapas de cada variable reclasificados de acuerdo con el valor de <em>Statistical index</em> se procede entonces a sumar todas las variables y obtener el mapa de susceptibilidad:</p>
@@ -1194,7 +1202,7 @@ w: 1.447560646250527 0.0 0.0 1.7008260599455374 0.0 1.077602194175132 1.58808106
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/08_bivariado_36_0.png" src="_images/08_bivariado_36_0.png" />
+<img alt="_images/08_bivariado_37_0.png" src="_images/08_bivariado_37_0.png" />
 </div>
 </div>
 </div>
@@ -1335,7 +1343,7 @@ es cero cuando la clase no afecta, es positivo cuando existe una correlación di
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[-2.0507433  -0.9233003   0.08375583  0.7526898          nan]
 </pre></div>
 </div>
-<img alt="_images/08_bivariado_50_1.png" src="_images/08_bivariado_50_1.png" />
+<img alt="_images/08_bivariado_51_1.png" src="_images/08_bivariado_51_1.png" />
 </div>
 </div>
 <p>Este mismo procedimiento se realiza para la variable <em>aspecto</em>.</p>
@@ -1417,7 +1425,7 @@ es cero cuando la clase no afecta, es positivo cuando existe una correlación di
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[-6.975576   -1.         -0.6254262  -0.29615796  2.4018128          nan]
 </pre></div>
 </div>
-<img alt="_images/08_bivariado_55_1.png" src="_images/08_bivariado_55_1.png" />
+<img alt="_images/08_bivariado_56_1.png" src="_images/08_bivariado_56_1.png" />
 </div>
 </div>
 <p>En el método <em>Peso de la evidencia</em> se debe tener en cuenta que las clases que no presentan movimientos en masa generan un matemático, ya que no se puede estimar el logaritmo natural de cero. Por lo tanto, se debe proceder a esas clases qdoden se obtuvo cero celdas asignarles un valor de 1, de tal forma que se pueda ejecutar el cálculo.</p>
@@ -1574,7 +1582,7 @@ es cero cuando la clase no afecta, es positivo cuando existe una correlación di
   0.54477773  0.55996406  1.20658234  1.38520843         nan]
 </pre></div>
 </div>
-<img alt="_images/08_bivariado_60_1.png" src="_images/08_bivariado_60_1.png" />
+<img alt="_images/08_bivariado_61_1.png" src="_images/08_bivariado_61_1.png" />
 </div>
 </div>
 <p>Finalmente se calcula el Indice de Susceptibildiad (IS), el cual corresponde a la suma de los mapas reclasificados con el valor del Contraste, de la siguiente forma.</p>
@@ -1587,7 +1595,7 @@ es cero cuando la clase no afecta, es positivo cuando existe una correlación di
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/08_bivariado_62_0.png" src="_images/08_bivariado_62_0.png" />
+<img alt="_images/08_bivariado_63_0.png" src="_images/08_bivariado_63_0.png" />
 </div>
 </div>
 </div>
@@ -1698,7 +1706,7 @@ es cero cuando la clase no afecta, es positivo cuando existe una correlación di
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[0.02863689 0.08836979 0.17057727 0.24158278 0.47083327        nan]
 </pre></div>
 </div>
-<img alt="_images/08_bivariado_72_1.png" src="_images/08_bivariado_72_1.png" />
+<img alt="_images/08_bivariado_73_1.png" src="_images/08_bivariado_73_1.png" />
 </div>
 </div>
 <p>Se realiza el mismo procedimiento para la variable <em>aspecto</em>:</p>
@@ -1753,7 +1761,7 @@ Uncertainty: 0.5294889041133115 0.31276701806773605 0.5744098464545259 0.5833342
 [-1.          0.16640243  0.17536859  0.22059904  0.43762994         nan]
 </pre></div>
 </div>
-<img alt="_images/08_bivariado_74_1.png" src="_images/08_bivariado_74_1.png" />
+<img alt="_images/08_bivariado_75_1.png" src="_images/08_bivariado_75_1.png" />
 </div>
 </div>
 <p>Para la variable <em>geologia</em> se desarrolla de la siguiente forma:</p>
@@ -1848,7 +1856,7 @@ Uncertainty: 0.7799834770480247 0.6685462775738931 0.8870797176808958 0.77830569
  0.11993273 0.12179228 0.23185866 0.27689118        nan]
 </pre></div>
 </div>
-<img alt="_images/08_bivariado_76_1.png" src="_images/08_bivariado_76_1.png" />
+<img alt="_images/08_bivariado_77_1.png" src="_images/08_bivariado_77_1.png" />
 </div>
 </div>
 <p>Con los mapas de cada variable reclasificados de acuerdo con el valor de <em>Belief</em> se procede entonces a sumar todas las variables y obtener el mapa de susceptibilidad:</p>
@@ -1861,7 +1869,7 @@ Uncertainty: 0.7799834770480247 0.6685462775738931 0.8870797176808958 0.77830569
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/08_bivariado_78_0.png" src="_images/08_bivariado_78_0.png" />
+<img alt="_images/08_bivariado_79_0.png" src="_images/08_bivariado_79_0.png" />
 </div>
 </div>
 </div>
@@ -1913,9 +1921,6 @@ Uncertainty: 0.7799834770480247 0.6685462775738931 0.8870797176808958 0.77830569
 <a class="reference internal image-reference" href="https://i.pinimg.com/564x/cc/6d/00/cc6d00fc1e76c817cac53b08377c25b2.jpg"><img alt="metodo ucu" src="https://i.pinimg.com/564x/cc/6d/00/cc6d00fc1e76c817cac53b08377c25b2.jpg" style="width: 500px;" /></a>
 <p class="caption"><span class="caption-number">Fig. 36 </span><span class="caption-text">Método de análisis condicional. Tomado de Urquia et al., (2020).</span><a class="headerlink" href="#metodo-ucu" title="Permalink to this image">¶</a></p>
 </div>
-<div class="section" id="id5">
-<h4><em>Python</em><a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h4>
-</div>
 </div>
 <div class="section" id="regresion-logistica">
 <h3>Regresión logística<a class="headerlink" href="#regresion-logistica" title="Permalink to this headline">¶</a></h3>
@@ -1939,8 +1944,840 @@ logística, es decir, los pesos de las variables, y los valores <span class="mat
 <a class="reference internal image-reference" href="https://i.pinimg.com/564x/61/e3/8f/61e38fb081e8b0638a090514b2550f6b.jpg"><img alt="rl1" src="https://i.pinimg.com/564x/61/e3/8f/61e38fb081e8b0638a090514b2550f6b.jpg" style="width: 500px;" /></a>
 <p class="caption"><span class="caption-number">Fig. 39 </span><span class="caption-text">Ejemplo regresión logística.</span><a class="headerlink" href="#rl1" title="Permalink to this image">¶</a></p>
 </div>
-<div class="section" id="id6">
-<h4><em>Python</em><a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h4>
+<div class="section" id="id5">
+<h4><em>Python</em><a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h4>
+<p>A continuación se implementará el método de RL para evaluar la susceptibilidad por movimientos en masa. En este ejemplo sólo se utilizarán tres variables (<em>pendiente</em>, <em>aspecto</em> y <em>geologia</em>).</p>
+<p>el primer paso es crear un <em>Dataframe</em> con todas las variables y el inventario. A partir de este <em>Dataframe</em> se construye un vector con la variable y (ocurrencia o no de movimientos en masa), que permitirá entrenar el modelo de <em>RL</em>, y otro <em>Dataframe</em> con solo las variables predictoras.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">pandas</span> <span class="kn">import</span> <span class="n">DataFrame</span>
+<span class="n">d</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;inventario&#39;</span><span class="p">:</span><span class="n">inventario_vector_MenM</span><span class="p">,</span><span class="s1">&#39;pendiente&#39;</span><span class="p">:</span><span class="n">pendiente_vector_MenM</span><span class="p">,</span><span class="s1">&#39;aspecto&#39;</span><span class="p">:</span><span class="n">aspecto_vector_MenM</span><span class="p">,</span><span class="s1">&#39;geologia&#39;</span><span class="p">:</span><span class="n">geologia_vector_MenM</span><span class="p">}</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">d</span><span class="p">)</span>
+<span class="n">X</span><span class="o">=</span><span class="n">df</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="s2">&quot;inventario&quot;</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">y</span><span class="o">=</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;inventario&#39;</span><span class="p">]</span>
+<span class="n">X</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">
+  <div id="df-44fc7ebc-da81-4dfa-a3a7-4b4f524fd4ae">
+    <div class="colab-df-container">
+      <div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>pendiente</th>
+      <th>aspecto</th>
+      <th>geologia</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>10.862183</td>
+      <td>208.523560</td>
+      <td>14.0</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>12.265345</td>
+      <td>207.437332</td>
+      <td>14.0</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>12.469252</td>
+      <td>202.684647</td>
+      <td>14.0</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>13.148026</td>
+      <td>211.619766</td>
+      <td>14.0</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>14.091524</td>
+      <td>220.028976</td>
+      <td>14.0</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+      <button class="colab-df-convert" onclick="convertToInteractive('df-44fc7ebc-da81-4dfa-a3a7-4b4f524fd4ae')"
+              title="Convert this dataframe to an interactive table."
+              style="display:none;">
+
+  <svg xmlns="http://www.w3.org/2000/svg" height="24px"viewBox="0 0 24 24"
+       width="24px">
+    <path d="M0 0h24v24H0V0z" fill="none"/>
+    <path d="M18.56 5.44l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94zm-11 1L8.5 8.5l.94-2.06 2.06-.94-2.06-.94L8.5 2.5l-.94 2.06-2.06.94zm10 10l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94z"/><path d="M17.41 7.96l-1.37-1.37c-.4-.4-.92-.59-1.43-.59-.52 0-1.04.2-1.43.59L10.3 9.45l-7.72 7.72c-.78.78-.78 2.05 0 2.83L4 21.41c.39.39.9.59 1.41.59.51 0 1.02-.2 1.41-.59l7.78-7.78 2.81-2.81c.8-.78.8-2.07 0-2.86zM5.41 20L4 18.59l7.72-7.72 1.47 1.35L5.41 20z"/>
+  </svg>
+      </button>
+
+  <style>
+    .colab-df-container {
+      display:flex;
+      flex-wrap:wrap;
+      gap: 12px;
+    }
+
+    .colab-df-convert {
+      background-color: #E8F0FE;
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+      display: none;
+      fill: #1967D2;
+      height: 32px;
+      padding: 0 0 0 0;
+      width: 32px;
+    }
+
+    .colab-df-convert:hover {
+      background-color: #E2EBFA;
+      box-shadow: 0px 1px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px 1px rgba(60, 64, 67, 0.15);
+      fill: #174EA6;
+    }
+
+    [theme=dark] .colab-df-convert {
+      background-color: #3B4455;
+      fill: #D2E3FC;
+    }
+
+    [theme=dark] .colab-df-convert:hover {
+      background-color: #434B5C;
+      box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
+      filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.3));
+      fill: #FFFFFF;
+    }
+  </style>
+
+      <script>
+        const buttonEl =
+          document.querySelector('#df-44fc7ebc-da81-4dfa-a3a7-4b4f524fd4ae button.colab-df-convert');
+        buttonEl.style.display =
+          google.colab.kernel.accessAllowed ? 'block' : 'none';
+
+        async function convertToInteractive(key) {
+          const element = document.querySelector('#df-44fc7ebc-da81-4dfa-a3a7-4b4f524fd4ae');
+          const dataTable =
+            await google.colab.kernel.invokeFunction('convertToInteractive',
+                                                     [key], {});
+          if (!dataTable) return;
+
+          const docLinkHtml = 'Like what you see? Visit the ' +
+            '<a target="_blank" href=https://colab.research.google.com/notebooks/data_table.ipynb>data table notebook</a>'
+            + ' to learn more about interactive tables.';
+          element.innerHTML = '';
+          dataTable['output_type'] = 'display_data';
+          await google.colab.output.renderOutput(dataTable, element);
+          const docLink = document.createElement('div');
+          docLink.innerHTML = docLinkHtml;
+          element.appendChild(docLink);
+        }
+      </script>
+    </div>
+  </div>
+</div></div>
+</div>
+<p>Como la variable <em>geologia</em> es categórica, es necesario para RL transformarla a una variable <em>dummy</em>, lo que significa que cada clase de la variable <em>geologia</em> se convierte en una nueva variable categórica binaria.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dummy_geologia</span><span class="o">=</span><span class="n">pd</span><span class="o">.</span><span class="n">get_dummies</span><span class="p">(</span><span class="n">X</span><span class="p">[</span><span class="s1">&#39;geologia&#39;</span><span class="p">],</span><span class="n">prefix</span><span class="o">=</span><span class="s1">&#39;geo&#39;</span><span class="p">)</span>
+<span class="n">column_name</span><span class="o">=</span><span class="n">X</span><span class="o">.</span><span class="n">columns</span><span class="o">.</span><span class="n">values</span><span class="o">.</span><span class="n">tolist</span><span class="p">()</span>
+<span class="n">column_name</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="s1">&#39;geologia&#39;</span><span class="p">)</span>
+<span class="n">X1</span><span class="o">=</span><span class="n">X</span><span class="p">[</span><span class="n">column_name</span><span class="p">]</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">dummy_geologia</span><span class="p">)</span>
+<span class="n">X1</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">
+  <div id="df-e2ee02a6-bbce-490f-923f-43209f24d08f">
+    <div class="colab-df-container">
+      <div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>pendiente</th>
+      <th>aspecto</th>
+      <th>geo_2.0</th>
+      <th>geo_4.0</th>
+      <th>geo_6.0</th>
+      <th>geo_8.0</th>
+      <th>geo_9.0</th>
+      <th>geo_10.0</th>
+      <th>geo_11.0</th>
+      <th>geo_14.0</th>
+      <th>geo_15.0</th>
+      <th>geo_16.0</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>10.862183</td>
+      <td>208.523560</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>12.265345</td>
+      <td>207.437332</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>12.469252</td>
+      <td>202.684647</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>13.148026</td>
+      <td>211.619766</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>14.091524</td>
+      <td>220.028976</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+      <button class="colab-df-convert" onclick="convertToInteractive('df-e2ee02a6-bbce-490f-923f-43209f24d08f')"
+              title="Convert this dataframe to an interactive table."
+              style="display:none;">
+
+  <svg xmlns="http://www.w3.org/2000/svg" height="24px"viewBox="0 0 24 24"
+       width="24px">
+    <path d="M0 0h24v24H0V0z" fill="none"/>
+    <path d="M18.56 5.44l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94zm-11 1L8.5 8.5l.94-2.06 2.06-.94-2.06-.94L8.5 2.5l-.94 2.06-2.06.94zm10 10l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94z"/><path d="M17.41 7.96l-1.37-1.37c-.4-.4-.92-.59-1.43-.59-.52 0-1.04.2-1.43.59L10.3 9.45l-7.72 7.72c-.78.78-.78 2.05 0 2.83L4 21.41c.39.39.9.59 1.41.59.51 0 1.02-.2 1.41-.59l7.78-7.78 2.81-2.81c.8-.78.8-2.07 0-2.86zM5.41 20L4 18.59l7.72-7.72 1.47 1.35L5.41 20z"/>
+  </svg>
+      </button>
+
+  <style>
+    .colab-df-container {
+      display:flex;
+      flex-wrap:wrap;
+      gap: 12px;
+    }
+
+    .colab-df-convert {
+      background-color: #E8F0FE;
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+      display: none;
+      fill: #1967D2;
+      height: 32px;
+      padding: 0 0 0 0;
+      width: 32px;
+    }
+
+    .colab-df-convert:hover {
+      background-color: #E2EBFA;
+      box-shadow: 0px 1px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px 1px rgba(60, 64, 67, 0.15);
+      fill: #174EA6;
+    }
+
+    [theme=dark] .colab-df-convert {
+      background-color: #3B4455;
+      fill: #D2E3FC;
+    }
+
+    [theme=dark] .colab-df-convert:hover {
+      background-color: #434B5C;
+      box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
+      filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.3));
+      fill: #FFFFFF;
+    }
+  </style>
+
+      <script>
+        const buttonEl =
+          document.querySelector('#df-e2ee02a6-bbce-490f-923f-43209f24d08f button.colab-df-convert');
+        buttonEl.style.display =
+          google.colab.kernel.accessAllowed ? 'block' : 'none';
+
+        async function convertToInteractive(key) {
+          const element = document.querySelector('#df-e2ee02a6-bbce-490f-923f-43209f24d08f');
+          const dataTable =
+            await google.colab.kernel.invokeFunction('convertToInteractive',
+                                                     [key], {});
+          if (!dataTable) return;
+
+          const docLinkHtml = 'Like what you see? Visit the ' +
+            '<a target="_blank" href=https://colab.research.google.com/notebooks/data_table.ipynb>data table notebook</a>'
+            + ' to learn more about interactive tables.';
+          element.innerHTML = '';
+          dataTable['output_type'] = 'display_data';
+          await google.colab.output.renderOutput(dataTable, element);
+          const docLink = document.createElement('div');
+          docLink.innerHTML = docLinkHtml;
+          element.appendChild(docLink);
+        }
+      </script>
+    </div>
+  </div>
+</div></div>
+</div>
+<p>Existen dos librerias que nos permiten resolver este modelo, <em>statsmodels</em> y <em>sklearn</em>. La primera de ellas nos ofrece como ventaja que nos entrega un resumen con los resultados y métricas de desempeño del modelo. Por lo tanto inicialmente utilizaremos esta librería.</p>
+<p>Realmente es un procedimiento muy sencillo. Donde importamos la librería, construimos el modelo con la funcion <em>Logit</em> y asignandole la variable <em>y</em> y la matriz con las variables predictoras. Posteriormente, se entrena el modelo con la función <em>fit</em>. Finalmente, se imprime el resultado con la función <em>summary</em>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">statsmodels.api</span> <span class="k">as</span> <span class="nn">sm</span>
+<span class="n">model</span><span class="o">=</span><span class="n">sm</span><span class="o">.</span><span class="n">Logit</span><span class="p">(</span><span class="n">y</span><span class="p">,</span><span class="n">X1</span><span class="p">)</span>
+<span class="n">result</span><span class="o">=</span><span class="n">model</span><span class="o">.</span><span class="n">fit</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="o">.</span><span class="n">summary</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Warning: Maximum number of iterations has been exceeded.
+         Current function value: 0.012661
+         Iterations: 35
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/usr/local/lib/python3.7/dist-packages/statsmodels/base/model.py:512: ConvergenceWarning: Maximum Likelihood optimization failed to converge. Check mle_retvals
+  &quot;Check mle_retvals&quot;, ConvergenceWarning)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>                           Logit Regression Results                           
+==============================================================================
+Dep. Variable:             inventario   No. Observations:               910801
+Model:                          Logit   Df Residuals:                   910800
+Method:                           MLE   Df Model:                            0
+Date:                Sat, 30 Jul 2022   Pseudo R-squ.:                 0.02902
+Time:                        15:11:10   Log-Likelihood:                -11532.
+converged:                      False   LL-Null:                       -11876.
+Covariance Type:            nonrobust   LLR p-value:                       nan
+==============================================================================
+                 coef    std err          z      P&gt;|z|      [0.025      0.975]
+------------------------------------------------------------------------------
+pendiente      0.0396      0.002     17.337      0.000       0.035       0.044
+aspecto    -5.103e-05      0.000     -0.201      0.841      -0.001       0.000
+geo_2.0       -7.2254      0.104    -69.173      0.000      -7.430      -7.021
+geo_4.0      -22.2799   3194.061     -0.007      0.994   -6282.524    6237.964
+geo_6.0      -24.2261   2081.830     -0.012      0.991   -4104.537    4056.085
+geo_8.0       -7.1499      0.133    -53.657      0.000      -7.411      -6.889
+geo_9.0      -23.8178    551.897     -0.043      0.966   -1105.516    1057.881
+geo_10.0      -7.6123      0.184    -41.348      0.000      -7.973      -7.251
+geo_11.0      -7.0040      0.122    -57.204      0.000      -7.244      -6.764
+geo_14.0      -7.8179      0.109    -71.659      0.000      -8.032      -7.604
+geo_15.0      -5.7754      0.288    -20.022      0.000      -6.341      -5.210
+geo_16.0     -22.2074    266.907     -0.083      0.934    -545.335     500.920
+==============================================================================
+</pre></div>
+</div>
+</div>
+</div>
+<p>Hasta este punto con la librería <em>statsmodels</em> tenemos los valores de los coeficientes que acompañanan a cada variable predictora. A partir de esto valore se cosntruye la ecuación de la regresión logistica y se puede entonces obtener el mapa de susceptibilidad para toda la cuenca.</p>
+<p>Pero para realziar todo el procedimiento completo, hasta obtener el mapa de susceptibilidad, es recomendable utilizar la librería <em>sklearn</em> que nos brinda funciones para todo esto.</p>
+<p>Iniciloamente, se importa la función para RL, y e construye el modelo con los hiperparámetros. En este caso, estamos asignadole un <em>class_weight</em> = balanced para que asigne mas peso a las celdas minoritarias, en este caso las celdas donde y=1. De esta forma RL nos ayuda a resolver el problema de la base de datos original  desbalanceada. El segundo hiperparámetro que utilizamos es el tipo de algoritmo para resolver la RL, en este caso utilizaremos <em>newton-cg</em>, existen otros algoritmos que ofrece a herramienta y que se pueden consultar en <a class="reference external" href="https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LogisticRegression.html">guía de usuario.</a></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.linear_model</span> <span class="kn">import</span> <span class="n">LogisticRegression</span>
+<span class="n">model</span><span class="o">=</span><span class="n">LogisticRegression</span><span class="p">(</span><span class="n">class_weight</span><span class="o">=</span><span class="s1">&#39;balanced&#39;</span><span class="p">,</span> <span class="n">solver</span><span class="o">=</span><span class="s1">&#39;newton-cg&#39;</span><span class="p">)</span>
+<span class="n">model</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>LogisticRegression(class_weight=&#39;balanced&#39;, solver=&#39;newton-cg&#39;)
+</pre></div>
+</div>
+</div>
+</div>
+<p>Luego de tener el modelo construido, se le asignan los datso con la función <em>fit</em>, en este caso, primero la matriz con las variables predictoras, y luego la variable <em>y</em>. De esta forma el modelo se entrena con los datos y se pueden obtener los resultados de los valores de los coeficientes con la función <em>coef_</em></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">result</span><span class="o">=</span><span class="n">model</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X1</span><span class="p">,</span><span class="n">y</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="o">.</span><span class="n">coef_</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[ 4.4153962e-02 -5.7120993e-05  1.3414711e+00 -2.6784331e-01
+  -2.0767705e+00  1.3869253e+00 -4.3369098e+00  9.7137809e-01
+   1.4465705e+00  7.3794961e-01  2.6813078e+00 -4.2109256e+00]]
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/usr/local/lib/python3.7/dist-packages/scipy/optimize/linesearch.py:327: LineSearchWarning: The line search algorithm did not converge
+  warn(&#39;The line search algorithm did not converge&#39;, LineSearchWarning)
+/usr/local/lib/python3.7/dist-packages/sklearn/utils/optimize.py:203: UserWarning: Line Search failed
+  warnings.warn(&quot;Line Search failed&quot;)
+</pre></div>
+</div>
+</div>
+</div>
+<p>Con el modelo entrenado y guardado en la varible <em>result</em> podemos entonces obtener los valores que predice el modelo para toda la matriz con las variables predictoras. Para eso se utiliza la función <em>predict</em>. Esta función clasifica cada celda como inestable (1) o estable (0).</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">y_pred</span><span class="o">=</span><span class="n">result</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X1</span><span class="p">)</span>
+<span class="n">y_pred</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([0., 0., 0., ..., 0., 0., 0.])
+</pre></div>
+</div>
+</div>
+</div>
+<p>Sin embargo, tambien se puede obtener los resultados del modelo antes de clasificarlo como (0,1). es decir la probabilidad de cada celda de ser 0 o de ser 1. Para eso se utiliza la función <em>predict_proba</em>. La cual puede ser mas útil para nuestro mapa.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">y_prob</span><span class="o">=</span><span class="n">result</span><span class="o">.</span><span class="n">predict_proba</span><span class="p">(</span><span class="n">X1</span><span class="p">)</span>
+<span class="n">y_prob</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[0.7619109 , 0.23808908],
+       [0.75047874, 0.24952123],
+       [0.74873793, 0.25126204],
+       ...,
+       [0.5873656 , 0.4126344 ],
+       [0.6160013 , 0.3839987 ],
+       [0.61599934, 0.38400066]], dtype=float32)
+</pre></div>
+</div>
+</div>
+</div>
+<p>como se puede observar el resultado en este caso, en lugar de ser un vector con la clasificacion de cada celda, es un matriz de dos columnas. Donde la primera columna es la probabilidad de cada celda de ser 0, es decir estable, y la segudna columna la probabilidad de ser 1, es decir inestable. Para nuestro propósito es mas útil obtener la probabilidad de cada celda de ser inestable. Para eso seleccionamos entonces solo la segunda columna de la matriz obtenida.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">y_probs</span><span class="o">=</span><span class="n">result</span><span class="o">.</span><span class="n">predict_proba</span><span class="p">(</span><span class="n">X1</span><span class="p">)[:,</span><span class="mi">1</span><span class="p">]</span>
+<span class="n">y_probs</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([0.23808908, 0.24952123, 0.25126204, ..., 0.4126344 , 0.3839987 ,
+       0.38400066], dtype=float32)
+</pre></div>
+</div>
+</div>
+</div>
+<p>Y atenemso los resultados y la predicción para todas las celdas. Sin embargo esto lo tenemos para un vector que cosntruimos la principio que solo contiene las celdas dentro de la cuenca, es decir eliminó todas las celdas por fuera. Eso nos impide construir nuestra cuenca a partir de este vector.</p>
+<p>Una forma de resolver esto se presenta a continuación. Existen muchas formas, seguramente otras mas directas.</p>
+<p>Para este caso construiremos entonces un nuevo <em>Dataframe</em>, pero en este caso con el vector completo, sin eliminar las celdas por fuera de la cuenca, y las celdas por fuera de la cuenca, en lugar de tener un valor de NaN les daremos un valor de 0. Las funciones de <em>sklearn</em> no corren cuando encuentra dentro de los valores NaN.</p>
+<p>De igual forma, hay que transformar las variables categóricas a variables tipo <em>dummy</em> y en este caso debemos eliminar un anueva columna que se forma con el intercepto y que denomina <em>0.0</em></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pendiente_vector2</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">nan_to_num</span><span class="p">(</span><span class="n">pendiente_vector</span><span class="p">)</span>
+<span class="n">aspecto_vector2</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">nan_to_num</span><span class="p">(</span><span class="n">aspecto_vector</span><span class="p">)</span>
+<span class="n">geologia_vector2</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">nan_to_num</span><span class="p">(</span><span class="n">geologia_vector</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">f</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;pendiente&#39;</span><span class="p">:</span><span class="n">pendiente_vector2</span><span class="p">,</span><span class="s1">&#39;aspecto&#39;</span><span class="p">:</span><span class="n">aspecto_vector2</span><span class="p">,</span><span class="s1">&#39;geologia&#39;</span><span class="p">:</span><span class="n">geologia_vector2</span><span class="p">}</span>
+<span class="n">x_map</span><span class="o">=</span><span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
+<span class="n">dummy_geologia</span><span class="o">=</span><span class="n">pd</span><span class="o">.</span><span class="n">get_dummies</span><span class="p">(</span><span class="n">x_map</span><span class="p">[</span><span class="s1">&#39;geologia&#39;</span><span class="p">],</span><span class="n">prefix</span><span class="o">=</span><span class="s1">&#39;geo&#39;</span><span class="p">)</span>
+<span class="n">column_name</span><span class="o">=</span><span class="n">x_map</span><span class="o">.</span><span class="n">columns</span><span class="o">.</span><span class="n">values</span><span class="o">.</span><span class="n">tolist</span><span class="p">()</span>
+<span class="n">column_name</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="s1">&#39;geologia&#39;</span><span class="p">)</span>
+<span class="n">x_map</span><span class="o">=</span><span class="n">x_map</span><span class="p">[</span><span class="n">column_name</span><span class="p">]</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">dummy_geologia</span><span class="p">)</span>
+<span class="n">x_map</span><span class="o">=</span><span class="n">x_map</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="s1">&#39;geo_0.0&#39;</span><span class="p">,</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">x_map</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">
+  <div id="df-e96bc988-6f93-465f-8892-2302a03005cf">
+    <div class="colab-df-container">
+      <div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>pendiente</th>
+      <th>aspecto</th>
+      <th>geo_2.0</th>
+      <th>geo_4.0</th>
+      <th>geo_6.0</th>
+      <th>geo_8.0</th>
+      <th>geo_9.0</th>
+      <th>geo_10.0</th>
+      <th>geo_11.0</th>
+      <th>geo_14.0</th>
+      <th>geo_15.0</th>
+      <th>geo_16.0</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>1854705</th>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>1854706</th>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>1854707</th>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>1854708</th>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>1854709</th>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+  </tbody>
+</table>
+<p>1854710 rows × 12 columns</p>
+</div>
+      <button class="colab-df-convert" onclick="convertToInteractive('df-e96bc988-6f93-465f-8892-2302a03005cf')"
+              title="Convert this dataframe to an interactive table."
+              style="display:none;">
+
+  <svg xmlns="http://www.w3.org/2000/svg" height="24px"viewBox="0 0 24 24"
+       width="24px">
+    <path d="M0 0h24v24H0V0z" fill="none"/>
+    <path d="M18.56 5.44l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94zm-11 1L8.5 8.5l.94-2.06 2.06-.94-2.06-.94L8.5 2.5l-.94 2.06-2.06.94zm10 10l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94z"/><path d="M17.41 7.96l-1.37-1.37c-.4-.4-.92-.59-1.43-.59-.52 0-1.04.2-1.43.59L10.3 9.45l-7.72 7.72c-.78.78-.78 2.05 0 2.83L4 21.41c.39.39.9.59 1.41.59.51 0 1.02-.2 1.41-.59l7.78-7.78 2.81-2.81c.8-.78.8-2.07 0-2.86zM5.41 20L4 18.59l7.72-7.72 1.47 1.35L5.41 20z"/>
+  </svg>
+      </button>
+
+  <style>
+    .colab-df-container {
+      display:flex;
+      flex-wrap:wrap;
+      gap: 12px;
+    }
+
+    .colab-df-convert {
+      background-color: #E8F0FE;
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+      display: none;
+      fill: #1967D2;
+      height: 32px;
+      padding: 0 0 0 0;
+      width: 32px;
+    }
+
+    .colab-df-convert:hover {
+      background-color: #E2EBFA;
+      box-shadow: 0px 1px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px 1px rgba(60, 64, 67, 0.15);
+      fill: #174EA6;
+    }
+
+    [theme=dark] .colab-df-convert {
+      background-color: #3B4455;
+      fill: #D2E3FC;
+    }
+
+    [theme=dark] .colab-df-convert:hover {
+      background-color: #434B5C;
+      box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
+      filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.3));
+      fill: #FFFFFF;
+    }
+  </style>
+
+      <script>
+        const buttonEl =
+          document.querySelector('#df-e96bc988-6f93-465f-8892-2302a03005cf button.colab-df-convert');
+        buttonEl.style.display =
+          google.colab.kernel.accessAllowed ? 'block' : 'none';
+
+        async function convertToInteractive(key) {
+          const element = document.querySelector('#df-e96bc988-6f93-465f-8892-2302a03005cf');
+          const dataTable =
+            await google.colab.kernel.invokeFunction('convertToInteractive',
+                                                     [key], {});
+          if (!dataTable) return;
+
+          const docLinkHtml = 'Like what you see? Visit the ' +
+            '<a target="_blank" href=https://colab.research.google.com/notebooks/data_table.ipynb>data table notebook</a>'
+            + ' to learn more about interactive tables.';
+          element.innerHTML = '';
+          dataTable['output_type'] = 'display_data';
+          await google.colab.output.renderOutput(dataTable, element);
+          const docLink = document.createElement('div');
+          docLink.innerHTML = docLinkHtml;
+          element.appendChild(docLink);
+        }
+      </script>
+    </div>
+  </div>
+</div></div>
+</div>
+<p>Como se puede observar, tenemos ahora una matriz con todas las variables y con un número mayor de celdas.</p>
+<p>Con esta matriz podemos entonces obtener para cada celda la probabilidad que se inestable.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">y_pred</span><span class="o">=</span><span class="n">model</span><span class="o">.</span><span class="n">predict_proba</span><span class="p">(</span><span class="n">x_map</span><span class="p">)[:,</span><span class="mi">1</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Ya lo unico que nos queda es reconstruir a partir de dicho vector la matriz que conforma la cuenca con los valores de susceptibilidad. Para eso utilizaremos como máscara el mapa de pendiente.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">raster</span> <span class="o">=</span> <span class="n">rio</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s1">&#39;https://github.com/edieraristizabal/Libro_cartoGeotecnia/blob/master/data/Pendiente.tif?raw=true&#39;</span><span class="p">)</span>
+<span class="n">pendiente</span><span class="o">=</span><span class="n">raster</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">IS</span><span class="o">=</span><span class="n">y_pred</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="n">pendiente</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+<span class="n">IS</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">pendiente</span><span class="o">&lt;</span><span class="mi">0</span><span class="p">,</span><span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">,</span><span class="n">IS</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">IS</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">colorbar</span><span class="p">();</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/08_bivariado_112_0.png" src="_images/08_bivariado_112_0.png" />
+</div>
+</div>
 </div>
 </div>
 <div class="section" id="analisis-discriminante-lineal">
@@ -1951,8 +2788,8 @@ logística, es decir, los pesos de las variables, y los valores <span class="mat
 <a class="reference internal image-reference" href="https://1.bp.blogspot.com/-ODry-XJ159E/Vc9ZRXVvnwI/AAAAAAAABuc/FpSIJdTrqK0/s1600/Analisis-Discriminante-001.png"><img alt="lda" src="https://1.bp.blogspot.com/-ODry-XJ159E/Vc9ZRXVvnwI/AAAAAAAABuc/FpSIJdTrqK0/s1600/Analisis-Discriminante-001.png" style="width: 400px;" /></a>
 <p class="caption"><span class="caption-number">Fig. 40 </span><span class="caption-text">Intrepretación geométrica de LDA. Tomado de <a class="reference external" href="https://plepso.blogspot.com/2015/08/analisis-discriminante-de-dos-grupos.html">Plepso</a></span><a class="headerlink" href="#lda" title="Permalink to this image">¶</a></p>
 </div>
-<div class="section" id="id7">
-<h4><em>Python</em><a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h4>
+<div class="section" id="id6">
+<h4><em>Python</em><a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h4>
 </div>
 </div>
 <div class="section" id="support-vector-machine">
@@ -1969,8 +2806,8 @@ logística, es decir, los pesos de las variables, y los valores <span class="mat
 <li><p>Que el maximal margin hyperplane se ajuste perfectamente a las observaciones de entrenamiento para separarlas todas correctamente suele conllevar problemas de overfitting.</p></li>
 </ul>
 <p>Por estas razones, es preferible crear un clasificador basado en un hiperplano que, aunque no separe perfectamente las dos clases, sea más robusto y tenga mayor capacidad predictiva al aplicarlo a nuevas observaciones (menos problemas de overfitting). Esto es exactamente lo que consiguen los clasificadores de vector soporte, también conocidos como soft margin classifiers o Support Vector Classifiers. Para lograrlo, en lugar de buscar el margen de clasificación más ancho posible que consigue que las observaciones estén en el lado correcto del margen; se permite que ciertas observaciones estén en el lado incorrecto del margen o incluso del hiperplano (Tomado de <a class="reference external" href="https://www.cienciadedatos.net/documentos/34_maquinas_de_vector_soporte_support_vector_machines">cienciadedatos.net</a>).</p>
-<div class="section" id="id8">
-<h4><em>Python</em><a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h4>
+<div class="section" id="id7">
+<h4><em>Python</em><a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h4>
 </div>
 </div>
 <div class="section" id="random-forest">
@@ -1981,8 +2818,8 @@ logística, es decir, los pesos de las variables, y los valores <span class="mat
 <a class="reference internal image-reference" href="https://www.tibco.com/sites/tibco/files/media_entity/2021-05/random-forest-diagram.svg"><img alt="rf" src="https://www.tibco.com/sites/tibco/files/media_entity/2021-05/random-forest-diagram.svg" width="400px" /></a>
 <p class="caption"><span class="caption-number">Fig. 42 </span><span class="caption-text">Intrepretación geométrica de <em>random forest</em>*</span><a class="headerlink" href="#rf" title="Permalink to this image">¶</a></p>
 </div>
-<div class="section" id="id9">
-<h4><em>Python</em><a class="headerlink" href="#id9" title="Permalink to this headline">¶</a></h4>
+<div class="section" id="id8">
+<h4><em>Python</em><a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h4>
 </div>
 </div>
 <div class="section" id="redes-neuronales">
@@ -1993,8 +2830,8 @@ logística, es decir, los pesos de las variables, y los valores <span class="mat
 <p class="caption"><span class="caption-number">Fig. 43 </span><span class="caption-text">Intrepretación geométrica de redes neuronales. Tomado de <a class="reference external" href="https://es.wikipedia.org/wiki/Red_neuronal_artificial">Wikipedia</a></span><a class="headerlink" href="#rna" title="Permalink to this image">¶</a></p>
 </div>
 <p>Cada neurona está conectada con otras a través de unos enlaces. En estos enlaces el valor de salida de la neurona anterior es multiplicado por un valor de peso. Estos pesos en los enlaces pueden incrementar o inhibir el estado de activación de las neuronas adyacentes. Del mismo modo, a la salida de la neurona, puede existir una función limitadora o umbral, que modifica el valor resultado o impone un límite que no se debe sobrepasar antes de propagarse a otra neurona. Esta función se conoce como función de activación. Estos sistemas aprenden y se forman a sí mismos, en lugar de ser programados de forma explícita. Para realizar este aprendizaje automático, normalmente, se intenta minimizar una función de pérdida que evalúa la red en su total. Los valores de los pesos de las neuronas se van actualizando buscando reducir el valor de la función de pérdida. Este proceso se realiza mediante la propagación hacia atrás.</p>
-<div class="section" id="id10">
-<h4><em>Python</em><a class="headerlink" href="#id10" title="Permalink to this headline">¶</a></h4>
+<div class="section" id="id9">
+<h4><em>Python</em><a class="headerlink" href="#id9" title="Permalink to this headline">¶</a></h4>
 </div>
 </div>
 </div>
