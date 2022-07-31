@@ -42,6 +42,8 @@
     <script src="_static/copybutton.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
     <script>
         const thebe_selector = ".thebe"
@@ -346,6 +348,22 @@ El modelo CHASM (Combined Hydrological And Stability Model), desarrollado por Wi
 <p>Los modelos más conocidos e implementados anivel mundial son el modelo SHallow Landslide Stability (SHALSTAB) y Transient Rainfall Infiltration and Gridbased Slope-Stability (TRIGRS), a continuación se describe cada uno de ellos.</p>
 <div class="section" id="modelo-shalstab">
 <h2>Modelo SHALSTAB<a class="headerlink" href="#modelo-shalstab" title="Permalink to this headline">¶</a></h2>
+<p>El modelo SHALSTAB, desarrollado por Montgomery &amp; Dietrich, (1994), emplea el modelo hidrológico TOPOG (O’Loughlin, 1986) en condiciones de lluvia estacionaria para construir un mapa del patrón de la humedad basado en el área aferente a cada punto, la pendiente y la transmisividad del suelo. En el modelo la humedad del suelo es calculada como:</p>
+<p><span class="math notranslate nohighlight">\(W=\frac{Qa}{bTsinθ}\)</span></p>
+<p>Donde <span class="math notranslate nohighlight">\(Q\)</span> es la lluvia en condiciones estacionarias (<span class="math notranslate nohighlight">\(mm/d\)</span>), a es el área de drenaje (<span class="math notranslate nohighlight">\(m^2\)</span>), <span class="math notranslate nohighlight">\(b\)</span> es la longitud de cada celda (<span class="math notranslate nohighlight">\(m\)</span>), <span class="math notranslate nohighlight">\(T\)</span> es la transmisividad del suelo en condiciones saturadas (<span class="math notranslate nohighlight">\(m^2/\)</span>), <span class="math notranslate nohighlight">\(\theta\)</span> y  es la pendiente. Asumiendo que la transmisividad no varía con la profundidad, se puede entonces asumir:</p>
+<p><span class="math notranslate nohighlight">\(W= \frac{h}{z_t}\)</span></p>
+<p>Donde <span class="math notranslate nohighlight">\(h\)</span> es el espesor del suelo saturado y <span class="math notranslate nohighlight">\(z_t\)</span> el espesor total de suelo. Combinando las dos ecuaciones anteriores se puede estimar la saturación relativa del perfil de suelo como:</p>
+<p><span class="math notranslate nohighlight">\(\frac{h}{z_t}=\frac{Qa}{bTsinθ} 	\)</span></p>
+<p>En cuanto al componente geotécnico, el modelo SHALSTAB está basado en análisis de equilibrio límite con talud infinito y el criterio de falla de Mohr-Coulomb.</p>
+<p><span class="math notranslate nohighlight">\(ρ_sgz_tsinθcosθ=C'+[ρ_s-ρ_w\frac{h}{z_t}]gzcos^2θtanϕ 	\)</span></p>
+<p>Donde <span class="math notranslate nohighlight">\(ρ_s\)</span> es la densidad del suelo, <span class="math notranslate nohighlight">\(ρw\)</span> es la densidad del agua, <span class="math notranslate nohighlight">\(g\)</span> es la aceleración de la gravedad, <span class="math notranslate nohighlight">\(C’\)</span> es la cohesión efectiva del suelo, y <span class="math notranslate nohighlight">\(φ\)</span> es el ángulo de fricción. Esta ecuación puede ser escrita en términos de la relación h/z como:</p>
+<p><span class="math notranslate nohighlight">\(\frac{h}{z_t}=\frac{ρ_s}{ρ_w}(1-\frac{tanθ}{tanϕ})+\frac{C'}{wgz_tcos^2θtanϕ}\)</span>
+Finalmente acoplando el modelo hidrológico con el modelo de estabilidad se obtienen la siguiente ecuación:</p>
+<p><span class="math notranslate nohighlight">\(\frac{a}{b}=\frac{T}{Q}sinθ[\frac{ρ_s}{ρ_w}(1-\frac{tanθ}{tanϕ})+\frac{C'}{wgzcos^2θtanϕ}]\)</span></p>
+<p>A partir de esta ecuación es posible determinar cuatro condiciones de estabilidad para cada celda de análisis. Las celdas donde la relación entre el área de drenaje aferente y la longitud de la celda (a/b) es mayor que la expresión al lado derecho de la ecuación corresponde a celdas inestables, en caso contrario son celdas estables. Las dos condiciones restantes corresponden a condiciones de estabilidad que no dependen de la lluvia. Las celdas estables en condiciones completamente saturadas de todo el perfil de suelo (h/zt=1) son denominadas incondicionalmente estables y cumplen la siguiente condición:</p>
+<p><span class="math notranslate nohighlight">\(tanθ&lt;1-(\frac{ρ_s}{ρ_w})tanϕ+\frac{C'}{ρ_sgz_tcos^2θ \)</span></p>
+<p>Y las celdas inestables en condiciones secas (h/zt=0) se denominan incondicionalmente inestables y cumplen la siguiente condición:</p>
+<p><span class="math notranslate nohighlight">\(tanθ&gt;=tanϕ+\frac{C'}{ρ_sgz_tcos^2θ\)</span></p>
 </div>
 <div class="section" id="modelo-trigrs">
 <h2>Modelo TRIGRS<a class="headerlink" href="#modelo-trigrs" title="Permalink to this headline">¶</a></h2>
@@ -356,8 +374,8 @@ lluvia modelado. La solución para el caso de frontera basal impermeable a una p
 <p>Donde 𝜓 es la cabeza de presión, 𝑡 el tiempo. 𝑍 = 𝑧/𝑐𝑜𝑠 𝛿, 𝑍 es la coordenada en dirección vertical (positiva hacia abajo), 𝑧
 la coordenada en dirección normal al talud y δ es el ángulo del terreno con la horizontal; 𝑑 es la profundidad inicial del nivel en
 dirección vertical. 𝐵 = 𝑐𝑜𝑠2𝛿 − (𝐼𝑍𝐿𝑇/𝐾𝑠), 𝐾𝑠 es la conductividad hidráulica saturada en dirección 𝑍, 𝐼𝑍𝐿𝑇 la tasa de infiltración estacionaria (inicial) en la superficie del suelo. 𝐼𝑛𝑍 es la tasa de infiltración a una intensidad dada para el n-ésimo intervalo de tiempo. 𝐷1 = 𝐷0/𝑐𝑜𝑠2𝛿, 𝐷0 es la difusividad hidráulica saturada (𝐷0 = 𝐾𝑠/𝑆𝑠, donde 𝑆𝑠 es el almacenamiento especifico). 𝑁 es el número total de intervalos y 𝐻(𝑡 − 𝑡𝑛) es la función de paso de Heaviside, donde 𝑡𝑛 es el tiempo en el n-ésimo intervalo en la secuencia de infiltración de lluvia. La función 𝑖𝑒𝑟𝑓𝑐 tiene la forma 𝑖𝑒𝑟𝑐𝑓 (𝜂) = 1√𝜋exp(−𝜂2) − 𝜂 𝑒𝑟𝑓𝑐 (𝜂), donde 𝑒𝑟𝑓𝑐(𝜂) es la función de error complementario.</p>
-<p>El modelo geotécnico empleado en TRIGRS es un modelo de talud infinito unidimensional. El factor de seguridad FS
-se determina a partir de (2) propuesta por:</p>
+<p>Para estimar los cambios en el factor de seguridad como función de la profundidad (Z) y el tiempo (t) se utiliza el modelo de estabilidad de talud infinito de acuerdo con la siguiente ecuación:</p>
+<p><span class="math notranslate nohighlight">\(FS(Z,t)=\frac{tan}{tanδ}+\frac{c'-ψ(Z,t)\gamma_wtanϕ'}{\gamma_sZsenδcosδ}\)</span></p>
 <p>Donde 𝑐′ es la cohesión efectiva del suelo, 𝜙′ el ángulo de fricción efectivo, 𝛾𝑤 el peso unitario del agua, 𝛾𝑠 el peso unitario
 del suelo y 𝜓(𝑍,𝑡) la cabeza de presión en función de la profundidad y el tiempo 𝑡. En se tiene información detallada del
 modelo TRIGRS.</p>

@@ -40,6 +40,36 @@ Dos posibles mecanismos de saturación para deslizamientos detonados por lluvias
 Los modelos más conocidos e implementados anivel mundial son el modelo SHallow Landslide Stability (SHALSTAB) y Transient Rainfall Infiltration and Gridbased Slope-Stability (TRIGRS), a continuación se describe cada uno de ellos.
 
 ## Modelo SHALSTAB
+El modelo SHALSTAB, desarrollado por Montgomery & Dietrich, (1994), emplea el modelo hidrológico TOPOG (O'Loughlin, 1986) en condiciones de lluvia estacionaria para construir un mapa del patrón de la humedad basado en el área aferente a cada punto, la pendiente y la transmisividad del suelo. En el modelo la humedad del suelo es calculada como:
+
+$W=\frac{Qa}{bTsinθ}$
+
+Donde $Q$ es la lluvia en condiciones estacionarias ($mm/d$), a es el área de drenaje ($m^2$), $b$ es la longitud de cada celda ($m$), $T$ es la transmisividad del suelo en condiciones saturadas ($m^2/$), $\theta$ y  es la pendiente. Asumiendo que la transmisividad no varía con la profundidad, se puede entonces asumir:
+
+$W= \frac{h}{z_t}$ 				
+
+Donde $h$ es el espesor del suelo saturado y $z_t$ el espesor total de suelo. Combinando las dos ecuaciones anteriores se puede estimar la saturación relativa del perfil de suelo como:
+
+$\frac{h}{z_t}=\frac{Qa}{bTsinθ} 	$
+
+En cuanto al componente geotécnico, el modelo SHALSTAB está basado en análisis de equilibrio límite con talud infinito y el criterio de falla de Mohr-Coulomb.
+
+$ρ_sgz_tsinθcosθ=C'+[ρ_s-ρ_w\frac{h}{z_t}]gzcos^2θtanϕ 	$
+
+Donde $ρ_s$ es la densidad del suelo, $ρw$ es la densidad del agua, $g$ es la aceleración de la gravedad, $C’$ es la cohesión efectiva del suelo, y $φ$ es el ángulo de fricción. Esta ecuación puede ser escrita en términos de la relación h/z como:
+
+$\frac{h}{z_t}=\frac{ρ_s}{ρ_w}(1-\frac{tanθ}{tanϕ})+\frac{C'}{wgz_tcos^2θtanϕ}$
+Finalmente acoplando el modelo hidrológico con el modelo de estabilidad se obtienen la siguiente ecuación:
+
+$\frac{a}{b}=\frac{T}{Q}sinθ[\frac{ρ_s}{ρ_w}(1-\frac{tanθ}{tanϕ})+\frac{C'}{wgzcos^2θtanϕ}]$
+
+A partir de esta ecuación es posible determinar cuatro condiciones de estabilidad para cada celda de análisis. Las celdas donde la relación entre el área de drenaje aferente y la longitud de la celda (a/b) es mayor que la expresión al lado derecho de la ecuación corresponde a celdas inestables, en caso contrario son celdas estables. Las dos condiciones restantes corresponden a condiciones de estabilidad que no dependen de la lluvia. Las celdas estables en condiciones completamente saturadas de todo el perfil de suelo (h/zt=1) son denominadas incondicionalmente estables y cumplen la siguiente condición:
+
+$tanθ<1-(\frac{ρ_s}{ρ_w})tanϕ+\frac{C'}{ρ_sgz_tcos^2θ $
+
+Y las celdas inestables en condiciones secas (h/zt=0) se denominan incondicionalmente inestables y cumplen la siguiente condición:
+
+$tanθ>=tanϕ+\frac{C'}{ρ_sgz_tcos^2θ$	
 
 
 ## Modelo TRIGRS
@@ -54,8 +84,9 @@ Donde 𝜓 es la cabeza de presión, 𝑡 el tiempo. 𝑍 = 𝑧/𝑐𝑜𝑠 �
 la coordenada en dirección normal al talud y δ es el ángulo del terreno con la horizontal; 𝑑 es la profundidad inicial del nivel en 
 dirección vertical. 𝐵 = 𝑐𝑜𝑠2𝛿 − (𝐼𝑍𝐿𝑇/𝐾𝑠), 𝐾𝑠 es la conductividad hidráulica saturada en dirección 𝑍, 𝐼𝑍𝐿𝑇 la tasa de infiltración estacionaria (inicial) en la superficie del suelo. 𝐼𝑛𝑍 es la tasa de infiltración a una intensidad dada para el n-ésimo intervalo de tiempo. 𝐷1 = 𝐷0/𝑐𝑜𝑠2𝛿, 𝐷0 es la difusividad hidráulica saturada (𝐷0 = 𝐾𝑠/𝑆𝑠, donde 𝑆𝑠 es el almacenamiento especifico). 𝑁 es el número total de intervalos y 𝐻(𝑡 − 𝑡𝑛) es la función de paso de Heaviside, donde 𝑡𝑛 es el tiempo en el n-ésimo intervalo en la secuencia de infiltración de lluvia. La función 𝑖𝑒𝑟𝑓𝑐 tiene la forma 𝑖𝑒𝑟𝑐𝑓 (𝜂) = 1√𝜋exp(−𝜂2) − 𝜂 𝑒𝑟𝑓𝑐 (𝜂), donde 𝑒𝑟𝑓𝑐(𝜂) es la función de error complementario.
 
-El modelo geotécnico empleado en TRIGRS es un modelo de talud infinito unidimensional. El factor de seguridad FS 
-se determina a partir de (2) propuesta por:
+Para estimar los cambios en el factor de seguridad como función de la profundidad (Z) y el tiempo (t) se utiliza el modelo de estabilidad de talud infinito de acuerdo con la siguiente ecuación: 
+
+$FS(Z,t)=\frac{tan}{tanδ}+\frac{c'-ψ(Z,t)\gamma_wtanϕ'}{\gamma_sZsenδcosδ}$
 
 Donde 𝑐′ es la cohesión efectiva del suelo, 𝜙′ el ángulo de fricción efectivo, 𝛾𝑤 el peso unitario del agua, 𝛾𝑠 el peso unitario 
 del suelo y 𝜓(𝑍,𝑡) la cabeza de presión en función de la profundidad y el tiempo 𝑡. En se tiene información detallada del 
