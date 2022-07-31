@@ -32,12 +32,12 @@ Arnone et al. (2011) proponen un modelo físico distribuido, en el cual acoplan 
 Finalmente el modelo SHIA_Landslide propuesto por Aristizábal et al. (2014) acopla un modelo de talud infinita en condiciones saturadas con el modelo hidrológico distribuido de tanques a escala de cuenca que considera los flujos verticales y horizontales, denominado SHIA (Vélez, 2001). El modelo hidrológico está conformado por dos componentes: un balance de agua que simula los proceso hidrológicos dominantes en la cuenca, tales como infiltración, percolación, escorrentía superficial, flujo sub superficial, y flujo subterráneo; y un componente que simula el flujo del agua a través de la red de drenaje, lo que permite calibrar con valores observados la hidrología de la cuenca y las laderas previo a la simulación de estabilidad de las vertientes. 
 
 :::{figure-md} modelos
-<img src="https://i.pinimg.com/564x/21/f9/1d/21f91d0d89d2aac8176b08e2b832c18b.jpg" alt="modelos" width="800px">
+<img src="https://i.pinimg.com/564x/21/f9/1d/21f91d0d89d2aac8176b08e2b832c18b.jpg" alt="modelos" width="400px">
 
-Dos posibles mecanismos de saturación para deslizamientos detonados por lluvias. Izquierda: incremento del nivel freático colgado paralelo a la ladera a partir de una superficie de contraste de permeabilidad. Derecha: avance de frente húmedo a partir de la superficie del terreno.
+modelos físicos.
 :::
 
-Los modelos más conocidos e implementados anivel mundial son el modelo SHallow Landslide Stability (SHALSTAB) y Transient Rainfall Infiltration and Gridbased Slope-Stability (TRIGRS), a continuación se describe cada uno de ellos.
+Los modelos más conocidos e implementados a nivel mundial son el modelo SHallow Landslide Stability (SHALSTAB) y Transient Rainfall Infiltration and Gridbased Slope-Stability (TRIGRS), a continuación se describe cada uno de ellos.
 
 ## Modelo SHALSTAB
 El modelo SHALSTAB, desarrollado por Montgomery & Dietrich, (1994), emplea el modelo hidrológico TOPOG (O'Loughlin, 1986) en condiciones de lluvia estacionaria para construir un mapa del patrón de la humedad basado en el área aferente a cada punto, la pendiente y la transmisividad del suelo. En el modelo la humedad del suelo es calculada como:
@@ -59,17 +59,18 @@ $ρ_sgz_tsinθcosθ=C'+[ρ_s-ρ_w\frac{h}{z_t}]gzcos^2θtanϕ 	$
 Donde $ρ_s$ es la densidad del suelo, $ρw$ es la densidad del agua, $g$ es la aceleración de la gravedad, $C’$ es la cohesión efectiva del suelo, y $φ$ es el ángulo de fricción. Esta ecuación puede ser escrita en términos de la relación h/z como:
 
 $\frac{h}{z_t}=\frac{ρ_s}{ρ_w}(1-\frac{tanθ}{tanϕ})+\frac{C'}{wgz_tcos^2θtanϕ}$
+
 Finalmente acoplando el modelo hidrológico con el modelo de estabilidad se obtienen la siguiente ecuación:
 
 $\frac{a}{b}=\frac{T}{Q}sinθ[\frac{ρ_s}{ρ_w}(1-\frac{tanθ}{tanϕ})+\frac{C'}{wgzcos^2θtanϕ}]$
 
-A partir de esta ecuación es posible determinar cuatro condiciones de estabilidad para cada celda de análisis. Las celdas donde la relación entre el área de drenaje aferente y la longitud de la celda (a/b) es mayor que la expresión al lado derecho de la ecuación corresponde a celdas inestables, en caso contrario son celdas estables. Las dos condiciones restantes corresponden a condiciones de estabilidad que no dependen de la lluvia. Las celdas estables en condiciones completamente saturadas de todo el perfil de suelo (h/zt=1) son denominadas incondicionalmente estables y cumplen la siguiente condición:
+A partir de esta ecuación es posible determinar cuatro condiciones de estabilidad para cada celda de análisis. Las celdas donde la relación entre el área de drenaje aferente y la longitud de la celda (a/b) es mayor que la expresión al lado derecho de la ecuación corresponde a celdas inestables, en caso contrario son celdas estables. Las dos condiciones restantes corresponden a condiciones de estabilidad que no dependen de la lluvia. Las celdas estables en condiciones completamente saturadas de todo el perfil de suelo ($h/z_t=1$) son denominadas incondicionalmente estables y cumplen la siguiente condición:
 
-$tanθ<1-(\frac{ρ_s}{ρ_w})tanϕ+\frac{C'}{ρ_sgz_tcos^2θ $
+$tanθ < 1-(\frac{ρ_s}{ρ_w})tanϕ+\frac{C'}{ρ_sgz_tcos^2θ} $
 
-Y las celdas inestables en condiciones secas (h/zt=0) se denominan incondicionalmente inestables y cumplen la siguiente condición:
+Y las celdas inestables en condiciones secas ($h/z_t=0$) se denominan incondicionalmente inestables y cumplen la siguiente condición:
 
-$tanθ>=tanϕ+\frac{C'}{ρ_sgz_tcos^2θ$	
+$tanθ >= tanϕ+\frac{C'}{ρ_sgz_tcos^2θ}$	
 
 
 ## Modelo TRIGRS
