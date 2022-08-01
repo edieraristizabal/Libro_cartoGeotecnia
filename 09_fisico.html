@@ -100,6 +100,11 @@
 </ul>
 <ul class="current nav bd-sidenav">
  <li class="toctree-l1">
+  <a class="reference internal" href="00_medialuna.html">
+   Hace sesenta años comenzó la tragedia
+  </a>
+ </li>
+ <li class="toctree-l1">
   <a class="reference internal" href="00_introduccion.html">
    Introducción
   </a>
@@ -331,7 +336,7 @@ de infiltración. Sin embargo existen diferentes aproximaciones a la física del
 <p>Como parte de los modelos físicos una gran variedad de modelos hidrológicos se han utilizado considerando el flujo de agua en el suelo en estado estático o transitorio, y en condiciones saturadas o parcialmente saturadas, utilizando las ecuaciones de Richards para el flujo vertical y las ecuaciones de Darcy para el flujo lateral. Entre estos se encuentra TOPOG (O’Loughlin, 1986), TAPES (Moore et al., 1988), TOPMODEL (Beven &amp; Kirkby, 1979), GEOtop (Bertoldi &amp; Rigon, 2004), tRIBS (Ivanov et al., 2004), SHIA (Vélez 2001), y los modelos de Green-Ampt (1911), Pradel &amp; Raad (1993) e Iverson (2000). Por el contrario, los modelos geotécnicos utilizados son muy similares, generalmente utilizando el método talud infinito y análisis de equilibrio límite, suponiendo la superficie de falla paralela a la superficie del terreno y que la longitud de falla es mucho mayor que el espesor de la capa desplazada (Borga et al., 2002).</p>
 <div class="figure align-default" id="hidrologico">
 <a class="reference internal image-reference" href="https://i.pinimg.com/564x/52/32/4a/52324a660eca43147a3ad80d2da9f621.jpg"><img alt="modelo hidrologico" src="https://i.pinimg.com/564x/52/32/4a/52324a660eca43147a3ad80d2da9f621.jpg" style="width: 600px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 45 </span><span class="caption-text">Dos posibles mecanismos de saturación para deslizamientos detonados por lluvias. Izquierda: incremento del nivel freático colgado paralelo a la ladera a partir de una superficie de contraste de permeabilidad. Derecha: avance de frente húmedo a partir de la superficie del terreno.</span><a class="headerlink" href="#hidrologico" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 46 </span><span class="caption-text">Dos posibles mecanismos de saturación para deslizamientos detonados por lluvias. Izquierda: incremento del nivel freático colgado paralelo a la ladera a partir de una superficie de contraste de permeabilidad. Derecha: avance de frente húmedo a partir de la superficie del terreno.</span><a class="headerlink" href="#hidrologico" title="Permalink to this image">¶</a></p>
 </div>
 <p>Uno de los primeros modelos físicos fue propuesto por Wu y Sidle (1995) denominado dSLAM (distribuited Shallow LAndslide Model), y posteriormente modificado como IDSSM (Integrated Dynamic Slope Stability Model) por Dhakal &amp; Sidle (2003). Corresponde a un modelo físico, dinámico y distribuido, que utiliza un análisis de estabilidad de talud infinita con un modelo hidrológico de onda cinemática propuesto por Takasao y Shiiba (1988). Este modelo considera la vegetación y asume que la infiltración es siempre mayor a la intensidad de la lluvia.
 Sin embargo uno de los modelos físicos más reconocido por su sencillez y fácil aplicación es el modelo propuesto por Montgomery &amp; Dietrich (1994) y Montgomery et al. (1998), denominado SHALSTAB. Este modelo emplea el modelo hidrológico TOPOG para estimar la altura de la porción saturada de suelo, el cual asume que el control dominante de la distribución espacial de los movimientos está dado por la topografía. Estos autores definen para su análisis un índice topográfico, el cual es utilizado para predecir el nivel freático en función del flujo del agua en el suelo y la intensidad de la lluvia. El modelo de estabilidad propuesto utiliza el criterio de Mohr-Coulomb, en el cual por simplificación asumen la cohesión igual cero.</p>
@@ -343,7 +348,7 @@ El modelo CHASM (Combined Hydrological And Stability Model), desarrollado por Wi
 <p>Finalmente el modelo SHIA_Landslide propuesto por Aristizábal et al. (2014) acopla un modelo de talud infinita en condiciones saturadas con el modelo hidrológico distribuido de tanques a escala de cuenca que considera los flujos verticales y horizontales, denominado SHIA (Vélez, 2001). El modelo hidrológico está conformado por dos componentes: un balance de agua que simula los proceso hidrológicos dominantes en la cuenca, tales como infiltración, percolación, escorrentía superficial, flujo sub superficial, y flujo subterráneo; y un componente que simula el flujo del agua a través de la red de drenaje, lo que permite calibrar con valores observados la hidrología de la cuenca y las laderas previo a la simulación de estabilidad de las vertientes.</p>
 <div class="figure align-default" id="modelos">
 <a class="reference internal image-reference" href="https://i.pinimg.com/564x/21/f9/1d/21f91d0d89d2aac8176b08e2b832c18b.jpg"><img alt="modelos" src="https://i.pinimg.com/564x/21/f9/1d/21f91d0d89d2aac8176b08e2b832c18b.jpg" style="width: 400px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 46 </span><span class="caption-text">modelos físicos.</span><a class="headerlink" href="#modelos" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 47 </span><span class="caption-text">modelos físicos.</span><a class="headerlink" href="#modelos" title="Permalink to this image">¶</a></p>
 </div>
 <p>Los modelos más conocidos e implementados a nivel mundial son el modelo SHallow Landslide Stability (SHALSTAB) y Transient Rainfall Infiltration and Gridbased Slope-Stability (TRIGRS), a continuación se describe cada uno de ellos.</p>
 <div class="section" id="modelo-shalstab">
