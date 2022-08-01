@@ -277,9 +277,16 @@
             <nav id="bd-toc-nav" aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#capacidad-de-prediccion">
-   Capacidad de predicción
+  <a class="reference internal nav-link" href="#desempeno-y-prediccion">
+   Desempeño y predicción
   </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#capacidad-de-prediccion">
+     Capacidad de predicción
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#curva-roc-manual">
@@ -307,9 +314,16 @@
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#capacidad-de-prediccion">
-   Capacidad de predicción
+  <a class="reference internal nav-link" href="#desempeno-y-prediccion">
+   Desempeño y predicción
   </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#capacidad-de-prediccion">
+     Capacidad de predicción
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#curva-roc-manual">
@@ -327,6 +341,21 @@
                 
   <div class="tex2jax_ignore mathjax_ignore section" id="evaluacion-del-modelo">
 <h1>Evaluación del modelo<a class="headerlink" href="#evaluacion-del-modelo" title="Permalink to this headline">¶</a></h1>
+<p>Tanto los modelos heurísticos, estadísticos o con base física son simplemente simplificaciones y aproximaciones a la realidad, la cual es mucho mas compleja y guarda elementos que desconocemos. Es por eso que debemos evaluar que tanto de aquella realidad estamos realmente representando. Incicialmente debemos establecer las siguientes definiciones:</p>
+<ul class="simple">
+<li><p><strong>Exactitud</strong> (<em>accuracy</em>): se refiere al grado de qué tan cerca está la medida o valor mapeado o clase de un mapa a su valor verdadero o clase en el campo.</p></li>
+<li><p><strong>Error</strong>: la diferencia entre el valor mapeado o la clase y el valor o clase verdadero.</p></li>
+<li><p><strong>Precisión</strong>: referente a una medida como el grado al cual medidas repetidas bajo condiciones invariantes muestran el mismo resultado.</p></li>
+<li><p><strong>Incertidumbre</strong> (<em>uncertainty</em>*): grado con el cual las características actuales del terreno pueden ser presentadas espacialmente en un mapa.</p></li>
+</ul>
+<p>Los términos objetividad y subjetividad son usados para señalar si los diferentes pasos tomados en la determinación de un grado de amenaza son verificables y reproducibles por otro investigador, o si ellos dependen del juicio personal del investigador.</p>
+<div class="figure align-default" id="precision">
+<a class="reference internal image-reference" href="https://i.pinimg.com/564x/21/f9/1d/21f91d0d89d2aac8176b08e2b832c18b.jpg"><img alt="modelos" src="https://i.pinimg.com/564x/21/f9/1d/21f91d0d89d2aac8176b08e2b832c18b.jpg" style="width: 500px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 47 </span><span class="caption-text">Exactitud y precisión de un modelo.</span><a class="headerlink" href="#precision" title="Permalink to this image">¶</a></p>
+</div>
+<p>Existen dos tipos de incertidumbre asociada a los modelos. La incertidumbre aleatoria que se refiere a la variabilidad qu conocemos está implicita en muchas de las variables que incorporamos dentro de los modelos. Esta incertidumbre puede ser incorporada en nuestro análisis, y es precisamente la que tratamos de evaluar. Pero es importante tener en cuenta que existe al incertidumbre epistémica, la cual está asociada al desconocimiento o los limitantes que tenemos para describri dichso fenómenos físicos que estamos modelando. Debido precisamente a que se refire aquellso elemenos que aun desconocemos, no puede entonces evaluarse o incorporarse directamente en los modelos.</p>
+<div class="section" id="desempeno-y-prediccion">
+<h2>Desempeño y predicción<a class="headerlink" href="#desempeno-y-prediccion" title="Permalink to this headline">¶</a></h2>
 <p>para evaluar el desempeño y capacidad
 de predicción del mapa de susceptibilidad obtenido
 con los modelos implementados, se utilizaron la
@@ -366,7 +395,7 @@ términos de probabilidad espacial.</p>
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="o">~</span>\<span class="n">AppData</span>\<span class="n">Local</span>\<span class="n">Temp</span><span class="o">/</span><span class="n">ipykernel_27548</span><span class="o">/</span><span class="mf">2042219194.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="o">~</span>\<span class="n">AppData</span>\<span class="n">Local</span>\<span class="n">Temp</span><span class="o">/</span><span class="n">ipykernel_37512</span><span class="o">/</span><span class="mf">2042219194.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1">#Para utilizar validacion cruzada con el 80/20%</span>
 <span class="ne">----&gt; </span><span class="mi">2</span> <span class="n">x_train</span><span class="p">,</span><span class="n">x_validation</span><span class="p">,</span><span class="n">y_train</span><span class="p">,</span><span class="n">y_validation</span><span class="o">=</span><span class="n">model_selection</span><span class="o">.</span><span class="n">train_test_split</span><span class="p">(</span><span class="n">x1</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">test_size</span><span class="o">=</span><span class="mf">0.2</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">7</span><span class="p">)</span>
 <span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Tamaño de variables de entrenamiento:&#39;</span><span class="p">,</span> <span class="n">x_train</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
@@ -482,11 +511,11 @@ weighted avg       0.97      0.68      0.79     79248
 <span class="ne">TypeError</span>: &#39;str&#39; object is not callable
 </pre></div>
 </div>
-<img alt="_images/10_evaluacion_8_1.png" src="_images/10_evaluacion_8_1.png" />
+<img alt="_images/10_evaluacion_9_1.png" src="_images/10_evaluacion_9_1.png" />
 </div>
 </div>
 <div class="section" id="capacidad-de-prediccion">
-<h2>Capacidad de predicción<a class="headerlink" href="#capacidad-de-prediccion" title="Permalink to this headline">¶</a></h2>
+<h3>Capacidad de predicción<a class="headerlink" href="#capacidad-de-prediccion" title="Permalink to this headline">¶</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">confusion_matrix</span><span class="p">(</span><span class="n">y_validation</span><span class="p">,</span> <span class="n">y_val_pred</span><span class="p">)</span>
@@ -540,7 +569,7 @@ weighted avg       0.97      0.68      0.78     19812
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0.7, 0.1, &#39;AUC=0.8052%&#39;)
 </pre></div>
 </div>
-<img alt="_images/10_evaluacion_12_1.png" src="_images/10_evaluacion_12_1.png" />
+<img alt="_images/10_evaluacion_13_1.png" src="_images/10_evaluacion_13_1.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -581,7 +610,8 @@ C:\Users\usuario\.conda\envs\ml\lib\site-packages\sklearn\utils\optimize.py:204:
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/10_evaluacion_15_0.png" src="_images/10_evaluacion_15_0.png" />
+<img alt="_images/10_evaluacion_16_0.png" src="_images/10_evaluacion_16_0.png" />
+</div>
 </div>
 </div>
 </div>
