@@ -54,7 +54,7 @@
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Evaluación del modelo" href="10_evaluacion.html" />
-    <link rel="prev" title="Métodos basados en datos" href="08_bivariado.html" />
+    <link rel="prev" title="Métodos basados en datos" href="08_estadistico.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -101,7 +101,7 @@
 <ul class="current nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="00_medialuna.html">
-   Hace sesenta años comenzó la tragedia
+   Media Luna (1954)
   </a>
  </li>
  <li class="toctree-l1">
@@ -145,7 +145,7 @@
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="08_bivariado.html">
+  <a class="reference internal" href="08_estadistico.html">
    Métodos basados en datos
   </a>
  </li>
@@ -166,12 +166,12 @@
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="12_amenaza.html">
-   Evaluación de la amenaza
+   Amenaza
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="13_flujos.html">
-   Movimientos en masa tipo flujos
+   Flujos
   </a>
  </li>
  <li class="toctree-l1">
@@ -220,9 +220,9 @@
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="_sources/09_fisico.md"><button type="button"
+        <a class="dropdown-buttons" href="_sources/09_fisico.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
-                data-placement="left">.md</button></a>
+                data-placement="left">.ipynb</button></a>
         <!-- Download PDF via print -->
         <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
                 onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
@@ -256,6 +256,23 @@
 
             <!-- Launch buttons -->
 
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/edieraristizabal/Libro_cartoGeotecnia/master?urlpath=tree/docs/09_fisico.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
         </div>
 
         <!-- Table of contents -->
@@ -270,6 +287,13 @@
   <a class="reference internal nav-link" href="#modelo-shalstab">
    Modelo SHALSTAB
   </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#python">
+     Python
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#modelo-trigrs">
@@ -305,6 +329,13 @@
   <a class="reference internal nav-link" href="#modelo-shalstab">
    Modelo SHALSTAB
   </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#python">
+     Python
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#modelo-trigrs">
@@ -330,7 +361,7 @@
 <p>Los modelos con base física evalúan la ocurrencia de movimientos en masa en términos de factor de seguridad o probabilidades de
 ocurrencia, a través de modelos numéricos que acoplan análisis geotécnicos de estabilidad de laderas con modelos
 de infiltración. Sin embargo existen diferentes aproximaciones a la física del problema con simplificaciones diferentes, por lo cual es fundamental utilizar el modelo que se ajuste a las necesidades o particularidades del área de estudio.</p>
-<p>El componente hidrológico de estos modelos explica el proceso de infiltración el agua en el suelo y el avance del frente húmedo o aumento de un nivel fgreático colgado. Para esto utilizan modelso de flujo estático horizontal o modelos de flujo transitorio vertical. Desde el componente geotécnico, la mayoría de modelos utilizan métodos de equilibrio límite de talud infinito. Alguno han incoporado modelos de dovelas que permiten análisis de superficies de falla circulares.</p>
+<p>El componente hidrológico de estos modelos explica el proceso de infiltración el agua en el suelo y el avance del frente húmedo o aumento de un nivel freático colgado. Para esto utilizan modelos de flujo estático horizontal o modelos de flujo transitorio vertical. Desde el componente geotécnico, la mayoría de modelos utilizan métodos de equilibrio límite de talud infinito. Alguno han incoporado modelos de dovelas que permiten análisis de superficies de falla circulares.</p>
 <p>Los modelos con base física permiten tener en consideración la complejidad de los factores detonantes (sismo y/o lluvia) y las características geomecánicas del terreno. Sin embargo, los análisis determinísticos basados en el factor de seguridad no consideran la variabilidad espacio-temporal de los factores que intervienen en el análisis de estabilidad, introduciendo en los resultados incertidumbres y variaciones como producto de un análisis singular.</p>
 <p>Estos métodos son recomendables para áreas pequeñas a escalas detalladas, ya que requieren una gran cantidad de información de entrada, que se obtiene de ensayos de laboratorio o mediciones de campo. Por lo que la parametrización de los modelos puede ser complicada, en especial la distribución espacial de la profundidad del suelo, la cual juega un papel fundamental.</p>
 <p>Como parte de los modelos físicos una gran variedad de modelos hidrológicos se han utilizado considerando el flujo de agua en el suelo en estado estático o transitorio, y en condiciones saturadas o parcialmente saturadas, utilizando las ecuaciones de Richards para el flujo vertical y las ecuaciones de Darcy para el flujo lateral. Entre estos se encuentra TOPOG (O’Loughlin, 1986), TAPES (Moore et al., 1988), TOPMODEL (Beven &amp; Kirkby, 1979), GEOtop (Bertoldi &amp; Rigon, 2004), tRIBS (Ivanov et al., 2004), SHIA (Vélez 2001), y los modelos de Green-Ampt (1911), Pradel &amp; Raad (1993) e Iverson (2000). Por el contrario, los modelos geotécnicos utilizados son muy similares, generalmente utilizando el método talud infinito y análisis de equilibrio límite, suponiendo la superficie de falla paralela a la superficie del terreno y que la longitud de falla es mucho mayor que el espesor de la capa desplazada (Borga et al., 2002).</p>
@@ -369,6 +400,244 @@ El modelo CHASM (Combined Hydrological And Stability Model), desarrollado por Wi
 <p><span class="math notranslate nohighlight">\(tanθ &lt; 1-(\frac{ρ_s}{ρ_w})tanϕ+\frac{C'}{ρ_sgz_tcos^2θ} \)</span></p>
 <p>Y las celdas inestables en condiciones secas (<span class="math notranslate nohighlight">\(h/z_t=0\)</span>) se denominan incondicionalmente inestables y cumplen la siguiente condición:</p>
 <p><span class="math notranslate nohighlight">\(tanθ &gt;= tanϕ+\frac{C'}{ρ_sgz_tcos^2θ}\)</span></p>
+<div class="section" id="python">
+<h3>Python<a class="headerlink" href="#python" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">rasterio</span> <span class="k">as</span> <span class="nn">rio</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
+<span class="o">~</span>\<span class="n">AppData</span>\<span class="n">Local</span>\<span class="n">Temp</span><span class="o">/</span><span class="n">ipykernel_24236</span><span class="o">/</span><span class="mf">3834865208.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="kn">import</span> <span class="nn">rasterio</span> <span class="k">as</span> <span class="nn">rio</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="ne">----&gt; </span><span class="mi">3</span> <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+
+<span class="ne">ModuleNotFoundError</span>: No module named &#39;matplotlib&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Set water unit weigth</span>
+<span class="s2">&quot;Parameters&quot;</span>
+<span class="n">GammaW</span>   <span class="o">=</span> <span class="mf">9.81</span>
+
+<span class="s2">&quot;others&quot;</span>
+<span class="n">dx</span> <span class="o">=</span> <span class="mf">12.5</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Importar raster de entrada</span>
+<span class="n">raster</span> <span class="o">=</span> <span class="n">rio</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s1">&#39;https://github.com/edieraristizabal/Libro_cartoGeotecnia/blob/master/data/Geologia_Superficial.tif?raw=true&#39;</span><span class="p">)</span>
+<span class="n">cohesion</span><span class="o">=</span><span class="n">raster</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">cohesion</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">cohesion</span><span class="o">==</span><span class="n">cohesion</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">],</span><span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">,</span><span class="n">cohesion</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">cohesion</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">colorbar</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="n">Running</span> <span class="n">cells</span> <span class="k">with</span> <span class="s1">&#39;Python 3.9.0 64-bit&#39;</span> <span class="n">requires</span> <span class="n">ipykernel</span> <span class="n">package</span><span class="o">.</span>
+
+<span class="n">Run</span> <span class="n">the</span> <span class="n">following</span> <span class="n">command</span> <span class="n">to</span> <span class="n">install</span> <span class="s1">&#39;ipykernel&#39;</span> <span class="n">into</span> <span class="n">the</span> <span class="n">Python</span> <span class="n">environment</span><span class="o">.</span> 
+
+<span class="ne">Command</span>: &#39;c:/Python39/python.exe -m pip install ipykernel -U --user --force-reinstall&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">raster</span> <span class="o">=</span> <span class="n">rio</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="n">ruta_in</span><span class="o">+</span><span class="s1">&#39;phyrad.tif&#39;</span><span class="p">)</span>
+<span class="n">friccion</span><span class="o">=</span><span class="n">raster</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">friccion</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">friccion</span><span class="o">==</span><span class="n">friccion</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">],</span><span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">,</span><span class="n">friccion</span><span class="p">)</span> <span class="c1">#ya py lee los nans</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">friccion</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">colorbar</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">raster</span> <span class="o">=</span> <span class="n">rio</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="n">ruta_in</span><span class="o">+</span><span class="s1">&#39;permeabilidad.tif&#39;</span><span class="p">)</span>
+<span class="n">ks</span><span class="o">=</span><span class="n">raster</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">ks</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">ks</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">ks</span><span class="o">==</span><span class="n">ks</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">],</span><span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">,</span><span class="n">ks</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">ks</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">colorbar</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">raster</span> <span class="o">=</span> <span class="n">rio</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="n">ruta_in</span><span class="o">+</span><span class="s1">&#39;gamma.tif&#39;</span><span class="p">)</span>
+<span class="n">peso</span><span class="o">=</span><span class="n">raster</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">peso</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">peso</span><span class="o">==</span><span class="n">peso</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">],</span><span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">,</span><span class="n">peso</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">peso</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">colorbar</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">raster</span> <span class="o">=</span> <span class="n">rio</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="n">ruta_in</span><span class="o">+</span><span class="s1">&#39;Aacc_LlanoGrande.tif&#39;</span><span class="p">)</span>
+<span class="n">flujo</span><span class="o">=</span><span class="n">raster</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="c1"># flujo=np.where(flujo==flujo[0,0],np.nan,flujo)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">flujo</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">colorbar</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">raster</span> <span class="o">=</span> <span class="n">rio</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="n">ruta_in</span><span class="o">+</span><span class="s1">&#39;pendienterad.tif&#39;</span><span class="p">)</span>
+<span class="n">pendiente</span><span class="o">=</span><span class="n">raster</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">pendiente</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">pendiente</span><span class="o">==</span><span class="n">pendiente</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">],</span><span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">,</span><span class="n">pendiente</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">pendiente</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">colorbar</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">raster</span> <span class="o">=</span> <span class="n">rio</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="n">ruta_in</span><span class="o">+</span><span class="s1">&#39;espesor.tif&#39;</span><span class="p">)</span>
+<span class="n">espesor</span><span class="o">=</span><span class="n">raster</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">espesor</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">espesor</span><span class="o">==</span><span class="n">espesor</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">],</span><span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">,</span><span class="n">espesor</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">espesor</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">colorbar</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#&quot;Reading the calibration parameters and FS&quot;</span>
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">ruta_in</span> <span class="o">+</span> <span class="s1">&#39;calibration.txt&#39;</span><span class="p">,</span><span class="s1">&#39;r&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">splitfile</span><span class="p">:</span>
+	<span class="n">data_cali</span> <span class="o">=</span> <span class="p">[</span><span class="n">line</span><span class="o">.</span><span class="n">split</span><span class="p">()</span> <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">splitfile</span><span class="p">]</span>
+
+<span class="n">R1</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">data_cali</span><span class="p">[</span><span class="mi">10</span><span class="p">][</span><span class="mi">0</span><span class="p">])</span>
+<span class="n">R2</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">data_cali</span><span class="p">[</span><span class="mi">13</span><span class="p">][</span><span class="mi">0</span><span class="p">])</span>
+<span class="n">R3</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">data_cali</span><span class="p">[</span><span class="mi">16</span><span class="p">][</span><span class="mi">0</span><span class="p">])</span>
+<span class="n">R4</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">data_cali</span><span class="p">[</span><span class="mi">19</span><span class="p">][</span><span class="mi">0</span><span class="p">])</span>
+<span class="n">R5</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">data_cali</span><span class="p">[</span><span class="mi">22</span><span class="p">][</span><span class="mi">0</span><span class="p">])</span>
+<span class="n">q</span>  <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">data_cali</span><span class="p">[</span><span class="mi">25</span><span class="p">][</span><span class="mi">0</span><span class="p">])</span>
+<span class="n">q</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="s2">&quot;Applying corretion factors&quot;</span>
+
+<span class="n">ks</span>       <span class="o">=</span> <span class="n">ks</span>       <span class="o">*</span> <span class="n">R1</span> 
+<span class="n">cohesion</span> <span class="o">=</span> <span class="n">cohesion</span> <span class="o">*</span> <span class="n">R2</span>
+<span class="n">friccion</span> <span class="o">=</span> <span class="n">friccion</span> <span class="o">*</span> <span class="n">R3</span>
+<span class="n">espesor</span>  <span class="o">=</span> <span class="n">espesor</span>  <span class="o">*</span> <span class="n">R4</span>
+<span class="n">peso</span>     <span class="o">=</span> <span class="n">peso</span>     <span class="o">*</span> <span class="n">R5</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="s2">&quot;STABILITY ANALYSIS&quot;</span>
+
+<span class="n">MatEst</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">raster</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+<span class="n">Matq</span>   <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">raster</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+
+<span class="n">M4</span><span class="o">=</span><span class="n">flujo</span><span class="o">/</span><span class="n">dx</span>
+<span class="n">M5</span><span class="o">=</span><span class="p">((</span><span class="mf">0.01</span> <span class="o">*</span> <span class="n">ks</span> <span class="o">*</span> <span class="p">(</span><span class="n">espesor</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">pendiente</span><span class="p">))</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">pendiente</span><span class="p">))</span> <span class="o">/</span> <span class="p">(</span><span class="mf">0.001</span><span class="o">*</span><span class="n">q</span><span class="p">))</span> <span class="o">*</span> <span class="p">((</span><span class="n">peso</span> <span class="o">/</span> <span class="n">GammaW</span><span class="p">)</span> <span class="o">*</span> <span class="p">(</span><span class="mi">1</span> <span class="o">-</span> <span class="n">np</span><span class="o">.</span><span class="n">tan</span><span class="p">(</span><span class="n">pendiente</span><span class="p">)</span> <span class="o">/</span> <span class="n">np</span><span class="o">.</span><span class="n">tan</span><span class="p">(</span><span class="n">friccion</span><span class="p">))</span> <span class="o">+</span> <span class="p">(</span><span class="n">cohesion</span> <span class="o">/</span> <span class="p">(</span><span class="n">GammaW</span> <span class="o">*</span> <span class="n">espesor</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">pendiente</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">tan</span><span class="p">(</span><span class="n">friccion</span><span class="p">))))</span> 
+<span class="n">MatEst1</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">M4</span><span class="o">&gt;</span><span class="n">M5</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="n">MatEst</span><span class="p">)</span> <span class="c1">#  unstable</span>
+
+<span class="n">M6</span><span class="o">=</span><span class="p">((</span><span class="mf">0.01</span> <span class="o">*</span> <span class="n">ks</span> <span class="o">*</span> <span class="p">(</span><span class="n">espesor</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">pendiente</span><span class="p">))</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">pendiente</span><span class="p">))</span> <span class="o">/</span> <span class="p">(</span><span class="mf">0.001</span><span class="o">*</span><span class="n">q</span><span class="p">))</span> <span class="o">*</span> <span class="p">((</span><span class="n">peso</span> <span class="o">/</span> <span class="n">GammaW</span><span class="p">)</span> <span class="o">*</span> <span class="p">(</span><span class="mi">1</span> <span class="o">-</span> <span class="n">np</span><span class="o">.</span><span class="n">tan</span><span class="p">(</span><span class="n">pendiente</span><span class="p">)</span> <span class="o">/</span> <span class="n">np</span><span class="o">.</span><span class="n">tan</span><span class="p">(</span><span class="n">friccion</span><span class="p">))</span> <span class="o">+</span> <span class="p">(</span><span class="n">cohesion</span> <span class="o">/</span> <span class="p">(</span><span class="n">GammaW</span> <span class="o">*</span> <span class="n">espesor</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">pendiente</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">tan</span><span class="p">(</span><span class="n">friccion</span><span class="p">))))</span> 
+<span class="n">MatEst2</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">M4</span><span class="o">&lt;=</span><span class="n">M6</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="n">MatEst1</span><span class="p">)</span> <span class="c1"># Stable</span>
+
+<span class="n">M1</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">tan</span><span class="p">(</span><span class="n">pendiente</span><span class="p">)</span>
+<span class="n">M2</span><span class="o">=</span><span class="p">(</span><span class="mi">1</span> <span class="o">-</span> <span class="p">(</span><span class="n">GammaW</span><span class="o">/</span><span class="n">peso</span><span class="p">))</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">tan</span><span class="p">(</span><span class="n">friccion</span><span class="p">)</span> <span class="o">+</span> <span class="p">(</span><span class="n">cohesion</span> <span class="o">/</span> <span class="p">(</span><span class="n">peso</span> <span class="o">*</span> <span class="n">espesor</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">pendiente</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span><span class="p">))</span>
+<span class="n">MatEst3</span>  <span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">M1</span><span class="o">&lt;</span><span class="n">M2</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="n">MatEst2</span><span class="p">)</span> <span class="c1"># Unconditionally stable</span>
+	
+<span class="n">M3</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">tan</span><span class="p">(</span><span class="n">friccion</span><span class="p">)</span> <span class="o">+</span> <span class="p">(</span><span class="n">cohesion</span> <span class="o">/</span> <span class="p">(</span><span class="n">peso</span> <span class="o">*</span> <span class="n">espesor</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">pendiente</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span><span class="p">))</span>
+<span class="n">MatEst4</span>  <span class="o">=</span>  <span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">M1</span><span class="o">&gt;=</span><span class="n">M3</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="n">MatEst3</span><span class="p">)</span> <span class="c1"># Unconditionally Unstable</span>
+
+<span class="n">Matq</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1000</span> <span class="o">*</span> <span class="mf">0.01</span> <span class="o">*</span> <span class="n">ks</span> <span class="o">*</span> <span class="n">espesor</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">pendiente</span><span class="p">)</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">pendiente</span><span class="p">))</span> <span class="o">*</span> <span class="p">(</span><span class="n">dx</span> <span class="o">/</span> <span class="n">flujo</span><span class="p">)</span> <span class="o">*</span> <span class="p">((</span><span class="n">peso</span> <span class="o">/</span> <span class="n">GammaW</span><span class="p">)</span> <span class="o">*</span> <span class="p">(</span><span class="mi">1</span> <span class="o">-</span> <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">tan</span><span class="p">(</span><span class="n">pendiente</span><span class="p">)</span> <span class="o">/</span> <span class="n">np</span><span class="o">.</span><span class="n">tan</span><span class="p">(</span><span class="n">friccion</span><span class="p">)))</span> <span class="o">+</span> <span class="n">cohesion</span> <span class="o">/</span> <span class="p">(</span><span class="n">GammaW</span> <span class="o">*</span> <span class="n">espesor</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">pendiente</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">tan</span><span class="p">(</span><span class="n">friccion</span><span class="p">)))</span>
+<span class="n">np</span><span class="o">.</span><span class="n">nanmin</span><span class="p">(</span><span class="n">Matq</span><span class="p">)</span>
+
+<span class="n">MatEst</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">MatEst4</span> <span class="o">==</span> <span class="mi">0</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">,</span><span class="n">MatEst4</span><span class="p">)</span>
+<span class="n">Matq</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">Matq</span><span class="o">==</span><span class="n">np</span><span class="o">.</span><span class="n">inf</span><span class="p">,</span><span class="n">np</span><span class="o">.</span><span class="n">nanmax</span><span class="p">(</span><span class="n">Matq</span><span class="p">[</span><span class="n">Matq</span><span class="o">!=</span><span class="n">np</span><span class="o">.</span><span class="n">inf</span><span class="p">]),</span><span class="n">Matq</span><span class="p">)</span>
+
+<span class="n">Matq</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">M1</span><span class="o">&lt;</span><span class="n">M2</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">M1</span><span class="o">&gt;=</span><span class="n">M3</span><span class="p">,</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span><span class="n">Matq</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">MatEst</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">colorbar</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">Matq</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">colorbar</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Para exportar</span>
+<span class="k">with</span> <span class="n">rio</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="n">ruta_out</span><span class="o">+</span><span class="s1">&#39;MatEst.tif&#39;</span><span class="p">,</span> <span class="s1">&#39;w&#39;</span><span class="p">,</span> 
+              <span class="n">driver</span><span class="o">=</span><span class="s1">&#39;Gtiff&#39;</span><span class="p">,</span><span class="n">height</span><span class="o">=</span><span class="n">raster</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span><span class="n">width</span><span class="o">=</span><span class="n">raster</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span><span class="n">count</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+              <span class="n">dtype</span><span class="o">=</span><span class="s1">&#39;float64&#39;</span><span class="p">,</span><span class="n">nodata</span><span class="o">=-</span><span class="mi">999</span><span class="p">,</span><span class="n">crs</span><span class="o">=</span><span class="n">raster</span><span class="o">.</span><span class="n">crs</span><span class="p">,</span><span class="n">transform</span><span class="o">=</span><span class="n">raster</span><span class="o">.</span><span class="n">transform</span><span class="p">)</span> <span class="k">as</span> <span class="n">dst</span><span class="p">:</span>
+    <span class="n">dst</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">MatEst</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">with</span> <span class="n">rio</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="n">ruta_out</span><span class="o">+</span><span class="s1">&#39;Matq.tif&#39;</span><span class="p">,</span> <span class="s1">&#39;w&#39;</span><span class="p">,</span> 
+              <span class="n">driver</span><span class="o">=</span><span class="s1">&#39;Gtiff&#39;</span><span class="p">,</span><span class="n">height</span><span class="o">=</span><span class="n">raster</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span><span class="n">width</span><span class="o">=</span><span class="n">raster</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span><span class="n">count</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+              <span class="n">dtype</span><span class="o">=</span><span class="s1">&#39;float64&#39;</span><span class="p">,</span><span class="n">nodata</span><span class="o">=-</span><span class="mi">999</span><span class="p">,</span><span class="n">crs</span><span class="o">=</span><span class="n">raster</span><span class="o">.</span><span class="n">crs</span><span class="p">,</span><span class="n">transform</span><span class="o">=</span><span class="n">raster</span><span class="o">.</span><span class="n">transform</span><span class="p">)</span> <span class="k">as</span> <span class="n">dst</span><span class="p">:</span>
+    <span class="n">dst</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">Matq</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>  
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Vol</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">logical_or</span><span class="p">(</span><span class="n">MatEst</span><span class="o">==</span><span class="mi">2</span><span class="p">,</span> <span class="n">MatEst</span><span class="o">==</span><span class="mi">3</span><span class="p">),</span> <span class="n">espesor</span><span class="o">*</span><span class="mf">12.5</span><span class="o">*</span><span class="mf">12.5</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+
+<span class="k">with</span> <span class="n">rio</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="n">ruta_out</span><span class="o">+</span><span class="s1">&#39;Vol.tif&#39;</span><span class="p">,</span> <span class="s1">&#39;w&#39;</span><span class="p">,</span> 
+              <span class="n">driver</span><span class="o">=</span><span class="s1">&#39;Gtiff&#39;</span><span class="p">,</span><span class="n">height</span><span class="o">=</span><span class="n">raster</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span><span class="n">width</span><span class="o">=</span><span class="n">raster</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span><span class="n">count</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+              <span class="n">dtype</span><span class="o">=</span><span class="s1">&#39;float64&#39;</span><span class="p">,</span><span class="n">nodata</span><span class="o">=-</span><span class="mi">999</span><span class="p">,</span><span class="n">crs</span><span class="o">=</span><span class="n">raster</span><span class="o">.</span><span class="n">crs</span><span class="p">,</span><span class="n">transform</span><span class="o">=</span><span class="n">raster</span><span class="o">.</span><span class="n">transform</span><span class="p">)</span> <span class="k">as</span> <span class="n">dst</span><span class="p">:</span>
+    <span class="n">dst</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">Vol_10Tr_78</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span> 
+
+<span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">Vol_10Tr_78</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">colorbar</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
 </div>
 <div class="section" id="modelo-trigrs">
 <h2>Modelo TRIGRS<a class="headerlink" href="#modelo-trigrs" title="Permalink to this headline">¶</a></h2>
@@ -431,7 +700,7 @@ espesor de suelo en el factor de seguridad.</p>
             
                 <!-- Previous / next buttons -->
 <div class='prev-next-area'> 
-    <a class='left-prev' id="prev-link" href="08_bivariado.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="08_estadistico.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>

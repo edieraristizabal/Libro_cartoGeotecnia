@@ -51,7 +51,7 @@
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Evaluación de la amenaza" href="12_amenaza.html" />
+    <link rel="next" title="Amenaza" href="12_amenaza.html" />
     <link rel="prev" title="Evaluación del modelo" href="10_evaluacion.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
@@ -143,7 +143,7 @@
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="08_bivariado.html">
+  <a class="reference internal" href="08_estadistico.html">
    Métodos basados en datos
   </a>
  </li>
@@ -164,12 +164,12 @@
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="12_amenaza.html">
-   Evaluación de la amenaza
+   Amenaza
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="13_flujos.html">
-   Movimientos en masa tipo flujos
+   Flujos
   </a>
  </li>
  <li class="toctree-l1">
@@ -218,9 +218,9 @@
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="_sources/11_detonante.md"><button type="button"
+        <a class="dropdown-buttons" href="_sources/11_detonante.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
-                data-placement="left">.md</button></a>
+                data-placement="left">.ipynb</button></a>
         <!-- Download PDF via print -->
         <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
                 onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
@@ -253,6 +253,23 @@
             class="fas fa-expand"></i></button></a>
 
             <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/edieraristizabal/Libro_cartoGeotecnia/master?urlpath=tree/docs/11_detonante.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
 
         </div>
 
@@ -361,32 +378,6 @@ Entre tanto el agua que se infiltra ocupa los poros en el suelo y tiende a drena
 </div>
 <div class="section" id="los-sismos-como-factor-detonante">
 <h2>Los sismos como factor detonante<a class="headerlink" href="#los-sismos-como-factor-detonante" title="Permalink to this headline">¶</a></h2>
-<p>a zonificación de la amenaza por movimientos en masa implementa diversas metodologías de
-carácter heurístico [20]-[22], estadístico [23]-[25] o
-con base física [26]-[29]. Sin embargo, un número
-importante de dichas metodologías evalúa realmente la susceptibilidad, ya que no consideran el
-factor detonante. En cuanto a los métodos que incorporan en su análisis el factor detonante, estos
-han sido enfocados a la lluvia. Para el detonante
-sísmico, los métodos disponibles son escasos y
-han abordado clásicamente análisis seudoestáticos, análisis esfuerzo-deformación y análisis de
-desplazamientos acumulados permanentes [30].
-El análisis seudoestático de laderas fue desarrollado inicialmente por Terzaghi [31], para modelar
-la sacudida sísmica como una fuerza permanente
-que es aplicada al diagrama de fuerzas del análisis
-convencional de equilibrio límite estático [30], y se
-ha convertido en uno de los análisis más usados
-debido a su simplicidad [32]. Los métodos esfuerzo-deformación permiten aproximaciones coherentes a las deformaciones permanentes que sufren
-las laderas ante un sismo; sin embargo, se requiere
-una exigente parametrización, con una alta sensibilidad a dichos valores de entrada. En cuanto a los
-métodos de desplazamiento permanentes, Newmark (1965) [33] propuso un método simple inicialmente concebido para embalses y represas, que
-permite modelar la ladera como un bloque rígido,
-que se desliza sobre un plano inclinado bajo una
-aceleración crítica conocida del sismo, arrojando
-el umbral requerido para superar la resistencia
-al corte y causar la falla [1], [30]. Existen también en el estado del arte algunas aproximaciones
-estadísticas [34]-[38], determinísticas [26], [33],
-[39] o combinación de ambas [40], [41] e incluso
-como parte de análisis multi-amenaza de estructuras [42].</p>
 <div class="section" id="analisis-seudoestatico">
 <h3>Análisis seudoestático<a class="headerlink" href="#analisis-seudoestatico" title="Permalink to this headline">¶</a></h3>
 <p>El método seudoestático es una generalización del
@@ -532,7 +523,7 @@ de menor criticidad que corresponde con sismofuentes lejanas y menor magnitud (T
     <a class='right-next' id="next-link" href="12_amenaza.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Evaluación de la amenaza</p>
+        <p class="prev-next-title">Amenaza</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>

@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Movimientos en masa tipo flujos &#8212; Cartografía Geotécnica</title>
+    <title>Flujos &#8212; Cartografía Geotécnica</title>
     
   <link href="_static/css/theme.css" rel="stylesheet">
   <link href="_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -52,7 +52,7 @@
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Movimientos en masa en roca" href="14_roca.html" />
-    <link rel="prev" title="&lt;no title&gt;" href="12_amenaza.html" />
+    <link rel="prev" title="Amenaza" href="12_amenaza.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -98,6 +98,11 @@
 </ul>
 <ul class="current nav bd-sidenav">
  <li class="toctree-l1">
+  <a class="reference internal" href="00_medialuna.html">
+   Media Luna (1954)
+  </a>
+ </li>
+ <li class="toctree-l1">
   <a class="reference internal" href="00_introduccion.html">
    Introducción
   </a>
@@ -109,7 +114,7 @@
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="02_estadoarte.html">
-   Estudios de zonificación de movimientos en masa en el Valle de Aburrá
+   Estado del arte
   </a>
  </li>
  <li class="toctree-l1">
@@ -138,7 +143,7 @@
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="08_bivariado.html">
+  <a class="reference internal" href="08_estadistico.html">
    Métodos basados en datos
   </a>
  </li>
@@ -157,9 +162,14 @@
    Factores detonantes
   </a>
  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="12_amenaza.html">
+   Amenaza
+  </a>
+ </li>
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   Movimientos en masa tipo flujos
+   Flujos
   </a>
  </li>
  <li class="toctree-l1">
@@ -208,9 +218,9 @@
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="_sources/13_flujos.md"><button type="button"
+        <a class="dropdown-buttons" href="_sources/13_flujos.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
-                data-placement="left">.md</button></a>
+                data-placement="left">.ipynb</button></a>
         <!-- Download PDF via print -->
         <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
                 onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
@@ -244,6 +254,23 @@
 
             <!-- Launch buttons -->
 
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/edieraristizabal/Libro_cartoGeotecnia/master?urlpath=tree/docs/13_flujos.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
         </div>
 
         <!-- Table of contents -->
@@ -256,7 +283,7 @@
         <div class="col-12 col-md-9 pl-md-3 pr-md-0">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Movimientos en masa tipo flujos</h1>
+                <h1>Flujos</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -267,8 +294,28 @@
             
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="movimientos-en-masa-tipo-flujos">
-<h1>Movimientos en masa tipo flujos<a class="headerlink" href="#movimientos-en-masa-tipo-flujos" title="Permalink to this headline">¶</a></h1>
+  <div class="tex2jax_ignore mathjax_ignore section" id="flujos">
+<h1>Flujos<a class="headerlink" href="#flujos" title="Permalink to this headline">¶</a></h1>
+<p>Las diferencias entre fenómenos puramente hidrológicos y movimientos en masa están bien establecidas físicamente (Coussot and Meunier 1996; O’Brien and Julien 1985; Pierson and Costa 1987; Takahashi 1981); sin embargo, no existe unanimidad sobre definiciones específicas para flujos torrenciales que contienen una mezcla de agua y sedimentos en proporciones variables. De forma general, los flujos se definen como un fenómeno de transporte de sedimentos compuesto por una mezcla de material fino y grueso con una cantidad variable de agua, donde tanto las fuerzas sólidas como las fluidas influyen fuertemente (Iverson 1997; Nettleton et al. 2005). Según el tipo de proceso dominante y relación sedimentos-agua, esta mezcla es considerada desde procesos gravitacionales tipo flujo (Cruden and Varnes 1996) hasta procesos hidrológicos tipo inundaciones súbitas (NWS, 2005), donde en muchos casos el término flujo hiperconcentrado es utilizado para describir flujos intermedios entre estos dos fenómenos.</p>
+<p>Iverson (1997) distingue los procesos gravitacionales como aquellos donde las interacciones entre los fragmentos sólidos dominan la transferencia de momento, y las inundaciones cargadas de sedimentos como aquellas donde la turbulencia del fluido domina la transferencia de momento; para casos intermedios usa el término flujos de escombros, donde los sólidos y fluidos deben transferir el momento de forma sinérgica para sostener el movimiento. Takahashi (1981) distingue el transporte de sedimentos entre flujos fluidos y movimientos en masa, porque mientras que en los fluidos las fuerzas de arrastre y levantamiento, dadas por la alta velocidad relativa, son claves para el transporte individual de partículas, en los movimientos tipo caída, deslizamiento o flujos todas las partículas, así como el fluido intersticial, son movidos por la fuerza de la gravedad, de modo que la velocidad relativa entre la fase sólida y la líquida desempeña un papel menor. En este mismo sentido, Ancey (2001) distingue entre dos regímenes de flujo, flujos de dos fases, donde el agua es el agente principal y el pequeño porcentaje de sedimentos es transportado como carga de fondo y por suspensión; y flujos de una fase, compuestos por una mezcla altamente concentrada de sedimentos y agua. Sin embargo, Pierson (2005) propone que, además de la concentración de sedimentos suspendidos, la distribución del tamaño de granos y la densidad de los granos se debe utilizar para definir las mezclas sedimento-agua.</p>
+<p>Diferentes autores han propuesto límites de concentración en peso y volumen para diferenciar flujos de agua con flujos hiperconcentrados y flujos de escombros. En general se proponen valores por encima del 30% en volumen para flujos hiperconcentrados, y valores por encima del 70% en volumen para flujos gravitacionales (Bradley 1986).
+Diferentes causas han sido descritas como detonantes de flujos torrenciales, Slaymaker (1988) divide los mecanismos detonantes como internos y externos. Los mecanismos externos se refieren a intensos o prolongados eventos de lluvia, sismos, enjambre de avalanchas de escombros o avalanchas de nieve (Miles 1957), rotura de presas naturales y su liberación instantánea (Takahashi 1981), y entre los mecanismos internos, Slaymaker (1988) resalta la desestabilización y removilización de los sedimentos del cauce.</p>
+<p>Los flujos torrenciales son uno de los principales mecanismos de transporte de sedimentos extremadamente rápido y en grandes cantidades desde las laderas a los drenajes ((Swanston and Swanson 1976), (Miles 1957), (Campbell and Church 2003)), por lo que en la literatura es posible encontrar fenómenos tipo flujos torrenciales en tres tipos de clasificaciones para procesos de transporte de sedimentos, los cuales son generalmente considerados en Colombia como avenidas torrenciales:</p>
+<p>Clasificación para procesos gravitacionales, donde se incluyen fenómenos tipo flujos de escombros canalizados (Cruden &amp; Varnes 1996; Hutchinson 1988; Varnes 1978).
+Clasificación de flujos de escombros, en las que se utiliza el término para nombrar una mezcla de agua y sedimentos en diferentes proporciones (O’Brien &amp; Julien 1985)
+Clasificación de fenómenos tipo inundaciones, en las que dominan procesos hidrológicos e incluyen las inundaciones súbitas (Borga et al. 2014; Pierson &amp; Costa 1987).
+A continuación, se describen los fenómenos tipos flujos que presentan cada una de estas clasificaciones.</p>
+<p>Cruden and Varnes (1996) y Varnes (1978) clasifican los procesos gravitacionales de vertiente según el tipo de movimiento y los materiales. En estas clasificaciones, los flujos se definen como un movimiento espacialmente continuo en el que las superficies de cizallamiento son de corta duración, están poco espaciadas y generalmente no se conservan. De acuerdo con el tamaño del material, podrían denominarse flujos de tierra cuando las partículas son menores de 2 mm, o flujos de escombros cuando dominan las partículas de tamaño grueso. Hutchinson (1988) y Nettleton et al. (2005) distinguen dos formas de flujos de escombros: aquellos que forman su propio camino hacia abajo de las laderas del valle, flujos de escombros de laderas, y los flujos de escombros canalizados que siguen los canales existentes.</p>
+<p>CLASIFICACIÓN DE FLUJOS DE ESCOMBROS
+Crosta et al. (1990) proponen usar el término flujos de escombros en un significado amplio, dividiéndolos en cuatro categorías: (i) Flujos de escombros no canalizados en drenajes de orden cero, originados como desgarres superficiales, (ii) Flujos de escombros en cuencas canalizadas de pendientes medias, originados como deslizamientos rotacionales o traslacionales, (iii) Avalanchas de escombros en intercuencas de pendientes mayores a 45°, (iv)  Torrente de escombros que se dan inicio en valles estrechos, causados por la falla o ruptura de presas generadas por deslizamientos, flujos de escombros o bloqueos de avalanchas de nieve.</p>
+<p>Entre tanto, O’Brien and Julien (1985) proponen una clasificación para flujos de acuerdo con las propiedades controladas por la concentración de sedimentos, cuya clasificación va desde inundaciones hasta movimientos en masa. Los autores identifican cinco categorías de flujos: (i) Crecientes: Definidos como inundaciones de agua por descargas excesivas donde los sedimentos son transportados a través de suspensión y saltación por el lecho, (ii) Inundaciones de lodo: Flujos donde la concentración de sedimentos finos varía de 20 a 45% por volumen, (iii) Flujos de lodo: Flujos donde la concentración de sedimentos finos varía de 45 a 50% por volumen, (iv) Flujos de escombros: Aplicado a flujos de lodo con más del 50% de sedimentos más gruesos que arena, (v) Deslizamientos: Movimiento en masa donde la concentración por volumen de sedimentos es mayor al 50%.</p>
+<p>Coussot &amp; Meunier (1996) proponen una clasificación en función de la concentración de sedimentos y el tipo de material, la cual varía desde flujos de corriente, donde los sedimentos son transportados por suspensión y carga de fondo hasta deslizamientos. Como términos intermedios entre estos dos fenómenos se encuentran los flujos hiperconcentrados, flujos de lodo, flujos de escombros y flujos granulares.</p>
+<p>Iverson (1997) incluye dentro de la categoría de flujos de escombros una gran cantidad de fenómenos como deslizamientos de escombros, torrentes de escombros, inundaciones de escombros, flujos de lodo, deslizamientos de lodo, y lahares para flujos de escombros de origen volcánico.</p>
+<p>Pierson &amp; Costa (1987) proponen una clasificación de mezclas sedimento - agua basada en la concentración de sedimentos y la velocidad media del flujo, y dividen los flujos en dos tipos diferentes: (i) Flujos líquidos aparentes: caracterizados por tener pequeñas concentraciones de sedimentos, divididos a su vez en flujos de corriente, para flujos donde el agua es la fase continua, y flujos de corrientes hiperconcentrados, para flujos donde la mezcla de agua y sedimentos presenta un límite elástico medible, pero aún parece fluir como un líquido. (ii) Fluidos plásticos: donde hay una mayor concentración de sedimentos, divididos en flujos de lodo y flujos granulares de acuerdo con el tamaño de los sedimentos.</p>
+<p>Hungr et al. (2001) y Oldrich Hungr, Leroueil, &amp; Picarelli (2014) proponen una clasificación de movimientos en masa tipo flujo donde incluyen el término inundación súbita como sinónimo de inundación de escombros, y lo definen como un flujo de agua muy rápido, fuertemente cargado con detritos en un canal de alta pendiente, y un caudal pico comparable a las inundaciones. En estos tipos de flujos el lecho de los cauces puede ser desestabilizado con el transporte masivo de sedimentos que excede el movimiento de fondo normal a través de la suspensión y saltación, pero que aún depende de las fuerzas de tracción del agua. Estos autores diferencian los eventos tipo inundación súbita de fenómenos tipo flujo de escombros, ya que estos últimos están limitados en canales o drenajes de primer y segundo orden de fuerte pendiente con áreas que alcanzan solo unos pocos kilómetros cuadrados y el volumen principal se da por el arranque y arrastre a lo largo de su recorrido, mientras que los eventos tipo inundación súbita, debido al arrastre del agua, pueden ocurrir en cuencas mucho más grandes y los depósitos se extienden sobre distancias mayores y áreas de menores pendientes. Como parte de eventos tipo inundación súbita incluyen los flujos generado por la ruptura repentina de lagos glaciales, denominados GLOFs (Glacial Lake Outburst Floods).</p>
+<p>Otras clasificaciones de mezclas de sedimentos y agua usan el término inundación súbita en un sentido general, para denominar flujos de alta descarga en corrientes que drenan cuencas hidrográficas pequeñas y de fuerte pendiente. El Servicio Geológico de los Estados Unidos (USGS por sus siglas en ingles), basado en Crosta et al. (1990) y Jakob &amp; Hungr (2005), dividen las inundaciones súbitas en tres tipos de flujos: flujos de agua, flujos hiperconcentrados y flujos de escombros. En los flujos de agua, la cantidad de sedimento suspendido es insuficiente para afectar el comportamiento del agua, mientras que en los flujos hiperconcentrados la cantidad de sedimentos cambia significativamente las propiedades del fluido y los mecanismos de transporte, y los flujos de escombros se consideran cuando la mezcla de agua y sedimentos se convierte en una mezcla capaz de soportar partículas de tamaño grava en suspensión incluso a baja velocidad o estático. Gaume et al. (2009) utilizan la misma clasificación del USGS para clasificar las inundaciones súbitas que ocurren en Europa, pero proponen usar el término inundación de escombros en lugar de flujos hiperconcentrados.</p>
+<p>En cuanto a los flujos tipo torrentes de escombros, considerados por diferentes autores en sus clasificaciones, Aulitzky (1980) los diferencia entre torrentes de flujo de escombros y torrentes de flujo de lodos, donde los torrentes de flujos escombros, considerados como una forma de flujos de escombros canalizados cuando se presentan como resultado de enjambre de movimientos en masa (Sterling and Slaymaker 2007), corresponden a flujos viscosos no newtonianos con pulsos y velocidades que alcanzan los 30 m/s, y los torrentes de inundación de escombros como flujos viscosos sin pulsos y que alcanzan velocidades menores y menor capacidad de transporte, que se caracterizan por la ausencia de material fino, y la presencia de escombros de origen orgánico y grandes dimensiones (Slaymaker, 1988).
+Todas estas clasificaciones de mezclas de agua y sedimentos tienen una escala continua de estos dos materiales; sin embargo, no incluyen un término que pueda traducirse literalmente como avenida torrencial. Por el contrario, utilizan diferentes términos como inundación súbita, flujo de escombros, inundación de escombros, torrente de escombros, los cuales son correlacionables según las descripciones proporcionadas a fenómenos descritos en nuestro país como avenidas torrenciales.</p>
 </div>
 
     <script type="text/x-thebe-config">
@@ -300,7 +347,7 @@
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">&lt;no title&gt;</p>
+            <p class="prev-next-title">Amenaza</p>
         </div>
     </a>
     <a class='right-next' id="next-link" href="14_roca.html" title="next page">
