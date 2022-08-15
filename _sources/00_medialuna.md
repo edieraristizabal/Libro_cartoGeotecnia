@@ -2,7 +2,7 @@
 
 ## Hace sesenta años comenzó la tragedia
 
-Reportaje del nobel Gabriel García Marques para El Espectador (Julia 12 de 1954)
+Reportaje del nobel Gabriel García Marques para El Espectador (Julio 12 de 1954)
 
 :::{figure-md} media luna
 <img src="https://i.pinimg.com/564x/82/23/6c/82236c8dcee0f3ee269018971eb2573b.jpg" alt="media luna" width="500px">

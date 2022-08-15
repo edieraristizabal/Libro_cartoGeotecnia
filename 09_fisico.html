@@ -311,8 +311,8 @@
       </a>
      </li>
      <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#ejecucion-de-lso-programas">
-       Ejecucion de lso programas
+      <a class="reference internal nav-link" href="#ejecucion-de-los-programas">
+       Ejecución de los programas
       </a>
      </li>
      <li class="toc-h4 nav-item toc-entry">
@@ -419,8 +419,8 @@
       </a>
      </li>
      <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#ejecucion-de-lso-programas">
-       Ejecucion de lso programas
+      <a class="reference internal nav-link" href="#ejecucion-de-los-programas">
+       Ejecución de los programas
       </a>
      </li>
      <li class="toc-h4 nav-item toc-entry">
@@ -543,7 +543,7 @@ de infiltración. Sin embargo existen diferentes aproximaciones a la física del
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
-<span class="o">~</span>\<span class="n">AppData</span>\<span class="n">Local</span>\<span class="n">Temp</span><span class="o">/</span><span class="n">ipykernel_23212</span><span class="o">/</span><span class="mf">3834865208.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="o">~</span>\<span class="n">AppData</span>\<span class="n">Local</span>\<span class="n">Temp</span><span class="o">/</span><span class="n">ipykernel_32020</span><span class="o">/</span><span class="mf">3834865208.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="kn">import</span> <span class="nn">rasterio</span> <span class="k">as</span> <span class="nn">rio</span>
 <span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="ne">----&gt; </span><span class="mi">3</span> <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
@@ -772,7 +772,7 @@ dirección vertical.</p>
 <p><span class="math notranslate nohighlight">\(𝐷1 = \frac{𝐷_0}{𝑐𝑜𝑠2𝛿}\)</span></p>
 <p>Donde <span class="math notranslate nohighlight">\(𝐷_0\)</span> es la difusividad hidráulica saturada (<span class="math notranslate nohighlight">\(𝐷0 = \frac{𝐾_𝑠}{𝑆_𝑠}\)</span>, donde <span class="math notranslate nohighlight">\(𝑆_𝑠\)</span> es el almacenamiento especifico). 𝑁 es el número total de intervalos y <span class="math notranslate nohighlight">\(𝐻(𝑡 − 𝑡_𝑛)\)</span> es la función de paso de Heaviside, donde <span class="math notranslate nohighlight">\(𝑡_𝑛\)</span> es el tiempo en el n-ésimo intervalo en la secuencia de infiltración de lluvia. La función <span class="math notranslate nohighlight">\(𝑖𝑒𝑟𝑓𝑐\)</span> tiene la forma <span class="math notranslate nohighlight">\(𝑖𝑒𝑟𝑐𝑓 (𝜂) = 1√𝜋exp(−𝜂2) − 𝜂 𝑒𝑟𝑓𝑐 (𝜂)\)</span>, donde <span class="math notranslate nohighlight">\(𝑒𝑟𝑓𝑐(𝜂)\)</span> es la función de error complementario.</p>
 <p>Para estimar los cambios en el factor de seguridad como función de la profundidad (<span class="math notranslate nohighlight">\(Z\)</span>) y el tiempo (<span class="math notranslate nohighlight">\(t\)</span>) se utiliza el modelo de estabilidad de talud infinito de acuerdo con la siguiente ecuación:</p>
-<p><span class="math notranslate nohighlight">\(FS(Z,t)=\frac{tan}{tanδ}+\frac{c'-ψ(Z,t)\𝛾_𝑤tanϕ'}{\𝛾_sZsenδcosδ}\)</span></p>
+<p><span class="math notranslate nohighlight">\(FS(Z,t)=\frac{tan}{tanδ}+\frac{c'-ψ(Z,t)𝛾_𝑤tanϕ'}{𝛾_sZsenδcosδ}\)</span></p>
 <p>Donde <span class="math notranslate nohighlight">\(𝑐′\)</span> es la cohesión efectiva del suelo, <span class="math notranslate nohighlight">\(𝜙′\)</span> el ángulo de fricción efectivo, <span class="math notranslate nohighlight">\(𝛾𝑤\)</span> el peso unitario del agua, <span class="math notranslate nohighlight">\(𝛾_𝑠\)</span> el peso unitario
 del suelo y <span class="math notranslate nohighlight">\(𝜓(𝑍,𝑡)\)</span> la cabeza de presión en función de la profundidad y el tiempo <span class="math notranslate nohighlight">\(𝑡\)</span>.</p>
 <div class="section" id="tutorial">
@@ -804,7 +804,7 @@ La información requerida para llevar a cabo el análisis de estabilidad con TRI
 <li><p>Flowdir_Arenosa_Clip: Dirección de flujo de la zona de estudio en formato ESRI</p></li>
 </ul>
 <div class="figure align-default" id="direccion">
-<a class="reference internal image-reference" href="https://gis.smumn.edu/GradProjects/DanielsonT.pdf"><img alt="direccion" src="https://gis.smumn.edu/GradProjects/DanielsonT.pdf" style="width: 400px;" /></a>
+<a class="reference internal image-reference" href="https://mappinggis.com/wp-content/uploads/2016/11/3-1.png"><img alt="direccion" src="https://mappinggis.com/wp-content/uploads/2016/11/3-1.png" style="width: 600px;" /></a>
 <p class="caption"><span class="caption-number">Fig. 48 </span><span class="caption-text">Códigos usados por ESRI para la dirección de flujo
 Profsuelo_Arenosa_Clip: Profundidad del suelo, en metros de la zona de estudio.
 Suelos_Arenosa_Clip: Zonificación de los tipos de suelo presentes en la zona de estudio.</span><a class="headerlink" href="#direccion" title="Permalink to this image">¶</a></p>
@@ -838,8 +838,8 @@ En caso de utilizar <em>ArcToolbox</em>, vaya a <em>Spatial Analysis &gt; Reclas
 <p>De esta forma, las unidades de suelo quedan divididas en dos categorías: depósitos aluviales (1) y suelos residuales del Batolito Antioqueño (2). Cada una de estas unidades tiene unas propiedades mecánicas e hidrológicas homogéneas.</p>
 <p>Convierta el raster reclasificado a formato ASCII (<em>Conversion Tools &gt; From Raster &gt; Raster to ASCII</em>). Guárdelo con el nombre <em>Suelos_Arenosa_Reclass_clip.asc</em>. Ábralo con el editor de texto y revise que los parámetros coincidan con los del resto de mapas.</p>
 </div>
-<div class="section" id="ejecucion-de-lso-programas">
-<h4>Ejecucion de lso programas<a class="headerlink" href="#ejecucion-de-lso-programas" title="Permalink to this headline">¶</a></h4>
+<div class="section" id="ejecucion-de-los-programas">
+<h4>Ejecución de los programas<a class="headerlink" href="#ejecucion-de-los-programas" title="Permalink to this headline">¶</a></h4>
 <p>Una vez tenga lista la información de entrada, debe ejecutar los programas auxiliares y finalmente TRIGRS, que se encuentran en la carpeta bin. Los programas auxiliares tienen como objetivo preparar la información ingresada y crear capas intermedias que son necesarias para el cálculo final. Estos programas deben ejecutarse siempre en el siguiente orden, ya que normalmente, los archivos de salida de uno son los archivos de entrada del siguiente.</p>
 <ul class="simple">
 <li><p>Unit Converter (Opcional): En caso de tener archivos en unidades distintas a las aceptadas por el modelo, este programa permite convertirlas (pfs a Pa, pies a metros, etc).</p></li>
@@ -847,14 +847,14 @@ En caso de utilizar <em>ArcToolbox</em>, vaya a <em>Spatial Analysis &gt; Reclas
 <li><p>Topo Index: Utiliza el DEM y la dirección de flujo para definir el patrón de distribución del flujo, calcular los factores de ponderación para distribuir la escorrentía de la superficie y calcular los tamaños de la matriz que utilizará TRIGRS para sus cálculos.</p></li>
 <li><p>TRIGRS: Una vez preparados los mapas y generado las capas intermedias, se corre el ejecutable final que realiza los cálculos de presión de poros y factor de seguridad para los instantes de tiempo que usted determine.</p></li>
 </ul>
-<p>Cada ejecutale eu se encuentra en la carpeta .bin contiene un codigo que se ejecuta cada vez que se da doble click sobre el archivo .exe. Estos codigos necesitan paa su correcto funcionamiento un archivo de entrada, el cual contiene los parametros con los que debe correr el codigo, y es el archivo que usted cmo usuario debe modificar. Los archivos de entrada lso encuentra en la carpeta TRIGRS con los siguientes nombres:</p>
+<p>Cada ejecutable que se encuentra en la carpeta .bin contiene un código que se ejecuta cada vez que se dá doble click sobre el archivo .exe. Estos códigos necesitan para su correcto funcionamiento un archivo de entrada, el cual contiene los parámetros con los que debe correr el código, y es el archivo que usted como usuario debe modificar. Los archivos de entrada los encuentra en la carpeta TRIGRS con los siguientes nombres:</p>
 <ul class="simple">
 <li><p>UC_in.txt. arcjivo de inicio del Unit Coverter</p></li>
 <li><p>Gm_in.txt. Archivo de inicio del Grid Match</p></li>
 <li><p>Tpx_in.txt. archivo de inicio de Topo Index</p></li>
 <li><p>Tr_in.txt. Archivo deinicio de TRIGRS</p></li>
 </ul>
-<p>Cada vez  que se ejecuta los .exe, este buscara su archivo de inicio en la misma carpeta donde esta el archvo .exe. POr lo tanto, copie y pegue todos los archivos de inicio de la carpeta TRIGRS en la carpeta bin para que quede =n juntos. Trate de conservar los archivos de inicio originales en la carpeta TRIGRS siempre, ya que le seran de utilidad para detectar errore en el archivo que esta editando. Tambien, evite cambiar los nobres de los archivos de inicio, ya que esto genera facilmente r=errores.</p>
+<p>Cada vez  que se ejecuta los .exe, este buscará su archivo de inicio en la misma carpeta donde está el archivo .exe. Por lo tanto, copie y pegue todos los archivos de inicio de la carpeta TRIGRS en la carpeta bin para que queden juntos. Trate de conservar los archivos de inicio originales en la carpeta TRIGRS siempre, ya que le serán de utilidad para detectar errores en el archivo que está editando. También, evite cambiar los nombres de los archivos de inicio, ya que esto genera fácilmente errores.</p>
 <p>Dado que toda la información que se le suministró para el taller está en formato metro-kilogramo-segundo, no ejecutará Unit Converter. Siga los siguientes pasos para ejecutar el resto de programas:</p>
 </div>
 <div class="section" id="grid-match">
@@ -869,7 +869,7 @@ En caso de utilizar <em>ArcToolbox</em>, vaya a <em>Spatial Analysis &gt; Reclas
 <li><p>su archivo gm_in debe lucir así:</p></li>
 </ul>
 <div class="figure align-default" id="gm">
-<a class="reference internal image-reference" href="https://i.pinimg.com/564x/e1/eb/66/e1eb661f2b5c6deffbba5f6e3ed842dc.jpg"><img alt="gm" src="https://i.pinimg.com/564x/e1/eb/66/e1eb661f2b5c6deffbba5f6e3ed842dc.jpg" style="width: 400px;" /></a>
+<a class="reference internal image-reference" href="https://i.pinimg.com/564x/e1/eb/66/e1eb661f2b5c6deffbba5f6e3ed842dc.jpg"><img alt="gm" src="https://i.pinimg.com/564x/e1/eb/66/e1eb661f2b5c6deffbba5f6e3ed842dc.jpg" style="width: 600px;" /></a>
 <p class="caption"><span class="caption-number">Fig. 49 </span><span class="caption-text">Archivo gm_in.txt</span><a class="headerlink" href="#gm" title="Permalink to this image">¶</a></p>
 </div>
 <ul class="simple">
@@ -920,7 +920,7 @@ En caso de utilizar <em>ArcToolbox</em>, vaya a <em>Spatial Analysis &gt; Reclas
 <li><p>Cuando termine de editar el archivo tpx_in, guarde los cambios. Su archivo debe lucir así:</p></li>
 </ul>
 <div class="figure align-default" id="id1">
-<a class="reference internal image-reference" href="https://i.pinimg.com/564x/8c/87/62/8c87622bebacf2962926c5321a6d64f1.jpg"><img alt="gm" src="https://i.pinimg.com/564x/8c/87/62/8c87622bebacf2962926c5321a6d64f1.jpg" style="width: 400px;" /></a>
+<a class="reference internal image-reference" href="https://i.pinimg.com/564x/8c/87/62/8c87622bebacf2962926c5321a6d64f1.jpg"><img alt="gm" src="https://i.pinimg.com/564x/8c/87/62/8c87622bebacf2962926c5321a6d64f1.jpg" style="width: 600px;" /></a>
 <p class="caption"><span class="caption-number">Fig. 50 </span><span class="caption-text">Archivo gm_in.txt</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
 </div>
 <ul class="simple">
@@ -931,12 +931,12 @@ En caso de utilizar <em>ArcToolbox</em>, vaya a <em>Spatial Analysis &gt; Reclas
 <table class="colwidths-auto table">
 <thead>
 <tr class="row-odd"><th class="head"><p>TIdsneiList_Arenosa.txt</p></th>
-<th class="head"><p>Lista de celdas receptoras en pendiente descendente en la dirección del flujo D8 (2).</p></th>
+<th class="head"><p>Lista de celdas receptoras en pendiente descendente en la dirección del flujo D8 (2)</p></th>
 </tr>
 </thead>
 <tbody>
 <tr class="row-even"><td><p>TIdscelGrid_Arenosa.asc</p></td>
-<td><p>Raster de celdas receptoras en pendiente descendente en la dirección del flujo D8 (1).</p></td>
+<td><p>Raster de celdas receptoras en pendiente descendente en la dirección del flujo D8 (1)</p></td>
 </tr>
 <tr class="row-odd"><td><p>TIcelindxGrid_Arenosa.asc</p></td>
 <td><p>Raster de índice de celda que especifica el orden de cálculo para el enrutamiento de escorrentía en TRIGRS</p></td>
@@ -948,10 +948,10 @@ En caso de utilizar <em>ArcToolbox</em>, vaya a <em>Spatial Analysis &gt; Reclas
 <td><p>Raster de dirección de flujo</p></td>
 </tr>
 <tr class="row-even"><td><p>TIdscelList_Arenosa.txt</p></td>
-<td><p>Lista de celdas en pendiente descendente para las cuales se han calculado factores de ponderación distintos de cero (3).</p></td>
+<td><p>Lista de celdas en pendiente descendente para las cuales se han calculado factores de ponderación distintos de cero (3)</p></td>
 </tr>
 <tr class="row-odd"><td><p>TIwfactorList_Arenosa.txt</p></td>
-<td><p>Lista de factores de ponderación para las celdas receptoras en pendiente descendente (4).</p></td>
+<td><p>Lista de factores de ponderación para las celdas receptoras en pendiente descendente (4)</p></td>
 </tr>
 </tbody>
 </table>
@@ -1128,7 +1128,7 @@ En la siguiente tabla encontrará la explicación de cada uno de los parámetros
 <h4>Intensidad del escenario de lluvia e incrementos de tiempo<a class="headerlink" href="#intensidad-del-escenario-de-lluvia-e-incrementos-de-tiempo" title="Permalink to this headline">¶</a></h4>
 <p>La siguiente figura muestra el registro de precipitación obtenido de un pluviómetro ubicado en la cuenca de La Arenosa el día del evento.</p>
 <div class="figure align-default" id="lluvia">
-<a class="reference internal image-reference" href="https://i.pinimg.com/564x/0a/bf/a1/0abfa1b6cc96eac96fa242fc76cbfa47.jpg"><img alt="lluvia" src="https://i.pinimg.com/564x/0a/bf/a1/0abfa1b6cc96eac96fa242fc76cbfa47.jpg" style="width: 400px;" /></a>
+<a class="reference internal image-reference" href="https://i.pinimg.com/564x/0a/bf/a1/0abfa1b6cc96eac96fa242fc76cbfa47.jpg"><img alt="lluvia" src="https://i.pinimg.com/564x/0a/bf/a1/0abfa1b6cc96eac96fa242fc76cbfa47.jpg" style="width: 600px;" /></a>
 <p class="caption"><span class="caption-number">Fig. 51 </span><span class="caption-text">Registro de precipitación del evento del 21/09/1990 en la cuenca La Arenosa</span><a class="headerlink" href="#lluvia" title="Permalink to this image">¶</a></p>
 </div>
 <p>La tormenta comenzó a las 8:00 pm del día del evento y terminó a las 2:00 am del día siguiente. Usted modelará la estabilidad de la cuenca durante las 7 horas de duración de la tormenta (7 horas= 25.200 segundos, que corresponde al valor ingresado en el campo t de los parámetros de modelación). Como verá el registro de precipitación está dado en escala horaria (7 horas de tormenta con registro de intensidad horaria corresponde al valor ingresado en el campo nper de los parámetros de modelación).</p>
@@ -1210,8 +1210,8 @@ Cuando termine de ingresar los parámetros del archivo de inicio, guarde los cam
 <div class="section" id="visualizar-los-resultados">
 <h4>Visualizar los resultados<a class="headerlink" href="#visualizar-los-resultados" title="Permalink to this headline">¶</a></h4>
 <p>Mientras que TRIGRS se ejecuta, aparecerá una ventana negra mostrando el avance de los cálculos. Dependiendo del tamaño del raster que esté analizando, este proceso podría tomar desde minutos hasta días. Cuando el proceso termina, la ventana se cierra, en caso de que no haya errores. En caso de que exista algún error con los mapas o el archivo de inicio, la ventana le mostrará de qué se trata el error y la línea que debe revisar en su archivo de inicio.
-Cuando terminen los cálculos, abra el archivo TrigrsLog.txt y examínelo.
-Abra la carpeta Resultados. Dentro de la carpeta se encuentran los siguientes archivos de salida:</p>
+Cuando terminen los cálculos, abra el archivo TrigrsLog.txt y examínelo.</p>
+<p>Abra la carpeta Resultados. Dentro de la carpeta se encuentran los siguientes archivos de salida:</p>
 <table class="colwidths-auto table">
 <thead>
 <tr class="row-odd"><th class="head"><p>TRrunoffPer”x”Sat.txt</p></th>
@@ -1240,7 +1240,7 @@ Abra la carpeta Resultados. Dentro de la carpeta se encuentran los siguientes ar
 </tbody>
 </table>
 <div class="figure align-default" id="saturado">
-<a class="reference internal image-reference" href="https://i.pinimg.com/564x/51/43/7e/51437e91abf650c9b6a1042f8ada9053.jpg"><img alt="saturado" src="https://i.pinimg.com/564x/51/43/7e/51437e91abf650c9b6a1042f8ada9053.jpg" style="width: 400px;" /></a>
+<a class="reference internal image-reference" href="https://i.pinimg.com/564x/51/43/7e/51437e91abf650c9b6a1042f8ada9053.jpg"><img alt="saturado" src="https://i.pinimg.com/564x/51/43/7e/51437e91abf650c9b6a1042f8ada9053.jpg" style="width: 600px;" /></a>
 <p class="caption"><span class="caption-number">Fig. 52 </span><span class="caption-text">Archivo de inicio de TRIGRS para condiciones saturadas</span><a class="headerlink" href="#saturado" title="Permalink to this image">¶</a></p>
 </div>
 </div>
@@ -1315,7 +1315,7 @@ espesor de suelo en el factor de seguridad.</p>
     
       By Edier V. Aristizábal G.<br/>
     
-        &copy; Copyright 2021.<br/>
+        &copy; Copyright 2022.<br/>
   </p>
 </footer>
 </main>

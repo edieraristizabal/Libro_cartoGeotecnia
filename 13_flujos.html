@@ -297,29 +297,36 @@
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#preparacion-de-los-mapas">
-     Preparacion de los mapas
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#uso-de-la-interfaz">
-     Uso de la interfaz
+    <a class="reference internal nav-link" href="#tutorial">
+     Tutorial
     </a>
     <ul class="nav section-nav flex-column">
      <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#importar-la-informacion">
-       Importar la información
+      <a class="reference internal nav-link" href="#preparacion-de-los-mapas">
+       Preparación de los mapas
       </a>
      </li>
      <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#calculo-de-areas-fuente">
-       Cálculo de áreas fuente
+      <a class="reference internal nav-link" href="#uso-de-la-interfaz">
+       Uso de la interfaz
       </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#calculo-de-propagacion">
-       Cálculo de propagación
-      </a>
+      <ul class="nav section-nav flex-column">
+       <li class="toc-h5 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#importar-la-informacion">
+         Importar la información
+        </a>
+       </li>
+       <li class="toc-h5 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#calculo-de-areas-fuente">
+         Cálculo de áreas fuente
+        </a>
+       </li>
+       <li class="toc-h5 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#calculo-de-propagacion">
+         Cálculo de propagación
+        </a>
+       </li>
+      </ul>
      </li>
     </ul>
    </li>
@@ -361,29 +368,36 @@
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#preparacion-de-los-mapas">
-     Preparacion de los mapas
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#uso-de-la-interfaz">
-     Uso de la interfaz
+    <a class="reference internal nav-link" href="#tutorial">
+     Tutorial
     </a>
     <ul class="nav section-nav flex-column">
      <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#importar-la-informacion">
-       Importar la información
+      <a class="reference internal nav-link" href="#preparacion-de-los-mapas">
+       Preparación de los mapas
       </a>
      </li>
      <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#calculo-de-areas-fuente">
-       Cálculo de áreas fuente
+      <a class="reference internal nav-link" href="#uso-de-la-interfaz">
+       Uso de la interfaz
       </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#calculo-de-propagacion">
-       Cálculo de propagación
-      </a>
+      <ul class="nav section-nav flex-column">
+       <li class="toc-h5 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#importar-la-informacion">
+         Importar la información
+        </a>
+       </li>
+       <li class="toc-h5 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#calculo-de-areas-fuente">
+         Cálculo de áreas fuente
+        </a>
+       </li>
+       <li class="toc-h5 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#calculo-de-propagacion">
+         Cálculo de propagación
+        </a>
+       </li>
+      </ul>
      </li>
     </ul>
    </li>
@@ -427,18 +441,25 @@ Todas estas clasificaciones de mezclas de agua y sedimentos tienen una escala co
 </div>
 <div class="section" id="flow-r">
 <h2>Flow-R<a class="headerlink" href="#flow-r" title="Permalink to this headline">¶</a></h2>
+<p>[Flow-R}(<a class="reference external" href="https://www.flow-r.org/">https://www.flow-r.org/</a>) (Flow path assessment of gravitational hazards at a Regional scale) es un modelo empirico disitribuido para la evaluacion de la susceptibilidad por flujos a escala regional, desarrollado por (<span id="id1"></span> de la Universidad de Laussane. Flow-R presenta un acercamiento simplificado sin una gran exigencia de parametros.</p>
+<p>Flow-R estima la propagación de los flujos mediante un balance energético básico y una propagación probabilística. Los algoritmos de la dirección de fujo calculan la probabilidad de que un fujo de detrito se mueva de una celda hacia las próximas 8 celdas. Estas probabilidades dependen de la pendiente y la persistencia que representa la inercia del flujo (Horton et al., 2013).</p>
+<div class="section" id="tutorial">
+<h3>Tutorial<a class="headerlink" href="#tutorial" title="Permalink to this headline">¶</a></h3>
+<p>elaborado por Maria Isabel Arango</p>
 <p>El modelo Flow-R se puede utilizar para modelar:</p>
 <ul class="simple">
 <li><p>Las fuentes de flujos (zonas inestables)</p></li>
-<li><p>La propagación de flujos
-Estrictamente, la única información necesaria para modelar usando Flow-R es un modelo de elevación digital (DEM). Sin embargo, si desea modelar las zonas inestables, otras capas (uso del suelo, geología, litología, curvatura, acumulación de flujo, pendiente, etc.) harán su modelamiento más preciso y más ajustado a las condiciones reales de la zona a modelar. En el caso de no querer modelar las zonas fuentes de los flujos mediante Flow-R, se debe ingresar una capa que determine las zonas fuentes predeterminadas para modelar su propagación.
-En todos los casos, la información que se debe ingresar al modelo debe ser de tipo raster en formato ASCII o txt, y debe cumplir con los siguientes criterios:</p></li>
+<li><p>La propagación de flujos</p></li>
+</ul>
+<p>Estrictamente, la única información necesaria para modelar usando Flow-R es un modelo de elevación digital (DEM). Sin embargo, si desea modelar las zonas inestables, otras capas (uso del suelo, geología, litología, curvatura, acumulación de flujo, pendiente, etc.) harán su modelamiento más preciso y más ajustado a las condiciones reales de la zona a modelar. En el caso de no querer modelar las zonas fuentes de los flujos mediante Flow-R, se debe ingresar una capa que determine las zonas fuentes predeterminadas para modelar su propagación.
+En todos los casos, la información que se debe ingresar al modelo debe ser de tipo raster en formato ASCII o txt, y debe cumplir con los siguientes criterios:</p>
+<ul class="simple">
 <li><p>Debe estar en el mismo sistema de coordenadas</p></li>
 <li><p>Debe tener las mismas dimensiones</p></li>
 <li><p>Debe estar codificada siguiendo la nomenclatura del modelo</p></li>
 </ul>
 <div class="section" id="preparacion-de-los-mapas">
-<h3>Preparacion de los mapas<a class="headerlink" href="#preparacion-de-los-mapas" title="Permalink to this headline">¶</a></h3>
+<h4>Preparación de los mapas<a class="headerlink" href="#preparacion-de-los-mapas" title="Permalink to this headline">¶</a></h4>
 <p>Para preparar la información, siga los siguientes pasos:</p>
 <ul class="simple">
 <li><p>En ArcMap, abra el raster DEM_Arenosa.tif. En la tabla de contenidos, dé clic derecho sobre la capa &gt; Propiedades. En la pestaña “Source”, observe las dimensiones del raster: 435 x 456. Toda la información que le ingresemos al modelo debe tener estas dimensiones. Cierre la pestaña.</p></li>
@@ -519,10 +540,10 @@ En todos los casos, la información que se debe ingresar al modelo debe ser de t
 </ul>
 </div>
 <div class="section" id="uso-de-la-interfaz">
-<h3>Uso de la interfaz<a class="headerlink" href="#uso-de-la-interfaz" title="Permalink to this headline">¶</a></h3>
+<h4>Uso de la interfaz<a class="headerlink" href="#uso-de-la-interfaz" title="Permalink to this headline">¶</a></h4>
 <p>El uso de la interfaz de Flow-R tiene dos pasos: La importación de la información y los cálculos de áreas fuentes y de propagación.</p>
 <div class="section" id="importar-la-informacion">
-<h4>Importar la información<a class="headerlink" href="#importar-la-informacion" title="Permalink to this headline">¶</a></h4>
+<h5>Importar la información<a class="headerlink" href="#importar-la-informacion" title="Permalink to this headline">¶</a></h5>
 <p>Para ingresar la información al programa, se debe crear primero el proyecto y las carpetas en las cuales se almacenarán los datos de entrada y de salida. Siga los siguientes pasos:</p>
 <ul class="simple">
 <li><p>Cree en su computador la carpeta “La Arenosa FlowR”. Dentro de ella, cree dos carpetas: una que se llame “Datos” y otra que se llame “Resultados”.</p></li>
@@ -540,7 +561,7 @@ En todos los casos, la información que se debe ingresar al modelo debe ser de t
 </ul>
 </div>
 <div class="section" id="calculo-de-areas-fuente">
-<h4>Cálculo de áreas fuente<a class="headerlink" href="#calculo-de-areas-fuente" title="Permalink to this headline">¶</a></h4>
+<h5>Cálculo de áreas fuente<a class="headerlink" href="#calculo-de-areas-fuente" title="Permalink to this headline">¶</a></h5>
 <p>Para el cálculo de las áreas fuentes, utilizará las capas del DEM, las coberturas y los suelos.</p>
 <ul class="simple">
 <li><p>En la zona inferior izquierda de la interfaz está el panel “Source areas,”, donde se especifica la información que se desea tener en cuenta para calcular las zonas fuentes.</p></li>
@@ -556,15 +577,15 @@ En todos los casos, la información que se debe ingresar al modelo debe ser de t
 </ul>
 </div>
 <div class="section" id="calculo-de-propagacion">
-<h4>Cálculo de propagación<a class="headerlink" href="#calculo-de-propagacion" title="Permalink to this headline">¶</a></h4>
+<h5>Cálculo de propagación<a class="headerlink" href="#calculo-de-propagacion" title="Permalink to this headline">¶</a></h5>
 <p>En esta parte va a calcular la propagación de las áreas fuentes definidas como zonas inestables que se propagarán en forma de flujo. Para esto, utilizará las fuentes cartografiadas en el evento real sucedido en el año 1990.</p>
 <ul class="simple">
 <li><p>Dado que la única información necesaria para el cálculo de la propagación de flujos son el DEM y las fuentes predeterminadas, en la parte inferior izquierda ingrese estas dos capas únicamente. En la primera columna debe ingresar el tipo de información (DEM, Predefined sources), en la segunda el nombre del raster (Arenosa, fuentes_Arenosa), y en la tercera debe ingresar los criterios de lectura del archivo (avove_0000m, boolean), respectivamente.</p></li>
 <li><p>En el panel derecho de la interfaz se deben ingresar todos los parámetros de los algoritmos para el cálculo de la dirección de propagación, extensión del flujo, y la metodología a usar para realizar los cálculos. Estos parámetros son:</p></li>
 </ul>
 <p><strong>Source areas selection</strong>: Se refiere al criterio a utilizar a la hora seleccionar cuáles celdas consideradas como áreas fuentes se utilizarán para el cálculo de la propagación.</p>
-<p><em>Overview - Only superior sources</em>: Dado que son las áreas fuentes más altas las que tienen más energía potencial para propagarse, sólo se calculará la propagación para estas zonas, asumiendo que toda zona fuente ubicada debajo no llegará tan lejos. Es el método de cálculo más rápido pero no el más completo, dado que áreas fuente más bajas pueden tomar trayectorias diferentes a las calculadas.
-<em>Quick – Energy based discrimination</em>: Las fuentes ubicadas en las zonas más altas se propagan primero. Luego, se consideran otras zonas fuentes, y si durante el cálculo en curso la propagación toma la misma trayectoria que una ya calculada con una energía similar o superior, los cálculos de la propagación actual se detienen ya que será redundante. Esta selección según la energía es muy eficiente, puede ahorrar mucho tiempo y produce resultados casi similares a la simulación completa para cada fuente. Es la opción más recomendable. Selecciónela.</p>
+<p><em>Overview - Only superior sources</em>: Dado que son las áreas fuentes más altas las que tienen más energía potencial para propagarse, sólo se calculará la propagación para estas zonas, asumiendo que toda zona fuente ubicada debajo no llegará tan lejos. Es el método de cálculo más rápido pero no el más completo, dado que áreas fuente más bajas pueden tomar trayectorias diferentes a las calculadas.</p>
+<p><em>Quick – Energy based discrimination</em>: Las fuentes ubicadas en las zonas más altas se propagan primero. Luego, se consideran otras zonas fuentes, y si durante el cálculo en curso la propagación toma la misma trayectoria que una ya calculada con una energía similar o superior, los cálculos de la propagación actual se detienen ya que será redundante. Esta selección según la energía es muy eficiente, puede ahorrar mucho tiempo y produce resultados casi similares a la simulación completa para cada fuente. Es la opción más recomendable. Selecciónela.</p>
 <p><em>Complete – Simulation of all propagations</em>: Cada celda identificada como fuente se propaga. Este proceso es el más demorado, pero es útil en casos donde se requiera conocer la suma de los valores de probabilidad o de susceptibilidad.</p>
 <p><strong>Directions Algorithm</strong>: Se refiere al algoritmo que se usará para calcular la dirección que tomará el flujo. En este caso, utilizaremos el algoritmo de Holgrem modificado. En la lista desplegable, se deben seleccionar los valores que se le desean dar a dos variables:</p>
 <p><em>dH</em>: Exageración de la altura de la celda del cálculo en curso</p>
@@ -582,6 +603,7 @@ En todos los casos, la información que se debe ingresar al modelo debe ser de t
 <li><p>Inmediatamente aparecerá una primera ventana mostrando las áreas fuentes en el mapa, y otra ventana mostrando el proceso de cálculo. Usted sabrá que el cálculo de la propagación terminó porque aparecerá una tercera ventana con los resultados de la propagación.</p></li>
 <li><p>Para ver el mapa resultante, puede abrir el raster “Ekin.asc” que muestra la propagación del flujo en función de su energía cinética, o  el raster “ProbMax.asc”, que muestra la propagación en función de la probabilidad máxima de una celda de ser cubierta por un flujo. Ambos raster se encuentran en una subcarpeta con el nombre de la corrida, dentro de la carpeta “Resultados”.</p></li>
 </ul>
+</div>
 </div>
 </div>
 </div>
@@ -635,7 +657,7 @@ En todos los casos, la información que se debe ingresar al modelo debe ser de t
     
       By Edier V. Aristizábal G.<br/>
     
-        &copy; Copyright 2021.<br/>
+        &copy; Copyright 2022.<br/>
   </p>
 </footer>
 </main>
