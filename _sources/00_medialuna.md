@@ -2,12 +2,12 @@
 
 ## Hace sesenta años comenzó la tragedia
 
-Gabriel García Marques (Julia 12 de 1954)
+Reportaje del nobel Gabriel García Marques para El Espectador (Julia 12 de 1954)
 
 :::{figure-md} media luna
-<img src="https://i.pinimg.com/564x/82/23/6c/82236c8dcee0f3ee269018971eb2573b.jpg" alt="media luna" width="400px">
+<img src="https://i.pinimg.com/564x/82/23/6c/82236c8dcee0f3ee269018971eb2573b.jpg" alt="media luna" width="500px">
 
-Deslizamiento de Media Luna 12 de Julio de 1954). Tomado de EL Colombiano.
+Deslizamiento de Media Luna (vereda Santa Elena, Medellin), 12 de Julio de 1954. Foto del periodico El Colombiano.
 :::
 
 Y el peligro continúa. La imprudencia, la solidaridad y la curiosidad suministraron medio centenar de víctimas. “No hacían al advertirles el peligro”, dice el Padre Giraldo. Alirio y Licirio Caro, los niños sobrevivientes.
