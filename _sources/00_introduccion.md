@@ -31,6 +31,7 @@ en el periodo comprendido entre los años 1900 y 2018 han ocurrido al menos 3073
 
 Para el caso del Valle de Aburrá, una de las áreas más afectadas en Colombia por este tipo de eventos y que concentran un total de 3.4 millones de habitantes, los movimientos en masa corresponden a 3 de cada 10 desastres que ocurren en la región y dejan como saldo trágico el 75% de la totalidad de victimas anuales. Sólo los movimientos en masa le han reportado a la región 1390 personas fallecidas y pérdidas económicas superiores a los 21 mil millones de pesos en el periodo 1880-2007 ({cite:t}`Aristizabal2007`). 
 
+## Referencias
 ```{bibliography}
 :style: plain
 :filter: docname in docnames

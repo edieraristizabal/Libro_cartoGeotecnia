@@ -6,6 +6,7 @@ Entre estos estudios se destacan {cite:t}`Chica1989`, {cite:t}`Ingeominas1990`, 
 
 Recientemente, se viene implementando nuevos métodos probabilísticos a nivel local que incorporan dentro del análisis los sismos y la lluvia como factor detonante, tales como los estudios de {cite:t}`Vega2016` en las laderas nororientales de la ciudad de Medellín, {cite:t}`Aristizabal2019` para diferentes municipios del valle de Aburrá, {cite:t}`Aristizabal2020` donde analizan la amenaza por movimientos en masa detonados por sismos en el municipio de Barbosa (Antioquia), y {cite:t}`Aristizabal2022` donde estudian el impacto de la intensidad de la lluvia en la evaluación de la amenaza bajo un escenario de Cambio Climático
 
+## Referencias
 ```{bibliography}
 :style: plain
 :filter: docname in docnames

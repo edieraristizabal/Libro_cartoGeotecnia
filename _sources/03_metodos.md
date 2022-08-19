@@ -93,6 +93,7 @@ Escala de velocidad de movimientos en masa de acuerdo con Varnes & Cruden (1996)
 
 Dos elementos importantes en amenazas naturales son la magnitud e intensidad de los fenómenos. Para el caso de los movimientos en masa la intensidad de un evento se refiere a parámetros relacionados con el poder destructivo, tales como la velocidad o el desplazamiento total; mientras que la magnitud de los movimientos en masa hace referencia a la medida del tamaño del evento, tal como el volumen o el área.
 
+## Referencias
 ```{bibliography}
 :style: plain
 :filter: docname in docnames
