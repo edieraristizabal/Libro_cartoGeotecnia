@@ -341,6 +341,13 @@
     <a class="reference internal nav-link" href="#id2">
      Tutorial
     </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#algunas-recomendaciones-para-evitar-errores">
+       Algunas recomendaciones para evitar errores
+      </a>
+     </li>
+    </ul>
    </li>
   </ul>
  </li>
@@ -429,6 +436,13 @@
     <a class="reference internal nav-link" href="#id2">
      Tutorial
     </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#algunas-recomendaciones-para-evitar-errores">
+       Algunas recomendaciones para evitar errores
+      </a>
+     </li>
+    </ul>
    </li>
   </ul>
  </li>
@@ -646,6 +660,73 @@ En todos los casos, la información que se debe ingresar al modelo debe ser de t
 <div class="section" id="id2">
 <h3>Tutorial<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
 <p>Elaborado por Juan Diego Torres, Luisa Fernanda Cardona, y Daissy Herrera</p>
+<p>En este tutorial se utilizará la versión para windows r.avaflow.direct, la cual posee una interfaz que facilita el ingreso de los parámetros al modelo. Se puede acceder a esta interfaz mediante <a class="reference external" href="https://www.landslidemodels.org/r.avaflow/direct.php">https://www.landslidemodels.org/r.avaflow/direct.php</a>.</p>
+<p>Adicionalmente se debe contar como mínimo con un modelo de elevacion digital formato <em>ASCII</em>, en este caso utilizaremos <span class="xref myst">La Arenosa</span>, y un archivo con las celdas fuentes que se deslizan y la profundidad, también en formato <em>ASCII</em>, para este caso denominado <span class="xref myst">release</span>. También se puede ingresar el área del depósito generado por el flujo, de tal forma que se pueda evaluar la capacidad de predicción del modelo.</p>
+<ol class="simple">
+<li><p>Para el uso del modelo r.avaflow se debe tener instalado los siguientes programas:</p></li>
+</ol>
+<ul class="simple">
+<li><p>Sistema operativo Windows 10/11</p></li>
+<li><p><a class="reference external" href="https://www.landslidemodels.org/r.avaflow/software/r.avaflow.exe">r.avaflow.exe</a></p></li>
+<li><p><a class="reference external" href="https://www.cygwin.com/">cyqwin1.dll</a></p></li>
+</ul>
+<p>Para visualizar los datos se debe contar con:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://www.r-project.org/">R project</a></p></li>
+<li><p><a class="reference external" href="https://www.paraview.org/">paraview</a></p></li>
+</ul>
+<ol class="simple">
+<li><p>Importar parámetros</p></li>
+</ol>
+<p>En caso de disponer un archivo <em>.txt</em> con los parámetros este puede ser importado. Para este ejercicio se utilizarán tres archivos con los parámetos. cada uno de ellso representa un flujo con reología diferente:</p>
+<ul class="simple">
+<li><p><span class="xref myst">areno1_paramraw</span>: Archivo de texto que contiene todos los parámetros para el modelo de Pudasaini donde se estudia solo la fase sólida del movimiento.</p></li>
+<li><p><span class="xref myst">areno2_paramraw</span>: Archivo de texto que contiene todos los parámetros para el modelo Pudasaini donde se estudia la fase sólida y líquida del movimiento.</p></li>
+<li><p><span class="xref myst">areno3_paramraw</span>: Archivo de texto que contiene todos los parámetros para el modelo de Fermi dónde se estudia el movimiento en conjunto, es decir, se tratan las fases sólidas y líquidas como una única fase.</p></li>
+<li><p><span class="xref myst">areno4_paramraw</span>: Archivo de texto que contiene todos los parámetros para el modelo de Fermi dónde se estudia el movimiento en conjunto, es decir, se tratan las fases sólidas y líquidas como una única fase; y se agrega una <span class="xref myst">hidrógrafa</span>.</p></li>
+<li><p><span class="xref myst">areno5_paramraw</span>: Archivo de texto que contiene todos los parámetros para el modelo de Fermi dónde se estudia el movimiento en conjunto, es decir, se tratan las fases sólidas y líquidas como una única fase; se agrega una <span class="xref myst">hidrógrafa</span> y se incorpora dentro de la modelación la erosión del flujo sobre el cauce.</p></li>
+</ul>
+<p>Cada archivo corresponde a una corrida diferente del modelo.</p>
+<p>Cada que se vaya a correr el modelo deben especificarse:</p>
+<ul class="simple">
+<li><p><strong>Simulation managment → prefix</strong> : El nombre indicador del caso que se va a correr. En caso de no modificar los resultados se sobre escriben. Para cada prefijo generado se crea una carpeta de resultados, por lo tanto se debe modificar para cada corrida</p></li>
+<li><p><strong>Simulation managment → indir</strong> : La dirección en donde se encuentran almacenados los datos del caso en nuestro ordenador. Es importante, colocar un (/) al final de la ruta especificada.</p></li>
+<li><p><strong>Parameters for visualization → pvpath</strong> : La dirección de Paraview</p></li>
+<li><p><strong>Parameters for visualization → rscriptpath</strong> : La dirección de Rscript.</p></li>
+</ul>
+<p>Una vez añadidos todas las direcciones como es debido y de realizar los ajustes deseados a los parámetros se crea el archivo de parámetros. Es importante que este archivo se guarde en la carpeta de descargas junto con el <em>r.avaflow.exe</em> como se indicó anteriormente.</p>
+<ol class="simple">
+<li><p>Luego se debe crear el archivo de inicio y que corre el modelo. Para esto se procede de la siguiente manera:</p></li>
+</ol>
+<ul class="simple">
+<li><p><strong>Create a start script and run your simulation → Working directory for your simulation</strong> : La dirección de la carpeta donde se almacenarán los resultados del modelo.</p></li>
+<li><p><strong>Create a start script and run your simulation → Default download directory of browser</strong>: La dirección de la carpeta de descargas.</p></li>
+<li><p><strong>Create a start script and run your simulation → Directory with cygwin1.dll</strong> : La dirección de cygwin.</p></li>
+</ul>
+<p>Se procede a crear el archivo [prefix]avaflow.cmd. Este archivo es el que corre el modelo, por lo cual se debe almacenar en la misma carpeta donde esta el <em>r.avaflow.exe</em> y el archivo de parámetros creado en el paso anterior.</p>
+<p>se ejecuta el archivo <em>.cmd</em>, el computador lo reconocerá como un programa no seguro, sin embargo, se selecciona continuar de todos modos. Una vez se abra la línea de comandos, se escribe la letra <em>S</em> ó <em>Y</em> y se da <em>enter</em> para que comience a correr. Mientras corre el modelo se debe observar uan pantalla de la siguiente manera.</p>
+<ol class="simple">
+<li><p>Una vez se observa que el modelo ha finalizado se puede observar diferentes carpetas con resultados.</p></li>
+</ol>
+<ul class="simple">
+<li><p>En _ascii se almacenan resultados que pueden ser cargados en un SIG.</p></li>
+<li><p>En _files se almacenan resultados en formato txt que contienen información de puntos de control, evaluación del ajuste del modelo al caso real, los parámetros usados de manera comentada, un resumen de parámetros de la simulación con       información de tiempo, duración, profundidad, velocidad, volumen, energía cinética entre otros.</p></li>
+<li><p>En _paraview se almacenan los archivos necesarios para observar estos resultados en una animación 3D generada por el programa del mismo nombre.</p></li>
+<li><p>En _plots podremos observar el avance espacial y de perfil del flujo en los diferentes saltos de tiempo, de forma que se observa claramente su evolución en el tiempo, gráfica de altura máxima de flujo, entre otros.</p></li>
+</ul>
+<div class="section" id="algunas-recomendaciones-para-evitar-errores">
+<h4>Algunas recomendaciones para evitar errores<a class="headerlink" href="#algunas-recomendaciones-para-evitar-errores" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li><p>Almacenar r.avaflow.exe y los archivos generados por la interfaz de parámetros y comando en la carpeta de descargas.</p></li>
+<li><p>Asegurarse de añadir un frontslash (/) al final de la dirección que indica la ubicación de los archivos del caso.</p></li>
+<li><p>Recordar reemplazar los backslash () por frontslash (/) en todas las ubicaciones de archivos ingresadas.</p></li>
+<li><p>Todos los archivos raster ASCII empleados deben tener las mismas dimensiones (filas y columnas) y resolución.</p></li>
+<li><p>Las hidrógrafas no deben de comenzar en un tiempo diferente de cero.</p></li>
+<li><p>El tiempo de duración de las hidrógrafas debe de ser mayor que el tiempo de simulación.</p></li>
+<li><p>Al momento de convertir los archivos al formato ASCII se debe seleccionar la segunda opción al momento de guardarlo.</p></li>
+<li><p>Cuando se van a utilizar 2 hidrográfas, en el archivo de los parámetros generados se debe de eliminar la parte de *C:\fakepath*</p></li>
+</ul>
+</div>
 </div>
 </div>
 <div class="section" id="referencias">
