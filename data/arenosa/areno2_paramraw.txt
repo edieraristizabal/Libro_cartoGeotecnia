@@ -1,12 +1,12 @@
 0
 0
 1
-ac_voe_
-C:/Acheron/
-ac_voe_results/ac_voe_ascii/
-ac_voe_results/ac_voe_files/
-ac_voe_results/ac_voe_paraview/
-ac_voe_results/ac_voe_plots/
+are_voe_
+C:/Arenosa/
+are_voe_results/are_voe_ascii/
+are_voe_results/are_voe_files/
+are_voe_results/are_voe_paraview/
+are_voe_results/are_voe_plots/
 0
 1
 0
@@ -28,8 +28,8 @@ ac_voe_results/ac_voe_plots/
 0
 2
 0
-ac_elev.asc
-ac_hrelease.asc
+dem_arenosa_clip.asc
+release.asc
 None
 None
 1
@@ -68,8 +68,8 @@ None
 None
 None
 None
-ac_impactarea.asc
-ac_hdeposit.asc
+None
+None
 None
 None
 None
@@ -105,8 +105,8 @@ None
 0
 0.4
 0.001
-1489469,5203883,1489620,5203930,1489794,5204000,1489967,5204034,1490209,5204086,1490357,5204104,1490461,5204130,1490590,5204112,1490712,5204026,1490859,5203679,1491075,5203541,1491327,5203324,1491405,5203237,1491509,5203142,1491734,5202934,1491803,5202804,1491829,5202700,1491864,5202510,1491907,5202397,1492002,5202276,1492130,5202190,1492286,5202090,1492474,5202072,1492591,5201960,1492623,5201887,1492670,5201818,1492753,5201735,1492893,5201660,1493028,5201634,1493326,5201626
-1490209,5204086
+None
+None
 0.1
 5
 5
@@ -121,6 +121,6 @@ None
 0.15
 0.2
 1
-C:/Program Files/ParaView 5.10.0-Windows-Python3.9-msvc2017-AMD64/bin
-C:/Program Files/R/R-4.1.2/bin/Rscript.exe
+C:/Program Files/ParaView 5.10.1-Windows-Python3.9-msvc2017-AMD64/bin
+C:/Program Files/R/R-4.2.1/bin/Rscript.exe
 None
