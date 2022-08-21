@@ -672,7 +672,7 @@ En todos los casos, la información que se debe ingresar al modelo debe ser de t
 <p><em>Elaborado por Juan Diego Torres, Luisa Fernanda Cardona, y Daissy Herrera</em></p>
 <p>En este tutorial se utilizará la versión para windows r.avaflow.direct, la cual posee una interfaz que facilita el ingreso de los parámetros al modelo. Se puede acceder a esta interfaz mediante <a class="reference external" href="https://www.landslidemodels.org/r.avaflow/direct.php">https://www.landslidemodels.org/r.avaflow/direct.php</a>.</p>
 <p>Adicionalmente se debe contar como mínimo con un modelo de elevacion digital formato <em>ASCII</em>, en este caso utilizaremos <a class="reference external" href="https://github.com/edieraristizabal/Libro_cartoGeotecnia/blob/master/data/arenosa/DEM_Arenosa_Clip.asc?raw=true">La Arenosa</a>, y un archivo con las celdas fuentes que se deslizan y la profundidad, también en formato <em>ASCII</em>, para este caso denominado <a class="reference external" href="https://github.com/edieraristizabal/Libro_cartoGeotecnia/blob/master/data/arenosa/release.asc?raw=true">release</a>. También se puede ingresar el área del depósito generado por el flujo, de tal forma que se pueda evaluar la capacidad de predicción del modelo.</p>
-<p>1- Para el uso del modelo r.avaflow se debe tener instalado los siguientes programas:</p>
+<p><strong>1- Para el uso del modelo r.avaflow se debe tener instalado los siguientes programas:</strong></p>
 <ul class="simple">
 <li><p>Sistema operativo Windows 10/11</p></li>
 <li><p><a class="reference external" href="https://www.landslidemodels.org/r.avaflow/software/r.avaflow.exe">r.avaflow.exe</a></p></li>
@@ -683,25 +683,25 @@ En todos los casos, la información que se debe ingresar al modelo debe ser de t
 <li><p><a class="reference external" href="https://www.r-project.org/">R project</a></p></li>
 <li><p><a class="reference external" href="https://www.paraview.org/">paraview</a></p></li>
 </ul>
-<p>2- Importar parámetros</p>
+<p><strong>2- Importar parámetros</strong></p>
 <p>En caso de disponer un archivo <em>.txt</em> con los parámetros este puede ser importado. Para este ejercicio se utilizarán cinco archivos con los parámetros. cada uno de ellos representa un escenario de modelación diferente:</p>
 <ul class="simple">
 <li><p><a class="reference external" href="https://github.com/edieraristizabal/Libro_cartoGeotecnia/blob/master/data/arenosa/areno1_paramraw.txt?raw=true">areno1_paramraw</a>: Archivo de texto que contiene todos los parámetros para el modelo de Pudasaini donde se estudia solo la fase sólida del movimiento.</p></li>
-<li><p><a class="reference external" href="https://github.com/edieraristizabal/Libro_cartoGeotecnia/blob/master/data/arenosa/areno2_paramraw.txt?raw=true">areno2_paramraw</a>: Archivo de texto que contiene todos los parámetros para el modelo de Fermi dónde se estudia el movimiento en conjunto, es decir, se tratan las fases sólidas y líquidas como una única fase.</p></li>
+<li><p><a class="reference external" href="https://github.com/edieraristizabal/Libro_cartoGeotecnia/blob/master/data/arenosa/areno2_paramraw.txt?raw=true">areno2_paramraw</a>: Archivo de texto que contiene todos los parámetros para el modelo de Fermi dónde se estudia el movimiento en conjunto, es decir, se tratan las fases sólidas y líquidas como una única fase (<em>mixture model</em>).</p></li>
 <li><p><a class="reference external" href="https://github.com/edieraristizabal/Libro_cartoGeotecnia/blob/master/data/arenosa/areno3_paramraw.txt?raw=true">areno3_paramraw</a>: Archivo de texto que contiene todos los parámetros para el modelo Pudasaini donde se estudia la fase sólida y líquida del movimiento.</p></li>
 <li><p><a class="reference external" href="https://github.com/edieraristizabal/Libro_cartoGeotecnia/blob/master/data/arenosa/areno4_paramraw.txt?raw=true">areno4_paramraw</a>: Archivo de texto que contiene todos los parámetros para el modelo de Fermi dónde se estudia el movimiento en conjunto, es decir, se tratan las fases sólidas y líquidas como una única fase; y se agrega una <a class="reference external" href="https://github.com/edieraristizabal/Libro_cartoGeotecnia/blob/master/data/arenosa/areno_hydrograph.txt?raw=true">hidrógrafa</a>. Este archivo de texto indica el caudal y velocidad de la fase sólida, liquida o mezcla que representa el movimiento, en la hidrógrafa mostrada anteriormente, el índice s, alude a la fase sólida, fs a la fase fina y f a la fase líquida. Para esto se debe ingresar las coordenadas de ingreso de la hidrografa, para en este escenario se identificó el punto [13500, 221640, 50, 250] donde los dos primeros valores son las coordenadas x, y, el tercer valor es el ancho del perfil del cauce y el cuarto valor es el aspecto del flujo medido desde una línea oeste-este en sentido antihorario.</p></li>
 <li><p><a class="reference external" href="https://github.com/edieraristizabal/Libro_cartoGeotecnia/blob/master/data/arenosa/areno5_paramraw.txt?raw=true">areno5_paramraw</a>: Archivo de texto que contiene todos los parámetros para el modelo de Fermi dónde se estudia el movimiento en conjunto, es decir, se tratan las fases sólidas y líquidas como una única fase; se agrega una <a class="reference external" href="https://github.com/edieraristizabal/Libro_cartoGeotecnia/blob/master/data/arenosa/areno_hydrograph.txt?raw=true">hidrógrafa</a> y se incorpora dentro de la modelación la erosión del flujo sobre el cauce. Para que este caso corra correctamente se debe de definir un mapa de arrastre máximo para la fase sólida. Debido a que si no se define esto el modelo realiza algunas suposiciones de proporción ⅓, es decir, supone que arrastra ⅓ de sedimentos sólidos, finos y de la fase líquida.</p></li>
 </ul>
-<p>Cada archivo corresponde a una corrida diferente del modelo.</p>
+<p>Cada archivo corresponde a una corrida diferente del modelo. Para todas las corridas el criterio para el <em>stopping control</em> es la energía cinética menor o igual al valor del 5% del maximo(<em>stopping criterion</em>). Los intervalos de salida de resultados es de 10 s y se simula un total de 200 s.</p>
 <p>Cada que se vaya a correr el modelo deben especificarse:</p>
 <ul class="simple">
-<li><p><strong>Simulation managment → prefix</strong> : El nombre indicador del caso que se va a correr. En caso de no modificar los resultados se sobre escriben. Para cada prefijo generado se crea una carpeta de resultados, por lo tanto se debe modificar para cada corrida</p></li>
+<li><p><strong>Simulation managment → prefix</strong> : El nombre indicador del caso que se va a correr. En caso de no modificar los resultados se sobre escriben. Para cada prefijo generado se crea una carpeta de resultados, por lo tanto se debe modificar para cada corrida.</p></li>
 <li><p><strong>Simulation managment → indir</strong> : La dirección en donde se encuentran almacenados los datos del caso en nuestro ordenador. Es importante, colocar un (/) al final de la ruta especificada.</p></li>
 <li><p><strong>Parameters for visualization → pvpath</strong> : La dirección de Paraview</p></li>
 <li><p><strong>Parameters for visualization → rscriptpath</strong> : La dirección de Rscript.</p></li>
 </ul>
 <p>Una vez añadidos todas las direcciones como es debido y de realizar los ajustes deseados a los parámetros se crea el archivo de parámetros. Es importante que este archivo se guarde en la carpeta de descargas junto con el <em>r.avaflow.exe</em> como se indicó anteriormente.</p>
-<p>3- Luego se debe crear el archivo de inicio y que corre el modelo. Para esto se procede de la siguiente manera:</p>
+<p><strong>3- Luego se debe crear el archivo de inicio y que corre el modelo. Para esto se procede de la siguiente manera:</strong></p>
 <ul class="simple">
 <li><p><strong>Create a start script and run your simulation → Working directory for your simulation</strong> : La dirección de la carpeta donde se almacenarán los resultados del modelo.</p></li>
 <li><p><strong>Create a start script and run your simulation → Default download directory of browser</strong>: La dirección de la carpeta de descargas.</p></li>
@@ -709,7 +709,7 @@ En todos los casos, la información que se debe ingresar al modelo debe ser de t
 </ul>
 <p>Se procede a crear el archivo [prefix]avaflow.cmd. Este archivo es el que corre el modelo, por lo cual se debe almacenar en la misma carpeta donde esta el <em>r.avaflow.exe</em> y el archivo de parámetros creado en el paso anterior.</p>
 <p>se ejecuta el archivo <em>.cmd</em>, el computador lo reconocerá como un programa no seguro, sin embargo, se selecciona continuar de todos modos. Una vez se abra la línea de comandos, se escribe la letra <em>S</em> ó <em>Y</em> y se da <em>enter</em> para que comience a correr. Mientras corre el modelo se debe observar uan pantalla de la siguiente manera.</p>
-<p>4- Una vez se observa que el modelo ha finalizado se puede observar diferentes carpetas con resultados.</p>
+<p><strong>4- Una vez se observa que el modelo ha finalizado se puede observar diferentes carpetas con resultados</strong>.</p>
 <ul class="simple">
 <li><p>En _ascii se almacenan resultados que pueden ser cargados en un SIG.</p></li>
 <li><p>En _files se almacenan resultados en formato txt que contienen información de puntos de control, evaluación del ajuste del modelo al caso real, los parámetros usados de manera comentada, un resumen de parámetros de la simulación con       información de tiempo, duración, profundidad, velocidad, volumen, energía cinética entre otros.</p></li>

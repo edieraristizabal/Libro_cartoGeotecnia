@@ -9,8 +9,8 @@ are_pu1_results/are_pu1_paraview/
 are_pu1_results/are_pu1_plots/
 1
 1
-0
-0
+3
+3
 0
 1
 0
@@ -110,7 +110,7 @@ None
 0
 0
 0.4
-0.001
+0.1
 None
 None
 0.1

@@ -7,8 +7,8 @@ are_pu2_results/are_pu2_ascii/
 are_pu2_results/are_pu2_files/
 are_pu2_results/are_pu2_paraview/
 are_pu2_results/are_pu2_plots/
-0
-0
+7
+1
 2
 3
 0
