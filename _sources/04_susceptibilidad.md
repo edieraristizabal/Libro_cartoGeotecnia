@@ -20,9 +20,9 @@ detonantes.
 
 A la definición de amenaza {cite:t}`Guzzetti1999` le adiciona la inclusión de la magnitud del evento. Por lo tanto, la definición de la amenaza por movimientos en masa incorpora los conceptos de localización, tiempo y magnitud. Como consecuencia, una completa evaluación de la amenaza debe predecir de forma cuantitativa dónde un movimiento en masa ocurrirá, cuándo o qué tan frecuente será su ocurrencia, y qué tan grande será el evento.
 
-Considerando estos tres elementos, la probabilidad de amenaza por movimientos en masa en una área dada puede ser obtenida a partir de la probabilidad espacial (PS), que señala la probabilidad espacial relativa de ocurrencia de un movimiento en masa;  de la probabilidad temporal (PT), que señala la probabilidad de ocurrencia de un factor detonante que genera movimientos en masa; y de la probabilidad de magnitud (PM), que señala la probabilidad que un movimiento en masa pueda ser de un cierto tamaño. La amenaza (H) entonces puede ser calculada asumiendo independencia entre las tres probabilidades utilizando la siguiente ecuación:
+Considerando estos tres elementos, la probabilidad de amenaza por movimientos en masa en una área dada puede ser obtenida a partir de la probabilidad espacial ($P_S$), que señala la probabilidad espacial relativa de ocurrencia de un movimiento en masa;  de la probabilidad temporal ($P_T$), que señala la probabilidad de ocurrencia de un factor detonante que genera movimientos en masa; y de la probabilidad de magnitud ($P_M$), que señala la probabilidad que un movimiento en masa pueda ser de un cierto tamaño. La amenaza (H) entonces puede ser calculada asumiendo independencia entre las tres probabilidades utilizando la siguiente ecuación:
 
-$H = PM x PS x PT$
+$H = P_M x P_S x P_T$
 
 ## Metodologías para la evaluación y zonificación de la susceptibildiad y/o amenaza
 Existen en la literatura múltiples métodos para evaluar la susceptibilidad o amenaza por movimientos en masa, los cuales pueden ser divididos en cuantitativos y cualitativos ({cite:t}`Fell2008`; {cite:t}`Aleotti1999a`; {cite:t}`Carrara1983`; {cite:t}`Guzzetti1999`; {cite:t}`Westen2006`). 
@@ -64,7 +64,7 @@ Unidad de análisis tipo unidad de condiciones únicas.
 :::
 
 ## Procedimiento
-Para la evaluación y zonificación de la susceptibilidad por movimientos en masa {\cite:t}`Guzzetti2002` recomienda la ejecución de cinco pasos: 
+Para la evaluación y zonificación de la susceptibilidad por movimientos en masa {cite:t}`Guzzetti2002` recomienda la ejecución de cinco pasos: 
 * (i) la identificación y mapeo de los movimientos en masa en el área de estudio, 
 * (ii) la identificación y mapeo de los factores condicionantes que están directa o indirectamente correlacionados con la ocurrencia, 
 * (iii) la estimación de la contribución relativa de cada factor condicionante en la ocurrencia de los movimientos en masa, 
