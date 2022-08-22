@@ -21,7 +21,7 @@ are_ero_results/are_ero_plots/
 0
 1
 0
-0
+1
 0
 0
 0
@@ -40,7 +40,7 @@ None
 None
 None
 None
-None
+are_hentmax1.asc
 None
 None
 1
@@ -95,7 +95,7 @@ None
 -9999
 -3
 0
--7
+-6
 0
 0
 0
@@ -163,7 +163,7 @@ None
 0.25
 0.15
 0.2
-1
+undefined
 C:/Program Files/ParaView 5.10.1-Windows-Python3.9-msvc2017-AMD64/bin
 C:/Program Files/R/R-4.2.1/bin/Rscript.exe
 None
