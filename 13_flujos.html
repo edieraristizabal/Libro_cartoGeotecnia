@@ -316,8 +316,11 @@
       </a>
      </li>
      <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#calculo-de-propagacion">
-       Cálculo de propagación
+      <a class="reference internal nav-link" href="#propagation">
+       <em>
+        Propagation
+       </em>
+       *
       </a>
      </li>
     </ul>
@@ -398,8 +401,11 @@
       </a>
      </li>
      <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#calculo-de-propagacion">
-       Cálculo de propagación
+      <a class="reference internal nav-link" href="#propagation">
+       <em>
+        Propagation
+       </em>
+       *
       </a>
      </li>
     </ul>
@@ -506,34 +512,34 @@
 <div class="section" id="ingresar-los-datos">
 <h4>Ingresar los datos<a class="headerlink" href="#ingresar-los-datos" title="Permalink to this headline">¶</a></h4>
 <ul class="simple">
-<li><p>Seleccione en la pestaña de la parte superior de la interface Tools &gt; Format Data &gt; Import Data. Seleccione el archivo “DEM_Arenosa.asc”. Le aparecerá una advertencia mostrando el tipo de información que entiende el modelo &gt; OK.</p></li>
+<li><p>Seleccione en la pestaña de la parte superior de la interface Tools &gt; Format Data &gt; Import Data. Seleccione el archivo <em>DEM_Arenosa.asc</em>. Le aparecerá una advertencia mostrando el tipo de información que entiende el modelo &gt; OK.</p></li>
 <li><p>En la ventana siguiente, debe seleccionar el tipo de información que está ingresando. En este caso, seleccione la primera opción (DEM). Asígnele un nombre al DEM y seleccione para este caso la zona de proyección UTM 18N, que corresponde al noroccidente de Colombia.</p></li>
-<li><p>Realice el mismo procedimiento para “Fuentes_Arenosa.asc” (importar como predefined sources). Asígnele un nombre.</p></li>
-<li><p>Cuando termine de importar los raster, en la pestaña <em>Determination of the case study area</em> debe definir su zona de estudio. Usted puede ingresar un DEM de una zona grande en la cual quiere analizar una o varias zonas pequeñas. No es la opción más recomendable, pues el tiempo de procesamiento normalmente se hace mayor. Si a pesar de esto lo desea hacer, puede seleccionar cada una de las zonas de estudio y darle un nombre. Dado que en este ejercicio se analizará toda la cuenca de la Arenosa, que corresponde al DEM completo, seleccione <em>Select the whole DEM</em>. Llame a la zona de estudio “Toda”. Fíjese que en caso de querer, puede seleccionar la zona de estudio manualmente, dando unas coordenadas o a través de un raster que la delimite. Usted puede crear tantas zonas de estudio como desee.</p></li>
+<li><p>Realice el mismo procedimiento para <em>Fuentes_Arenosa.asc</em> (importar como predefined sources). Asígnele un nombre.</p></li>
+<li><p>Cuando termine de importar los raster, en la pestaña <em>Determination of the case study area</em> debe definir su zona de estudio. Usted puede ingresar un DEM de una zona grande en la cual quiere analizar una o varias zonas pequeñas. No es la opción más recomendable, pues el tiempo de procesamiento normalmente se hace mayor. Si a pesar de esto lo desea hacer, puede seleccionar cada una de las zonas de estudio y darle un nombre. Dado que en este ejercicio se analizará toda la cuenca de la Arenosa, que corresponde al DEM completo, seleccione <em>Select the whole DEM</em>. Llame a la zona de estudio <em>Toda</em>. Fíjese que en caso de querer, puede seleccionar la zona de estudio manualmente, dando unas coordenadas o a través de un raster que la delimite. Usted puede crear tantas zonas de estudio como desee.</p></li>
 <li><p>En la ventana de importación de datos, también están disponibles las opciones para la identificación de ríos y la selección de un búfer. Estas opciones son útiles en caso de que queramos reducir la búsqueda de áreas fuente a cierta distancia de las quebradas. Dado que no se limitará la búsqueda en este ejercicio, no ingrese nada en esa parte.</p></li>
 <li><p>Cierre la ventana de importación de datos</p></li>
 <li><p>En el campo <em>Choice of the study área</em>, seleccione la zona “Toda”, y en el campo <em>Choice of the rivers layer</em> seleccione <em>Toda_no_river</em>, que significa que nó utilizará la información de las quebradas. Finalmente, asígnele en <em>Enter run name</em> un nombre a su corrida. Con este nombre se creará una subcarpeta en <em>Resultados</em> donde se guardarán los resultados de su modelación.</p></li>
-<li><p><strong>Recomendación</strong>: <em>Asígnele un número y en una hoja relacione este número con los parámetros de los algoritmos que utilizó en dicha corrida. De tal forma que pueda trabajar ordenadamente las multiples modelaciones que seguramente realizará.</em>).</p></li>
+<li><p><strong>Recomendación</strong>: <em>Asígnele un número y en una hoja relacione este número con los parámetros de los algoritmos que utilizó en dicha corrida. De tal forma que pueda trabajar ordenadamente las multiples modelaciones que seguramente realizará</em>.</p></li>
 </ul>
 </div>
 <div class="section" id="working-directories">
 <h4><em>Working directories</em><a class="headerlink" href="#working-directories" title="Permalink to this headline">¶</a></h4>
 <p>Para ingresar la información al programa, se debe crear primero el proyecto y las carpetas en las cuales se almacenarán los datos de entrada y de salida. Siga los siguientes pasos:</p>
 <ul class="simple">
-<li><p>Cree en su computador la carpeta “La Arenosa FlowR”. Dentro de ella, cree dos carpetas: una que se llame “Datos” y otra que se llame “Resultados”.</p></li>
+<li><p>Cree en su computador la carpeta <em>La Arenosa FlowR</em>. Dentro de ella, cree dos carpetas: una que se llame <em>Datos</em> y otra que se llame <em>Resultados</em>.</p></li>
 <li><p>Abra el ejecutable de Flow-R. Se puede descargar de la página web <a class="reference external" href="https://www.flow-r.org/download">https://www.flow-r.org/download</a>. Después de llenar el formulario, el instalador le será enviado vía e-mail. Debe tener MATLAB ó su compilador instalado. Lo puede descargar de la página <a class="reference external" href="https://la.mathworks.com/products/compiler/matlab-runtime.html">https://la.mathworks.com/products/compiler/matlab-runtime.html</a>.</p></li>
-<li><p>Una vez abierto, seleccione en “Directory to store data” la carpeta “Datos”. En la sección “Directory to store resulting files”, seleccione la carpeta “Resultados”.</p></li>
+<li><p>Una vez abierto, seleccione en <em>Directory to store data</em> la carpeta <em>Datos</em>. En la sección <em>Directory to store resulting files</em>, seleccione la carpeta <em>Resultados</em>.</p></li>
 </ul>
 </div>
 <div class="section" id="source-areas">
 <h4><em>Source areas</em><a class="headerlink" href="#source-areas" title="Permalink to this headline">¶</a></h4>
-<p>En esta parte va a calcular la propagación de las áreas fuentes definidas como zonas inestables que se propagarán en forma de flujo. Para esto, utilizará las fuentes cartografiadas en el evento real sucedido en el año 1990. Dado que la única información necesaria para el cálculo de la propagación de flujos son el DEM y las fuentes predeterminadas, en la parte inferior izquierda <em>Source areas</em> ingrese estas dos capas únicamente. En la primera columna debe ingresar el tipo de información (DEM, Predefined sources), en la segunda columna el nombre del raster (Arenosa, fuentes_Arenosa), y en la tercera debe ingresar los criterios de lectura del archivo, <em>avove_0000m</em> para el DEM y <em>boolean</em> para las fuentes, respectivamente.</p>
+<p>En esta parte va a calcular la propagación de las áreas fuentes definidas como zonas inestables que se propagarán en forma de flujo. Para esto, utilizará las fuentes cartografiadas en el evento real sucedido en el año 1990. Dado que la única información necesaria para el cálculo de la propagación de flujos son el DEM y las fuentes predeterminadas, en la parte inferior izquierda <em>Source areas</em> ingrese estas dos capas únicamente. En la primera columna debe ingresar el tipo de información (<em>DEM</em>, <em>Predefined sources</em>), en la segunda columna el nombre del raster (Arenosa, fuentes_Arenosa), y en la tercera debe ingresar los criterios de lectura del archivo, <em>avove_0000m</em> para el DEM y <em>boolean</em> para las fuentes, respectivamente.</p>
+<p>En la parte inferior <em>Source value</em> deje seleccionada la opción <em>Binary (0/1)</em>, ya que en este caso estamos trabajando con una mapa de fuentes tipo binario, donde celdas con valor de 0 es no movimientos en masa y celdas con valor 1 son movimientos en masa para propagar.</p>
 </div>
-<div class="section" id="calculo-de-propagacion">
-<h4>Cálculo de propagación<a class="headerlink" href="#calculo-de-propagacion" title="Permalink to this headline">¶</a></h4>
-<ul class="simple">
-<li><p>En el panel derecho de la interfaz <em>Propagation</em> seleccione la pestaña <em>Propagation calculation</em>, y posteriormente se deben ingresar todos los parámetros de los algoritmos para el cálculo de la dirección de propagación, extensión del flujo, y la metodología a usar para realizar los cálculos. Estos parámetros se describen a continuación:</p></li>
-</ul>
+<div class="section" id="propagation">
+<h4><em>Propagation</em>*<a class="headerlink" href="#propagation" title="Permalink to this headline">¶</a></h4>
+<p>En el panel derecho de la interfaz <em>Propagation</em> seleccione la pestaña <em>Propagation calculation</em>. Sobre la parte derecha se encuentran dos opciones <em>Sum of probabilities</em> y <em>Connected areas</em> que le brindan resultados adicionales. Para este ejemplo no las seleccione.</p>
+<p>Posteriormente se deben ingresar todos los parámetros de los algoritmos para el cálculo de la dirección de propagación, extensión del flujo, y la metodología a usar para realizar los cálculos. Estos parámetros se describen a continuación:</p>
 <p><strong>Calculation method &gt; Source areas selection</strong>: Se refiere al criterio a utilizar a la hora seleccionar cuáles celdas consideradas como áreas fuentes se utilizarán para el cálculo de la propagación.</p>
 <p><em>Overview - Only superior sources</em>: Dado que son las áreas fuentes más altas las que tienen más energía potencial para propagarse, sólo se calculará la propagación para estas zonas, asumiendo que toda zona fuente ubicada debajo no llegará tan lejos. Es el método de cálculo más rápido pero no el más completo, dado que áreas fuente más bajas pueden tomar trayectorias diferentes a las calculadas.</p>
 <p><em>Quick – Energy based discrimination</em>: Las fuentes ubicadas en las zonas más altas se propagan primero. Luego, se consideran otras zonas fuentes, y si durante el cálculo en curso la propagación toma la misma trayectoria que una ya calculada con una energía similar o superior, los cálculos de la propagación actual se detienen ya que será redundante. Esta selección según la energía es muy eficiente, puede ahorrar mucho tiempo y produce resultados casi similares a la simulación completa para cada fuente. Es la opción más recomendable. Selecciónela.</p>
