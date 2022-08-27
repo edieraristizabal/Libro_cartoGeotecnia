@@ -580,7 +580,7 @@ Requirement already satisfied: pyparsing&gt;=2.1.6 in c:\users\usuario\miniconda
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
-<span class="o">~</span>\<span class="n">AppData</span>\<span class="n">Local</span>\<span class="n">Temp</span><span class="o">/</span><span class="n">ipykernel_38620</span><span class="o">/</span><span class="mf">3834865208.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="o">~</span>\<span class="n">AppData</span>\<span class="n">Local</span>\<span class="n">Temp</span><span class="o">/</span><span class="n">ipykernel_40772</span><span class="o">/</span><span class="mf">3834865208.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="kn">import</span> <span class="nn">rasterio</span> <span class="k">as</span> <span class="nn">rio</span>
 <span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="ne">----&gt; </span><span class="mi">3</span> <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
@@ -867,7 +867,7 @@ del suelo y <span class="math notranslate nohighlight">\(𝜓(𝑍,𝑡)\)</span
 <li><p>profsuelo_arenosa_clip: mapa con la profundidad del suelo en metros</p></li>
 </ul>
 <div class="figure align-default" id="direccion">
-<a class="reference internal image-reference" href="https://www.researchgate.net/publication/307632379/figure/fig6/AS:404373080428547&#64;1473421463384/D8-ESRI-direction-code-overview.png"><img alt="direccion" src="https://www.researchgate.net/publication/307632379/figure/fig6/AS:404373080428547&#64;1473421463384/D8-ESRI-direction-code-overview.png" style="width: 600px;" /></a>
+<a class="reference internal image-reference" href="https://www.researchgate.net/publication/307632379/figure/fig6/AS:404373080428547&#64;1473421463384/D8-ESRI-direction-code-overview.png"><img alt="direccion" src="https://www.researchgate.net/publication/307632379/figure/fig6/AS:404373080428547&#64;1473421463384/D8-ESRI-direction-code-overview.png" style="width: 400px;" /></a>
 <p class="caption"><span class="caption-number">Fig. 48 </span><span class="caption-text">Códigos usados por ESRI para la dirección de flujo
 Profsuelo_Arenosa_Clip: Profundidad del suelo, en metros de la zona de estudio.
 Suelos_Arenosa_Clip: Zonificación de los tipos de suelo presentes en la zona de estudio.</span><a class="headerlink" href="#direccion" title="Permalink to this image">¶</a></p>
@@ -1095,12 +1095,12 @@ En caso de utilizar <em>ArcToolbox</em>, vaya a <em>Spatial Analysis &gt; Reclas
 <td><p>2</p></td>
 </tr>
 <tr class="row-odd"><td><p>zmax</p></td>
-<td><p>Profundidad máxima de suelo en que se calcularán presiones de poro y el factor de seguridad. Para no gastar recursos computacionales de forma innecesaria, determine esta profundidad como la de probable falla. Si es un valor homogéneo para toda la zona de estudio, ingrese el valor positivo de la profundidad, en metros. En caso de que sea un valor heterogéneo espacialmente, ingrese un valor negativo y más adelante podrá ingresar un mapa con los valores de la profundidad. En el caso de la Arenosa, esta superficie de falla coincide con la de profundidad del suelo, la cual es heterogénea.</p></td>
+<td><p>Profundidad máxima de suelo en que se calcularán presiones de poro y el factor de seguridad. Para no gastar recursos computacionales de forma innecesaria, determine esta profundidad como la de probable falla. Si es un valor homogéneo para toda la zona de estudio, ingrese el valor positivo de la profundidad, en metros. En caso de que sea un valor heterogéneo espacialmente, ingrese un valor negativo y más adelante podrá ingresar un mapa con los valores de la profundidad. En el caso de la Arenosa, esta superficie de falla coincide con la de profundidad del suelo, la cual es heterogénea</p></td>
 <td><p></p></td>
 <td><p></p></td>
 <td><p></p></td>
 </tr>
-<tr class="row-even"><td><p>czmax&gt; zmin; si zmax&lt;0, leer valores del raster</p></td>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(czmax&gt; zmin\)</span>; si <span class="math notranslate nohighlight">\(zmax&lt;0\)</span>, leer valores del raster</p></td>
 <td><p>-1</p></td>
 <td><p>-1</p></td>
 <td><p></p></td>
