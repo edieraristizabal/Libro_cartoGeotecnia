@@ -580,7 +580,7 @@ Requirement already satisfied: pyparsing&gt;=2.1.6 in c:\users\usuario\miniconda
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
-<span class="o">~</span>\<span class="n">AppData</span>\<span class="n">Local</span>\<span class="n">Temp</span><span class="o">/</span><span class="n">ipykernel_10200</span><span class="o">/</span><span class="mf">3834865208.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="o">~</span>\<span class="n">AppData</span>\<span class="n">Local</span>\<span class="n">Temp</span><span class="o">/</span><span class="n">ipykernel_36720</span><span class="o">/</span><span class="mf">3834865208.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="kn">import</span> <span class="nn">rasterio</span> <span class="k">as</span> <span class="nn">rio</span>
 <span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="ne">----&gt; </span><span class="mi">3</span> <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
@@ -994,27 +994,30 @@ En caso de utilizar <em>ArcToolbox</em>, vaya a <em>Spatial Analysis &gt; Reclas
 </ul>
 <table class="colwidths-auto table">
 <thead>
-<tr class="row-odd"><th class="head"><p>TIdsneiList_Arenosa.txt</p></th>
-<th class="head"><p>Lista de celdas receptoras en pendiente descendente en la dirección del flujo D8 (2)</p></th>
+<tr class="row-odd"><th class="head"><p>Archivo</p></th>
+<th class="head"><p>Descripción</p></th>
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p>TIdscelGrid_Arenosa.txt</p></td>
+<tr class="row-even"><td><p>TIdsneiList_Arenosa.txt</p></td>
+<td><p>Lista de celdas receptoras en pendiente descendente en la dirección del flujo D8 (2)</p></td>
+</tr>
+<tr class="row-odd"><td><p>TIdscelGrid_Arenosa.txt</p></td>
 <td><p>Raster de celdas receptoras en pendiente descendente en la dirección del flujo D8 (1)</p></td>
 </tr>
-<tr class="row-odd"><td><p>TIcelindxGrid_Arenosa.txt</p></td>
+<tr class="row-even"><td><p>TIcelindxGrid_Arenosa.txt</p></td>
 <td><p>Raster de índice de celda que especifica el orden de cálculo para el enrutamiento de escorrentía en TRIGRS</p></td>
 </tr>
-<tr class="row-even"><td><p>TIcelindxList_Arenosa.txt</p></td>
+<tr class="row-odd"><td><p>TIcelindxList_Arenosa.txt</p></td>
 <td><p>Lista de números de celda y número de índice correspondiente (orden de cálculo)</p></td>
 </tr>
-<tr class="row-odd"><td><p>TIflodirGrid_Arenosa.txt</p></td>
+<tr class="row-even"><td><p>TIflodirGrid_Arenosa.txt</p></td>
 <td><p>Raster de dirección de flujo</p></td>
 </tr>
-<tr class="row-even"><td><p>TIdscelList_Arenosa.txt</p></td>
+<tr class="row-odd"><td><p>TIdscelList_Arenosa.txt</p></td>
 <td><p>Lista de celdas en pendiente descendente para las cuales se han calculado factores de ponderación distintos de cero (3)</p></td>
 </tr>
-<tr class="row-odd"><td><p>TIwfactorList_Arenosa.txt</p></td>
+<tr class="row-even"><td><p>TIwfactorList_Arenosa.txt</p></td>
 <td><p>Lista de factores de ponderación para las celdas receptoras en pendiente descendente (4)</p></td>
 </tr>
 </tbody>
@@ -1266,27 +1269,30 @@ Cuando terminen los cálculos, abra el archivo TrigrsLog.txt y examínelo.</p>
 <p>Abra la carpeta Resultados. Dentro de la carpeta se encuentran los siguientes archivos de salida:</p>
 <table class="colwidths-auto table">
 <thead>
-<tr class="row-odd"><th class="head"><p>TRrunoffPer”x”Sat.txt</p></th>
-<th class="head"><p>Raster de escorrentía computada durante un período de tormenta dado; “x” designa el período de tormenta</p></th>
+<tr class="row-odd"><th class="head"><p>Archivo</p></th>
+<th class="head"><p>Descripción</p></th>
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p>TRfs_min_Sat__”x”.txt</p></td>
+<tr class="row-even"><td><p>TRrunoffPer”x”Sat.txt</p></td>
+<td><p>Raster de escorrentía computada durante un período de tormenta dado; “x” designa el período de tormenta</p></td>
+</tr>
+<tr class="row-odd"><td><p>TRfs_min_Sat__”x”.txt</p></td>
 <td><p>Raster del factor de seguridad mínimo calculado en cada celda por tiempo, “x” denota el periodo de la tormenta.</p></td>
 </tr>
-<tr class="row-odd"><td><p>TRz_at_fs_min_Sat__”x”.txt</p></td>
+<tr class="row-even"><td><p>TRz_at_fs_min_Sat__”x”.txt</p></td>
 <td><p>Raster de profundidades en la que se calculó el factor de seguridad mínimo para el tiempo del intervalo “x”.</p></td>
 </tr>
-<tr class="row-even"><td><p>TRp_at_fs_min_Sat__ ”x.txt</p></td>
+<tr class="row-odd"><td><p>TRp_at_fs_min_Sat__ ”x.txt</p></td>
 <td><p>Raster de presión de poros en la profundidad correspondiente al factor mínimo de seguridad en el intervalo “x”.</p></td>
 </tr>
-<tr class="row-odd"><td><p>TRinfilratPer”x”Sat_.txt</p></td>
+<tr class="row-even"><td><p>TRinfilratPer”x”Sat_.txt</p></td>
 <td><p>Raster de tasas de infiltración reales durante un período de tormenta dado “x”.</p></td>
 </tr>
-<tr class="row-even"><td><p>TRlist_z_p_fs_Sat_.txt</p></td>
+<tr class="row-odd"><td><p>TRlist_z_p_fs_Sat_.txt</p></td>
 <td><p>Lista celda por celda de presión y factor de seguridad en cada incremento de profundidad.</p></td>
 </tr>
-<tr class="row-odd"><td><p>TRnon_convrg_SZ_Sat_.txt o TRnon_convrg_UZ_Sat_.txt</p></td>
+<tr class="row-even"><td><p>TRnon_convrg_SZ_Sat_.txt o TRnon_convrg_UZ_Sat_.txt</p></td>
 <td><p>Archivos de raster que localizan celdas no convergentes. Se generan automáticamente si los cálculos de series infinitas en cualquier celda no convergen. UZ denota zona insaturada, SZ denota zona saturada.</p></td>
 </tr>
 </tbody>
