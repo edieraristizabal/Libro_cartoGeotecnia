@@ -513,7 +513,7 @@ de infiltración. Sin embargo existen diferentes aproximaciones a la física del
 <p>Como parte de los modelos físicos una gran variedad de modelos hidrológicos se han utilizado considerando el flujo de agua en el suelo en estado estático o transitorio, y en condiciones saturadas o parcialmente saturadas, utilizando las ecuaciones de Richards para el flujo vertical y las ecuaciones de Darcy para el flujo lateral. Entre estos se encuentra TOPOG (O’Loughlin, 1986), TAPES (Moore et al., 1988), TOPMODEL (Beven &amp; Kirkby, 1979), GEOtop (Bertoldi &amp; Rigon, 2004), tRIBS (Ivanov et al., 2004), SHIA (Vélez 2001), y los modelos de Green-Ampt (1911), Pradel &amp; Raad (1993) e Iverson (2000). Por el contrario, los modelos geotécnicos utilizados son muy similares, generalmente utilizando el método talud infinito y análisis de equilibrio límite, suponiendo la superficie de falla paralela a la superficie del terreno y que la longitud de falla es mucho mayor que el espesor de la capa desplazada (Borga et al., 2002).</p>
 <div class="figure align-default" id="hidrologico">
 <a class="reference internal image-reference" href="https://i.pinimg.com/564x/52/32/4a/52324a660eca43147a3ad80d2da9f621.jpg"><img alt="modelo hidrologico" src="https://i.pinimg.com/564x/52/32/4a/52324a660eca43147a3ad80d2da9f621.jpg" style="width: 600px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 46 </span><span class="caption-text">Dos posibles mecanismos de saturación para deslizamientos planares superficiales detonados por lluvias. Izquierda: incremento del nivel freático colgado paralelo a la ladera a partir de una superficie de contraste de permeabilidad. Derecha: avance de frente húmedo a partir de la superficie del terreno.</span><a class="headerlink" href="#hidrologico" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 48 </span><span class="caption-text">Dos posibles mecanismos de saturación para deslizamientos planares superficiales detonados por lluvias. Izquierda: incremento del nivel freático colgado paralelo a la ladera a partir de una superficie de contraste de permeabilidad. Derecha: avance de frente húmedo a partir de la superficie del terreno.</span><a class="headerlink" href="#hidrologico" title="Permalink to this image">¶</a></p>
 </div>
 <p>Uno de los primeros modelos físicos fue propuesto por Wu y Sidle (1995) denominado dSLAM (distribuited Shallow LAndslide Model), y posteriormente modificado como IDSSM (Integrated Dynamic Slope Stability Model) por Dhakal &amp; Sidle (2003). Corresponde a un modelo físico, dinámico y distribuido, que utiliza un análisis de estabilidad de talud infinita con un modelo hidrológico de onda cinemática propuesto por Takasao y Shiiba (1988). Este modelo considera la vegetación y asume que la infiltración es siempre mayor a la intensidad de la lluvia.</p>
 <p>Sin embargo uno de los modelos físicos más reconocido por su sencillez y fácil aplicación es el modelo propuesto por Montgomery &amp; Dietrich (1994) y Montgomery et al. (1998), denominado SHAllow Landslide STABility (SHALSTAB). Este modelo emplea el modelo hidrológico TOPOG para estimar la altura de la porción saturada de suelo, el cual asume que el control dominante de la distribución espacial de los movimientos está dado por la topografía. Estos autores definen para su análisis un índice topográfico, el cual es utilizado para predecir el nivel freático en función del flujo del agua en el suelo y la intensidad de la lluvia. El modelo de estabilidad propuesto utiliza el criterio de Mohr-Coulomb, en el cual por simplificación asumen la cohesión igual cero.</p>
@@ -525,7 +525,7 @@ de infiltración. Sin embargo existen diferentes aproximaciones a la física del
 <p>Finalmente el modelo SHIA_Landslide propuesto por Aristizábal et al. (2014) acopla un modelo de talud infinita en condiciones saturadas con el modelo hidrológico distribuido de tanques a escala de cuenca que considera los flujos verticales y horizontales, denominado SHIA (Vélez, 2001). El modelo hidrológico está conformado por dos componentes: un balance de agua que simula los proceso hidrológicos dominantes en la cuenca, tales como infiltración, percolación, escorrentía superficial, flujo sub superficial, y flujo subterráneo; y un componente que simula el flujo del agua a través de la red de drenaje, lo que permite calibrar con valores observados la hidrología de la cuenca y las laderas previo a la simulación de estabilidad de las vertientes.</p>
 <div class="figure align-default" id="modelos">
 <a class="reference internal image-reference" href="https://i.pinimg.com/564x/21/f9/1d/21f91d0d89d2aac8176b08e2b832c18b.jpg"><img alt="modelos" src="https://i.pinimg.com/564x/21/f9/1d/21f91d0d89d2aac8176b08e2b832c18b.jpg" style="width: 500px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 47 </span><span class="caption-text">modelos físicos.</span><a class="headerlink" href="#modelos" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 49 </span><span class="caption-text">modelos físicos.</span><a class="headerlink" href="#modelos" title="Permalink to this image">¶</a></p>
 </div>
 <div class="section" id="modelo-shalstab">
 <h2>Modelo SHALSTAB<a class="headerlink" href="#modelo-shalstab" title="Permalink to this headline">¶</a></h2>
@@ -869,7 +869,7 @@ del suelo y <span class="math notranslate nohighlight">\(𝜓(𝑍,𝑡)\)</span
 </ul>
 <div class="figure align-default" id="direccion">
 <a class="reference internal image-reference" href="https://www.researchgate.net/publication/307632379/figure/fig6/AS:404373080428547&#64;1473421463384/D8-ESRI-direction-code-overview.png"><img alt="direccion" src="https://www.researchgate.net/publication/307632379/figure/fig6/AS:404373080428547&#64;1473421463384/D8-ESRI-direction-code-overview.png" style="width: 400px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 48 </span><span class="caption-text">Códigos usados por ESRI para la dirección de flujo
+<p class="caption"><span class="caption-number">Fig. 50 </span><span class="caption-text">Códigos usados por ESRI para la dirección de flujo
 Profsuelo_Arenosa_Clip: Profundidad del suelo, en metros de la zona de estudio.
 Suelos_Arenosa_Clip: Zonificación de los tipos de suelo presentes en la zona de estudio.</span><a class="headerlink" href="#direccion" title="Permalink to this image">¶</a></p>
 </div>
@@ -933,7 +933,7 @@ En caso de utilizar <em>ArcToolbox</em>, vaya a <em>Spatial Analysis &gt; Reclas
 </ul>
 <div class="figure align-default" id="gm">
 <a class="reference internal image-reference" href="https://i.pinimg.com/564x/e1/eb/66/e1eb661f2b5c6deffbba5f6e3ed842dc.jpg"><img alt="gm" src="https://i.pinimg.com/564x/e1/eb/66/e1eb661f2b5c6deffbba5f6e3ed842dc.jpg" style="width: 600px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 49 </span><span class="caption-text">Archivo <em>gm_in.txt</em></span><a class="headerlink" href="#gm" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 51 </span><span class="caption-text">Archivo <em>gm_in.txt</em></span><a class="headerlink" href="#gm" title="Permalink to this image">¶</a></p>
 </div>
 <ul class="simple">
 <li><p>Una vez termine de editar el archivo <em>gm_in</em>, guarde los cambios.</p></li>
@@ -986,7 +986,7 @@ En caso de utilizar <em>ArcToolbox</em>, vaya a <em>Spatial Analysis &gt; Reclas
 </ul>
 <div class="figure align-default" id="id1">
 <a class="reference internal image-reference" href="https://i.pinimg.com/564x/8c/87/62/8c87622bebacf2962926c5321a6d64f1.jpg"><img alt="gm" src="https://i.pinimg.com/564x/8c/87/62/8c87622bebacf2962926c5321a6d64f1.jpg" style="width: 600px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 50 </span><span class="caption-text">Archivo gm_in.txt</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 52 </span><span class="caption-text">Archivo gm_in.txt</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
 </div>
 <ul class="simple">
 <li><p>Ejecute el programa TopoIndex.exe.</p></li>
@@ -1185,7 +1185,7 @@ En caso de utilizar <em>ArcToolbox</em>, vaya a <em>Spatial Analysis &gt; Reclas
 <p>La siguiente figura muestra el registro de precipitación obtenido de un pluviómetro ubicado en la cuenca de La Arenosa el día del evento.</p>
 <div class="figure align-default" id="lluvia">
 <a class="reference internal image-reference" href="https://i.pinimg.com/564x/0a/bf/a1/0abfa1b6cc96eac96fa242fc76cbfa47.jpg"><img alt="lluvia" src="https://i.pinimg.com/564x/0a/bf/a1/0abfa1b6cc96eac96fa242fc76cbfa47.jpg" style="width: 600px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 51 </span><span class="caption-text">Registro de precipitación del evento del 21/09/1990 en la cuenca La Arenosa</span><a class="headerlink" href="#lluvia" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 53 </span><span class="caption-text">Registro de precipitación del evento del 21/09/1990 en la cuenca La Arenosa</span><a class="headerlink" href="#lluvia" title="Permalink to this image">¶</a></p>
 </div>
 <p>La tormenta comenzó a las 8:00 pm del día del evento y terminó a las 2:00 am del día siguiente. Usted modelará la estabilidad de la cuenca durante las 7 horas de duración de la tormenta (7 horas= 25.200 segundos, que corresponde al valor ingresado en el campo t de los parámetros de modelación). Como verá el registro de precipitación está dado en escala horaria (7 horas de tormenta con registro de intensidad horaria corresponde al valor ingresado en el campo nper de los parámetros de modelación).</p>
 <ul class="simple">
@@ -1300,7 +1300,7 @@ Cuando terminen los cálculos, abra el archivo TrigrsLog.txt y examínelo.</p>
 </table>
 <div class="figure align-default" id="saturado">
 <a class="reference internal image-reference" href="https://i.pinimg.com/564x/51/43/7e/51437e91abf650c9b6a1042f8ada9053.jpg"><img alt="saturado" src="https://i.pinimg.com/564x/51/43/7e/51437e91abf650c9b6a1042f8ada9053.jpg" style="width: 600px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 52 </span><span class="caption-text">Archivo de inicio de TRIGRS para condiciones saturadas</span><a class="headerlink" href="#saturado" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 54 </span><span class="caption-text">Archivo de inicio de TRIGRS para condiciones saturadas</span><a class="headerlink" href="#saturado" title="Permalink to this image">¶</a></p>
 </div>
 </div>
 </div>

@@ -39,7 +39,19 @@ Clasificacion de movimientos en masa de acuerdo con Varnes & Cruden (1996).
 
 Los movimientos en masa más comúnes en laderas en suelo son los deslizamientos y flujos. A diferencia de los flujos, los **deslizamientos** presentan superficie de falla; cuando esta superficie es curva y concava se denominan deslizamientos rotacionales y ocurren frecuentemente en suelos finos y homogeneos, mientras que cuando la superficie de falla es plana se denominan deslizamientos translacionales o planares, los cuales son generalmente superficiales y suelen estar controlados por discontinuidades como diaclasas, foliación o planos de depositación. En algunos casos la superficie de ruptura puede estar formada por dos discontinuidades, lo que genera que el deslizamiento se presente en la dirección de la linea de intersección formando una cuña, razón por la cual reciben este nombre.
 
+:::{figure-md} rotacional
+<img src="https://www.nrcan.gc.ca/sites/www.nrcan.gc.ca/files/images/earth-sciences/cecil_lake.jpg" alt="rotacional" width="800px">
+
+Deslizamiento rotacional en Cecil Lake Peace river (Canada). Foto de R. Couture (GSC) tomada de [nrcan](https://www.nrcan.gc.ca/science-and-data/science-and-research/natural-hazards/landslides/10661)
+:::
+
 de acuerdo con {cite:t}`Cruden1996` los **flujos** corresponden a la deformación progresiva del material que conforma la ladera. Para el caso de laderas en suelo, donde son mas comunes, se pueden generar por el deslizamiento inicial de suelos con un alto contenido de agua, y que pierde rápidamente la resistencia al cortante y se transforma en una mezcla hetereogenea de agua y sedimentos donde su comportamiento o reología es función de la proporcion agua/sedimentos y de la granulometría.
+
+:::{figure-md} flujo
+<img src="https://i.pinimg.com/564x/11/dc/49/11dc492d691d3e32ef0a6f8b81a7a777.jpg" alt="flujo" width="800px">
+
+Flujo en San Antonio de Prado, sector Santa Rita, municipio de Medellín-Colombia, jun/2022.
+:::
 
 {cite:t}`Coussot1996`  utilizan la siguiente clasificación, donde contenidos en proporción de agua muy alto se tranforman de flujos de escombros a  flujos hiperconcetrados, cuando los materiales son finos se presentan flujos de una fase, donde el agua y los sedimentos viajan a la misma velocidad, y cuando los materiales son granulares se presentan flujos de dos fases, donde el agua viaja a velocidades mas altas a los materiales sólidos.
 
