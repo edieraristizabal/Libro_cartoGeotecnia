@@ -89,7 +89,7 @@ Finalmente se encuentran los movimientos en masa tipo **extensión lateral**, lo
 :::{figure-md} estado
 <img src="https://www.researchgate.net/profile/Pierluigi-Confuorto/publication/303377557/figure/fig4/AS:669001558528004@1536513809220/Scheme-of-the-state-of-activity-of-a-landslide-modified-from-WP-WLI-1993-1-Active.ppm" alt="estado" width="800px">
 
-Estado de la actividad de movimientos en masa de acuerdo con Varnes & Cruden (1996). (1) activo, (2) suspendido, (3) reactivado, (4) Latente (*dormant*), (6) abandonado, (7) estabilizado, (8) relicto. El estado (4) inactivo se subdivide en los estados (5) al (8).
+Estado de la actividad de movimientos en masa de acuerdo con Varnes & Cruden (1996). (1) activo, (2) suspendido, (3) reactivado, (5) latente (*dormant*), (6) abandonado, (7) estabilizado, (8) relicto. El estado inactivo se subdivide en los estados (5) al (8).
 :::
 
 La distribución de la actividad se refiere hacia dónde se está mpviendo o desplazando la superficie de falla. Se define como *avanzando* sí la superficie de ruptura se extiende en la dirección del movimiento, *retrogresivo* cuando se mueve la superficie de falla hacia la dirección opuesta al movimiento en masa, *ampliandose* cuando se mueve hacia ambas márgenes, *alargandose* cuando el material desplazado está continuamente adicionando mas volumen de material, *reduciendoce* cuando ocurre lo contrario, finalmente se utiliza el término *confinado* cuadno se observa el escarpe pero la superficie de falla no es visible en la pata del movimiento.
@@ -104,6 +104,7 @@ En cuanto a la escala de la velocidad de los movimientos en masa {cite:t}`Cruden
 Escala de velocidad de movimientos en masa de acuerdo con Varnes & Cruden (1996).
 :::
 
+## Intensidad vs Magnitud
 Dos elementos importantes en amenazas naturales son la magnitud e intensidad de los fenómenos. Para el caso de los movimientos en masa la intensidad de un evento se refiere a parámetros relacionados con el poder destructivo, tales como la velocidad o el desplazamiento total; mientras que la magnitud de los movimientos en masa hace referencia a la medida del tamaño del evento, tal como el volumen o el área.
 
 ## Referencias
