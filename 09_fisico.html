@@ -580,7 +580,7 @@ Requirement already satisfied: pyparsing&gt;=2.1.6 in c:\users\usuario\miniconda
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
-<span class="o">~</span>\<span class="n">AppData</span>\<span class="n">Local</span>\<span class="n">Temp</span><span class="o">/</span><span class="n">ipykernel_40772</span><span class="o">/</span><span class="mf">3834865208.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="o">~</span>\<span class="n">AppData</span>\<span class="n">Local</span>\<span class="n">Temp</span><span class="o">/</span><span class="n">ipykernel_10200</span><span class="o">/</span><span class="mf">3834865208.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="kn">import</span> <span class="nn">rasterio</span> <span class="k">as</span> <span class="nn">rio</span>
 <span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="ne">----&gt; </span><span class="mi">3</span> <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
@@ -1095,30 +1095,24 @@ En caso de utilizar <em>ArcToolbox</em>, vaya a <em>Spatial Analysis &gt; Reclas
 <td><p>2</p></td>
 </tr>
 <tr class="row-odd"><td><p>zmax</p></td>
-<td><p>Profundidad máxima de suelo en que se calcularán presiones de poro y el factor de seguridad. Para no gastar recursos computacionales de forma innecesaria, determine esta profundidad como la de probable falla. Si es un valor homogéneo para toda la zona de estudio, ingrese el valor positivo de la profundidad, en metros. En caso de que sea un valor heterogéneo espacialmente, ingrese un valor negativo y más adelante podrá ingresar un mapa con los valores de la profundidad. En el caso de la Arenosa, esta superficie de falla coincide con la de profundidad del suelo, la cual es heterogénea</p></td>
-<td><p></p></td>
-<td><p></p></td>
-<td><p></p></td>
-</tr>
-<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(czmax&gt; zmin\)</span>; si <span class="math notranslate nohighlight">\(zmax&lt;0\)</span>, leer valores del raster</p></td>
+<td><p>Profundidad máxima de suelo en que se calcularán presiones de poro y el factor de seguridad. Para no gastar recursos computacionales de forma innecesaria, determine esta profundidad como la de probable falla. Si es un valor homogéneo para toda la zona de estudio, ingrese el valor positivo de la profundidad, en metros. En caso de que sea un valor heterogéneo espacialmente, ingrese un valor negativo y más adelante podrá ingresar un mapa con los valores de la profundidad. En el caso de la Arenosa, esta superficie de falla coincide con la de profundidad del suelo, la cual es heterogénea.</p></td>
+<td><p><span class="math notranslate nohighlight">\(czmax&gt; zmin\)</span>; si <span class="math notranslate nohighlight">\(zmax&lt;0\)</span>, leer valores del raster</p></td>
 <td><p>-1</p></td>
 <td><p>-1</p></td>
-<td><p></p></td>
-<td><p></p></td>
 </tr>
-<tr class="row-odd"><td><p>depth</p></td>
+<tr class="row-even"><td><p>depth</p></td>
 <td><p>Profundidad inicial del nivel freático. Si es un valor homogéneo en toda la zona de estudio, ingrese el valor de la profundidad, en metros. Si es un valor heterogéneo espacialmente, ingrese un valor negativo y más adelante podrá ingresar un mapa con los valores de profundidad. Para la Arenosa, asumirá que en condiciones no saturadas el nivel freático se encontraba a 3.5 metros de profundidad.</p></td>
 <td><p><span class="math notranslate nohighlight">\(0&lt;depth≤zmax; si depth&lt;0, leer valores del raster\)</span></p></td>
 <td><p>0.5</p></td>
 <td><p>3.5</p></td>
 </tr>
-<tr class="row-even"><td><p>rizero</p></td>
+<tr class="row-odd"><td><p>rizero</p></td>
 <td><p>Tasa de infiltración del suelo antes de la tormenta. Si es un valor homogéneo en toda la zona de estudio, ingrese el valor de metros/segundo. Si es un valor heterogéneo espacialmente, ingrese un valor negativo y más adelante podrá ingresar un mapa con los valores.</p></td>
 <td><p><span class="math notranslate nohighlight">\(0&lt;rizero, si rizero&lt;0, leer valores del raster\)</span></p></td>
 <td><p>6.94e-6</p></td>
 <td><p>6.94e-6</p></td>
 </tr>
-<tr class="row-odd"><td><p>Min_Slope_Angle</p></td>
+<tr class="row-even"><td><p>Min_Slope_Angle</p></td>
 <td><p>Ángulo de inclinación mínimo; no hay cálculos de presión de poro o factor de seguridad en pendientes inferiores a Min_slope_angle.</p></td>
 <td><p><span class="math notranslate nohighlight">\(Min_slope_angle ≥0 \)</span></p></td>
 <td><p>0</p></td>
