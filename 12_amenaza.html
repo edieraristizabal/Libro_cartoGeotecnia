@@ -54,7 +54,7 @@
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Movimientos en masa tipo flujos" href="13_flujos.html" />
-    <link rel="prev" title="Factores detonantes" href="11_detonante.html" />
+    <link rel="prev" title="Evaluación del modelo" href="11_evaluacion.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -140,28 +140,28 @@
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="07_heuristico.html">
+  <a class="reference internal" href="07_detonante.html">
+   Factores detonantes
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="08_heuristico.html">
    Métodos basados en el conocimiento
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="08_estadistico.html">
+  <a class="reference internal" href="09_estadistico.html">
    Métodos basados en datos
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="09_fisico.html">
+  <a class="reference internal" href="10_fisico.html">
    Métodos con base física
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="10_evaluacion.html">
+  <a class="reference internal" href="11_evaluacion.html">
    Evaluación del modelo
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="11_detonante.html">
-   Factores detonantes
   </a>
  </li>
  <li class="toctree-l1 current active">
@@ -618,7 +618,7 @@
 <p>En este sentido, lo primero que se debe establecer es el umbral, para estos se utiliza una figura como la siguiente, doden se debe graficar la ocurrencia de movimientos en masa de acuerdo con la lluvia acumulada de 24h del dia de ocurrencia y la lluvia acumulada antecedente del número de dias que se defina.</p>
 <div class="figure align-default" id="umbral">
 <a class="reference internal image-reference" href="https://i.pinimg.com/564x/c4/65/56/c4655678889264757b5725e1e5e8700e.jpg"><img alt="umbral" src="https://i.pinimg.com/564x/c4/65/56/c4655678889264757b5725e1e5e8700e.jpg" style="width: 600px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 74 </span><span class="caption-text">Umbrales de lluvia para lluvia de 24h y lluvia antecedente. Tomado de <span id="id8">odríguez Castiblanco <em>et al.</em> [<a class="reference internal" href="#id41">2017</a>]</span></span><a class="headerlink" href="#umbral" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 77 </span><span class="caption-text">Umbrales de lluvia para lluvia de 24h y lluvia antecedente. Tomado de <span id="id8">odríguez Castiblanco <em>et al.</em> [<a class="reference internal" href="#id41">2017</a>]</span></span><a class="headerlink" href="#umbral" title="Permalink to this image">¶</a></p>
 </div>
 <p>Posteriormente, la probabilidad de excedencia anual del umbral se puede estimar utilizando el modelo de <em>Poisson</em> visto anteriormente. Donde la probabilidad de excedencia del umbral <span class="math notranslate nohighlight">\(R_T\)</span> durante el tiempo <em>t</em> está dada por:</p>
 <p><span class="math notranslate nohighlight">\(P[N(t)] \geq 1= 1-P[N(t)=0]=1-e^{-\lambda t}= 1-e^{-t/u}\)</span></p>
@@ -629,7 +629,7 @@
 <p>La probabilidad de ocurrencia de movimientos en masa dado que el umbral se exceda es estimada para 8 unidades diferentes, para el sector de <em>Burliyar</em>, el <span class="math notranslate nohighlight">\(R_T\)</span> fue excedido 53 en 15 años. En la unidad I, en 17 casos se presentaron movimientos en masa, lo que corresponde a una probabilidad estimada <span class="math notranslate nohighlight">\(P[L/R&gt;R_T]\)</span> de <span class="math notranslate nohighlight">\(17/53=0.32\)</span>. Para este caso, unidad I del sector <em>Burliyar</em>, la probabilidad de tener uno o mas eventos de lluvia que puedan detonar movimientos en masa en cualquier año es de <span class="math notranslate nohighlight">\(0.97*0.32=0.31\)</span>. Las probabilidades más altas para este ejemplo se dan en las regiones II y III, y para la ruta entera.</p>
 <div class="figure align-default" id="ejemplo-umbral">
 <a class="reference internal image-reference" href="https://i.pinimg.com/564x/98/80/0a/98800ad48141befad2aaa130876d2dab.jpg"><img alt="ejemplo umbral" src="https://i.pinimg.com/564x/98/80/0a/98800ad48141befad2aaa130876d2dab.jpg" style="width: 600px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 75 </span><span class="caption-text">Ejemplo tomado de <span id="id11">Jaiswal and van Westen [<a class="reference internal" href="#id86">2009</a>]</span></span><a class="headerlink" href="#ejemplo-umbral" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 78 </span><span class="caption-text">Ejemplo tomado de <span id="id11">Jaiswal and van Westen [<a class="reference internal" href="#id86">2009</a>]</span></span><a class="headerlink" href="#ejemplo-umbral" title="Permalink to this image">¶</a></p>
 </div>
 </div>
 </div>
@@ -642,24 +642,24 @@
 <p>Para el caso de movimientos en masa existe un número importante de correlaciones entre magnitud y frecuencia, pero son dificiles de comparar por que la mayoria de los inventario de movimientos en masa no distinguen entre los tipos de movimientos en masa, y esta relación parece ser dependiente del tipo de evento. Tambien las relaciones de magnitud - frecuencia para movimientos en masa utilizan diferentes tipos de ploteo, en unos casos cumulativa vs no-cumulativa, linear vs logaritmico, entre otros. Otro tema importante es que difieren en el uso de la variable que define la magnitud; algunos autores definen el área sobre la ladera, otros el cuadrado del ancho. La magnitud es una medida de la energía liberada durante el movimiento en masa. <span id="id12">Hungr <em>et al.</em> [<a class="reference internal" href="#id90">2008</a>]</span> proponen como variable el volumen, y como <em>proxy</em> el área. A continuación se presenta la correlación entre el volumen de los movimientos en masa y el área.</p>
 <div class="figure align-default" id="magnitud">
 <a class="reference internal image-reference" href="https://ars.els-cdn.com/content/image/1-s2.0-S0169555X07001912-gr5.gif"><img alt="magnitud" src="https://ars.els-cdn.com/content/image/1-s2.0-S0169555X07001912-gr5.gif" style="width: 500px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 76 </span><span class="caption-text">Autores como <span id="id13">Hungr <em>et al.</em> [<a class="reference internal" href="#id90">2008</a>]</span> han correlacionado diferentes variables de los movimientos en masa con el volumen, en este caso volumen total, área fuente, area total, longitud sobre la ladera.</span><a class="headerlink" href="#magnitud" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 79 </span><span class="caption-text">Autores como <span id="id13">Hungr <em>et al.</em> [<a class="reference internal" href="#id90">2008</a>]</span> han correlacionado diferentes variables de los movimientos en masa con el volumen, en este caso volumen total, área fuente, area total, longitud sobre la ladera.</span><a class="headerlink" href="#magnitud" title="Permalink to this image">¶</a></p>
 </div>
 <p>Considerando el volumen o área de los movimientos en masa como variable que expresa la magnitud, se puede observar una relación tipo ley potencial entre la magnitud y la frecuencia para movimientos medios y grandes, para el caso de eventos pequeños se aleja de esta distribución con un cambio del signo de la pendiente. El punto a partir del cual se presenta este cambio se conoce como <em>rollover point</em>.</p>
 <div class="figure align-default" id="magnitud-frecuencia">
 <a class="reference internal image-reference" href="https://onlinelibrary.wiley.com/cms/asset/8a1e2fa6-efbd-46b7-9f86-2f03aa9a35e5/esp4359-fig-0001-m.jpg"><img alt="magnitud-frecuencia" src="https://onlinelibrary.wiley.com/cms/asset/8a1e2fa6-efbd-46b7-9f86-2f03aa9a35e5/esp4359-fig-0001-m.jpg" style="width: 600px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 77 </span><span class="caption-text">Relacion entre frecuencia y magnitud de movimiento en masa. Tomado de <span id="id14">Tanyaş <em>et al.</em> [<a class="reference internal" href="#id87">2018</a>]</span>.</span><a class="headerlink" href="#magnitud-frecuencia" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 80 </span><span class="caption-text">Relacion entre frecuencia y magnitud de movimiento en masa. Tomado de <span id="id14">Tanyaş <em>et al.</em> [<a class="reference internal" href="#id87">2018</a>]</span>.</span><a class="headerlink" href="#magnitud-frecuencia" title="Permalink to this image">¶</a></p>
 </div>
 <p>Para representar esta relación entre magnitud y frecuencia se proponen dos tipos de ajustes. La distribución de <em>double-Pareto</em> y la distribución <em>gamma</em> inversa . Para el caso de <em>double-Pareto</em>, propuesta por <span id="id15">Stark and Hovius [<a class="reference internal" href="#id89">2001</a>]</span>, se utilizan dos régimenes de escalamiento, un decaimiento con una función potencial negativa para los grandes y medios movimientos en masa, y una funcion potencial positiva para los pequeños movimientos en masa.</p>
 <div class="figure align-default" id="double-pareto">
 <a class="reference internal image-reference" href="https://i.pinimg.com/564x/3b/d8/dd/3bd8dded02edae032a316c715c73f374.jpg"><img alt="double-pareto" src="https://i.pinimg.com/564x/3b/d8/dd/3bd8dded02edae032a316c715c73f374.jpg" style="width: 600px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 78 </span><span class="caption-text">Relacion entre frecuencia y magnitud de movimiento en masa ajustada a la distribución de <em>double-Pareto</em>. Tomado de <span id="id16">Stark and Hovius [<a class="reference internal" href="#id89">2001</a>]</span>.</span><a class="headerlink" href="#double-pareto" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 81 </span><span class="caption-text">Relacion entre frecuencia y magnitud de movimiento en masa ajustada a la distribución de <em>double-Pareto</em>. Tomado de <span id="id16">Stark and Hovius [<a class="reference internal" href="#id89">2001</a>]</span>.</span><a class="headerlink" href="#double-pareto" title="Permalink to this image">¶</a></p>
 </div>
 <p>La función <em>gamma</em> inversa es propuesta por <span id="id17">Malamud <em>et al.</em> [<a class="reference internal" href="#id88">2004</a>]</span>, donde para incluir el <em>rollover point</em> utiliza tres parámetros.</p>
 <p><span class="math notranslate nohighlight">\(p(A_L; \rho, a, s)=\frac{1}{ar(\rho)}[\frac{a}{A_L-s}]^{\rho+1}exp[-\frac{a}{A_L - s}]\)</span></p>
 <p>Donde <span class="math notranslate nohighlight">\(\rho\)</span> es el parámetro que controla el decaimiento de la ley potencial para valores medios y grandes de movimientos en masa, <span class="math notranslate nohighlight">\(r(\rho)\)</span> es la función <em>gamma</em> de <span class="math notranslate nohighlight">\(\rho\)</span>, <span class="math notranslate nohighlight">\(A_L\)</span> es el área de movimientos en masa (<span class="math notranslate nohighlight">\(m^2\)</span>), <span class="math notranslate nohighlight">\(a\)</span> es la localización del máximo de la distribución de probabilidad (<span class="math notranslate nohighlight">\(m^2\)</span>), el cual se refiere al <em>rollover point</em>, <span class="math notranslate nohighlight">\(s\)</span> es el decaimiento exponencial para movimientos en masa pequeños (<span class="math notranslate nohighlight">\(m^2\)</span>), y <span class="math notranslate nohighlight">\(-(\rho +1)\)</span> es el exponente de la ley potencial.</p>
 <div class="figure align-default" id="gamma-inverso">
 <a class="reference internal image-reference" href="https://i.pinimg.com/564x/4b/54/a4/4b54a4b73c0116d24ed9004e866aeaa9.jpg"><img alt="gamma inverso" src="https://i.pinimg.com/564x/4b/54/a4/4b54a4b73c0116d24ed9004e866aeaa9.jpg" style="width: 600px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 79 </span><span class="caption-text">Relacion entre frecuencia y magnitud de movimiento en masa ajusta a la función <em>gamma</em> inversa. Tomado de <span id="id18">Malamud <em>et al.</em> [<a class="reference internal" href="#id88">2004</a>]</span>.</span><a class="headerlink" href="#gamma-inverso" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 82 </span><span class="caption-text">Relacion entre frecuencia y magnitud de movimiento en masa ajusta a la función <em>gamma</em> inversa. Tomado de <span id="id18">Malamud <em>et al.</em> [<a class="reference internal" href="#id88">2004</a>]</span>.</span><a class="headerlink" href="#gamma-inverso" title="Permalink to this image">¶</a></p>
 </div>
 </div>
 <div class="section" id="referencias">
@@ -722,11 +722,11 @@
             
                 <!-- Previous / next buttons -->
 <div class='prev-next-area'> 
-    <a class='left-prev' id="prev-link" href="11_detonante.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="11_evaluacion.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Factores detonantes</p>
+            <p class="prev-next-title">Evaluación del modelo</p>
         </div>
     </a>
     <a class='right-next' id="next-link" href="13_flujos.html" title="next page">
