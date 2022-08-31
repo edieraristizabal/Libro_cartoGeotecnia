@@ -1,0 +1,970 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Métodos basados en el conocimiento &#8212; Cartografía Geotécnica</title>
+    
+  <link href="_static/css/theme.css" rel="stylesheet">
+  <link href="_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/togglebutton.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script>
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Métodos basados en datos" href="09_estadistico.html" />
+    <link rel="prev" title="Factores detonantes" href="07_detonante.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Cartografía Geotécnica</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="intro.html">
+   .
+  </a>
+ </li>
+</ul>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="00_medialuna.html">
+   Media Luna (1954)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="00_introduccion.html">
+   Introducción
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="01_normatividad.html">
+   Amenaza &amp; ordenamiento territorial
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="02_estadoarte.html">
+   Estado del arte
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="03_metodos.html">
+   Caracterización de movimientos en masa
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="04_susceptibilidad.html">
+   Susceptibilidad y amenaza
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="05_inventario.html">
+   Inventario de movimientos en masa
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="06_variables.html">
+   Variables condicionantes
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="07_detonante.html">
+   Factores detonantes
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Métodos basados en el conocimiento
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="09_estadistico.html">
+   Métodos basados en datos
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="10_fisico.html">
+   Métodos con base física
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="11_evaluacion.html">
+   Evaluación del modelo
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="12_amenaza.html">
+   Amenaza
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="13_flujos.html">
+   Movimientos en masa tipo flujos
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="14_roca.html">
+   Movimientos en masa en roca
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="15_python.html">
+   Python
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="_sources/08_heuristico.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/edieraristizabal/Libro_cartoGeotecnia"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/edieraristizabal/Libro_cartoGeotecnia/issues/new?title=Issue%20on%20page%20%2F08_heuristico.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/edieraristizabal/Libro_cartoGeotecnia/master?urlpath=tree/docs/08_heuristico.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#tipos-de-analisis-heuristicos">
+   Tipos de análisis heurísticos
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#analisis-geomorfologico">
+     Análisis geomorfológico
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#analisis-basado-en-indices">
+     Análisis basado en índices
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#analisis-de-decision-multicriterio">
+     Análisis de decisión multicriterio
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#python">
+   Python
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id7">
+     AHP
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#metodo-combinado">
+     Método combinado
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#referencias">
+   Referencias
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Métodos basados en el conocimiento</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#tipos-de-analisis-heuristicos">
+   Tipos de análisis heurísticos
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#analisis-geomorfologico">
+     Análisis geomorfológico
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#analisis-basado-en-indices">
+     Análisis basado en índices
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#analisis-de-decision-multicriterio">
+     Análisis de decisión multicriterio
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#python">
+   Python
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id7">
+     AHP
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#metodo-combinado">
+     Método combinado
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#referencias">
+   Referencias
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="metodos-basados-en-el-conocimiento">
+<h1>Métodos basados en el conocimiento<a class="headerlink" href="#metodos-basados-en-el-conocimiento" title="Permalink to this headline">¶</a></h1>
+<p>Los métodos basados en el conocimiento, tambien denominados <strong>heurísticos</strong> determinan la susceptibilidad y/o amenaza directa o indirectamente por un experto en el fenómeno y en la region de estudio. El proceso está basado en la experiencia individual y en el uso del razonamiento lógico. Las reglas de decisión son por lo tanto dificiles de formular por su complejidad y por que varían de lugar a lugar.</p>
+<p>En estos métodos el experto puede decidir las variables y clases en que subdivide cada variable, y sobre todo el peso de las clases y el peso de las variables. De tal forma que obtiene una ecuación de susceptibilidad tal como :</p>
+<p><span class="math notranslate nohighlight">\( S^n = W_1 w_c + W_2 w_c + W_3 w_c + W_n w_c \)</span></p>
+<p>donde <span class="math notranslate nohighlight">\(S^n\)</span> es el valor de susceptibilidad de la celda n, <span class="math notranslate nohighlight">\(W_i\)</span> es el peso de la variable i y <span class="math notranslate nohighlight">\(w_c\)</span> es el peso de la clase a la cual pertenece la celda n en cada variable.</p>
+<p>Los criterios utilizados generalmente por el experto son evidencia de actividad reciente, ambiente geomorfológico de cada unidad identificada, tipo de material y sus condiciones geomecánicas, pendiente de las laderas, relación con las unidades adyacentes, entre otros.</p>
+<p>Entre las ventajas que se destacan de los métodos heurísticos está el papel dominante de la opinión del experto en el análisis, que puede ser un método utilizado en teoría a cualquier escala, sin embargo no son muy usados en escalas de detalle. También se destacan como ventaja que puede permitir una zonificación rápida incluyendo una gran cantidad de variables, y finalmente que cada poligono o unidad de análisis individual puede ser evaluado separadamente de acuerdo con su conjunto de condiciones únicas.</p>
+<p>Como desventajas de estos métodos se señala que es una metodología subjetiva, ya que depende de la habilidad y experiencia del experto. Que sea subjetiva no es realmente una desventaja, el problema radica en la replicabilidad del método. Los análisis no se pueden generalizar y son propios en cada región. Esto mas que una desventaja es una realidad. Finalmente, se destaca que los resultados de estas metodologías son cualitativas, aunque algunas de estas metodologías utilice valoración cuantitativa estos valores son asignados subjetivamente.</p>
+<div class="section" id="tipos-de-analisis-heuristicos">
+<h2>Tipos de análisis heurísticos<a class="headerlink" href="#tipos-de-analisis-heuristicos" title="Permalink to this headline">¶</a></h2>
+<p>Existen diferentes tipos de análisis heuristicos en cartografía geotécnica que se agrupan en métodos de mapeo directos, los cuales asignan el valor de susceptibilidad directamente en campo, y mapeo indirectos, que asignan dicho valor a las clases y/o variables y posteriormente se calcula la suscpetibilidad.</p>
+<ul class="simple">
+<li><p>Análisis geomorfológico (directo)</p></li>
+<li><p>Análisis basado en índices (indirecto)</p></li>
+<li><p>Análisis de decisión multicriterio (indirecto)</p></li>
+</ul>
+<div class="section" id="analisis-geomorfologico">
+<h3>Análisis geomorfológico<a class="headerlink" href="#analisis-geomorfologico" title="Permalink to this headline">¶</a></h3>
+<p>Estos mapas corresponden a mapas geomorfológicos de procedimiento específico denominados mapas geomorfológicos pragmáticos (<span id="id1"></span>). En la construcción de estos mapas se debe realizar un análisis de terrenos donde inicialmente se reconocen varios atributos del terreno y se calasifican en unidades, subunidades  y nivel de detalle de acuerdo con la escal del estudio. Los atributos utilizados en este ultimo nivel de detalle deben ser importantes apra el alcance de la amenaza, en este caso atributos como la pendiente, el relieve, entre otros puede ser fundamental. Finalmente los terrenos clasificados deben ser evaluados en términos de susceptibilidad y/o amenaza de acuerdo con el análisis realizado.</p>
+<div class="figure align-default" id="heuristico">
+<a class="reference internal image-reference" href="https://i.pinimg.com/564x/13/fe/7a/13fe7a7bf9425506078151f5289e30c5.jpg"><img alt="heuristico" src="https://i.pinimg.com/564x/13/fe/7a/13fe7a7bf9425506078151f5289e30c5.jpg" style="width: 800px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 36 </span><span class="caption-text">Mapa geomorfológico de amenaza. Tomado de Barredo et al., (2000)</span><a class="headerlink" href="#heuristico" title="Permalink to this image">¶</a></p>
+</div>
+<p>Dentro de esta categoría se pueden incluir los mapas de zonificación geológico-geotécnica ampliamente utilizada en la decada de los 90´s en nuestra región. Entre estos se destaca la clasificación propuesta por el prof. <span id="id2">Chica [<a class="reference internal" href="#id22">1989</a>]</span> donde define las siguiente zonas:</p>
+<ul class="simple">
+<li><p><strong>Subzonas tipo A</strong> – Estable independiente: su estabilidad es de alto grado pues sus condiciones naturales son favorables. Posiblemente llegaría a depender del manejo mismo que se le dé al terreno.</p></li>
+<li><p><strong>Subzonas tipo B</strong> – Estable dependiente: su estabilidad depende de factores externos, los cuales se deben corregir. También de factores internos que implican un manejo determinado del terreno y cierto tipo de obras civiles que garanticen el no deterioro de esta estabilidad natural inicial.</p></li>
+<li><p><strong>Subzonas tipo C</strong> – Inestable recuperable: la estabilidad de estos terrenos es critica o presenta inestabilidad manifiesta; sin embargo, con algunos correctivos específicos se puede mejorar la estabilidad, y en consecuencia, adelantar ciertas obras civiles en si interior.</p></li>
+<li><p><strong>Subzonas tipo D</strong> – Inestable no recuperable: terrenos con inestabilidad manifiesta cuya recuperación no es posible o demasiado costosa comparada con las inversiones y tipo de obras proyectadas.</p></li>
+<li><p><strong>Subzonas tipo E</strong> – Estable no utilizable: terrenos estables pero restringidos por condiciones urbanísticas u otras como estar ubicadas en vegas potenciales de inundación o cerca de frentes libres de taludes desprotegidos.</p></li>
+<li><p><strong>Subzonas tipo F</strong> – Inestables no utilizables: terrenos inestables y restringidos por condiciones como las mencionadas para la zubzona anterior.</p></li>
+</ul>
+<div class="figure align-default" id="heuristico1">
+<a class="reference internal image-reference" href="https://i.pinimg.com/564x/ff/73/f8/ff73f874175d5e7d9b87c54a53966d0b.jpg"><img alt="heuristico1" src="https://i.pinimg.com/564x/ff/73/f8/ff73f874175d5e7d9b87c54a53966d0b.jpg" style="width: 600px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 37 </span><span class="caption-text">Zonificación geológico-geotécnica del municipio de Yumbo (Valle). Tomado de Martinez et al., (1998)</span><a class="headerlink" href="#heuristico1" title="Permalink to this image">¶</a></p>
+</div>
+<p>Existen otras porpuestas como las de <span id="id3">Edier Aristizabal [<a class="reference internal" href="#id63">2011</a>]</span>:</p>
+<div class="figure align-default" id="heuristico2">
+<a class="reference internal image-reference" href="https://i.pinimg.com/564x/ac/c2/f3/acc2f3dacb933269f3505daf33941103.jpg"><img alt="heuristico2" src="https://i.pinimg.com/564x/ac/c2/f3/acc2f3dacb933269f3505daf33941103.jpg" style="width: 600px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 38 </span><span class="caption-text">Zonificación para la aptitud geotécnica del suelo propuesta por <span id="id4">Edier Aristizabal [<a class="reference internal" href="#id63">2011</a>]</span>.</span><a class="headerlink" href="#heuristico2" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+<div class="section" id="analisis-basado-en-indices">
+<h3>Análisis basado en índices<a class="headerlink" href="#analisis-basado-en-indices" title="Permalink to this headline">¶</a></h3>
+<p>Los mapas basados en índices combian mapa de factores asocaidos con la ocurrencia de mvomientos en masa. Los pesos son determinados para cada factor basado en un estimativo de la influencia relativa de los movimientos en masa. LAs variables son generalmente divididas en clases, los cuales son ponderados utilizando el criterio de expertos. Finalmente un índice de susceptibilidad es obtenido para cada unidad.</p>
+<p>El metodo mas utilizado generalemnte es un promedio de las clases a la que pertenece cada celda ponderado por el peso de cada variable.</p>
+<div class="figure align-default" id="heuristico-index">
+<a class="reference internal image-reference" href="https://www.researchgate.net/profile/Lindsay-Ross-5/publication/229909627/figure/fig1/AS:271775443451907&#64;1441807724040/Example-of-the-weighted-linear-combination-method-redrawn-from-Barredo-1996.png"><img alt="heuristico index" src="https://www.researchgate.net/profile/Lindsay-Ross-5/publication/229909627/figure/fig1/AS:271775443451907&#64;1441807724040/Example-of-the-weighted-linear-combination-method-redrawn-from-Barredo-1996.png" style="width: 500px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 39 </span><span class="caption-text">Ejemplo de combinación lineal ponderada. Tomado de Perez et al., (2005).</span><a class="headerlink" href="#heuristico-index" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+<div class="section" id="analisis-de-decision-multicriterio">
+<h3>Análisis de decisión multicriterio<a class="headerlink" href="#analisis-de-decision-multicriterio" title="Permalink to this headline">¶</a></h3>
+<p>Se define como el conjunto de aproximaciones, métodos, modelos, técnicas y herramientas dirigidas a mejorar a calidad integral de los procesos de decisión seguidos por los individuos y los sistemas, para mejorar la efectividad, eficacia y eficiencia de los proceso de decisión y a incrementar el conocimiento de los mismos. Se basa en el paradigma de la Racionalidad como una aproximación orientada al proceso, cuyo propósito es la comprensión y el consenso. Y pretende la incorporación a los modelos de aspectos subjetivos, intangibles y no considerados, que condicionan la toma de decisiones de los individuos y organizaciones (Moreno (2000)).</p>
+<p>Probablemente el método mas utilizado para movimientos en masa de este tipo se denomina <em>Análisis Jerarquico de Procesos</em> (AHP por sus siglas en inglés). Fue desarrollado por Saaty en la decada de los 60. EL AHP utiliza comparaciones entre pares de elementos, construyendo una matriz a partir de estas comparaciones, que mide el juicio del tomador de decisiones de la importancia concerniente a cada criterio, agregando homogeneidad y cierto grado de certeza. Es una técnica multi-objetivo y multi-criteria para toma de decisiones que permite al usuario llegar a una escala de preferencias a partir de un determinado numero de alternativas. Consiste en organizar una serie de factores en orden de jerarquía, asignando valores numéricos a valoraciones subjetivas sobre la relativa importancia de cada factor. Los pesos son obtenidos generalmente a través de los valores y vectores propios de la matriz. El vector propio que corresponde al mayor valor propio genera la prioridad relativa de los factores. También puede ser obtenido normalizando cada columna de la matriz de comparación, y calculando el promedio de las filas para resolver la matriz.</p>
+<p>La escala utilizada en las comparaciones fue diseñada por Saaty. Esta escala incorporar los juicios o valoraciones del decisor. La escala es estrictamente positiva y elimina las ambigüedades que tiene el ser humano en comparar elementos en la proximidad del cero o del infinito. Los individuos son mas preciso al comparar elementos de la misma magnitud, número mágico de Miller –&gt; 7(+/-2).</p>
+<div class="figure align-default" id="ahp">
+<a class="reference internal image-reference" href="https://www.redalyc.org/journal/104/10461231005/10461231005_gt3.png"><img alt="AHP" src="https://www.redalyc.org/journal/104/10461231005/10461231005_gt3.png" style="width: 600px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 40 </span><span class="caption-text">Escala de Saaty.</span><a class="headerlink" href="#ahp" title="Permalink to this image">¶</a></p>
+</div>
+<p>Para evaluar la consistencia del análisis se estima el Radio de Consistencia (CR) de la siguiente forma:</p>
+<p><span class="math notranslate nohighlight">\(CR=\frac{CI}{ICA}\)</span></p>
+<p>Donde el CI es el Indice de Consistencia del análisis evaluado de la siguiente forma:</p>
+<p><span class="math notranslate nohighlight">\(\frac{\lambda_{max}-n}{n-1}\)</span></p>
+<p>Donde <span class="math notranslate nohighlight">\(\lambda_{max}\)</span> es el valor propio máximo de la matriz, <span class="math notranslate nohighlight">\(n\)</span> es el orden de la matriz. y el ICA se refiere al índice de consistencia aleatorio que se obtiene de la siguiente tabla de acuerdo con el <span class="math notranslate nohighlight">\(n\)</span>:</p>
+<div class="figure align-default" id="ahp1">
+<a class="reference internal image-reference" href="https://www.researchgate.net/profile/Luciano-Franca/publication/342899316/figure/tbl1/AS:912867821891586&#64;1594656057440/RI-Random-Index-values-for-matrices-of-different-sizes-SAATY-2005-Tabela-2-Valores.png"><img alt="AHP1" src="https://www.researchgate.net/profile/Luciano-Franca/publication/342899316/figure/tbl1/AS:912867821891586&#64;1594656057440/RI-Random-Index-values-for-matrices-of-different-sizes-SAATY-2005-Tabela-2-Valores.png" style="width: 600px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 41 </span><span class="caption-text">Indice de consistencia aleatoria.</span><a class="headerlink" href="#ahp1" title="Permalink to this image">¶</a></p>
+</div>
+<p>El Radio de Consistencia debe ser &lt;0.1</p>
+<div class="figure align-default" id="ahp2">
+<a class="reference internal image-reference" href="https://i.pinimg.com/564x/c9/4d/dd/c94ddd0de53c695374c906b97b9f948c.jpg"><img alt="AHP2" src="https://i.pinimg.com/564x/c9/4d/dd/c94ddd0de53c695374c906b97b9f948c.jpg" style="width: 600px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 42 </span><span class="caption-text">Ejemplo de la aplicación del método de AHP para movimientos en masa tomado de <span id="id5">Ayalew and Yamagishi [<a class="reference internal" href="#id64">2004</a>]</span>.</span><a class="headerlink" href="#ahp2" title="Permalink to this image">¶</a></p>
+</div>
+<p>En algunos casos se combinan los métodos, es decir con un método se pueden asignar pesos a las clases, y con otro método peso a las variables. Un ejemplo se presenta en la siguiente figura donde AHP se utiliza para asignar pesos a las variables y el método de asignación directa es utilizada para asignar pesos a las clases:</p>
+<div class="figure align-default" id="id6">
+<a class="reference internal image-reference" href="https://i.pinimg.com/564x/cb/0c/c4/cb0cc4765fee56a8916170fda9a75adc.jpg"><img alt="AHP2" src="https://i.pinimg.com/564x/cb/0c/c4/cb0cc4765fee56a8916170fda9a75adc.jpg" style="width: 500px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 43 </span><span class="caption-text">Ejemplo de combinación de métodos.</span><a class="headerlink" href="#id6" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+</div>
+<div class="section" id="python">
+<h2>Python<a class="headerlink" href="#python" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id7">
+<h3>AHP<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h3>
+<p>A continuación se describe el procedimiento para implmentar el método de AHP con <em>Python</em>. El ejercicio parte con la matriz de comparación de la <span class="xref myst">Figura del ejemplo de Ayalew and Yamagishi</span>, denominada A. Para definir los pesos de las varables con el método AHP, se puede utilizar la función <em>linalg.eig</em> que obtiene los valores y vectores propios. Es importante tener en cuenta que los vectores propios generados por <em>Python</em> están normalizados euclidianamente, por lo tanto hay que normalizarlos a la unidad (1) con la funcion norm.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="n">A</span><span class="o">=</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span> <span class="mf">0.33</span><span class="p">,</span>  <span class="mf">0.33</span><span class="p">,</span>  <span class="mi">1</span><span class="p">,</span> <span class="mf">0.33</span><span class="p">,</span> <span class="mf">0.33</span><span class="p">],</span>
+    <span class="p">[</span><span class="mi">3</span><span class="p">,</span>    <span class="mi">1</span><span class="p">,</span>  <span class="mf">0.33</span><span class="p">,</span>  <span class="mi">5</span><span class="p">,</span>    <span class="mi">1</span><span class="p">,</span>    <span class="mi">1</span><span class="p">],</span>
+    <span class="p">[</span><span class="mi">3</span><span class="p">,</span>    <span class="mi">3</span><span class="p">,</span>     <span class="mi">1</span><span class="p">,</span>  <span class="mi">3</span><span class="p">,</span>    <span class="mi">1</span><span class="p">,</span>    <span class="mi">1</span><span class="p">],</span>
+    <span class="p">[</span><span class="mi">1</span><span class="p">,</span>  <span class="mf">0.2</span><span class="p">,</span>  <span class="mf">0.33</span><span class="p">,</span>  <span class="mi">1</span><span class="p">,</span>    <span class="mi">1</span><span class="p">,</span>  <span class="mf">0.2</span><span class="p">],</span>
+    <span class="p">[</span><span class="mi">3</span><span class="p">,</span>    <span class="mi">1</span><span class="p">,</span>     <span class="mi">1</span><span class="p">,</span>  <span class="mi">1</span><span class="p">,</span>    <span class="mi">1</span><span class="p">,</span> <span class="mf">0.33</span><span class="p">],</span>
+    <span class="p">[</span><span class="mi">3</span><span class="p">,</span>    <span class="mi">1</span><span class="p">,</span>     <span class="mi">1</span><span class="p">,</span>  <span class="mi">5</span><span class="p">,</span>    <span class="mi">3</span><span class="p">,</span>    <span class="mi">1</span><span class="p">]])</span>
+
+<span class="n">B</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">A</span><span class="p">)</span> <span class="c1"># para transformarla en una matriz</span>
+
+<span class="n">values</span><span class="p">,</span> <span class="n">vectores</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">eig</span><span class="p">(</span><span class="n">B</span><span class="p">)</span> <span class="c1"># Función para calcular los valores y vectores propios</span>
+
+<span class="n">vector_norm</span><span class="o">=</span><span class="n">vectores</span><span class="o">/</span><span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">norm</span><span class="p">(</span><span class="n">vectores</span><span class="p">,</span> <span class="nb">ord</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span> <span class="c1"># normalización de los vectores</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;esto son los valores propios&#39;</span><span class="p">,</span><span class="n">values</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>esto son los valores propios [ 6.45135611+0.j         -0.0241081 +1.64871645j -0.0241081 -1.64871645j
+ -0.13454859+0.43520127j -0.13454859-0.43520127j -0.13404274+0.j        ]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;esto son los vectores propios&#39;</span><span class="p">,</span> <span class="n">vectores</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>esto son los vectores propios [[ 0.14436866+0.j          0.02398294+0.00827384j  0.02398294-0.00827384j
+   0.20536727+0.14878211j  0.20536727-0.14878211j  0.14221686+0.j        ]
+ [ 0.42599629+0.j          0.01147632+0.48741276j  0.01147632-0.48741276j
+   0.1945605 -0.27358166j  0.1945605 +0.27358166j  0.0758326 +0.j        ]
+ [ 0.56812531+0.j          0.66446338+0.j          0.66446338-0.j
+  -0.78171181+0.j         -0.78171181-0.j         -0.71758058+0.j        ]
+ [ 0.1578558 +0.j         -0.15986003-0.05675779j -0.15986003+0.05675779j
+  -0.07345944-0.04273917j -0.07345944+0.04273917j -0.21773253+0.j        ]
+ [ 0.32625087+0.j          0.09149542-0.33367399j  0.09149542+0.33367399j
+   0.16766496-0.13753574j  0.16766496+0.13753574j  0.2047162 +0.j        ]
+ [ 0.58614025+0.j         -0.39877545+0.11239927j -0.39877545-0.11239927j
+  -0.26017993+0.29994993j -0.26017993-0.29994993j  0.60810009+0.j        ]]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;esto son los vectores propios normalizados&#39;</span><span class="p">,</span><span class="n">vector_norm</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>esto son los vectores propios normalizados [[ 0.06536254+0.j          0.01085821+0.00374596j  0.01085821-0.00374596j
+   0.0929795 +0.06736071j  0.0929795 -0.06736071j  0.06438831+0.j        ]
+ [ 0.19286871+0.j          0.00519587+0.22067486j  0.00519587-0.22067486j
+   0.08808676-0.12386338j  0.08808676+0.12386338j  0.03433301+0.j        ]
+ [ 0.25721725+0.j          0.30083406+0.j          0.30083406-0.j
+  -0.35391798+0.j         -0.35391798+0.j         -0.32488273+0.j        ]
+ [ 0.0714688 +0.j         -0.07237621-0.02569694j -0.07237621+0.02569694j
+  -0.03325857-0.01935005j -0.03325857+0.01935005j -0.09857784+0.j        ]
+ [ 0.14770923+0.j          0.04142431-0.15107003j  0.04142431+0.15107003j
+   0.07590987-0.06226895j  0.07590987+0.06226895j  0.09268472+0.j        ]
+ [ 0.26537347+0.j         -0.18054454+0.05088847j -0.18054454-0.05088847j
+  -0.11779579+0.13580155j -0.11779579-0.13580155j  0.27531573+0.j        ]]
+</pre></div>
+</div>
+</div>
+</div>
+<p>Los anteriores valores corresponden a los valores propios de la matriz. Se obtiene entonces el vector propio del mayor valor propio, en ese caso corresponde al primer valor propio.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">w</span><span class="o">=</span><span class="n">vector_norm</span><span class="p">[:,</span><span class="mi">0</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">w</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[0.06536254+0.j 0.19286871+0.j 0.25721725+0.j 0.0714688 +0.j
+ 0.14770923+0.j 0.26537347+0.j]
+</pre></div>
+</div>
+</div>
+</div>
+<p>Estos valores significan que la primera variable <em>Aspect</em> tiene un peso del 6%, la segunda variable <em>Elevation</em> del 19%, la tercera variable <em>Lithology</em> del 25%, la cuarta variable <em>Plan curvature</em> del 7%, la quinta variable <em>Profile curvature</em> del 14%, y la sexta variable <em>Slope gradient</em> del 26%.</p>
+<p>Para calcular la consistencia del análisis se procede entonces a calcular el indice de consistencia, con <span class="math notranslate nohighlight">\(\lambda_{max}\)</span> que representa el valor propio máximo, n que corresponde a la longitud de la matrix, y el índice de consistencia aleatorio que se obtiene de la tabla en la <a class="reference internal" href="#ahp1"><span class="std std-ref">Figura</span></a>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">CI</span><span class="o">=</span><span class="p">(</span><span class="n">values</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">-</span><span class="nb">len</span><span class="p">(</span><span class="n">values</span><span class="p">))</span><span class="o">/</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">values</span><span class="p">)</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+
+<span class="n">CR</span><span class="o">=</span> <span class="n">CI</span><span class="o">/</span><span class="mf">1.24</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">CR</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(0.07279937283948756+0j)
+</pre></div>
+</div>
+</div>
+</div>
+<p>Se obtiene un radio de consistencia <span class="math notranslate nohighlight">\(0.07&lt;0.1\)</span> por lo tanto el análisis esta OK.</p>
+</div>
+<div class="section" id="metodo-combinado">
+<h3>Método combinado<a class="headerlink" href="#metodo-combinado" title="Permalink to this headline">¶</a></h3>
+<p>En este caso se evaluará la suscpetibilidad por movimientos en amsa en la cuenca de la quebrada La Miel en el municipio de Caldas (Antioquia). Se utilizará el ejemplo anterior, donde se asignaron pesos a las clases, y se combinará con asignación directa de pesos a las clases que conforman cada variable.</p>
+<p>Se procede entonces a importar cada uno de los mapas a utilizar. En este caso 6 mapas de las variables predictoras que se utilizaron en el método AHP.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>pip install rasterio
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: rasterio in c:\users\usuario\miniconda3\envs\geospatial\lib\site-packages (1.2.1)
+Requirement already satisfied: affine in c:\users\usuario\miniconda3\envs\geospatial\lib\site-packages (from rasterio) (2.3.0)
+Requirement already satisfied: attrs in c:\users\usuario\miniconda3\envs\geospatial\lib\site-packages (from rasterio) (20.3.0)
+Requirement already satisfied: certifi in c:\users\usuario\miniconda3\envs\geospatial\lib\site-packages (from rasterio) (2022.6.15)
+Requirement already satisfied: click&lt;8,&gt;=4.0 in c:\users\usuario\miniconda3\envs\geospatial\lib\site-packages (from rasterio) (7.1.2)
+Requirement already satisfied: cligj&gt;=0.5 in c:\users\usuario\miniconda3\envs\geospatial\lib\site-packages (from rasterio) (0.7.1)
+Requirement already satisfied: numpy in c:\users\usuario\miniconda3\envs\geospatial\lib\site-packages (from rasterio) (1.20.1)
+Requirement already satisfied: snuggs&gt;=1.4.1 in c:\users\usuario\miniconda3\envs\geospatial\lib\site-packages (from rasterio) (1.4.7)
+Requirement already satisfied: click-plugins in c:\users\usuario\miniconda3\envs\geospatial\lib\site-packages (from rasterio) (1.1.1)
+Requirement already satisfied: pyparsing&gt;=2.1.6 in c:\users\usuario\miniconda3\envs\geospatial\lib\site-packages (from snuggs&gt;=1.4.1-&gt;rasterio) (2.4.7)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">rasterio</span> <span class="k">as</span> <span class="nn">rio</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
+<span class="o">~</span>\<span class="n">AppData</span>\<span class="n">Local</span>\<span class="n">Temp</span><span class="o">/</span><span class="n">ipykernel_15284</span><span class="o">/</span><span class="mf">2847720685.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="kn">import</span> <span class="nn">rasterio</span> <span class="k">as</span> <span class="nn">rio</span>
+<span class="ne">----&gt; </span><span class="mi">2</span> <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="ne">ModuleNotFoundError</span>: No module named &#39;matplotlib&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">raster</span> <span class="o">=</span> <span class="n">rio</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s1">&#39;https://github.com/edieraristizabal/Libro_cartoGeotecnia/blob/master/data/Pendiente.tif?raw=true&#39;</span><span class="p">)</span>
+<span class="n">pendiente</span><span class="o">=</span><span class="n">raster</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">pendiente</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">pendiente</span><span class="o">&lt;</span><span class="mi">0</span><span class="p">,</span><span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">,</span><span class="n">pendiente</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">pendiente</span><span class="p">);</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">colorbar</span><span class="p">();</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/08_heuristico_22_0.png" src="_images/08_heuristico_22_0.png" />
+</div>
+</div>
+<p>De acuerdo con el método estos mapas se deben reclasificar en clases y pesos con criterio de experto. Se recomienda utilizar los rangos recomendados por el SGC o por referencias conocidas. Este ejercicio simplemente señala el procedimiento, pero no tiene ningún análisis o criterio la reclasificación utilizada. Para este caso se utilizarán valores a las clases en un rango de 0 a 1. Donde 0 significa baja incidencia en la ocurrencia de movimientos en masa y 1 significa muy alta.</p>
+<p>El procedimiento entonces corresponde a reclasificar en clases cada mapa y asignar un valor entre 0 a 1 a clada clase.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pendiente_re</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">where</span> <span class="p">(</span> <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">logical_and</span> <span class="p">(</span><span class="n">pendiente</span><span class="o">&gt;=</span><span class="mi">0</span><span class="p">,</span> <span class="n">pendiente</span><span class="o">&lt;</span><span class="mi">10</span> <span class="p">)),</span><span class="mf">0.1</span><span class="p">,</span><span class="n">pendiente</span> <span class="p">);</span>
+<span class="n">pendiente_re</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">where</span> <span class="p">(</span> <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">logical_and</span> <span class="p">(</span><span class="n">pendiente_re</span><span class="o">&gt;=</span><span class="mi">10</span><span class="p">,</span> <span class="n">pendiente_re</span><span class="o">&lt;</span><span class="mi">30</span> <span class="p">)),</span><span class="mf">0.5</span><span class="p">,</span><span class="n">pendiente_re</span><span class="p">);</span>
+<span class="n">pendiente_re</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">where</span> <span class="p">(</span> <span class="n">pendiente_re</span><span class="o">&gt;=</span><span class="mi">30</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="n">pendiente_re</span><span class="p">);</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">unique</span><span class="p">(</span><span class="n">pendiente_re</span><span class="p">));</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">pendiente_re</span><span class="p">);</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">colorbar</span><span class="p">();</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[0.1 0.5 1.  nan]
+</pre></div>
+</div>
+<img alt="_images/08_heuristico_24_1.png" src="_images/08_heuristico_24_1.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">raster</span> <span class="o">=</span> <span class="n">rio</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s1">&#39;https://github.com/edieraristizabal/Libro_cartoGeotecnia/blob/master/data/Geologia_Superficial.tif?raw=true&#39;</span><span class="p">)</span>
+<span class="n">geologia</span><span class="o">=</span><span class="n">raster</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">geologia</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">geologia</span><span class="o">&lt;</span><span class="mi">0</span><span class="p">,</span><span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">,</span><span class="n">geologia</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">unique</span><span class="p">(</span><span class="n">geologia</span><span class="p">));</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">geologia</span><span class="p">);</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">colorbar</span><span class="p">();</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[ 2.  4.  6.  8.  9. 10. 11. 14. 15. 16. nan]
+</pre></div>
+</div>
+<img alt="_images/08_heuristico_25_1.png" src="_images/08_heuristico_25_1.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">geologia_re</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">where</span> <span class="p">(</span> <span class="n">geologia</span><span class="o">&gt;=</span><span class="mi">14</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="n">geologia</span><span class="p">)</span>
+<span class="n">geologia_re</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">where</span> <span class="p">(</span> <span class="n">geologia_re</span><span class="o">==</span><span class="mi">9</span><span class="p">,</span><span class="mf">0.1</span><span class="p">,</span><span class="n">geologia_re</span><span class="p">)</span>
+<span class="n">geologia_re</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">where</span> <span class="p">(</span> <span class="n">geologia_re</span><span class="o">==</span><span class="mi">4</span><span class="p">,</span><span class="mf">0.4</span><span class="p">,</span><span class="n">geologia_re</span><span class="p">)</span>
+<span class="n">geologia_re</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">where</span> <span class="p">(</span> <span class="n">geologia_re</span><span class="o">&gt;=</span><span class="mi">2</span><span class="p">,</span><span class="mf">0.2</span><span class="p">,</span><span class="n">geologia_re</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">unique</span><span class="p">(</span><span class="n">geologia_re</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">geologia_re</span><span class="p">);</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">colorbar</span><span class="p">();</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[0.1 0.2 0.4 1.  nan]
+</pre></div>
+</div>
+<img alt="_images/08_heuristico_26_1.png" src="_images/08_heuristico_26_1.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">raster</span> <span class="o">=</span> <span class="n">rio</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;https://github.com/edieraristizabal/Libro_cartoGeotecnia/blob/master/data/Aspecto.tif?raw=true&#39;</span><span class="p">)</span>
+<span class="n">aspecto</span><span class="o">=</span><span class="n">raster</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">aspecto</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">aspecto</span><span class="o">&lt;</span><span class="mi">0</span><span class="p">,</span><span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">,</span><span class="n">aspecto</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">aspecto</span><span class="p">);</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">colorbar</span><span class="p">();</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/08_heuristico_27_0.png" src="_images/08_heuristico_27_0.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">aspecto_re</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">where</span> <span class="p">(</span> <span class="n">aspecto</span><span class="o">&lt;</span><span class="mi">90</span><span class="p">,</span><span class="mf">0.2</span><span class="p">,</span><span class="n">aspecto</span><span class="p">);</span>
+<span class="n">aspecto_re</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">where</span> <span class="p">(</span> <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">logical_and</span> <span class="p">(</span><span class="n">aspecto_re</span><span class="o">&gt;=</span><span class="mi">90</span><span class="p">,</span> <span class="n">aspecto_re</span><span class="o">&lt;</span><span class="mi">180</span> <span class="p">)),</span><span class="mf">0.5</span><span class="p">,</span><span class="n">aspecto_re</span><span class="p">);</span>
+<span class="n">aspecto_re</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">where</span> <span class="p">(</span> <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">logical_and</span> <span class="p">(</span><span class="n">aspecto_re</span><span class="o">&gt;=</span><span class="mi">180</span><span class="p">,</span> <span class="n">aspecto_re</span><span class="o">&lt;</span><span class="mi">270</span> <span class="p">)),</span><span class="mf">0.9</span><span class="p">,</span><span class="n">aspecto_re</span><span class="p">);</span>
+<span class="n">aspecto_re</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">where</span> <span class="p">(</span> <span class="n">aspecto_re</span><span class="o">&gt;=</span><span class="mi">270</span><span class="p">,</span><span class="mf">0.1</span><span class="p">,</span><span class="n">aspecto_re</span><span class="p">);</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">unique</span><span class="p">(</span><span class="n">aspecto_re</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">aspecto_re</span><span class="p">);</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">colorbar</span><span class="p">();</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[0.1 0.2 0.5 0.9 nan]
+</pre></div>
+</div>
+<img alt="_images/08_heuristico_28_1.png" src="_images/08_heuristico_28_1.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">raster</span> <span class="o">=</span> <span class="n">rio</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s1">&#39;https://github.com/edieraristizabal/Libro_cartoGeotecnia/blob/master/data/DEM5m.tif?raw=true&#39;</span><span class="p">)</span>
+<span class="n">elevacion</span><span class="o">=</span><span class="n">raster</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">elevacion</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">elevacion</span><span class="o">&lt;</span><span class="mi">0</span><span class="p">,</span><span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">,</span><span class="n">elevacion</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">elevacion</span><span class="p">);</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">colorbar</span><span class="p">();</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/08_heuristico_29_0.png" src="_images/08_heuristico_29_0.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">elevacion_re</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">where</span> <span class="p">(</span> <span class="n">elevacion</span><span class="o">&lt;</span><span class="mi">1800</span><span class="p">,</span><span class="mf">0.2</span><span class="p">,</span><span class="n">elevacion</span><span class="p">);</span>
+<span class="n">elevacion_re</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">where</span> <span class="p">(</span> <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">logical_and</span> <span class="p">(</span><span class="n">elevacion_re</span><span class="o">&gt;=</span><span class="mi">1800</span><span class="p">,</span> <span class="n">elevacion_re</span><span class="o">&lt;</span><span class="mi">2000</span> <span class="p">)),</span><span class="mf">0.5</span><span class="p">,</span><span class="n">elevacion_re</span><span class="p">);</span>
+<span class="n">elevacion_re</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">where</span> <span class="p">(</span> <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">logical_and</span> <span class="p">(</span><span class="n">elevacion_re</span><span class="o">&gt;=</span><span class="mi">2000</span><span class="p">,</span> <span class="n">elevacion_re</span><span class="o">&lt;</span><span class="mi">2500</span> <span class="p">)),</span><span class="mf">0.9</span><span class="p">,</span><span class="n">elevacion_re</span><span class="p">);</span>
+<span class="n">elevacion_re</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">where</span> <span class="p">(</span> <span class="n">elevacion_re</span><span class="o">&gt;=</span><span class="mi">2500</span><span class="p">,</span><span class="mf">0.1</span><span class="p">,</span><span class="n">elevacion_re</span><span class="p">);</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">unique</span><span class="p">(</span><span class="n">elevacion_re</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">elevacion_re</span><span class="p">);</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">colorbar</span><span class="p">();</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[0.1 0.2 0.5 0.9 nan]
+</pre></div>
+</div>
+<img alt="_images/08_heuristico_30_1.png" src="_images/08_heuristico_30_1.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">raster</span> <span class="o">=</span> <span class="n">rio</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s1">&#39;https://github.com/edieraristizabal/Libro_cartoGeotecnia/blob/master/data/CurvaturaPerfil.tif?raw=true&#39;</span><span class="p">)</span>
+<span class="n">curvaturaV</span><span class="o">=</span><span class="n">raster</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">curvaturaV</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">curvaturaV</span><span class="o">==-</span><span class="mf">999.0</span><span class="p">,</span><span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">,</span><span class="n">curvaturaV</span><span class="p">)</span> <span class="c1"># en este caso no se puede utilizar &lt;0 por que hay valores de curvatura que son negativos</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">curvaturaV</span><span class="p">);</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">colorbar</span><span class="p">();</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/08_heuristico_31_0.png" src="_images/08_heuristico_31_0.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">curvaturaV_re</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">where</span> <span class="p">(</span> <span class="n">curvaturaV</span><span class="o">&gt;=</span><span class="mf">0.005</span><span class="p">,</span><span class="mf">0.9</span><span class="p">,</span><span class="n">curvaturaV</span><span class="p">);</span>
+<span class="n">curvaturaV_re</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">where</span> <span class="p">(</span> <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">logical_and</span> <span class="p">(</span><span class="n">curvaturaV_re</span><span class="o">&gt;=-</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">curvaturaV_re</span><span class="o">&lt;</span><span class="mf">0.5</span> <span class="p">)),</span><span class="mf">0.1</span><span class="p">,</span><span class="n">curvaturaV_re</span><span class="p">);</span>
+<span class="n">curvaturaV_re</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">where</span> <span class="p">(</span> <span class="n">curvaturaV_re</span><span class="o">&lt;-</span><span class="mf">0.005</span><span class="p">,</span><span class="mf">0.3</span><span class="p">,</span><span class="n">curvaturaV_re</span><span class="p">);</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">unique</span><span class="p">(</span><span class="n">curvaturaV_re</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">curvaturaV_re</span><span class="p">);</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">colorbar</span><span class="p">();</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[0.1 0.3 0.9 nan]
+</pre></div>
+</div>
+<img alt="_images/08_heuristico_32_1.png" src="_images/08_heuristico_32_1.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">raster</span> <span class="o">=</span> <span class="n">rio</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s1">&#39;https://github.com/edieraristizabal/Libro_cartoGeotecnia/blob/master/data/CurvaturaPlana.tif?raw=true&#39;</span><span class="p">)</span>
+<span class="n">curvaturaH</span><span class="o">=</span><span class="n">raster</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">curvaturaH</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">curvaturaH</span><span class="o">==-</span><span class="mf">999.0</span><span class="p">,</span><span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">,</span><span class="n">curvaturaH</span><span class="p">)</span> <span class="c1"># en este caso no se puede utilizar &lt;0 por que hay valores de curvatura que son negativos</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">curvaturaH</span><span class="p">);</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">colorbar</span><span class="p">();</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/08_heuristico_33_0.png" src="_images/08_heuristico_33_0.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">curvaturaH_re</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">where</span> <span class="p">(</span> <span class="n">curvaturaH</span><span class="o">&lt;=</span><span class="mi">2000</span><span class="p">,</span><span class="mf">0.9</span><span class="p">,</span><span class="n">curvaturaH</span><span class="p">);</span>
+<span class="n">curvaturaH_re</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">where</span> <span class="p">(</span> <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">logical_and</span> <span class="p">(</span><span class="n">curvaturaH_re</span><span class="o">&gt;=</span><span class="mi">2000</span><span class="p">,</span> <span class="n">curvaturaH_re</span><span class="o">&lt;=</span><span class="mi">3000</span> <span class="p">)),</span><span class="mf">0.1</span><span class="p">,</span><span class="n">curvaturaH_re</span><span class="p">);</span>
+<span class="n">curvaturaH_re</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">where</span> <span class="p">(</span> <span class="n">curvaturaH_re</span><span class="o">&gt;</span><span class="mi">3000</span><span class="p">,</span><span class="mf">0.1</span><span class="p">,</span><span class="n">curvaturaH_re</span><span class="p">);</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">unique</span><span class="p">(</span><span class="n">curvaturaH_re</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">curvaturaH_re</span><span class="p">);</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">colorbar</span><span class="p">();</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[0.1 0.9 nan]
+</pre></div>
+</div>
+<img alt="_images/08_heuristico_34_1.png" src="_images/08_heuristico_34_1.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">w</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span><span class="n">w</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span><span class="n">w</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span><span class="n">w</span><span class="p">[</span><span class="mi">3</span><span class="p">],</span><span class="n">w</span><span class="p">[</span><span class="mi">4</span><span class="p">],</span><span class="n">w</span><span class="p">[</span><span class="mi">5</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(0.06536253617532849+0j) (0.1928687090376127+0j) (0.2572172528769481+0j) (0.07146880296600812+0j) (0.14770923077095524+0j) (0.2653734681731474+0j)
+</pre></div>
+</div>
+</div>
+</div>
+<p>Finalmente se aplica la ecuacion de IS y se obtiene el mapa.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">IS</span><span class="o">=</span><span class="mf">0.065</span><span class="o">*</span><span class="n">aspecto_re</span><span class="o">+</span><span class="mf">0.192</span><span class="o">*</span><span class="n">elevacion_re</span><span class="o">+</span><span class="mf">0.257</span><span class="o">*</span><span class="n">geologia_re</span><span class="o">+</span><span class="mf">0.071</span><span class="o">*</span><span class="n">curvaturaH_re</span><span class="o">+</span><span class="mf">0.147</span><span class="o">*</span><span class="n">curvaturaV_re</span><span class="o">+</span><span class="mf">0.265</span><span class="o">*</span><span class="n">pendiente_re</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">IS</span><span class="p">);</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">colorbar</span><span class="p">();</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/08_heuristico_38_0.png" src="_images/08_heuristico_38_0.png" />
+</div>
+</div>
+<p>Para exportar el mapa como archivo tiff y poder trabajar en un GIS, se puede utilizar la libreria rasterio, y sustraer los datos de georeferenciacion y tamaño del mapa de aspecto en ese caso.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">meta</span><span class="o">=</span><span class="n">raster</span><span class="o">.</span><span class="n">profile</span>
+<span class="n">raster_transform</span> <span class="o">=</span> <span class="n">meta</span><span class="p">[</span><span class="s1">&#39;transform&#39;</span><span class="p">]</span>
+<span class="n">raster_crs</span> <span class="o">=</span> <span class="n">meta</span><span class="p">[</span><span class="s1">&#39;crs&#39;</span><span class="p">]</span>
+
+<span class="k">with</span> <span class="n">rio</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s1">&#39;IS.TIF&#39;</span><span class="p">,</span> <span class="s1">&#39;w&#39;</span><span class="p">,</span> 
+              <span class="n">driver</span><span class="o">=</span><span class="s1">&#39;Gtiff&#39;</span><span class="p">,</span><span class="n">height</span><span class="o">=</span><span class="n">aspecto</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span><span class="n">width</span><span class="o">=</span><span class="n">aspecto</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span><span class="n">count</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+              <span class="n">dtype</span><span class="o">=</span><span class="s1">&#39;float64&#39;</span><span class="p">,</span><span class="n">nodata</span><span class="o">=-</span><span class="mi">999</span><span class="p">,</span><span class="n">crs</span><span class="o">=</span><span class="n">raster_crs</span><span class="p">,</span><span class="n">transform</span><span class="o">=</span><span class="n">raster_transform</span><span class="p">)</span> <span class="k">as</span> <span class="n">dst</span><span class="p">:</span>
+    <span class="n">dst</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">IS</span><span class="p">,</span><span class="mi">1</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="referencias">
+<h2>Referencias<a class="headerlink" href="#referencias" title="Permalink to this headline">¶</a></h2>
+<p id="id8"><dl class="citation">
+<dt class="label" id="id64"><span class="brackets"><a class="fn-backref" href="#id5">1</a></span></dt>
+<dd><p>Lulseged Ayalew and Hiromitsu Yamagishi. Slope failures in the blue nile basin, as seen from landscape evolution perspective. <em>Geomorphology</em>, 57:95–116, 2004. <a class="reference external" href="https://doi.org/10.1016/S0169-555X(03)00085-0">doi:10.1016/S0169-555X(03)00085-0</a>.</p>
+</dd>
+<dt class="label" id="id22"><span class="brackets"><a class="fn-backref" href="#id2">2</a></span></dt>
+<dd><p>A. Chica. Apuntes de geotecnia. <em>cursos de geotecnia y prácticas geotécnicas, Facultad Nacional de Minas</em>, :, 1989.</p>
+</dd>
+<dt class="label" id="id63"><span class="brackets">3</span><span class="fn-backref">(<a href="#id3">1</a>,<a href="#id4">2</a>)</span></dt>
+<dd><p>Michel Hermelin Edier Aristizabal. Propuesta de zonificación del suelo para la gestión del riesgo enfocada al ordenamiento territorial. <em>Gestión y Medio Ambiente</em>, 14:7–16, 2011.</p>
+</dd>
+</dl>
+</p>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="07_detonante.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Factores detonantes</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="09_estadistico.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Métodos basados en datos</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            
+        </div>
+    </div>
+    <footer class="footer">
+  <p>
+    
+      By Edier V. Aristizábal G.<br/>
+    
+        &copy; Copyright 2022.<br/>
+  </p>
+</footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>

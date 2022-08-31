@@ -1,0 +1,1563 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Métodos con base física &#8212; Cartografía Geotécnica</title>
+    
+  <link href="_static/css/theme.css" rel="stylesheet">
+  <link href="_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/togglebutton.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script>
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Evaluación del modelo" href="11_evaluacion.html" />
+    <link rel="prev" title="Métodos basados en datos" href="09_estadistico.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Cartografía Geotécnica</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="intro.html">
+   .
+  </a>
+ </li>
+</ul>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="00_medialuna.html">
+   Media Luna (1954)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="00_introduccion.html">
+   Introducción
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="01_normatividad.html">
+   Amenaza &amp; ordenamiento territorial
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="02_estadoarte.html">
+   Estado del arte
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="03_metodos.html">
+   Caracterización de movimientos en masa
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="04_susceptibilidad.html">
+   Susceptibilidad y amenaza
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="05_inventario.html">
+   Inventario de movimientos en masa
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="06_variables.html">
+   Variables condicionantes
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="07_detonante.html">
+   Factores detonantes
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="08_heuristico.html">
+   Métodos basados en el conocimiento
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="09_estadistico.html">
+   Métodos basados en datos
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Métodos con base física
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="11_evaluacion.html">
+   Evaluación del modelo
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="12_amenaza.html">
+   Amenaza
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="13_flujos.html">
+   Movimientos en masa tipo flujos
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="14_roca.html">
+   Movimientos en masa en roca
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="15_python.html">
+   Python
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="_sources/10_fisico.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/edieraristizabal/Libro_cartoGeotecnia"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/edieraristizabal/Libro_cartoGeotecnia/issues/new?title=Issue%20on%20page%20%2F10_fisico.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/edieraristizabal/Libro_cartoGeotecnia/master?urlpath=tree/docs/10_fisico.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#factor-detonante-lluvia">
+   Factor detonante lluvia
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#modelo-shalstab">
+     Modelo SHALSTAB
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#python">
+       Python
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#modelo-trigrs">
+     Modelo TRIGRS
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#tutorial">
+       Tutorial
+      </a>
+      <ul class="nav section-nav flex-column">
+       <li class="toc-h5 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#preparacion-de-los-mapas">
+         Preparación de los mapas
+        </a>
+       </li>
+       <li class="toc-h5 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#ejecucion-de-los-programas">
+         Ejecución de los programas
+        </a>
+       </li>
+       <li class="toc-h5 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#grid-match">
+         Grid Match
+        </a>
+       </li>
+       <li class="toc-h5 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#topo-index">
+         Topo index
+        </a>
+       </li>
+       <li class="toc-h5 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#trigrs">
+         TRIGRS
+        </a>
+       </li>
+       <li class="toc-h5 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#propiedades-fisicas-del-suelo">
+         Propiedades físicas del suelo
+        </a>
+       </li>
+       <li class="toc-h5 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#intensidad-del-escenario-de-lluvia-e-incrementos-de-tiempo">
+         Intensidad del escenario de lluvia e incrementos de tiempo
+        </a>
+       </li>
+       <li class="toc-h5 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#archivos-de-entrada">
+         Archivos de entrada
+        </a>
+       </li>
+       <li class="toc-h5 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#archivos-de-salida">
+         Archivos de salida
+        </a>
+       </li>
+       <li class="toc-h5 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#otras-opciones-de-usuario">
+         Otras opciones de usuario
+        </a>
+       </li>
+       <li class="toc-h5 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#visualizar-los-resultados">
+         Visualizar los resultados
+        </a>
+       </li>
+      </ul>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#factor-detonante-sismo">
+   Factor detonante sismo
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#analisis-seudoestatico">
+     Análisis seudoestático
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#desplazamientos-permanentes">
+     Desplazamientos permanentes
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#modelos-probabilisticos">
+   Modelos probabilísticos
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#modelo-fosm-first-order-second-moment">
+     Modelo FOSM (First Order Second Moment)
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#referencias">
+   Referencias
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Métodos con base física</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#factor-detonante-lluvia">
+   Factor detonante lluvia
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#modelo-shalstab">
+     Modelo SHALSTAB
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#python">
+       Python
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#modelo-trigrs">
+     Modelo TRIGRS
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#tutorial">
+       Tutorial
+      </a>
+      <ul class="nav section-nav flex-column">
+       <li class="toc-h5 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#preparacion-de-los-mapas">
+         Preparación de los mapas
+        </a>
+       </li>
+       <li class="toc-h5 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#ejecucion-de-los-programas">
+         Ejecución de los programas
+        </a>
+       </li>
+       <li class="toc-h5 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#grid-match">
+         Grid Match
+        </a>
+       </li>
+       <li class="toc-h5 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#topo-index">
+         Topo index
+        </a>
+       </li>
+       <li class="toc-h5 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#trigrs">
+         TRIGRS
+        </a>
+       </li>
+       <li class="toc-h5 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#propiedades-fisicas-del-suelo">
+         Propiedades físicas del suelo
+        </a>
+       </li>
+       <li class="toc-h5 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#intensidad-del-escenario-de-lluvia-e-incrementos-de-tiempo">
+         Intensidad del escenario de lluvia e incrementos de tiempo
+        </a>
+       </li>
+       <li class="toc-h5 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#archivos-de-entrada">
+         Archivos de entrada
+        </a>
+       </li>
+       <li class="toc-h5 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#archivos-de-salida">
+         Archivos de salida
+        </a>
+       </li>
+       <li class="toc-h5 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#otras-opciones-de-usuario">
+         Otras opciones de usuario
+        </a>
+       </li>
+       <li class="toc-h5 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#visualizar-los-resultados">
+         Visualizar los resultados
+        </a>
+       </li>
+      </ul>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#factor-detonante-sismo">
+   Factor detonante sismo
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#analisis-seudoestatico">
+     Análisis seudoestático
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#desplazamientos-permanentes">
+     Desplazamientos permanentes
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#modelos-probabilisticos">
+   Modelos probabilísticos
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#modelo-fosm-first-order-second-moment">
+     Modelo FOSM (First Order Second Moment)
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#referencias">
+   Referencias
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="metodos-con-base-fisica">
+<h1>Métodos con base física<a class="headerlink" href="#metodos-con-base-fisica" title="Permalink to this headline">¶</a></h1>
+<p>Los modelos con base física evalúan la ocurrencia de movimientos en masa en términos de factor de seguridad o probabilidades de ocurrencia, a través de modelos numéricos. Sin embargo existen diferentes aproximaciones a la física del problema con simplificaciones diferentes, por lo cual es fundamental utilizar el modelo que se ajuste a las necesidades o particularidades del área de estudio. Los métodos con base físisca son recomendables para áreas pequeñas a escalas detalladas, ya que requieren una gran cantidad de información de entrada, que se obtiene de ensayos de laboratorio o mediciones de campo. Por lo que la parametrización de los modelos puede ser complicada, en especial la distribución espacial de la profundidad del suelo, la cual juega un papel fundamental. Los modelos con base física permiten tener en consideración la complejidad de los factores detonantes (sismo y/o lluvia) y las características geomecánicas del terreno.</p>
+<div class="section" id="factor-detonante-lluvia">
+<h2>Factor detonante lluvia<a class="headerlink" href="#factor-detonante-lluvia" title="Permalink to this headline">¶</a></h2>
+<p>El componente hidrológico de estos modelos explica el proceso de infiltración del agua en el suelo y el avance del frente húmedo o aumento de un nivel freático colgado. Para esto utilizan modelos de flujo estático horizontal o modelos de flujo transitorio vertical. Desde el componente geotécnico, la mayoría de modelos utilizan métodos de equilibrio límite de talud infinito. Algunos han incoporado modelos de dovelas que permiten análisis de superficies de falla circulares.</p>
+<p>Como parte de los modelos físicos una gran variedad de modelos hidrológicos se han utilizado considerando el flujo de agua en el suelo en estado estático o transitorio, y en condiciones saturadas o parcialmente saturadas, utilizando las ecuaciones de Richards para el flujo vertical y las ecuaciones de Darcy para el flujo lateral. Entre estos se encuentra TOPOG (O’Loughlin, 1986), TAPES (Moore et al., 1988), TOPMODEL (Beven &amp; Kirkby, 1979), GEOtop (Bertoldi &amp; Rigon, 2004), tRIBS (Ivanov et al., 2004), SHIA (Vélez 2001), y los modelos de Green-Ampt (1911), Pradel &amp; Raad (1993) e Iverson (2000). Por el contrario, los modelos geotécnicos utilizados son muy similares, generalmente utilizando el método talud infinito y análisis de equilibrio límite, suponiendo la superficie de falla paralela a la superficie del terreno y que la longitud de falla es mucho mayor que el espesor de la capa desplazada (Borga et al., 2002).</p>
+<div class="figure align-default" id="hidrologico">
+<a class="reference internal image-reference" href="https://i.pinimg.com/564x/52/32/4a/52324a660eca43147a3ad80d2da9f621.jpg"><img alt="modelo hidrologico" src="https://i.pinimg.com/564x/52/32/4a/52324a660eca43147a3ad80d2da9f621.jpg" style="width: 600px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 58 </span><span class="caption-text">Dos posibles mecanismos de saturación para deslizamientos planares superficiales detonados por lluvias. Izquierda: incremento del nivel freático colgado paralelo a la ladera a partir de una superficie de contraste de permeabilidad. Derecha: avance de frente húmedo a partir de la superficie del terreno.</span><a class="headerlink" href="#hidrologico" title="Permalink to this image">¶</a></p>
+</div>
+<p>Uno de los primeros modelos físicos fue propuesto por Wu y Sidle (1995) denominado dSLAM (distribuited Shallow LAndslide Model), y posteriormente modificado como IDSSM (Integrated Dynamic Slope Stability Model) por Dhakal &amp; Sidle (2003). Corresponde a un modelo físico, dinámico y distribuido, que utiliza un análisis de estabilidad de talud infinita con un modelo hidrológico de onda cinemática propuesto por Takasao y Shiiba (1988). Este modelo considera la vegetación y asume que la infiltración es siempre mayor a la intensidad de la lluvia.</p>
+<p>Sin embargo uno de los modelos físicos más reconocido por su sencillez y fácil aplicación es el modelo propuesto por Montgomery &amp; Dietrich (1994) y Montgomery et al. (1998), denominado SHAllow Landslide STABility (SHALSTAB). Este modelo emplea el modelo hidrológico TOPOG para estimar la altura de la porción saturada de suelo, el cual asume que el control dominante de la distribución espacial de los movimientos está dado por la topografía. Estos autores definen para su análisis un índice topográfico, el cual es utilizado para predecir el nivel freático en función del flujo del agua en el suelo y la intensidad de la lluvia. El modelo de estabilidad propuesto utiliza el criterio de Mohr-Coulomb, en el cual por simplificación asumen la cohesión igual cero.</p>
+<p>Otros modelos conceptualmente similares al SHALSTAB se han desarrollado. El modelo SINMAP, desarrollado por Pack et al. (1998), evalúa las condiciones de estabilidad para movimientos en masa, utilizando la misma ecuación del factor de seguridad y las ecuaciones de Darcy para flujos saturados, pero a diferencia del SHALSTAB considera la cohesión del suelo. Y el modelo LISA (por sus siglas en inglés Level I Stability Analysis), desarrollado por Hammond et al. (1992), realiza un análisis probabilístico basado en el factor de seguridad, considerando la vegetación. Los valores para cada parámetro en la ecuación son definidos por una función de distribución de probabilidades y los resultados son presentados en un histograma que muestra la distribución del factor de seguridad calculado usando el método de Monte Carlo.</p>
+<p>El modelo GEOtop –FS, desarrollado por Simoni et al. (2008), combina un análisis de estabilidad de talud infinito con el modelo hidrológico distribuido espacialmente y de diferencias finitas, GEOtop. El modelo estima el contenido de agua en el suelo y la evolución de la presión de poros resultante simulando los procesos de infiltración, escorrentía superficial, flujo subsuperficial saturado y no saturado, y flujos en canales. Para lo cual todas las celdas de la cuenca son divididas en celdas tipo canal y tipo laderas. El factor de seguridad se calcula con un enfoque probabilístico, donde los parámetros del suelo se asignan con funciones de distribución.</p>
+<p>El modelo CHASM (Combined Hydrological And Stability Model), desarrollado por Wilkinson et al. (2000), utiliza el método simplificado circular de Bishop (1955) con un modelo hidrológico bidimensional de diferencias finitas para simular el cambio en las presiones de poros como respuesta a eventos de lluvia individuales. En cada intervalo de tiempo de simulación, las presiones de poro, tanto negativas como positivas, se incorporan directamente en la determinación de los esfuerzos efectivos y la resistencia al corte del suelo. Este análisis implica una búsqueda numérica de la superficie de deslizamiento que reduce al mínimo el factor de seguridad.</p>
+<p>El modelo Transient Rainfall Infiltration and Gridbased Slope-Stability (TRIGRS), desarrollado por Baum et al. (2002), utiliza el modelo hidrológico transitorio unidimensional para infiltración vertical propuesto por Iverson (2000), con un modelo de estabilidad de talud infinita asumiendo condiciones saturadas. El modelo evalúa el factor de seguridad como respuesta de las presiones de poros durante un evento de lluvia función de la profundidad y el tiempo, para lo cual divide el factor de seguridad en un componente estático (Fs0) asociados al estado estático o de largo plazo, y un componente que varía con el tiempo (FS)’ asociado al estado transitorio del evento de lluvia simulado.</p>
+<p>Arnone et al. (2011) proponen un modelo físico distribuido, en el cual acoplan un modelo de talud infinita con el modelo hidrológico tRIBS (Triangulated Irregular Network Real-Time Integrated Basin Simulator) desarrollado por Ivanov et al. (2004). El modelo simula la intercepción de la lluvia, la evapotranspiración, la infiltración del agua en el suelo, la escorrentía superficial, y el flujo subsuperficial lateral a la ladera en condiciones saturadas y parcialmente saturadas, representando la heterogeneidad espacial de la topografía por una red irregular triangular (TIN) utilizada ampliamente por Sistemas de Información Geográfica (SIG) que reduce el tiempo computacional sin pérdidas aparentes de información. El modelo es también capaz de simular el volumen del material fallado y su posible trayecto.</p>
+<p>Finalmente el modelo SHIA_Landslide propuesto por Aristizábal et al. (2014) acopla un modelo de talud infinita en condiciones saturadas con el modelo hidrológico distribuido de tanques a escala de cuenca que considera los flujos verticales y horizontales, denominado SHIA (Vélez, 2001). El modelo hidrológico está conformado por dos componentes: un balance de agua que simula los proceso hidrológicos dominantes en la cuenca, tales como infiltración, percolación, escorrentía superficial, flujo sub superficial, y flujo subterráneo; y un componente que simula el flujo del agua a través de la red de drenaje, lo que permite calibrar con valores observados la hidrología de la cuenca y las laderas previo a la simulación de estabilidad de las vertientes.</p>
+<div class="figure align-default" id="modelos">
+<a class="reference internal image-reference" href="https://i.pinimg.com/564x/21/f9/1d/21f91d0d89d2aac8176b08e2b832c18b.jpg"><img alt="modelos" src="https://i.pinimg.com/564x/21/f9/1d/21f91d0d89d2aac8176b08e2b832c18b.jpg" style="width: 500px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 59 </span><span class="caption-text">modelos físicos.</span><a class="headerlink" href="#modelos" title="Permalink to this image">¶</a></p>
+</div>
+<div class="section" id="modelo-shalstab">
+<h3>Modelo SHALSTAB<a class="headerlink" href="#modelo-shalstab" title="Permalink to this headline">¶</a></h3>
+<p>El modelo SHALSTAB, desarrollado por Montgomery &amp; Dietrich, (1994), emplea el modelo hidrológico TOPOG (O’Loughlin, 1986) en condiciones de lluvia estacionaria para construir un mapa del patrón de la humedad basado en el área aferente a cada punto, la pendiente y la transmisividad del suelo. En el modelo la humedad del suelo es calculada como:</p>
+<p><span class="math notranslate nohighlight">\(W=\frac{Qa}{bTsinθ}\)</span></p>
+<p>Donde <span class="math notranslate nohighlight">\(Q\)</span> es la lluvia en condiciones estacionarias (<span class="math notranslate nohighlight">\(mm/d\)</span>), a es el área de drenaje (<span class="math notranslate nohighlight">\(m^2\)</span>), <span class="math notranslate nohighlight">\(b\)</span> es la longitud de cada celda (<span class="math notranslate nohighlight">\(m\)</span>), <span class="math notranslate nohighlight">\(T\)</span> es la transmisividad del suelo en condiciones saturadas (<span class="math notranslate nohighlight">\(m^2/\)</span>), <span class="math notranslate nohighlight">\(\theta\)</span> y  es la pendiente. Asumiendo que la transmisividad no varía con la profundidad, se puede entonces asumir:</p>
+<p><span class="math notranslate nohighlight">\(W= \frac{h}{z_t}\)</span></p>
+<p>Donde <span class="math notranslate nohighlight">\(h\)</span> es el espesor del suelo saturado y <span class="math notranslate nohighlight">\(z_t\)</span> el espesor total de suelo. Combinando las dos ecuaciones anteriores se puede estimar la saturación relativa del perfil de suelo como:</p>
+<p><span class="math notranslate nohighlight">\(\frac{h}{z_t}=\frac{Qa}{bTsinθ} 	\)</span></p>
+<p>En cuanto al componente geotécnico, el modelo SHALSTAB está basado en análisis de equilibrio límite con talud infinito y el criterio de falla de Mohr-Coulomb.</p>
+<p><span class="math notranslate nohighlight">\(ρ_sgz_tsinθcosθ=C'+[ρ_s-ρ_w\frac{h}{z_t}]gzcos^2θtanϕ 	\)</span></p>
+<p>Donde <span class="math notranslate nohighlight">\(ρ_s\)</span> es la densidad del suelo, <span class="math notranslate nohighlight">\(ρw\)</span> es la densidad del agua, <span class="math notranslate nohighlight">\(g\)</span> es la aceleración de la gravedad, <span class="math notranslate nohighlight">\(C’\)</span> es la cohesión efectiva del suelo, y <span class="math notranslate nohighlight">\(φ\)</span> es el ángulo de fricción. Esta ecuación puede ser escrita en términos de la relación h/z como:</p>
+<p><span class="math notranslate nohighlight">\(\frac{h}{z_t}=\frac{ρ_s}{ρ_w}(1-\frac{tanθ}{tanϕ})+\frac{C'}{wgz_tcos^2θtanϕ}\)</span></p>
+<p>Finalmente acoplando el modelo hidrológico con el modelo de estabilidad se obtienen la siguiente ecuación:</p>
+<p><span class="math notranslate nohighlight">\(\frac{a}{b}=\frac{T}{Q}sinθ[\frac{ρ_s}{ρ_w}(1-\frac{tanθ}{tanϕ})+\frac{C'}{wgzcos^2θtanϕ}]\)</span></p>
+<p>A partir de esta ecuación es posible determinar cuatro condiciones de estabilidad para cada celda de análisis. Las celdas donde la relación entre el área de drenaje aferente y la longitud de la celda (a/b) es mayor que la expresión al lado derecho de la ecuación corresponde a celdas inestables, en caso contrario son celdas estables. Las dos condiciones restantes corresponden a condiciones de estabilidad que no dependen de la lluvia. Las celdas estables en condiciones completamente saturadas de todo el perfil de suelo (<span class="math notranslate nohighlight">\(h/z_t=1\)</span>) son denominadas incondicionalmente estables y cumplen la siguiente condición:</p>
+<p><span class="math notranslate nohighlight">\(tanθ &lt; 1-(\frac{ρ_s}{ρ_w})tanϕ+\frac{C'}{ρ_sgz_tcos^2θ} \)</span></p>
+<p>Y las celdas inestables en condiciones secas (<span class="math notranslate nohighlight">\(h/z_t=0\)</span>) se denominan incondicionalmente inestables y cumplen la siguiente condición:</p>
+<p><span class="math notranslate nohighlight">\(tanθ &gt;= tanϕ+\frac{C'}{ρ_sgz_tcos^2θ}\)</span></p>
+<div class="section" id="python">
+<h4>Python<a class="headerlink" href="#python" title="Permalink to this headline">¶</a></h4>
+<p>Se deben inicialmente importar las librerías. En este caso se instalará la librería <em>Rasterio</em></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>pip install rasterio
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: rasterio in c:\users\usuario\miniconda3\envs\geospatial\lib\site-packages (1.2.1)
+Requirement already satisfied: affine in c:\users\usuario\miniconda3\envs\geospatial\lib\site-packages (from rasterio) (2.3.0)
+Requirement already satisfied: attrs in c:\users\usuario\miniconda3\envs\geospatial\lib\site-packages (from rasterio) (20.3.0)
+Requirement already satisfied: certifi in c:\users\usuario\miniconda3\envs\geospatial\lib\site-packages (from rasterio) (2022.6.15)
+Requirement already satisfied: click&lt;8,&gt;=4.0 in c:\users\usuario\miniconda3\envs\geospatial\lib\site-packages (from rasterio) (7.1.2)
+Requirement already satisfied: cligj&gt;=0.5 in c:\users\usuario\miniconda3\envs\geospatial\lib\site-packages (from rasterio) (0.7.1)
+Requirement already satisfied: numpy in c:\users\usuario\miniconda3\envs\geospatial\lib\site-packages (from rasterio) (1.20.1)
+Requirement already satisfied: snuggs&gt;=1.4.1 in c:\users\usuario\miniconda3\envs\geospatial\lib\site-packages (from rasterio) (1.4.7)
+Requirement already satisfied: click-plugins in c:\users\usuario\miniconda3\envs\geospatial\lib\site-packages (from rasterio) (1.1.1)
+Requirement already satisfied: pyparsing&gt;=2.1.6 in c:\users\usuario\miniconda3\envs\geospatial\lib\site-packages (from snuggs&gt;=1.4.1-&gt;rasterio) (2.4.7)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">rasterio</span> <span class="k">as</span> <span class="nn">rio</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
+<span class="o">~</span>\<span class="n">AppData</span>\<span class="n">Local</span>\<span class="n">Temp</span><span class="o">/</span><span class="n">ipykernel_24060</span><span class="o">/</span><span class="mf">3834865208.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="kn">import</span> <span class="nn">rasterio</span> <span class="k">as</span> <span class="nn">rio</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="ne">----&gt; </span><span class="mi">3</span> <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+
+<span class="ne">ModuleNotFoundError</span>: No module named &#39;matplotlib&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<p>A continuación se procede a importar los mapas requeridos: cohesion, fricción, permeabilidad, peso unitario del suelo, área acumulada, pendiente y espesor del suelo.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">raster</span> <span class="o">=</span> <span class="n">rio</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s1">&#39;https://github.com/edieraristizabal/Libro_cartoGeotecnia/blob/master/data/arenosa/cohesion.asc?raw=true&#39;</span><span class="p">)</span>
+<span class="n">cohesion</span><span class="o">=</span><span class="n">raster</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">cohesion</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">cohesion</span><span class="o">==</span><span class="n">cohesion</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">],</span><span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">,</span><span class="n">cohesion</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">cohesion</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">colorbar</span><span class="p">();</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/10_fisico_11_0.png" src="_images/10_fisico_11_0.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">raster</span> <span class="o">=</span> <span class="n">rio</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s1">&#39;https://github.com/edieraristizabal/Libro_cartoGeotecnia/blob/master/data/arenosa/friction_rad.asc?raw=true&#39;</span><span class="p">)</span>
+<span class="n">friccion</span><span class="o">=</span><span class="n">raster</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">friccion</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">friccion</span><span class="o">==</span><span class="n">friccion</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">],</span><span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">,</span><span class="n">friccion</span><span class="p">)</span> <span class="c1">#ya py lee los nans</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">friccion</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">colorbar</span><span class="p">();</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/10_fisico_12_0.png" src="_images/10_fisico_12_0.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">raster</span> <span class="o">=</span> <span class="n">rio</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s1">&#39;https://github.com/edieraristizabal/Libro_cartoGeotecnia/blob/master/data/arenosa/ks.asc?raw=true&#39;</span><span class="p">)</span>
+<span class="n">ks</span><span class="o">=</span><span class="n">raster</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">ks</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">ks</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">ks</span><span class="o">==</span><span class="n">ks</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">],</span><span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">,</span><span class="n">ks</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">ks</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">colorbar</span><span class="p">();</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/10_fisico_13_0.png" src="_images/10_fisico_13_0.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">raster</span> <span class="o">=</span> <span class="n">rio</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s1">&#39;https://github.com/edieraristizabal/Libro_cartoGeotecnia/blob/master/data/arenosa/gammas.asc?raw=true&#39;</span><span class="p">)</span>
+<span class="n">peso</span><span class="o">=</span><span class="n">raster</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">peso</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">peso</span><span class="o">==</span><span class="n">peso</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">],</span><span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">,</span><span class="n">peso</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">peso</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">colorbar</span><span class="p">();</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/10_fisico_14_0.png" src="_images/10_fisico_14_0.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">raster</span> <span class="o">=</span> <span class="n">rio</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s1">&#39;https://github.com/edieraristizabal/Libro_cartoGeotecnia/blob/master/data/arenosa/flowacum_m2.asc?raw=true&#39;</span><span class="p">)</span>
+<span class="n">flujo</span><span class="o">=</span><span class="n">raster</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">flujo</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">flujo</span><span class="o">==</span><span class="n">flujo</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">],</span><span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">,</span><span class="n">flujo</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">flujo</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">colorbar</span><span class="p">();</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/10_fisico_15_0.png" src="_images/10_fisico_15_0.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">raster</span> <span class="o">=</span> <span class="n">rio</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s1">&#39;https://github.com/edieraristizabal/Libro_cartoGeotecnia/blob/master/data/arenosa/slope_rad.asc?raw=true&#39;</span><span class="p">)</span>
+<span class="n">pendiente</span><span class="o">=</span><span class="n">raster</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">pendiente</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">pendiente</span><span class="o">==</span><span class="n">pendiente</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">],</span><span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">,</span><span class="n">pendiente</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">pendiente</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">colorbar</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.colorbar.Colorbar at 0x7f74a7b09b90&gt;
+</pre></div>
+</div>
+<img alt="_images/10_fisico_16_1.png" src="_images/10_fisico_16_1.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">raster</span> <span class="o">=</span> <span class="n">rio</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s1">&#39;https://github.com/edieraristizabal/Libro_cartoGeotecnia/blob/master/data/arenosa/zs.asc?raw=true&#39;</span><span class="p">)</span>
+<span class="n">espesor</span><span class="o">=</span><span class="n">raster</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">espesor</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">espesor</span><span class="o">==</span><span class="n">espesor</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">],</span><span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">,</span><span class="n">espesor</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">espesor</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">colorbar</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.colorbar.Colorbar at 0x7f74a825c490&gt;
+</pre></div>
+</div>
+<img alt="_images/10_fisico_17_1.png" src="_images/10_fisico_17_1.png" />
+</div>
+</div>
+<p>Para implementar en <em>Python</em> las ecuaciones del modelo Shalstab, se debe primero definir las constantes del peso unitario del agua, y la resolución espacial del DEM utilizado.</p>
+<p>En este paso tambien, se incorpora la intensidad de la lluvia que quiere evaluarse. Este valor no modifica las celdas incondicionalmente estables o inestables, sólo modifica el número de celdas potencialmente inestables.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">GammaW</span>   <span class="o">=</span> <span class="mf">9.81</span> <span class="c1">#peso unitario del agua</span>
+<span class="n">dx</span> <span class="o">=</span> <span class="mf">12.5</span> <span class="c1"># resolucion espacial del raster [m]</span>
+<span class="n">q</span> <span class="o">=</span> <span class="mi">100</span> <span class="c1">#intensidad de la precipitacion [mm/h]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Finalmente se procede a correr el modelo</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="s2">&quot;STABILITY ANALYSIS&quot;</span>
+
+<span class="n">MatEst</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">raster</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+<span class="n">Matq</span>   <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">raster</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+
+<span class="n">M4</span><span class="o">=</span><span class="n">flujo</span><span class="o">/</span><span class="n">dx</span>
+<span class="n">M5</span><span class="o">=</span><span class="p">((</span><span class="mf">0.01</span> <span class="o">*</span> <span class="n">ks</span> <span class="o">*</span> <span class="p">(</span><span class="n">espesor</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">pendiente</span><span class="p">))</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">pendiente</span><span class="p">))</span> <span class="o">/</span> <span class="p">(</span><span class="mf">0.001</span><span class="o">*</span><span class="n">q</span><span class="p">))</span> <span class="o">*</span> <span class="p">((</span><span class="n">peso</span> <span class="o">/</span> <span class="n">GammaW</span><span class="p">)</span> <span class="o">*</span> <span class="p">(</span><span class="mi">1</span> <span class="o">-</span> <span class="n">np</span><span class="o">.</span><span class="n">tan</span><span class="p">(</span><span class="n">pendiente</span><span class="p">)</span> <span class="o">/</span> <span class="n">np</span><span class="o">.</span><span class="n">tan</span><span class="p">(</span><span class="n">friccion</span><span class="p">))</span> <span class="o">+</span> <span class="p">(</span><span class="n">cohesion</span> <span class="o">/</span> <span class="p">(</span><span class="n">GammaW</span> <span class="o">*</span> <span class="n">espesor</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">pendiente</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">tan</span><span class="p">(</span><span class="n">friccion</span><span class="p">))))</span> 
+<span class="n">MatEst1</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">M4</span><span class="o">&gt;</span><span class="n">M5</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="n">MatEst</span><span class="p">)</span> <span class="c1">#  unstable</span>
+
+<span class="n">M6</span><span class="o">=</span><span class="p">((</span><span class="mf">0.01</span> <span class="o">*</span> <span class="n">ks</span> <span class="o">*</span> <span class="p">(</span><span class="n">espesor</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">pendiente</span><span class="p">))</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">pendiente</span><span class="p">))</span> <span class="o">/</span> <span class="p">(</span><span class="mf">0.001</span><span class="o">*</span><span class="n">q</span><span class="p">))</span> <span class="o">*</span> <span class="p">((</span><span class="n">peso</span> <span class="o">/</span> <span class="n">GammaW</span><span class="p">)</span> <span class="o">*</span> <span class="p">(</span><span class="mi">1</span> <span class="o">-</span> <span class="n">np</span><span class="o">.</span><span class="n">tan</span><span class="p">(</span><span class="n">pendiente</span><span class="p">)</span> <span class="o">/</span> <span class="n">np</span><span class="o">.</span><span class="n">tan</span><span class="p">(</span><span class="n">friccion</span><span class="p">))</span> <span class="o">+</span> <span class="p">(</span><span class="n">cohesion</span> <span class="o">/</span> <span class="p">(</span><span class="n">GammaW</span> <span class="o">*</span> <span class="n">espesor</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">pendiente</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">tan</span><span class="p">(</span><span class="n">friccion</span><span class="p">))))</span> 
+<span class="n">MatEst2</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">M4</span><span class="o">&lt;=</span><span class="n">M6</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="n">MatEst1</span><span class="p">)</span> <span class="c1"># Stable</span>
+
+<span class="n">M1</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">tan</span><span class="p">(</span><span class="n">pendiente</span><span class="p">)</span>
+<span class="n">M2</span><span class="o">=</span><span class="p">(</span><span class="mi">1</span> <span class="o">-</span> <span class="p">(</span><span class="n">GammaW</span><span class="o">/</span><span class="n">peso</span><span class="p">))</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">tan</span><span class="p">(</span><span class="n">friccion</span><span class="p">)</span> <span class="o">+</span> <span class="p">(</span><span class="n">cohesion</span> <span class="o">/</span> <span class="p">(</span><span class="n">peso</span> <span class="o">*</span> <span class="n">espesor</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">pendiente</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span><span class="p">))</span>
+<span class="n">MatEst3</span>  <span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">M1</span><span class="o">&lt;</span><span class="n">M2</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="n">MatEst2</span><span class="p">)</span> <span class="c1"># Unconditionally stable</span>
+	
+<span class="n">M3</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">tan</span><span class="p">(</span><span class="n">friccion</span><span class="p">)</span> <span class="o">+</span> <span class="p">(</span><span class="n">cohesion</span> <span class="o">/</span> <span class="p">(</span><span class="n">peso</span> <span class="o">*</span> <span class="n">espesor</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">pendiente</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span><span class="p">))</span>
+<span class="n">MatEst4</span>  <span class="o">=</span>  <span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">M1</span><span class="o">&gt;=</span><span class="n">M3</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="n">MatEst3</span><span class="p">)</span> <span class="c1"># Unconditionally Unstable</span>
+
+<span class="n">Matq</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1000</span> <span class="o">*</span> <span class="mf">0.01</span> <span class="o">*</span> <span class="n">ks</span> <span class="o">*</span> <span class="n">espesor</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">pendiente</span><span class="p">)</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">pendiente</span><span class="p">))</span> <span class="o">*</span> <span class="p">(</span><span class="n">dx</span> <span class="o">/</span> <span class="n">flujo</span><span class="p">)</span> <span class="o">*</span> <span class="p">((</span><span class="n">peso</span> <span class="o">/</span> <span class="n">GammaW</span><span class="p">)</span> <span class="o">*</span> <span class="p">(</span><span class="mi">1</span> <span class="o">-</span> <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">tan</span><span class="p">(</span><span class="n">pendiente</span><span class="p">)</span> <span class="o">/</span> <span class="n">np</span><span class="o">.</span><span class="n">tan</span><span class="p">(</span><span class="n">friccion</span><span class="p">)))</span> <span class="o">+</span> <span class="n">cohesion</span> <span class="o">/</span> <span class="p">(</span><span class="n">GammaW</span> <span class="o">*</span> <span class="n">espesor</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">pendiente</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">tan</span><span class="p">(</span><span class="n">friccion</span><span class="p">)))</span>
+<span class="n">np</span><span class="o">.</span><span class="n">nanmin</span><span class="p">(</span><span class="n">Matq</span><span class="p">)</span>
+
+<span class="n">MatEst</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">MatEst4</span> <span class="o">==</span> <span class="mi">0</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">,</span><span class="n">MatEst4</span><span class="p">)</span>
+<span class="n">Matq</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">Matq</span><span class="o">==</span><span class="n">np</span><span class="o">.</span><span class="n">inf</span><span class="p">,</span><span class="n">np</span><span class="o">.</span><span class="n">nanmax</span><span class="p">(</span><span class="n">Matq</span><span class="p">[</span><span class="n">Matq</span><span class="o">!=</span><span class="n">np</span><span class="o">.</span><span class="n">inf</span><span class="p">]),</span><span class="n">Matq</span><span class="p">)</span>
+
+<span class="n">Matq</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">M1</span><span class="o">&lt;</span><span class="n">M2</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">M1</span><span class="o">&gt;=</span><span class="n">M3</span><span class="p">,</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span><span class="n">Matq</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/usr/local/lib/python3.7/dist-packages/ipykernel_launcher.py:20: RuntimeWarning: divide by zero encountered in true_divide
+</pre></div>
+</div>
+</div>
+</div>
+<p>Como resultado se obtienen 2 mapas. El mapa de celdas estables (celdas con valor de 4), inestables (celdas con valor de 3), incondicionalmente inestables (celdas con valor de 2) e incondicionalmente estables (celdas con valor de 1), el cual se denomina MatEst.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">MatEst</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">colorbar</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.colorbar.Colorbar at 0x7f4ac6ad3110&gt;
+</pre></div>
+</div>
+<img alt="_images/10_fisico_23_1.png" src="_images/10_fisico_23_1.png" />
+</div>
+</div>
+<p>El segundo mapa que se obtiene es Matq, que representa el valor de lluvia (q) necesario para que fallen las celdas. Este valor no aplica para celdas incondicionalmente inestables o incondicionalmente estables, solo para las celdas potencialmente inestables, es decir que arrojaron valores de 4 y 3 en el mapa MatEst.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">Matq</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">colorbar</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.colorbar.Colorbar at 0x7f74a821bc10&gt;
+</pre></div>
+</div>
+<img alt="_images/10_fisico_25_1.png" src="_images/10_fisico_25_1.png" />
+</div>
+</div>
+<p>Para exportar los mapas se puede utilizar el siguiente código:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">with</span> <span class="n">rio</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="n">ruta_out</span><span class="o">+</span><span class="s1">&#39;MatEst.tif&#39;</span><span class="p">,</span> <span class="s1">&#39;w&#39;</span><span class="p">,</span> 
+              <span class="n">driver</span><span class="o">=</span><span class="s1">&#39;Gtiff&#39;</span><span class="p">,</span><span class="n">height</span><span class="o">=</span><span class="n">raster</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span><span class="n">width</span><span class="o">=</span><span class="n">raster</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span><span class="n">count</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+              <span class="n">dtype</span><span class="o">=</span><span class="s1">&#39;float64&#39;</span><span class="p">,</span><span class="n">nodata</span><span class="o">=-</span><span class="mi">999</span><span class="p">,</span><span class="n">crs</span><span class="o">=</span><span class="n">raster</span><span class="o">.</span><span class="n">crs</span><span class="p">,</span><span class="n">transform</span><span class="o">=</span><span class="n">raster</span><span class="o">.</span><span class="n">transform</span><span class="p">)</span> <span class="k">as</span> <span class="n">dst</span><span class="p">:</span>
+    <span class="n">dst</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">MatEst</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">with</span> <span class="n">rio</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s1">&#39;Matq.tif&#39;</span><span class="p">,</span> <span class="s1">&#39;w&#39;</span><span class="p">,</span> 
+              <span class="n">driver</span><span class="o">=</span><span class="s1">&#39;Gtiff&#39;</span><span class="p">,</span><span class="n">height</span><span class="o">=</span><span class="n">raster</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span><span class="n">width</span><span class="o">=</span><span class="n">raster</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span><span class="n">count</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+              <span class="n">dtype</span><span class="o">=</span><span class="s1">&#39;float64&#39;</span><span class="p">,</span><span class="n">nodata</span><span class="o">=-</span><span class="mi">999</span><span class="p">,</span><span class="n">crs</span><span class="o">=</span><span class="n">raster</span><span class="o">.</span><span class="n">crs</span><span class="p">,</span><span class="n">transform</span><span class="o">=</span><span class="n">raster</span><span class="o">.</span><span class="n">transform</span><span class="p">)</span> <span class="k">as</span> <span class="n">dst</span><span class="p">:</span>
+    <span class="n">dst</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">Matq</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>  
+</pre></div>
+</div>
+</div>
+</div>
+<p>Para conocer el volumen del material desplazado en cada celda se utiliza el siguiente código, donde además se exporta dicho mapa.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Vol</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">logical_or</span><span class="p">(</span><span class="n">MatEst</span><span class="o">==</span><span class="mi">2</span><span class="p">,</span> <span class="n">MatEst</span><span class="o">==</span><span class="mi">3</span><span class="p">),</span> <span class="n">espesor</span><span class="o">*</span><span class="mf">12.5</span><span class="o">*</span><span class="mf">12.5</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+
+<span class="k">with</span> <span class="n">rio</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s1">&#39;Vol.tif&#39;</span><span class="p">,</span> <span class="s1">&#39;w&#39;</span><span class="p">,</span> 
+              <span class="n">driver</span><span class="o">=</span><span class="s1">&#39;Gtiff&#39;</span><span class="p">,</span><span class="n">height</span><span class="o">=</span><span class="n">raster</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span><span class="n">width</span><span class="o">=</span><span class="n">raster</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span><span class="n">count</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+              <span class="n">dtype</span><span class="o">=</span><span class="s1">&#39;float64&#39;</span><span class="p">,</span><span class="n">nodata</span><span class="o">=-</span><span class="mi">999</span><span class="p">,</span><span class="n">crs</span><span class="o">=</span><span class="n">raster</span><span class="o">.</span><span class="n">crs</span><span class="p">,</span><span class="n">transform</span><span class="o">=</span><span class="n">raster</span><span class="o">.</span><span class="n">transform</span><span class="p">)</span> <span class="k">as</span> <span class="n">dst</span><span class="p">:</span>
+    <span class="n">dst</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">Vol</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span> 
+
+<span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">Vol</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">colorbar</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.colorbar.Colorbar at 0x7f74a7a84250&gt;
+</pre></div>
+</div>
+<img alt="_images/10_fisico_30_1.png" src="_images/10_fisico_30_1.png" />
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="modelo-trigrs">
+<h3>Modelo TRIGRS<a class="headerlink" href="#modelo-trigrs" title="Permalink to this headline">¶</a></h3>
+<p>El modelo TRIGRS (Transient Rainfall Infiltration and Gridbased Slope-Stability) incorpora en su análisis el proceso de infiltración del agua lluvia y el cálculo del factor de seguridad. Este es un modelo con base física que evalúa la distribución temporal y espacial de movimientos en masa superficiales detonados por lluvia a través del cálculo de los cambios transitorios de la presión de poros y su incidencia en la variación del factor de seguridad, debido a la infiltración de la lluvia.</p>
+<p>El modelo de infiltración está basado en la solución lineal de las ecuaciones de Richards, y el flujo de
+agua en el suelo es el resultado de la sumatoria del estado estacionario y el componente transitorio asociado al evento de
+lluvia modelado. La solución para el caso de frontera basal impermeable a una profundidad finita está dada por:</p>
+<p>Donde 𝜓 es la cabeza de presión, 𝑡 el tiempo.</p>
+<p><span class="math notranslate nohighlight">\(𝑍 = 𝑧/𝑐𝑜𝑠 𝛿\)</span></p>
+<p>Donde 𝑍 es la coordenada en dirección vertical (positiva hacia abajo), <span class="math notranslate nohighlight">\(𝑧\)</span> la coordenada en dirección normal al talud y <span class="math notranslate nohighlight">\(δ\)</span> es el ángulo del terreno con la horizontal; <span class="math notranslate nohighlight">\(𝑑\)</span> es la profundidad inicial del nivel en
+dirección vertical.</p>
+<p><span class="math notranslate nohighlight">\(𝐵 = 𝑐𝑜𝑠2𝛿 − \frac{𝐼𝑍𝐿𝑇}{𝐾_𝑠}\)</span></p>
+<p>Donde <span class="math notranslate nohighlight">\(𝐾_𝑠\)</span> es la conductividad hidráulica saturada en dirección <span class="math notranslate nohighlight">\(𝑍\)</span>, <span class="math notranslate nohighlight">\(𝐼𝑍𝐿𝑇\)</span> la tasa de infiltración estacionaria (inicial) en la superficie del suelo. 𝐼𝑛𝑍 es la tasa de infiltración a una intensidad dada para el n-ésimo intervalo de tiempo.</p>
+<p><span class="math notranslate nohighlight">\(𝐷1 = \frac{𝐷_0}{𝑐𝑜𝑠2𝛿}\)</span></p>
+<p>Donde <span class="math notranslate nohighlight">\(𝐷_0\)</span> es la difusividad hidráulica saturada (<span class="math notranslate nohighlight">\(𝐷0 = \frac{𝐾_𝑠}{𝑆_𝑠}\)</span>, donde <span class="math notranslate nohighlight">\(𝑆_𝑠\)</span> es el almacenamiento especifico). 𝑁 es el número total de intervalos y <span class="math notranslate nohighlight">\(𝐻(𝑡 − 𝑡_𝑛)\)</span> es la función de paso de Heaviside, donde <span class="math notranslate nohighlight">\(𝑡_𝑛\)</span> es el tiempo en el n-ésimo intervalo en la secuencia de infiltración de lluvia. La función <span class="math notranslate nohighlight">\(𝑖𝑒𝑟𝑓𝑐\)</span> tiene la forma <span class="math notranslate nohighlight">\(𝑖𝑒𝑟𝑐𝑓 (𝜂) = 1√𝜋exp(−𝜂2) − 𝜂 𝑒𝑟𝑓𝑐 (𝜂)\)</span>, donde <span class="math notranslate nohighlight">\(𝑒𝑟𝑓𝑐(𝜂)\)</span> es la función de error complementario.</p>
+<p>Para estimar los cambios en el factor de seguridad como función de la profundidad (<span class="math notranslate nohighlight">\(Z\)</span>) y el tiempo (<span class="math notranslate nohighlight">\(t\)</span>) se utiliza el modelo de estabilidad de talud infinito de acuerdo con la siguiente ecuación:</p>
+<p><span class="math notranslate nohighlight">\(FS(Z,t)=\frac{tan}{tanδ}+\frac{c'-ψ(Z,t)𝛾_𝑤tanϕ'}{𝛾_sZsenδcosδ}\)</span></p>
+<p>Donde <span class="math notranslate nohighlight">\(𝑐′\)</span> es la cohesión efectiva del suelo, <span class="math notranslate nohighlight">\(𝜙′\)</span> el ángulo de fricción efectivo, <span class="math notranslate nohighlight">\(𝛾𝑤\)</span> el peso unitario del agua, <span class="math notranslate nohighlight">\(𝛾_𝑠\)</span> el peso unitario
+del suelo y <span class="math notranslate nohighlight">\(𝜓(𝑍,𝑡)\)</span> la cabeza de presión en función de la profundidad y el tiempo <span class="math notranslate nohighlight">\(𝑡\)</span>.</p>
+<div class="section" id="tutorial">
+<h4>Tutorial<a class="headerlink" href="#tutorial" title="Permalink to this headline">¶</a></h4>
+<p><em>Elaborado por Maria Isabel Arango</em>.</p>
+<p>Ingrese a la página web <a class="reference external" href="https://pubs.usgs.gov/of/2008/1159/downloads/">TRIGRS</a> y descargue TRIGRS de acuerdo a su sistema operativo. Descomprima el archivo .zip y ábralo. Adicionalmente, puede descargar el <a class="reference external" href="https://pubs.usgs.gov/of/2008/1159/downloads/pdf/OF08-1159.pdf">manual del usuario</a> donde encontrará toda la base teórica detrás del modelo, ilustraciones y un tutorial.</p>
+<p>Como verá, la carpeta TRIGRS contiene varias subcarpetas y archivos en formato <em>txt</em>. TRIGRS y sus programas complementarios (TopoIndex, GridMatch y UnitConvert) no funcionan con una interfaz, sino que se ejecutan en ventanas de entrada y salida simples. Cada programa funciona a través de un ejecutable (<em>exe</em>), los cuales están ubicados en la subcarpeta <em>bin”</em>. A su vez, cada ejecutable utiliza un archivo de inicialización que contiene los datos básicos necesarios para ejecutar el programa, así como los nombres de otros archivos de entrada.</p>
+<p>En este taller, se trabajará sobre una zona de estudio ubicada en el municipio de San Carlos (Antioquia-Colombia) correspondiente a una parte de la cuenca de la quebrada La Arenosa, donde el 21 de septiembre de 1990 se presentó un evento de lluvia extremo que causó cientos de deslizamientos, muchos de los cuales alcanzaron los cauces y causaron una avenida torrencial. En este tutorial se implementará el modelo TRIGRS para identificar las zonas inestables usando los parámetros de la zona de estudio y bajo el escenario de precipitación del 21 de septiembre de 1990. La información requerida para llevar a cabo el análisis de estabilidad con TRIGRS incluye:</p>
+<ul class="simple">
+<li><p>Modelo de elevación digital (DEM)</p></li>
+<li><p>Mapa de pendientes</p></li>
+<li><p>Mapa de dirección de flujo</p></li>
+<li><p>Mapa de profundidad del suelo</p></li>
+<li><p>Propiedades mecánicas e hidrológicas del suelo. En caso de tener varias zonas con propiedades homogéneas, mapa de zonificación del suelo</p></li>
+<li><p>Escenario de precipitación. En caso de ser una precipitación heterogénea espacialmente, mapa espacialisado de las intensidades.</p></li>
+</ul>
+<p>En todos los casos, los mapas que se utilicen deben ser de tipo raster en formato ASCII y deben cumplir con los siguientes criterios:</p>
+<ul class="simple">
+<li><p>Deben estar en el mismo sistema de coordenadas</p></li>
+<li><p>Deben tener las mismas dimensiones</p></li>
+<li><p>Deben estar unidades metro-kilogramo-segundo</p></li>
+</ul>
+<div class="section" id="preparacion-de-los-mapas">
+<h5>Preparación de los mapas<a class="headerlink" href="#preparacion-de-los-mapas" title="Permalink to this headline">¶</a></h5>
+<p>En la carpeta <a class="reference external" href="https://github.com/edieraristizabal/Libro_cartoGeotecnia/tree/master/data/arenosa">Mapas Base</a>, encontrará los siguientes archivos raster. Para descargar los archivos seleccionelo, cuando Github visualice dicho archivo en la parte superior derecha seleccione <em>Raw</em> y con el boton derecho <em>Save as…</em>. Guardelos como archivos ASCII eliminando la terminación <em>txt</em> que sale por defecto.</p>
+<ul class="simple">
+<li><p>dem_arenosa_clip: modelo de elevación digital</p></li>
+<li><p>pendiente_arenosa_clip: pendiente en grados</p></li>
+<li><p>flowdir_arenosa_clip: dirección de flujo en formato ESRI</p></li>
+<li><p>profsuelo_arenosa_clip: mapa con la profundidad del suelo en metros</p></li>
+</ul>
+<div class="figure align-default" id="direccion">
+<a class="reference internal image-reference" href="https://www.researchgate.net/publication/307632379/figure/fig6/AS:404373080428547&#64;1473421463384/D8-ESRI-direction-code-overview.png"><img alt="direccion" src="https://www.researchgate.net/publication/307632379/figure/fig6/AS:404373080428547&#64;1473421463384/D8-ESRI-direction-code-overview.png" style="width: 400px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 60 </span><span class="caption-text">Códigos usados por ESRI para la dirección de flujo
+Profsuelo_Arenosa_Clip: Profundidad del suelo, en metros de la zona de estudio.
+Suelos_Arenosa_Clip: Zonificación de los tipos de suelo presentes en la zona de estudio.</span><a class="headerlink" href="#direccion" title="Permalink to this image">¶</a></p>
+</div>
+<p>Busque el archivo <em>dem_arenosa_clip.asc</em> y ábralo directamente desde el explorador para verlo en el editor de texto. Las primeras 6 líneas forman parte de la información base con la que cuenta todo archivo ASCII: número de columnas, de filas, coordenadas de la primera columna, coordenadas de la primera fila, tamaño de celda y valor para los datos nulos. Todos los archivos tipo ASCII que le ingrese a los archivos ejecutables deben tener valores idénticos de estos parámetros, de lo contrario genera error. Abra los archivos <em>pendiente_arenosa_clip</em>, <em>flowdir_arenosa_clip</em> y <em>profsuelo_arenosa_clip</em>, y compruebe que los parámetros de todos los archivos sean idénticos.</p>
+<p>En GIS abra el raster <em>suelos_arenosa_clip.tif</em>. Explore en la tabla de atributos a cuáles unidades de suelo corresponden las categorías. Ahora, es necesario reclasificar el raster para que el modelo lo entienda, asignándole a cada unidad de suelo un número.
+En caso de utilizar <em>ArcToolbox</em>, vaya a <em>Spatial Analysis &gt; Reclass &gt; Reclassify</em>. En el campo <em>Input raster</em> agregue el raster de suelos, en el campo <em>Reclass Field</em> seleccione <em>Simb_Sue</em>, y reclasifique el raster de la siguiente forma. Guárdelo.</p>
+<p>Tabla 1. Codificación de los tipos de suelo.</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Valores Antiguos</p></th>
+<th class="head"><p>Valores Nuevos</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>POc1 (Aluviales)</p></td>
+<td><p>1</p></td>
+</tr>
+<tr class="row-odd"><td><p>YAe1 (Suelo Residual)</p></td>
+<td><p>2</p></td>
+</tr>
+<tr class="row-even"><td><p>YAf2 (Suelo residual)</p></td>
+<td><p>2</p></td>
+</tr>
+<tr class="row-odd"><td><p>NoData</p></td>
+<td><p>NoData</p></td>
+</tr>
+</tbody>
+</table>
+<p>De esta forma, las unidades de suelo quedan divididas en dos categorías: depósitos aluviales (1) y suelos residuales del Batolito Antioqueño (2). Cada una de estas unidades tiene unas propiedades mecánicas e hidrológicas homogéneas.</p>
+<p>Convierta el raster reclasificado a formato ASCII (<em>Conversion Tools &gt; From Raster &gt; Raster to ASCII</em>). Guárdelo con el nombre <em>suelos_arenosa_reclass_clip.asc</em>. Ábralo con el editor de texto y revise que los parámetros coincidan con los del resto de mapas.</p>
+</div>
+<div class="section" id="ejecucion-de-los-programas">
+<h5>Ejecución de los programas<a class="headerlink" href="#ejecucion-de-los-programas" title="Permalink to this headline">¶</a></h5>
+<p>Una vez tenga lista la información de entrada, debe ejecutar los programas auxiliares y finalmente TRIGRS, que se encuentran en la carpeta <em>bin</em>. Los programas auxiliares tienen como objetivo preparar la información ingresada y crear capas intermedias que son necesarias para el cálculo final. Estos programas deben ejecutarse siempre en el siguiente orden, ya que normalmente, los archivos de salida de uno son los archivos de entrada del siguiente.</p>
+<ul class="simple">
+<li><p>Unit Converter (Opcional): En caso de tener archivos en unidades distintas a las aceptadas por el modelo, este programa permite convertirlas (pfs a Pa, pies a metros, etc).</p></li>
+<li><p>Grid Match: Permite corroborar que todos los archivos ASCII contienen raster con el mismo número de celdas, coordenadas y tamaño de celda.</p></li>
+<li><p>Topo Index: Utiliza el DEM y la dirección de flujo para definir el patrón de distribución del flujo, calcular los factores de ponderación para distribuir la escorrentía de la superficie y calcular los tamaños de la matriz que utilizará TRIGRS para sus cálculos.</p></li>
+<li><p>TRIGRS: Una vez preparados los mapas y generado las capas intermedias, se corre el ejecutable final que realiza los cálculos de presión de poros y factor de seguridad para los instantes de tiempo que usted determine.</p></li>
+</ul>
+<p>Cada ejecutable que se encuentra en la carpeta <em>bin</em> contiene un código que se ejecuta cada vez que se dá doble click sobre el archivo <em>.exe</em>. Estos códigos necesitan para su correcto funcionamiento un archivo de entrada, el cual contiene los parámetros con los que debe correr el código, y es el archivo que usted como usuario debe modificar. Los archivos de entrada los encuentra en la carpeta TRIGRS con los siguientes nombres:</p>
+<ul class="simple">
+<li><p>uc_in.txt. archivo de inicio del Unit Coverter</p></li>
+<li><p>gm_in.txt. Archivo de inicio del Grid Match</p></li>
+<li><p>tpx_in.txt. archivo de inicio de Topo Index</p></li>
+<li><p>tr_in.txt. Archivo deinicio de TRIGRS</p></li>
+</ul>
+<p>Cada vez  que se ejecuta los <em>.exe</em>, este buscará su archivo de inicio en la misma carpeta donde está el archivo <em>.exe</em>. Por lo tanto, organice todos los archivos de inicio de la carpeta TRIGRS en la misma carpeta con los archivos <em>.exe</em>. Trate de conservar los archivos de inicio originales en la carpeta TRIGRS siempre, ya que le serán de utilidad para detectar errores en el archivo que está editando. También, evite cambiar los nombres de los archivos de inicio, ya que esto genera fácilmente errores.</p>
+<p>Dado que toda la información está en formato metro-kilogramo-segundo, no se ejecutará <em>Unit Converter</em>. Siga los siguientes pasos para ejecutar el resto de programas:</p>
+</div>
+<div class="section" id="grid-match">
+<h5>Grid Match<a class="headerlink" href="#grid-match" title="Permalink to this headline">¶</a></h5>
+<p>Grid Match permite asegurarse que todos los archivos tipo ASCII con los que trabajará tienen las mismas dimensiones y no tienen condiciones que generen error. Estas condiciones incluyen también que un mapa tenga una celda nula en la misma ubicación donde otros mapas tienen información.</p>
+<ul class="simple">
+<li><p>Abra el archivo <em>gm_in.txt</em>. Los archivos de entrada tienen un formato de fácil interacción, donde cada parámetro está explicado en su parte superior. Los archivos ya vienen con información cargada a modo de ejemplo, así que usted debe modificar los parámetros según su caso de estudio. También debe separar con comas los parámetros tal cual están separadas sus explicaciones. (Por ejemplo, fíjese en la línea 3 que dice: rows, columns. Eso significa que en la línea 4 usted debe reemplazar el 10, 10 por las dimensiones del DEM con el que trabajará, con el número de filas separado por una coma del número de columnas. Los espacios son indiferentes, la coma designa la separación entre dos parámetros, y el punto es el separador de decimales).</p></li>
+<li><p>En la línea 2, escriba el número de mapas que desea corroborar. En nuestro caso son 5 (DEM, pendiente, dirección de flujo, profundidad del suelo y tipos de suelo).</p></li>
+<li><p>En la línea 4, escriba las dimensiones de los mapas que va a ingresar. Lea estos valores en cualquiera de los archivos ASCII de entrada como <em>nrows</em> y <em>ncols</em>.</p></li>
+<li><p>En las líneas 6 en adelante, usted debe enumerar uno por uno los archivos ASCII que desea corroborar con su ruta de acceso y cada uno en una línea. Ingrese primero el DEM.</p></li>
+<li><p>Para este ejercicio, seguirá la opción más simple de ingreso de los archivos. Para esto, copie y pegue los archivos ASCII de información base (<em>dem_arenosa_clip.asc</em>, <em>pendiente_arenosa_clip.asc</em>, <em>flowdir_arenosa_clip.asc</em>, <em>profsuelo_arenosa_clip.asc</em>, y <em>suelos_arenosa_reclass_clip.asc</em>) en la carpeta donde tenga los ejecutables <em>.exe</em>(sólo copie y pegue los archivos .asc).</p></li>
+<li><p>su archivo gm_in debe lucir así:</p></li>
+</ul>
+<div class="figure align-default" id="gm">
+<a class="reference internal image-reference" href="https://i.pinimg.com/564x/e1/eb/66/e1eb661f2b5c6deffbba5f6e3ed842dc.jpg"><img alt="gm" src="https://i.pinimg.com/564x/e1/eb/66/e1eb661f2b5c6deffbba5f6e3ed842dc.jpg" style="width: 600px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 61 </span><span class="caption-text">Archivo <em>gm_in.txt</em></span><a class="headerlink" href="#gm" title="Permalink to this image">¶</a></p>
+</div>
+<ul class="simple">
+<li><p>Una vez termine de editar el archivo <em>gm_in</em>, guarde los cambios.</p></li>
+<li><p>Ejecute <em>gridmatch.exe</em>.</p></li>
+<li><p>Mientras el programa se ejecuta, aparecerá una ventana negra mostrando el avance. Dado que el Grid Match sigue un proceso simple, normalmente su tiempo de ejecución no es mayor a dos segundos, después de los cuales la ventana se cerrará, en caso de que no hayan errores. En caso de que exista algún error con los mapas, la ventana le mostrará de qué se trata el error (le dirá cuál mapa tiene problemas y cuál es el error).</p></li>
+<li><p>Cada vez que un ejecutable termina de realizar su proceso, genera un archivo <em>txt</em> de resumen donde especifica tiempo de ejecución, resultados y ubicación de los archivos de salida. Este archivo resumen se genera en la misma carpeta donde está el ejecutable, y tiene el nombre del ejecutable + Log (GridMatchLog, TopoIndexLog, etc.). Busque y abra el archivo <em>GridMatchLog.txt</em>.</p></li>
+<li><p>Dentro del archivo, usted verá en las líneas 1-6 información sobre la corrida y en las líneas 7 -8 la copia del archivo de inicio. En las líneas 20-57, realiza un resumen de cada uno de los mapas que se revisaron, especificando el número de errores que se encontraron en cada uno. Finalmente, le muestra una confirmación de que Grid Match terminó normalmente, con lo que ya puede estar seguro de que los datos de entrada están libres de errores.</p></li>
+</ul>
+</div>
+<div class="section" id="topo-index">
+<h5>Topo index<a class="headerlink" href="#topo-index" title="Permalink to this headline">¶</a></h5>
+<p>Topo Index permite calcular los tamaños de matriz para TRIGRS y preparar datos de enrutamiento de escorrentía. Utiliza el DEM y las direcciones de flujo para determinar el orden correcto para los cálculos de enrutamiento de escorrentía y para calcular los factores de ponderación que determinan cómo se distribuye el exceso de agua a las celdas de las cuadrículas adyacentes.</p>
+<ul class="simple">
+<li><p>Abra el archivo txp_in.txt</p></li>
+<li><p>En la línea 2, ingrese el nombre del proyecto (La Arenosa Clip). Este nombre puede incluir letras, números y espacios.</p></li>
+<li><p>Los primeros dos valores de la línea 4 corresponden al número de filas y columnas de los archivos ASCII que se ingresarán (83, 74). El tercer valor corresponde al formato de codificación que tiene el mapa de dirección de flujo. Dado que el mapa que se le entregó está en formato ESRI, el valor correspondiente es 1.</p></li>
+<li><p>El primer valor de la línea 6 corresponde al exponente (ω) que determina el factor de ponderación para la distribución de escorrentía en las celdas adyacentes. Usted puede darle un valor al exponente:</p></li>
+</ul>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Exponente</p></th>
+<th class="head"><p>Patrón de distribución de la escorrentía</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>ω &lt; 0</p></td>
+<td><p>Estrecho, el flujo sólo se distribuye a una o dos celdas adyacentes</p></td>
+</tr>
+<tr class="row-odd"><td><p>ω = 0</p></td>
+<td><p>En forma de abanico, distribución uniforme a celdas adyacentes</p></td>
+</tr>
+<tr class="row-even"><td><p>0 &lt; ω &lt;= 20</p></td>
+<td><p>En forma de abanico, la distribución favorece a celdas inferiores</p></td>
+</tr>
+<tr class="row-odd"><td><p>ω &gt; 20</p></td>
+<td><p>Estrecho, escorrentía se distribuye por zonas escarpadas</p></td>
+</tr>
+</tbody>
+</table>
+<p>En la página 42 del manual del usuario, usted puede consultar las fórmulas de las ponderaciones según los valores que toma el exponente ω. Para este ejercicio, trabaje con un valor de -1.</p>
+<ul class="simple">
+<li><p>El segundo valor en la línea 6 especifica el número máximo de iteraciones que debe usar Topo Index para crear el orden para el cálculo de la escorrentía. Cuando su DEM tiene errores hidrológicos, Topo Index arreglará el error y empezará una nueva iteración. Este proceso terminará cuando el enrutamiento converja, o cuando se alcance el número máximo de iteraciones que usted defina. Para este ejercicio, defina el número de iteraciones a 100.</p></li>
+<li><p><strong>Recomendación</strong>: <em>Empiece con un número estándar de 100 iteraciones, y si el enrutamiento no converge, llévelas a 200. Si finalmente su archivo no converge, probablemente deba reparar su DEM en ArcGis realizando un Fill</em>.</p></li>
+<li><p>En las líneas 8 y 10 ingrese, respectivamente, la ruta de  los archivos del DEM y de la dirección de flujo (siga los lineamientos de la Nota 2)</p></li>
+<li><p>Las líneas 11, 13, 15, 17 y 19 le hace preguntas específicas sobre si desea guardar archivos intermedios del procesamiento. A estas preguntas usted debe contestar con T = Si (True), o F = No (False). Dado que estos archivos son necesarios para ejecutar TRIGRS más adelante, responda con T a todas ellas.</p></li>
+<li><p>En la línea 22, debe ingresar la ruta de la carpeta donde desea guardar los archivos intermedios que se generarán después de correr el Topo Index. Puede crear una subcarpeta dentro de la carpeta <em>bin</em> que se llame <em>intermedios</em>, y especificar la carpeta. Tenga en cuenta asignar al final el <em>backslash</em> ().</p></li>
+<li><p>Finalmente, en la línea 24 usted debe ingresar un código que se asignará a los archivos generados.</p></li>
+<li><p><strong>Recomendación</strong>: <em>Asígnele un código numérico que designe el lugar y el número de la corrida. En este caso, asigne el código Arenosa_01</em></p></li>
+<li><p>Cuando termine de editar el archivo tpx_in, guarde los cambios. Su archivo debe lucir así:</p></li>
+</ul>
+<div class="figure align-default" id="id1">
+<a class="reference internal image-reference" href="https://i.pinimg.com/564x/8c/87/62/8c87622bebacf2962926c5321a6d64f1.jpg"><img alt="gm" src="https://i.pinimg.com/564x/8c/87/62/8c87622bebacf2962926c5321a6d64f1.jpg" style="width: 600px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 62 </span><span class="caption-text">Archivo gm_in.txt</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+</div>
+<ul class="simple">
+<li><p>Ejecute el programa TopoIndex.exe.</p></li>
+<li><p>Cuando el proceso finalice, busque y abra el archivo TopoIndexLog.txt. El archivo resumen incluye, igual que el GridMatchLog, información del tiempo de ejecución y una copia del archivo de inicio. A partir de la línea 34, se puede ver un resumen del proceso de corrección de errores en cada iteración. En este caso, sólo tomaron 3 iteraciones para que el programa calculara las rutas de escorrentía arreglando los errores que fue encontrando. En la línea 55 se encuentra la información del número de celdas en el cálculo de escorrentía, y a partir de la línea 57 se encuentra la confirmación de que no hubo problemas durante el proceso de cálculo.</p></li>
+<li><p>Abra la carpeta “intermedios”. En ella, podrá ver los siguientes archivos:</p></li>
+</ul>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Archivo</p></th>
+<th class="head"><p>Descripción</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>TIdsneiList_Arenosa.txt</p></td>
+<td><p>Lista de celdas receptoras en pendiente descendente en la dirección del flujo D8 (2)</p></td>
+</tr>
+<tr class="row-odd"><td><p>TIdscelGrid_Arenosa.txt</p></td>
+<td><p>Raster de celdas receptoras en pendiente descendente en la dirección del flujo D8 (1)</p></td>
+</tr>
+<tr class="row-even"><td><p>TIcelindxGrid_Arenosa.txt</p></td>
+<td><p>Raster de índice de celda que especifica el orden de cálculo para el enrutamiento de escorrentía en TRIGRS</p></td>
+</tr>
+<tr class="row-odd"><td><p>TIcelindxList_Arenosa.txt</p></td>
+<td><p>Lista de números de celda y número de índice correspondiente (orden de cálculo)</p></td>
+</tr>
+<tr class="row-even"><td><p>TIflodirGrid_Arenosa.txt</p></td>
+<td><p>Raster de dirección de flujo</p></td>
+</tr>
+<tr class="row-odd"><td><p>TIdscelList_Arenosa.txt</p></td>
+<td><p>Lista de celdas en pendiente descendente para las cuales se han calculado factores de ponderación distintos de cero (3)</p></td>
+</tr>
+<tr class="row-even"><td><p>TIwfactorList_Arenosa.txt</p></td>
+<td><p>Lista de factores de ponderación para las celdas receptoras en pendiente descendente (4)</p></td>
+</tr>
+</tbody>
+</table>
+<p>Los números en paréntesis denotan el orden en el que se deberán ingresar estos archivos en el archivo de inicio de TRIGRS, que verá más adelante.</p>
+</div>
+<div class="section" id="trigrs">
+<h5>TRIGRS<a class="headerlink" href="#trigrs" title="Permalink to this headline">¶</a></h5>
+<p>TRIGRS se basa en la suposición de la infiltración unidimensional (únicamente hacia abajo) en un campo de flujo constante para determinar los cambios en la presión de poros en un modelo de talud infinito y la estabilidad de los suelos poco profundos durante las tormentas. TRIGRS incluye modelos para condiciones iniciales saturadas y no-saturadas. Para condiciones iniciales saturadas, cada simulación con TRIGRS analiza un único punto en el tiempo especificado por el usuario durante una secuencia de tormenta. Por lo tanto, el usuario ejecuta una serie de simulaciones para diferentes tiempos específicos utilizando TRIGRS para estudiar el historial de tiempo de inestabilidad de la ladera durante una secuencia de lluvia. Para condiciones iniciales no-saturadas, TRIGRS puede analizar una serie de tiempo completa durante una única simulación.</p>
+<p>Abra el archivo <em>tr_in.txt</em>. Este archivo contiene varios tipos de información que debemos ingresar:</p>
+<ul class="simple">
+<li><p>En este taller, se modela con condiciones saturadas y luego con condiciones no saturadas, para compararar los resultados. Primero, realice la modelación usando los parámetros sugeridos en la columna <em>Valor Arenosa Sat</em>. Después, la modelación usando los parámetros sugeridos en la columna <em>Valor Arenosa no Sat</em></p></li>
+<li><p>En la línea 2, debe ingresar el nombre del proyecto. Defínalo como <em>Arenosa Clip</em></p></li>
+<li><p>En los primeros cuatro valores de la línea 4 debe ingresar los datos de tamaño de matriz y dimensiones del cálculo de escorrentía. Copie estos valores del archivo <em>TopoIndexLog</em> (<em>Data cells</em>, <em>Rows</em>, <em>Columns</em>, <em>Downslope cells</em>) que corresponden, respectivamente, a los campos <em>imax</em>, <em>row</em>, <em>col</em>, <em>nwf</em> en el archivo de inicio de TRIGRS. Los parámetros <em>tx</em>, <em>nmax</em>, y todos los demas en las lineas siguientes se explican a continuación:</p></li>
+</ul>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Parámetro</p></th>
+<th class="head"><p>Descripción</p></th>
+<th class="head"><p>Rango de valores</p></th>
+<th class="head"><p>Valor Arenosa Sat</p></th>
+<th class="head"><p>Valor Arenosa No Sat</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>tx</p></td>
+<td><p>En combinación con nper, determina cuántos intervalos de tiempo se utilizan en los cálculos. El esfuerzo computacional y los requisitos de almacenamiento aumentan directamente con tx. En condiciones saturadas, se puede establecer en 1 para permitir que TRIGRS calcule una solución lo más rápidamente posible durante un tiempo transcurrido en particular.</p></td>
+<td><p>tx≥1</p></td>
+<td><p>1</p></td>
+<td><p>10</p></td>
+</tr>
+<tr class="row-odd"><td><p>nmax</p></td>
+<td><p>Número máximo de raíces de la ecuación que calcula la conductividad hidráulica de la zona no saturada (Ecuación 6 del manual del usuario).  Si se ingresa un valor negativo, TRIGRS asumirá que trabajará en condiciones saturadas.</p></td>
+<td><p>nmax≥1</p></td>
+<td><p>-1</p></td>
+<td><p>30</p></td>
+</tr>
+<tr class="row-even"><td><p>nzs</p></td>
+<td><p>Determina el número de incrementos verticales en que será dividida la capa de suelo para calcular presión de poros y factor de seguridad. Mayor número de incrementos dará como resultado un análisis más detallado en profundidad, pero aumenta de forma considerable el tiempo de cálculo.</p></td>
+<td><p>nzs≥1</p></td>
+<td><p>10</p></td>
+<td><p>10</p></td>
+</tr>
+<tr class="row-odd"><td><p>mmax</p></td>
+<td><p>Un valor negativo indica el cálculo de presiones de poros siguiendo la Ecuación 1 del manual del usuario, la cual utiliza un modelo de profundidad infinita. Un valor positivo indica el cálculo de presiones de poros siguiendo la Ecuación 2 del manual del usuario, la cual asume una superficie impermeable a una profundidad finita. El valor positivo indica el valor máximo de la Ecuación 2. Ambas ecuaciones se usan únicamente en condiciones saturadas.</p></td>
+<td><p><span class="math notranslate nohighlight">\(10&lt;mmax&lt;25\)</span></p></td>
+<td><p>20</p></td>
+<td><p>Indiferente, use cualquier valor</p></td>
+</tr>
+<tr class="row-even"><td><p>nper</p></td>
+<td><p>Número de periodos de lluvia</p></td>
+<td><p>nper&gt;1</p></td>
+<td><p>7</p></td>
+<td><p>7</p></td>
+</tr>
+<tr class="row-odd"><td><p>zmin</p></td>
+<td><p>Mínima profundidad para calcular presiones de poros.</p></td>
+<td><p>0.001≤zmin≤0.1</p></td>
+<td><p>0.001</p></td>
+<td><p>0.001</p></td>
+</tr>
+<tr class="row-even"><td><p>uww</p></td>
+<td><p>Peso unitario del agua (9800 kg-m)</p></td>
+<td><p>uwwr&gt;0</p></td>
+<td><p>9.8e3</p></td>
+<td><p>9.8e3</p></td>
+</tr>
+<tr class="row-odd"><td><p>t</p></td>
+<td><p>Tiempo, en segundos, que desea modelar. En este ejemplo se utilizarán 7 h</p></td>
+<td><p>nper&gt;0</p></td>
+<td><p>25200</p></td>
+<td><p>25200</p></td>
+</tr>
+<tr class="row-even"><td><p>zones</p></td>
+<td><p>Número de zonas de suelo con propiedades mecánicas homogéneas</p></td>
+<td><p>zones&gt;1</p></td>
+<td><p>2</p></td>
+<td><p>2</p></td>
+</tr>
+<tr class="row-odd"><td><p>zmax</p></td>
+<td><p>Profundidad máxima de suelo en que se calcularán presiones de poro y el factor de seguridad. Para no gastar recursos computacionales de forma innecesaria, determine esta profundidad como la de probable falla. Si es un valor homogéneo para toda la zona de estudio, ingrese el valor positivo de la profundidad, en metros. En caso de que sea un valor heterogéneo espacialmente, ingrese un valor negativo y más adelante podrá ingresar un mapa con los valores de la profundidad. En el caso de la Arenosa, esta superficie de falla coincide con la de profundidad del suelo, la cual es heterogénea.</p></td>
+<td><p><span class="math notranslate nohighlight">\(czmax&gt; zmin\)</span>; si <span class="math notranslate nohighlight">\(zmax&lt;0\)</span>, leer valores del raster</p></td>
+<td><p>-1</p></td>
+<td><p>-1</p></td>
+</tr>
+<tr class="row-even"><td><p>depth</p></td>
+<td><p>Profundidad inicial del nivel freático. Si es un valor homogéneo en toda la zona de estudio, ingrese el valor de la profundidad, en metros. Si es un valor heterogéneo espacialmente, ingrese un valor negativo y más adelante podrá ingresar un mapa con los valores de profundidad. Para la Arenosa, asumirá que en condiciones no saturadas el nivel freático se encontraba a 3.5 metros de profundidad.</p></td>
+<td><p><span class="math notranslate nohighlight">\(0&lt;depth≤zmax; si depth&lt;0, leer valores del raster\)</span></p></td>
+<td><p>0.5</p></td>
+<td><p>3.5</p></td>
+</tr>
+<tr class="row-odd"><td><p>rizero</p></td>
+<td><p>Tasa de infiltración del suelo antes de la tormenta. Si es un valor homogéneo en toda la zona de estudio, ingrese el valor de metros/segundo. Si es un valor heterogéneo espacialmente, ingrese un valor negativo y más adelante podrá ingresar un mapa con los valores.</p></td>
+<td><p><span class="math notranslate nohighlight">\(0&lt;rizero, si rizero&lt;0, leer valores del raster\)</span></p></td>
+<td><p>6.94e-6</p></td>
+<td><p>6.94e-6</p></td>
+</tr>
+<tr class="row-even"><td><p>Min_Slope_Angle</p></td>
+<td><p>Ángulo de inclinación mínimo; no hay cálculos de presión de poro o factor de seguridad en pendientes inferiores a Min_slope_angle.</p></td>
+<td><p><span class="math notranslate nohighlight">\(Min_slope_angle ≥0 \)</span></p></td>
+<td><p>0</p></td>
+<td><p>0</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="propiedades-fisicas-del-suelo">
+<h5>Propiedades físicas del suelo<a class="headerlink" href="#propiedades-fisicas-del-suelo" title="Permalink to this headline">¶</a></h5>
+<p>Las propiedades de las unidades del suelo se deben ingresar como lo muestran las líneas 9-11 del archivo <em>tr_in</em>. En la primera línea se debe ingresar el número que asignó a la unidad de suelo, y en la segunda y tercera línea están las propiedades del suelo correspondientes. En el archivo de inicio por defecto ya están creados los campos para dos unidades de suelo, sin embargo, si usted está trabajando con una zona de estudio que incluya más unidades, debe crear los campos para cada uno de forma consecutiva en los campos inferiores. En este taller trabajará con las dos unidades de suelo presentes en el raster que se le entregó. Recuerde que a la unidad de depósitos aluviales (POc1) se le asignó el número 1, y a los suelos residuales de Batolito Antioqueño (YAE1-YAF2), se les asignó el número 2. Ingrese los parámetros recomendados a continuación, los cuales no varían en ambas modelaciones (condición saturada y no saturada), excepto por el ultimo parámetro, alpha. Recuerde también conservar siempre las unidades Kg-m-s.</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Parámetro</p></th>
+<th class="head"><p>Descripción</p></th>
+<th class="head"><p>POc1</p></th>
+<th class="head"><p>YAE1-YAF2</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>cohesion</p></td>
+<td><p>Cohesión del suelo en Pa</p></td>
+<td><p>1000</p></td>
+<td><p>5000</p></td>
+</tr>
+<tr class="row-odd"><td><p>phi</p></td>
+<td><p>Angulo de fricción del suelo en °</p></td>
+<td><p>34</p></td>
+<td><p>24</p></td>
+</tr>
+<tr class="row-even"><td><p>uws</p></td>
+<td><p>Peso unitario saturado en N/m3</p></td>
+<td><p>20000</p></td>
+<td><p>18000</p></td>
+</tr>
+<tr class="row-odd"><td><p>diffus</p></td>
+<td><p>Difusividad hidráulica (m2/s)</p></td>
+<td><p>5.33e-4</p></td>
+<td><p>2.18e-3</p></td>
+</tr>
+<tr class="row-even"><td><p>K-sat</p></td>
+<td><p>Conductividad hidráulica vertical del suelo saturado (m/s)</p></td>
+<td><p>5.33e-6</p></td>
+<td><p>2.18e-5</p></td>
+</tr>
+<tr class="row-odd"><td><p>Theta-sat</p></td>
+<td><p>Contenido volumétrico de agua de suelo saturado</p></td>
+<td><p>0.48</p></td>
+<td><p>0.46</p></td>
+</tr>
+<tr class="row-even"><td><p>Thera-res</p></td>
+<td><p>Contenido volumétrico residual de agua</p></td>
+<td><p>0.18</p></td>
+<td><p>0.18</p></td>
+</tr>
+<tr class="row-odd"><td><p>Alpha</p></td>
+<td><p>Parámetro de distribución del tamaño del suelo (1/m). Un valor positivo indicará a TRIGRS el uso de la solución no saturada, un valor negativo indica el uso de la solución saturada.</p></td>
+<td><p>2.3 en modelación no saturada, -2.3 en modelación saturada</p></td>
+<td><p>2.3 en modelación no saturada, -2.3 en modelación saturada</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="intensidad-del-escenario-de-lluvia-e-incrementos-de-tiempo">
+<h5>Intensidad del escenario de lluvia e incrementos de tiempo<a class="headerlink" href="#intensidad-del-escenario-de-lluvia-e-incrementos-de-tiempo" title="Permalink to this headline">¶</a></h5>
+<p>La siguiente figura muestra el registro de precipitación obtenido de un pluviómetro ubicado en la cuenca de La Arenosa el día del evento.</p>
+<div class="figure align-default" id="lluvia">
+<a class="reference internal image-reference" href="https://i.pinimg.com/564x/0a/bf/a1/0abfa1b6cc96eac96fa242fc76cbfa47.jpg"><img alt="lluvia" src="https://i.pinimg.com/564x/0a/bf/a1/0abfa1b6cc96eac96fa242fc76cbfa47.jpg" style="width: 600px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 63 </span><span class="caption-text">Registro de precipitación del evento del 21/09/1990 en la cuenca La Arenosa</span><a class="headerlink" href="#lluvia" title="Permalink to this image">¶</a></p>
+</div>
+<p>La tormenta comenzó a las 8:00 pm del día del evento y terminó a las 2:00 am del día siguiente. Usted modelará la estabilidad de la cuenca durante las 7 horas de duración de la tormenta (7 horas= 25.200 segundos, que corresponde al valor ingresado en el campo t de los parámetros de modelación). Como verá el registro de precipitación está dado en escala horaria (7 horas de tormenta con registro de intensidad horaria corresponde al valor ingresado en el campo nper de los parámetros de modelación).</p>
+<ul class="simple">
+<li><p>En la línea 16 del archivo <em>tr_in</em> usted debe ingresar las diferentes intensidades de cada periodo de tiempo registrado, en m/s. (Ojo: Si usted ingresó el número 7 en el campo nper de los parámetros de simulación, debe ingresar exactamente 7 valores de intensidad de lluvia).</p></li>
+<li><p>En la línea 18, debe ingresar los intervalos de tiempo, en segundos, a los que corresponde cada valor de intensidad que ingresó anteriormente. Dado que el primer valor debe ser cero, esta línea debe incluir el número de intervalos + 1 valores. (Si usted ingresó el número 7 en nper, debe incluir 8 valores en los intervalos de tiempo) .</p></li>
+</ul>
+<p>Para el caso de la Arenosa, incluya los siguientes valores de intensidades de lluvia e intervalos de tiempo.</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Capt (s)</p></th>
+<th class="head"><p>Cri (m/s)</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>0</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p>3600</p></td>
+<td><p>1.58e-05</p></td>
+</tr>
+<tr class="row-even"><td><p>7200</p></td>
+<td><p>1.58e-05</p></td>
+</tr>
+<tr class="row-odd"><td><p>10800</p></td>
+<td><p>2.50e-05</p></td>
+</tr>
+<tr class="row-even"><td><p>14400</p></td>
+<td><p>3.60e-06</p></td>
+</tr>
+<tr class="row-odd"><td><p>18000</p></td>
+<td><p>2.22e-06</p></td>
+</tr>
+<tr class="row-even"><td><p>21600</p></td>
+<td><p>1.11e-06</p></td>
+</tr>
+<tr class="row-odd"><td><p>25200</p></td>
+<td><p>1.11e-06</p></td>
+</tr>
+</tbody>
+</table>
+<p>En el caso de que la intensidad de precipitación no esté como un valor homogéneo en el espacio sino como mapas de intensidades, usted debe ingresar en los campos Cri(n) valores negativos (tantos valores como periodos de tiempo nper) para dar a entender que va a ingresar más adelante mapas de intensidad de precipitación.</p>
+</div>
+<div class="section" id="archivos-de-entrada">
+<h5>Archivos de entrada<a class="headerlink" href="#archivos-de-entrada" title="Permalink to this headline">¶</a></h5>
+<p>En las siguientes líneas, debe ingresar las rutas de los archivos que entrada que TRIGRS le requiera. Recuerde que en la sección de ingreso de parámetros de computación, cuando una propiedad era heterogénea en el área de estudio, usted podía ingresar un valor negativo, que indica que los valores se deben leer de un raster. En caso de que la propiedad fuera homogénea para toda la zona de estudio, usted podía ingresar un valor positivo, que se tomaba como constante en todo el área.</p>
+<p>Ahora, cuando usted indique un valor negativo en la sección de parámetros de computación, debe ingresar la ruta del respectivo raster en la línea donde TRIGRS lo requiera. Cuando usted haya ingresado un valor positivo homogéneo para toda el área de estudio, en el lugar donde TRIGRS le requiera el mapa correspondiente, usted debe ingresar la palabra <em>none</em>, para indicar que es un valor homogéneo.</p>
+<ul class="simple">
+<li><p>En las líneas 20, 22 y 24 ingrese, respectivamente, las rutas de los archivos <em>pendiente_arenosa_clip.asc</em> , <em>suelos_arenosa_reclass_clip.asc</em> y <em>profsuelo_arenosa_clip.asc</em>.</p></li>
+<li><p>En la línea 26 debe ingresar el mapa de profundidad del nivel freático. Dado que usted asumirá para este ejercicio un nivel freático constante de 0.5 metros para condiciones saturadas y 3.5 metros para condiciones no saturadas, y que ya ingresó los valores positivos en los parámetros de computación, escriba la palabra <em>none</em>. Haga lo mismo en la línea 28, donde debe ingresar el mapa de tasa de infiltración del suelo, la cual usted ya definió con un valor homogéneo.</p></li>
+<li><p>En la línea 29 se le pide que ingrese los mapas de intensidad de precipitación. Dado que usará los valores constantes que ya ingresó, escriba 7 veces la palabra none, cada una en una línea independiente.</p></li>
+<li><p>En las líneas siguientes, debe ingresar las rutas de los archivos generados por TopoIndex. Tenga en cuenta el orden en el que los debe ingresar, el cual está escrito en paréntesis en la Tabla.</p></li>
+</ul>
+</div>
+<div class="section" id="archivos-de-salida">
+<h5>Archivos de salida<a class="headerlink" href="#archivos-de-salida" title="Permalink to this headline">¶</a></h5>
+<p>En las siguientes líneas, debe especificar las opciones de los archivos de salida de TRIGRS.</p>
+<ul class="simple">
+<li><p>Debe especificar la carpeta donde desea que TRIGRS guarde los archivos de salida. Deje la línea en blanco si desea colocar los archivos en la misma carpeta donde está el archivo de programa ejecutable TRIGRS. En este caso, cree la carpeta Resultados dentro de la carpeta bin, y especifíquela como la carpeta donde desea que se guarden los archivos de salida. No olvide siempre terminar con <em>backslash</em> ()</p></li>
+<li><p>En la siguiente línea, debe especificar el código que tendrán los archivos de salida, defínalo como <em>Sat</em> para la modelación saturada, y como <em>No_Sat</em> para la modelación no saturada.</p></li>
+<li><p>En las siguientes líneas, le hace preguntas específicas sobre si desea guardar archivos de salida. A estas preguntas usted debe contestar con T = Si (True), o F = No (False). Deje las respuestas por defecto que ya están en el archivo.</p></li>
+<li><p>En una de las preguntas debe especificar si desea que TRIGRS genere una lista detallada de la presión de poros y el factor de seguridad a profundidad para cada celda del raster. Para este taller configure el indicador de salida en -2 para generar una lista completa. Cuando trabaje raster grandes, es mejor desactivar la salida de la lista detallada estableciendo el indicador en 0 para ahorrar espacio en el disco.</p></li>
+<li><p>Después de las preguntas, debe ingresar el número de pasos intermedios en los que desea generar archivos de salida y los intervalos de tiempo en los que deben ser generados. Por ejemplo, si a usted solo le interesa conocer el factor de seguridad y presión de poros al final de la tormenta, debe ingresar el número 1 en el número de veces y en los intervalos de tiempo debe ingresar el tiempo final de la tormenta, en segundos. Si desea conocer al factor de seguridad en la mitad de la tormenta y en el final, ingrese el número 2 y los tiempos de la mitad y final de la tormenta. Para este ejercicio, genere mapas al inicio de la tormenta y después cada hora para conocer las variaciones horarias de la presión de poros y la estabilidad. Ingrese el número 8 en las veces que desea generar mapas, e ingrese los segundos correspondientes a cada hora (0, 3600, 7200, 10800, 14400, 18000, 21600, 25200).</p></li>
+<li><p>En la pregunta de si desea saltarse otros pasos de tiempo, responda F.</p></li>
+</ul>
+</div>
+<div class="section" id="otras-opciones-de-usuario">
+<h5>Otras opciones de usuario<a class="headerlink" href="#otras-opciones-de-usuario" title="Permalink to this headline">¶</a></h5>
+<p>Existen otras opciones de usuario explicadas a continuación. Defina los valores para este ejercicio como se indica en paréntesis:</p>
+<ul class="simple">
+<li><p>Opción de usar una solución analítica para la porosidad rellenable permite al usuario elegir la opción “Solución analítica eficiente” que converge rápidamente para tiempos intermedios y posteriores, o una integración numérica para tiempos muy pequeños (T)</p></li>
+<li><p>Opción de estimar presión de poros positiva en la zona de nivel freático en aumento permite guardar en el disco ya sea la presión de poros positiva debajo del nivel freático ascendente (ingrese <em>T</em>) o los cálculos de la presión de poros negativa sobre el nivel freático inicial (ingresar <em>F</em>). (T)</p></li>
+<li><p>La opción psi0=-1/alpha: Permite a TRIGRS usar los cálculos no-saturados en toda la zona sobre el nivel freático inicial, o solo sobre la zona de ascendencia capilar. El uso de la segunda opción (solo por encima de la franja capilar) tiende a producir un aumento más rápido del nivel freático, debido a que los modelos de infiltración no-saturada operan en una capa más delgada, pero pueden producir una mejor aproximación de la curva característica del suelo-agua. (F)</p></li>
+<li><p>La opción de registrar resultados de balance de masa permite verificar el comportamiento de la solución de zona insaturada para combinaciones particulares de parámetros. Esta opción es principalmente para uso en las primeras etapas del modelado en celdas de prueba. El registro del balance de masa durante las simulaciones en raster grandes ralentizará los cálculos y aumentará en gran medida los requisitos de almacenamiento en disco. (T)</p></li>
+<li><p>La opción de dirección del flujo: Permite al usuario anular la pendiente predeterminada de la línea que determina los valores máximos permitidos de las presiones de poro calculadas. (<em>gener</em>)
+Cuando termine de ingresar los parámetros del archivo de inicio, guarde los cambios y dé doble clic sobre el ejecutable <em>TRIGRS.exe</em>.</p></li>
+</ul>
+</div>
+<div class="section" id="visualizar-los-resultados">
+<h5>Visualizar los resultados<a class="headerlink" href="#visualizar-los-resultados" title="Permalink to this headline">¶</a></h5>
+<p>Mientras que TRIGRS se ejecuta, aparecerá una ventana negra mostrando el avance de los cálculos. Dependiendo del tamaño del raster que esté analizando, este proceso podría tomar desde minutos hasta días. Cuando el proceso termina, la ventana se cierra, en caso de que no haya errores. En caso de que exista algún error con los mapas o el archivo de inicio, la ventana le mostrará de qué se trata el error y la línea que debe revisar en su archivo de inicio.
+Cuando terminen los cálculos, abra el archivo TrigrsLog.txt y examínelo.</p>
+<p>Abra la carpeta Resultados. Dentro de la carpeta se encuentran los siguientes archivos de salida:</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Archivo</p></th>
+<th class="head"><p>Descripción</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>TRrunoffPer”x”Sat.txt</p></td>
+<td><p>Raster de escorrentía computada durante un período de tormenta dado; <em>x</em> designa el período de tormenta</p></td>
+</tr>
+<tr class="row-odd"><td><p>TRfs_min_Sat__”x”.txt</p></td>
+<td><p>Raster del factor de seguridad mínimo calculado en cada celda por tiempo, <em>x</em> denota el periodo de la tormenta.</p></td>
+</tr>
+<tr class="row-even"><td><p>TRz_at_fs_min_Sat__”x”.txt</p></td>
+<td><p>Raster de profundidades en la que se calculó el factor de seguridad mínimo para el tiempo del intervalo <em>x</em>.</p></td>
+</tr>
+<tr class="row-odd"><td><p>TRp_at_fs_min_Sat__ ”x.txt</p></td>
+<td><p>Raster de presión de poros en la profundidad correspondiente al factor mínimo de seguridad en el intervalo <em>x</em>.</p></td>
+</tr>
+<tr class="row-even"><td><p>TRinfilratPer”x”Sat_.txt</p></td>
+<td><p>Raster de tasas de infiltración reales durante un período de tormenta dado <em>x</em>.</p></td>
+</tr>
+<tr class="row-odd"><td><p>TRlist_z_p_fs_Sat_.txt</p></td>
+<td><p>Lista celda por celda de presión y factor de seguridad en cada incremento de profundidad.</p></td>
+</tr>
+<tr class="row-even"><td><p>TRnon_convrg_SZ_Sat_.txt o TRnon_convrg_UZ_Sat_.txt</p></td>
+<td><p>Archivos de raster que localizan celdas no convergentes. Se generan automáticamente si los cálculos de series infinitas en cualquier celda no convergen. UZ denota zona insaturada, SZ denota zona saturada.</p></td>
+</tr>
+</tbody>
+</table>
+<div class="figure align-default" id="saturado">
+<a class="reference internal image-reference" href="https://i.pinimg.com/564x/51/43/7e/51437e91abf650c9b6a1042f8ada9053.jpg"><img alt="saturado" src="https://i.pinimg.com/564x/51/43/7e/51437e91abf650c9b6a1042f8ada9053.jpg" style="width: 600px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 64 </span><span class="caption-text">Archivo de inicio de TRIGRS para condiciones saturadas</span><a class="headerlink" href="#saturado" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="factor-detonante-sismo">
+<h2>Factor detonante sismo<a class="headerlink" href="#factor-detonante-sismo" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="analisis-seudoestatico">
+<h3>Análisis seudoestático<a class="headerlink" href="#analisis-seudoestatico" title="Permalink to this headline">¶</a></h3>
+<p>El método seudoestático es una generalización del
+análisis de estabilidad por equilibrio límite, en el
+cual los efectos de los sismos son representados
+por una fuerza estática equivalente cuya magnitud
+es producto del coeficiente sísmico k y el peso de
+la masa que potencialmente se va a deslizar [48].
+Este método evalúa los efectos sísmicos como una
+fuerza permanente unidireccional, mediante la simulación del incremento de las fuerzas inerciales
+debido a la aceleración de un sismo, suponiendo
+que las fuerzas sísmicas son proporcionales al peso
+de la masa deslizante. Usualmente, solo se adiciona la fuerza sísmica en la componente horizontal
+en el análisis de equilibrio límite y se consideran
+los efectos de las fuerzas verticales cercanos a cero
+[31]. Para calcular el Factor de Seguridad (fs), Matasovic [49] propone la ecuación (1):</p>
+<p>donde c es la cohesión, φ es el ángulo de fricción efectiva, γs
+es el peso unitario de los materiales, θ es el ángulo de la pendiente, z es el espesor
+del estrato deslizable, γw es el peso unitario del
+agua, kh es el coeficiente horizontal seudoestático
+y hw es la distancia al nivel freático medido desde
+la superficie.
+Para la parametrización de las propiedades
+geomecánicas de los suelos que conforman el área
+urbana del municipio de Barbosa se utilizó la zonificación geotécnica elaborada en los estudios de
+microzonificación sísmica para el Valle de Aburrá,
+donde se realizaron perforaciones y ensayos de laboratorio con correlaciones de ensayos de penetración estándar [7], [18]. Esta zonificación se detalló
+a partir de información geotécnica suministrada por el municipio de estudios locales de suelos
+para propósitos constructivos. Para la pendiente
+se utilizó el modelo digital de elevación con resolución espacial de 2 m elaborado por el Instituto
+Geográfico Agustín Codazzi (igac) en el proyecto
+CartoAntioquia.
+Para la selección del coeficiente horizontal seudoestático, se desarrolló la metodología propuesta
+por la Norma nsr-10 [50] para análisis seudoestáticos, en la cual se evalúa las condiciones sísmicas
+locales mediante las características de la zona de
+estudio. En el título H de la 10 se describe el diseño y estabilidad de taludes teniendo en cuenta los
+efectos sísmicos mediante el análisis seudoestático.
+Esta metodología plantea determinar el coeficiente
+sísmico horizontal seudoestático (kh) en función de
+la aceleración máxima del terreno (Amax), obtenida
+del espectro de diseño para el periodo de vibración
+cero establecida por el estudio de microzonificación sísmica del sitio. En el presente estudio se emplea el espectro de aceleración superficial para el
+periodo de retorno de 475 años y amortiguamiento
+del 5%, tomado de los estudios de microzonificación sísmica detallada del municipio de Barbosa
+elaborados por [7].
+La nsr-10 define las aceleraciones máximas de
+acuerdo con el espectro de diseño, donde presenta
+la formulación de la aceleración máxima del terreno para un periodo de vibración igual a cero, dada
+por la ecuación (2):</p>
+<p>donde Aa es la aceleración pico efectiva de diseño, Fa es el coeficiente de amplificación que afecta la aceleración en la zona de períodos cortos e
+I representa el coeficiente de importancia. Estas
+variables fueron obtenidas a partir de los espectros de respuesta a nivel de superficie del terreno
+realizados por [7]. El coeficiente de importancia se
+determina a partir del uso de las edificaciones expuestas; en el presente proyecto se emplea el valor
+unitario, correspondiente al grupo de importancia I:
+estructuras de ocupación normal (Tabla 1).</p>
+<p>A partir de Amax se obtiene el kh con la ecuación
+(3) teniendo en cuenta los criterios para el análisis
+seudoestático dados en la tabla de la nsr-10 [50,
+H.5.2.5]. Para este estudio se adopta el valor 0,8
+que representa “Suelos, enrocados y macizos rocosos muy fracturados (rqd1
+&lt;50%)” (Tabla 2).</p>
+<p>Finalmente, los escenarios modelados con el
+análisis seudoestático corresponden a las condiciones seca y saturada del terreno, como escenarios que contrastan las condiciones de amenaza.
+Aunque ambos escenarios no corresponden al
+escenario más frecuente y probable, sí permiten
+enmarcar las condiciones de amenaza del municipio entre el escenario de menor criticidad y el de
+mayor criticidad.</p>
+</div>
+<div class="section" id="desplazamientos-permanentes">
+<h3>Desplazamientos permanentes<a class="headerlink" href="#desplazamientos-permanentes" title="Permalink to this headline">¶</a></h3>
+<p>Este método ha dado útiles resultados modelando
+el comportamiento dinámico de las laderas a nivel
+regional [51], aunque no necesariamente predice
+los desplazamientos medidos, sino que establece un índice útil de cómo una ladera se podría
+comportar durante un evento sísmico [1].
+En el presente trabajo se utilizó el método de
+Newmark [33]. Múltiples variaciones del método
+de Newmark han sido propuestas para obtener resultados precisos en términos de desplazamientos
+al modelar rigurosamente la respuesta dinámica de la ladera [1], [30], [52]. El método requiere
+evaluar el factor de seguridad, la aceleración crítica del terreno y la aceleración máxima en roca
+(Peak Ground Acceleration o pga). Jibson et al.
+[1] proponen un modelo de equilibrio límite de
+talud infinito en material friccionante y cohesivo
+para obtener el factor de seguridad a partir de la
+ecuación (4):
+donde z es el espesor del suelo y m es la
+proporción del suelo que está saturado. Newmark
+[33] señala que la aceleración crítica ac de un bloque
+que potencialmente se puede deslizar es función
+del factor de seguridad estático y de la geometría
+del bloque expresado en la ecuación (5):</p>
+<p>donde ac es la aceleración crítica en términos
+de la aceleración de la gravedad g, y el ángulo que
+forma la horizontal con el centro de masa del bloque, que generalmente se aproxima a la pendiente.
+Finalmente, a partir de ac y la aceleración máxima en roca (pga) se calculan los desplazamientos
+de Newmark a través de una regresión logarítmica
+estimada por Jibson [52](2 en la ecuación (6):</p>
+<p>La pga es la máxima amplitud de la aceleración
+registrada en el acelerograma en un sitio durante
+un sismo en particular. Para este estudio se tomó
+la pga del estudio de microzonificación sísmica
+detallada del municipio de Barbosa [18], de donde se tomaron dos escenarios, uno considerado el
+evento más crítico que coincide con sismofuentes
+cercanas y gran magnitud, y un segundo escenario
+de menor criticidad que corresponde con sismofuentes lejanas y menor magnitud (Tabla 3)</p>
+</div>
+</div>
+<div class="section" id="modelos-probabilisticos">
+<h2>Modelos probabilísticos<a class="headerlink" href="#modelos-probabilisticos" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="modelo-fosm-first-order-second-moment">
+<h3>Modelo FOSM (First Order Second Moment)<a class="headerlink" href="#modelo-fosm-first-order-second-moment" title="Permalink to this headline">¶</a></h3>
+<p>Entre los modelos de confiabilidad más utilizados en la geotecnia se encuentran el método de Montecarlo, FOSM y estimativas puntuales. Para el presente trabajo se emplea el método estadístico FOSM, el cual emplea la expansión de la serie de Taylor de primer orden para derivar el
+primer y segundo momento de variables de entrada aleatorias. De esta forma, para estimar indirectamente la probabilidad de
+falla se calcula el Índice de Confiabilidad, dado por la relación entre la media y la desviación estándar de una función de
+probabilidad que se ajusta al factor de seguridad.</p>
+<p>Las ventajas del modelo FOSM consisten en que los cálculos son simplificados y solo requiere el conocimiento de los valores
+de los momentos de las distribuciones estadísticas de las variables que forman la función, expresados en la media y la varianza de cada variable, asumiendo una distribución normal tanto para las variables como para el factor de seguridad (FS). De esta manera, para N variables
+aleatorias no correlacionadas F (x1, x2,…, xN), conservando solamente los términos del primer orden (lineales) de la serie de
+Taylor, se producen las siguientes expresiones:</p>
+<p>Donde 𝑥̅𝑖 y V(𝑥𝑖) son la media y varianza de cada variable aleatoria, respectivamente. Para los valores de las derivadas
+usualmente se utiliza la aproximación numérica dada en (5) propuesta por .</p>
+<p>Finalmente, se obtiene el Índice de Confiabilidad del Factor de Seguridad, calculado por (6):</p>
+<p>Donde 𝐸[𝐹𝑆] es el valor esperado del factor de seguridad calculado con los parámetros medios de las variables independientes y 𝜎[𝐹𝑆] es la desviación estándar del Factor de Seguridad (FS) obtenida por (3), teniendo como el FS crítico el valor
+igual a 1. Este índice expresa la confiabilidad del factor de seguridad en relación con la probabilidad de falla o ruptura.
+El método FOSM permite evaluar la variabilidad de cualquiera de los parámetros incluidos dentro del análisis. En el
+presente estudio se evalúan los efectos de las variaciones de los parámetros de resistencia (cohesión y ángulo de fricción) y el
+espesor de suelo en el factor de seguridad.</p>
+</div>
+</div>
+<div class="section" id="referencias">
+<h2>Referencias<a class="headerlink" href="#referencias" title="Permalink to this headline">¶</a></h2>
+<span class="target" id="id2"></span></div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="09_estadistico.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Métodos basados en datos</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="11_evaluacion.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Evaluación del modelo</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            
+        </div>
+    </div>
+    <footer class="footer">
+  <p>
+    
+      By Edier V. Aristizábal G.<br/>
+    
+        &copy; Copyright 2022.<br/>
+  </p>
+</footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>

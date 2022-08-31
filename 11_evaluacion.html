@@ -1,0 +1,1347 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Evaluación del modelo &#8212; Cartografía Geotécnica</title>
+    
+  <link href="_static/css/theme.css" rel="stylesheet">
+  <link href="_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/togglebutton.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script>
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Amenaza" href="12_amenaza.html" />
+    <link rel="prev" title="Métodos con base física" href="10_fisico.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Cartografía Geotécnica</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="intro.html">
+   .
+  </a>
+ </li>
+</ul>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="00_medialuna.html">
+   Media Luna (1954)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="00_introduccion.html">
+   Introducción
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="01_normatividad.html">
+   Amenaza &amp; ordenamiento territorial
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="02_estadoarte.html">
+   Estado del arte
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="03_metodos.html">
+   Caracterización de movimientos en masa
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="04_susceptibilidad.html">
+   Susceptibilidad y amenaza
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="05_inventario.html">
+   Inventario de movimientos en masa
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="06_variables.html">
+   Variables condicionantes
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="07_detonante.html">
+   Factores detonantes
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="08_heuristico.html">
+   Métodos basados en el conocimiento
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="09_estadistico.html">
+   Métodos basados en datos
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="10_fisico.html">
+   Métodos con base física
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Evaluación del modelo
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="12_amenaza.html">
+   Amenaza
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="13_flujos.html">
+   Movimientos en masa tipo flujos
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="14_roca.html">
+   Movimientos en masa en roca
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="15_python.html">
+   Python
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="_sources/11_evaluacion.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/edieraristizabal/Libro_cartoGeotecnia"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/edieraristizabal/Libro_cartoGeotecnia/issues/new?title=Issue%20on%20page%20%2F11_evaluacion.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/edieraristizabal/Libro_cartoGeotecnia/master?urlpath=tree/docs/11_evaluacion.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#desempeno-y-prediccion">
+   Desempeño y predicción
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#validacion-cruzada">
+   Validación cruzada
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#matriz-de-confusion">
+   Matriz de confusión
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#false-positive-rate">
+     <em>
+      False positive rate
+     </em>
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#true-negative-rate">
+     <em>
+      True negative rate
+     </em>
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#false-negative-rate">
+     <em>
+      False negative rate
+     </em>
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#true-positive-rate">
+     <em>
+      True positive rate
+     </em>
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#accuracy">
+     <em>
+      Accuracy
+     </em>
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#f-measure">
+     <em>
+      F-measure
+     </em>
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#curva-roc">
+   Curva ROC
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#python">
+   <em>
+    Python
+   </em>
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id3">
+     Validación cruzada
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#desempeno-del-modelo">
+     Desempeño del modelo
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#capacidad-de-prediccion">
+     Capacidad de predicción
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#referencias">
+   Referencias
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Evaluación del modelo</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#desempeno-y-prediccion">
+   Desempeño y predicción
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#validacion-cruzada">
+   Validación cruzada
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#matriz-de-confusion">
+   Matriz de confusión
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#false-positive-rate">
+     <em>
+      False positive rate
+     </em>
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#true-negative-rate">
+     <em>
+      True negative rate
+     </em>
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#false-negative-rate">
+     <em>
+      False negative rate
+     </em>
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#true-positive-rate">
+     <em>
+      True positive rate
+     </em>
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#accuracy">
+     <em>
+      Accuracy
+     </em>
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#f-measure">
+     <em>
+      F-measure
+     </em>
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#curva-roc">
+   Curva ROC
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#python">
+   <em>
+    Python
+   </em>
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id3">
+     Validación cruzada
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#desempeno-del-modelo">
+     Desempeño del modelo
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#capacidad-de-prediccion">
+     Capacidad de predicción
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#referencias">
+   Referencias
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="evaluacion-del-modelo">
+<h1>Evaluación del modelo<a class="headerlink" href="#evaluacion-del-modelo" title="Permalink to this headline">¶</a></h1>
+<p>Tanto los modelos heurísticos, estadísticos o con base física son simplemente simplificaciones y aproximaciones a la realidad, la cual es mucho mas compleja y guarda elementos que desconocemos. Es por eso que debemos evaluar que tanto de aquella realidad estamos realmente representando. Incicialmente debemos establecer las siguientes definiciones:</p>
+<ul class="simple">
+<li><p><strong>Exactitud</strong> (<em>accuracy</em>): se refiere al grado de qué tan cerca está la medida o valor mapeado o clase de un mapa a su valor verdadero o clase en el campo.</p></li>
+<li><p><strong>Error</strong>: la diferencia entre el valor mapeado o la clase y el valor o clase verdadero.</p></li>
+<li><p><strong>Precisión</strong>: referente a una medida como el grado al cual medidas repetidas bajo condiciones invariantes muestran el mismo resultado.</p></li>
+<li><p><strong>Incertidumbre</strong> (<em>uncertainty</em>*): grado con el cual las características actuales del terreno pueden ser presentadas espacialmente en un mapa.</p></li>
+</ul>
+<p>Los términos objetividad y subjetividad son usados para señalar si los diferentes pasos tomados en la determinación de un grado de amenaza son verificables y reproducibles por otro investigador, o si ellos dependen del juicio personal del investigador.</p>
+<div class="figure align-default" id="precision">
+<a class="reference internal image-reference" href="https://www.forecast.app/hs-fs/hubfs/accuracy-precision.jpg?width=454&amp;name=accuracy-precision.jpg"><img alt="modelos" src="https://www.forecast.app/hs-fs/hubfs/accuracy-precision.jpg?width=454&amp;name=accuracy-precision.jpg" style="width: 500px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 65 </span><span class="caption-text">Exactitud y precisión de un modelo.</span><a class="headerlink" href="#precision" title="Permalink to this image">¶</a></p>
+</div>
+<p>Existen dos tipos de incertidumbre asociada a los modelos. La incertidumbre aleatoria que se refiere a la variabilidad qu conocemos está implicita en muchas de las variables que incorporamos dentro de los modelos. Esta incertidumbre puede ser incorporada en nuestro análisis, y es precisamente la que tratamos de evaluar. Pero es importante tener en cuenta que existe al incertidumbre epistémica, la cual está asociada al desconocimiento o los limitantes que tenemos para describri dichso fenómenos físicos que estamos modelando. Debido precisamente a que se refire aquellso elemenos que aun desconocemos, no puede entonces evaluarse o incorporarse directamente en los modelos.</p>
+<div class="section" id="desempeno-y-prediccion">
+<h2>Desempeño y predicción<a class="headerlink" href="#desempeno-y-prediccion" title="Permalink to this headline">¶</a></h2>
+<p>La aceptación de un modelo debe responder al menos a tres criterios:</p>
+<ul class="simple">
+<li><p>Su adecuación (conceptual y matemáticamente) es describir el comportamiento del sistema</p></li>
+<li><p>Su robustez a pequeños cambios de los parámetros de entrada (sensibilidad a los datos)</p></li>
+<li><p>Su exactitud en predecir los resultados.</p></li>
+</ul>
+<p>De esta forma la evaluación de un modelo debe ser revisada contra la información usada para construir el modelo, la cual se refiere a la bondad del ajuste del modelo, y responde a la pregunta ¿qué tan bien el modelo se desempeña?. Pero también debe evaluarse el modelo contra el <em>futuro</em>, y que responde a la pregunta ¿qué tan bien el modelo predice?, y se refiere a la habilidad del modelo para predecir, en este caso, la ocurrencia de futuros deslizamientos.</p>
+</div>
+<div class="section" id="validacion-cruzada">
+<h2>Validación cruzada<a class="headerlink" href="#validacion-cruzada" title="Permalink to this headline">¶</a></h2>
+<p>Como se menciona anteriormente la evalaución del modelo se debe realizar en dos campos, en términos del desempeño y en términos de la capacidad de predicción. Las mas compleja de estas evaluaciones se refiere a la capacidad de predicción, ya que sólo la ocurrencia de nuevos eventos a lo largo del tiempo puede determinar la capacidad de predicción de nuestro modelo. Pero precisamente la evaluación del desempeño, como de la predicción, se requieren al momento de construir el modelo.</p>
+<p>Para esto existen diferentes estrategias de partición de los datos que nos permiten obtener estas evaluaciones. Esta técnica se denomina validación cruzada y se refiere a un método de remuestreo que utiliza diferentes porciones de los datos para entrenar y evaluar un modelo en diferentes iteracciones. Esta técnica se puede utilizar tanto para la partición de datos espacialmente, es decir utilizar un área especifica para entrenar el modelo y evaluar su desempeño, y otra área de la zona de estudio, para evaluar la capacidad de predicción. O es tambien posible la partición temporal, es decir utilizar los datos en un rango de tiempo para entrenar el modelo y evaluar el desempeño del modelo, y utilizar otro rango de tiempo, generalmente posterior al inicial, para evaluar la capacidad de predicción. Para la evalaución de modelso de susceptibildiad por movimientos en masa se utiliza la primera de estas estrategias, partición espacial; sin embargo dicha partición no se realzia egenralmente en áreas, ya que posiblemente existan diferencias entre ambas áreas en el mecanismo que gobierna el proceso, por lo tanto el error aumenta pero debido a que el modelo construido no representa el mecanismo del área donde se va a evaluar. De esta forma la partición de los datos se realiza aleatoriamente sobre toda el área de estudio.</p>
+<div class="figure align-default" id="cross-validation">
+<a class="reference internal image-reference" href="https://media.springernature.com/full/springer-static/image/art%3A10.1007%2Fs12665-021-09770-9/MediaObjects/12665_2021_9770_Fig4_HTML.png?as=webp"><img alt="cross validation" src="https://media.springernature.com/full/springer-static/image/art%3A10.1007%2Fs12665-021-09770-9/MediaObjects/12665_2021_9770_Fig4_HTML.png?as=webp" style="width: 800px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 66 </span><span class="caption-text">Procedimiento para validación cruzada.</span><a class="headerlink" href="#cross-validation" title="Permalink to this image">¶</a></p>
+</div>
+<p>No existe un porcentaje o radio de separación unico utilizado, pero los porcentajes mas comunes utilizados están entre 80:20 y 70:30, lo cual significa 80% de los datos para entrenamiento o construcción del modelo, y el 20% restante para evaluar la capacidad de predicción.</p>
+</div>
+<div class="section" id="matriz-de-confusion">
+<h2>Matriz de confusión<a class="headerlink" href="#matriz-de-confusion" title="Permalink to this headline">¶</a></h2>
+<p>Tanto para el desempeño como para la capacidad de predicción se utilizan las mismas métricas de evaluación, solo que se especifica si se refiere aldesempeño del modelo o la capacidad de predicción. Generalmente, las métricas para el desempeño del modelo presentan mejores valores comaprado con la capacidad de predicción. Y esto se debe a que el desempeño se evalúa con datos que el modelo conoce y a los cuales se ajustó, mientras que los datos que evaluan la capcidad de predicción no han sido conocidos por el modelo, y precisamente entre las dos métricas, la que generalmente se presenta al final de los procedimientos es la capacidad de predicción. La evalaución del desempeño del modelo corresonde a un paso interno que permite al modelador ajustar los parámetros del modelo.</p>
+<p>Para la evalaución de los mdelso de susceptibildiad por movimientos en masa se utilizan diferentes métricas:</p>
+<ul class="simple">
+<li><p>Distancia a la clasificación perfecta</p></li>
+<li><p>curva ROC (<em>Receiver Operating Characteristic</em>)</p></li>
+<li><p>Área bajo la curva ROC (AUROC)</p></li>
+</ul>
+<p>Sin embargo todas estas parten de la <strong>matriz de confusión</strong> o tambien denominada matriz de contingencia o matriz de error. esat matriz corresponde a una tabla cruzada de frecuencias para uan variable categorica binaria, que compara los resultados de salida (<span class="math notranslate nohighlight">\(y\)</span>) del modelo contra los valores de la variable dependiente (<span class="math notranslate nohighlight">\(y\)</span>) reales o medidos, en este caso el inventario de movimientos en masa. en palabras sencillas compara las predicciones del modelo con los datos.</p>
+<div class="figure align-default" id="id1">
+<a class="reference internal image-reference" href="https://rapidminer.com/wp-content/uploads/2022/06/Confusion-Matrix-1.jpeg"><img alt="matriz de confusion" src="https://rapidminer.com/wp-content/uploads/2022/06/Confusion-Matrix-1.jpeg" style="width: 800px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 67 </span><span class="caption-text">Matriz de confusión.</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+</div>
+<p>A partir de dicha matriz se obtienen los verdaderos positivos (<em>tp</em>), los cuales se refieren a las celdas que el modelo señala como inestables y que efectivamente en el inventario de moivmientos en masa son eventos, los verdaderos negativos (<em>tn</em>), los cuales se refieren a las celdas que el modelo señala como estables y uqe en el inventario de movimientos en masa no hay registro de eventos. Tanto los <em>tp</em> como los <em>tn</em> corresponden a los aciertos del modelo. Por otro lado los errores son evaluados por los falsos positivos (<em>fp</em>), tambien conocidos como errores tipo I, los cuales se refieren a las celdas que el modelo señala como inestables y que en el inventario de movimientos en masa no registran eventos, y los falsos negativos (<em>fn</em>), tambien conocidos como errores tipo II, los cuales corresponden a las celdas que el modelo señala como estables y que en el inventario de movimientos en masa registran eventos.</p>
+<p>Considerando que el mayor interes en los mapas de susceptibilidad corresponde a identificar aquellas áreas potencialmente inestables, generalmente se son mas importantes las celdas inestables, es decir los verdaderos positivos y falsos positivos. Por lo tanto, se debe ser cuidadoso con las métricas utilizadas, ya que  esto puede llevar a errores en este tipo de modelos que son por naturaleza desbalanceados. Un modelo muy malo puede tener valores de <em>tp</em> muy altos simplemente asignándole valores de inestable a todas las celdas de la cuenca. esto arroja un modelo con un desemepeño y capacidad de predicción del 100%, sin embargo si se revisan los falsos positivos, es decir los errores por sobre estimación, estos también van a ser cercanos al 100%. Entonces un buen modelo es aquel que identifica las areas inestables, altos valores de <em>tp</em> y al mismo tiempo valores bajos de <em>fp</em>. Pero al realidad señala que el aumento de los <em>tp</em> lleva cosnigo el aumento de los <em>fp</em>, por lo tanto un buen modelo debe encontrar el mejor equilibrio entre ambas métricas.</p>
+<p>A partir de esta matriz se construye una serie de métricas que permite evaluar el modelo:</p>
+<div class="section" id="false-positive-rate">
+<h3><em>False positive rate</em><a class="headerlink" href="#false-positive-rate" title="Permalink to this headline">¶</a></h3>
+<p>Tambien conocido como <strong>error tipo I</strong>, y explica la capacidad que tiene el modelo de equivocarse entre las celdas estables.</p>
+</div>
+<div class="section" id="true-negative-rate">
+<h3><em>True negative rate</em><a class="headerlink" href="#true-negative-rate" title="Permalink to this headline">¶</a></h3>
+<p>Tambien conocido como <strong>specificity</strong> o <strong>recall</strong>y explica la capacidad que tiene el modelo de acertar entre las celdas inestables.</p>
+</div>
+<div class="section" id="false-negative-rate">
+<h3><em>False negative rate</em><a class="headerlink" href="#false-negative-rate" title="Permalink to this headline">¶</a></h3>
+<p>También denominado <em>error tipo II</em>, y explica la capacidad que tiene el modelo de equivocarse entre las celdas inestables.</p>
+</div>
+<div class="section" id="true-positive-rate">
+<h3><em>True positive rate</em><a class="headerlink" href="#true-positive-rate" title="Permalink to this headline">¶</a></h3>
+<p>También conocido como <em>precision</em>, y explica la capacidad que tiene el modelo de acertar entre las celdas estables</p>
+</div>
+<div class="section" id="accuracy">
+<h3><em>Accuracy</em><a class="headerlink" href="#accuracy" title="Permalink to this headline">¶</a></h3>
+<p>Se refiere a que también el modelo clasifica, tanto celdas estables como inestables, con respecto al total de celdas, es decir el porcentaje de celdas que acierta el modelo. Esta métrica también es afectada por el desbalanceo original que representa el problema. Es decir, que puede arrojar alores muy altos, aunque el modelo se mediocre, ya que los verdaderos negativo <em>tn</em> tienden a ser muy altos, es facil predecir los <em>no</em>, y esto incrementa el valor del <em>accuracy</em>.</p>
+</div>
+<div class="section" id="f-measure">
+<h3><em>F-measure</em><a class="headerlink" href="#f-measure" title="Permalink to this headline">¶</a></h3>
+<p>Esta métrica trata de compensar el desbalanceo y se estima como.</p>
+<p><span class="math notranslate nohighlight">\(F-measure=\frac{2*Recall*Precision}{Recall+Precision}\)</span></p>
+</div>
+</div>
+<div class="section" id="curva-roc">
+<h2>Curva ROC<a class="headerlink" href="#curva-roc" title="Permalink to this headline">¶</a></h2>
+<p>La matriz de contingencia puede llevarse a un esapcio bidimensional que compara los <em>True positive rate</em> o <em>Sensitivity</em> en el eje <em>y</em> contra el <em>False positive rate</em> en el eje <em>x</em>, que se estima como <span class="math notranslate nohighlight">\(1-*Specificity*\)</span>. Esto nos permite comparar el desempeño de diferentes modelos. El modelo con el mejor desempeño teorico posible corresponde a la ezquina superior derecha del gráfico, ya que representa el punto con el 100% de aciertos contra el 0% de equivocaciones. La distancia euclidiana a dicho punto correpsonde a la <strong>Distancia a la clasificación perfecta (r)</strong>, por lo tanto los modelos con una menor distancia presentan un mejor desempeño.</p>
+<p><span class="math notranslate nohighlight">\(r=\sqrt{fpr^2 + (1-tpr)^2}\)</span></p>
+<div class="figure align-default" id="r">
+<a class="reference internal image-reference" href="https://i.pinimg.com/564x/0b/82/e2/0b82e29fa53d0de12645b9dfabf2b100.jpg"><img alt="r" src="https://i.pinimg.com/564x/0b/82/e2/0b82e29fa53d0de12645b9dfabf2b100.jpg" style="width: 800px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 68 </span><span class="caption-text">Distancia a la clasificación perfecta.</span><a class="headerlink" href="#r" title="Permalink to this image">¶</a></p>
+</div>
+<p>Hasta este punto hemos evaluado métricas que reqeuiren que la variable dependete <span class="math notranslate nohighlight">\(y\)</span> sea binaria, es decir 0 ó 1. Esto implica que para modelos que arrojan un rango de valores para cada celda, donde un extremo de estos valores representa celdas inestables y el otro extremo representa celdas estables, es necesario entonces establecer un umbral que separe entre estos dos rangos, estables e inestables. Para modelos con base fisica basados en el factor de seguridad, este procedimiento es mucho mas sencillo, por que el valor del factor de seguridad de 1 representa un umbral establecido por el propio modelo. PAra modelos con regresion logística, bivariados, o inlcuso modelos con base físia pero basados en indice de confiabilidad , por ejemplo, dicho umbral no es claro. Esto es importante por que entonces los resutlados de la evalaución del modelo están en función del umbral seleccionado. ¿Cómo entonces poder evaluar un modelo con una métrica independiente del umbral?.</p>
+<p>Lo que responde esto es la curva ROC, y específicamente el área bajo la curva ROC. Esta curva se construye graficando multiples puntos, tantos como se desee, asignando diferentes umbrales. es decir que la curva ROC representa todos los puntos del modelo para todo el rango de valores del indice de susceptibilidad obtenidos.</p>
+<div class="figure align-default" id="auroc">
+<a class="reference internal image-reference" href="https://www.researchgate.net/publication/351506473/figure/fig2/AS:1022506102169601&#64;1620795860506/ROC-curves-and-area-under-curve-AUC.png"><img alt="auroc" src="https://www.researchgate.net/publication/351506473/figure/fig2/AS:1022506102169601&#64;1620795860506/ROC-curves-and-area-under-curve-AUC.png" style="width: 600px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 69 </span><span class="caption-text">Matriz de confusión.</span><a class="headerlink" href="#auroc" title="Permalink to this image">¶</a></p>
+</div>
+<p>El valor del AUROC varía entre 0 y 1, doden 1 es un modelo perfecto. Generalmente en el espacio de la curva ROC se gráfica una línea diagonal que representa un AUROC del 0.5. esta se utiliza como referente de un modelo mediocre que tiene un numero igual de aciertos a desaciertos, lo que se busca es obtener modelos con mayores aciertos que desaciertos, por lo tanto implica curvas convexas donde el AUROC &gt; 0.5.</p>
+<div class="figure align-default" id="auroc1">
+<a class="reference internal image-reference" href="https://i.pinimg.com/564x/ad/6a/5a/ad6a5a68d8dcb06b7a08b135150efc94.jpg"><img alt="auroc1" src="https://i.pinimg.com/564x/ad/6a/5a/ad6a5a68d8dcb06b7a08b135150efc94.jpg" style="width: 700px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 70 </span><span class="caption-text">.</span><a class="headerlink" href="#auroc1" title="Permalink to this image">¶</a></p>
+</div>
+<div class="figure align-default" id="auroc2">
+<a class="reference internal image-reference" href="https://i.pinimg.com/564x/0d/4b/60/0d4b60a775acbfa8cd645df32ef3b9f7.jpg"><img alt="auroc2" src="https://i.pinimg.com/564x/0d/4b/60/0d4b60a775acbfa8cd645df32ef3b9f7.jpg" style="width: 700px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 71 </span><span class="caption-text">.</span><a class="headerlink" href="#auroc2" title="Permalink to this image">¶</a></p>
+</div>
+<div class="figure align-default" id="auroc3">
+<a class="reference internal image-reference" href="https://i.pinimg.com/564x/80/40/ee/8040ee1f9c25c45b3a5ae773a48e1660.jpg"><img alt="auroc3" src="https://i.pinimg.com/564x/80/40/ee/8040ee1f9c25c45b3a5ae773a48e1660.jpg" style="width: 700px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 72 </span><span class="caption-text">.</span><a class="headerlink" href="#auroc3" title="Permalink to this image">¶</a></p>
+</div>
+<div class="figure align-default" id="id2">
+<a class="reference internal image-reference" href="https://i.pinimg.com/564x/c6/48/af/c648af60209d8a97bdbddd5dc8c99d60.jpg"><img alt="auroc" src="https://i.pinimg.com/564x/c6/48/af/c648af60209d8a97bdbddd5dc8c99d60.jpg" style="width: 700px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 73 </span><span class="caption-text">Desempeño de los modelos utilizando la matriz de confusión.</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+<div class="section" id="python">
+<h2><em>Python</em><a class="headerlink" href="#python" title="Permalink to this headline">¶</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>pip install rasterio
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: rasterio in c:\users\usuario\miniconda3\envs\geospatial\lib\site-packages (1.2.1)
+Requirement already satisfied: affine in c:\users\usuario\miniconda3\envs\geospatial\lib\site-packages (from rasterio) (2.3.0)
+Requirement already satisfied: attrs in c:\users\usuario\miniconda3\envs\geospatial\lib\site-packages (from rasterio) (20.3.0)
+Requirement already satisfied: certifi in c:\users\usuario\miniconda3\envs\geospatial\lib\site-packages (from rasterio) (2022.6.15)
+Requirement already satisfied: click&lt;8,&gt;=4.0 in c:\users\usuario\miniconda3\envs\geospatial\lib\site-packages (from rasterio) (7.1.2)
+Requirement already satisfied: cligj&gt;=0.5 in c:\users\usuario\miniconda3\envs\geospatial\lib\site-packages (from rasterio) (0.7.1)
+Requirement already satisfied: numpy in c:\users\usuario\miniconda3\envs\geospatial\lib\site-packages (from rasterio) (1.20.1)
+Requirement already satisfied: snuggs&gt;=1.4.1 in c:\users\usuario\miniconda3\envs\geospatial\lib\site-packages (from rasterio) (1.4.7)
+Requirement already satisfied: click-plugins in c:\users\usuario\miniconda3\envs\geospatial\lib\site-packages (from rasterio) (1.1.1)
+Requirement already satisfied: pyparsing&gt;=2.1.6 in c:\users\usuario\miniconda3\envs\geospatial\lib\site-packages (from snuggs&gt;=1.4.1-&gt;rasterio) (2.4.7)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">rasterio</span> <span class="k">as</span> <span class="nn">rio</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
+<span class="o">~</span>\<span class="n">AppData</span>\<span class="n">Local</span>\<span class="n">Temp</span><span class="o">/</span><span class="n">ipykernel_29216</span><span class="o">/</span><span class="mf">1877902076.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="kn">import</span> <span class="nn">rasterio</span> <span class="k">as</span> <span class="nn">rio</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="ne">----&gt; </span><span class="mi">3</span> <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+
+<span class="ne">ModuleNotFoundError</span>: No module named &#39;matplotlib&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<p>A continuación se importa el inventario de movimientos en masa, así como los mapas de las variables predictoras a utilizar:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">raster</span> <span class="o">=</span> <span class="n">rio</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s1">&#39;https://github.com/edieraristizabal/Libro_cartoGeotecnia/blob/master/data/Inventario_MenM.tif?raw=true&#39;</span><span class="p">)</span>
+<span class="n">inventario</span><span class="o">=</span><span class="n">raster</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">raster_mask</span> <span class="o">=</span> <span class="n">rio</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s1">&#39;https://github.com/edieraristizabal/Libro_cartoGeotecnia/blob/master/data/Pendiente.tif?raw=true&#39;</span><span class="p">)</span>
+<span class="n">msk</span><span class="o">=</span><span class="n">raster_mask</span><span class="o">.</span><span class="n">read_masks</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">msk</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">msk</span><span class="o">==</span><span class="mi">255</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">)</span>
+<span class="n">inventario</span><span class="o">=</span><span class="n">msk</span><span class="o">*</span><span class="n">inventario</span>
+<span class="n">inventario_vector</span><span class="o">=</span><span class="n">inventario</span><span class="o">.</span><span class="n">ravel</span><span class="p">()</span>
+<span class="n">inventario_vector_MenM</span><span class="o">=</span><span class="n">inventario_vector</span><span class="p">[</span><span class="o">~</span><span class="n">np</span><span class="o">.</span><span class="n">isnan</span><span class="p">(</span><span class="n">inventario_vector</span><span class="p">)]</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">inventario</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">colorbar</span><span class="p">()</span>
+<span class="n">inventario_vector_MenM</span><span class="o">.</span><span class="n">shape</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(910801,)
+</pre></div>
+</div>
+<img alt="_images/11_evaluacion_6_1.png" src="_images/11_evaluacion_6_1.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">raster</span> <span class="o">=</span> <span class="n">rio</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s1">&#39;https://github.com/edieraristizabal/Libro_cartoGeotecnia/blob/master/data/Aspecto.tif?raw=true&#39;</span><span class="p">)</span>
+<span class="n">aspecto</span><span class="o">=</span><span class="n">raster</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">aspecto</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">aspecto</span><span class="o">&lt;-</span><span class="mi">100</span><span class="p">,</span><span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">,</span><span class="n">aspecto</span><span class="p">)</span>
+<span class="n">aspecto_vector</span><span class="o">=</span><span class="n">aspecto</span><span class="o">.</span><span class="n">ravel</span><span class="p">()</span>
+<span class="n">aspecto_vector_MenM</span><span class="o">=</span><span class="n">aspecto_vector</span><span class="p">[</span><span class="o">~</span><span class="n">np</span><span class="o">.</span><span class="n">isnan</span><span class="p">(</span><span class="n">aspecto_vector</span><span class="p">)]</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">aspecto</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">colorbar</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.colorbar.Colorbar at 0x7f22fc7bde50&gt;
+</pre></div>
+</div>
+<img alt="_images/11_evaluacion_7_1.png" src="_images/11_evaluacion_7_1.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">raster</span> <span class="o">=</span> <span class="n">rio</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s1">&#39;https://github.com/edieraristizabal/Libro_cartoGeotecnia/blob/master/data/Pendiente.tif?raw=true&#39;</span><span class="p">)</span>
+<span class="n">pendiente</span><span class="o">=</span><span class="n">raster</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">pendiente</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">pendiente</span><span class="o">&lt;</span><span class="mi">0</span><span class="p">,</span><span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">,</span><span class="n">pendiente</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">pendiente</span><span class="p">);</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">colorbar</span><span class="p">();</span>
+<span class="n">pendiente_vector</span><span class="o">=</span><span class="n">pendiente</span><span class="o">.</span><span class="n">ravel</span><span class="p">()</span>
+<span class="n">pendiente_vector_MenM</span><span class="o">=</span><span class="n">pendiente_vector</span><span class="p">[</span><span class="o">~</span><span class="n">np</span><span class="o">.</span><span class="n">isnan</span><span class="p">(</span><span class="n">pendiente_vector</span><span class="p">)]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/11_evaluacion_8_0.png" src="_images/11_evaluacion_8_0.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">raster</span> <span class="o">=</span> <span class="n">rio</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s1">&#39;https://github.com/edieraristizabal/Libro_cartoGeotecnia/blob/master/data/Geologia_Superficial.tif?raw=true&#39;</span><span class="p">)</span>
+<span class="n">geologia</span><span class="o">=</span><span class="n">raster</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">geologia</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">geologia</span><span class="o">&lt;</span><span class="mi">0</span><span class="p">,</span><span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">,</span><span class="n">geologia</span><span class="p">)</span>
+<span class="n">geologia_vector</span><span class="o">=</span><span class="n">geologia</span><span class="o">.</span><span class="n">ravel</span><span class="p">()</span>
+<span class="n">geologia_vector_MenM</span><span class="o">=</span><span class="n">geologia_vector</span><span class="p">[</span><span class="o">~</span><span class="n">np</span><span class="o">.</span><span class="n">isnan</span><span class="p">(</span><span class="n">geologia_vector</span><span class="p">)]</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">geologia</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">colorbar</span><span class="p">();</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/11_evaluacion_9_0.png" src="_images/11_evaluacion_9_0.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">pandas</span> <span class="kn">import</span> <span class="n">DataFrame</span>
+<span class="n">d</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;inventario&#39;</span><span class="p">:</span><span class="n">inventario_vector_MenM</span><span class="p">,</span><span class="s1">&#39;pendiente&#39;</span><span class="p">:</span><span class="n">pendiente_vector_MenM</span><span class="p">,</span><span class="s1">&#39;aspecto&#39;</span><span class="p">:</span><span class="n">aspecto_vector_MenM</span><span class="p">,</span><span class="s1">&#39;geologia&#39;</span><span class="p">:</span><span class="n">geologia_vector_MenM</span><span class="p">}</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">d</span><span class="p">)</span>
+<span class="n">X</span><span class="o">=</span><span class="n">df</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="s2">&quot;inventario&quot;</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">y</span><span class="o">=</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;inventario&#39;</span><span class="p">]</span>
+<span class="n">X</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">
+  <div id="df-665124f3-9eb5-4f11-a4bc-82998c69ca25">
+    <div class="colab-df-container">
+      <div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>pendiente</th>
+      <th>aspecto</th>
+      <th>geologia</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>10.862183</td>
+      <td>208.523560</td>
+      <td>14.0</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>12.265345</td>
+      <td>207.437332</td>
+      <td>14.0</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>12.469252</td>
+      <td>202.684647</td>
+      <td>14.0</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>13.148026</td>
+      <td>211.619766</td>
+      <td>14.0</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>14.091524</td>
+      <td>220.028976</td>
+      <td>14.0</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+      <button class="colab-df-convert" onclick="convertToInteractive('df-665124f3-9eb5-4f11-a4bc-82998c69ca25')"
+              title="Convert this dataframe to an interactive table."
+              style="display:none;">
+
+  <svg xmlns="http://www.w3.org/2000/svg" height="24px"viewBox="0 0 24 24"
+       width="24px">
+    <path d="M0 0h24v24H0V0z" fill="none"/>
+    <path d="M18.56 5.44l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94zm-11 1L8.5 8.5l.94-2.06 2.06-.94-2.06-.94L8.5 2.5l-.94 2.06-2.06.94zm10 10l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94z"/><path d="M17.41 7.96l-1.37-1.37c-.4-.4-.92-.59-1.43-.59-.52 0-1.04.2-1.43.59L10.3 9.45l-7.72 7.72c-.78.78-.78 2.05 0 2.83L4 21.41c.39.39.9.59 1.41.59.51 0 1.02-.2 1.41-.59l7.78-7.78 2.81-2.81c.8-.78.8-2.07 0-2.86zM5.41 20L4 18.59l7.72-7.72 1.47 1.35L5.41 20z"/>
+  </svg>
+      </button>
+
+  <style>
+    .colab-df-container {
+      display:flex;
+      flex-wrap:wrap;
+      gap: 12px;
+    }
+
+    .colab-df-convert {
+      background-color: #E8F0FE;
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+      display: none;
+      fill: #1967D2;
+      height: 32px;
+      padding: 0 0 0 0;
+      width: 32px;
+    }
+
+    .colab-df-convert:hover {
+      background-color: #E2EBFA;
+      box-shadow: 0px 1px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px 1px rgba(60, 64, 67, 0.15);
+      fill: #174EA6;
+    }
+
+    [theme=dark] .colab-df-convert {
+      background-color: #3B4455;
+      fill: #D2E3FC;
+    }
+
+    [theme=dark] .colab-df-convert:hover {
+      background-color: #434B5C;
+      box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
+      filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.3));
+      fill: #FFFFFF;
+    }
+  </style>
+
+      <script>
+        const buttonEl =
+          document.querySelector('#df-665124f3-9eb5-4f11-a4bc-82998c69ca25 button.colab-df-convert');
+        buttonEl.style.display =
+          google.colab.kernel.accessAllowed ? 'block' : 'none';
+
+        async function convertToInteractive(key) {
+          const element = document.querySelector('#df-665124f3-9eb5-4f11-a4bc-82998c69ca25');
+          const dataTable =
+            await google.colab.kernel.invokeFunction('convertToInteractive',
+                                                     [key], {});
+          if (!dataTable) return;
+
+          const docLinkHtml = 'Like what you see? Visit the ' +
+            '<a target="_blank" href=https://colab.research.google.com/notebooks/data_table.ipynb>data table notebook</a>'
+            + ' to learn more about interactive tables.';
+          element.innerHTML = '';
+          dataTable['output_type'] = 'display_data';
+          await google.colab.output.renderOutput(dataTable, element);
+          const docLink = document.createElement('div');
+          docLink.innerHTML = docLinkHtml;
+          element.appendChild(docLink);
+        }
+      </script>
+    </div>
+  </div>
+</div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.ensemble</span> <span class="kn">import</span> <span class="n">RandomForestClassifier</span>
+<span class="n">model</span> <span class="o">=</span> <span class="n">RandomForestClassifier</span><span class="p">(</span><span class="n">n_estimators</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">class_weight</span><span class="o">=</span><span class="s1">&#39;balanced&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="id3">
+<h3>Validación cruzada<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="kn">import</span> <span class="n">train_test_split</span> 
+<span class="n">x_train</span><span class="p">,</span><span class="n">x_test</span><span class="p">,</span><span class="n">y_train</span><span class="p">,</span><span class="n">y_test</span><span class="o">=</span><span class="n">train_test_split</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">test_size</span><span class="o">=</span><span class="mf">0.2</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Tamaño de variables de entrenamiento:&#39;</span><span class="p">,</span> <span class="n">x_train</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Tamaño de labels de entrenamiento:&#39;</span><span class="p">,</span> <span class="n">y_train</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Tamaño de variables de validación:&#39;</span><span class="p">,</span> <span class="n">x_test</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Tamaño de labels de validación:&#39;</span><span class="p">,</span> <span class="n">y_test</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Tamaño de variables de entrenamiento: (728640, 3)
+Tamaño de labels de entrenamiento: (728640,)
+Tamaño de variables de validación: (182161, 3)
+Tamaño de labels de validación: (182161,)
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="desempeno-del-modelo">
+<h3>Desempeño del modelo<a class="headerlink" href="#desempeno-del-modelo" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">result</span><span class="o">=</span><span class="n">model</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">x_train</span><span class="p">,</span><span class="n">y_train</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">y_train_pred</span><span class="o">=</span><span class="n">result</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">x_train</span><span class="p">)</span> <span class="c1"># utiliza por defecto el valor de 0,5, por encime es uno y por debajo es 0</span>
+<span class="n">y_train_probs</span><span class="o">=</span><span class="n">result</span><span class="o">.</span><span class="n">predict_proba</span><span class="p">(</span><span class="n">x_train</span><span class="p">)[:,</span><span class="mi">1</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">y_val_pred</span><span class="o">=</span><span class="n">result</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">x_test</span><span class="p">)</span> 
+<span class="n">y_val_probs</span><span class="o">=</span><span class="n">result</span><span class="o">.</span><span class="n">predict_proba</span><span class="p">(</span><span class="n">x_test</span><span class="p">)[:,</span><span class="mi">1</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">confusion_matrix</span>
+<span class="n">confusion_matrix</span><span class="p">(</span><span class="n">y_train</span><span class="p">,</span> <span class="n">y_train_pred</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[727353,      0],
+       [   391,    896]])
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">classification_report</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">classification_report</span><span class="p">(</span><span class="n">y_train</span><span class="p">,</span><span class="n">y_train_pred</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>              precision    recall  f1-score   support
+
+         0.0       1.00      1.00      1.00    727353
+         1.0       1.00      0.70      0.82      1287
+
+    accuracy                           1.00    728640
+   macro avg       1.00      0.85      0.91    728640
+weighted avg       1.00      1.00      1.00    728640
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn</span> <span class="kn">import</span> <span class="n">metrics</span>
+<span class="n">fpr</span><span class="p">,</span> <span class="n">tpr</span><span class="p">,</span> <span class="n">_</span><span class="o">=</span><span class="n">metrics</span><span class="o">.</span><span class="n">roc_curve</span><span class="p">(</span><span class="n">y_train</span><span class="p">,</span><span class="n">y_train_probs</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">fpr</span><span class="p">,</span><span class="n">tpr</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;r&#39;</span><span class="p">)</span>
+<span class="n">xb</span><span class="o">=</span><span class="p">[</span><span class="n">i</span><span class="o">*</span><span class="mf">0.01</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">100</span><span class="p">)]</span>
+<span class="n">yb</span><span class="o">=</span><span class="p">[</span><span class="n">i</span><span class="o">*</span><span class="mf">0.01</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">100</span><span class="p">)]</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">xb</span><span class="p">,</span><span class="n">yb</span><span class="p">,</span><span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;--&#39;</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;b&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;FPR&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;TPR&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;ROC Curve for training&#39;</span><span class="p">)</span>
+<span class="n">auc</span><span class="o">=</span><span class="nb">str</span><span class="p">(</span><span class="nb">round</span><span class="p">(</span><span class="n">metrics</span><span class="o">.</span><span class="n">auc</span><span class="p">(</span><span class="n">fpr</span><span class="p">,</span><span class="n">tpr</span><span class="p">),</span><span class="mi">4</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="mf">0.7</span><span class="p">,</span><span class="n">y</span><span class="o">=</span><span class="mf">0.1</span><span class="p">,</span><span class="n">s</span><span class="o">=</span><span class="s1">&#39;AUC=&#39;</span><span class="o">+</span><span class="n">auc</span><span class="o">+</span><span class="s1">&#39;%&#39;</span><span class="p">,</span><span class="n">size</span><span class="o">=</span><span class="mi">12</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0.7, 0.1, &#39;AUC=1.0%&#39;)
+</pre></div>
+</div>
+<img alt="_images/11_evaluacion_20_1.png" src="_images/11_evaluacion_20_1.png" />
+</div>
+</div>
+</div>
+<div class="section" id="capacidad-de-prediccion">
+<h3>Capacidad de predicción<a class="headerlink" href="#capacidad-de-prediccion" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">confusion_matrix</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">y_val_pred</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[181828,      0],
+       [   333,      0]])
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">classification_report</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span><span class="n">y_val_pred</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/usr/local/lib/python3.7/dist-packages/sklearn/metrics/_classification.py:1318: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>              precision    recall  f1-score   support
+
+         0.0       1.00      1.00      1.00    181828
+         1.0       0.00      0.00      0.00       333
+
+    accuracy                           1.00    182161
+   macro avg       0.50      0.50      0.50    182161
+weighted avg       1.00      1.00      1.00    182161
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/usr/local/lib/python3.7/dist-packages/sklearn/metrics/_classification.py:1318: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/usr/local/lib/python3.7/dist-packages/sklearn/metrics/_classification.py:1318: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fpr</span><span class="p">,</span> <span class="n">sensitivity</span><span class="p">,</span> <span class="n">_</span><span class="o">=</span><span class="n">metrics</span><span class="o">.</span><span class="n">roc_curve</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span><span class="n">y_val_probs</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">fpr</span><span class="p">,</span><span class="n">sensitivity</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;r&#39;</span><span class="p">)</span>
+<span class="n">xb</span><span class="o">=</span><span class="p">[</span><span class="n">i</span><span class="o">*</span><span class="mf">0.01</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">100</span><span class="p">)]</span>
+<span class="n">yb</span><span class="o">=</span><span class="p">[</span><span class="n">i</span><span class="o">*</span><span class="mf">0.01</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">100</span><span class="p">)]</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">xb</span><span class="p">,</span><span class="n">yb</span><span class="p">,</span><span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;--&#39;</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;b&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;FPR&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;TPR&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;ROC Curve for prediction&#39;</span><span class="p">)</span>
+<span class="n">auc</span><span class="o">=</span><span class="nb">str</span><span class="p">(</span><span class="nb">round</span><span class="p">(</span><span class="n">metrics</span><span class="o">.</span><span class="n">auc</span><span class="p">(</span><span class="n">fpr</span><span class="p">,</span><span class="n">sensitivity</span><span class="p">),</span><span class="mi">4</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="mf">0.7</span><span class="p">,</span><span class="n">y</span><span class="o">=</span><span class="mf">0.1</span><span class="p">,</span><span class="n">s</span><span class="o">=</span><span class="s1">&#39;AUC=&#39;</span><span class="o">+</span><span class="n">auc</span><span class="o">+</span><span class="s1">&#39;%&#39;</span><span class="p">,</span><span class="n">size</span><span class="o">=</span><span class="mi">12</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0.7, 0.1, &#39;AUC=0.5079%&#39;)
+</pre></div>
+</div>
+<img alt="_images/11_evaluacion_24_1.png" src="_images/11_evaluacion_24_1.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pendiente_vector2</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">nan_to_num</span><span class="p">(</span><span class="n">pendiente_vector</span><span class="p">)</span>
+<span class="n">aspecto_vector2</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">nan_to_num</span><span class="p">(</span><span class="n">aspecto_vector</span><span class="p">)</span>
+<span class="n">geologia_vector2</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">nan_to_num</span><span class="p">(</span><span class="n">geologia_vector</span><span class="p">)</span>
+
+<span class="n">f</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;pendiente&#39;</span><span class="p">:</span><span class="n">pendiente_vector2</span><span class="p">,</span><span class="s1">&#39;aspecto&#39;</span><span class="p">:</span><span class="n">aspecto_vector2</span><span class="p">,</span><span class="s1">&#39;geologia&#39;</span><span class="p">:</span><span class="n">geologia_vector2</span><span class="p">}</span>
+<span class="n">x_map</span><span class="o">=</span><span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
+<span class="n">x_map</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">
+  <div id="df-3b7d443d-b54b-4ee5-8861-9a4be4accdc1">
+    <div class="colab-df-container">
+      <div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>pendiente</th>
+      <th>aspecto</th>
+      <th>geologia</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>1854705</th>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>1854706</th>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>1854707</th>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>1854708</th>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>1854709</th>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+  </tbody>
+</table>
+<p>1854710 rows × 3 columns</p>
+</div>
+      <button class="colab-df-convert" onclick="convertToInteractive('df-3b7d443d-b54b-4ee5-8861-9a4be4accdc1')"
+              title="Convert this dataframe to an interactive table."
+              style="display:none;">
+
+  <svg xmlns="http://www.w3.org/2000/svg" height="24px"viewBox="0 0 24 24"
+       width="24px">
+    <path d="M0 0h24v24H0V0z" fill="none"/>
+    <path d="M18.56 5.44l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94zm-11 1L8.5 8.5l.94-2.06 2.06-.94-2.06-.94L8.5 2.5l-.94 2.06-2.06.94zm10 10l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94z"/><path d="M17.41 7.96l-1.37-1.37c-.4-.4-.92-.59-1.43-.59-.52 0-1.04.2-1.43.59L10.3 9.45l-7.72 7.72c-.78.78-.78 2.05 0 2.83L4 21.41c.39.39.9.59 1.41.59.51 0 1.02-.2 1.41-.59l7.78-7.78 2.81-2.81c.8-.78.8-2.07 0-2.86zM5.41 20L4 18.59l7.72-7.72 1.47 1.35L5.41 20z"/>
+  </svg>
+      </button>
+
+  <style>
+    .colab-df-container {
+      display:flex;
+      flex-wrap:wrap;
+      gap: 12px;
+    }
+
+    .colab-df-convert {
+      background-color: #E8F0FE;
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+      display: none;
+      fill: #1967D2;
+      height: 32px;
+      padding: 0 0 0 0;
+      width: 32px;
+    }
+
+    .colab-df-convert:hover {
+      background-color: #E2EBFA;
+      box-shadow: 0px 1px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px 1px rgba(60, 64, 67, 0.15);
+      fill: #174EA6;
+    }
+
+    [theme=dark] .colab-df-convert {
+      background-color: #3B4455;
+      fill: #D2E3FC;
+    }
+
+    [theme=dark] .colab-df-convert:hover {
+      background-color: #434B5C;
+      box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
+      filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.3));
+      fill: #FFFFFF;
+    }
+  </style>
+
+      <script>
+        const buttonEl =
+          document.querySelector('#df-3b7d443d-b54b-4ee5-8861-9a4be4accdc1 button.colab-df-convert');
+        buttonEl.style.display =
+          google.colab.kernel.accessAllowed ? 'block' : 'none';
+
+        async function convertToInteractive(key) {
+          const element = document.querySelector('#df-3b7d443d-b54b-4ee5-8861-9a4be4accdc1');
+          const dataTable =
+            await google.colab.kernel.invokeFunction('convertToInteractive',
+                                                     [key], {});
+          if (!dataTable) return;
+
+          const docLinkHtml = 'Like what you see? Visit the ' +
+            '<a target="_blank" href=https://colab.research.google.com/notebooks/data_table.ipynb>data table notebook</a>'
+            + ' to learn more about interactive tables.';
+          element.innerHTML = '';
+          dataTable['output_type'] = 'display_data';
+          await google.colab.output.renderOutput(dataTable, element);
+          const docLink = document.createElement('div');
+          docLink.innerHTML = docLinkHtml;
+          element.appendChild(docLink);
+        }
+      </script>
+    </div>
+  </div>
+</div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">y_pred</span><span class="o">=</span><span class="n">model</span><span class="o">.</span><span class="n">predict_proba</span><span class="p">(</span><span class="n">x_map</span><span class="p">)[:,</span><span class="mi">1</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#mascara para crear el mapa de la cuenca</span>
+<span class="n">raster</span> <span class="o">=</span> <span class="n">rio</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s1">&#39;https://github.com/edieraristizabal/Libro_cartoGeotecnia/blob/master/data/Pendiente.tif?raw=true&#39;</span><span class="p">)</span>
+<span class="n">pendiente</span><span class="o">=</span><span class="n">raster</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+
+<span class="c1">#Convertir el vector de resultados a la matriz del mapa de la cuenca a aprtir de la matriz de pendiente</span>
+<span class="n">IS</span><span class="o">=</span><span class="n">y_pred</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="n">pendiente</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+<span class="n">IS</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">pendiente</span><span class="o">&lt;</span><span class="mi">0</span><span class="p">,</span><span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">,</span><span class="n">IS</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">IS</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">colorbar</span><span class="p">();</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/11_evaluacion_27_0.png" src="_images/11_evaluacion_27_0.png" />
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="referencias">
+<h2>Referencias<a class="headerlink" href="#referencias" title="Permalink to this headline">¶</a></h2>
+<span class="target" id="id4"></span></div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="10_fisico.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Métodos con base física</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="12_amenaza.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Amenaza</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            
+        </div>
+    </div>
+    <footer class="footer">
+  <p>
+    
+      By Edier V. Aristizábal G.<br/>
+    
+        &copy; Copyright 2022.<br/>
+  </p>
+</footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>
