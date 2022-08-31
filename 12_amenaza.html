@@ -348,7 +348,7 @@
       </a>
      </li>
      <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#id6">
+      <a class="reference internal nav-link" href="#id5">
        Ejemplo
       </a>
      </li>
@@ -446,7 +446,7 @@
       </a>
      </li>
      <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#id6">
+      <a class="reference internal nav-link" href="#id5">
        Ejemplo
       </a>
      </li>
@@ -540,8 +540,7 @@
 <p>Para los métodos empíricos basads en umbrales se utiliza generalemnte la probabilidad de ocurrencia de un movimiento en masa dado que se exceda un umbral, o la probabilidad condicionada que un movimiento en masa ocurra dado un evento de magnitud dada.</p>
 <div class="section" id="lluvia">
 <h4>Lluvia<a class="headerlink" href="#lluvia" title="Permalink to this headline">¶</a></h4>
-<p>De aceurdo con <span id="id4">Jaiswal and van Westen [<a class="reference internal" href="#id74">2009</a>]</span> la probabilidad temporal de movimientos en masa detonados por lluvias puede ser obtenida evaluando la probabilidad temporal de los eventos de lluvia, combinado con un análisis de umbrales de lluvia, el cual se define como la intensidad minima o duración requerida para detonar un movimiento en masa.</p>
-<p>Segun <span id="id5">Berti <em>et al.</em> [<a class="reference internal" href="#id73">2012</a>]</span> la probabilidad condicionada es la probabilidad de la ocurrencia de algún evento <em>L</em> (en nuestro caso un movimiento en masa) dado la ocurrencia  de algún otro evento <em>R</em> (un evento de lluvia con una magnitud específica, expresado en términos de lluvia total, intensidad o cualquier otra variable). La probabilidad condicionada se escribe <span class="math notranslate nohighlight">\(P(L/R)\)</span> y se lee <em>la probabilidad que un movimiento en masa (L) ocurra dado un evento de lluvia (R)</em>. Esta probabilidad está determinada por el teorema de <em>Bayes</em>:</p>
+<p>Para movimientos en masa detonados por lluvia, <span id="id4">Berti <em>et al.</em> [<a class="reference internal" href="#id73">2012</a>]</span> proponen utilizar la probabilidad condicionada, definida como la probabilidad de la ocurrencia de algún evento <em>L</em> (en nuestro caso un movimiento en masa) dado la ocurrencia  de algún otro evento <em>R</em> (un evento de lluvia con una magnitud específica, expresado en términos de lluvia total, intensidad o cualquier otra variable). La probabilidad condicionada se escribe <span class="math notranslate nohighlight">\(P(L/R)\)</span> y se lee <em>la probabilidad que un movimiento en masa (L) ocurra dado un evento de lluvia (R)</em>. Esta probabilidad está determinada por el teorema de <em>Bayes</em>:</p>
 <p><span class="math notranslate nohighlight">\(P(A/B)=\frac{P(B/A)P(A)}{P(B)}\)</span></p>
 <p>Donde:</p>
 <p><span class="math notranslate nohighlight">\(P(B/A)\)</span>= probabilidad condicionada de R dado L(tambien llamado probabilidad (<em>likelihood</em>)), que es la probabilidad de observar un evento de lluvia de magnitud R cuando ocurre un movimiento en masa.</p>
@@ -555,8 +554,8 @@
 <p>Por lo que el teorema de <em>Bayes</em> se reduce a:</p>
 <p><span class="math notranslate nohighlight">\(P(A/B)\approx N_{B/A}/N_B\)</span></p>
 </div>
-<div class="section" id="id6">
-<h4>Ejemplo<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h4>
+<div class="section" id="id5">
+<h4>Ejemplo<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h4>
 <p>Si asumimos que 10 movimientos en masa ocurren en una cierta área durante un tiempo dado de referencia, y que 8 de estos movimientos en masa fueron detonados por eventos de lluvia B con una intensidad I&gt;50mm/dia.</p>
 <p>Se podria pensar <strong>erroneamente</strong> que  un evento de lluvia de magnitud B (I&gt;50mm/dia) tiene una probabilidad <span class="math notranslate nohighlight">\(8/10=0.8\)</span> de detonar un movimiento en masa. Esto es equivocado por qué <span class="math notranslate nohighlight">\(8/10\)</span> indica la probabilidad de <span class="math notranslate nohighlight">\(P(B/A)\)</span> de observar un evento de lluvia de magnitud B cuando ocurre un movimiento en masa, no la probabilidad <span class="math notranslate nohighlight">\(P(A/B)\)</span> de observar un movimiento en masa cuando ocurre un evento de lluvia B. Es por esta razon que umbrales de lluvia solamente basados en los eventos de lluvia que detonaron movimientos en masa (<em>likelihood</em>) no tiene mucho sentido, ya que las probabilidades apriori y marginales no son consideradas. De acuerdo con el teorema de <em>Bayes</em> el valor de <span class="math notranslate nohighlight">\(P(A/B)\)</span> depende de <span class="math notranslate nohighlight">\(P(B/A)\)</span> y también de las probabilidades apriori y marginales.</p>
 <p>Por lo tanto, si 1000 eventos de lluvia ocurren en el área considerada y 200 de ellos tienen una intensidad mayor a 50mm/dia, se tiene:</p>
@@ -564,6 +563,11 @@
 <p><span class="math notranslate nohighlight">\(P(B)=P(I&gt;50)=200/1000=0.2\)</span></p>
 <p>Entonces:</p>
 <p><span class="math notranslate nohighlight">\(P(A/B)=P(A/I&gt;50)=\frac{0.8*0.01}{0.2}=0.04\)</span></p>
+<p>De acuerdo con <span id="id6">Jaiswal and van Westen [<a class="reference internal" href="#id74">2009</a>]</span> la probabilidad temporal de movimientos en masa detonados por lluvias puede ser obtenida evaluando la probabilidad temporal de los eventos de lluvia, combinado con un análisis de umbrales de lluvia, el cual se define como la intensidad minima o duración requerida para detonar un movimiento en masa. Los umbrales de lluvia están basados en variables como lluvia acumulada, lluvia antecedente, intensidad de la lluvia y duración de la lluvia. Estos autores proponen utilizar la probabilidad de excedencia de un umbral de lluvia y la probabilidad de ocurrencia de un movimiento en masa relacionado al umbral de lluvia.</p>
+<p>Para que un movimiento en masa <span class="math notranslate nohighlight">\(L\)</span> ocurra, la lluvia acumulada diaria debe exceder un umbral, el cual es una función <span class="math notranslate nohighlight">\(R(t)\)</span> de la lluvia total en un periodo <span class="math notranslate nohighlight">\(R_d(t)\)</span>, y de la cantidad de lluvia antecedente <span class="math notranslate nohighlight">\(R_{ad(t)}\)</span>.</p>
+<p>Si <span class="math notranslate nohighlight">\(R_T\)</span> es el valor del umbral de <span class="math notranslate nohighlight">\(R\)</span> entonces la probabilidad de ocurrencia de un movimiento en masa <span class="math notranslate nohighlight">\(P(L)\)</span> depende de la probabildid de excedencia de <span class="math notranslate nohighlight">\(P[R&gt;R_T]\)</span>. Por lo tanto, la probabilidad de ocurrencia de movimientos en masa puede ser dada por la intersección de dos probabilidades:</p>
+<p><span class="math notranslate nohighlight">\(P[(R&gt;R_T)L]=P[R&gt;R_T]P[L/R&gt;R_T]\)</span></p>
+<p>Esto significa que la probabilidad de ocurrencia de [<span class="math notranslate nohighlight">\(R&gt;R_T\)</span>] y [<span class="math notranslate nohighlight">\(L\)</span>] es igual a la probabilidad de [<span class="math notranslate nohighlight">\(R&gt;R_T\)</span>] multiplicada por la probabilidad de ocurrencia de [L], asumiendo que [<span class="math notranslate nohighlight">\(R&gt;R_T\)</span>] ha ocurrido. La probabilidad de [<span class="math notranslate nohighlight">\(R&gt;R_T\)</span>] puede ser obtenida determinando la probabilidad de excedencia del umbral de lluvia y la probabilidad de [<span class="math notranslate nohighlight">\(L R&gt;R_T\)</span>] se eencuentra en la frecuencia de ocurrencia de movimientos en masa luego que el umbral ha sido excedido.</p>
 </div>
 </div>
 </div>
@@ -573,10 +577,10 @@
 <div class="section" id="referencias">
 <h2>Referencias<a class="headerlink" href="#referencias" title="Permalink to this headline">¶</a></h2>
 <p id="id7"><dl class="citation">
-<dt class="label" id="id73"><span class="brackets"><a class="fn-backref" href="#id5">1</a></span></dt>
+<dt class="label" id="id73"><span class="brackets"><a class="fn-backref" href="#id4">1</a></span></dt>
 <dd><p>M Berti, M. L.V. Martina, S Franceschini, S Pignone, A Simoni, and M Pizziolo. Probabilistic rainfall thresholds for landslide occurrence using a bayesian approach. <em>Journal of Geophysical Research: Earth Surface</em>, 117:1–20, 2012. <a class="reference external" href="https://doi.org/10.1029/2012JF002367">doi:10.1029/2012JF002367</a>.</p>
 </dd>
-<dt class="label" id="id74"><span class="brackets"><a class="fn-backref" href="#id4">2</a></span></dt>
+<dt class="label" id="id74"><span class="brackets"><a class="fn-backref" href="#id6">2</a></span></dt>
 <dd><p>Pankaj Jaiswal and Cees J. van Westen. Estimating temporal probability for landslide initiation along transportation routes based on rainfall thresholds. <em>Geomorphology</em>, 112:96–105, 11 2009. <a class="reference external" href="https://doi.org/10.1016/j.geomorph.2009.05.008">doi:10.1016/j.geomorph.2009.05.008</a>.</p>
 </dd>
 <dt class="label" id="id49"><span class="brackets"><a class="fn-backref" href="#id2">3</a></span></dt>
