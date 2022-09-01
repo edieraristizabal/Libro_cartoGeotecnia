@@ -400,8 +400,19 @@
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#modelo-fosm-first-order-second-moment">
-     Modelo FOSM (First Order Second Moment)
+     Modelo FOSM (
+     <em>
+      First Order Second Moment
+     </em>
+     )
     </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#ejemplo">
+       Ejemplo
+      </a>
+     </li>
+    </ul>
    </li>
   </ul>
  </li>
@@ -542,8 +553,19 @@
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#modelo-fosm-first-order-second-moment">
-     Modelo FOSM (First Order Second Moment)
+     Modelo FOSM (
+     <em>
+      First Order Second Moment
+     </em>
+     )
     </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#ejemplo">
+       Ejemplo
+      </a>
+     </li>
+    </ul>
    </li>
   </ul>
  </li>
@@ -637,7 +659,7 @@ Requirement already satisfied: pyparsing&gt;=2.1.6 in c:\users\usuario\miniconda
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
-<span class="o">~</span>\<span class="n">AppData</span>\<span class="n">Local</span>\<span class="n">Temp</span><span class="o">/</span><span class="n">ipykernel_21376</span><span class="o">/</span><span class="mf">3834865208.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="o">~</span>\<span class="n">AppData</span>\<span class="n">Local</span>\<span class="n">Temp</span><span class="o">/</span><span class="n">ipykernel_33696</span><span class="o">/</span><span class="mf">3834865208.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="kn">import</span> <span class="nn">rasterio</span> <span class="k">as</span> <span class="nn">rio</span>
 <span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="ne">----&gt; </span><span class="mi">3</span> <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
@@ -1365,6 +1387,7 @@ Cuando terminen los cálculos, abra el archivo TrigrsLog.txt y examínelo.</p>
 </div>
 <div class="section" id="factor-detonante-sismo">
 <h2>Factor detonante sismo<a class="headerlink" href="#factor-detonante-sismo" title="Permalink to this headline">¶</a></h2>
+<p>Existen diferentes métodos para evaluar la estabilidad de laderas ante sismos y estimar los desplazamientos inerciales permanentes. A continuación se presentarán el denominado análisis seudoestático y el análisis de desplazamientos permanentes.</p>
 <div class="section" id="analisis-seudoestatico">
 <h3>Análisis seudoestático<a class="headerlink" href="#analisis-seudoestatico" title="Permalink to this headline">¶</a></h3>
 <p>El método seudoestático es una generalización del análisis de estabilidad por equilibrio límite, en el cual los efectos de los sismos son representados
@@ -1426,24 +1449,54 @@ de Newmark a través de una regresión logarítmica estimada por Jibson:</p>
 </div>
 <div class="section" id="modelos-probabilisticos">
 <h2>Modelos probabilísticos<a class="headerlink" href="#modelos-probabilisticos" title="Permalink to this headline">¶</a></h2>
+<p>En los enfoques aneriores, determinísticos, los parámetros se suponen constantes obteniendo como resultado único el factor de seguridad como índice de estabilidad. POr le contrario, en los enfoques prababilísticos los parámetros son variables por loq ue el resultado es uan distribución de probabilidad obteniendo como resultado el índice de confiabilidad y la probabilidad de ruptura. Para esto existen métodos como <em>Montecarlo</em>, <em>Estimativas puntuales</em> y el método FOSM. A continuación se describirá el método FOSM.</p>
 <div class="section" id="modelo-fosm-first-order-second-moment">
-<h3>Modelo FOSM (First Order Second Moment)<a class="headerlink" href="#modelo-fosm-first-order-second-moment" title="Permalink to this headline">¶</a></h3>
-<p>Entre los modelos de confiabilidad más utilizados en la geotecnia se encuentran el método de Montecarlo, FOSM y estimativas puntuales. Para el presente trabajo se emplea el método estadístico FOSM, el cual emplea la expansión de la serie de Taylor de primer orden para derivar el
+<h3>Modelo FOSM (<em>First Order Second Moment</em>)<a class="headerlink" href="#modelo-fosm-first-order-second-moment" title="Permalink to this headline">¶</a></h3>
+<p>El método estadístico FOSM emplea la expansión de la serie de Taylor de primer orden para derivar el
 primer y segundo momento de variables de entrada aleatorias. De esta forma, para estimar indirectamente la probabilidad de
 falla se calcula el Índice de Confiabilidad, dado por la relación entre la media y la desviación estándar de una función de
 probabilidad que se ajusta al factor de seguridad.</p>
+<div class="figure align-default" id="fosm">
+<a class="reference internal image-reference" href="https://i.pinimg.com/originals/8f/e5/08/8fe50884d4f8c1f87a157087d05f4bd9.jpg"><img alt="FOSM" src="https://i.pinimg.com/originals/8f/e5/08/8fe50884d4f8c1f87a157087d05f4bd9.jpg" style="width: 600px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 68 </span><span class="caption-text">Índice de Confiabilidad</span><a class="headerlink" href="#fosm" title="Permalink to this image">¶</a></p>
+</div>
 <p>Las ventajas del modelo FOSM consisten en que los cálculos son simplificados y solo requiere el conocimiento de los valores
 de los momentos de las distribuciones estadísticas de las variables que forman la función, expresados en la media y la varianza de cada variable, asumiendo una distribución normal tanto para las variables como para el factor de seguridad (FS). De esta manera, para N variables
-aleatorias no correlacionadas F (x1, x2,…, xN), conservando solamente los términos del primer orden (lineales) de la serie de
-Taylor, se producen las siguientes expresiones:</p>
-<p>Donde 𝑥̅𝑖 y V(𝑥𝑖) son la media y varianza de cada variable aleatoria, respectivamente. Para los valores de las derivadas
-usualmente se utiliza la aproximación numérica dada en (5) propuesta por .</p>
-<p>Finalmente, se obtiene el Índice de Confiabilidad del Factor de Seguridad, calculado por (6):</p>
-<p>Donde 𝐸[𝐹𝑆] es el valor esperado del factor de seguridad calculado con los parámetros medios de las variables independientes y 𝜎[𝐹𝑆] es la desviación estándar del Factor de Seguridad (FS) obtenida por (3), teniendo como el FS crítico el valor
+aleatorias no correlacionadas F (<span class="math notranslate nohighlight">\(x_1, x_2,…, x_N\)</span>), conservando solamente los términos del primer orden (lineales) de la serie de
+Taylor.</p>
+<p>Para el uso de N variables independientes con naturaleza probabilística inicialmente se calcula el factor de seguridad media <span class="math notranslate nohighlight">\(E[FS]\)</span> utilizando los valores de los parámetros medios:</p>
+<p><span class="math notranslate nohighlight">\(E[FS]=F(\bar{x}_1, \bar{x}_2, ..., \bar{x}_N)\)</span></p>
+<p>Posteriormente se debe calcular la varianza del factr de seguridad con la siguiente expresión:</p>
+<p><span class="math notranslate nohighlight">\(V[FS]=\sum_{i=1}^{N}(\frac{dFS}{dx_i})^2 V(x_i)\)</span></p>
+<p>Donde <span class="math notranslate nohighlight">\(\bar{x}_𝑖\)</span> y <span class="math notranslate nohighlight">\(V(𝑥_𝑖)\)</span> son la media y varianza de cada variable aleatoria, respectivamente.</p>
+<p>Con la varianza, se determina la desviación estandar y finalmente, se obtiene el Índice de Confiabilidad del Factor de Seguridad, calculado por:</p>
+<p><span class="math notranslate nohighlight">\(\beta I=\frac{E[FS]-1}{\sigma[FS]}\)</span></p>
+<p>Donde 𝐸[𝐹𝑆] es el valor esperado del factor de seguridad calculado con los parámetros medios de las variables independientes y 𝜎[𝐹𝑆] es la desviación estándar del Factor de Seguridad (FS) obtenida , teniendo como el FS crítico el valor
 igual a 1. Este índice expresa la confiabilidad del factor de seguridad en relación con la probabilidad de falla o ruptura.
-El método FOSM permite evaluar la variabilidad de cualquiera de los parámetros incluidos dentro del análisis. En el
-presente estudio se evalúan los efectos de las variaciones de los parámetros de resistencia (cohesión y ángulo de fricción) y el
-espesor de suelo en el factor de seguridad.</p>
+El método FOSM permite evaluar la variabilidad de cualquiera de los parámetros incluidos dentro del análisis.</p>
+<div class="section" id="ejemplo">
+<h4>Ejemplo<a class="headerlink" href="#ejemplo" title="Permalink to this headline">¶</a></h4>
+<div class="figure align-default" id="fosm1">
+<a class="reference internal image-reference" href="https://i.pinimg.com/originals/01/e4/d3/01e4d38406a12108bbb53524528f6966.jpg"><img alt="FOSM1" src="https://i.pinimg.com/originals/01/e4/d3/01e4d38406a12108bbb53524528f6966.jpg" style="width: 600px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 69 </span><span class="caption-text">Ecuación a utilizar y variables aleatorias</span><a class="headerlink" href="#fosm1" title="Permalink to this image">¶</a></p>
+</div>
+<div class="figure align-default" id="fosm2">
+<a class="reference internal image-reference" href="https://i.pinimg.com/564x/7a/c3/b5/7ac3b5e1d16624a858a2b8db69868e6d.jpg"><img alt="FOSM2" src="https://i.pinimg.com/564x/7a/c3/b5/7ac3b5e1d16624a858a2b8db69868e6d.jpg" style="width: 600px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 70 </span><span class="caption-text">Factor de seguridad medio</span><a class="headerlink" href="#fosm2" title="Permalink to this image">¶</a></p>
+</div>
+<div class="figure align-default" id="fosm3">
+<a class="reference internal image-reference" href="https://i.pinimg.com/originals/38/34/be/3834be3e01c8f9aa35b688c17ce105bd.jpg"><img alt="FOSM3" src="https://i.pinimg.com/originals/38/34/be/3834be3e01c8f9aa35b688c17ce105bd.jpg" style="width: 600px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 71 </span><span class="caption-text">.</span><a class="headerlink" href="#fosm3" title="Permalink to this image">¶</a></p>
+</div>
+<div class="figure align-default" id="fosm4">
+<a class="reference internal image-reference" href="https://i.pinimg.com/originals/77/e3/3d/77e33d49579d64aa53a65c1ddfed802f.jpg"><img alt="FOSM4" src="https://i.pinimg.com/originals/77/e3/3d/77e33d49579d64aa53a65c1ddfed802f.jpg" style="width: 600px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 72 </span><span class="caption-text">Cálculo de la varianza</span><a class="headerlink" href="#fosm4" title="Permalink to this image">¶</a></p>
+</div>
+<div class="figure align-default" id="fosm5">
+<a class="reference internal image-reference" href="https://i.pinimg.com/564x/85/a8/ae/85a8ae2bbd1112bf02d9e230df78d4b7.jpg"><img alt="FOSM5" src="https://i.pinimg.com/564x/85/a8/ae/85a8ae2bbd1112bf02d9e230df78d4b7.jpg" style="width: 600px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 73 </span><span class="caption-text">Cálculo del Indice de Confiabilidad</span><a class="headerlink" href="#fosm5" title="Permalink to this image">¶</a></p>
+</div>
+</div>
 </div>
 </div>
 <div class="section" id="referencias">
