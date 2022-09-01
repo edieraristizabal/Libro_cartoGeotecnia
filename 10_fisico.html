@@ -336,7 +336,7 @@
         </a>
        </li>
        <li class="toc-h5 nav-item toc-entry">
-        <a class="reference internal nav-link" href="#trigrs">
+        <a class="reference internal nav-link" href="#id2">
          TRIGRS
         </a>
        </li>
@@ -489,7 +489,7 @@
         </a>
        </li>
        <li class="toc-h5 nav-item toc-entry">
-        <a class="reference internal nav-link" href="#trigrs">
+        <a class="reference internal nav-link" href="#id2">
          TRIGRS
         </a>
        </li>
@@ -603,7 +603,7 @@
 <p>Arnone et al. (2011) proponen un modelo físico distribuido, en el cual acoplan un modelo de talud infinita con el modelo hidrológico tRIBS (Triangulated Irregular Network Real-Time Integrated Basin Simulator) desarrollado por Ivanov et al. (2004). El modelo simula la intercepción de la lluvia, la evapotranspiración, la infiltración del agua en el suelo, la escorrentía superficial, y el flujo subsuperficial lateral a la ladera en condiciones saturadas y parcialmente saturadas, representando la heterogeneidad espacial de la topografía por una red irregular triangular (TIN) utilizada ampliamente por Sistemas de Información Geográfica (SIG) que reduce el tiempo computacional sin pérdidas aparentes de información. El modelo es también capaz de simular el volumen del material fallado y su posible trayecto.</p>
 <p>Finalmente el modelo SHIA_Landslide propuesto por Aristizábal et al. (2014) acopla un modelo de talud infinita en condiciones saturadas con el modelo hidrológico distribuido de tanques a escala de cuenca que considera los flujos verticales y horizontales, denominado SHIA (Vélez, 2001). El modelo hidrológico está conformado por dos componentes: un balance de agua que simula los proceso hidrológicos dominantes en la cuenca, tales como infiltración, percolación, escorrentía superficial, flujo sub superficial, y flujo subterráneo; y un componente que simula el flujo del agua a través de la red de drenaje, lo que permite calibrar con valores observados la hidrología de la cuenca y las laderas previo a la simulación de estabilidad de las vertientes.</p>
 <div class="figure align-default" id="modelos">
-<a class="reference internal image-reference" href="https://i.pinimg.com/564x/21/f9/1d/21f91d0d89d2aac8176b08e2b832c18b.jpg"><img alt="modelos" src="https://i.pinimg.com/564x/21/f9/1d/21f91d0d89d2aac8176b08e2b832c18b.jpg" style="width: 500px;" /></a>
+<a class="reference internal image-reference" href="https://i.pinimg.com/564x/83/23/d3/8323d33e987c258078dd4d5e13d2f241.jpg"><img alt="modelos" src="https://i.pinimg.com/564x/83/23/d3/8323d33e987c258078dd4d5e13d2f241.jpg" style="width: 500px;" /></a>
 <p class="caption"><span class="caption-number">Fig. 62 </span><span class="caption-text">modelos físicos.</span><a class="headerlink" href="#modelos" title="Permalink to this image">¶</a></p>
 </div>
 <div class="section" id="modelo-shalstab">
@@ -659,7 +659,7 @@ Requirement already satisfied: pyparsing&gt;=2.1.6 in c:\users\usuario\miniconda
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
-<span class="o">~</span>\<span class="n">AppData</span>\<span class="n">Local</span>\<span class="n">Temp</span><span class="o">/</span><span class="n">ipykernel_33696</span><span class="o">/</span><span class="mf">3834865208.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="o">~</span>\<span class="n">AppData</span>\<span class="n">Local</span>\<span class="n">Temp</span><span class="o">/</span><span class="n">ipykernel_12412</span><span class="o">/</span><span class="mf">3834865208.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="kn">import</span> <span class="nn">rasterio</span> <span class="k">as</span> <span class="nn">rio</span>
 <span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="ne">----&gt; </span><span class="mi">3</span> <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
@@ -902,6 +902,10 @@ Requirement already satisfied: pyparsing&gt;=2.1.6 in c:\users\usuario\miniconda
 <div class="section" id="modelo-trigrs">
 <h3>Modelo TRIGRS<a class="headerlink" href="#modelo-trigrs" title="Permalink to this headline">¶</a></h3>
 <p>El modelo TRIGRS (Transient Rainfall Infiltration and Gridbased Slope-Stability) incorpora en su análisis el proceso de infiltración del agua lluvia y el cálculo del factor de seguridad. Este es un modelo con base física que evalúa la distribución temporal y espacial de movimientos en masa superficiales detonados por lluvia a través del cálculo de los cambios transitorios de la presión de poros y su incidencia en la variación del factor de seguridad, debido a la infiltración de la lluvia.</p>
+<div class="figure align-default" id="trigrs">
+<a class="reference internal image-reference" href="https://i.pinimg.com/564x/a3/c5/84/a3c584d944d2f76dc92ddebe309c571e.jpg"><img alt="TRIGRS" src="https://i.pinimg.com/564x/a3/c5/84/a3c584d944d2f76dc92ddebe309c571e.jpg" style="width: 600px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 63 </span><span class="caption-text">Modelo TRIGRS.</span><a class="headerlink" href="#trigrs" title="Permalink to this image">¶</a></p>
+</div>
 <p>El modelo de infiltración está basado en la solución lineal de las ecuaciones de Richards, y el flujo de
 agua en el suelo es el resultado de la sumatoria del estado estacionario y el componente transitorio asociado al evento de
 lluvia modelado. La solución para el caso de frontera basal impermeable a una profundidad finita está dada por:</p>
@@ -917,6 +921,10 @@ dirección vertical.</p>
 <p><span class="math notranslate nohighlight">\(FS(Z,t)=\frac{tan}{tanδ}+\frac{c'-ψ(Z,t)𝛾_𝑤tanϕ'}{𝛾_sZsenδcosδ}\)</span></p>
 <p>Donde <span class="math notranslate nohighlight">\(𝑐′\)</span> es la cohesión efectiva del suelo, <span class="math notranslate nohighlight">\(𝜙′\)</span> el ángulo de fricción efectivo, <span class="math notranslate nohighlight">\(𝛾𝑤\)</span> el peso unitario del agua, <span class="math notranslate nohighlight">\(𝛾_𝑠\)</span> el peso unitario
 del suelo y <span class="math notranslate nohighlight">\(𝜓(𝑍,𝑡)\)</span> la cabeza de presión en función de la profundidad y el tiempo <span class="math notranslate nohighlight">\(𝑡\)</span>.</p>
+<div class="figure align-default" id="trgrs">
+<a class="reference internal image-reference" href="https://i.pinimg.com/564x/0f/25/52/0f255226c8b09d758217e86a2abbbdeb.jpg"><img alt="modelos" src="https://i.pinimg.com/564x/0f/25/52/0f255226c8b09d758217e86a2abbbdeb.jpg" style="width: 600px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 64 </span><span class="caption-text">Modelo TRIGRS.</span><a class="headerlink" href="#trgrs" title="Permalink to this image">¶</a></p>
+</div>
 <div class="section" id="tutorial">
 <h4>Tutorial<a class="headerlink" href="#tutorial" title="Permalink to this headline">¶</a></h4>
 <p><em>Elaborado por Maria Isabel Arango</em>.</p>
@@ -948,7 +956,7 @@ del suelo y <span class="math notranslate nohighlight">\(𝜓(𝑍,𝑡)\)</span
 </ul>
 <div class="figure align-default" id="direccion">
 <a class="reference internal image-reference" href="https://www.researchgate.net/publication/307632379/figure/fig6/AS:404373080428547&#64;1473421463384/D8-ESRI-direction-code-overview.png"><img alt="direccion" src="https://www.researchgate.net/publication/307632379/figure/fig6/AS:404373080428547&#64;1473421463384/D8-ESRI-direction-code-overview.png" style="width: 400px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 63 </span><span class="caption-text">Códigos usados por ESRI para la dirección de flujo
+<p class="caption"><span class="caption-number">Fig. 65 </span><span class="caption-text">Códigos usados por ESRI para la dirección de flujo
 Profsuelo_Arenosa_Clip: Profundidad del suelo, en metros de la zona de estudio.
 Suelos_Arenosa_Clip: Zonificación de los tipos de suelo presentes en la zona de estudio.</span><a class="headerlink" href="#direccion" title="Permalink to this image">¶</a></p>
 </div>
@@ -1012,7 +1020,7 @@ En caso de utilizar <em>ArcToolbox</em>, vaya a <em>Spatial Analysis &gt; Reclas
 </ul>
 <div class="figure align-default" id="gm">
 <a class="reference internal image-reference" href="https://i.pinimg.com/564x/e1/eb/66/e1eb661f2b5c6deffbba5f6e3ed842dc.jpg"><img alt="gm" src="https://i.pinimg.com/564x/e1/eb/66/e1eb661f2b5c6deffbba5f6e3ed842dc.jpg" style="width: 600px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 64 </span><span class="caption-text">Archivo <em>gm_in.txt</em></span><a class="headerlink" href="#gm" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 66 </span><span class="caption-text">Archivo <em>gm_in.txt</em></span><a class="headerlink" href="#gm" title="Permalink to this image">¶</a></p>
 </div>
 <ul class="simple">
 <li><p>Una vez termine de editar el archivo <em>gm_in</em>, guarde los cambios.</p></li>
@@ -1065,7 +1073,7 @@ En caso de utilizar <em>ArcToolbox</em>, vaya a <em>Spatial Analysis &gt; Reclas
 </ul>
 <div class="figure align-default" id="id1">
 <a class="reference internal image-reference" href="https://i.pinimg.com/564x/8c/87/62/8c87622bebacf2962926c5321a6d64f1.jpg"><img alt="gm" src="https://i.pinimg.com/564x/8c/87/62/8c87622bebacf2962926c5321a6d64f1.jpg" style="width: 600px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 65 </span><span class="caption-text">Archivo gm_in.txt</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 67 </span><span class="caption-text">Archivo gm_in.txt</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
 </div>
 <ul class="simple">
 <li><p>Ejecute el programa TopoIndex.exe.</p></li>
@@ -1104,8 +1112,8 @@ En caso de utilizar <em>ArcToolbox</em>, vaya a <em>Spatial Analysis &gt; Reclas
 </table>
 <p>Los números en paréntesis denotan el orden en el que se deberán ingresar estos archivos en el archivo de inicio de TRIGRS, que verá más adelante.</p>
 </div>
-<div class="section" id="trigrs">
-<h5>TRIGRS<a class="headerlink" href="#trigrs" title="Permalink to this headline">¶</a></h5>
+<div class="section" id="id2">
+<h5>TRIGRS<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h5>
 <p>TRIGRS se basa en la suposición de la infiltración unidimensional (únicamente hacia abajo) en un campo de flujo constante para determinar los cambios en la presión de poros en un modelo de talud infinito y la estabilidad de los suelos poco profundos durante las tormentas. TRIGRS incluye modelos para condiciones iniciales saturadas y no-saturadas. Para condiciones iniciales saturadas, cada simulación con TRIGRS analiza un único punto en el tiempo especificado por el usuario durante una secuencia de tormenta. Por lo tanto, el usuario ejecuta una serie de simulaciones para diferentes tiempos específicos utilizando TRIGRS para estudiar el historial de tiempo de inestabilidad de la ladera durante una secuencia de lluvia. Para condiciones iniciales no-saturadas, TRIGRS puede analizar una serie de tiempo completa durante una única simulación.</p>
 <p>Abra el archivo <em>tr_in.txt</em>. Este archivo contiene varios tipos de información que debemos ingresar:</p>
 <ul class="simple">
@@ -1264,7 +1272,7 @@ En caso de utilizar <em>ArcToolbox</em>, vaya a <em>Spatial Analysis &gt; Reclas
 <p>La siguiente figura muestra el registro de precipitación obtenido de un pluviómetro ubicado en la cuenca de La Arenosa el día del evento.</p>
 <div class="figure align-default" id="lluvia">
 <a class="reference internal image-reference" href="https://i.pinimg.com/564x/0a/bf/a1/0abfa1b6cc96eac96fa242fc76cbfa47.jpg"><img alt="lluvia" src="https://i.pinimg.com/564x/0a/bf/a1/0abfa1b6cc96eac96fa242fc76cbfa47.jpg" style="width: 600px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 66 </span><span class="caption-text">Registro de precipitación del evento del 21/09/1990 en la cuenca La Arenosa</span><a class="headerlink" href="#lluvia" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 68 </span><span class="caption-text">Registro de precipitación del evento del 21/09/1990 en la cuenca La Arenosa</span><a class="headerlink" href="#lluvia" title="Permalink to this image">¶</a></p>
 </div>
 <p>La tormenta comenzó a las 8:00 pm del día del evento y terminó a las 2:00 am del día siguiente. Usted modelará la estabilidad de la cuenca durante las 7 horas de duración de la tormenta (7 horas= 25.200 segundos, que corresponde al valor ingresado en el campo t de los parámetros de modelación). Como verá el registro de precipitación está dado en escala horaria (7 horas de tormenta con registro de intensidad horaria corresponde al valor ingresado en el campo nper de los parámetros de modelación).</p>
 <ul class="simple">
@@ -1379,7 +1387,7 @@ Cuando terminen los cálculos, abra el archivo TrigrsLog.txt y examínelo.</p>
 </table>
 <div class="figure align-default" id="saturado">
 <a class="reference internal image-reference" href="https://i.pinimg.com/564x/51/43/7e/51437e91abf650c9b6a1042f8ada9053.jpg"><img alt="saturado" src="https://i.pinimg.com/564x/51/43/7e/51437e91abf650c9b6a1042f8ada9053.jpg" style="width: 600px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 67 </span><span class="caption-text">Archivo de inicio de TRIGRS para condiciones saturadas</span><a class="headerlink" href="#saturado" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 69 </span><span class="caption-text">Archivo de inicio de TRIGRS para condiciones saturadas</span><a class="headerlink" href="#saturado" title="Permalink to this image">¶</a></p>
 </div>
 </div>
 </div>
@@ -1458,7 +1466,7 @@ falla se calcula el Índice de Confiabilidad, dado por la relación entre la med
 probabilidad que se ajusta al factor de seguridad.</p>
 <div class="figure align-default" id="fosm">
 <a class="reference internal image-reference" href="https://i.pinimg.com/originals/8f/e5/08/8fe50884d4f8c1f87a157087d05f4bd9.jpg"><img alt="FOSM" src="https://i.pinimg.com/originals/8f/e5/08/8fe50884d4f8c1f87a157087d05f4bd9.jpg" style="width: 600px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 68 </span><span class="caption-text">Índice de Confiabilidad</span><a class="headerlink" href="#fosm" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 70 </span><span class="caption-text">Índice de Confiabilidad</span><a class="headerlink" href="#fosm" title="Permalink to this image">¶</a></p>
 </div>
 <p>Las ventajas del modelo FOSM consisten en que los cálculos son simplificados y solo requiere el conocimiento de los valores
 de los momentos de las distribuciones estadísticas de las variables que forman la función, expresados en la media y la varianza de cada variable, asumiendo una distribución normal tanto para las variables como para el factor de seguridad (FS). De esta manera, para N variables
@@ -1478,30 +1486,30 @@ El método FOSM permite evaluar la variabilidad de cualquiera de los parámetros
 <h4>Ejemplo<a class="headerlink" href="#ejemplo" title="Permalink to this headline">¶</a></h4>
 <div class="figure align-default" id="fosm1">
 <a class="reference internal image-reference" href="https://i.pinimg.com/originals/01/e4/d3/01e4d38406a12108bbb53524528f6966.jpg"><img alt="FOSM1" src="https://i.pinimg.com/originals/01/e4/d3/01e4d38406a12108bbb53524528f6966.jpg" style="width: 600px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 69 </span><span class="caption-text">Ecuación a utilizar y variables aleatorias</span><a class="headerlink" href="#fosm1" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 71 </span><span class="caption-text">Ecuación a utilizar y variables aleatorias</span><a class="headerlink" href="#fosm1" title="Permalink to this image">¶</a></p>
 </div>
 <div class="figure align-default" id="fosm2">
 <a class="reference internal image-reference" href="https://i.pinimg.com/564x/7a/c3/b5/7ac3b5e1d16624a858a2b8db69868e6d.jpg"><img alt="FOSM2" src="https://i.pinimg.com/564x/7a/c3/b5/7ac3b5e1d16624a858a2b8db69868e6d.jpg" style="width: 600px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 70 </span><span class="caption-text">Factor de seguridad medio</span><a class="headerlink" href="#fosm2" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 72 </span><span class="caption-text">Factor de seguridad medio</span><a class="headerlink" href="#fosm2" title="Permalink to this image">¶</a></p>
 </div>
 <div class="figure align-default" id="fosm3">
 <a class="reference internal image-reference" href="https://i.pinimg.com/originals/38/34/be/3834be3e01c8f9aa35b688c17ce105bd.jpg"><img alt="FOSM3" src="https://i.pinimg.com/originals/38/34/be/3834be3e01c8f9aa35b688c17ce105bd.jpg" style="width: 600px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 71 </span><span class="caption-text">.</span><a class="headerlink" href="#fosm3" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 73 </span><span class="caption-text">.</span><a class="headerlink" href="#fosm3" title="Permalink to this image">¶</a></p>
 </div>
 <div class="figure align-default" id="fosm4">
 <a class="reference internal image-reference" href="https://i.pinimg.com/originals/77/e3/3d/77e33d49579d64aa53a65c1ddfed802f.jpg"><img alt="FOSM4" src="https://i.pinimg.com/originals/77/e3/3d/77e33d49579d64aa53a65c1ddfed802f.jpg" style="width: 600px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 72 </span><span class="caption-text">Cálculo de la varianza</span><a class="headerlink" href="#fosm4" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 74 </span><span class="caption-text">Cálculo de la varianza</span><a class="headerlink" href="#fosm4" title="Permalink to this image">¶</a></p>
 </div>
 <div class="figure align-default" id="fosm5">
 <a class="reference internal image-reference" href="https://i.pinimg.com/564x/85/a8/ae/85a8ae2bbd1112bf02d9e230df78d4b7.jpg"><img alt="FOSM5" src="https://i.pinimg.com/564x/85/a8/ae/85a8ae2bbd1112bf02d9e230df78d4b7.jpg" style="width: 600px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 73 </span><span class="caption-text">Cálculo del Indice de Confiabilidad</span><a class="headerlink" href="#fosm5" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 75 </span><span class="caption-text">Cálculo del Indice de Confiabilidad</span><a class="headerlink" href="#fosm5" title="Permalink to this image">¶</a></p>
 </div>
 </div>
 </div>
 </div>
 <div class="section" id="referencias">
 <h2>Referencias<a class="headerlink" href="#referencias" title="Permalink to this headline">¶</a></h2>
-<span class="target" id="id2"></span></div>
+<span class="target" id="id3"></span></div>
 </div>
 
     <script type="text/x-thebe-config">
