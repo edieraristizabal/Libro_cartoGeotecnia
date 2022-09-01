@@ -42,6 +42,8 @@
     <script src="_static/copybutton.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
     <script>
         const thebe_selector = ".thebe"
@@ -287,6 +289,21 @@
             <nav id="bd-toc-nav" aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#laderas-cataclinales">
+   Laderas cataclinales
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#laderas-ortoclinales">
+   Laderas ortoclinales
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#laderas-anaclinales">
+   Laderas anaclinales
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#referencias">
    Referencias
   </a>
@@ -312,6 +329,21 @@
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#laderas-cataclinales">
+   Laderas cataclinales
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#laderas-ortoclinales">
+   Laderas ortoclinales
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#laderas-anaclinales">
+   Laderas anaclinales
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#referencias">
    Referencias
   </a>
@@ -327,24 +359,59 @@
                 
   <div class="tex2jax_ignore mathjax_ignore section" id="movimientos-en-masa-en-roca">
 <h1>Movimientos en masa en roca<a class="headerlink" href="#movimientos-en-masa-en-roca" title="Permalink to this headline">¶</a></h1>
-<p>El programa estima la propagación de los fujos de detritos mediante un balance energético básico y una propagación probabilística. Los algoritmos de la dirección de fujo calculan la probabilidad de que un fujo de detrito se mueva de una celda hacia las próximas 8 celdas. Estas probabilidades dependen de la pendiente y la persistencia que representa la inercia del fujo (Horton et al., 2013).</p>
+<p>Las estructuras geológicas de los materiales que conforman las laderas son una de las principales factores condicionantes de movimientos en masa en roca. Los planos de estratificación, diaclasas o foliación pueden controlar tanto el mecanismo como la actividad de los movimientos en masa. Es por esat razón que analizar la relación entre dichos planos de debilidad con el aspecto y pendiente de las laderas pueden ser clave para entender la ocurrencia. La disponibilidad de modelos digitales del terreno y sistemas de información geográfica ofrecen una excelente posibilidad de caracterizar estas relaciones sobre extensas áreas utilizando los modelos de elevación y datos estructurales.</p>
 <p>Como soporte a los modelos con base física para macizos rocosos, las técnicas computacionales actuales permiten la implementación de análisis espaciales que correlacionen información geo-estructural y morfológica de las laderas para evaluar su estabilidad (Grelle et al., 2011). Para este análisis, se definen las relaciones geométricas entre la aptitud de las discontinuidades (rumbo y buzamiento) y la geometría de la ladera (pendiente y aspecto) (Guzzetti et al., 2006; Gunther, 2003; Hammond et al., 1992; Montgomery &amp; Dietrich, 1994; Pack et al., 1998). Estos modelos requieren información espacialmente distribuida sobre la geometría de las laderas y datos estructurales de las discontinuidades para realizar los análisis celda por celda sobre toda el área de estudio (Günther, 2003; Günther et al., 2004; Santagelo et al., 2014).</p>
-<p>Los análisis cinemáticos implementados mediante SIG para extensas áreas permiten definir dominios morfoestructurales, estableciendo áreas geográficas caracterizadas por relaciones geométricas homogéneas entre la actitud de las estructuras geológicas y la geometría de las laderas. Para identificar dichos dominios morfoestructurales autores como Grelle et al. (2011) y Santagelo et al. (2014) han propuesto evaluaciones discretas mediante regla de clasificación o evaluaciones continuas a través de índices que relacionan la geometría de las laderas y la aptitud de las discontinuidades. Finalmente, cada dominio estructural, de acuerdo con la disposición estructural y geometría de la ladera, presenta un tipo principal de cinemática de falla a lo largo de las discontinuidades: fallas planares, fallas en cuña, y fallas por volcamiento. (Cruden &amp; varnes, 1996; Hoek y Bray, 1981).</p>
+<p>Los análisis cinemáticos implementados mediante SIG para extensas áreas permiten reqeuiren dominios morfoestructurales, estableciendo áreas geográficas caracterizadas por relaciones geométricas homogéneas entre la actitud de las estructuras geológicas y la geometría de las laderas. Para identificar dichos dominios morfoestructurales autores como Grelle et al. (2011) y Santagelo et al. (2014) han propuesto evaluaciones discretas mediante regla de clasificación o evaluaciones continuas a través de índices que relacionan la geometría de las laderas y la aptitud de las discontinuidades. Finalmente, cada dominio estructural, de acuerdo con la disposición estructural y geometría de la ladera, presenta un tipo principal de cinemática de falla a lo largo de las discontinuidades: fallas planares, fallas en cuña, y fallas por volcamiento. (Cruden &amp; varnes, 1996; Hoek y Bray, 1981).</p>
+<p>Uno de los índices utilizados es TOBIA (<em>TOpographic/Bedding plane Intersection Angle</em>) propuesto por Meentemeyer &amp; Moody (2000). este indice señala la conformidad entre la ladera y los planos del material de la ladera. Si los planos de la roca buzan en el mismo sentido del aspecto de la ladera, se clasifica como <em>cataclinal</em>, si los planos buzan en direccion opuesta, es clasificada como <em>anaclinal</em>, y si buza de forma ortogonal es clasificada como <em>ortoclinal</em>. Las cataclinales y anaclinales pueden subclasificarse de acuerdo con el ángulo de buzamiento y la pendiente de la ladera, como se presenta en la figura. Las laderas cataclinales (<em>dip slope</em> y <em>overdip sope</em>) son susceptibles a deslizamientos planares. Mientras que las laderas anaclinales son susceptibles a movimientos en  masa tipo volcamiento y caida. Y las laderas ortoclinales con diferentes familias de diaclasas pueden formar movimientos en masa tipo cuña.</p>
+<div class="figure align-default" id="roca">
+<a class="reference internal image-reference" href="https://i.pinimg.com/564x/e1/b2/c9/e1b2c9845c93e4cb81807adbc02ec8cc.jpg"><img alt="roca laderas" src="https://i.pinimg.com/564x/e1/b2/c9/e1b2c9845c93e4cb81807adbc02ec8cc.jpg" style="width: 600px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 95 </span><span class="caption-text">Clasificación de laderas de acuerdo con el lineamiento entre el aspecto y pendiente con el rumbo y buzamiento de la estructuras. Tomado de <span id="id1">Meentemeyer and Moody [<a class="reference internal" href="#id78">2000</a>]</span>.</span><a class="headerlink" href="#roca" title="Permalink to this image">¶</a></p>
+</div>
+<p>En este sentido, y con las 4 siguientes variables pendiente (S 0-90°), aspecto (A 0-360°), buzamiento (<span class="math notranslate nohighlight">\(\theta\)</span> 0-90°) y dirección de buzamiento (<span class="math notranslate nohighlight">\(\alpha\)</span> 0-360°), puede ser clasificadas todas las celdas que representa el área de interés. Esta clasificación puede realizarse de forma categórica con el valor de <em>L</em> :</p>
+<p><span class="math notranslate nohighlight">\(L=\sqrt{(cos\alpha - cos A)^2 + (sen\alpha - senA)^2}\)</span></p>
+<p>Los rangos de los valores son considerados en este documento <span class="math notranslate nohighlight">\(\pm\)</span> 45, sin embargo este valor puede reducirse con creterio de campo, un valor razonable puede ser <span class="math notranslate nohighlight">\(\pm\)</span> 20°, como se presenta en las figuras de los análisis cinemáticos..</p>
+<div class="section" id="laderas-cataclinales">
+<h2>Laderas cataclinales<a class="headerlink" href="#laderas-cataclinales" title="Permalink to this headline">¶</a></h2>
+<p>De forma categórica las laderas cataclinales corresponden cuando la diferencia entre <span class="math notranslate nohighlight">\(\alpha\)</span> y A es 0 <span class="math notranslate nohighlight">\(\pm\)</span> 45°, lo cual corresponde a <span class="math notranslate nohighlight">\(0 \leq L \leq 0.7654\)</span>. Adicionalmente, para las laderas cataclinales:</p>
+<p>Si <span class="math notranslate nohighlight">\(-5° \leq \theta-S \leq 5°\)</span> –&gt; <em>Dip slope</em></p>
+<p>Si <span class="math notranslate nohighlight">\(0 - S \geq 5°\)</span> –&gt; <em>underdip slope</em></p>
+<p>Si <span class="math notranslate nohighlight">\(\theta - S &lt; -5°\)</span> –&gt; <em>overdip slope</em></p>
+<p>Como parte del análisis cinemático clásico se verifica además que la pendiente sea mayor al ángulo de fricción del plano.</p>
 <div class="figure align-default" id="precision">
-<a class="reference internal image-reference" href="https://i.pinimg.com/564x/8b/6c/d9/8b6cd95caed2bd79b8c01172f83a8611.jpg"><img alt="modelos" src="https://i.pinimg.com/564x/8b/6c/d9/8b6cd95caed2bd79b8c01172f83a8611.jpg" style="width: 500px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 95 </span><span class="caption-text">Análisis cinemático para deslizamientos planares.</span><a class="headerlink" href="#precision" title="Permalink to this image">¶</a></p>
+<a class="reference internal image-reference" href="https://i.pinimg.com/564x/8b/6c/d9/8b6cd95caed2bd79b8c01172f83a8611.jpg"><img alt="modelos" src="https://i.pinimg.com/564x/8b/6c/d9/8b6cd95caed2bd79b8c01172f83a8611.jpg" style="width: 600px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 96 </span><span class="caption-text">Análisis cinemático para deslizamientos planares.</span><a class="headerlink" href="#precision" title="Permalink to this image">¶</a></p>
 </div>
-<div class="figure align-default" id="id1">
-<a class="reference internal image-reference" href="https://i.pinimg.com/564x/00/89/19/008919353afe624b23813743fed36aa7.jpg"><img alt="modelos" src="https://i.pinimg.com/564x/00/89/19/008919353afe624b23813743fed36aa7.jpg" style="width: 500px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 96 </span><span class="caption-text">Análisis cinemático para deslizamientos en cuña.</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
 </div>
+<div class="section" id="laderas-ortoclinales">
+<h2>Laderas ortoclinales<a class="headerlink" href="#laderas-ortoclinales" title="Permalink to this headline">¶</a></h2>
+<p>De forma categórica las laderas ortoclinales corresponden cuando al diferencia entre <span class="math notranslate nohighlight">\(\alpha\)</span> y A es 90 <span class="math notranslate nohighlight">\(\pm\)</span> 45° o 270 <span class="math notranslate nohighlight">\(\pm\)</span> 45, lo cual corresponde a <span class="math notranslate nohighlight">\(0.7654\lep L \leq 1.8478\)</span></p>
+<p>En este caso para el análisis cinemático la linea de intercepción de los dos planos debe tener una direccion igual a S <span class="math notranslate nohighlight">\(\pm\)</span> 20°, y el buzamiento debe ser mayor al ángulo de fricción.</p>
 <div class="figure align-default" id="id2">
-<a class="reference internal image-reference" href="https://i.pinimg.com/564x/41/2c/d6/412cd65e9a269c371b354d24533199b2.jpg"><img alt="modelos" src="https://i.pinimg.com/564x/41/2c/d6/412cd65e9a269c371b354d24533199b2.jpg" style="width: 500px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 97 </span><span class="caption-text">Análisis cinemático para movimientos en masa tipo volcamiento.</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
+<a class="reference internal image-reference" href="https://i.pinimg.com/564x/00/89/19/008919353afe624b23813743fed36aa7.jpg"><img alt="modelos" src="https://i.pinimg.com/564x/00/89/19/008919353afe624b23813743fed36aa7.jpg" style="width: 600px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 97 </span><span class="caption-text">Análisis cinemático para deslizamientos en cuña.</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+<div class="section" id="laderas-anaclinales">
+<h2>Laderas anaclinales<a class="headerlink" href="#laderas-anaclinales" title="Permalink to this headline">¶</a></h2>
+<p>De forma categórica las laderas anaclinales corresponden cuando al diferencia entre <span class="math notranslate nohighlight">\(\alpha\)</span> y A es 180 <span class="math notranslate nohighlight">\(\pm\)</span> 45°, lo cual corresponde a <span class="math notranslate nohighlight">\(1.8478 \leq L \leq 2\)</span>. Adicionalmente para las laderas anaclinales:</p>
+<p>Si <span class="math notranslate nohighlight">\(-5° \leq \theta - S \leq 5°\)</span> –&gt; <em>normal escarpment</em></p>
+<p>Si <span class="math notranslate nohighlight">\(\theta - S &gt; 5°\)</span> –&gt; <em>Subdued escarpment</em></p>
+<p>Si <span class="math notranslate nohighlight">\(\theta - S &lt; -5°\)</span> –&gt; <em>steepened escarpment</em></p>
+<p>En este caso, para el análisis cinemático se debe verificar que <span class="math notranslate nohighlight">\(90° - \alpha\)</span> sea menor a la pendiente menos el ángulo de fricción.</p>
+<div class="figure align-default" id="id3">
+<a class="reference internal image-reference" href="https://i.pinimg.com/564x/41/2c/d6/412cd65e9a269c371b354d24533199b2.jpg"><img alt="modelos" src="https://i.pinimg.com/564x/41/2c/d6/412cd65e9a269c371b354d24533199b2.jpg" style="width: 600px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 98 </span><span class="caption-text">Análisis cinemático para movimientos en masa tipo volcamiento.</span><a class="headerlink" href="#id3" title="Permalink to this image">¶</a></p>
+</div>
 </div>
 <div class="section" id="referencias">
 <h2>Referencias<a class="headerlink" href="#referencias" title="Permalink to this headline">¶</a></h2>
-<span class="target" id="id3"></span></div>
+<p id="id4"><dl class="citation">
+<dt class="label" id="id78"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
+<dd><p>Ross K Meentemeyer and Aaron Moody. Automated mapping of conformity between topographic and geological surfaces. <em>Computer &amp; Geosciences</em>, 26:815–829, 2000.</p>
+</dd>
+</dl>
+</p>
+</div>
 </div>
 
     <script type="text/x-thebe-config">
