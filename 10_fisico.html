@@ -637,7 +637,7 @@ Requirement already satisfied: pyparsing&gt;=2.1.6 in c:\users\usuario\miniconda
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
-<span class="o">~</span>\<span class="n">AppData</span>\<span class="n">Local</span>\<span class="n">Temp</span><span class="o">/</span><span class="n">ipykernel_36020</span><span class="o">/</span><span class="mf">3834865208.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="o">~</span>\<span class="n">AppData</span>\<span class="n">Local</span>\<span class="n">Temp</span><span class="o">/</span><span class="n">ipykernel_21376</span><span class="o">/</span><span class="mf">3834865208.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="kn">import</span> <span class="nn">rasterio</span> <span class="k">as</span> <span class="nn">rio</span>
 <span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="ne">----&gt; </span><span class="mi">3</span> <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
@@ -1367,110 +1367,61 @@ Cuando terminen los cálculos, abra el archivo TrigrsLog.txt y examínelo.</p>
 <h2>Factor detonante sismo<a class="headerlink" href="#factor-detonante-sismo" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="analisis-seudoestatico">
 <h3>Análisis seudoestático<a class="headerlink" href="#analisis-seudoestatico" title="Permalink to this headline">¶</a></h3>
-<p>El método seudoestático es una generalización del
-análisis de estabilidad por equilibrio límite, en el
-cual los efectos de los sismos son representados
-por una fuerza estática equivalente cuya magnitud
-es producto del coeficiente sísmico k y el peso de
-la masa que potencialmente se va a deslizar [48].
-Este método evalúa los efectos sísmicos como una
-fuerza permanente unidireccional, mediante la simulación del incremento de las fuerzas inerciales
-debido a la aceleración de un sismo, suponiendo
-que las fuerzas sísmicas son proporcionales al peso
-de la masa deslizante. Usualmente, solo se adiciona la fuerza sísmica en la componente horizontal
-en el análisis de equilibrio límite y se consideran
-los efectos de las fuerzas verticales cercanos a cero
-[31]. Para calcular el Factor de Seguridad (fs), Matasovic [49] propone la ecuación (1):</p>
-<p>donde c es la cohesión, φ es el ángulo de fricción efectiva, γs
-es el peso unitario de los materiales, θ es el ángulo de la pendiente, z es el espesor
-del estrato deslizable, γw es el peso unitario del
-agua, kh es el coeficiente horizontal seudoestático
-y hw es la distancia al nivel freático medido desde
-la superficie.
-Para la parametrización de las propiedades
-geomecánicas de los suelos que conforman el área
-urbana del municipio de Barbosa se utilizó la zonificación geotécnica elaborada en los estudios de
-microzonificación sísmica para el Valle de Aburrá,
-donde se realizaron perforaciones y ensayos de laboratorio con correlaciones de ensayos de penetración estándar [7], [18]. Esta zonificación se detalló
-a partir de información geotécnica suministrada por el municipio de estudios locales de suelos
-para propósitos constructivos. Para la pendiente
-se utilizó el modelo digital de elevación con resolución espacial de 2 m elaborado por el Instituto
-Geográfico Agustín Codazzi (igac) en el proyecto
-CartoAntioquia.
-Para la selección del coeficiente horizontal seudoestático, se desarrolló la metodología propuesta
-por la Norma nsr-10 [50] para análisis seudoestáticos, en la cual se evalúa las condiciones sísmicas
-locales mediante las características de la zona de
-estudio. En el título H de la 10 se describe el diseño y estabilidad de taludes teniendo en cuenta los
-efectos sísmicos mediante el análisis seudoestático.
-Esta metodología plantea determinar el coeficiente
-sísmico horizontal seudoestático (kh) en función de
-la aceleración máxima del terreno (Amax), obtenida
-del espectro de diseño para el periodo de vibración
-cero establecida por el estudio de microzonificación sísmica del sitio. En el presente estudio se emplea el espectro de aceleración superficial para el
-periodo de retorno de 475 años y amortiguamiento
-del 5%, tomado de los estudios de microzonificación sísmica detallada del municipio de Barbosa
-elaborados por [7].
-La nsr-10 define las aceleraciones máximas de
-acuerdo con el espectro de diseño, donde presenta
-la formulación de la aceleración máxima del terreno para un periodo de vibración igual a cero, dada
-por la ecuación (2):</p>
-<p>donde Aa es la aceleración pico efectiva de diseño, Fa es el coeficiente de amplificación que afecta la aceleración en la zona de períodos cortos e
-I representa el coeficiente de importancia. Estas
-variables fueron obtenidas a partir de los espectros de respuesta a nivel de superficie del terreno
-realizados por [7]. El coeficiente de importancia se
-determina a partir del uso de las edificaciones expuestas; en el presente proyecto se emplea el valor
-unitario, correspondiente al grupo de importancia I:
-estructuras de ocupación normal (Tabla 1).</p>
-<p>A partir de Amax se obtiene el kh con la ecuación
-(3) teniendo en cuenta los criterios para el análisis
-seudoestático dados en la tabla de la nsr-10 [50,
-H.5.2.5]. Para este estudio se adopta el valor 0,8
-que representa “Suelos, enrocados y macizos rocosos muy fracturados (rqd1
-&lt;50%)” (Tabla 2).</p>
-<p>Finalmente, los escenarios modelados con el
-análisis seudoestático corresponden a las condiciones seca y saturada del terreno, como escenarios que contrastan las condiciones de amenaza.
-Aunque ambos escenarios no corresponden al
-escenario más frecuente y probable, sí permiten
-enmarcar las condiciones de amenaza del municipio entre el escenario de menor criticidad y el de
-mayor criticidad.</p>
+<p>El método seudoestático es una generalización del análisis de estabilidad por equilibrio límite, en el cual los efectos de los sismos son representados
+por una fuerza estática equivalente cuya magnitud es producto del coeficiente sísmico <em>k</em> y el peso de la masa que potencialmente se va a deslizar.
+Este método evalúa los efectos sísmicos como una fuerza permanente unidireccional, mediante la simulación del incremento de las fuerzas inerciales
+debido a la aceleración de un sismo, suponiendo que las fuerzas sísmicas son proporcionales al peso de la masa deslizante. Usualmente, solo se adiciona la fuerza sísmica en la componente horizontal en el análisis de equilibrio límite y se consideran los efectos de las fuerzas verticales cercanos a cero. Para calcular el Factor de Seguridad (fs), Matasovic propone la ecuación (1):</p>
+<p><span class="math notranslate nohighlight">\(FS=\frac{\frac{c}{\gamma_sZcos^2\theta}+[1-\frac{\gamma_w(Z-h_w)}{\gamma_s+tan\theta}]-K_htan\theta tan\phi}{K_h+tan\theta}\)</span></p>
+<p>donde <span class="math notranslate nohighlight">\(c\)</span> es la cohesión, <span class="math notranslate nohighlight">\(\phi\)</span> es el ángulo de fricción efectiva, <span class="math notranslate nohighlight">\(\gamma_s\)</span>  es el peso unitario de los materiales, <span class="math notranslate nohighlight">\(\theta\)</span> es el ángulo de la pendiente, <span class="math notranslate nohighlight">\(z\)</span> es el espesor del estrato deslizable, <span class="math notranslate nohighlight">\(\gamma_w\)</span> es el peso unitario del agua, <span class="math notranslate nohighlight">\(k_h\)</span> es el coeficiente horizontal seudoestático
+y <span class="math notranslate nohighlight">\(h_w\)</span> es la distancia al nivel freático medido desde la superficie.</p>
+<p>En el título H de la NSR10 se describe el diseño y estabilidad de taludes teniendo en cuenta los efectos sísmicos mediante el análisis seudoestático.
+Esta metodología plantea determinar el coeficiente sísmico horizontal seudoestático (kh) en función de la aceleración máxima del terreno (Amax), obtenida
+del espectro de diseño para el periodo de vibración cero establecida por el estudio de microzonificación sísmica del sitio. Para Colombia es posible utilizar el espectro de aceleración superficial para el periodo de retorno de 475 años y amortiguamiento del 5%, tomado de los estudios de microzonificación sísmica donde esten disponibles.  La NSR-10 define las aceleraciones máximas de acuerdo con el espectro de diseño, donde presenta
+la formulación de la aceleración máxima del terreno para un periodo de vibración igual a cero, dada por la ecuación:</p>
+<p><span class="math notranslate nohighlight">\(K_{ST}=k_h=0.8A_max\)</span></p>
+<p>donde <span class="math notranslate nohighlight">\(A_a\)</span> es la aceleración pico efectiva de diseño, <span class="math notranslate nohighlight">\(F_a\)</span> es el coeficiente de amplificación que afecta la aceleración en la zona de períodos cortos e
+I representa el coeficiente de importancia. Estas variables fueron obtenidas a partir de los espectros de respuesta a nivel de superficie del terreno
+realizados. El coeficiente de importancia se determina a partir del uso de las edificaciones expuestas; una posible propuesta es utilizar el valor
+unitario, correspondiente al grupo de importancia I.</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Grupo de uso</p></th>
+<th class="head"><p>Coeficiente de importancia I</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>IV</p></td>
+<td><p>1.55</p></td>
+</tr>
+<tr class="row-odd"><td><p>III</p></td>
+<td><p>1.25</p></td>
+</tr>
+<tr class="row-even"><td><p>II</p></td>
+<td><p>1.10</p></td>
+</tr>
+<tr class="row-odd"><td><p>I</p></td>
+<td><p>1.0</p></td>
+</tr>
+</tbody>
+</table>
+<p>A partir de <span class="math notranslate nohighlight">\(A_max\)</span> se obtiene el <span class="math notranslate nohighlight">\(k_h\)</span> con la siguiente ecuación teniendo en cuenta los criterios para el análisis seudoestático dados en la tabla de la NSR-10 [50, H.5.2.5]. POr ejemplo el valor 0,8 representa <em>Suelos, enrocados y macizos rocosos muy fracturados (RQD1&lt;50%)</em>:</p>
+<p><span class="math notranslate nohighlight">\(K_{ST}=k_h=0.8A_max\)</span></p>
 </div>
 <div class="section" id="desplazamientos-permanentes">
 <h3>Desplazamientos permanentes<a class="headerlink" href="#desplazamientos-permanentes" title="Permalink to this headline">¶</a></h3>
-<p>Este método ha dado útiles resultados modelando
-el comportamiento dinámico de las laderas a nivel
-regional [51], aunque no necesariamente predice
-los desplazamientos medidos, sino que establece un índice útil de cómo una ladera se podría
-comportar durante un evento sísmico [1].
-En el presente trabajo se utilizó el método de
-Newmark [33]. Múltiples variaciones del método
-de Newmark han sido propuestas para obtener resultados precisos en términos de desplazamientos
-al modelar rigurosamente la respuesta dinámica de la ladera [1], [30], [52]. El método requiere
-evaluar el factor de seguridad, la aceleración crítica del terreno y la aceleración máxima en roca
-(Peak Ground Acceleration o pga). Jibson et al.
-[1] proponen un modelo de equilibrio límite de
-talud infinito en material friccionante y cohesivo
-para obtener el factor de seguridad a partir de la
-ecuación (4):
-donde z es el espesor del suelo y m es la
-proporción del suelo que está saturado. Newmark
-[33] señala que la aceleración crítica ac de un bloque
-que potencialmente se puede deslizar es función
-del factor de seguridad estático y de la geometría
-del bloque expresado en la ecuación (5):</p>
-<p>donde ac es la aceleración crítica en términos
-de la aceleración de la gravedad g, y el ángulo que
-forma la horizontal con el centro de masa del bloque, que generalmente se aproxima a la pendiente.
-Finalmente, a partir de ac y la aceleración máxima en roca (pga) se calculan los desplazamientos
-de Newmark a través de una regresión logarítmica
-estimada por Jibson [52](2 en la ecuación (6):</p>
-<p>La pga es la máxima amplitud de la aceleración
-registrada en el acelerograma en un sitio durante
-un sismo en particular. Para este estudio se tomó
-la pga del estudio de microzonificación sísmica
-detallada del municipio de Barbosa [18], de donde se tomaron dos escenarios, uno considerado el
-evento más crítico que coincide con sismofuentes
-cercanas y gran magnitud, y un segundo escenario
-de menor criticidad que corresponde con sismofuentes lejanas y menor magnitud (Tabla 3)</p>
+<p>Este método ha dado útiles resultados modelando el comportamiento dinámico de las laderas a nivel regional, aunque no necesariamente predice
+los desplazamientos medidos, sino que establece un índice útil de cómo una ladera se podría comportar durante un evento sísmico.
+El método más conocido es el denominado método de Newmark. Múltiples variaciones del método de Newmark han sido propuestas para obtener resultados precisos en términos de desplazamientos al modelar rigurosamente la respuesta dinámica de la ladera. El método requiere
+evaluar el factor de seguridad, la aceleración crítica del terreno y la aceleración máxima en roca (Peak Ground Acceleration o PGA). Jibson et al.
+[1] proponen un modelo de equilibrio límite de talud infinito en material friccionante y cohesivo para obtener el factor de seguridad a partir de la
+ecuación:</p>
+<p><span class="math notranslate nohighlight">\(FS=\frac{c}{\gamma_s Z sen\theta}+\frac{tan\phi}{tan\theta}-\frac{m \gamma_w tan\phi}{\gamma_s tan\theta}\)</span></p>
+<p>donde <span class="math notranslate nohighlight">\(z\)</span> es el espesor del suelo y <span class="math notranslate nohighlight">\(m\)</span> es la proporción del suelo que está saturado. Newmark señala que la aceleración crítica <span class="math notranslate nohighlight">\(a_c\)</span> de un bloque
+que potencialmente se puede deslizar es función del factor de seguridad estático y de la geometría del bloque expresado en la ecuación:</p>
+<p><span class="math notranslate nohighlight">\(a_c=(FS-1)sen\theta\)</span></p>
+<p>donde <span class="math notranslate nohighlight">\(a_c\)</span> es la aceleración crítica en términos de la aceleración de la gravedad <span class="math notranslate nohighlight">\(g\)</span>, y el ángulo que forma la horizontal con el centro de masa del bloque, que generalmente se aproxima a la pendiente. Finalmente, a partir de <span class="math notranslate nohighlight">\(a_c\)</span> y la aceleración máxima en roca (PGA) se calculan los desplazamientos
+de Newmark a través de una regresión logarítmica estimada por Jibson:</p>
+<p><span class="math notranslate nohighlight">\(LogDn=0.215+log[(1-\frac{a_c}{PGA})^{2.341} (\frac{a_c}{PGA})^{-1.438}]+/-0.510\)</span></p>
 </div>
 </div>
 <div class="section" id="modelos-probabilisticos">
