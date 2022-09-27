@@ -12,6 +12,12 @@ Descripción conceptual de la morfología de un deslizamiento rotacional. Tomado
 
 Los movimientos en masa son el producto del debilitamiento progresivo de las propiedades mecánicas de los materiales de las vertientes por procesos naturales tales como meteorización, levantamientos tectónicos y actividades humanas que activan movimientos lentos, generalmente imperceptibles ({cite:t}`Soeteres1996`, {cite:t}`Glade2005`), sin embargo, un solo factor, comúnmente la precipitación o un sismo, es considerado como el estimulo externo que puede generar una respuesta casi inmediata de movilizar los materiales que conforman la ladera, sea por el rápido incremento de los esfuerzos o por la reducción de la resistencia ({cite:t}`Wang2002`).
 
+:::{figure-md} FS
+<img src="http://environment.uwe.ac.uk/geocal/slopes/GIFS/CAUSESFA.GIF" alt="reduccion FS" width="800px">
+
+Reducción de las condiciones de estabilidad. Tomado de {cite:t}`Popescu1994`.
+:::
+
 De esta forma los factores que controlan la ocurrencia y distribución de los movimientos en masa pueden dividirse en dos categorías: las **variables cuasi-estáticas o condicionantes** y las **variables dinámicas o detonantes**. Las variables cuasi-estáticas, tales como las propiedades de los suelos, la topografía contribuyen a la susceptibilidad de las vertientes y definen la distribución espacial de los movimientos en masa. En tanto, las variables dinámicas, tales como el grado de saturación del suelo y la cohesión controlan los factores detonantes de laderas susceptibles. La climatología, los procesos hidrológicos, y las actividades humanas controlan a su vez las variables dinámicas, y caracterizan el patrón temporal de los movimientos en masa ({cite:t}`crosta2003`).
 
 :::{figure-md} variables

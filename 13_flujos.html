@@ -4,11 +4,13 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>Movimientos en masa tipo flujos &#8212; Cartografía Geotécnica</title>
     
-  <link href="_static/css/theme.css" rel="stylesheet">
-  <link href="_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
 
     
   <link rel="stylesheet"
@@ -18,36 +20,35 @@
   <link rel="preload" as="font" type="font/woff2" crossorigin
     href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
-    
-      
-
-    
     <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
-    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
     
-  <link rel="preload" as="script" href="_static/js/index.be7d3bbb2ef33a8344ce.js">
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
 
     <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
     <script src="_static/underscore.js"></script>
     <script src="_static/doctools.js"></script>
-    <script src="_static/togglebutton.js"></script>
     <script src="_static/clipboard.min.js"></script>
     <script src="_static/copybutton.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
-    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
-    <script>
-        const thebe_selector = ".thebe"
-        const thebe_selector_input = "pre"
-        const thebe_selector_output = ".output"
-    </script>
+    <script src="_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
@@ -60,7 +61,21 @@
     <!-- Google Analytics -->
     
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
     
     <div class="container-fluid" id="banner"></div>
 
@@ -69,9 +84,10 @@
     <div class="container-xl">
       <div class="row">
           
-<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
-    
-        <div class="navbar-brand-box">
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
     <a class="navbar-brand text-wrap" href="index.html">
       
         <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
@@ -89,14 +105,15 @@
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item active">
-        <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="intro.html">
-   .
-  </a>
- </li>
-</ul>
-<ul class="current nav bd-sidenav">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    .
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="00_medialuna.html">
    Media Luna (1954)
@@ -185,107 +202,209 @@
 </ul>
 
     </div>
-</nav> <!-- To handle the deprecated key -->
-
-<div class="navbar_extra_footer">
-  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
-</div>
-
-</div>
-
-
-          
-
-
-          
-<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
-    
-    <div class="topbar container-xl fixed-top">
-    <div class="topbar-contents row">
-        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
-        <div class="col pl-md-4 topbar-main">
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
             
-            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
-                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
-                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
-                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
-                <i class="fas fa-bars"></i>
-                <i class="fas fa-arrow-left"></i>
-                <i class="fas fa-arrow-up"></i>
-            </button>
-            
-            
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
-            class="fas fa-download"></i></button>
-
-    <div class="dropdown-buttons">
-        <!-- ipynb file if we had a myst markdown file -->
-        
-        <!-- Download raw file -->
-        <a class="dropdown-buttons" href="_sources/13_flujos.ipynb"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
-                data-placement="left">.ipynb</button></a>
-        <!-- Download PDF via print -->
-        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
-                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
-    </div>
-</div>
-
-            <!-- Source interaction buttons -->
-
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
-        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
-    <div class="dropdown-buttons sourcebuttons">
-        <a class="repository-button"
-            href="https://github.com/edieraristizabal/Libro_cartoGeotecnia"><button type="button" class="btn btn-secondary topbarbtn"
-                data-toggle="tooltip" data-placement="left" title="Source repository"><i
-                    class="fab fa-github"></i>repository</button></a>
-        <a class="issues-button"
-            href="https://github.com/edieraristizabal/Libro_cartoGeotecnia/issues/new?title=Issue%20on%20page%20%2F13_flujos.html&body=Your%20issue%20content%20here."><button
-                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
-                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
-        
-    </div>
-</div>
-
-            <!-- Full screen (wrap in <a> to have style consistency -->
-
-<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
-        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
-        title="Fullscreen mode"><i
-            class="fas fa-expand"></i></button></a>
-
-            <!-- Launch buttons -->
-
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
-        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
-    <div class="dropdown-buttons">
-        
-        <a class="binder-button" href="https://mybinder.org/v2/gh/edieraristizabal/Libro_cartoGeotecnia/master?urlpath=tree/docs/13_flujos.ipynb"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
-                data-placement="left"><img class="binder-button-logo"
-                    src="_static/images/logo_binder.svg"
-                    alt="Interact on binder">Binder</button></a>
-        
-        
-        
-        
-    </div>
-</div>
-
-        </div>
-
-        <!-- Table of contents -->
-        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
-            
-            <div class="tocsection onthispage pt-5 pb-3">
-                <i class="fas fa-list"></i> Contents
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
             </div>
-            <nav id="bd-toc-nav" aria-label="Page">
-                <ul class="visible nav section-nav flex-column">
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<div class="menu-dropdown menu-dropdown-launch-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Launch interactive content">
+      <i class="fas fa-rocket"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://mybinder.org/v2/gh/edieraristizabal/Libro_cartoGeotecnia/master?urlpath=tree/docs/13_flujos.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Launch on Binder"
+>
+  
+
+<span class="headerbtn__icon-container">
+  
+    <img src="_static/images/logo_binder.svg">
+  </span>
+<span class="headerbtn__text-container">Binder</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-repository-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Source repositories">
+      <i class="fab fa-github"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://github.com/edieraristizabal/Libro_cartoGeotecnia"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="headerbtn__text-container">repository</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://github.com/edieraristizabal/Libro_cartoGeotecnia/issues/new?title=Issue%20on%20page%20%2F13_flujos.html&body=Your%20issue%20content%20here."
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Open an issue"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="headerbtn__text-container">open issue</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="_sources/13_flujos.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.ipynb</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#flow-r">
    Flow-R
@@ -352,12 +471,11 @@
  </li>
 </ul>
 
-            </nav>
-        </div>
-    </div>
+    </nav>
 </div>
-    <div id="main-content" class="row">
-        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
                 <h1>Movimientos en masa tipo flujos</h1>
@@ -440,25 +558,34 @@
                     </div>
                 </div>
             </div>
-            
+            <main id="main-content" role="main">
+                
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="movimientos-en-masa-tipo-flujos">
-<h1>Movimientos en masa tipo flujos<a class="headerlink" href="#movimientos-en-masa-tipo-flujos" title="Permalink to this headline">¶</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="movimientos-en-masa-tipo-flujos">
+<h1>Movimientos en masa tipo flujos<a class="headerlink" href="#movimientos-en-masa-tipo-flujos" title="Permalink to this headline">#</a></h1>
 <p>Aunque las avenidas torrenciales han sido un fenómeno común en Colombia, los estudios realizados al respecto son escasos. Probablemente una de las razones está asociada a la falta de un consenso con respecto a clasificación y terminología de fenómenos tipo flujos torrenciales que permita caracterizar adecuadamente qué son las avenidas torrenciales. La literatura técnica en inglés utiliza términos como flash flood, debris flood, debris torrent and debris flow para una gran cantidad de fenómenos de mezcla de agua y sedimentos que se transportan a lo largo de un cauce. Entre tanto en español existen términos como inundación súbita, avenida torrencial e incluso avalanchas para designar este tipo de fenómenos.</p>
 <p>En Colombia las avenidas torrenciales son entendidas como movimientos en masa o como crecientes súbitas, fenómenos aparentemente muy diferentes que implica el uso de métodos con enfoques diferentes. INGEOMINAS (2001) define las avenidas torrenciales como fenómenos de remoción en masa donde el agua de una corriente aumenta considerablemente su volumen por el transporte de material solido que ha caído a su cauce desde las laderas adyacentes. En este mismo sentido, Castro (1999) propone establecer el uso del término avenidas torrenciales como un flujo de escombros canalizado. La Guía para la Evaluación de Amenazas por Movimientos en Masa en la Región Andina (PMA-GCA, 2007) define las avenidas torrenciales como flujos de detritos (debris flow) de acuerdo con la definición de Hungr et al (2001). Por otro lado, en el marco de los Planes de Ordenación y Manejo de Cuencas (POMCA) las avenidas torrenciales son entendidas como inundaciones de tipo fluvial rápidas o torrenciales. La Guía Técnica para la Incorporación de la Gestión del Riesgo en los POMCA define las avenidas torrenciales como crecientes súbitas que por las condiciones geomorfológicas de la cuenca están compuestas por un flujo de agua con alto contenido de materiales de arrastre, con un gran potencial destructivo debido a su alta velocidad (MADS, 2014). El Fondo de Prevención y Atención de Emergencias de la ciudad de Bogotá (FOPAE) define las avenidas torrenciales como sinónimo de inundaciones rápidas generadas por crecientes que ocurren de manera repentina debido a la alta pendiente del río o la quebrada y su cuenca, donde en ocasiones se produce el arrastre de una gran cantidad de material como detritos (FOPAE, 2011).</p>
-<p>Estas dos miradas sobre las avenidas torrenciales se reflejan en la reciente Guía Metodológica para la Evaluación de la Amenaza por Movimientos en Masa en Suelo Rural del Servicio Geológico Colombiano (SGC). En esta guía las avenidas torrenciales se consideran equivalentes a los flujos de detritos y flujos de lodos descritos por el PMA-CGA (2007), pero adopta la definición de la guía de los POMCA como procesos tipo flujo que incluye eventos generados sobre ríos y quebradas de alta montaña y en cuencas con características geomorfológicas que favorecen la alta acumulación de sedimentos sobre el cauce, cambios drásticos en el gradiente del afluente, alta densidad de drenaje y eventos de precipitación (MADS &amp; UNAL, 2013).</p>
+<p>Estas dos miradas sobre las avenidas torrenciales se reflejan en la <em>Guía Metodológica para la Evaluación de la Amenaza por Movimientos en Masa en Suelo Rural</em> del Servicio Geológico Colombiano (SGC). En esta guía las avenidas torrenciales se consideran equivalentes a los flujos de detritos y flujos de lodos descritos por el PMA-CGA (2007), pero adopta la definición de la guía de los POMCA como procesos tipo flujo que incluye eventos generados sobre ríos y quebradas de alta montaña y en cuencas con características geomorfológicas que favorecen la alta acumulación de sedimentos sobre el cauce, cambios drásticos en el gradiente del afluente, alta densidad de drenaje y eventos de precipitación (MADS &amp; UNAL, 2013).</p>
 <p>Estas dos miradas han dado como resultado metodologías con enfoques diferentes para evaluar la susceptibilidad o amenaza ante avenidas torrenciales. En la guía de los POMCA se propone el uso de índices morfométricos para evaluar la respuesta hidrológica de la cuenca, específicamente el Índice de Vulnerabilidad frente a Eventos Torrenciales (IVET), combinado con análisis geomorfológicos para evaluar el potencial aporte de sedimentos de la cuenca. Y en las guías que ha elaborado el SGC se han propuesto métodos estadísticos para evaluar la susceptibilidad por movimientos en masa sobre las laderas de la cuenca, como potencial aporte de sedimentos, combinado con análisis geomorfológico (Ingeominas, 1988; SGC, 2017).</p>
 <p>Las diferencias entre fenómenos puramente hidrológicos y movimientos en masa están bien establecidas físicamente (Coussot and Meunier 1996; O’Brien and Julien 1985; Pierson and Costa 1987; Takahashi 1981); sin embargo, no existe unanimidad sobre definiciones específicas para flujos torrenciales que contienen una mezcla de agua y sedimentos en proporciones variables. De forma general, los flujos se definen como un fenómeno de transporte de sedimentos compuesto por una mezcla de material fino y grueso con una cantidad variable de agua, donde tanto las fuerzas sólidas como las fluidas influyen fuertemente (Iverson 1997; Nettleton et al. 2005). Según el tipo de proceso dominante y relación sedimentos-agua, esta mezcla es considerada desde procesos gravitacionales tipo flujo (Cruden and Varnes 1996) hasta procesos hidrológicos tipo inundaciones súbitas (NWS, 2005), donde en muchos casos el término flujo hiperconcentrado es utilizado para describir flujos intermedios entre estos dos fenómenos.</p>
 <p>Iverson (1997) distingue los procesos gravitacionales como aquellos donde las interacciones entre los fragmentos sólidos dominan la transferencia de momento, y las inundaciones cargadas de sedimentos como aquellas donde la turbulencia del fluido domina la transferencia de momento; para casos intermedios usa el término flujos de escombros, donde los sólidos y fluidos deben transferir el momento de forma sinérgica para sostener el movimiento. Takahashi (1981) distingue el transporte de sedimentos entre flujos fluidos y movimientos en masa, porque mientras que en los fluidos las fuerzas de arrastre y levantamiento, dadas por la alta velocidad relativa, son claves para el transporte individual de partículas, en los movimientos tipo caída, deslizamiento o flujos todas las partículas, así como el fluido intersticial, son movidos por la fuerza de la gravedad, de modo que la velocidad relativa entre la fase sólida y la líquida desempeña un papel menor. En este mismo sentido, Ancey (2001) distingue entre dos regímenes de flujo, flujos de dos fases, donde el agua es el agente principal y el pequeño porcentaje de sedimentos es transportado como carga de fondo y por suspensión; y flujos de una fase, compuestos por una mezcla altamente concentrada de sedimentos y agua. Sin embargo, Pierson (2005) propone que, además de la concentración de sedimentos suspendidos, la distribución del tamaño de granos y la densidad de los granos se debe utilizar para definir las mezclas sedimento-agua.</p>
+<figure class="align-default" id="rheology">
+<a class="reference internal image-reference" href="https://www.mdpi.com/symmetry/symmetry-10-00094/article_deploy/html/images/symmetry-10-00094-g001.png"><img alt="rheology" src="https://www.mdpi.com/symmetry/symmetry-10-00094/article_deploy/html/images/symmetry-10-00094-g001.png" style="width: 700px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 92 </span><span class="caption-text">Reologia de flujos. Tomado de <a class="reference external" href="https://www.mdpi.com/2073-8994/10/4/94/htm">Wang et al. (2018)</a>.</span><a class="headerlink" href="#rheology" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
 <p>Diferentes autores han propuesto límites de concentración en peso y volumen para diferenciar flujos de agua con flujos hiperconcentrados y flujos de escombros. En general se proponen valores por encima del 30% en volumen para flujos hiperconcentrados, y valores por encima del 70% en volumen para flujos gravitacionales (Bradley 1986).</p>
 <p>En terminos del origen, diferentes causas han sido descritas como detonantes de flujos torrenciales, Slaymaker (1988) divide los mecanismos detonantes como internos y externos. Los mecanismos externos se refieren a intensos o prolongados eventos de lluvia, sismos, enjambre de avalanchas de escombros o avalanchas de nieve (Miles 1957), rotura de presas naturales y su liberación instantánea (Takahashi 1981), y entre los mecanismos internos, Slaymaker (1988) resalta la desestabilización y removilización de los sedimentos del cauce.</p>
 <p>En la literatura existen clasificaciones para procesos gravitacionales, donde se incluyen fenómenos tipo flujos de escombros canalizados (Cruden &amp; Varnes 1996; Hutchinson 1988; Varnes 1978). Cruden and Varnes (1996) y Varnes (1978) clasifican los procesos gravitacionales de vertiente según el tipo de movimiento y los materiales. En estas clasificaciones, los flujos se definen como un movimiento espacialmente continuo en el que las superficies de cizallamiento son de corta duración, están poco espaciadas y generalmente no se conservan. De acuerdo con el tamaño del material, podrían denominarse flujos de tierra cuando las partículas son menores de 2 mm, o flujos de escombros cuando dominan las partículas de tamaño grueso. Hutchinson (1988) y Nettleton et al. (2005) distinguen dos formas de flujos de escombros: aquellos que forman su propio camino hacia abajo de las laderas del valle, flujos de escombros de laderas, y los flujos de escombros canalizados que siguen los canales existentes.</p>
 <p>Existen tambien clasificaciones de flujos de escombros, en las que se utiliza el término para nombrar una mezcla de agua y sedimentos en diferentes proporciones (O’Brien &amp; Julien 1985). Crosta et al. (1990) proponen usar el término flujos de escombros en un significado amplio, dividiéndolos en cuatro categorías: (i) Flujos de escombros no canalizados en drenajes de orden cero, originados como desgarres superficiales, (ii) Flujos de escombros en cuencas canalizadas de pendientes medias, originados como deslizamientos rotacionales o traslacionales, (iii) Avalanchas de escombros en intercuencas de pendientes mayores a 45°, (iv)  Torrente de escombros que se dan inicio en valles estrechos, causados por la falla o ruptura de presas generadas por deslizamientos, flujos de escombros o bloqueos de avalanchas de nieve.</p>
-<div class="figure align-default" id="flow-taxonomy">
-<a class="reference internal image-reference" href="https://www.hec.usace.army.mil/confluence/rasdocs/rasmuddebris/files/43818444/43818446/1/1608274139824/worddavf90b29b9f53296a0e51b87e5f1a23fbc.png"><img alt="Flow axonomy" src="https://www.hec.usace.army.mil/confluence/rasdocs/rasmuddebris/files/43818444/43818446/1/1608274139824/worddavf90b29b9f53296a0e51b87e5f1a23fbc.png" style="width: 500px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 91 </span><span class="caption-text">Taxonomía de flujos no Newtonianos con los modelos reológicos y ecuaciones utilizadas para modelar. Tomado de <a class="reference external" href="https://www.hec.usace.army.mil/confluence/rasdocs/rasmuddebris/non-newtonian-user-s-manual/taxonomy-of-mud-and-debris-flows">Mud and Debris flow</a>.</span><a class="headerlink" href="#flow-taxonomy" title="Permalink to this image">¶</a></p>
-</div>
+<figure class="align-default" id="flow-taxonomy">
+<a class="reference internal image-reference" href="https://www.hec.usace.army.mil/confluence/rasdocs/rasmuddebris/files/43818444/43818446/1/1608274139824/worddavf90b29b9f53296a0e51b87e5f1a23fbc.png"><img alt="Flow axonomy" src="https://www.hec.usace.army.mil/confluence/rasdocs/rasmuddebris/files/43818444/43818446/1/1608274139824/worddavf90b29b9f53296a0e51b87e5f1a23fbc.png" style="width: 700px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 93 </span><span class="caption-text">Taxonomía de flujos no Newtonianos con los modelos reológicos y ecuaciones utilizadas para modelar. Tomado de <a class="reference external" href="https://www.hec.usace.army.mil/confluence/rasdocs/rasmuddebris/non-newtonian-user-s-manual/taxonomy-of-mud-and-debris-flows">Mud and Debris flow</a>.</span><a class="headerlink" href="#flow-taxonomy" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
 <p>Entre tanto, O’Brien and Julien (1985) proponen una clasificación para flujos de acuerdo con las propiedades controladas por la concentración de sedimentos, cuya clasificación va desde inundaciones hasta movimientos en masa. Los autores identifican cinco categorías de flujos: (i) Crecientes: Definidos como inundaciones de agua por descargas excesivas donde los sedimentos son transportados a través de suspensión y saltación por el lecho, (ii) Inundaciones de lodo: Flujos donde la concentración de sedimentos finos varía de 20 a 45% por volumen, (iii) Flujos de lodo: Flujos donde la concentración de sedimentos finos varía de 45 a 50% por volumen, (iv) Flujos de escombros: Aplicado a flujos de lodo con más del 50% de sedimentos más gruesos que arena, (v) Deslizamientos: Movimiento en masa donde la concentración por volumen de sedimentos es mayor al 50%.</p>
 <p>Coussot &amp; Meunier (1996) proponen una clasificación en función de la concentración de sedimentos y el tipo de material, la cual varía desde flujos de corriente, donde los sedimentos son transportados por suspensión y carga de fondo hasta deslizamientos. Como términos intermedios entre estos dos fenómenos se encuentran los flujos hiperconcentrados, flujos de lodo, flujos de escombros y flujos granulares.</p>
 <p>Iverson (1997) incluye dentro de la categoría de flujos de escombros una gran cantidad de fenómenos como deslizamientos de escombros, torrentes de escombros, inundaciones de escombros, flujos de lodo, deslizamientos de lodo, y lahares para flujos de escombros de origen volcánico.</p>
@@ -475,31 +602,186 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_html">
-<iframe
-    width="400"
-    height="300"
-    src="https://www.youtube.com/embed/0ENe7wDKP6I"
-    frameborder="0"
-    allowfullscreen
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">KeyboardInterrupt</span><span class="g g-Whitespace">                         </span>Traceback (most recent call last)
+<span class="nn">Input In [1],</span> in <span class="ni">&lt;cell line: 2&gt;</span><span class="nt">()</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="kn">from</span> <span class="nn">IPython.lib.display</span> <span class="kn">import</span> <span class="n">YouTubeVideo</span>
+<span class="ne">----&gt; </span><span class="mi">2</span> <span class="n">YouTubeVideo</span><span class="p">(</span><span class="s1">&#39;0ENe7wDKP6I&#39;</span><span class="p">)</span>
 
-></iframe>
-</div></div>
+<span class="nn">File ~/miniconda3/lib/python3.9/site-packages/IPython/core/displayhook.py:262,</span> in <span class="ni">DisplayHook.__call__</span><span class="nt">(self, result)</span>
+<span class="g g-Whitespace">    </span><span class="mi">260</span> <span class="bp">self</span><span class="o">.</span><span class="n">start_displayhook</span><span class="p">()</span>
+<span class="g g-Whitespace">    </span><span class="mi">261</span> <span class="bp">self</span><span class="o">.</span><span class="n">write_output_prompt</span><span class="p">()</span>
+<span class="ne">--&gt; </span><span class="mi">262</span> <span class="n">format_dict</span><span class="p">,</span> <span class="n">md_dict</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">compute_format_data</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">263</span> <span class="bp">self</span><span class="o">.</span><span class="n">update_user_ns</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">264</span> <span class="bp">self</span><span class="o">.</span><span class="n">fill_exec_result</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
+
+<span class="nn">File ~/miniconda3/lib/python3.9/site-packages/IPython/core/displayhook.py:151,</span> in <span class="ni">DisplayHook.compute_format_data</span><span class="nt">(self, result)</span>
+<span class="g g-Whitespace">    </span><span class="mi">121</span> <span class="k">def</span> <span class="nf">compute_format_data</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">result</span><span class="p">):</span>
+<span class="g g-Whitespace">    </span><span class="mi">122</span>     <span class="sd">&quot;&quot;&quot;Compute format data of the object to be displayed.</span>
+<span class="g g-Whitespace">    </span><span class="mi">123</span><span class="sd"> </span>
+<span class="g g-Whitespace">    </span><span class="mi">124</span><span class="sd">     The format data is a generalization of the :func:`repr` of an object.</span>
+<span class="sd">   (...)</span>
+<span class="g g-Whitespace">    </span><span class="mi">149</span><span class="sd"> </span>
+<span class="g g-Whitespace">    </span><span class="mi">150</span><span class="sd">     &quot;&quot;&quot;</span>
+<span class="ne">--&gt; </span><span class="mi">151</span>     <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">shell</span><span class="o">.</span><span class="n">display_formatter</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
+
+<span class="nn">File ~/miniconda3/lib/python3.9/site-packages/IPython/core/formatters.py:178,</span> in <span class="ni">DisplayFormatter.format</span><span class="nt">(self, obj, include, exclude)</span>
+<span class="g g-Whitespace">    </span><span class="mi">176</span> <span class="n">md</span> <span class="o">=</span> <span class="kc">None</span>
+<span class="g g-Whitespace">    </span><span class="mi">177</span> <span class="k">try</span><span class="p">:</span>
+<span class="ne">--&gt; </span><span class="mi">178</span>     <span class="n">data</span> <span class="o">=</span> <span class="n">formatter</span><span class="p">(</span><span class="n">obj</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">179</span> <span class="k">except</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">180</span>     <span class="c1"># FIXME: log the exception</span>
+<span class="g g-Whitespace">    </span><span class="mi">181</span>     <span class="k">raise</span>
+
+<span class="nn">File ~/miniconda3/lib/python3.9/site-packages/decorator.py:232,</span> in <span class="ni">decorate.&lt;locals&gt;.fun</span><span class="nt">(*args, **kw)</span>
+<span class="g g-Whitespace">    </span><span class="mi">230</span> <span class="k">if</span> <span class="ow">not</span> <span class="n">kwsyntax</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">231</span>     <span class="n">args</span><span class="p">,</span> <span class="n">kw</span> <span class="o">=</span> <span class="n">fix</span><span class="p">(</span><span class="n">args</span><span class="p">,</span> <span class="n">kw</span><span class="p">,</span> <span class="n">sig</span><span class="p">)</span>
+<span class="ne">--&gt; </span><span class="mi">232</span> <span class="k">return</span> <span class="n">caller</span><span class="p">(</span><span class="n">func</span><span class="p">,</span> <span class="o">*</span><span class="p">(</span><span class="n">extras</span> <span class="o">+</span> <span class="n">args</span><span class="p">),</span> <span class="o">**</span><span class="n">kw</span><span class="p">)</span>
+
+<span class="nn">File ~/miniconda3/lib/python3.9/site-packages/IPython/core/formatters.py:222,</span> in <span class="ni">catch_format_error</span><span class="nt">(method, self, *args, **kwargs)</span>
+<span class="g g-Whitespace">    </span><span class="mi">220</span> <span class="sd">&quot;&quot;&quot;show traceback on failed format call&quot;&quot;&quot;</span>
+<span class="g g-Whitespace">    </span><span class="mi">221</span> <span class="k">try</span><span class="p">:</span>
+<span class="ne">--&gt; </span><span class="mi">222</span>     <span class="n">r</span> <span class="o">=</span> <span class="n">method</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">223</span> <span class="k">except</span> <span class="ne">NotImplementedError</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">224</span>     <span class="c1"># don&#39;t warn on NotImplementedErrors</span>
+<span class="g g-Whitespace">    </span><span class="mi">225</span>     <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_check_return</span><span class="p">(</span><span class="kc">None</span><span class="p">,</span> <span class="n">args</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+
+<span class="nn">File ~/miniconda3/lib/python3.9/site-packages/IPython/core/formatters.py:343,</span> in <span class="ni">BaseFormatter.__call__</span><span class="nt">(self, obj)</span>
+<span class="g g-Whitespace">    </span><span class="mi">341</span>     <span class="n">method</span> <span class="o">=</span> <span class="n">get_real_method</span><span class="p">(</span><span class="n">obj</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">print_method</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">342</span>     <span class="k">if</span> <span class="n">method</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+<span class="ne">--&gt; </span><span class="mi">343</span>         <span class="k">return</span> <span class="n">method</span><span class="p">()</span>
+<span class="g g-Whitespace">    </span><span class="mi">344</span>     <span class="k">return</span> <span class="kc">None</span>
+<span class="g g-Whitespace">    </span><span class="mi">345</span> <span class="k">else</span><span class="p">:</span>
+
+<span class="nn">File ~/miniconda3/lib/python3.9/site-packages/IPython/lib/display.py:340,</span> in <span class="ni">YouTubeVideo._repr_jpeg_</span><span class="nt">(self)</span>
+<span class="g g-Whitespace">    </span><span class="mi">337</span> <span class="kn">from</span> <span class="nn">urllib.request</span> <span class="kn">import</span> <span class="n">urlopen</span>
+<span class="g g-Whitespace">    </span><span class="mi">339</span> <span class="k">try</span><span class="p">:</span>
+<span class="ne">--&gt; </span><span class="mi">340</span>     <span class="k">return</span> <span class="n">urlopen</span><span class="p">(</span><span class="s2">&quot;https://img.youtube.com/vi/</span><span class="si">{id}</span><span class="s2">/hqdefault.jpg&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">id</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">id</span><span class="p">))</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+<span class="g g-Whitespace">    </span><span class="mi">341</span> <span class="k">except</span> <span class="ne">IOError</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">342</span>     <span class="k">return</span> <span class="kc">None</span>
+
+<span class="nn">File ~/miniconda3/lib/python3.9/urllib/request.py:214,</span> in <span class="ni">urlopen</span><span class="nt">(url, data, timeout, cafile, capath, cadefault, context)</span>
+<span class="g g-Whitespace">    </span><span class="mi">212</span> <span class="k">else</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">213</span>     <span class="n">opener</span> <span class="o">=</span> <span class="n">_opener</span>
+<span class="ne">--&gt; </span><span class="mi">214</span> <span class="k">return</span> <span class="n">opener</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">data</span><span class="p">,</span> <span class="n">timeout</span><span class="p">)</span>
+
+<span class="nn">File ~/miniconda3/lib/python3.9/urllib/request.py:517,</span> in <span class="ni">OpenerDirector.open</span><span class="nt">(self, fullurl, data, timeout)</span>
+<span class="g g-Whitespace">    </span><span class="mi">514</span>     <span class="n">req</span> <span class="o">=</span> <span class="n">meth</span><span class="p">(</span><span class="n">req</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">516</span> <span class="n">sys</span><span class="o">.</span><span class="n">audit</span><span class="p">(</span><span class="s1">&#39;urllib.Request&#39;</span><span class="p">,</span> <span class="n">req</span><span class="o">.</span><span class="n">full_url</span><span class="p">,</span> <span class="n">req</span><span class="o">.</span><span class="n">data</span><span class="p">,</span> <span class="n">req</span><span class="o">.</span><span class="n">headers</span><span class="p">,</span> <span class="n">req</span><span class="o">.</span><span class="n">get_method</span><span class="p">())</span>
+<span class="ne">--&gt; </span><span class="mi">517</span> <span class="n">response</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_open</span><span class="p">(</span><span class="n">req</span><span class="p">,</span> <span class="n">data</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">519</span> <span class="c1"># post-process response</span>
+<span class="g g-Whitespace">    </span><span class="mi">520</span> <span class="n">meth_name</span> <span class="o">=</span> <span class="n">protocol</span><span class="o">+</span><span class="s2">&quot;_response&quot;</span>
+
+<span class="nn">File ~/miniconda3/lib/python3.9/urllib/request.py:534,</span> in <span class="ni">OpenerDirector._open</span><span class="nt">(self, req, data)</span>
+<span class="g g-Whitespace">    </span><span class="mi">531</span>     <span class="k">return</span> <span class="n">result</span>
+<span class="g g-Whitespace">    </span><span class="mi">533</span> <span class="n">protocol</span> <span class="o">=</span> <span class="n">req</span><span class="o">.</span><span class="n">type</span>
+<span class="ne">--&gt; </span><span class="mi">534</span> <span class="n">result</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_call_chain</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">handle_open</span><span class="p">,</span> <span class="n">protocol</span><span class="p">,</span> <span class="n">protocol</span> <span class="o">+</span>
+<span class="g g-Whitespace">    </span><span class="mi">535</span>                           <span class="s1">&#39;_open&#39;</span><span class="p">,</span> <span class="n">req</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">536</span> <span class="k">if</span> <span class="n">result</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">537</span>     <span class="k">return</span> <span class="n">result</span>
+
+<span class="nn">File ~/miniconda3/lib/python3.9/urllib/request.py:494,</span> in <span class="ni">OpenerDirector._call_chain</span><span class="nt">(self, chain, kind, meth_name, *args)</span>
+<span class="g g-Whitespace">    </span><span class="mi">492</span> <span class="k">for</span> <span class="n">handler</span> <span class="ow">in</span> <span class="n">handlers</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">493</span>     <span class="n">func</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">handler</span><span class="p">,</span> <span class="n">meth_name</span><span class="p">)</span>
+<span class="ne">--&gt; </span><span class="mi">494</span>     <span class="n">result</span> <span class="o">=</span> <span class="n">func</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">495</span>     <span class="k">if</span> <span class="n">result</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">496</span>         <span class="k">return</span> <span class="n">result</span>
+
+<span class="nn">File ~/miniconda3/lib/python3.9/urllib/request.py:1389,</span> in <span class="ni">HTTPSHandler.https_open</span><span class="nt">(self, req)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1388</span> <span class="k">def</span> <span class="nf">https_open</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">req</span><span class="p">):</span>
+<span class="ne">-&gt; </span><span class="mi">1389</span>     <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">do_open</span><span class="p">(</span><span class="n">http</span><span class="o">.</span><span class="n">client</span><span class="o">.</span><span class="n">HTTPSConnection</span><span class="p">,</span> <span class="n">req</span><span class="p">,</span>
+<span class="g g-Whitespace">   </span><span class="mi">1390</span>         <span class="n">context</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">_context</span><span class="p">,</span> <span class="n">check_hostname</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">_check_hostname</span><span class="p">)</span>
+
+<span class="nn">File ~/miniconda3/lib/python3.9/urllib/request.py:1346,</span> in <span class="ni">AbstractHTTPHandler.do_open</span><span class="nt">(self, http_class, req, **http_conn_args)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1344</span> <span class="k">try</span><span class="p">:</span>
+<span class="g g-Whitespace">   </span><span class="mi">1345</span>     <span class="k">try</span><span class="p">:</span>
+<span class="ne">-&gt; </span><span class="mi">1346</span>         <span class="n">h</span><span class="o">.</span><span class="n">request</span><span class="p">(</span><span class="n">req</span><span class="o">.</span><span class="n">get_method</span><span class="p">(),</span> <span class="n">req</span><span class="o">.</span><span class="n">selector</span><span class="p">,</span> <span class="n">req</span><span class="o">.</span><span class="n">data</span><span class="p">,</span> <span class="n">headers</span><span class="p">,</span>
+<span class="g g-Whitespace">   </span><span class="mi">1347</span>                   <span class="n">encode_chunked</span><span class="o">=</span><span class="n">req</span><span class="o">.</span><span class="n">has_header</span><span class="p">(</span><span class="s1">&#39;Transfer-encoding&#39;</span><span class="p">))</span>
+<span class="g g-Whitespace">   </span><span class="mi">1348</span>     <span class="k">except</span> <span class="ne">OSError</span> <span class="k">as</span> <span class="n">err</span><span class="p">:</span> <span class="c1"># timeout error</span>
+<span class="g g-Whitespace">   </span><span class="mi">1349</span>         <span class="k">raise</span> <span class="n">URLError</span><span class="p">(</span><span class="n">err</span><span class="p">)</span>
+
+<span class="nn">File ~/miniconda3/lib/python3.9/http/client.py:1285,</span> in <span class="ni">HTTPConnection.request</span><span class="nt">(self, method, url, body, headers, encode_chunked)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1282</span> <span class="k">def</span> <span class="nf">request</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">method</span><span class="p">,</span> <span class="n">url</span><span class="p">,</span> <span class="n">body</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="p">{},</span> <span class="o">*</span><span class="p">,</span>
+<span class="g g-Whitespace">   </span><span class="mi">1283</span>             <span class="n">encode_chunked</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+<span class="g g-Whitespace">   </span><span class="mi">1284</span>     <span class="sd">&quot;&quot;&quot;Send a complete request to the server.&quot;&quot;&quot;</span>
+<span class="ne">-&gt; </span><span class="mi">1285</span>     <span class="bp">self</span><span class="o">.</span><span class="n">_send_request</span><span class="p">(</span><span class="n">method</span><span class="p">,</span> <span class="n">url</span><span class="p">,</span> <span class="n">body</span><span class="p">,</span> <span class="n">headers</span><span class="p">,</span> <span class="n">encode_chunked</span><span class="p">)</span>
+
+<span class="nn">File ~/miniconda3/lib/python3.9/http/client.py:1331,</span> in <span class="ni">HTTPConnection._send_request</span><span class="nt">(self, method, url, body, headers, encode_chunked)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1327</span> <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">body</span><span class="p">,</span> <span class="nb">str</span><span class="p">):</span>
+<span class="g g-Whitespace">   </span><span class="mi">1328</span>     <span class="c1"># RFC 2616 Section 3.7.1 says that text default has a</span>
+<span class="g g-Whitespace">   </span><span class="mi">1329</span>     <span class="c1"># default charset of iso-8859-1.</span>
+<span class="g g-Whitespace">   </span><span class="mi">1330</span>     <span class="n">body</span> <span class="o">=</span> <span class="n">_encode</span><span class="p">(</span><span class="n">body</span><span class="p">,</span> <span class="s1">&#39;body&#39;</span><span class="p">)</span>
+<span class="ne">-&gt; </span><span class="mi">1331</span> <span class="bp">self</span><span class="o">.</span><span class="n">endheaders</span><span class="p">(</span><span class="n">body</span><span class="p">,</span> <span class="n">encode_chunked</span><span class="o">=</span><span class="n">encode_chunked</span><span class="p">)</span>
+
+<span class="nn">File ~/miniconda3/lib/python3.9/http/client.py:1280,</span> in <span class="ni">HTTPConnection.endheaders</span><span class="nt">(self, message_body, encode_chunked)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1278</span> <span class="k">else</span><span class="p">:</span>
+<span class="g g-Whitespace">   </span><span class="mi">1279</span>     <span class="k">raise</span> <span class="n">CannotSendHeader</span><span class="p">()</span>
+<span class="ne">-&gt; </span><span class="mi">1280</span> <span class="bp">self</span><span class="o">.</span><span class="n">_send_output</span><span class="p">(</span><span class="n">message_body</span><span class="p">,</span> <span class="n">encode_chunked</span><span class="o">=</span><span class="n">encode_chunked</span><span class="p">)</span>
+
+<span class="nn">File ~/miniconda3/lib/python3.9/http/client.py:1040,</span> in <span class="ni">HTTPConnection._send_output</span><span class="nt">(self, message_body, encode_chunked)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1038</span> <span class="n">msg</span> <span class="o">=</span> <span class="sa">b</span><span class="s2">&quot;</span><span class="se">\r\n</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_buffer</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1039</span> <span class="k">del</span> <span class="bp">self</span><span class="o">.</span><span class="n">_buffer</span><span class="p">[:]</span>
+<span class="ne">-&gt; </span><span class="mi">1040</span> <span class="bp">self</span><span class="o">.</span><span class="n">send</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1042</span> <span class="k">if</span> <span class="n">message_body</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+<span class="g g-Whitespace">   </span><span class="mi">1043</span> 
+<span class="g g-Whitespace">   </span><span class="mi">1044</span>     <span class="c1"># create a consistent interface to message_body</span>
+<span class="g g-Whitespace">   </span><span class="mi">1045</span>     <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">message_body</span><span class="p">,</span> <span class="s1">&#39;read&#39;</span><span class="p">):</span>
+<span class="g g-Whitespace">   </span><span class="mi">1046</span>         <span class="c1"># Let file-like take precedence over byte-like.  This</span>
+<span class="g g-Whitespace">   </span><span class="mi">1047</span>         <span class="c1"># is needed to allow the current position of mmap&#39;ed</span>
+<span class="g g-Whitespace">   </span><span class="mi">1048</span>         <span class="c1"># files to be taken into account.</span>
+
+<span class="nn">File ~/miniconda3/lib/python3.9/http/client.py:980,</span> in <span class="ni">HTTPConnection.send</span><span class="nt">(self, data)</span>
+<span class="g g-Whitespace">    </span><span class="mi">978</span> <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">sock</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">979</span>     <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">auto_open</span><span class="p">:</span>
+<span class="ne">--&gt; </span><span class="mi">980</span>         <span class="bp">self</span><span class="o">.</span><span class="n">connect</span><span class="p">()</span>
+<span class="g g-Whitespace">    </span><span class="mi">981</span>     <span class="k">else</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">982</span>         <span class="k">raise</span> <span class="n">NotConnected</span><span class="p">()</span>
+
+<span class="nn">File ~/miniconda3/lib/python3.9/http/client.py:1447,</span> in <span class="ni">HTTPSConnection.connect</span><span class="nt">(self)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1444</span> <span class="k">def</span> <span class="nf">connect</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="g g-Whitespace">   </span><span class="mi">1445</span>     <span class="s2">&quot;Connect to a host on a given (SSL) port.&quot;</span>
+<span class="ne">-&gt; </span><span class="mi">1447</span>     <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="n">connect</span><span class="p">()</span>
+<span class="g g-Whitespace">   </span><span class="mi">1449</span>     <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_tunnel_host</span><span class="p">:</span>
+<span class="g g-Whitespace">   </span><span class="mi">1450</span>         <span class="n">server_hostname</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_tunnel_host</span>
+
+<span class="nn">File ~/miniconda3/lib/python3.9/http/client.py:946,</span> in <span class="ni">HTTPConnection.connect</span><span class="nt">(self)</span>
+<span class="g g-Whitespace">    </span><span class="mi">944</span> <span class="k">def</span> <span class="nf">connect</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="g g-Whitespace">    </span><span class="mi">945</span>     <span class="sd">&quot;&quot;&quot;Connect to the host and port specified in __init__.&quot;&quot;&quot;</span>
+<span class="ne">--&gt; </span><span class="mi">946</span>     <span class="bp">self</span><span class="o">.</span><span class="n">sock</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_create_connection</span><span class="p">(</span>
+<span class="g g-Whitespace">    </span><span class="mi">947</span>         <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">host</span><span class="p">,</span><span class="bp">self</span><span class="o">.</span><span class="n">port</span><span class="p">),</span> <span class="bp">self</span><span class="o">.</span><span class="n">timeout</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">source_address</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">948</span>     <span class="c1"># Might fail in OSs that don&#39;t implement TCP_NODELAY</span>
+<span class="g g-Whitespace">    </span><span class="mi">949</span>     <span class="k">try</span><span class="p">:</span>
+
+<span class="nn">File ~/miniconda3/lib/python3.9/socket.py:832,</span> in <span class="ni">create_connection</span><span class="nt">(address, timeout, source_address)</span>
+<span class="g g-Whitespace">    </span><span class="mi">830</span> <span class="k">if</span> <span class="n">source_address</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">831</span>     <span class="n">sock</span><span class="o">.</span><span class="n">bind</span><span class="p">(</span><span class="n">source_address</span><span class="p">)</span>
+<span class="ne">--&gt; </span><span class="mi">832</span> <span class="n">sock</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">sa</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">833</span> <span class="c1"># Break explicitly a reference cycle</span>
+<span class="g g-Whitespace">    </span><span class="mi">834</span> <span class="n">err</span> <span class="o">=</span> <span class="kc">None</span>
+
+<span class="ne">KeyboardInterrupt</span>: 
+</pre></div>
 </div>
-<div class="section" id="flow-r">
-<h2>Flow-R<a class="headerlink" href="#flow-r" title="Permalink to this headline">¶</a></h2>
-<p><a class="reference external" href="https://www.flow-r.org/">Flow-R</a> (Flow path assessment of gravitational hazards at a Regional scale) es un modelo empirico disitribuido para la evaluacion de la susceptibilidad por flujos a escala regional, desarrollado por <span id="id1">Horton <em>et al.</em> [<a class="reference internal" href="#id65">2013</a>]</span> de la Universidad de Laussane. Flow-R presenta un acercamiento simplificado sin una gran exigencia de parametros.</p>
-<div class="figure align-default" id="id2">
+</div>
+</div>
+<section id="flow-r">
+<h2>Flow-R<a class="headerlink" href="#flow-r" title="Permalink to this headline">#</a></h2>
+<p><a class="reference external" href="https://www.flow-r.org/">Flow-R</a> (Flow path assessment of gravitational hazards at a Regional scale) es un modelo empirico disitribuido para la evaluacion de la susceptibilidad por flujos a escala regional, desarrollado por <span id="id1">Horton <em>et al.</em> [<a class="reference internal" href="#id65" title="P. Horton, M. Jaboyedoff, B. Rudaz, and M. Zimmermann. Flow-r, a model for susceptibility mapping of debris flows and other gravitational hazards at a regional scale. Natural Hazards and Earth System Sciences, 13(4):869–885, 2013. URL: https://nhess.copernicus.org/articles/13/869/2013/, doi:10.5194/nhess-13-869-2013.">2013</a>]</span> de la Universidad de Laussane. Flow-R presenta un acercamiento simplificado sin una gran exigencia de parametros.</p>
+<figure class="align-default" id="id2">
 <a class="reference internal image-reference" href="https://www.researchgate.net/profile/Michel-Jaboyedoff/publication/258806561/figure/fig4/AS:614112920887296&#64;1523427338200/Illustration-of-the-4-different-layers-of-processing-of-the-propagation-and-their_Q320.jpg"><img alt="Flow-R" src="https://www.researchgate.net/profile/Michel-Jaboyedoff/publication/258806561/figure/fig4/AS:614112920887296&#64;1523427338200/Illustration-of-the-4-different-layers-of-processing-of-the-propagation-and-their_Q320.jpg" style="width: 400px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 92 </span><span class="caption-text">Modelo Flow-R (<a class="reference external" href="https://www.flow-r.org/">https://www.flow-r.org/</a>).</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
-</div>
+<figcaption>
+<p><span class="caption-number">Fig. 94 </span><span class="caption-text">Modelo Flow-R (<a class="reference external" href="https://www.flow-r.org/">https://www.flow-r.org/</a>).</span><a class="headerlink" href="#id2" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
 <p>Flow-R estima la propagación de los flujos mediante un balance energético básico y una propagación probabilística. Los algoritmos de la dirección de fujo calculan la probabilidad de que un fujo de detrito se mueva de una celda hacia las próximas 8 celdas. Estas probabilidades dependen de la pendiente y la persistencia que representa la inercia del flujo.</p>
-<div class="figure align-default" id="flow-r1">
+<figure class="align-default" id="flow-r1">
 <a class="reference internal image-reference" href="https://geotechpedia.com/Images/Software/Flow_-_R_software.jpg"><img alt="Flow-R1" src="https://geotechpedia.com/Images/Software/Flow_-_R_software.jpg" style="width: 500px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 93 </span><span class="caption-text">Modelo Flow-R (<a class="reference external" href="https://www.flow-r.org/">https://www.flow-r.org/</a>).</span><a class="headerlink" href="#flow-r1" title="Permalink to this image">¶</a></p>
-</div>
-<div class="section" id="tutorial">
-<h3>Tutorial<a class="headerlink" href="#tutorial" title="Permalink to this headline">¶</a></h3>
+<figcaption>
+<p><span class="caption-number">Fig. 95 </span><span class="caption-text">Modelo Flow-R (<a class="reference external" href="https://www.flow-r.org/">https://www.flow-r.org/</a>).</span><a class="headerlink" href="#flow-r1" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<section id="tutorial">
+<h3>Tutorial<a class="headerlink" href="#tutorial" title="Permalink to this headline">#</a></h3>
 <p><em>Elaborado por Maria Isabel Arango</em></p>
 <p>El modelo Flow-R se puede utilizar para modelar:</p>
 <ul class="simple">
@@ -507,8 +789,8 @@
 <li><p>La propagación de flujos</p></li>
 </ul>
 <p>El modelo que utiliza Flow-R para determinar las fuentes de flujos es un método heurístico basado en índices. Ya que exsiten otras herramientas que se describen en el presente libro; en esta guía solo se utilizará el componente de propagación. POr lo que para modelar utilizaremos solamente un modelo de elevación digital (DEM) y un mapa de las fuentes o movimientos en masa a propagar.</p>
-<div class="section" id="ingresar-los-datos">
-<h4>Ingresar los datos<a class="headerlink" href="#ingresar-los-datos" title="Permalink to this headline">¶</a></h4>
+<section id="ingresar-los-datos">
+<h4>Ingresar los datos<a class="headerlink" href="#ingresar-los-datos" title="Permalink to this headline">#</a></h4>
 <ul class="simple">
 <li><p>Seleccione en la pestaña de la parte superior de la interface Tools &gt; Format Data &gt; Import Data. Seleccione el archivo <em>DEM_Arenosa.asc</em>. Le aparecerá una advertencia mostrando el tipo de información que entiende el modelo &gt; OK.</p></li>
 <li><p>En la ventana siguiente, debe seleccionar el tipo de información que está ingresando. En este caso, seleccione la primera opción (DEM). Asígnele un nombre al DEM y seleccione para este caso la zona de proyección UTM 18N, que corresponde al noroccidente de Colombia.</p></li>
@@ -519,23 +801,23 @@
 <li><p>En el campo <em>Choice of the study área</em>, seleccione la zona “Toda”, y en el campo <em>Choice of the rivers layer</em> seleccione <em>Toda_no_river</em>, que significa que nó utilizará la información de las quebradas. Finalmente, asígnele en <em>Enter run name</em> un nombre a su corrida. Con este nombre se creará una subcarpeta en <em>Resultados</em> donde se guardarán los resultados de su modelación.</p></li>
 <li><p><strong>Recomendación</strong>: <em>Asígnele un número y en una hoja relacione este número con los parámetros de los algoritmos que utilizó en dicha corrida. De tal forma que pueda trabajar ordenadamente las multiples modelaciones que seguramente realizará</em>.</p></li>
 </ul>
-</div>
-<div class="section" id="working-directories">
-<h4><em>Working directories</em><a class="headerlink" href="#working-directories" title="Permalink to this headline">¶</a></h4>
+</section>
+<section id="working-directories">
+<h4><em>Working directories</em><a class="headerlink" href="#working-directories" title="Permalink to this headline">#</a></h4>
 <p>Para ingresar la información al programa, se debe crear primero el proyecto y las carpetas en las cuales se almacenarán los datos de entrada y de salida. Siga los siguientes pasos:</p>
 <ul class="simple">
 <li><p>Cree en su computador la carpeta <em>La Arenosa FlowR</em>. Dentro de ella, cree dos carpetas: una que se llame <em>Datos</em> y otra que se llame <em>Resultados</em>.</p></li>
 <li><p>Abra el ejecutable de Flow-R. Se puede descargar de la página web <a class="reference external" href="https://www.flow-r.org/download">https://www.flow-r.org/download</a>. Después de llenar el formulario, el instalador le será enviado vía e-mail. Debe tener MATLAB ó su compilador instalado. Lo puede descargar de la página <a class="reference external" href="https://la.mathworks.com/products/compiler/matlab-runtime.html">https://la.mathworks.com/products/compiler/matlab-runtime.html</a>.</p></li>
 <li><p>Una vez abierto, seleccione en <em>Directory to store data</em> la carpeta <em>Datos</em>. En la sección <em>Directory to store resulting files</em>, seleccione la carpeta <em>Resultados</em>.</p></li>
 </ul>
-</div>
-<div class="section" id="source-areas">
-<h4><em>Source areas</em><a class="headerlink" href="#source-areas" title="Permalink to this headline">¶</a></h4>
+</section>
+<section id="source-areas">
+<h4><em>Source areas</em><a class="headerlink" href="#source-areas" title="Permalink to this headline">#</a></h4>
 <p>En esta parte va a calcular la propagación de las áreas fuentes definidas como zonas inestables que se propagarán en forma de flujo. Para esto, utilizará las fuentes cartografiadas en el evento real sucedido en el año 1990. Dado que la única información necesaria para el cálculo de la propagación de flujos son el DEM y las fuentes predeterminadas, en la parte inferior izquierda <em>Source areas</em> ingrese estas dos capas únicamente. En la primera columna debe ingresar el tipo de información (<em>DEM</em>, <em>Predefined sources</em>), en la segunda columna el nombre del raster (Arenosa, fuentes_Arenosa), y en la tercera debe ingresar los criterios de lectura del archivo, <em>avove_0000m</em> para el DEM y <em>boolean</em> para las fuentes, respectivamente.</p>
 <p>En la parte inferior <em>Source value</em> deje seleccionada la opción <em>Binary (0/1)</em>, ya que en este caso estamos trabajando con una mapa de fuentes tipo binario, donde celdas con valor de 0 es no movimientos en masa y celdas con valor 1 son movimientos en masa para propagar.</p>
-</div>
-<div class="section" id="propagation">
-<h4><em>Propagation</em><a class="headerlink" href="#propagation" title="Permalink to this headline">¶</a></h4>
+</section>
+<section id="propagation">
+<h4><em>Propagation</em><a class="headerlink" href="#propagation" title="Permalink to this headline">#</a></h4>
 <p>En el panel derecho de la interfaz <em>Propagation</em> seleccione la pestaña <em>Propagation calculation</em>. Sobre la parte derecha se encuentran dos opciones <em>Sum of probabilities</em> y <em>Connected areas</em> que le brindan resultados adicionales. Para este ejemplo no las seleccione.</p>
 <p>Posteriormente se deben ingresar todos los parámetros de los algoritmos para el cálculo de la dirección de propagación, extensión del flujo, y la metodología a usar para realizar los cálculos. Estos parámetros se describen a continuación:</p>
 <p><strong>Calculation method &gt; Source areas selection</strong>: Se refiere al criterio a utilizar a la hora seleccionar cuáles celdas consideradas como áreas fuentes se utilizarán para el cálculo de la propagación.</p>
@@ -558,19 +840,21 @@
 <li><p>Inmediatamente aparecerá una primera ventana mostrando las áreas fuentes en el mapa, y luego otra ventana mostrando el proceso de cálculo. Usted sabrá que el cálculo de la propagación terminó porque aparecerá una tercera ventana con los resultados de la propagación.</p></li>
 <li><p>Para ver el mapa resultante consulte la subcarpeta con el nombre asignado por usted dentro de la carpeta <em>Resultados</em>, puede abrir el raster <em>Ekin.asc</em> que muestra la propagación del flujo en función de su energía cinética, o  el raster <em>ProbMax.asc</em>, que muestra la propagación en función de la probabilidad máxima de una celda de ser cubierta por un flujo. Tambien en esta subcarpeta se crea un archivo con las áreas fuentes utilizadas y un archivo <em>xml</em> con los parámetros utilziados en la modelación.</p></li>
 </ul>
-</div>
-</div>
-</div>
-<div class="section" id="r-avaflow">
-<h2>r-avaflow<a class="headerlink" href="#r-avaflow" title="Permalink to this headline">¶</a></h2>
-<p>r.avaflow es un modelo abierto y libre, desarrollado por <span id="id3">Mergili <em>et al.</em> [<a class="reference internal" href="#id67">2017</a>]</span>, para simular la dinámica de flujos rápidos, que incluye avalanchas y flujos de escombros. El modelo se soporta en un ambiente SIG, que permite modelar una gran variedad de escenarios, pero sin embargo temben permite modelar escenarios con unminimo de datos. Como mínimo se requiere sólo un modelo de elevación digital y un mapa con los espesores del área fuente en mapas raster formato <em>ASCII</em>. El modelo permite simular flujos con reologias diferentes: una fase, dos fases, y mezcla; ademas permite incorporar la erosión del flujo e incorporación de material a lo largo del canal. r.avaflow también permite incorporar en la modelación hidrografas de flujos variados.</p>
+</section>
+</section>
+</section>
+<section id="r-avaflow">
+<h2>r-avaflow<a class="headerlink" href="#r-avaflow" title="Permalink to this headline">#</a></h2>
+<p>r.avaflow es un modelo abierto y libre, desarrollado por <span id="id3">Mergili <em>et al.</em> [<a class="reference internal" href="#id67" title="Martin Mergili, Jan Thomas Fischer, Julia Krenn, and Shiva P. Pudasaini. R.avaflow v1, an advanced open-source computational framework for the propagation and interaction of two-phase mass flows. Geoscientific Model Development, 10:553-569, 2 2017. doi:10.5194/gmd-10-553-2017.">2017</a>]</span>, para simular la dinámica de flujos rápidos, que incluye avalanchas y flujos de escombros. El modelo se soporta en un ambiente SIG, que permite modelar una gran variedad de escenarios, pero sin embargo temben permite modelar escenarios con unminimo de datos. Como mínimo se requiere sólo un modelo de elevación digital y un mapa con los espesores del área fuente en mapas raster formato <em>ASCII</em>. El modelo permite simular flujos con reologias diferentes: una fase, dos fases, y mezcla; ademas permite incorporar la erosión del flujo e incorporación de material a lo largo del canal. r.avaflow también permite incorporar en la modelación hidrografas de flujos variados.</p>
 <p>Como resultado el modelo arroja la distribución espacial de la altura del flujo, velocidades y presiones, asi como tiempos de llegada e hidrógrafas en puntos de control especificados en el modelo.</p>
-<div class="figure align-default" id="id4">
+<figure class="align-default" id="id4">
 <a class="reference internal image-reference" href="https://thumbs.gfycat.com/DarkYellowDrafthorse-max-1mb.gif"><img alt="r.avaflow" src="https://thumbs.gfycat.com/DarkYellowDrafthorse-max-1mb.gif" style="width: 500px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 94 </span><span class="caption-text">Modelo r.avaflow (<a class="reference external" href="https://www.landslidemodels.org/r.avaflow">https://www.landslidemodels.org/r.avaflow</a>).</span><a class="headerlink" href="#id4" title="Permalink to this image">¶</a></p>
-</div>
-<div class="section" id="id5">
-<h3>Tutorial<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h3>
+<figcaption>
+<p><span class="caption-number">Fig. 96 </span><span class="caption-text">Modelo r.avaflow (<a class="reference external" href="https://www.landslidemodels.org/r.avaflow">https://www.landslidemodels.org/r.avaflow</a>).</span><a class="headerlink" href="#id4" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<section id="id5">
+<h3>Tutorial<a class="headerlink" href="#id5" title="Permalink to this headline">#</a></h3>
 <p><em>Elaborado por Juan Diego Torres, Luisa Fernanda Cardona, y Daissy Herrera</em></p>
 <p>En este tutorial se utilizará la versión para windows r.avaflow.direct, la cual posee una interfaz que facilita el ingreso de los parámetros al modelo. Se puede acceder a esta interfaz mediante <a class="reference external" href="https://www.landslidemodels.org/r.avaflow/direct.php">https://www.landslidemodels.org/r.avaflow/direct.php</a>.</p>
 <p>Adicionalmente se debe contar como mínimo con un modelo de elevacion digital formato <em>ASCII</em>, en este caso utilizaremos <a class="reference external" href="https://github.com/edieraristizabal/Libro_cartoGeotecnia/blob/master/data/arenosa/DEM_Arenosa_Clip.asc?raw=true">La Arenosa</a>, y un archivo con las celdas fuentes que se deslizan y la profundidad, también en formato <em>ASCII</em>, para este caso denominado <a class="reference external" href="https://github.com/edieraristizabal/Libro_cartoGeotecnia/blob/master/data/arenosa/release.asc?raw=true">release</a>. También se puede ingresar el área del depósito generado por el flujo, de tal forma que se pueda evaluar la capacidad de predicción del modelo.</p>
@@ -618,8 +902,8 @@
 <li><p>En _paraview se almacenan los archivos necesarios para observar estos resultados en una animación 3D generada por el programa del mismo nombre.</p></li>
 <li><p>En _plots podremos observar el avance espacial y de perfil del flujo en los diferentes saltos de tiempo, de forma que se observa claramente su evolución en el tiempo, gráfica de altura máxima de flujo, entre otros.</p></li>
 </ul>
-<div class="section" id="recomendaciones">
-<h4>Recomendaciones<a class="headerlink" href="#recomendaciones" title="Permalink to this headline">¶</a></h4>
+<section id="recomendaciones">
+<h4>Recomendaciones<a class="headerlink" href="#recomendaciones" title="Permalink to this headline">#</a></h4>
 <ul class="simple">
 <li><p>Almacenar r.avaflow.exe y los archivos generados por la interfaz de parámetros y comando en la carpeta de descargas.</p></li>
 <li><p>Asegurarse de añadir un frontslash (/) al final de la dirección que indica la ubicación de los archivos del caso.</p></li>
@@ -630,12 +914,13 @@
 <li><p>Al momento de convertir los archivos al formato ASCII se debe seleccionar la segunda opción al momento de guardarlo.</p></li>
 <li><p>Cuando se van a utilizar 2 hidrográfas, en el archivo de los parámetros generados se debe de eliminar la parte de C:\fakepath\</p></li>
 </ul>
-</div>
-</div>
-</div>
-<div class="section" id="referencias">
-<h2>Referencias<a class="headerlink" href="#referencias" title="Permalink to this headline">¶</a></h2>
-<p id="id6"><dl class="citation">
+</section>
+</section>
+</section>
+<section id="referencias">
+<h2>Referencias<a class="headerlink" href="#referencias" title="Permalink to this headline">#</a></h2>
+<div class="docutils container" id="id6">
+<dl class="citation">
 <dt class="label" id="id65"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
 <dd><p>P. Horton, M. Jaboyedoff, B. Rudaz, and M. Zimmermann. Flow-r, a model for susceptibility mapping of debris flows and other gravitational hazards at a regional scale. <em>Natural Hazards and Earth System Sciences</em>, 13(4):869–885, 2013. URL: <a class="reference external" href="https://nhess.copernicus.org/articles/13/869/2013/">https://nhess.copernicus.org/articles/13/869/2013/</a>, <a class="reference external" href="https://doi.org/10.5194/nhess-13-869-2013">doi:10.5194/nhess-13-869-2013</a>.</p>
 </dd>
@@ -643,9 +928,9 @@
 <dd><p>Martin Mergili, Jan Thomas Fischer, Julia Krenn, and Shiva P. Pudasaini. R.avaflow v1, an advanced open-source computational framework for the propagation and interaction of two-phase mass flows. <em>Geoscientific Model Development</em>, 10:553–569, 2 2017. <a class="reference external" href="https://doi.org/10.5194/gmd-10-553-2017">doi:10.5194/gmd-10-553-2017</a>.</p>
 </dd>
 </dl>
-</p>
 </div>
-</div>
+</section>
+</section>
 
     <script type="text/x-thebe-config">
     {
@@ -669,9 +954,11 @@
 
               </div>
               
-            
-                <!-- Previous / next buttons -->
-<div class='prev-next-area'> 
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
     <a class='left-prev' id="prev-link" href="12_amenaza.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
@@ -687,24 +974,28 @@
     <i class="fas fa-angle-right"></i>
     </a>
 </div>
-            
+            </footer>
         </div>
     </div>
-    <footer class="footer">
-  <p>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Edier V. Aristizábal G.<br/>
+  
+      &copy; Copyright 2022.<br/>
+</p>
+        </footer>
+    </div>
     
-      By Edier V. Aristizábal G.<br/>
-    
-        &copy; Copyright 2022.<br/>
-  </p>
-</footer>
-</main>
+</div>
 
 
       </div>
     </div>
   
-  <script src="_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
 
   </body>
 </html>

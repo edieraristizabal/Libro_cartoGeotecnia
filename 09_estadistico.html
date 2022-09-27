@@ -4,11 +4,13 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>Métodos basados en datos &#8212; Cartografía Geotécnica</title>
     
-  <link href="_static/css/theme.css" rel="stylesheet">
-  <link href="_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
 
     
   <link rel="stylesheet"
@@ -18,39 +20,38 @@
   <link rel="preload" as="font" type="font/woff2" crossorigin
     href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
-    
-      
-
-    
     <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
-    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
     
-  <link rel="preload" as="script" href="_static/js/index.be7d3bbb2ef33a8344ce.js">
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
 
     <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
     <script src="_static/underscore.js"></script>
     <script src="_static/doctools.js"></script>
-    <script src="_static/togglebutton.js"></script>
     <script src="_static/clipboard.min.js"></script>
     <script src="_static/copybutton.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
-    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
-    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
-    <script>
-        const thebe_selector = ".thebe"
-        const thebe_selector_input = "pre"
-        const thebe_selector_output = ".output"
-    </script>
+    <script src="_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
     <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Métodos con base física" href="10_fisico.html" />
@@ -62,7 +63,21 @@
     <!-- Google Analytics -->
     
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
     
     <div class="container-fluid" id="banner"></div>
 
@@ -71,9 +86,10 @@
     <div class="container-xl">
       <div class="row">
           
-<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
-    
-        <div class="navbar-brand-box">
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
     <a class="navbar-brand text-wrap" href="index.html">
       
         <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
@@ -91,14 +107,15 @@
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item active">
-        <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="intro.html">
-   .
-  </a>
- </li>
-</ul>
-<ul class="current nav bd-sidenav">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    .
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="00_medialuna.html">
    Media Luna (1954)
@@ -187,107 +204,209 @@
 </ul>
 
     </div>
-</nav> <!-- To handle the deprecated key -->
-
-<div class="navbar_extra_footer">
-  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
-</div>
-
-</div>
-
-
-          
-
-
-          
-<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
-    
-    <div class="topbar container-xl fixed-top">
-    <div class="topbar-contents row">
-        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
-        <div class="col pl-md-4 topbar-main">
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
             
-            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
-                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
-                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
-                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
-                <i class="fas fa-bars"></i>
-                <i class="fas fa-arrow-left"></i>
-                <i class="fas fa-arrow-up"></i>
-            </button>
-            
-            
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
-            class="fas fa-download"></i></button>
-
-    <div class="dropdown-buttons">
-        <!-- ipynb file if we had a myst markdown file -->
-        
-        <!-- Download raw file -->
-        <a class="dropdown-buttons" href="_sources/09_estadistico.ipynb"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
-                data-placement="left">.ipynb</button></a>
-        <!-- Download PDF via print -->
-        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
-                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
-    </div>
-</div>
-
-            <!-- Source interaction buttons -->
-
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
-        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
-    <div class="dropdown-buttons sourcebuttons">
-        <a class="repository-button"
-            href="https://github.com/edieraristizabal/Libro_cartoGeotecnia"><button type="button" class="btn btn-secondary topbarbtn"
-                data-toggle="tooltip" data-placement="left" title="Source repository"><i
-                    class="fab fa-github"></i>repository</button></a>
-        <a class="issues-button"
-            href="https://github.com/edieraristizabal/Libro_cartoGeotecnia/issues/new?title=Issue%20on%20page%20%2F09_estadistico.html&body=Your%20issue%20content%20here."><button
-                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
-                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
-        
-    </div>
-</div>
-
-            <!-- Full screen (wrap in <a> to have style consistency -->
-
-<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
-        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
-        title="Fullscreen mode"><i
-            class="fas fa-expand"></i></button></a>
-
-            <!-- Launch buttons -->
-
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
-        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
-    <div class="dropdown-buttons">
-        
-        <a class="binder-button" href="https://mybinder.org/v2/gh/edieraristizabal/Libro_cartoGeotecnia/master?urlpath=tree/docs/09_estadistico.ipynb"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
-                data-placement="left"><img class="binder-button-logo"
-                    src="_static/images/logo_binder.svg"
-                    alt="Interact on binder">Binder</button></a>
-        
-        
-        
-        
-    </div>
-</div>
-
-        </div>
-
-        <!-- Table of contents -->
-        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
-            
-            <div class="tocsection onthispage pt-5 pb-3">
-                <i class="fas fa-list"></i> Contents
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
             </div>
-            <nav id="bd-toc-nav" aria-label="Page">
-                <ul class="visible nav section-nav flex-column">
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<div class="menu-dropdown menu-dropdown-launch-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Launch interactive content">
+      <i class="fas fa-rocket"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://mybinder.org/v2/gh/edieraristizabal/Libro_cartoGeotecnia/master?urlpath=tree/docs/09_estadistico.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Launch on Binder"
+>
+  
+
+<span class="headerbtn__icon-container">
+  
+    <img src="_static/images/logo_binder.svg">
+  </span>
+<span class="headerbtn__text-container">Binder</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-repository-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Source repositories">
+      <i class="fab fa-github"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://github.com/edieraristizabal/Libro_cartoGeotecnia"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="headerbtn__text-container">repository</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://github.com/edieraristizabal/Libro_cartoGeotecnia/issues/new?title=Issue%20on%20page%20%2F09_estadistico.html&body=Your%20issue%20content%20here."
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Open an issue"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="headerbtn__text-container">open issue</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="_sources/09_estadistico.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.ipynb</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#bivariados">
    Bivariados
@@ -469,12 +588,11 @@
  </li>
 </ul>
 
-            </nav>
-        </div>
-    </div>
+    </nav>
 </div>
-    <div id="main-content" class="row">
-        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
                 <h1>Métodos basados en datos</h1>
@@ -672,18 +790,19 @@
                     </div>
                 </div>
             </div>
-            
+            <main id="main-content" role="main">
+                
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="metodos-basados-en-datos">
-<h1>Métodos basados en datos<a class="headerlink" href="#metodos-basados-en-datos" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="bivariados">
-<h2>Bivariados<a class="headerlink" href="#bivariados" title="Permalink to this headline">¶</a></h2>
+  <section class="tex2jax_ignore mathjax_ignore" id="metodos-basados-en-datos">
+<h1>Métodos basados en datos<a class="headerlink" href="#metodos-basados-en-datos" title="Permalink to this headline">#</a></h1>
+<section id="bivariados">
+<h2>Bivariados<a class="headerlink" href="#bivariados" title="Permalink to this headline">#</a></h2>
 <p>En los métodos bivariados cada mapa factor (geología, pendiente, coberturas, etc) es combinado con el inventario de movimientos en masa, para obtener los pesos de las clases que conforman las variables, basados generalmente en densidad de movimientos en masa. Los métodos estadísticos bivariados son una buena herramienta de aprendizaje para el analista encontrar qué factores o combinación de factores juegan un papel importante en la ocurrencia de movimientos en masa.</p>
 <p>Como se mencionó anteriormente, estos métodos están basados en la asociación observada entre la distribución de los movimientos en masa y cada clase de la variable, lo que exige que cada variable sea transforamda a una variable categórica dividida por clases. De esta misma forma los métodos bivariados sólo permiten asignar peso a las clases y no a las variables, por lo que todas las variables tienen una importancia igual sobre la ocurrencia de movimientos en masa. Considerando esta desventaja, es muy común combinar los métodos estadísticos bivariados con métodos heurísticos como AHP para poder asignar peso a las variables.</p>
 <p>Existe una gran cantidad de métodos estadísticos bivariados, los cuales se subdividen esencialmente en métodos basados en la densidad del número de movimientos en masa en cada clase (<em>Frequency ratio</em>, <em>Statistical index</em>), y los métodos basados en el teorema de Bayes (<em>Weight-of-evidence</em>, <em>Evidential belief function</em>,  <em>Certainty factor</em>).</p>
-<div class="section" id="frequency-ratio-model-likelihood">
-<h3><em>Frequency ratio model</em> (<em>Likelihood</em>)<a class="headerlink" href="#frequency-ratio-model-likelihood" title="Permalink to this headline">¶</a></h3>
+<section id="frequency-ratio-model-likelihood">
+<h3><em>Frequency ratio model</em> (<em>Likelihood</em>)<a class="headerlink" href="#frequency-ratio-model-likelihood" title="Permalink to this headline">#</a></h3>
 <p>Este método, al igual que todos los métodos bivariados, calcula un peso para cada clase en la cual es dividida cada variable. En este caso el peso de la clase n (<span class="math notranslate nohighlight">\(w_n\)</span>) se calcula dividiendo la relación de la ocurrencia de movimientos en masa (<span class="math notranslate nohighlight">\(L_r\)</span>) por la relación del área de la clase (<span class="math notranslate nohighlight">\(A_r\)</span>):</p>
 <p><span class="math notranslate nohighlight">\(w_n = \frac{L_r}{A_r}\)</span></p>
 <p>Donde <span class="math notranslate nohighlight">\(L_r\)</span> es el porcentaje de movimientos en masa total que contiene la clase <span class="math notranslate nohighlight">\(n\)</span>, y <span class="math notranslate nohighlight">\(A_r\)</span> es el porcentaje del área total de representa dicha clase:</p>
@@ -691,12 +810,14 @@
 <p><span class="math notranslate nohighlight">\(A_r = \frac{A_{clase}}{A_{total}}\)</span></p>
 <p>Finalmente, la susceptibilidad de una celda es igual a la sumatoria del peso de cada clase (<span class="math notranslate nohighlight">\(w\)</span>) a la que pertenece en cada variable:</p>
 <p><span class="math notranslate nohighlight">\(S^n = \sum w = w_{pendiente} + w_{geologia} + w_{coberturas} + ...w_{n} \)</span></p>
-<div class="figure align-default" id="likehood">
+<figure class="align-default" id="likehood">
 <a class="reference internal image-reference" href="https://www.researchgate.net/profile/Jangwon-Suh-3/publication/303875920/figure/fig1/AS:371153064480768&#64;1465501194778/Example-for-calculating-frequency-ratio-using-raster-grids-modified-from-Oh-et-al.png"><img alt="likehood" src="https://www.researchgate.net/profile/Jangwon-Suh-3/publication/303875920/figure/fig1/AS:371153064480768&#64;1465501194778/Example-for-calculating-frequency-ratio-using-raster-grids-modified-from-Oh-et-al.png" style="width: 600px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 47 </span><span class="caption-text">Método de <em>Frequency ratio</em>. Tomado de Suh et al. (2015)</span><a class="headerlink" href="#likehood" title="Permalink to this image">¶</a></p>
-</div>
-<div class="section" id="python">
-<h4><em>Python</em><a class="headerlink" href="#python" title="Permalink to this headline">¶</a></h4>
+<figcaption>
+<p><span class="caption-number">Fig. 48 </span><span class="caption-text">Método de <em>Frequency ratio</em>. Tomado de Suh et al. (2015)</span><a class="headerlink" href="#likehood" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<section id="python">
+<h4><em>Python</em><a class="headerlink" href="#python" title="Permalink to this headline">#</a></h4>
 <p>En el presente ejemplo, y solo con propósitos pedagógicos, se utilizarán solo tres variables (pendiente, geologia, aspecto) pero el procedimiento señalado se debera utilizar para todas las variables incorporadas en el modelo de susceptibilidad.</p>
 <p>Inicialmente se procede a importar las librerías a utilizar:</p>
 <div class="cell docutils container">
@@ -706,16 +827,8 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: rasterio in c:\users\usuario\miniconda3\envs\geospatial\lib\site-packages (1.2.1)
-Requirement already satisfied: affine in c:\users\usuario\miniconda3\envs\geospatial\lib\site-packages (from rasterio) (2.3.0)
-Requirement already satisfied: attrs in c:\users\usuario\miniconda3\envs\geospatial\lib\site-packages (from rasterio) (20.3.0)
-Requirement already satisfied: certifi in c:\users\usuario\miniconda3\envs\geospatial\lib\site-packages (from rasterio) (2022.6.15)
-Requirement already satisfied: click&lt;8,&gt;=4.0 in c:\users\usuario\miniconda3\envs\geospatial\lib\site-packages (from rasterio) (7.1.2)
-Requirement already satisfied: cligj&gt;=0.5 in c:\users\usuario\miniconda3\envs\geospatial\lib\site-packages (from rasterio) (0.7.1)
-Requirement already satisfied: numpy in c:\users\usuario\miniconda3\envs\geospatial\lib\site-packages (from rasterio) (1.20.1)
-Requirement already satisfied: snuggs&gt;=1.4.1 in c:\users\usuario\miniconda3\envs\geospatial\lib\site-packages (from rasterio) (1.4.7)
-Requirement already satisfied: click-plugins in c:\users\usuario\miniconda3\envs\geospatial\lib\site-packages (from rasterio) (1.1.1)
-Requirement already satisfied: pyparsing&gt;=2.1.6 in c:\users\usuario\miniconda3\envs\geospatial\lib\site-packages (from snuggs&gt;=1.4.1-&gt;rasterio) (2.4.7)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>^C
+<span class=" -Color -Color-Red">ERROR: Operation cancelled by user</span>
 </pre></div>
 </div>
 </div>
@@ -726,19 +839,6 @@ Requirement already satisfied: pyparsing&gt;=2.1.6 in c:\users\usuario\miniconda
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
 <span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
-<span class="o">~</span>\<span class="n">AppData</span>\<span class="n">Local</span>\<span class="n">Temp</span><span class="o">/</span><span class="n">ipykernel_34972</span><span class="o">/</span><span class="mf">1877902076.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="kn">import</span> <span class="nn">rasterio</span> <span class="k">as</span> <span class="nn">rio</span>
-<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="ne">----&gt; </span><span class="mi">3</span> <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
-<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
-
-<span class="ne">ModuleNotFoundError</span>: No module named &#39;matplotlib&#39;
 </pre></div>
 </div>
 </div>
@@ -1051,17 +1151,17 @@ w: 1.447560646250527 0.0 0.0 1.7008260599455374 0.0 1.077602194175132 1.58808106
 <img alt="_images/09_estadistico_23_0.png" src="_images/09_estadistico_23_0.png" />
 </div>
 </div>
-</div>
-</div>
-<div class="section" id="statistical-index-model">
-<h3><em>Statistical index model</em><a class="headerlink" href="#statistical-index-model" title="Permalink to this headline">¶</a></h3>
+</section>
+</section>
+<section id="statistical-index-model">
+<h3><em>Statistical index model</em><a class="headerlink" href="#statistical-index-model" title="Permalink to this headline">#</a></h3>
 <p>El valor del peso para cada clase en el método <em>Statistical index model</em> es definido como el logaritmo natural de la densidad de movimientos en masa en una clase (<span class="math notranslate nohighlight">\(\rho_{clase}\)</span>) dividido la densidad de deslizamientos en toda la zona de estudio (<span class="math notranslate nohighlight">\(\rho_{total}\)</span>), de acuerdo con la siguiente ecuación:</p>
 <p><span class="math notranslate nohighlight">\(w_{ij}^n = \ln(\frac{\rho_{clase}}{\rho_{total}}) = \ln(\frac{\frac{N_{ij}}{S_{ij}}}{\frac{N}{S}}) \)</span></p>
 <p>Donde <span class="math notranslate nohighlight">\(w_{ij}^n\)</span> es el peso de la celda <span class="math notranslate nohighlight">\(n\)</span> que pertenece a la clase <span class="math notranslate nohighlight">\(i\)</span> de la variable <span class="math notranslate nohighlight">\(j\)</span>. <span class="math notranslate nohighlight">\(\rho_{clase}\)</span> es la densidad de deslizamientos de la clase <span class="math notranslate nohighlight">\(i\)</span> del parámetro <span class="math notranslate nohighlight">\(j\)</span>, calculado a  partir de <span class="math notranslate nohighlight">\(N_{ij}\)</span> como el número de pixeles con MenM en una cierta clase <span class="math notranslate nohighlight">\(i\)</span> del parametro <span class="math notranslate nohighlight">\(j\)</span>, <span class="math notranslate nohighlight">\(S_{ij} como el número de pixeles de la clase \)</span>i<span class="math notranslate nohighlight">\( del parametro \)</span>j$. N es el total de celdas que corresponden a deslizamientos en todo el mapa y S es el total de celdas del área de estudio.</p>
 <p>Finalmente la susceptibilidad a movimientos en masa de cada celda es igual a:</p>
 <p><span class="math notranslate nohighlight">\(S^n = \sum w = w_{pendiente} + w_{geologia} + w_{coberturas} + ...w_{n} \)</span></p>
-<div class="section" id="id1">
-<h4>Python<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h4>
+<section id="id1">
+<h4>Python<a class="headerlink" href="#id1" title="Permalink to this headline">#</a></h4>
 <p>Para el método de <em>Statistical index</em> se debe calcular la densidad de movimientos en masa, tanto para las clases de cada variable, como para el área total.</p>
 <p>La densidad total es igual a:</p>
 <div class="cell docutils container">
@@ -1201,10 +1301,10 @@ w: 1.447560646250527 0.0 0.0 1.7008260599455374 0.0 1.077602194175132 1.58808106
 <img alt="_images/09_estadistico_37_0.png" src="_images/09_estadistico_37_0.png" />
 </div>
 </div>
-</div>
-</div>
-<div class="section" id="peso-de-la-evidencia-woe">
-<h3>Peso de la evidencia (WoE)<a class="headerlink" href="#peso-de-la-evidencia-woe" title="Permalink to this headline">¶</a></h3>
+</section>
+</section>
+<section id="peso-de-la-evidencia-woe">
+<h3>Peso de la evidencia (WoE)<a class="headerlink" href="#peso-de-la-evidencia-woe" title="Permalink to this headline">#</a></h3>
 <p>El Peso de la Evidencia, basado en la teoría de la probabilidad Bayesiana, analiza la relación entre las áreas afectadas
 por los movimientos en masa y la distribución espacial de los factores condicionantes del terreno. Este método arroja
 los pesos de las clases que conforman las variables condicionantes, indicando la presencia e influencia de la clase como parámetro
@@ -1215,15 +1315,17 @@ movimiento en masa.</p>
 en masa que no están presentes en la misma clase <span class="math notranslate nohighlight">\(\hat{B}_i\)</span>, <span class="math notranslate nohighlight">\(N_{pix3}\)</span> es el número de pixeles en la clase que no hay movimientos
 en masa <span class="math notranslate nohighlight">\(\hat{S}\)</span> y <span class="math notranslate nohighlight">\(N_{pix4}\)</span> es el número de pixeles en la clase donde no hay movimientos en masa <span class="math notranslate nohighlight">\(\hat{S}\)</span> y que no está presente en
 la clase  <span class="math notranslate nohighlight">\(\hat{B}_i\)</span>.</p>
-<div class="figure align-default" id="woe">
+<figure class="align-default" id="woe">
 <a class="reference internal image-reference" href="https://i.pinimg.com/564x/70/a4/d5/70a4d5ecbab6d6bf9bdb0f914c91dba8.jpg"><img alt="woe" src="https://i.pinimg.com/564x/70/a4/d5/70a4d5ecbab6d6bf9bdb0f914c91dba8.jpg" style="width: 600px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 48 </span><span class="caption-text">Método de Peso de la Evidencia.</span><a class="headerlink" href="#woe" title="Permalink to this image">¶</a></p>
-</div>
+<figcaption>
+<p><span class="caption-number">Fig. 49 </span><span class="caption-text">Método de Peso de la Evidencia.</span><a class="headerlink" href="#woe" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
 <p><span class="math notranslate nohighlight">\(C = W^+ - W^-\)</span></p>
 <p>Y el contraste C refleja el espacio de asociación respecto a la clase en la predicción del movimiento en masa, la cual
 es cero cuando la clase no afecta, es positivo cuando existe una correlación directa y negativo cuando existe una correlación inversa con la distribución de movimientos en masa.</p>
-<div class="section" id="id2">
-<h4>Python<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h4>
+<section id="id2">
+<h4>Python<a class="headerlink" href="#id2" title="Permalink to this headline">#</a></h4>
 <p>Para calcular el <span class="math notranslate nohighlight">\(W^+\)</span> (wp), <span class="math notranslate nohighlight">\(W^-\)</span> (wn), y <span class="math notranslate nohighlight">\(C\)</span> de cada clase se utilizan las siguientes ecuaciones del método WoE: <span class="math notranslate nohighlight">\(N_{pix1}\)</span>=a1, son las celdas que pertenecen a la clase a y tienen MenM. <span class="math notranslate nohighlight">\(N_{pix2}\)</span>=total1-a1, son las celdas que no pertenecen a la clase a y que tienen MenM, <span class="math notranslate nohighlight">\(N_{pix3}\)</span>=a-a1, son las celdas que pertenecen a la clase a pero que no tienen MenM. y <span class="math notranslate nohighlight">\(N_{pix4}\)</span>=(b+c+d+e)-(b1+c1+d1+e1), son las celdas que no pertenecen a la clase a y que no tienen MenM.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1594,26 +1696,30 @@ es cero cuando la clase no afecta, es positivo cuando existe una correlación di
 <img alt="_images/09_estadistico_63_0.png" src="_images/09_estadistico_63_0.png" />
 </div>
 </div>
-</div>
-</div>
-<div class="section" id="evidential-belief-funtion-ebf">
-<h3><em>Evidential Belief Funtion</em> (EBF)<a class="headerlink" href="#evidential-belief-funtion-ebf" title="Permalink to this headline">¶</a></h3>
+</section>
+</section>
+<section id="evidential-belief-funtion-ebf">
+<h3><em>Evidential Belief Funtion</em> (EBF)<a class="headerlink" href="#evidential-belief-funtion-ebf" title="Permalink to this headline">#</a></h3>
 <p>El modelo EBF (Dempster - Shafer) consiste en el grado de <em>Belief</em> (Bel), <em>Disbelief</em> (Dis), <em>Uncertainty</em> (Unc) y <em>Plausibility</em> (Pls), con valores entre 0 y 1. Bels y Pls representan el límite de probabilidad Bayesiana inferior y superior. Mientras que, Pls es mayor o igual que Bel, y Unc es la diferencia entre ellos, indicando la incertidumbre del resultado.</p>
 <p><span class="math notranslate nohighlight">\(Wc_{ij}L=\frac{N(c \cap L)/N(c)}{N(L)-N(c \cap L)/N(S)-N(c)}\)</span></p>
 <p><span class="math notranslate nohighlight">\(Belc_{ij}=\frac{Wc_{ij}L}{\sum{Wc_{ij}L}}\)</span></p>
 <p><span class="math notranslate nohighlight">\(Wc_{ij} \bar L=\frac{N(c)-N(c \cap L)/N(c)}{N(S)-N(L)-N(c)-N(c \cap L)/N(S)-N(c)}\)</span></p>
 <p><span class="math notranslate nohighlight">\(Disc_{ij}=\frac{Wc_{ij} \bar L}{\sum{Wc_{ij} \bar L}}\)</span></p>
 <p><span class="math notranslate nohighlight">\(Uncc_{ij}=1-Belc_{ij} - Disc_{ij}\)</span></p>
-<div class="figure align-default" id="ebf">
+<figure class="align-default" id="ebf">
 <a class="reference internal image-reference" href="https://www.researchgate.net/profile/Hossein-Nazmfar-2/publication/234059633/figure/fig5/AS:637397922508801&#64;1528978915684/Schematic-relationships-of-evidential-belief-functions-Althuwaynee-et-al-2012.png"><img alt="ebf" src="https://www.researchgate.net/profile/Hossein-Nazmfar-2/publication/234059633/figure/fig5/AS:637397922508801&#64;1528978915684/Schematic-relationships-of-evidential-belief-functions-Althuwaynee-et-al-2012.png" style="width: 600px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 49 </span><span class="caption-text">Método <em>Evidential Belief Funtion</em>.</span><a class="headerlink" href="#ebf" title="Permalink to this image">¶</a></p>
-</div>
-<div class="figure align-default" id="ebf1">
+<figcaption>
+<p><span class="caption-number">Fig. 50 </span><span class="caption-text">Método <em>Evidential Belief Funtion</em>.</span><a class="headerlink" href="#ebf" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<figure class="align-default" id="ebf1">
 <a class="reference internal image-reference" href="https://i.pinimg.com/564x/4c/90/c3/4c90c30f26e6385e74bb00899a4f7110.jpg"><img alt="ebf1" src="https://i.pinimg.com/564x/4c/90/c3/4c90c30f26e6385e74bb00899a4f7110.jpg" style="width: 400px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 50 </span><span class="caption-text">Ejemplo del cálculo de <em>Evidential Belief Funtion</em>.</span><a class="headerlink" href="#ebf1" title="Permalink to this image">¶</a></p>
-</div>
-<div class="section" id="id3">
-<h4><em>Python</em><a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h4>
+<figcaption>
+<p><span class="caption-number">Fig. 51 </span><span class="caption-text">Ejemplo del cálculo de <em>Evidential Belief Funtion</em>.</span><a class="headerlink" href="#ebf1" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<section id="id3">
+<h4><em>Python</em><a class="headerlink" href="#id3" title="Permalink to this headline">#</a></h4>
 <p>Para calcular el <em>Belief</em> de las 5 clases de la variable <em>pendiente</em> se utiliza:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1868,18 +1974,20 @@ Uncertainty: 0.7799834770480247 0.6685462775738931 0.8870797176808958 0.77830569
 <img alt="_images/09_estadistico_79_0.png" src="_images/09_estadistico_79_0.png" />
 </div>
 </div>
-</div>
-</div>
-<div class="section" id="certainty-factor-cf">
-<h3><em>Certainty Factor</em> (CF)<a class="headerlink" href="#certainty-factor-cf" title="Permalink to this headline">¶</a></h3>
+</section>
+</section>
+<section id="certainty-factor-cf">
+<h3><em>Certainty Factor</em> (CF)<a class="headerlink" href="#certainty-factor-cf" title="Permalink to this headline">#</a></h3>
 <p>El valor de CF varía entre -1 y +1. Un valor positivo significa un incremento en la certidumbre de la ocurrencia de deslizamientos, mientras que un valor negativo corresponde a una reducción en dicha certidumbre. Un valor cercano a 0 significa que la probabilidad priori es muy similar a la probabilidad condicional.</p>
-<div class="figure align-default" id="cf">
+<figure class="align-default" id="cf">
 <a class="reference internal image-reference" href="https://i.pinimg.com/originals/ae/1a/55/ae1a558572dffa10393f414d91a5bf24.jpg"><img alt="cf" src="https://i.pinimg.com/originals/ae/1a/55/ae1a558572dffa10393f414d91a5bf24.jpg" style="width: 400px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 51 </span><span class="caption-text">Método de <em>Certainty Factor</em>.</span><a class="headerlink" href="#cf" title="Permalink to this image">¶</a></p>
-</div>
+<figcaption>
+<p><span class="caption-number">Fig. 52 </span><span class="caption-text">Método de <em>Certainty Factor</em>.</span><a class="headerlink" href="#cf" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
 <p>Donde PPa es la probabilidad condicional de la ocurrencia de un deslizamiento en la clase a. PPs es la probabilidad priori del número total de deslizamientos en el área.</p>
-<div class="section" id="id4">
-<h4><em>Python</em><a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h4>
+<section id="id4">
+<h4><em>Python</em><a class="headerlink" href="#id4" title="Permalink to this headline">#</a></h4>
 <p>Los mapas finales los podemos exportar en formato <em>tif</em>, para eso en el siguiente ejemplo se utiliza el mapa de pendientes para extraer las dimensiones de la matriz (mapa) a crear de la zoan de estudio.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1895,31 +2003,35 @@ Uncertainty: 0.7799834770480247 0.6685462775738931 0.8870797176808958 0.77830569
 </div>
 </div>
 </div>
-</div>
-</div>
-</div>
-<div class="section" id="multivariados">
-<h2>Multivariados<a class="headerlink" href="#multivariados" title="Permalink to this headline">¶</a></h2>
+</section>
+</section>
+</section>
+<section id="multivariados">
+<h2>Multivariados<a class="headerlink" href="#multivariados" title="Permalink to this headline">#</a></h2>
 <p>A diferencia de los métodos estadísticos bivariados, que combinan el inventario de movimientos en masa con cada variable por separado, los métodos estadísticos multivariados evalúan la relación combinada entre la variable dependiente (la ocurrencia de movimientos en masa) y todas variables independientes (variables predictoras) en simultanea. Entre estos métodos se encuentra la regresión logística, la cual ha sido el método mas utilizado alrededor del mundo para evaluar la susceptibilidad por movimientos en masa; al igual que el método de análisis discriminante lineal, el cual es el exigido en los estudios de amenaza en los Planes de Ordenación y Manejo de Cuencas (POMCA) en Colombia.</p>
 <p>Adicionalmente como parte de los métodos multivariados, con la explosión de la era de los datos, se encuentran disponibles técnicas de aprendizaje automático de máquinas (<em>machine learning</em>), especificamente los métodos supervisados de clasificación binarios, entre los cuales se encuentran regresión logística y análisis discriminante, pero adicionalmente algoritmos como <em>support vector machine</em>, métodos ensamblados tipo <em>bagging</em> como <em>random forest</em>, tipo boosting como <em>XGBoost</em>, y técnicas de <em>deep learning</em> como redes neuronales artificiales.</p>
-<div class="figure align-default" id="ml">
+<figure class="align-default" id="ml">
 <a class="reference internal image-reference" href="https://miro.medium.com/max/477/1*KFQI59Yv7m1f3fwG68KSEA.jpeg"><img alt="ml" src="https://miro.medium.com/max/477/1*KFQI59Yv7m1f3fwG68KSEA.jpeg" style="width: 500px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 52 </span><span class="caption-text">Algoritmos utilizados en <em>machine learning</em></span><a class="headerlink" href="#ml" title="Permalink to this image">¶</a></p>
-</div>
+<figcaption>
+<p><span class="caption-number">Fig. 53 </span><span class="caption-text">Algoritmos utilizados en <em>machine learning</em></span><a class="headerlink" href="#ml" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
 <p>Existen métodos paramétricos y no-paramétricos. Los modelos paramétricos simplifican el aprendizaje a partir de los datos de entrenamiento, ya que utilizan una función conocida que generalmente corresponde a una combinación lineal de las variables predictoras. Por lo que como resultado siempre se obtiene los coeficientes de la función predeterminada. Estos modelos además de no exigir una gran capacidad computacional, son muy estables sin presentar problemas de varianza. Sin embargo, en muchos casos el problema a modelar no se ajusta a una función lineal, por lo que pueden presentar problemas de ajuste o sesgo. Para estos casos se recomienda el uso de modelos no paramétricos, ya que no asumen ninguna forma previa de la función objetivo, permitiendo aprender en teoría a partir de los datos de entrenamiento cualquier forma de la función. Generalmente no presentan problemas de ajuste o sesgo, pero en su defecto tienden a sobre ajustarse a los datos, generando problemas de varianza ante nuevas observaciones. En este sentido, un buen modelo se soporta en un balance entre el ajuste y la varianza, desafortunadamente mejorar en uno de estos aspectos implica generalmente reducción en el otro.</p>
 <p>Entre las limitaciones que presentan los métodos estadísticos multivariados se encuentra que los resultados implican que los movimientos en masa ocurren por la misma combinación de factores a lo largo del área de estudio. Esta generalización ignora el hecho que la ocurrencia de ciertos tipos de movimientos en masa están controlados por ciertos factores de causa que deben ser analizados o investigados individualmente.</p>
 <p>A continuación se describen cada uno de los métodos mas comúnes. Inicialmente se describe el método denominado <em>análisis condicional</em>, el cual es el único de los métodos que no se considera una técnica de <em>machine learning</em>. Posteriormente se procederá a presentar los métodos de <em>machine learning</em> utilizados para evaluar la susceptibilidad por movimientos en masa.</p>
-<div class="section" id="metodo-de-analisis-condicional">
-<h3>Método de análisis condicional<a class="headerlink" href="#metodo-de-analisis-condicional" title="Permalink to this headline">¶</a></h3>
+<section id="metodo-de-analisis-condicional">
+<h3>Método de análisis condicional<a class="headerlink" href="#metodo-de-analisis-condicional" title="Permalink to this headline">#</a></h3>
 <p>El método de análisis condicional, o también denominado <em>matrix assessment</em> fue desarrollado por {\cite:t}<code class="docutils literal notranslate"><span class="pre">Clerici2002</span></code>, y no requiere asunciones de aleatoriedad del fenómeno bajo análisis. En general es utilizado por su simpleza conceptual y matemática, sin embargo desde el punto de vista procedimental puede ser demandante.</p>
 <p>Se fundamente en el uso de la unidad de análisis denominada Unidad de Condiciones Unicas (UCU). El procedimiento es el siguiente: (i) elaborar el mapa de UCU a partir de las variables predictoras seleccionadas, (ii) se cruza el mapa de UCU con el inventario de movimientos en masa, (iii) se calcula para cada UCU el porcentaje de área con movimientos en masa, (iv) finalmente, se clasifican de acuerdo con el porcentaje de área afectada. Ese porcentaje, que corresponde a una densidad relativa, es equivalente a la probabilidad futura de la ocurrencia de movimientos en masa.</p>
-<div class="figure align-default" id="metodo-ucu">
+<figure class="align-default" id="metodo-ucu">
 <a class="reference internal image-reference" href="https://i.pinimg.com/564x/cc/6d/00/cc6d00fc1e76c817cac53b08377c25b2.jpg"><img alt="metodo ucu" src="https://i.pinimg.com/564x/cc/6d/00/cc6d00fc1e76c817cac53b08377c25b2.jpg" style="width: 500px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 53 </span><span class="caption-text">Método de análisis condicional. Tomado de Urquia et al., (2020).</span><a class="headerlink" href="#metodo-ucu" title="Permalink to this image">¶</a></p>
-</div>
-</div>
-<div class="section" id="regresion-logistica">
-<h3>Regresión logística<a class="headerlink" href="#regresion-logistica" title="Permalink to this headline">¶</a></h3>
+<figcaption>
+<p><span class="caption-number">Fig. 54 </span><span class="caption-text">Método de análisis condicional. Tomado de Urquia et al., (2020).</span><a class="headerlink" href="#metodo-ucu" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+</section>
+<section id="regresion-logistica">
+<h3>Regresión logística<a class="headerlink" href="#regresion-logistica" title="Permalink to this headline">#</a></h3>
 <p>El método estadístico multivariado denominado regresión logística (RL) estima la relación entre una variable dependiente (la ocurrencia de movimientos en masa) de valores dicotómicos de 0 (no ocurrencia) y 1 (si ocurrencia), con un grupo de variables independientes, en este caso las variables condicionantes del terreno. La ventaja de la RL es que dichas variables predictoras no requieren tener distribución normal y pueden ser discretas o continuas, o una combinación de ambas. La relación de dependencia entre la ocurrencia de movimientos en masa y las variables es expresada cuantitativamente como:</p>
 <p><span class="math notranslate nohighlight">\(P(y/x) = \frac{1}{1+e^-z}\)</span></p>
 <p><span class="math notranslate nohighlight">\(\frac{p(y/x)}{1-p(y/x)} = e^{a+\sum bx}\)</span></p>
@@ -1928,20 +2040,26 @@ Uncertainty: 0.7799834770480247 0.6685462775738931 0.8870797176808958 0.77830569
 <p><span class="math notranslate nohighlight">\(z=\beta_o+\beta_1X_1+\beta_2X_2+\beta_3X_3+...+\beta_nX_n\)</span></p>
 <p>Donde <span class="math notranslate nohighlight">\(\beta_0\)</span> es el intercepto del modelo según el modelo de RL, los valores <span class="math notranslate nohighlight">\(\beta_i\)</span> (i=1,2, 3, n) son los coeficientes de la regresión
 logística, es decir, los pesos de las variables, y los valores <span class="math notranslate nohighlight">\(X_i\)</span> (i=1, 2, 3,…, n) son las variables independientes. El modelo final es una RL de la ocurrencia de movimientos en masa (presencia o ausencia) basado en las variables independientes. De acuerdo con esto, a paesar de que el modelo transformado es lineal en las variables, las probabilidades no son lineales.</p>
-<div class="figure align-default" id="rl0">
+<figure class="align-default" id="rl0">
 <a class="reference internal image-reference" href="https://i.pinimg.com/564x/3d/61/22/3d6122d2586096e57c33ddce1497be8d.jpg"><img alt="rl0" src="https://i.pinimg.com/564x/3d/61/22/3d6122d2586096e57c33ddce1497be8d.jpg" style="width: 600px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 54 </span><span class="caption-text">Función logística.</span><a class="headerlink" href="#rl0" title="Permalink to this image">¶</a></p>
-</div>
-<div class="figure align-default" id="rl">
+<figcaption>
+<p><span class="caption-number">Fig. 55 </span><span class="caption-text">Función logística.</span><a class="headerlink" href="#rl0" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<figure class="align-default" id="rl">
 <a class="reference internal image-reference" href="https://i.pinimg.com/564x/59/ce/fe/59cefecb396127fa7252a395c30eb23f.jpg"><img alt="rl" src="https://i.pinimg.com/564x/59/ce/fe/59cefecb396127fa7252a395c30eb23f.jpg" style="width: 500px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 55 </span><span class="caption-text">Ejemplo regresión logística.</span><a class="headerlink" href="#rl" title="Permalink to this image">¶</a></p>
-</div>
-<div class="figure align-default" id="rl1">
+<figcaption>
+<p><span class="caption-number">Fig. 56 </span><span class="caption-text">Ejemplo regresión logística.</span><a class="headerlink" href="#rl" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<figure class="align-default" id="rl1">
 <a class="reference internal image-reference" href="https://i.pinimg.com/564x/61/e3/8f/61e38fb081e8b0638a090514b2550f6b.jpg"><img alt="rl1" src="https://i.pinimg.com/564x/61/e3/8f/61e38fb081e8b0638a090514b2550f6b.jpg" style="width: 500px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 56 </span><span class="caption-text">Ejemplo regresión logística.</span><a class="headerlink" href="#rl1" title="Permalink to this image">¶</a></p>
-</div>
-<div class="section" id="id5">
-<h4><em>Python</em><a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h4>
+<figcaption>
+<p><span class="caption-number">Fig. 57 </span><span class="caption-text">Ejemplo regresión logística.</span><a class="headerlink" href="#rl1" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<section id="id5">
+<h4><em>Python</em><a class="headerlink" href="#id5" title="Permalink to this headline">#</a></h4>
 <p>A continuación se implementará el método de RL para evaluar la susceptibilidad por movimientos en masa. En este ejemplo sólo se utilizarán tres variables (<em>pendiente</em>, <em>aspecto</em> y <em>geologia</em>).</p>
 <p>el primer paso es crear un <em>Dataframe</em> con todas las variables y el inventario. A partir de este <em>Dataframe</em> se construye un vector con la variable y (ocurrencia o no de movimientos en masa), que permitirá entrenar el modelo de <em>RL</em>, y otro <em>Dataframe</em> con solo las variables predictoras.</p>
 <div class="cell docutils container">
@@ -2774,18 +2892,20 @@ geo_16.0     -22.2074    266.907     -0.083      0.934    -545.335     500.920
 <img alt="_images/09_estadistico_112_0.png" src="_images/09_estadistico_112_0.png" />
 </div>
 </div>
-</div>
-</div>
-<div class="section" id="analisis-discriminante-lineal">
-<h3>Análisis discriminante lineal<a class="headerlink" href="#analisis-discriminante-lineal" title="Permalink to this headline">¶</a></h3>
+</section>
+</section>
+<section id="analisis-discriminante-lineal">
+<h3>Análisis discriminante lineal<a class="headerlink" href="#analisis-discriminante-lineal" title="Permalink to this headline">#</a></h3>
 <p>El análisis discriminante lineal (LDA) es una técnica estadística que crea una función capaz de clasificar los fenómenos, teniendo en cuenta una serie de variables discriminadoras y una probabilidad de pertenencia. LDA encuentra combinaciones lineales de variables que mejor “discriminan” las clases de la variable respuesta. LDA supone que las variables predictoras son variables aleatorias continuas normalmente distribuidas y con la misma varianza.</p>
 <p>El enfoque de Fisher para LDA es encontrar una combinación lineal de predictores que maximice la matriz de covarianza entre grupos,  relativo a la matriz de covarianza dentro del grupo (intra-grupo). La solución a este problema de optimización es el vector propio correspondiente al valor propio más grande de  <span class="math notranslate nohighlight">\(W^{-1}B\)</span> . Este vector es un discriminante lineal (e.g. una variable). Resolver para la configuración para dos grupos la función discriminante <span class="math notranslate nohighlight">\(S^{-1}(X_1-X_2)\)</span> donde  <span class="math notranslate nohighlight">\(S^{-1}\)</span>  es la inversa de la matriz de covarianza de los datos y  <span class="math notranslate nohighlight">\(X_1\)</span> y <span class="math notranslate nohighlight">\(X_2\)</span> son las medias de cada predictor en los grupos de respuesta 1 y 2. En la práctica, una nueva muestra, <span class="math notranslate nohighlight">\(u\)</span>, se proyecta sobre la función discriminante como  <span class="math notranslate nohighlight">\(uS^{-1}(X_1-X_2)\)</span>, que devuelve una puntuación discriminante. Luego, una nueva muestra se clasifica en el grupo 1 si la muestra está más cerca de la media del grupo 1 que de la media del grupo 2 en la proyección.</p>
-<div class="figure align-default" id="lda">
+<figure class="align-default" id="lda">
 <a class="reference internal image-reference" href="https://1.bp.blogspot.com/-ODry-XJ159E/Vc9ZRXVvnwI/AAAAAAAABuc/FpSIJdTrqK0/s1600/Analisis-Discriminante-001.png"><img alt="lda" src="https://1.bp.blogspot.com/-ODry-XJ159E/Vc9ZRXVvnwI/AAAAAAAABuc/FpSIJdTrqK0/s1600/Analisis-Discriminante-001.png" style="width: 400px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 57 </span><span class="caption-text">Intrepretación geométrica de LDA. Tomado de <a class="reference external" href="https://plepso.blogspot.com/2015/08/analisis-discriminante-de-dos-grupos.html">Plepso</a></span><a class="headerlink" href="#lda" title="Permalink to this image">¶</a></p>
-</div>
-<div class="section" id="id6">
-<h4><em>Python</em><a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h4>
+<figcaption>
+<p><span class="caption-number">Fig. 58 </span><span class="caption-text">Intrepretación geométrica de LDA. Tomado de <a class="reference external" href="https://plepso.blogspot.com/2015/08/analisis-discriminante-de-dos-grupos.html">Plepso</a></span><a class="headerlink" href="#lda" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<section id="id6">
+<h4><em>Python</em><a class="headerlink" href="#id6" title="Permalink to this headline">#</a></h4>
 <p>El procedimiento para todos los métodos de <em>machine learning</em> con <em>sklearn</em> son muy similares. Se importa la librería, se instancia el modelo con los <a class="reference external" href="https://scikit-learn.org/stable/modules/generated/sklearn.discriminant_analysis.LinearDiscriminantAnalysis.html">hiperparámetros</a> deseados, en este caso vamos a proyectar los datos sobre un nuevo eje (función discriminante), se entrena el modelo, y se predice.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -3013,24 +3133,26 @@ geo_16.0     -22.2074    266.907     -0.083      0.934    -545.335     500.920
 <img alt="_images/09_estadistico_121_0.png" src="_images/09_estadistico_121_0.png" />
 </div>
 </div>
-</div>
-</div>
-<div class="section" id="support-vector-machine">
-<h3><em>Support vector machine</em><a class="headerlink" href="#support-vector-machine" title="Permalink to this headline">¶</a></h3>
+</section>
+</section>
+<section id="support-vector-machine">
+<h3><em>Support vector machine</em><a class="headerlink" href="#support-vector-machine" title="Permalink to this headline">#</a></h3>
 <p>SVM es un modelo que representa a los puntos de muestra en el espacio, separando las clases a 2 espacios lo más amplios posibles mediante un hiperplano de separación definido como el vector entre los 2 puntos, de las 2 clases, más cercanos al que se llama vector soporte. Cuando las nuevas muestras se ponen en correspondencia con dicho modelo, en función de los espacios a los que pertenezcan, pueden ser clasificadas a una o la otra clase.</p>
 <p>Los vectores de soporte son los puntos que definen el margen máximo de separación del hiperplano que separa las clases. Se llaman vectores, en lugar de puntos, porque estos «puntos» tienen tantos elementos como dimensiones tenga nuestro espacio de entrada. Es decir, estos puntos multi-dimensionales se representan con con vector de n dimensiones.</p>
-<div class="figure align-default" id="svm">
+<figure class="align-default" id="svm">
 <a class="reference internal image-reference" href="https://www.iartificial.net/wp-content/uploads/2019/04/Clasificacion-SVM-768x436.webp"><img alt="svm" src="https://www.iartificial.net/wp-content/uploads/2019/04/Clasificacion-SVM-768x436.webp" style="width: 400px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 58 </span><span class="caption-text">Intrepretación geométrica de SVM. Tomado de <a class="reference external" href="https://www.iartificial.net/maquinas-de-vectores-de-soporte-svm/">iartificial.net</a></span><a class="headerlink" href="#svm" title="Permalink to this image">¶</a></p>
-</div>
+<figcaption>
+<p><span class="caption-number">Fig. 59 </span><span class="caption-text">Intrepretación geométrica de SVM. Tomado de <a class="reference external" href="https://www.iartificial.net/maquinas-de-vectores-de-soporte-svm/">iartificial.net</a></span><a class="headerlink" href="#svm" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
 <p>El <em>Maximal Margin Classifier</em> tiene poca aplicación práctica, ya que rara vez se encuentran casos en los que las clases sean perfecta y linealmente separables. De hecho, incluso cumpliéndose estas condiciones ideales, en las que exista un hiperplano capaz de separar perfectamente las observaciones en dos clases, esta aproximación sigue presentando dos inconvenientes:</p>
 <ul class="simple">
 <li><p>Dado que el hiperplano tiene que separar perfectamente las observaciones, es muy sensible a variaciones en los datos. Incluir una nueva observación puede suponer cambios muy grandes en el hiperplano de separación (poca robustez).</p></li>
 <li><p>Que el maximal margin hyperplane se ajuste perfectamente a las observaciones de entrenamiento para separarlas todas correctamente suele conllevar problemas de overfitting.</p></li>
 </ul>
 <p>Por estas razones, es preferible crear un clasificador basado en un hiperplano que, aunque no separe perfectamente las dos clases, sea más robusto y tenga mayor capacidad predictiva al aplicarlo a nuevas observaciones (menos problemas de overfitting). Esto es exactamente lo que consiguen los clasificadores de vector soporte, también conocidos como soft margin classifiers o Support Vector Classifiers. Para lograrlo, en lugar de buscar el margen de clasificación más ancho posible que consigue que las observaciones estén en el lado correcto del margen; se permite que ciertas observaciones estén en el lado incorrecto del margen o incluso del hiperplano (Tomado de <a class="reference external" href="https://www.cienciadedatos.net/documentos/34_maquinas_de_vector_soporte_support_vector_machines">cienciadedatos.net</a>).</p>
-<div class="section" id="id7">
-<h4><em>Python</em><a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h4>
+<section id="id7">
+<h4><em>Python</em><a class="headerlink" href="#id7" title="Permalink to this headline">#</a></h4>
 <p>Similar a lso casos anteriores, se importa la librearía de SVC, y se instancia. En este caso se utlizará un kernel lineal y un valor de regularizacion de 1xE10. Existen otra serie de hiperparámetros para instanciar el modelo que se pueden consultar en la <a class="reference external" href="https://scikit-learn.org/stable/modules/generated/sklearn.svm.LinearSVC.html">guía del usuario</a>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -3088,18 +3210,20 @@ Name: inventario, dtype: int64
 </div>
 </div>
 <p>Como se puede observar, el modelo ya tiene capacidad para predecir los <em>si</em> (1).</p>
-</div>
-</div>
-<div class="section" id="random-forest">
-<h3><em>Random forest</em><a class="headerlink" href="#random-forest" title="Permalink to this headline">¶</a></h3>
+</section>
+</section>
+<section id="random-forest">
+<h3><em>Random forest</em><a class="headerlink" href="#random-forest" title="Permalink to this headline">#</a></h3>
 <p>Los árboles de decisión tienen la tendencia de sobre-ajustar (overfit). Esto quiere decir que tienden a aprender muy bien los datos de entrenamiento pero su generalización no es tan buena. Una forma de mejorar la generalización de los árboles de decisión es usar regularización. Para mejorar mucho más la capacidad de generalización de los árboles de decisión, deberemos combinar varios árboles.</p>
 <p>Un Random Forest es un conjunto (ensemble) de árboles de decisión combinados con bagging. Al usar bagging, lo que en realidad está pasando, es que distintos árboles ven distintas porciones de los datos. Ningún árbol ve todos los datos de entrenamiento. Esto hace que cada árbol se entrene con distintas muestras de datos para un mismo problema. De esta forma, al combinar sus resultados, unos errores se compensan con otros y tenemos una predicción que generaliza mejor (Tomado de <a class="reference external" href="https://www.iartificial.net/random-forest-bosque-aleatorio/">iartificial.net</a>).</p>
-<div class="figure align-default" id="rf">
+<figure class="align-default" id="rf">
 <a class="reference internal image-reference" href="https://www.tibco.com/sites/tibco/files/media_entity/2021-05/random-forest-diagram.svg"><img alt="rf" src="https://www.tibco.com/sites/tibco/files/media_entity/2021-05/random-forest-diagram.svg" width="400px" /></a>
-<p class="caption"><span class="caption-number">Fig. 59 </span><span class="caption-text">Intrepretación geométrica de <em>random forest</em>*</span><a class="headerlink" href="#rf" title="Permalink to this image">¶</a></p>
-</div>
-<div class="section" id="id8">
-<h4><em>Python</em><a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h4>
+<figcaption>
+<p><span class="caption-number">Fig. 60 </span><span class="caption-text">Intrepretación geométrica de <em>random forest</em>*</span><a class="headerlink" href="#rf" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<section id="id8">
+<h4><em>Python</em><a class="headerlink" href="#id8" title="Permalink to this headline">#</a></h4>
 <p>De forma similar se importa la librearía, y se instancia con los <a class="reference external" href="https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.RandomForestRegressor.html">hiperparámetros</a> deseados. Igualmente se trabajará solo con el 1% de las celdas del <em>si</em> (1)</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -3150,18 +3274,20 @@ Name: inventario, dtype: int64
 </div>
 </div>
 </div>
-</div>
-</div>
-<div class="section" id="redes-neuronales">
-<h3>Redes neuronales<a class="headerlink" href="#redes-neuronales" title="Permalink to this headline">¶</a></h3>
+</section>
+</section>
+<section id="redes-neuronales">
+<h3>Redes neuronales<a class="headerlink" href="#redes-neuronales" title="Permalink to this headline">#</a></h3>
 <p>Una red neuronal artificial es un grupo interconectado de nodos similar a la vasta red de neuronas en un cerebro biológico. Cada nodo circular representa una neurona artificial y cada flecha representa una conexión desde la salida de una neurona a la entrada de otra.</p>
-<div class="figure align-default" id="rna">
+<figure class="align-default" id="rna">
 <a class="reference internal image-reference" href="https://upload.wikimedia.org/wikipedia/commons/thumb/1/11/Colored_neural_network_es.svg/300px-Colored_neural_network_es.svg.png"><img alt="rna" src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/11/Colored_neural_network_es.svg/300px-Colored_neural_network_es.svg.png" style="width: 400px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 60 </span><span class="caption-text">Intrepretación geométrica de redes neuronales. Tomado de <a class="reference external" href="https://es.wikipedia.org/wiki/Red_neuronal_artificial">Wikipedia</a></span><a class="headerlink" href="#rna" title="Permalink to this image">¶</a></p>
-</div>
+<figcaption>
+<p><span class="caption-number">Fig. 61 </span><span class="caption-text">Intrepretación geométrica de redes neuronales. Tomado de <a class="reference external" href="https://es.wikipedia.org/wiki/Red_neuronal_artificial">Wikipedia</a></span><a class="headerlink" href="#rna" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
 <p>Cada neurona está conectada con otras a través de unos enlaces. En estos enlaces el valor de salida de la neurona anterior es multiplicado por un valor de peso. Estos pesos en los enlaces pueden incrementar o inhibir el estado de activación de las neuronas adyacentes. Del mismo modo, a la salida de la neurona, puede existir una función limitadora o umbral, que modifica el valor resultado o impone un límite que no se debe sobrepasar antes de propagarse a otra neurona. Esta función se conoce como función de activación. Estos sistemas aprenden y se forman a sí mismos, en lugar de ser programados de forma explícita. Para realizar este aprendizaje automático, normalmente, se intenta minimizar una función de pérdida que evalúa la red en su total. Los valores de los pesos de las neuronas se van actualizando buscando reducir el valor de la función de pérdida. Este proceso se realiza mediante la propagación hacia atrás.</p>
-<div class="section" id="id9">
-<h4><em>Python</em><a class="headerlink" href="#id9" title="Permalink to this headline">¶</a></h4>
+<section id="id9">
+<h4><em>Python</em><a class="headerlink" href="#id9" title="Permalink to this headline">#</a></h4>
 <p>La librearía <em>sklearn</em> permite implementar el <em>Multi-layer Perceptron classifier</em> (MLP). Para redes neuronales mas complejas se deben utilizar otras librearías como TensorFlow. Sin embargo MLP permite un importante número de <a class="reference external" href="https://scikit-learn.org/stable/modules/generated/sklearn.neural_network.MLPClassifier.html">hiperparámetros</a>, tales como el número de capas escondidas y el número de neuronas en cada una, asi como el número de iteracciones que deseamos realice la RNA.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -3222,13 +3348,13 @@ Name: inventario, dtype: int64
 <img alt="_images/09_estadistico_151_0.png" src="_images/09_estadistico_151_0.png" />
 </div>
 </div>
-</div>
-</div>
-</div>
-<div class="section" id="referencias">
-<h2>Referencias<a class="headerlink" href="#referencias" title="Permalink to this headline">¶</a></h2>
-<span class="target" id="id10"></span></div>
-</div>
+</section>
+</section>
+</section>
+<section id="referencias">
+<h2>Referencias<a class="headerlink" href="#referencias" title="Permalink to this headline">#</a></h2>
+<span class="target" id="id10"></span></section>
+</section>
 
     <script type="text/x-thebe-config">
     {
@@ -3252,9 +3378,11 @@ Name: inventario, dtype: int64
 
               </div>
               
-            
-                <!-- Previous / next buttons -->
-<div class='prev-next-area'> 
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
     <a class='left-prev' id="prev-link" href="08_heuristico.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
@@ -3270,24 +3398,28 @@ Name: inventario, dtype: int64
     <i class="fas fa-angle-right"></i>
     </a>
 </div>
-            
+            </footer>
         </div>
     </div>
-    <footer class="footer">
-  <p>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Edier V. Aristizábal G.<br/>
+  
+      &copy; Copyright 2022.<br/>
+</p>
+        </footer>
+    </div>
     
-      By Edier V. Aristizábal G.<br/>
-    
-        &copy; Copyright 2022.<br/>
-  </p>
-</footer>
-</main>
+</div>
 
 
       </div>
     </div>
   
-  <script src="_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
 
   </body>
 </html>

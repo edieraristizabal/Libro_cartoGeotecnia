@@ -4,11 +4,13 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>Variables condicionantes &#8212; Cartografía Geotécnica</title>
     
-  <link href="_static/css/theme.css" rel="stylesheet">
-  <link href="_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
 
     
   <link rel="stylesheet"
@@ -18,39 +20,38 @@
   <link rel="preload" as="font" type="font/woff2" crossorigin
     href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
-    
-      
-
-    
     <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
-    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
     
-  <link rel="preload" as="script" href="_static/js/index.be7d3bbb2ef33a8344ce.js">
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
 
     <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
     <script src="_static/underscore.js"></script>
     <script src="_static/doctools.js"></script>
-    <script src="_static/togglebutton.js"></script>
     <script src="_static/clipboard.min.js"></script>
     <script src="_static/copybutton.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
-    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
-    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
-    <script>
-        const thebe_selector = ".thebe"
-        const thebe_selector_input = "pre"
-        const thebe_selector_output = ".output"
-    </script>
+    <script src="_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
     <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Factores detonantes" href="07_detonante.html" />
@@ -62,7 +63,21 @@
     <!-- Google Analytics -->
     
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
     
     <div class="container-fluid" id="banner"></div>
 
@@ -71,9 +86,10 @@
     <div class="container-xl">
       <div class="row">
           
-<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
-    
-        <div class="navbar-brand-box">
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
     <a class="navbar-brand text-wrap" href="index.html">
       
         <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
@@ -91,14 +107,15 @@
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item active">
-        <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="intro.html">
-   .
-  </a>
- </li>
-</ul>
-<ul class="current nav bd-sidenav">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    .
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="00_medialuna.html">
    Media Luna (1954)
@@ -187,107 +204,209 @@
 </ul>
 
     </div>
-</nav> <!-- To handle the deprecated key -->
-
-<div class="navbar_extra_footer">
-  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
-</div>
-
-</div>
-
-
-          
-
-
-          
-<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
-    
-    <div class="topbar container-xl fixed-top">
-    <div class="topbar-contents row">
-        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
-        <div class="col pl-md-4 topbar-main">
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
             
-            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
-                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
-                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
-                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
-                <i class="fas fa-bars"></i>
-                <i class="fas fa-arrow-left"></i>
-                <i class="fas fa-arrow-up"></i>
-            </button>
-            
-            
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
-            class="fas fa-download"></i></button>
-
-    <div class="dropdown-buttons">
-        <!-- ipynb file if we had a myst markdown file -->
-        
-        <!-- Download raw file -->
-        <a class="dropdown-buttons" href="_sources/06_variables.ipynb"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
-                data-placement="left">.ipynb</button></a>
-        <!-- Download PDF via print -->
-        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
-                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
-    </div>
-</div>
-
-            <!-- Source interaction buttons -->
-
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
-        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
-    <div class="dropdown-buttons sourcebuttons">
-        <a class="repository-button"
-            href="https://github.com/edieraristizabal/Libro_cartoGeotecnia"><button type="button" class="btn btn-secondary topbarbtn"
-                data-toggle="tooltip" data-placement="left" title="Source repository"><i
-                    class="fab fa-github"></i>repository</button></a>
-        <a class="issues-button"
-            href="https://github.com/edieraristizabal/Libro_cartoGeotecnia/issues/new?title=Issue%20on%20page%20%2F06_variables.html&body=Your%20issue%20content%20here."><button
-                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
-                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
-        
-    </div>
-</div>
-
-            <!-- Full screen (wrap in <a> to have style consistency -->
-
-<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
-        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
-        title="Fullscreen mode"><i
-            class="fas fa-expand"></i></button></a>
-
-            <!-- Launch buttons -->
-
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
-        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
-    <div class="dropdown-buttons">
-        
-        <a class="binder-button" href="https://mybinder.org/v2/gh/edieraristizabal/Libro_cartoGeotecnia/master?urlpath=tree/docs/06_variables.ipynb"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
-                data-placement="left"><img class="binder-button-logo"
-                    src="_static/images/logo_binder.svg"
-                    alt="Interact on binder">Binder</button></a>
-        
-        
-        
-        
-    </div>
-</div>
-
-        </div>
-
-        <!-- Table of contents -->
-        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
-            
-            <div class="tocsection onthispage pt-5 pb-3">
-                <i class="fas fa-list"></i> Contents
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
             </div>
-            <nav id="bd-toc-nav" aria-label="Page">
-                <ul class="visible nav section-nav flex-column">
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<div class="menu-dropdown menu-dropdown-launch-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Launch interactive content">
+      <i class="fas fa-rocket"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://mybinder.org/v2/gh/edieraristizabal/Libro_cartoGeotecnia/master?urlpath=tree/docs/06_variables.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Launch on Binder"
+>
+  
+
+<span class="headerbtn__icon-container">
+  
+    <img src="_static/images/logo_binder.svg">
+  </span>
+<span class="headerbtn__text-container">Binder</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-repository-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Source repositories">
+      <i class="fab fa-github"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://github.com/edieraristizabal/Libro_cartoGeotecnia"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="headerbtn__text-container">repository</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://github.com/edieraristizabal/Libro_cartoGeotecnia/issues/new?title=Issue%20on%20page%20%2F06_variables.html&body=Your%20issue%20content%20here."
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Open an issue"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="headerbtn__text-container">open issue</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="_sources/06_variables.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.ipynb</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#seleccion-de-variables">
    Selección de variables
@@ -342,12 +461,11 @@
  </li>
 </ul>
 
-            </nav>
-        </div>
-    </div>
+    </nav>
 </div>
-    <div id="main-content" class="row">
-        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
                 <h1>Variables condicionantes</h1>
@@ -418,77 +536,98 @@
                     </div>
                 </div>
             </div>
-            
+            <main id="main-content" role="main">
+                
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="variables-condicionantes">
-<h1>Variables condicionantes<a class="headerlink" href="#variables-condicionantes" title="Permalink to this headline">¶</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="variables-condicionantes">
+<h1>Variables condicionantes<a class="headerlink" href="#variables-condicionantes" title="Permalink to this headline">#</a></h1>
 <p>Como se mencionó enteriormente la elaboración de un mapa de susceptibilidad y/o amenaza por movimientos en masa se refiere a la construcción de un modelo predictivo de la siguiente forma:</p>
 <p><span class="math notranslate nohighlight">\(y = f(X) ----&gt; MenM[0,1] = f(pendiente, geologia, coberturas, etc, etc,)\)</span></p>
 <p>Donde <span class="math notranslate nohighlight">\(y\)</span> es la variable dependiente, es decir la ocurrencia o no de movimientos en masa; y <span class="math notranslate nohighlight">\(X\)</span> correponde a las variables independientes, o tambien llamadas condicionantes, preparatorias, explicativas, cuasi-estáticas, predictoras, entre otros nombres asignados. y <span class="math notranslate nohighlight">\(f\)</span> representa la relación, función o el mecanismo que explica la ocurrencia de movimientos en masa.</p>
-<div class="figure align-default" id="variables">
+<figure class="align-default" id="variables">
 <a class="reference internal image-reference" href="https://www.cdema.org/virtuallibrary/images/description/23%20table%201.jpg"><img alt="variables" src="https://www.cdema.org/virtuallibrary/images/description/23%20table%201.jpg" style="width: 800px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 22 </span><span class="caption-text">Variables para la evaluación de la susceptibilidad por movimientos en masa. Tomado de CDEMA &amp; CRIS.</span><a class="headerlink" href="#variables" title="Permalink to this image">¶</a></p>
-</div>
+<figcaption>
+<p><span class="caption-number">Fig. 23 </span><span class="caption-text">Variables para la evaluación de la susceptibilidad por movimientos en masa. Tomado de CDEMA &amp; CRIS.</span><a class="headerlink" href="#variables" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
 <p>Las propiedades del suelo y la intensidad de la lluvia (I) son un factor primario que controla la inestabilidad de los taludes; la magnitud y rata de reducción en el factor de seguridad (FS) es directamente proporcional a la magnitud de la intensidad de lluvia, a mayor intensidad más rápidamente decrece el factor de seguridad (Rahardjo et al., 2007). Adicionalmente pequeñas variaciones en la conductividad hidráulica (k) controlan la localización de la ocurrencia de movimientos en masa, lo que explica de cierta forma el carácter aleatorio en la distribución de los movimientos sobre una misma ladera aparentemente homogénea (Reid, 1997). Cho &amp; Lee (2001) y Cho &amp; Lee (2002) estudian los mecanismos de falla en taludes conformados por suelos residuales no saturados donde encuentran que el campo de los esfuerzos es modificado por la distribución de la presión de poros (Ψ), la cual es controlada por las variaciones espaciales de la conductividad hidráulica durante la infiltración de la lluvia. Y aunque el talud es homogéneo texturalmente, la conductividad hidráulica tiene una distribución no homogénea ya que es una función del contenido de agua o de la succión.</p>
-<div class="figure align-default" id="id1">
+<figure class="align-default" id="id1">
 <a class="reference internal image-reference" href="https://i.pinimg.com/564x/96/21/fe/9621fe215adc31032b8e493a3382da1d.jpg"><img alt="variables" src="https://i.pinimg.com/564x/96/21/fe/9621fe215adc31032b8e493a3382da1d.jpg" style="width: 600px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 23 </span><span class="caption-text">Representación esquemática tridimensional del perfil de meteorización sobre una ladera de morfología (ML) convergente bajo lluvia (P) y las variables hidrológicas - geotécnicas que influyen en la  ocurrencia de movimientos en masa: intensidad de la precipitación (I), contenido de agua volumétrico (ө), presión de poros positiva (Ψ+) y negativa o succión (Ψ-), permeabilidad (k), peso del suelo (W), vegetación (V), infiltración, pendiente de la ladera (β), resistencia al cortante (ז), profundidad (Z), espesor suelo saturado (h).</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
-</div>
+<figcaption>
+<p><span class="caption-number">Fig. 24 </span><span class="caption-text">Representación esquemática tridimensional del perfil de meteorización sobre una ladera de morfología (ML) convergente bajo lluvia (P) y las variables hidrológicas - geotécnicas que influyen en la  ocurrencia de movimientos en masa: intensidad de la precipitación (I), contenido de agua volumétrico (ө), presión de poros positiva (Ψ+) y negativa o succión (Ψ-), permeabilidad (k), peso del suelo (W), vegetación (V), infiltración, pendiente de la ladera (β), resistencia al cortante (ז), profundidad (Z), espesor suelo saturado (h).</span><a class="headerlink" href="#id1" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
 <p>De acuerdo con la mecánica descrita anteriormente la complejidad en encontrar las probabilidades de alcanzar el aumento de presión de poros crítica y por lo tanto pronosticar la ocurrencia de movimientos en masa detonados por lluvias es función de una gran cantidad de variables involucradas e íntimamente relacionadas. El aumento de la presión de poros en el suelo es función de la porosidad, la permeabilidad, la conductividad hidráulica, y el contenido de agua en el suelo. Por otra parte la pendiente y morfología del terreno juegan un papel fundamental que controlan no solo la resistencia del suelo, sino además el flujo del agua en el suelo.</p>
 <p>La <strong>permeabilidad</strong> controla el balance que debe existir entre la generación de la presión de poros y su disipación, lo cual es fundamental para la inicialización del movimiento (Wang &amp; Shibata, 2007). El efecto de la lluvia antecedente es más crítico para suelos con bajos valores de permeabilidades, debido a que el tiempo requerido para que la lluvia infiltre es muy largo y la recuperación del factor de seguridad después de una lluvia es muy lento (Hengxing et al., 2003; Rahardjo et al., 2007; Setyo &amp; Liao, 2008). Esta situación también explica que los mecanismos de falla para laderas con diferentes permeabilidades no son similares. Bajo lluvias intensas, suelos de alta permeabilidad usualmente fallan por aumento de presiones de poro positiva como movimiento tipo flujos, mientras suelos de baja permeabilidad fallan por reducción de la succión como movimientos tipo deslizamientos.</p>
 <p>Adicionalmente pequeñas variaciones en la <strong>conductividad hidráulica</strong> controlan la localización de la ocurrencia de movimientos en masa ya que es una función del contenido de agua o de la succión, lo que explica de cierta forma el carácter aleatorio en la distribución de los movimientos sobre una misma ladera aparentemente homogénea (Reid, 1997; Cho &amp; Lee, 2001; Cho &amp; Lee 2002). La capilaridad proporciona una presión de confinamiento isotrópico que disminuye la conductividad hidráulica cuando el suelo no está saturado, pero durante una tormenta, el suelo se acerca a condiciones de saturación, por lo que la conductividad es más alta (Anderson &amp; Sitar, 1995). Los suelos residuales son susceptibles a la formación de conductos debido a las articulaciones relictas y efectos biológicos; y desarrollan un sistema de porosidad secundaria, el cual aumenta sustancialmente la permeabilidad y conductividad hidráulica de los suelos y actúan como trayectorias de flujo preferenciales para los flujos del subsuelo (Fernandes et al., 2004).</p>
-<div class="figure align-default" id="permeabilidad">
+<figure class="align-default" id="permeabilidad">
 <a class="reference internal image-reference" href="https://ars.els-cdn.com/content/image/1-s2.0-S0038071721002728-gr1.jpg"><img alt="permeabilidad" src="https://ars.els-cdn.com/content/image/1-s2.0-S0038071721002728-gr1.jpg" style="width: 600px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 24 </span><span class="caption-text">Contenido de agua en el suelo por diferentes tipos de flujos preferenciales. Tomado de <span id="id2">Franklin <em>et al.</em> [<a class="reference internal" href="#id70">2021</a>]</span>.</span><a class="headerlink" href="#permeabilidad" title="Permalink to this image">¶</a></p>
-</div>
+<figcaption>
+<p><span class="caption-number">Fig. 25 </span><span class="caption-text">Contenido de agua en el suelo por diferentes tipos de flujos preferenciales. Tomado de <span id="id2">Franklin <em>et al.</em> [<a class="reference internal" href="#id70" title="Shane M. Franklin, Alexandra N. Kravchenko, Rodrigo Vargas, Bruce Vasilas, Jeffry J. Fuhrmann, and Yan Jin. The unexplored role of preferential flow in soil carbon dynamics. Soil Biology and Biochemistry, 161:108398, 2021. URL: https://www.sciencedirect.com/science/article/pii/S0038071721002728, doi:https://doi.org/10.1016/j.soilbio.2021.108398.">2021</a>]</span>.</span><a class="headerlink" href="#permeabilidad" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
 <p>Otro elemento importante es la <strong>porosidad efectiva</strong>. La capacidad de almacenamiento del agua en el suelo depende de los espacios abiertos o poros que se encuentran en el suelo y está determinada principalmente por la textura del suelo. Suelos con alta porosidad efectiva presentan una mayor capacidad para mantener y almacenar agua, y por lo tanto retrasan la infiltración en el sub suelo. Para tormentas no muy intensas, no se presentan movimientos superficiales cuando existen altos valores de porosidad efectiva. Sin embargo estos altos valores tienden a aumentar el contenido de agua de la masa desplazada, lo que genera finalmente movimientos más rápidos y que recorren mayores distancias, además de depositarse sobre áreas más extensas (Mukhlisin et al., 2006).</p>
 <p>Aunque es conocida la <strong>lluvia antecedente</strong> como un factor importante que predispone las condiciones de inestabilidad de una ladera, su influencia es difícil de cuantificar, ya que depende de diferentes factores entre ellos la heterogeneidad de los suelos (Guzzetti et al., 2005; Rahardjo et al, 2007). Los movimientos superficiales son usualmente detonados por lluvias cortas e intensas, en tanto que los movimientos profundos están más relacionados con la distribución y variación de la lluvia en periodos antecedentes largos (Aleotti, 2004). Diferentes investigadores coinciden en que la importancia de la lluvia antecedente es igual a la intensidad de la lluvia y depende de la permeabilidad del suelo (Guzzettti et al., 2005; Rahardjo et al, 2007). En general existe consenso en que para suelos de baja permeabilidad y conductividad hidráulica la lluvia antecedente juega un rol muy importante, ya que luego de la ocurrencia de lluvias conserva las presiones de poros positivas por tiempos mayores (Hengxing et al., 2003; Rahardjo et al., 2008).</p>
-<div class="figure align-default" id="lluvia-antecedente">
+<figure class="align-default" id="lluvia-antecedente">
 <a class="reference internal image-reference" href="https://media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10346-020-01505-4/MediaObjects/10346_2020_1505_Fig4_HTML.png"><img alt="lluvia antecedente" src="https://media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10346-020-01505-4/MediaObjects/10346_2020_1505_Fig4_HTML.png" style="width: 600px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 25 </span><span class="caption-text">Lluvia antecedente. Tomado de <span id="id3"></span>.</span><a class="headerlink" href="#lluvia-antecedente" title="Permalink to this image">¶</a></p>
-</div>
+<figcaption>
+<p><span class="caption-number">Fig. 26 </span><span class="caption-text">Lluvia antecedente. Tomado de <span id="id3"></span>.</span><a class="headerlink" href="#lluvia-antecedente" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
 <p>La <strong>succión</strong> es uno de las variables más importantes de esfuerzos en la teoría de suelos no saturados (Fredlund &amp; Morgerstern, 1977; Fredlund &amp; Rahardjo, 1993; Huat et al. 2006). Para suelos no saturados la permeabilidad es función de la succión debido a la distribución heterogénea de los poros y el agua dentro de la masa de suelo. La cantidad de agua almacenada depende también de la succión de la matriz y la retención de humedad característica de la estructura del suelo (Ng &amp; Shi, 1998). Con la reducción del contenido volumétrico de agua, la succión y consecuentemente la conductividad hidráulica decrecen, debido al número menor de poros conectados dentro de la estructura del suelo que decrece el número de canales disponibles para el flujo de agua (Collins &amp; Znidarcic, 2004). Suelos de grano fino no tienden a desarrollar presiones de poros positivas y la falla ocurre generalmente por pérdida de succión.</p>
-<div class="figure align-default" id="succion">
+<figure class="align-default" id="succion">
 <a class="reference internal image-reference" href="https://www.researchgate.net/profile/Rukshan-Azoor/publication/334659960/figure/fig5/AS:793496080379906&#64;1566195616832/Schematic-of-the-soil-water-retention-curve-SWRC-illustrating-the_W640.jpg"><img alt="succion" src="https://www.researchgate.net/profile/Rukshan-Azoor/publication/334659960/figure/fig5/AS:793496080379906&#64;1566195616832/Schematic-of-the-soil-water-retention-curve-SWRC-illustrating-the_W640.jpg" style="width: 600px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 26 </span><span class="caption-text">Curva caracteristica esquemática de retención de agua en el suelo. Tomado de <a class="reference external" href="https://www.researchgate.net/publication/334659960_On_the_optimum_soil_moisture_for_underground_corrosion_in_different_soil_types">Azoor et al., 2019</a>.</span><a class="headerlink" href="#succion" title="Permalink to this image">¶</a></p>
-</div>
+<figcaption>
+<p><span class="caption-number">Fig. 27 </span><span class="caption-text">Curva caracteristica esquemática de retención de agua en el suelo. Tomado de <a class="reference external" href="https://www.researchgate.net/publication/334659960_On_the_optimum_soil_moisture_for_underground_corrosion_in_different_soil_types">Azoor et al., 2019</a>.</span><a class="headerlink" href="#succion" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
 <p>Pocos estudios se han realizado sobre el efecto de la <strong>vegetación</strong> y el desarrollo de sus raíces sobre la ocurrencia de los movimientos en masa. Entre los estudios más reportados se encuentran O´Loughlin (1986), Gray (1995), Wu &amp; Sidle (1995), Ziemer (1981), Normaniza &amp; Barakban (2006), Tosi (2007)  y Normaniza et al. (2008). En general la mayoría de autores han evaluado el efecto mecánico que generan las raíces de las plantas en la estabilidad de las laderas, atribuido principalmente al incremento en la resistencia al cortante de los suelos. Este incremento se le atribuye al anclaje de las raíces formando una red dentro de los horizontes de suelos más superficiales. Sin embargo es conocido que la vegetación influencia la estabilidad de las laderas en dos formas esencialmente: (i) removiendo la humedad del suelo por evapotranspiración; y (ii) generando cohesión por las raíces en el manto del suelo (Sidle &amp; Ochiai, 2006). El primero de ellos no se considera particularmente importante en regiones para movimientos en masa superficiales que se generan en periodos lluviosos, excepto posiblemente en los trópicos y subtrópicos donde la evapotranspiración es alta durante todo el año. Las raíces, por su parte, son reconocidas como un factor más importante en la estabilidad de las vertientes, las cuales pueden responder a la fuerza de corte en tres diferentes formas: estirándose, deslizándose o rompiéndose (Tosi, 2007). Trabajos de laboratorio recientes han arrojado resultados interesantes que demuestran que el efecto de las raíces afecta significativamente la cohesión pero no el ángulo de fricción (Normaniza et al., 2008) y que el pico adicional de la resistencia al cortante que genera las raíces se incrementa notablemente con el incremento del contenido de humedad (Chia-Cheng &amp; Chih-Feng, 2008).</p>
-<div class="figure align-default" id="vegetacion">
+<figure class="align-default" id="vegetacion">
 <a class="reference internal image-reference" href="https://www.mdpi.com/geosciences/geosciences-11-00212/article_deploy/html/images/geosciences-11-00212-g001-550.jpg"><img alt="vegetación" src="https://www.mdpi.com/geosciences/geosciences-11-00212/article_deploy/html/images/geosciences-11-00212-g001-550.jpg" style="width: 500px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 27 </span><span class="caption-text">Papel de la vegetación en la susceptibilidad por movimientos en masa. <span id="id4">Masi <em>et al.</em> [<a class="reference internal" href="#id67">2021</a>]</span>.</span><a class="headerlink" href="#vegetacion" title="Permalink to this image">¶</a></p>
-</div>
+<figcaption>
+<p><span class="caption-number">Fig. 28 </span><span class="caption-text">Papel de la vegetación en la susceptibilidad por movimientos en masa. <span id="id4">Masi <em>et al.</em> [<a class="reference internal" href="#id67" title="Elena Benedetta Masi, Samuele Segoni, and Veronica Tofani. Root reinforcement in slope stability models: a review. Geosciences, 2021. URL: https://www.mdpi.com/2076-3263/11/5/212, doi:10.3390/geosciences11050212.">2021</a>]</span>.</span><a class="headerlink" href="#vegetacion" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
 <p>Con respecto a la <strong>morfometría de las laderas</strong>, diferentes autores han estudiado el comportamiento hidrológico de un punto dado en una cuenca considerando la pendiente y morfología. A partir de los trabajos de Montgomery &amp; Dietrich (1994) y Montgomery et al. (1998) se ha demostrado que los movimientos en masa superficiales están fuertemente controlados por la topografía superficial, la cual afecta la convergencia del flujo sub-superficial, incrementando la saturación de suelo (Guimaraes et al., 2003; Pellenq et al., 2003; Rosso et al., 2006; Fernandes et al., 2004). Dichos estudios se fundamentan en que bajo un estado hidráulico estático, los flujos de agua subsuperficial están directamente relacionados con el denominado índice topográfico, el cual refleja la tendencia del agua a acumularse en cualquier punto en la cuenca (en términos de Ac) y la tendencia de las fuerzas gravitacionales de mover el agua hacia abajo (expresado en términos de tanβ como un gradiente hidráulico aproximado) (Quinn et al., 1991). Sin embargo no solo la pendiente, sino la forma de ésta (concavidad y convexidad) son factores que controlan la ocurrencia de los movimientos superficiales (Talebi et al., 2008; Borga et al., 2002; Iida, 1999). En la literatura se consideran tres vertientes hidro-geomorfológicas básicas útiles para evaluar la estabilidad (1) divergentes; (2) planas; y (3) convergentes. En las laderas divergentes o de forma convexa el flujo sub-superficial es disperso, lo que permite que un nivel freático colgado sea poco común y las presiones de poros sean más bajas que en laderas con otras geoformas (Berne et al., 2005; Sidle &amp; Ochiai, 2006). Específicamente la curvatura del perfil (cóncavo, recto, y convexo) controla el cambio de la velocidad del flujo de masa de agua hacia abajo de la ladera, en tanto el plano de curvatura (convergente, paralelo y divergente) define la convergencia topográfica, la cual es un control importante de la concentración del flujo sub-superficial. Los perfiles convexos son generalmente más estables que perfiles cóncavos o planos, en cuanto a los planos de curvatura la estabilidad incrementa cuando el plano cambia de convergente a divergente, especialmente para perfiles convexos (Talebi et al., 2008). En general los autores acuerdan que los controles topográficos del flujo sub-superficial afectan los patrones de humedad en el largo plazo dentro de una cuenca y determinan la cabeza de presión anterior al inicio de una tormenta.</p>
-<div class="figure align-default" id="morfometria">
+<figure class="align-default" id="morfometria">
 <a class="reference internal image-reference" href="https://www.researchgate.net/profile/Scott-Drzyzga/post/In-Profile-curvature-a-concave-surface-accelerates-or-decelerates-the-flow/attachment/59d62e3579197b807798c6f0/AS%3A353332884459540%401461252532965/image/surfaceCurvature.gif"><img alt="morfometria" src="https://www.researchgate.net/profile/Scott-Drzyzga/post/In-Profile-curvature-a-concave-surface-accelerates-or-decelerates-the-flow/attachment/59d62e3579197b807798c6f0/AS%3A353332884459540%401461252532965/image/surfaceCurvature.gif" style="width: 400px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 28 </span><span class="caption-text">Curvatura de perfil y curvatura plana. Figura elaborada por Scott A. Drzyzga.</span><a class="headerlink" href="#morfometria" title="Permalink to this image">¶</a></p>
-</div>
+<figcaption>
+<p><span class="caption-number">Fig. 29 </span><span class="caption-text">Curvatura de perfil y curvatura plana. Figura elaborada por Scott A. Drzyzga.</span><a class="headerlink" href="#morfometria" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
 <p>Finalmente, el <strong>espesor del suelo</strong> en una ladera es un parámetro crítico en la realización de un análisis de la inestabilidad de pendiente (Segoni et al, 2012; Ho et al, 2011). Suelos relativamente delgados son más propensos a flujos terrestres saturados en comparación con los suelos más gruesos que tienen un mayor potencial de almacenamiento de agua. La profundidad del suelo se refiere obviamente a la profundidad hasta roca, sin embargo una superficie de falla puede generarse en cualquier contraste de conductividad hidráulica, por lo que la superficie de falla no se refiere estrictamente al espesor del suelo. A medida que la profundidad del suelo incrementa, mayores intervalos de lluvia antecedente deberán ser considerados. Cuando se trata con movimientos de masa con espesores de suelo superficiales puede ser suficiente considerar la lluvia de las horas previas, pero para movimientos de masa con espesores de suelo profundo horizontes de tiempo de varios meses deben ser considerados (Capparelli et al., 2009).</p>
-<div class="figure align-default" id="hillslope">
+<figure class="align-default" id="hillslope">
 <a class="reference internal image-reference" href="https://earthsurface.readthedocs.io/en/latest/_images/hill1.png"><img alt="hillslope" src="https://earthsurface.readthedocs.io/en/latest/_images/hill1.png" style="width: 700px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 29 </span><span class="caption-text">Laderas en roca y laderas en suelo. Tomado de <a class="reference external" href="https://earthsurface.readthedocs.io/en/latest/_images/hill1.png">Lecture notes on geomorphology and stratigraphy</a>.</span><a class="headerlink" href="#hillslope" title="Permalink to this image">¶</a></p>
-</div>
-<div class="section" id="seleccion-de-variables">
-<h2>Selección de variables<a class="headerlink" href="#seleccion-de-variables" title="Permalink to this headline">¶</a></h2>
+<figcaption>
+<p><span class="caption-number">Fig. 30 </span><span class="caption-text">Laderas en roca y laderas en suelo. Tomado de <a class="reference external" href="https://earthsurface.readthedocs.io/en/latest/_images/hill1.png">Lecture notes on geomorphology and stratigraphy</a>.</span><a class="headerlink" href="#hillslope" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<section id="seleccion-de-variables">
+<h2>Selección de variables<a class="headerlink" href="#seleccion-de-variables" title="Permalink to this headline">#</a></h2>
 <p>Existe un gran abanico de variables predictoras utilizadas en la evaluación de la susceptibilidad y/o amenaza por movimientos en masa. Estas se definen como características o propiedades que se supone son parte de la causa de los movimientos en masa.  Por lo tanto tienden a estar asociadas con el terreno, tales como los materiales que la componen o la morfometría como la pendiente. Pero tambien es común incluir variables de las coberturas o proximidad a elementos como drenajes, vias entre otros.</p>
-<div class="figure align-default" id="variables-independientes">
+<figure class="align-default" id="variables-independientes">
 <a class="reference internal image-reference" href="https://ars.els-cdn.com/content/image/1-s2.0-S0012825217305652-gr6.jpg"><img alt="variables independientes" src="https://ars.els-cdn.com/content/image/1-s2.0-S0012825217305652-gr6.jpg" style="width: 700px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 30 </span><span class="caption-text">Variables más utilizadas de la susceptibilidad por movimientos en masa. Reichenbach et al., (2015).</span><a class="headerlink" href="#variables-independientes" title="Permalink to this image">¶</a></p>
-</div>
+<figcaption>
+<p><span class="caption-number">Fig. 31 </span><span class="caption-text">Variables más utilizadas de la susceptibilidad por movimientos en masa. Reichenbach et al., (2015).</span><a class="headerlink" href="#variables-independientes" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
 <p>Existen diferentes categorías de datos con niveles o escalas de medida que varían. En cuanto a la categoría de las variables existen variables cualitativas, tales como geología, o cuantitativas. Las variables cuantitativas se dividen entre variables discretas y continuas. Las variables continuas se caracterizan por que no son contables y presentan valores infinitos de precisión, se pueden dividir en variables de intervalo, que son aquellas que no presentan un cero natural o con sentido físico, tal como la temperatura en grados Celsius; y las variables tipo radio, las cuales tienen un cero con sentido fisico, como la temperatura en grados Kelvin, la cohesión, la pendiente. Las variables discretas, que pueden ser cuantitativas y cualitativas, son contables, finitas, y se dividen en nominales, las cuales no tienen un orden, tal como el uso del suelo; y ordinales, las cuales tienen un orden, tal como acumulación del flujo. Es importante señalar que las variables continuas pueden ser reclasificadas a variables discretas, un ejemplo es la pendiente expresada como variable continua de 0° a 90°, o como variable discreta reclasificada en rangos de 0° - 10°, 11 - 20°, etc, etc.</p>
-<div class="figure align-default" id="categorias-de-datos">
+<figure class="align-default" id="categorias-de-datos">
 <a class="reference internal image-reference" href="https://i.stack.imgur.com/J8Ged.jpg"><img alt="categorias de datos" src="https://i.stack.imgur.com/J8Ged.jpg" style="width: 800px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 31 </span><span class="caption-text">Categorías de datos y niveles o escalas de medida.</span><a class="headerlink" href="#categorias-de-datos" title="Permalink to this image">¶</a></p>
-</div>
+<figcaption>
+<p><span class="caption-number">Fig. 32 </span><span class="caption-text">Categorías de datos y niveles o escalas de medida.</span><a class="headerlink" href="#categorias-de-datos" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
 <p>Cada región presenta un conjunto de variables propias que responden a la ocurrencia de los movimientos en masa. En este sentido, en el presente estudio se utilizan en una primera fase un rango amplio de variables utilizados a nivel mundial o recomendados en estudios locales.</p>
-</div>
-<div class="section" id="analisis-exploratorio-de-variables">
-<h2>Análisis exploratorio de variables<a class="headerlink" href="#analisis-exploratorio-de-variables" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="analisis-exploratorio-de-variables">
+<h2>Análisis exploratorio de variables<a class="headerlink" href="#analisis-exploratorio-de-variables" title="Permalink to this headline">#</a></h2>
 <p>El análisis exploratorio de variables se refiere a la selección de las mejores variables predictoras que optimicen el modelo, no solo en términos de efectividad del modelo, sino además en términos de eficiencia computacional. Por lo tanto implica evaluar qué variables son mejores predictoras para la ocurrencia de movimientos en masa, esto implica analisis univaridos, bivariados y multivariados que evalúen la relación entre cada variable predictora y la variable dependiente (<span class="math notranslate nohighlight">\(y\)</span>). Por otra parte se debe tambien analizar la colinealidad entre las variables. Cuando existe multicorrelación entre las variables predictoras se está sobre cargando el modelo con variables que no aportan información adicional, y en muchos casos no se están cumpliendo las asumpciones estadísticas que exigen los modelos, y que se refieren a la independencia entre las variables predictoras.</p>
 <p>Para este procedimiento los algoritmos disponibles en las librerías de Python resultan ser muy útiles. A continuación se presentan cada uno de ellos.</p>
-</div>
-<div class="section" id="python">
-<h2>Python<a class="headerlink" href="#python" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="python">
+<h2>Python<a class="headerlink" href="#python" title="Permalink to this headline">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>pip install rasterio
@@ -496,16 +635,8 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: rasterio in c:\users\usuario\miniconda3\envs\geospatial\lib\site-packages (1.2.1)
-Requirement already satisfied: affine in c:\users\usuario\miniconda3\envs\geospatial\lib\site-packages (from rasterio) (2.3.0)
-Requirement already satisfied: attrs in c:\users\usuario\miniconda3\envs\geospatial\lib\site-packages (from rasterio) (20.3.0)
-Requirement already satisfied: certifi in c:\users\usuario\miniconda3\envs\geospatial\lib\site-packages (from rasterio) (2022.6.15)
-Requirement already satisfied: click&lt;8,&gt;=4.0 in c:\users\usuario\miniconda3\envs\geospatial\lib\site-packages (from rasterio) (7.1.2)
-Requirement already satisfied: cligj&gt;=0.5 in c:\users\usuario\miniconda3\envs\geospatial\lib\site-packages (from rasterio) (0.7.1)
-Requirement already satisfied: numpy in c:\users\usuario\miniconda3\envs\geospatial\lib\site-packages (from rasterio) (1.20.1)
-Requirement already satisfied: snuggs&gt;=1.4.1 in c:\users\usuario\miniconda3\envs\geospatial\lib\site-packages (from rasterio) (1.4.7)
-Requirement already satisfied: click-plugins in c:\users\usuario\miniconda3\envs\geospatial\lib\site-packages (from rasterio) (1.1.1)
-Requirement already satisfied: pyparsing&gt;=2.1.6 in c:\users\usuario\miniconda3\envs\geospatial\lib\site-packages (from snuggs&gt;=1.4.1-&gt;rasterio) (2.4.7)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>^C
+<span class=" -Color -Color-Red">ERROR: Operation cancelled by user</span>
 </pre></div>
 </div>
 </div>
@@ -519,20 +650,6 @@ Requirement already satisfied: pyparsing&gt;=2.1.6 in c:\users\usuario\miniconda
 <span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
 <span class="kn">from</span> <span class="nn">pandas</span> <span class="kn">import</span> <span class="n">DataFrame</span>
 <span class="kn">import</span> <span class="nn">statsmodels.graphics.api</span> <span class="k">as</span> <span class="nn">smg</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
-<span class="o">~</span>\<span class="n">AppData</span>\<span class="n">Local</span>\<span class="n">Temp</span><span class="o">/</span><span class="n">ipykernel_13236</span><span class="o">/</span><span class="mf">1646695383.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="kn">import</span> <span class="nn">rasterio</span> <span class="k">as</span> <span class="nn">rio</span>
-<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="ne">----&gt; </span><span class="mi">3</span> <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
-<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
-<span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
-
-<span class="ne">ModuleNotFoundError</span>: No module named &#39;matplotlib&#39;
 </pre></div>
 </div>
 </div>
@@ -901,8 +1018,8 @@ memory usage: 24.3 MB
 </div>
 </div>
 </div>
-<div class="section" id="muestreo">
-<h3>Muestreo<a class="headerlink" href="#muestreo" title="Permalink to this headline">¶</a></h3>
+<section id="muestreo">
+<h3>Muestreo<a class="headerlink" href="#muestreo" title="Permalink to this headline">#</a></h3>
 <p>Para el análisis exploratorio y selección de variables no es estrictamente necesario realizar un muestreo del <em>Dataframe</em>. Todo lo contrario, lo ideal es poder trabajar con el <em>Dataframe</em> completo. Sin embargo, existen algunas funciones, especialmente de la librería <em>seaborn</em> que pueden ser computacionalmente muy exigentes y tardar demasiado los resultados. Es por esto que a continuación se crea un nuevo <em>Dataframe</em> que toma del original todas las celdas que tienen movimiento en masa, y adicionalmente el 10% de las celdas sin movimientos en masa de forma aleatoria. Esta forma aleatoria implica que cada vez que se corran los resultados, estos varían ligeramente.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1249,9 +1366,9 @@ geologia     14.000000  1.600000e+01
   </div>
 </div></div>
 </div>
-</div>
-<div class="section" id="analisis-de-todas-las-variables">
-<h3>Análisis de todas las variables<a class="headerlink" href="#analisis-de-todas-las-variables" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="analisis-de-todas-las-variables">
+<h3>Análisis de todas las variables<a class="headerlink" href="#analisis-de-todas-las-variables" title="Permalink to this headline">#</a></h3>
 <p>Con esta matriz se puede explorar la relación entre las variables. Para el primer caso utilizamos sólo las variables continuas y usando la función de <em>Pandas</em>; y para el segundo caso utilizamos toda la matriz separando los datos de acuerdo con el inventario, con la librería de <em>seaborn</em>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1296,9 +1413,9 @@ geologia     14.000000  1.600000e+01
 <img alt="_images/06_variables_49_0.png" src="_images/06_variables_49_0.png" />
 </div>
 </div>
-</div>
-<div class="section" id="analisis-univariado">
-<h3>Análisis univariado<a class="headerlink" href="#analisis-univariado" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="analisis-univariado">
+<h3>Análisis univariado<a class="headerlink" href="#analisis-univariado" title="Permalink to this headline">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">pendiente</span><span class="o">.</span><span class="n">hist</span><span class="p">()</span>
@@ -1357,9 +1474,9 @@ geologia     14.000000  1.600000e+01
 <img alt="_images/06_variables_55_1.png" src="_images/06_variables_55_1.png" />
 </div>
 </div>
-</div>
-<div class="section" id="analisis-multivariado">
-<h3>Análisis multivariado<a class="headerlink" href="#analisis-multivariado" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="analisis-multivariado">
+<h3>Análisis multivariado<a class="headerlink" href="#analisis-multivariado" title="Permalink to this headline">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sns</span><span class="o">.</span><span class="n">jointplot</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="s1">&#39;aspecto&#39;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s1">&#39;flujo_acum&#39;</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">df1</span><span class="p">,</span> <span class="n">kind</span><span class="o">=</span><span class="s1">&#39;scatter&#39;</span><span class="p">);</span>
@@ -1388,9 +1505,9 @@ geologia     14.000000  1.600000e+01
 </div>
 </div>
 </div>
-</div>
-<div class="section" id="correlacion-con-la-variable-dependiente">
-<h3>Correlación con la variable dependiente<a class="headerlink" href="#correlacion-con-la-variable-dependiente" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="correlacion-con-la-variable-dependiente">
+<h3>Correlación con la variable dependiente<a class="headerlink" href="#correlacion-con-la-variable-dependiente" title="Permalink to this headline">#</a></h3>
 <p>Para saber la media de cada variable independiente de acuerdo con la variable dependiente utilizamos la función <em>groupby</em>:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1517,9 +1634,9 @@ dtype: int64
 <img alt="_images/06_variables_75_0.png" src="_images/06_variables_75_0.png" />
 </div>
 </div>
-</div>
-<div class="section" id="analisis-de-componentes-principales-pca">
-<h3>Análisis de Componentes Principales (PCA)<a class="headerlink" href="#analisis-de-componentes-principales-pca" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="analisis-de-componentes-principales-pca">
+<h3>Análisis de Componentes Principales (PCA)<a class="headerlink" href="#analisis-de-componentes-principales-pca" title="Permalink to this headline">#</a></h3>
 <p>El PCA es un método de <em>machine learning</em> no supervisado  para reducir dimensionalmente un modelo con una gran cantidad de variables. Para esta reducción permite identificar las varibales que mas le aportan a la varianza del modelo. En este ejemplo vamos a utilizar un conjunto de variables importados desde una tabla de excel.</p>
 <p>A continuación se presenta el código en Python que permite obtener el número de componentes principales a partir de una serie de vectores. Para esto se debe primero transformar los datos para escalarlos. El número de componentes obtenidos es igual al mismo número de variables o vectores que se ingresan. cada componente principal corresponde a una combinación lineal de las variables originales. Los componentes principales desde el punto de vista de algebra lineal corresponden a los vectores propios asociados a los valores propios de la matriz de covarianza. De esta forma cada componente principal es una nueva variable ortogonal a todos los demas componentes ortogonales, y cada uno de ellso representa un vector propio y la varianza del total de ifnormacion que conserva.</p>
 <p>El análisis de PCA organiza los componentes principales de mayor a menor varianza. La primera gráfica que se obtiene es el porcentaje de varianza que representa cada componente principal, siendo el componente principal 1 el que mayor varianza del total de la información representa. La segunda gráfica corresponde a la varianza acumulada de los componentes, iniciando desde el primero de ellos. Finalmente, se grafica el componente principal 1 contra el componente principal 2 y se proyectan los datos sobre estas dos nuevos ejes; al igual que se grafican las anteriores ejes que corresponden a las variables originales. Esto significa que se puede obtener de esta última grafica las variables colineales y las variables que mas información propia aportan y que ayudan a separar entre celdas con MenM y sin MenM.</p>
@@ -1624,11 +1741,12 @@ dtype: int64
 <img alt="_images/06_variables_80_0.png" src="_images/06_variables_80_0.png" />
 </div>
 </div>
-</div>
-</div>
-<div class="section" id="referencias">
-<h2>Referencias<a class="headerlink" href="#referencias" title="Permalink to this headline">¶</a></h2>
-<p id="id5"><dl class="citation">
+</section>
+</section>
+<section id="referencias">
+<h2>Referencias<a class="headerlink" href="#referencias" title="Permalink to this headline">#</a></h2>
+<div class="docutils container" id="id5">
+<dl class="citation">
 <dt class="label" id="id70"><span class="brackets"><a class="fn-backref" href="#id2">1</a></span></dt>
 <dd><p>Shane M. Franklin, Alexandra N. Kravchenko, Rodrigo Vargas, Bruce Vasilas, Jeffry J. Fuhrmann, and Yan Jin. The unexplored role of preferential flow in soil carbon dynamics. <em>Soil Biology and Biochemistry</em>, 161:108398, 2021. URL: <a class="reference external" href="https://www.sciencedirect.com/science/article/pii/S0038071721002728">https://www.sciencedirect.com/science/article/pii/S0038071721002728</a>, <a class="reference external" href="https://doi.org/https://doi.org/10.1016/j.soilbio.2021.108398">doi:https://doi.org/10.1016/j.soilbio.2021.108398</a>.</p>
 </dd>
@@ -1636,9 +1754,9 @@ dtype: int64
 <dd><p>Elena Benedetta Masi, Samuele Segoni, and Veronica Tofani. Root reinforcement in slope stability models: a review. <em>Geosciences</em>, 2021. URL: <a class="reference external" href="https://www.mdpi.com/2076-3263/11/5/212">https://www.mdpi.com/2076-3263/11/5/212</a>, <a class="reference external" href="https://doi.org/10.3390/geosciences11050212">doi:10.3390/geosciences11050212</a>.</p>
 </dd>
 </dl>
-</p>
 </div>
-</div>
+</section>
+</section>
 
     <script type="text/x-thebe-config">
     {
@@ -1662,9 +1780,11 @@ dtype: int64
 
               </div>
               
-            
-                <!-- Previous / next buttons -->
-<div class='prev-next-area'> 
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
     <a class='left-prev' id="prev-link" href="05_inventario.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
@@ -1680,24 +1800,28 @@ dtype: int64
     <i class="fas fa-angle-right"></i>
     </a>
 </div>
-            
+            </footer>
         </div>
     </div>
-    <footer class="footer">
-  <p>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Edier V. Aristizábal G.<br/>
+  
+      &copy; Copyright 2022.<br/>
+</p>
+        </footer>
+    </div>
     
-      By Edier V. Aristizábal G.<br/>
-    
-        &copy; Copyright 2022.<br/>
-  </p>
-</footer>
-</main>
+</div>
 
 
       </div>
     </div>
   
-  <script src="_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
 
   </body>
 </html>
