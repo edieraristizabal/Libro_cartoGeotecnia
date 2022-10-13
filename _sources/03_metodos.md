@@ -1,6 +1,6 @@
 # Caracterización de movimientos en masa
 
-## Definición de movimientos en masa
+## Definición
 Los movimientos en masa son el producto de diversos elementos, donde la configuración morfológica y evolución de las laderas juegan un papel determinante ({cite:t}`Hutchinson1988`). La definición más simple y ampliamente aceptada es la dada por {cite:t}`Cruden1996`, quienes definen el término como el movimiento de una masa de roca, escombros o tierra a lo largo de una ladera. Bajo esta definición existe una gran variedad de movimientos en masa. Algunos son lentos, pequeños e imperceptibles, en tanto otros involucran grandes volúmenes de material y alcanzan altas velocidades con una gran poder destructivo. En tanto, {cite:t}`Scheidegger1998`
 interpreta los deslizamientos como modificaciones del terreno dentro del ciclo geomorfológico continuo, y que corresponden a la respuesta normal del sistema debido a complejos parámetros exogénicos (meteóricos) y endogénicos (tectónicos).
 
@@ -13,7 +13,7 @@ Descripción conceptual de la morfología de un deslizamiento rotacional. Tomado
 Los movimientos en masa son el producto del debilitamiento progresivo de las propiedades mecánicas de los materiales de las vertientes por procesos naturales tales como meteorización, levantamientos tectónicos y actividades humanas que activan movimientos lentos, generalmente imperceptibles ({cite:t}`Soeteres1996`, {cite:t}`Glade2005`), sin embargo, un solo factor, comúnmente la precipitación o un sismo, es considerado como el estimulo externo que puede generar una respuesta casi inmediata de movilizar los materiales que conforman la ladera, sea por el rápido incremento de los esfuerzos o por la reducción de la resistencia ({cite:t}`Wang2002`).
 
 :::{figure-md} FS
-<img src="http://environment.uwe.ac.uk/geocal/slopes/GIFS/CAUSESFA.GIF" alt="reduccion FS" width="800px">
+<img src="http://environment.uwe.ac.uk/geocal/slopes/GIFS/CAUSESFA.GIF" alt="reduccion FS" width="700px">
 
 Reducción de las condiciones de estabilidad. Tomado de {cite:t}`Popescu1994`.
 :::
@@ -26,7 +26,7 @@ De esta forma los factores que controlan la ocurrencia y distribución de los mo
 Evolución de los movimientos en masa. Tomado de Glade and Crozier (2005).
 :::
 
-## Clasificación de movimientos en masa
+## Clasificación
 La base de datos de desastres ([EM-DAT](https://www.emdat.be/)) del Centro de Investigaciones en Epidemiologia y Desastres (CRED por sus siglas en inglés) clasifica los desastres por fenomenos de origen natural en biológicos, geofísicos e hidrometeorológicos. Entre los geofísicos se encuentran los sismos, volcanes, y movimientos en masa secos (caída de rocas, deslizamientos, avalancha y subsidencia). Por su parte los eventos hidrometeorológicos se subdividen en hidrologicos, meteorológicos y climatológicos. Dentro del subgrupo de hidrológicos se encuentran los movimientos en masa con agua.
 
 :::{figure-md} clasificacion
@@ -89,7 +89,7 @@ Volcamiento y caida en laderas en roca.
 
 Finalmente se encuentran los movimientos en masa tipo **extensión lateral**, los cuales se dan en superficies planas y materiales cohesivos o roca que se encuentran sobre materiales de menor consistencia. 
 
-## Actividad de los movimientos en masa
+## Actividad
 {cite:t}`Cruden1996` definen la **actividad** de un movimiento en masa de acuerdo con tres criterios asociados a la superficie de falla: estado, distribución y estado. El estado de la actividad describe el tiempo en que se ha presentado el movimiento, y se subdivide en *activos*, que está actualmente en movimiento, *reactivado*, que nuevamente es activo luego de estar inactivo, *suspendido*, que se ha movido dentro del último ciclo anual pero que no se está moviendo actualmente, y los *inactivos*, los cuales no presentan movimiento en un periodo mayor a un ciclo anual, entre ellos están los *latentes* (*dormant*) donde las causas que lo originaron permanecen, *abandonados*, donde las causas del movimiento han cambiando, *estabilizado*, cuando se han realizado obras de mitigación que impiden su movimiento, y *relicto*, los cuales se presentaron bajo condiciones climáticas y geomorfológicas diferentes a las actuales.
 
 :::{figure-md} estado
