@@ -657,7 +657,7 @@ title="Print to PDF"
 <p>Basado en el modelo conceptual y conocimiento que se tenga de la zona de estudio y de la problemática específica de la ocurrencia de movimientos en masa, se debe realizar el levantamiento de todas las variables predictoras que se consideren juegan un papel en la ocurrencia de movimientos en masa. Posteriormente se procede a importar las variables pre-seleccionadas:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">raster</span> <span class="o">=</span> <span class="n">rio</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s1">&#39;https://github.com/edieraristizabal/Libro_cartoGeotecnia/blob/master/data/Pendiente.tif?raw=true&#39;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">raster</span> <span class="o">=</span> <span class="n">rio</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s1">&#39;https://github.com/edieraristizabal/Libro_cartoGeotecnia/blob/master/data/miel/Pendiente.tif?raw=true&#39;</span><span class="p">)</span>
 <span class="n">pendiente</span><span class="o">=</span><span class="n">raster</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">pendiente</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">colorbar</span><span class="p">();</span>
@@ -665,7 +665,7 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/06_variables_10_0.png" src="_images/06_variables_10_0.png" />
+<img alt="_images/06_variables_9_0.png" src="_images/06_variables_9_0.png" />
 </div>
 </div>
 <p>El mapa aparece con solo los dos colores de los extremos observados en la escala, pareciendo que todos los valores dentro de la cuenca son 0. Sin embargo, esto se debe al contraste entre los valores por fuera de la cuenca, es decir celdas que no son de la cuenca y que al parecer tienen valores negativos muy grandes; y los valores de pendiente solo varian entre 0 y 90°. Por lo tanto se debe modificar y cambiar los valores de cuenca por NaN (<em>no data</em>), los cuales Python pueda interpretar adecuadamente.</p>
@@ -679,7 +679,7 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/06_variables_12_0.png" src="_images/06_variables_12_0.png" />
+<img alt="_images/06_variables_11_0.png" src="_images/06_variables_11_0.png" />
 </div>
 </div>
 <p>Si observamos, estos mapas corresponden a matrices, es decir un arreglo de filas y columnas con valores, que en este caso representan la pendiente de cada celda en un área igual a la resolución espacial del raster.</p>
@@ -726,7 +726,7 @@ title="Print to PDF"
 <p>Antes de generar el <em>Dataframe</em> con las diferentes variables, es necesario entonces importar todas las variables y realizar los ajustes que sean necesarios.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">raster</span> <span class="o">=</span> <span class="n">rio</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s1">&#39;https://github.com/edieraristizabal/Libro_cartoGeotecnia/blob/master/data/Aspecto.tif?raw=true&#39;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">raster</span> <span class="o">=</span> <span class="n">rio</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s1">&#39;https://github.com/edieraristizabal/Libro_cartoGeotecnia/blob/master/data/miel/Aspecto.tif?raw=true&#39;</span><span class="p">)</span>
 <span class="n">aspecto</span><span class="o">=</span><span class="n">raster</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
 <span class="n">aspecto</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">aspecto</span><span class="o">&lt;-</span><span class="mi">100</span><span class="p">,</span><span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">,</span><span class="n">aspecto</span><span class="p">)</span>
 <span class="n">aspecto_vector</span><span class="o">=</span><span class="n">aspecto</span><span class="o">.</span><span class="n">ravel</span><span class="p">()</span>
@@ -741,13 +741,13 @@ title="Print to PDF"
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(910801,)
 </pre></div>
 </div>
-<img alt="_images/06_variables_20_1.png" src="_images/06_variables_20_1.png" />
+<img alt="_images/06_variables_19_1.png" src="_images/06_variables_19_1.png" />
 </div>
 </div>
 <p>Es importante revisar que todos los mapas den como resultado un vector con las mismas filas, en caso contrario no se permitirá construir el <em>Dataframe</em>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">raster</span> <span class="o">=</span> <span class="n">rio</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s1">&#39;https://github.com/edieraristizabal/Libro_cartoGeotecnia/blob/master/data/FlujoAcumulado.tif?raw=true&#39;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">raster</span> <span class="o">=</span> <span class="n">rio</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s1">&#39;https://github.com/edieraristizabal/Libro_cartoGeotecnia/blob/master/data/miel/FlujoAcumulado.tif?raw=true&#39;</span><span class="p">)</span>
 <span class="n">flujo</span><span class="o">=</span><span class="n">raster</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
 <span class="n">flujo</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">flujo</span><span class="o">&lt;</span><span class="mi">0</span><span class="p">,</span><span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">,</span><span class="n">flujo</span><span class="p">)</span>
 <span class="n">flujo_vector</span><span class="o">=</span><span class="n">flujo</span><span class="o">.</span><span class="n">ravel</span><span class="p">()</span>
@@ -763,12 +763,12 @@ title="Print to PDF"
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(910801,)
 </pre></div>
 </div>
-<img alt="_images/06_variables_23_1.png" src="_images/06_variables_23_1.png" />
+<img alt="_images/06_variables_22_1.png" src="_images/06_variables_22_1.png" />
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">raster</span> <span class="o">=</span> <span class="n">rio</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s1">&#39;https://github.com/edieraristizabal/Libro_cartoGeotecnia/blob/master/data/Geologia_Superficial.tif?raw=true&#39;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">raster</span> <span class="o">=</span> <span class="n">rio</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s1">&#39;https://github.com/edieraristizabal/Libro_cartoGeotecnia/blob/master/data/miel/Geologia_Superficial.tif?raw=true&#39;</span><span class="p">)</span>
 <span class="n">geologia</span><span class="o">=</span><span class="n">raster</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
 <span class="n">geologia</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">geologia</span><span class="o">&lt;</span><span class="mi">0</span><span class="p">,</span><span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">,</span><span class="n">geologia</span><span class="p">)</span>
 <span class="n">geologia_vector</span><span class="o">=</span><span class="n">geologia</span><span class="o">.</span><span class="n">ravel</span><span class="p">()</span>
@@ -783,7 +783,7 @@ title="Print to PDF"
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(910801,)
 </pre></div>
 </div>
-<img alt="_images/06_variables_24_1.png" src="_images/06_variables_24_1.png" />
+<img alt="_images/06_variables_23_1.png" src="_images/06_variables_23_1.png" />
 </div>
 </div>
 <p>Existen otras librearias para importar como <em>gdal</em>, en las cuales el procedimiento varía ligeramente. Para saber cuantas clases tiene un mapa de variables categóricas se utiliza la función unique de numpy.</p>
@@ -802,9 +802,9 @@ title="Print to PDF"
 <p>Finalmente, importamos el inventario y utilizamos como máscara el mapa de pendientes, y modificamos los valores para que las celdas con movimientos en masa tengan un valor de 1, y las celdas sin movimientos en masa un valor de 0, las celdas que no son de la cuenca tienen NaN.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">raster</span> <span class="o">=</span> <span class="n">rio</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s1">&#39;https://github.com/edieraristizabal/Libro_cartoGeotecnia/blob/master/data/Inventario_MenM.tif?raw=true&#39;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">raster</span> <span class="o">=</span> <span class="n">rio</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s1">&#39;https://github.com/edieraristizabal/Libro_cartoGeotecnia/blob/master/data/miel/Inventario_MenM.tif?raw=true&#39;</span><span class="p">)</span>
 <span class="n">inventario</span><span class="o">=</span><span class="n">raster</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
-<span class="n">raster_mask</span> <span class="o">=</span> <span class="n">rio</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s1">&#39;https://github.com/edieraristizabal/Libro_cartoGeotecnia/blob/master/data/Pendiente.tif?raw=true&#39;</span><span class="p">)</span>
+<span class="n">raster_mask</span> <span class="o">=</span> <span class="n">rio</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s1">&#39;https://github.com/edieraristizabal/Libro_cartoGeotecnia/blob/master/data/miel/Pendiente.tif?raw=true&#39;</span><span class="p">)</span>
 <span class="n">msk</span><span class="o">=</span><span class="n">raster_mask</span><span class="o">.</span><span class="n">read_masks</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
 <span class="n">msk</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">msk</span><span class="o">==</span><span class="mi">255</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">)</span>
 <span class="n">inventario</span><span class="o">=</span><span class="n">msk</span><span class="o">*</span><span class="n">inventario</span>
@@ -820,7 +820,7 @@ title="Print to PDF"
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(910801,)
 </pre></div>
 </div>
-<img alt="_images/06_variables_28_1.png" src="_images/06_variables_28_1.png" />
+<img alt="_images/06_variables_27_1.png" src="_images/06_variables_27_1.png" />
 </div>
 </div>
 <p>Finalmente para crear el <em>Dataframe</em> con las variables predictoras incluidas, se crea primero un diccionario y luego se transforma a un <em>Dataframe</em>:</p>
@@ -847,7 +847,7 @@ title="Print to PDF"
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-fd973cef-b518-4cfa-9bc2-fbfdc1629658">
+  <div id="df-ae351360-05d0-4aa3-a8e3-70f8b8b4edce">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -918,7 +918,7 @@ title="Print to PDF"
   </tbody>
 </table>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-fd973cef-b518-4cfa-9bc2-fbfdc1629658')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-ae351360-05d0-4aa3-a8e3-70f8b8b4edce')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
 
@@ -969,12 +969,12 @@ title="Print to PDF"
 
       <script>
         const buttonEl =
-          document.querySelector('#df-fd973cef-b518-4cfa-9bc2-fbfdc1629658 button.colab-df-convert');
+          document.querySelector('#df-ae351360-05d0-4aa3-a8e3-70f8b8b4edce button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-fd973cef-b518-4cfa-9bc2-fbfdc1629658');
+          const element = document.querySelector('#df-ae351360-05d0-4aa3-a8e3-70f8b8b4edce');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -1030,15 +1030,15 @@ memory usage: 24.3 MB
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;class &#39;pandas.core.frame.DataFrame&#39;&gt;
-Int64Index: 92541 entries, 9 to 910796
+Int64Index: 92528 entries, 1 to 910786
 Data columns (total 5 columns):
  #   Column      Non-Null Count  Dtype  
 ---  ------      --------------  -----  
- 0   inventario  92541 non-null  float64
- 1   pendiente   92541 non-null  float32
- 2   flujo_acum  92541 non-null  float32
- 3   aspecto     92541 non-null  float32
- 4   geologia    92541 non-null  float64
+ 0   inventario  92528 non-null  float64
+ 1   pendiente   92528 non-null  float32
+ 2   flujo_acum  92528 non-null  float32
+ 3   aspecto     92528 non-null  float32
+ 4   geologia    92528 non-null  float64
 dtypes: float32(3), float64(2)
 memory usage: 3.2 MB
 </pre></div>
@@ -1079,7 +1079,7 @@ geologia     14.000000  1.600000e+01
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-187b3726-ebae-4f22-9d02-798a53cf8874">
+  <div id="df-87dc36c9-217d-44bc-86e6-c520b3e74a8a">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -1144,7 +1144,7 @@ geologia     14.000000  1.600000e+01
   </tbody>
 </table>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-187b3726-ebae-4f22-9d02-798a53cf8874')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-87dc36c9-217d-44bc-86e6-c520b3e74a8a')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
 
@@ -1195,12 +1195,12 @@ geologia     14.000000  1.600000e+01
 
       <script>
         const buttonEl =
-          document.querySelector('#df-187b3726-ebae-4f22-9d02-798a53cf8874 button.colab-df-convert');
+          document.querySelector('#df-87dc36c9-217d-44bc-86e6-c520b3e74a8a button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-187b3726-ebae-4f22-9d02-798a53cf8874');
+          const element = document.querySelector('#df-87dc36c9-217d-44bc-86e6-c520b3e74a8a');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -1230,7 +1230,7 @@ geologia     14.000000  1.600000e+01
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-28f34290-84eb-4004-b26d-d02fa841d3c3">
+  <div id="df-55485ec6-a976-493c-986c-569634febeca">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -1289,7 +1289,7 @@ geologia     14.000000  1.600000e+01
   </tbody>
 </table>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-28f34290-84eb-4004-b26d-d02fa841d3c3')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-55485ec6-a976-493c-986c-569634febeca')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
 
@@ -1340,12 +1340,12 @@ geologia     14.000000  1.600000e+01
 
       <script>
         const buttonEl =
-          document.querySelector('#df-28f34290-84eb-4004-b26d-d02fa841d3c3 button.colab-df-convert');
+          document.querySelector('#df-55485ec6-a976-493c-986c-569634febeca button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-28f34290-84eb-4004-b26d-d02fa841d3c3');
+          const element = document.querySelector('#df-55485ec6-a976-493c-986c-569634febeca');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -1376,18 +1376,12 @@ geologia     14.000000  1.600000e+01
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<img alt="_images/06_variables_44_0.png" src="_images/06_variables_44_0.png" />
-</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sns</span><span class="o">.</span><span class="n">pairplot</span><span class="p">(</span><span class="n">df1</span><span class="p">,</span> <span class="n">hue</span><span class="o">=</span><span class="s1">&#39;inventario&#39;</span><span class="p">);</span>
 </pre></div>
 </div>
-</div>
-<div class="cell_output docutils container">
-<img alt="_images/06_variables_45_0.png" src="_images/06_variables_45_0.png" />
 </div>
 </div>
 <p>Para conocer la histograma de densidad de distribución se utiliza la siguiente función:</p>
@@ -1396,9 +1390,6 @@ geologia     14.000000  1.600000e+01
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">matriz</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">kind</span><span class="o">=</span><span class="s1">&#39;density&#39;</span><span class="p">,</span> <span class="n">subplots</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">layout</span><span class="o">=</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span> <span class="n">sharex</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">4</span><span class="p">));</span>
 </pre></div>
 </div>
-</div>
-<div class="cell_output docutils container">
-<img alt="_images/06_variables_47_0.png" src="_images/06_variables_47_0.png" />
 </div>
 </div>
 <p>Para conocer la correlación lineal entre las variables se puede utilizar la siguiente función para objetos tipo <em>Dataframe</em>.</p>
@@ -1410,7 +1401,7 @@ geologia     14.000000  1.600000e+01
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/06_variables_49_0.png" src="_images/06_variables_49_0.png" />
+<img alt="_images/06_variables_48_0.png" src="_images/06_variables_48_0.png" />
 </div>
 </div>
 </section>
@@ -1433,7 +1424,7 @@ geologia     14.000000  1.600000e+01
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/06_variables_52_0.png" src="_images/06_variables_52_0.png" />
+<img alt="_images/06_variables_51_0.png" src="_images/06_variables_51_0.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -1443,7 +1434,7 @@ geologia     14.000000  1.600000e+01
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/06_variables_53_0.png" src="_images/06_variables_53_0.png" />
+<img alt="_images/06_variables_52_0.png" src="_images/06_variables_52_0.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -1457,7 +1448,7 @@ geologia     14.000000  1.600000e+01
   FutureWarning
 </pre></div>
 </div>
-<img alt="_images/06_variables_54_1.png" src="_images/06_variables_54_1.png" />
+<img alt="_images/06_variables_53_1.png" src="_images/06_variables_53_1.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -1471,7 +1462,7 @@ geologia     14.000000  1.600000e+01
   warnings.warn(msg, FutureWarning)
 </pre></div>
 </div>
-<img alt="_images/06_variables_55_1.png" src="_images/06_variables_55_1.png" />
+<img alt="_images/06_variables_54_1.png" src="_images/06_variables_54_1.png" />
 </div>
 </div>
 </section>
@@ -1599,7 +1590,7 @@ dtype: int64
   X = np.atleast_1d(X.T if isinstance(X, np.ndarray) else np.asarray(X))
 </pre></div>
 </div>
-<img alt="_images/06_variables_70_1.png" src="_images/06_variables_70_1.png" />
+<img alt="_images/06_variables_69_1.png" src="_images/06_variables_69_1.png" />
 </div>
 </div>
 <p>Para confirmar si las dos poblaciones pendientes con MenM y pendientes sin MenM son poblaciones diferentes, se puede realizar una prueba de hipótesis (<em>Ttest</em>) de la siguiente forma:</p>
@@ -1631,7 +1622,24 @@ dtype: int64
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/06_variables_75_0.png" src="_images/06_variables_75_0.png" />
+<img alt="_images/06_variables_74_0.png" src="_images/06_variables_74_0.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sns</span><span class="o">.</span><span class="n">distplot</span><span class="p">(</span><span class="n">si_lands</span><span class="p">[</span><span class="s1">&#39;pendiente&#39;</span><span class="p">])</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">distplot</span><span class="p">(</span><span class="n">no_lands</span><span class="p">[</span><span class="s1">&#39;pendiente&#39;</span><span class="p">]);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/usr/local/lib/python3.7/dist-packages/seaborn/distributions.py:2619: FutureWarning: `distplot` is a deprecated function and will be removed in a future version. Please adapt your code to use either `displot` (a figure-level function with similar flexibility) or `histplot` (an axes-level function for histograms).
+  warnings.warn(msg, FutureWarning)
+/usr/local/lib/python3.7/dist-packages/seaborn/distributions.py:2619: FutureWarning: `distplot` is a deprecated function and will be removed in a future version. Please adapt your code to use either `displot` (a figure-level function with similar flexibility) or `histplot` (an axes-level function for histograms).
+  warnings.warn(msg, FutureWarning)
+</pre></div>
+</div>
+<img alt="_images/06_variables_75_1.png" src="_images/06_variables_75_1.png" />
 </div>
 </div>
 </section>
