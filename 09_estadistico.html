@@ -829,16 +829,16 @@ title="Print to PDF"
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: rasterio in c:\python39\lib\site-packages (1.3.3)
 Requirement already satisfied: affine in c:\python39\lib\site-packages (from rasterio) (2.3.1)
-Requirement already satisfied: attrs in c:\python39\lib\site-packages (from rasterio) (22.1.0)
-Requirement already satisfied: certifi in c:\python39\lib\site-packages (from rasterio) (2022.9.24)
-Requirement already satisfied: click&gt;=4.0 in c:\python39\lib\site-packages (from rasterio) (8.1.3)
-Requirement already satisfied: setuptools in c:\python39\lib\site-packages (from rasterio) (49.2.1)
-Requirement already satisfied: click-plugins in c:\python39\lib\site-packages (from rasterio) (1.1.1)
 Requirement already satisfied: snuggs&gt;=1.4.1 in c:\python39\lib\site-packages (from rasterio) (1.4.7)
 Requirement already satisfied: numpy&gt;=1.18 in c:\python39\lib\site-packages (from rasterio) (1.23.4)
 Requirement already satisfied: cligj&gt;=0.5 in c:\python39\lib\site-packages (from rasterio) (0.7.2)
-Requirement already satisfied: colorama; platform_system == &quot;Windows&quot; in c:\users\edier\appdata\roaming\python\python39\site-packages (from click&gt;=4.0-&gt;rasterio) (0.4.5)
+Requirement already satisfied: attrs in c:\python39\lib\site-packages (from rasterio) (22.1.0)
+Requirement already satisfied: setuptools in c:\python39\lib\site-packages (from rasterio) (49.2.1)
+Requirement already satisfied: click&gt;=4.0 in c:\python39\lib\site-packages (from rasterio) (8.1.3)
+Requirement already satisfied: certifi in c:\python39\lib\site-packages (from rasterio) (2022.9.24)
+Requirement already satisfied: click-plugins in c:\python39\lib\site-packages (from rasterio) (1.1.1)
 Requirement already satisfied: pyparsing&gt;=2.1.6 in c:\python39\lib\site-packages (from snuggs&gt;=1.4.1-&gt;rasterio) (3.0.9)
+Requirement already satisfied: colorama; platform_system == &quot;Windows&quot; in c:\users\edier\appdata\roaming\python\python39\site-packages (from click&gt;=4.0-&gt;rasterio) (0.4.5)
 </pre></div>
 </div>
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>WARNING: You are using pip version 20.2.4; however, version 22.3.1 is available.
@@ -853,6 +853,93 @@ You should consider upgrading via the &#39;c:\python39\python.exe -m pip install
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
 <span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">KeyboardInterrupt</span><span class="g g-Whitespace">                         </span>Traceback (most recent call last)
+<span class="nn">Input In [2],</span> in <span class="ni">&lt;cell line: 4&gt;</span><span class="nt">()</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="ne">----&gt; </span><span class="mi">4</span> <span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+
+<span class="n">File</span> <span class="o">~</span>\<span class="n">miniconda3</span>\<span class="n">envs</span>\<span class="n">ml</span>\<span class="n">lib</span>\<span class="n">site</span><span class="o">-</span><span class="n">packages</span>\<span class="n">pandas</span>\<span class="fm">__init__</span><span class="o">.</span><span class="n">py</span><span class="p">:</span><span class="mi">138</span><span class="p">,</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="g g-Whitespace">    </span><span class="mi">135</span> <span class="kn">from</span> <span class="nn">pandas</span> <span class="kn">import</span> <span class="n">api</span><span class="p">,</span> <span class="n">arrays</span><span class="p">,</span> <span class="n">errors</span><span class="p">,</span> <span class="n">io</span><span class="p">,</span> <span class="n">plotting</span><span class="p">,</span> <span class="n">testing</span><span class="p">,</span> <span class="n">tseries</span>
+<span class="g g-Whitespace">    </span><span class="mi">136</span> <span class="kn">from</span> <span class="nn">pandas.util._print_versions</span> <span class="kn">import</span> <span class="n">show_versions</span>
+<span class="ne">--&gt; </span><span class="mi">138</span> <span class="kn">from</span> <span class="nn">pandas.io.api</span> <span class="kn">import</span> <span class="p">(</span>
+<span class="g g-Whitespace">    </span><span class="mi">139</span>     <span class="c1"># excel</span>
+<span class="g g-Whitespace">    </span><span class="mi">140</span>     <span class="n">ExcelFile</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">141</span>     <span class="n">ExcelWriter</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">142</span>     <span class="n">read_excel</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">143</span>     <span class="c1"># parsers</span>
+<span class="g g-Whitespace">    </span><span class="mi">144</span>     <span class="n">read_csv</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">145</span>     <span class="n">read_fwf</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">146</span>     <span class="n">read_table</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">147</span>     <span class="c1"># pickle</span>
+<span class="g g-Whitespace">    </span><span class="mi">148</span>     <span class="n">read_pickle</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">149</span>     <span class="n">to_pickle</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">150</span>     <span class="c1"># pytables</span>
+<span class="g g-Whitespace">    </span><span class="mi">151</span>     <span class="n">HDFStore</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">152</span>     <span class="n">read_hdf</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">153</span>     <span class="c1"># sql</span>
+<span class="g g-Whitespace">    </span><span class="mi">154</span>     <span class="n">read_sql</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">155</span>     <span class="n">read_sql_query</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">156</span>     <span class="n">read_sql_table</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">157</span>     <span class="c1"># misc</span>
+<span class="g g-Whitespace">    </span><span class="mi">158</span>     <span class="n">read_clipboard</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">159</span>     <span class="n">read_parquet</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">160</span>     <span class="n">read_orc</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">161</span>     <span class="n">read_feather</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">162</span>     <span class="n">read_gbq</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">163</span>     <span class="n">read_html</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">164</span>     <span class="n">read_xml</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">165</span>     <span class="n">read_json</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">166</span>     <span class="n">read_stata</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">167</span>     <span class="n">read_sas</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">168</span>     <span class="n">read_spss</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">169</span> <span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">171</span> <span class="kn">from</span> <span class="nn">pandas.io.json</span> <span class="kn">import</span> <span class="n">_json_normalize</span> <span class="k">as</span> <span class="n">json_normalize</span>
+<span class="g g-Whitespace">    </span><span class="mi">173</span> <span class="kn">from</span> <span class="nn">pandas.util._tester</span> <span class="kn">import</span> <span class="n">test</span>
+
+<span class="n">File</span> <span class="o">~</span>\<span class="n">miniconda3</span>\<span class="n">envs</span>\<span class="n">ml</span>\<span class="n">lib</span>\<span class="n">site</span><span class="o">-</span><span class="n">packages</span>\<span class="n">pandas</span>\<span class="n">io</span>\<span class="n">api</span><span class="o">.</span><span class="n">py</span><span class="p">:</span><span class="mi">8</span><span class="p">,</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="c1"># flake8: noqa</span>
+<span class="g g-Whitespace">      </span><span class="mi">7</span> <span class="kn">from</span> <span class="nn">pandas.io.clipboards</span> <span class="kn">import</span> <span class="n">read_clipboard</span>
+<span class="ne">----&gt; </span><span class="mi">8</span> <span class="kn">from</span> <span class="nn">pandas.io.excel</span> <span class="kn">import</span> <span class="p">(</span>
+<span class="g g-Whitespace">      </span><span class="mi">9</span>     <span class="n">ExcelFile</span><span class="p">,</span>
+<span class="g g-Whitespace">     </span><span class="mi">10</span>     <span class="n">ExcelWriter</span><span class="p">,</span>
+<span class="g g-Whitespace">     </span><span class="mi">11</span>     <span class="n">read_excel</span><span class="p">,</span>
+<span class="g g-Whitespace">     </span><span class="mi">12</span> <span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">13</span> <span class="kn">from</span> <span class="nn">pandas.io.feather_format</span> <span class="kn">import</span> <span class="n">read_feather</span>
+<span class="g g-Whitespace">     </span><span class="mi">14</span> <span class="kn">from</span> <span class="nn">pandas.io.gbq</span> <span class="kn">import</span> <span class="n">read_gbq</span>
+
+<span class="n">File</span> <span class="o">~</span>\<span class="n">miniconda3</span>\<span class="n">envs</span>\<span class="n">ml</span>\<span class="n">lib</span>\<span class="n">site</span><span class="o">-</span><span class="n">packages</span>\<span class="n">pandas</span>\<span class="n">io</span>\<span class="n">excel</span>\<span class="fm">__init__</span><span class="o">.</span><span class="n">py</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="kn">from</span> <span class="nn">pandas.io.excel._base</span> <span class="kn">import</span> <span class="p">(</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span>     <span class="n">ExcelFile</span><span class="p">,</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span>     <span class="n">ExcelWriter</span><span class="p">,</span>
+<span class="g g-Whitespace">      </span><span class="mi">4</span>     <span class="n">read_excel</span><span class="p">,</span>
+<span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="p">)</span>
+<span class="g g-Whitespace">      </span><span class="mi">6</span> <span class="kn">from</span> <span class="nn">pandas.io.excel._odswriter</span> <span class="kn">import</span> <span class="n">ODSWriter</span> <span class="k">as</span> <span class="n">_ODSWriter</span>
+<span class="g g-Whitespace">      </span><span class="mi">7</span> <span class="kn">from</span> <span class="nn">pandas.io.excel._openpyxl</span> <span class="kn">import</span> <span class="n">OpenpyxlWriter</span> <span class="k">as</span> <span class="n">_OpenpyxlWriter</span>
+
+<span class="n">File</span> <span class="o">~</span>\<span class="n">miniconda3</span>\<span class="n">envs</span>\<span class="n">ml</span>\<span class="n">lib</span>\<span class="n">site</span><span class="o">-</span><span class="n">packages</span>\<span class="n">pandas</span>\<span class="n">io</span>\<span class="n">excel</span>\<span class="n">_base</span><span class="o">.</span><span class="n">py</span><span class="p">:</span><span class="mi">27</span><span class="p">,</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="g g-Whitespace">     </span><span class="mi">23</span> <span class="kn">import</span> <span class="nn">zipfile</span>
+<span class="g g-Whitespace">     </span><span class="mi">25</span> <span class="kn">from</span> <span class="nn">pandas._config</span> <span class="kn">import</span> <span class="n">config</span>
+<span class="ne">---&gt; </span><span class="mi">27</span> <span class="kn">from</span> <span class="nn">pandas._libs.parsers</span> <span class="kn">import</span> <span class="n">STR_NA_VALUES</span>
+<span class="g g-Whitespace">     </span><span class="mi">28</span> <span class="kn">from</span> <span class="nn">pandas._typing</span> <span class="kn">import</span> <span class="p">(</span>
+<span class="g g-Whitespace">     </span><span class="mi">29</span>     <span class="n">DtypeArg</span><span class="p">,</span>
+<span class="g g-Whitespace">     </span><span class="mi">30</span>     <span class="n">FilePath</span><span class="p">,</span>
+   <span class="p">(</span><span class="o">...</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">34</span>     <span class="n">WriteExcelBuffer</span><span class="p">,</span>
+<span class="g g-Whitespace">     </span><span class="mi">35</span> <span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">36</span> <span class="kn">from</span> <span class="nn">pandas.compat._optional</span> <span class="kn">import</span> <span class="p">(</span>
+<span class="g g-Whitespace">     </span><span class="mi">37</span>     <span class="n">get_version</span><span class="p">,</span>
+<span class="g g-Whitespace">     </span><span class="mi">38</span>     <span class="n">import_optional_dependency</span><span class="p">,</span>
+<span class="g g-Whitespace">     </span><span class="mi">39</span> <span class="p">)</span>
+
+<span class="nn">File &lt;frozen importlib._bootstrap&gt;:404,</span> in <span class="ni">parent</span><span class="nt">(self)</span>
+
+<span class="ne">KeyboardInterrupt</span>: 
 </pre></div>
 </div>
 </div>
@@ -910,7 +997,7 @@ You should consider upgrading via the &#39;c:\python39\python.exe -m pip install
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.colorbar.Colorbar at 0x242d930a8f0&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.colorbar.Colorbar at 0x1cc685afc70&gt;
 </pre></div>
 </div>
 <img alt="_images/09_estadistico_10_1.png" src="_images/09_estadistico_10_1.png" />
@@ -975,9 +1062,7 @@ You should consider upgrading via the &#39;c:\python39\python.exe -m pip install
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>total: 910801 53805 138684 279488 158011 280813
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>total1: 1620 13 108 411 301 787
+total1: 1620 13 108 411 301 787
 </pre></div>
 </div>
 </div>
@@ -995,14 +1080,7 @@ You should consider upgrading via the &#39;c:\python39\python.exe -m pip install
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="nn">Input In [8],</span> in <span class="ni">&lt;cell line: 1&gt;</span><span class="nt">()</span>
-<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">w_a</span><span class="o">=</span><span class="p">(</span><span class="n">ap1</span><span class="o">/</span><span class="n">total1</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="n">ap</span><span class="o">/</span><span class="n">total</span><span class="p">)</span>
-<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="n">w_b</span><span class="o">=</span><span class="p">(</span><span class="n">bp1</span><span class="o">/</span><span class="n">total1</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="n">bp</span><span class="o">/</span><span class="n">total</span><span class="p">)</span>
-<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="n">w_c</span><span class="o">=</span><span class="p">(</span><span class="n">cp1</span><span class="o">/</span><span class="n">total1</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="n">cp</span><span class="o">/</span><span class="n">total</span><span class="p">)</span>
-
-<span class="ne">NameError</span>: name &#39;total1&#39; is not defined
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.13584047790317347 0.4378303673579264 0.826774627307924 1.0709955300033418 1.5756726885555798
 </pre></div>
 </div>
 </div>
@@ -2163,7 +2241,7 @@ Uncertainty: 0.7799834770480247 0.6685462775738931 0.8870797176808958 0.77830569
 </table>
 </div></div></div>
 </div>
-<p>Lo primero que se recomienda es normalizar los valores. La RL es un algoritmo geometrico sensible a las unidades de cada variable.</p>
+<p>Lo primero que se recomienda es normalizar los valores. La RL es un algoritmo geométrico sensible a las unidades de cada variable.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">var_names2</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;aspecto&#39;</span><span class="p">,</span><span class="s1">&#39;pendiente&#39;</span><span class="p">]</span>
@@ -2238,7 +2316,7 @@ Uncertainty: 0.7799834770480247 0.6685462775738931 0.8870797176808958 0.77830569
 </table>
 </div></div></div>
 </div>
-<p>Existen dos librerias que nos permiten resolver este modelo, <em>statsmodels</em> y <em>sklearn</em>. La primera de ellas nos ofrece un resumen con los resultados y métricas de desempeño del modelo y utilizar la libreria Patsy que permite el uso de formulas.</p>
+<p>Existen dos librerías que nos permiten resolver este modelo, <em>statsmodels</em> y <em>sklearn</em>. La primera de ellas nos ofrece un resumen con los resultados y métricas de desempeño del modelo y utilizar la librería Patsy que permite el uso de fórmulas.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">statsmodels.formula.api</span> <span class="k">as</span> <span class="nn">sfm</span>
@@ -2285,8 +2363,8 @@ pendiente               0.4570      0.026     17.412      0.000       0.406     
 </div>
 </div>
 </div>
-<p>La librearia <em>statsmodels</em> incorpora por defecto el intercepto en el modelo y en las formulas pueden especificar el tipo de variables categóricas con una <em>C</em>. Como se menciono anteriormente las clases de las variables categoricas son transformadas en variables binarias, eliminando una. En este caso se elimino la clase 2 de <em>geologia</em>, por lo que los coeficientes de las demas clases son con respecto a dicha clase. Entre los resultados se destacan el estimador para los coeficientes (maxima verosimilitud -MLE-), el logaritmo del estimador MLE (Log-likelihood), el coeficiente de ajuste (Pseudo R-squ.). Con respecto a los coeficientes se presenta el valor de la prueba de hipotesis nula que el valor del coeficiente es igual a cero (z) como el valor del coeficiente entre el error estandar (std err), y el <em>p-value</em> (P&gt;|z|), este valor debe ser menor al 5% (0.05), lo cual significa que la probabilidad que el coeficiente tenga un valor de 0 es muy bajo.  Finalmente se presenta el rango del 95% del dominio del valor del coeficiente.</p>
-<p>La libreria  <em>scikit learn</em> permite parametrizar el modelo de diferentes formas, sin embargo requiere ingresar entre variables dependientes y variables independientes. Asi como transformar la variable categorica.</p>
+<p>La librearía <em>statsmodels</em> incorpora por defecto el intercepto en el modelo y en las fórmulas pueden especificar el tipo de variables categóricas con una <em>C</em>. Como se menciono anteriormente las clases de las variables categóricas son transformadas en variables binarias, eliminando una. En este caso se eliminó la clase 2 de <em>geologia</em>, por lo que los coeficientes de las demas clases son con respecto a dicha clase. Entre los resultados se destacan el estimador para los coeficientes (maxima verosimilitud -MLE-), el logaritmo del estimador MLE (Log-likelihood), el coeficiente de ajuste (Pseudo R-squ.). Con respecto a los coeficientes se presenta el valor de la prueba de hipótesis nula que el valor del coeficiente es igual a cero (z) como el valor del coeficiente entre el error estandar (std err), y el <em>p-value</em> (P&gt;|z|), este valor debe ser menor al 5% (0.05), lo cual significa que la probabilidad que el coeficiente tenga un valor de 0 es muy bajo.  Finalmente se presenta el rango del 95% del dominio del valor del coeficiente.</p>
+<p>La librería  <em>scikit learn</em> permite parametrizar el modelo de diferentes formas, sin embargo requiere ingresar entre variables dependientes y variables independientes. Asi como transformar la variable categórica.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">X</span><span class="o">=</span><span class="n">df</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="s2">&quot;inventario&quot;</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
@@ -2477,7 +2555,7 @@ pendiente               0.4570      0.026     17.412      0.000       0.406     
 </table>
 </div></div></div>
 </div>
-<p>Inicialmente, se importa la función para RL, y se construye el modelo con los hiperparámetros. En este caso, estamos asignándole un <em>class_weight</em> = balanced para que asigne mas peso a las celdas minoritarias, en este caso las celdas donde y=1. De esta forma RL nos ayuda a resolver el problema de la base de datos original  desbalanceada. El segundo hiperparámetro que utilizamos es el tipo de algoritmo para resolver la RL, en este caso utilizaremos <em>newton-cg</em>. La librera “skilearn” utiliza por defecto el hiperparametro <em>fit_intercept</em> con un valor de <em>True</em> que equivale a incluir el intercepto.</p>
+<p>Inicialmente, se importa la función para RL, y se construye el modelo con los hiperparámetros. En este caso, estamos asignándole un <em>class_weight</em> = balanced para que asigne mas peso a las celdas minoritarias, en este caso las celdas donde y=1. De esta forma RL nos ayuda a resolver el problema de la base de datos original  desbalanceada. El segundo hiperparámetro que utilizamos es el tipo de algoritmo para resolver la RL, en este caso utilizaremos <em>newton-cg</em>. La librera “skilearn” utiliza por defecto el hiperparámetro <em>fit_intercept</em> con un valor de <em>True</em> que equivale a incluir el intercepto.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.linear_model</span> <span class="kn">import</span> <span class="n">LogisticRegression</span>
@@ -2543,7 +2621,7 @@ pendiente               0.4570      0.026     17.412      0.000       0.406     
 </div>
 </div>
 </div>
-<p>como se puede observar el resultado en este caso, en lugar de ser un vector con la clasificacion de cada celda, es un matriz de dos columnas. Donde la primera columna es la probabilidad de cada celda de ser 0, es decir estable, y la segudna columna la probabilidad de ser 1, es decir inestable. Para nuestro propósito es mas útil obtener la probabilidad de cada celda de ser inestable. Para eso seleccionamos entonces solo la segunda columna de la matriz obtenida.</p>
+<p>Como se puede observar el resultado en este caso, en lugar de ser un vector con la clasificación de cada celda, es un matriz de dos columnas. Donde la primera columna es la probabilidad de cada celda de ser 0, es decir estable, y la segudna columna la probabilidad de ser 1, es decir inestable. Para nuestro propósito es mas útil obtener la probabilidad de cada celda de ser inestable. Para eso seleccionamos entonces solo la segunda columna de la matriz obtenida.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">y_probs</span><span class="o">=</span><span class="n">result</span><span class="o">.</span><span class="n">predict_proba</span><span class="p">(</span><span class="n">X1</span><span class="p">)[:,</span><span class="mi">1</span><span class="p">]</span>
@@ -2808,7 +2886,7 @@ pendiente               0.4570      0.026     17.412      0.000       0.406     
 </div>
 </div>
 </div>
-<p>Ya lo unico que nos queda es reconstruir a partir de dicho vector la matriz que conforma la cuenca con los valores de susceptibilidad. Para eso utilizaremos como máscara el mapa de pendiente.</p>
+<p>Ya lo único que nos queda es reconstruir a partir de dicho vector la matriz que conforma la cuenca con los valores de susceptibilidad. Para eso utilizaremos como máscara el mapa de pendiente.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">raster</span> <span class="o">=</span> <span class="n">rio</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s1">&#39;https://github.com/edieraristizabal/Libro_cartoGeotecnia/blob/master/data/miel/Pendiente.tif?raw=true&#39;</span><span class="p">)</span>
