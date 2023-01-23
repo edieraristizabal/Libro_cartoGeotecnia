@@ -183,7 +183,7 @@ const thebe_selector_output = ".output, .cell_output"
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="12_amenaza.html">
-   Amenaza
+   Análisis del factor detonante
   </a>
  </li>
  <li class="toctree-l1">
@@ -198,7 +198,7 @@ const thebe_selector_output = ".output, .cell_output"
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="15_python.html">
-   Python
+   ANEXO: Python
   </a>
  </li>
 </ul>
@@ -796,6 +796,7 @@ title="Print to PDF"
                 
   <section class="tex2jax_ignore mathjax_ignore" id="metodos-basados-en-datos">
 <h1>Métodos basados en datos<a class="headerlink" href="#metodos-basados-en-datos" title="Permalink to this headline">#</a></h1>
+<p>Los métodos basados en datos, también denominados métodos estadísticos, se clasifican en bivariados y multivariados. Como característica tienen que es indispensable contar con un inventario de movimientos en masa, no es posible implementar un método estadístico para evaluar la susceptibilidad por movimientos en entos en masa sin un inventario. A continuación se presenta cada uno de estos métodos.</p>
 <section id="bivariados">
 <h2>Bivariados<a class="headerlink" href="#bivariados" title="Permalink to this headline">#</a></h2>
 <p>En los métodos bivariados cada mapa factor (geología, pendiente, coberturas, etc) es combinado con el inventario de movimientos en masa, para obtener los pesos de las clases que conforman las variables, basados generalmente en densidad de movimientos en masa. Los métodos estadísticos bivariados son una buena herramienta de aprendizaje para el analista encontrar qué factores o combinación de factores juegan un papel importante en la ocurrencia de movimientos en masa.</p>
@@ -864,7 +865,7 @@ title="Print to PDF"
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(910801,)
 </pre></div>
 </div>
-<img alt="_images/09_estadistico_8_1.png" src="_images/09_estadistico_8_1.png" />
+<img alt="_images/09_estadistico_9_1.png" src="_images/09_estadistico_9_1.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -880,7 +881,7 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/09_estadistico_9_0.png" src="_images/09_estadistico_9_0.png" />
+<img alt="_images/09_estadistico_10_0.png" src="_images/09_estadistico_10_0.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -899,7 +900,7 @@ title="Print to PDF"
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.colorbar.Colorbar at 0x1cc685afc70&gt;
 </pre></div>
 </div>
-<img alt="_images/09_estadistico_10_1.png" src="_images/09_estadistico_10_1.png" />
+<img alt="_images/09_estadistico_11_1.png" src="_images/09_estadistico_11_1.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -915,7 +916,7 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/09_estadistico_11_0.png" src="_images/09_estadistico_11_0.png" />
+<img alt="_images/09_estadistico_12_0.png" src="_images/09_estadistico_12_0.png" />
 </div>
 </div>
 <p>Para implementar todos lo métodos estadísticos bivariados se deben conocer para cada clase de las variables, el número de celdas que pertenecen a dicha clase y el número de celdas con MenM.</p>
@@ -1003,7 +1004,7 @@ total1: 1620 13 108 411 301 787
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[0.13584048 0.43783036 0.82677466 1.0709956  1.5756727         nan]
 </pre></div>
 </div>
-<img alt="_images/09_estadistico_17_1.png" src="_images/09_estadistico_17_1.png" />
+<img alt="_images/09_estadistico_18_1.png" src="_images/09_estadistico_18_1.png" />
 </div>
 </div>
 <p>Ahora se realiza el mismo procedimiento para la variable <em>aspecto</em>, la cual tambien es continua, en este caso se divide en 4 clases [0-90, 90-180, 180-270, 270-360]:</p>
@@ -1063,7 +1064,7 @@ w: 1.0069572774636415 1.7527700266488904 0.8590431563124444 0.8314017909437948
 [-1.          0.83140177  0.8590432   1.0069573   1.7527701          nan]
 </pre></div>
 </div>
-<img alt="_images/09_estadistico_19_1.png" src="_images/09_estadistico_19_1.png" />
+<img alt="_images/09_estadistico_20_1.png" src="_images/09_estadistico_20_1.png" />
 </div>
 </div>
 <p>Y el mismo procedimiento para la variable <em>geologia</em>, la cual es categórica por lo cual ligeramente varía el procedimiento.</p>
@@ -1135,7 +1136,7 @@ w: 1.447560646250527 0.0 0.0 1.7008260599455374 0.0 1.077602194175132 1.58808106
  3.94554121        nan]
 </pre></div>
 </div>
-<img alt="_images/09_estadistico_21_1.png" src="_images/09_estadistico_21_1.png" />
+<img alt="_images/09_estadistico_22_1.png" src="_images/09_estadistico_22_1.png" />
 </div>
 </div>
 <p>Con los mapas de cada variable reclasificados de acuerdo con el valor de <em>Frequency ratio</em> se procede entonces a sumar todas las variables y obtener el mapa de susceptibilidad:</p>
@@ -1148,7 +1149,7 @@ w: 1.447560646250527 0.0 0.0 1.7008260599455374 0.0 1.077602194175132 1.58808106
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/09_estadistico_23_0.png" src="_images/09_estadistico_23_0.png" />
+<img alt="_images/09_estadistico_24_0.png" src="_images/09_estadistico_24_0.png" />
 </div>
 </div>
 </section>
@@ -1157,7 +1158,7 @@ w: 1.447560646250527 0.0 0.0 1.7008260599455374 0.0 1.077602194175132 1.58808106
 <h3><em>Statistical index model</em><a class="headerlink" href="#statistical-index-model" title="Permalink to this headline">#</a></h3>
 <p>El valor del peso para cada clase en el método <em>Statistical index model</em> es definido como el logaritmo natural de la densidad de movimientos en masa en una clase (<span class="math notranslate nohighlight">\(\rho_{clase}\)</span>) dividido la densidad de deslizamientos en toda la zona de estudio (<span class="math notranslate nohighlight">\(\rho_{total}\)</span>), de acuerdo con la siguiente ecuación:</p>
 <p><span class="math notranslate nohighlight">\(w_{ij}^n = \ln(\frac{\rho_{clase}}{\rho_{total}}) = \ln(\frac{\frac{N_{ij}}{S_{ij}}}{\frac{N}{S}}) \)</span></p>
-<p>Donde <span class="math notranslate nohighlight">\(w_{ij}^n\)</span> es el peso de la celda <span class="math notranslate nohighlight">\(n\)</span> que pertenece a la clase <span class="math notranslate nohighlight">\(i\)</span> de la variable <span class="math notranslate nohighlight">\(j\)</span>. <span class="math notranslate nohighlight">\(\rho_{clase}\)</span> es la densidad de deslizamientos de la clase <span class="math notranslate nohighlight">\(i\)</span> del parámetro <span class="math notranslate nohighlight">\(j\)</span>, calculado a  partir de <span class="math notranslate nohighlight">\(N_{ij}\)</span> como el número de pixeles con MenM en una cierta clase <span class="math notranslate nohighlight">\(i\)</span> del parametro <span class="math notranslate nohighlight">\(j\)</span>, <span class="math notranslate nohighlight">\(S_{ij} como el número de pixeles de la clase \)</span>i<span class="math notranslate nohighlight">\( del parametro \)</span>j$. N es el total de celdas que corresponden a deslizamientos en todo el mapa y S es el total de celdas del área de estudio.</p>
+<p>Donde <span class="math notranslate nohighlight">\(w_{ij}^n\)</span> es el peso de la celda <span class="math notranslate nohighlight">\(n\)</span> que pertenece a la clase <span class="math notranslate nohighlight">\(i\)</span> de la variable <span class="math notranslate nohighlight">\(j\)</span>. <span class="math notranslate nohighlight">\(\rho_{clase}\)</span> es la densidad de deslizamientos de la clase <span class="math notranslate nohighlight">\(i\)</span> del parámetro <span class="math notranslate nohighlight">\(j\)</span>, calculado a  partir de <span class="math notranslate nohighlight">\(N_{ij}\)</span> como el número de pixeles con MenM en una cierta clase <span class="math notranslate nohighlight">\(i\)</span> del parametro <span class="math notranslate nohighlight">\(j\)</span>, <span class="math notranslate nohighlight">\(S_{ij}\)</span> como el número de pixeles de la clase <span class="math notranslate nohighlight">\(i\)</span> del parametro <span class="math notranslate nohighlight">\(j\)</span>. N es el total de celdas que corresponden a deslizamientos en todo el mapa y S es el total de celdas del área de estudio.</p>
 <p>Finalmente la susceptibilidad a movimientos en masa de cada celda es igual a:</p>
 <p><span class="math notranslate nohighlight">\(S^n = \sum w = w_{pendiente} + w_{geologia} + w_{coberturas} + ...w_{n} \)</span></p>
 <section id="id1">
@@ -1214,7 +1215,7 @@ w: 1.447560646250527 0.0 0.0 1.7008260599455374 0.0 1.077602194175132 1.58808106
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[-1.9975946  -0.82724434 -0.19154373  0.06726803  0.4533617          nan]
 </pre></div>
 </div>
-<img alt="_images/09_estadistico_31_1.png" src="_images/09_estadistico_31_1.png" />
+<img alt="_images/09_estadistico_32_1.png" src="_images/09_estadistico_32_1.png" />
 </div>
 </div>
 <p>Realizamos el mismo procedimiento para la variable <em>aspecto</em>:</p>
@@ -1242,10 +1243,10 @@ w: 1.447560646250527 0.0 0.0 1.7008260599455374 0.0 1.077602194175132 1.58808106
 [-1.         -0.18464209 -0.15193611  0.00693319  0.5611974          nan]
 </pre></div>
 </div>
-<img alt="_images/09_estadistico_33_1.png" src="_images/09_estadistico_33_1.png" />
+<img alt="_images/09_estadistico_34_1.png" src="_images/09_estadistico_34_1.png" />
 </div>
 </div>
-<p>Para la variable geología se debe tener en cuenta que existen algunas clases que no presentan celdas con MenM, por lo tanto generan un error al calcular el logaritmo. Para superar est se le asigna un valor de 1 a dichas clases.</p>
+<p>Para la variable geología se debe tener en cuenta que existen algunas clases que no presentan celdas con MenM, por lo tanto generan un error al calcular el logaritmo. Para superar esto se le asigna un valor de 1 a dichas clases.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">bg1</span><span class="o">=</span><span class="n">cg1</span><span class="o">=</span><span class="n">eg1</span><span class="o">=</span><span class="n">jg1</span><span class="o">=</span><span class="mi">1</span>   <span class="c1">#clases que obtuvieron 0 celdas con movimientos en masa</span>
@@ -1285,7 +1286,7 @@ w: 1.447560646250527 0.0 0.0 1.7008260599455374 0.0 1.077602194175132 1.58808106
   0.46252641  0.53111405  1.20067898  1.37258613         nan]
 </pre></div>
 </div>
-<img alt="_images/09_estadistico_35_1.png" src="_images/09_estadistico_35_1.png" />
+<img alt="_images/09_estadistico_36_1.png" src="_images/09_estadistico_36_1.png" />
 </div>
 </div>
 <p>Con los mapas de cada variable reclasificados de acuerdo con el valor de <em>Statistical index</em> se procede entonces a sumar todas las variables y obtener el mapa de susceptibilidad:</p>
@@ -1298,7 +1299,7 @@ w: 1.447560646250527 0.0 0.0 1.7008260599455374 0.0 1.077602194175132 1.58808106
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/09_estadistico_37_0.png" src="_images/09_estadistico_37_0.png" />
+<img alt="_images/09_estadistico_38_0.png" src="_images/09_estadistico_38_0.png" />
 </div>
 </div>
 </section>
@@ -1441,7 +1442,7 @@ es cero cuando la clase no afecta, es positivo cuando existe una correlación di
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[-2.0507433  -0.9233003   0.08375583  0.7526898          nan]
 </pre></div>
 </div>
-<img alt="_images/09_estadistico_51_1.png" src="_images/09_estadistico_51_1.png" />
+<img alt="_images/09_estadistico_52_1.png" src="_images/09_estadistico_52_1.png" />
 </div>
 </div>
 <p>Este mismo procedimiento se realiza para la variable <em>aspecto</em>.</p>
@@ -1523,10 +1524,10 @@ es cero cuando la clase no afecta, es positivo cuando existe una correlación di
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[-6.975576   -1.         -0.6254262  -0.29615796  2.4018128          nan]
 </pre></div>
 </div>
-<img alt="_images/09_estadistico_56_1.png" src="_images/09_estadistico_56_1.png" />
+<img alt="_images/09_estadistico_57_1.png" src="_images/09_estadistico_57_1.png" />
 </div>
 </div>
-<p>En el método <em>Peso de la evidencia</em> se debe tener en cuenta que las clases que no presentan movimientos en masa generan un matemático, ya que no se puede estimar el logaritmo natural de cero. Por lo tanto, se debe proceder a esas clases qdoden se obtuvo cero celdas asignarles un valor de 1, de tal forma que se pueda ejecutar el cálculo.</p>
+<p>En el método <em>Peso de la evidencia</em> se debe tener en cuenta que las clases que no presentan movimientos en masa generan un matemático, ya que no se puede estimar el logaritmo natural de cero. Por lo tanto, se debe proceder a esas clases donde se obtuvo cero celdas asignarles un valor de 1, de tal forma que se pueda ejecutar el cálculo.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">bg1</span><span class="o">=</span><span class="n">cg1</span><span class="o">=</span><span class="n">eg1</span><span class="o">=</span><span class="n">jg1</span><span class="o">=</span><span class="mi">1</span>   <span class="c1">#clases que obtuvieron 0 celdas con movimientos en masa</span>
@@ -1680,7 +1681,7 @@ es cero cuando la clase no afecta, es positivo cuando existe una correlación di
   0.54477773  0.55996406  1.20658234  1.38520843         nan]
 </pre></div>
 </div>
-<img alt="_images/09_estadistico_61_1.png" src="_images/09_estadistico_61_1.png" />
+<img alt="_images/09_estadistico_62_1.png" src="_images/09_estadistico_62_1.png" />
 </div>
 </div>
 <p>Finalmente se calcula el Indice de Susceptibildiad (IS), el cual corresponde a la suma de los mapas reclasificados con el valor del Contraste, de la siguiente forma.</p>
@@ -1693,7 +1694,7 @@ es cero cuando la clase no afecta, es positivo cuando existe una correlación di
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/09_estadistico_63_0.png" src="_images/09_estadistico_63_0.png" />
+<img alt="_images/09_estadistico_64_0.png" src="_images/09_estadistico_64_0.png" />
 </div>
 </div>
 </section>
@@ -1808,7 +1809,7 @@ es cero cuando la clase no afecta, es positivo cuando existe una correlación di
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[0.02863689 0.08836979 0.17057727 0.24158278 0.47083327        nan]
 </pre></div>
 </div>
-<img alt="_images/09_estadistico_73_1.png" src="_images/09_estadistico_73_1.png" />
+<img alt="_images/09_estadistico_74_1.png" src="_images/09_estadistico_74_1.png" />
 </div>
 </div>
 <p>Se realiza el mismo procedimiento para la variable <em>aspecto</em>:</p>
@@ -1863,7 +1864,7 @@ Uncertainty: 0.5294889041133115 0.31276701806773605 0.5744098464545259 0.5833342
 [-1.          0.16640243  0.17536859  0.22059904  0.43762994         nan]
 </pre></div>
 </div>
-<img alt="_images/09_estadistico_75_1.png" src="_images/09_estadistico_75_1.png" />
+<img alt="_images/09_estadistico_76_1.png" src="_images/09_estadistico_76_1.png" />
 </div>
 </div>
 <p>Para la variable <em>geologia</em> se desarrolla de la siguiente forma:</p>
@@ -1958,7 +1959,7 @@ Uncertainty: 0.7799834770480247 0.6685462775738931 0.8870797176808958 0.77830569
  0.11993273 0.12179228 0.23185866 0.27689118        nan]
 </pre></div>
 </div>
-<img alt="_images/09_estadistico_77_1.png" src="_images/09_estadistico_77_1.png" />
+<img alt="_images/09_estadistico_78_1.png" src="_images/09_estadistico_78_1.png" />
 </div>
 </div>
 <p>Con los mapas de cada variable reclasificados de acuerdo con el valor de <em>Belief</em> se procede entonces a sumar todas las variables y obtener el mapa de susceptibilidad:</p>
@@ -1971,7 +1972,7 @@ Uncertainty: 0.7799834770480247 0.6685462775738931 0.8870797176808958 0.77830569
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/09_estadistico_79_0.png" src="_images/09_estadistico_79_0.png" />
+<img alt="_images/09_estadistico_80_0.png" src="_images/09_estadistico_80_0.png" />
 </div>
 </div>
 </section>
@@ -2804,7 +2805,7 @@ pendiente               0.4570      0.026     17.412      0.000       0.406     
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/09_estadistico_115_0.png" src="_images/09_estadistico_115_0.png" />
+<img alt="_images/09_estadistico_116_0.png" src="_images/09_estadistico_116_0.png" />
 </div>
 </div>
 </section>
@@ -3045,7 +3046,7 @@ pendiente               0.4570      0.026     17.412      0.000       0.406     
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/09_estadistico_124_0.png" src="_images/09_estadistico_124_0.png" />
+<img alt="_images/09_estadistico_125_0.png" src="_images/09_estadistico_125_0.png" />
 </div>
 </div>
 </section>
@@ -3121,7 +3122,7 @@ Name: inventario, dtype: int64
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/09_estadistico_134_0.png" src="_images/09_estadistico_134_0.png" />
+<img alt="_images/09_estadistico_135_0.png" src="_images/09_estadistico_135_0.png" />
 </div>
 </div>
 <p>Como se puede observar, el modelo ya tiene capacidad para predecir los <em>si</em> (1).</p>
@@ -3173,7 +3174,7 @@ Name: inventario, dtype: int64
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/09_estadistico_142_0.png" src="_images/09_estadistico_142_0.png" />
+<img alt="_images/09_estadistico_143_0.png" src="_images/09_estadistico_143_0.png" />
 </div>
 </div>
 <p>El modelo de <em>random forest</em> permite obtener la importancia de las variables. A continuación se presenta el código para eso:</p>
@@ -3260,7 +3261,7 @@ Name: inventario, dtype: int64
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/09_estadistico_154_0.png" src="_images/09_estadistico_154_0.png" />
+<img alt="_images/09_estadistico_155_0.png" src="_images/09_estadistico_155_0.png" />
 </div>
 </div>
 </section>

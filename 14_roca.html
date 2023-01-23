@@ -54,7 +54,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Python" href="15_python.html" />
+    <link rel="next" title="ANEXO: Python" href="15_python.html" />
     <link rel="prev" title="Movimientos en masa tipo flujos" href="13_flujos.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
@@ -183,7 +183,7 @@ const thebe_selector_output = ".output, .cell_output"
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="12_amenaza.html">
-   Amenaza
+   Análisis del factor detonante
   </a>
  </li>
  <li class="toctree-l1">
@@ -198,7 +198,7 @@ const thebe_selector_output = ".output, .cell_output"
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="15_python.html">
-   Python
+   ANEXO: Python
   </a>
  </li>
 </ul>
@@ -480,7 +480,7 @@ title="Print to PDF"
 <h1>Movimientos en masa en roca<a class="headerlink" href="#movimientos-en-masa-en-roca" title="Permalink to this headline">#</a></h1>
 <p>Las estructuras geológicas de los materiales que conforman las laderas son una de las principales factores condicionantes de movimientos en masa en roca. Los planos de estratificación, diaclasas o foliación pueden controlar tanto el mecanismo como la actividad de los movimientos en masa. Es por esta razón que analizar la relación entre dichos planos de debilidad con el aspecto y pendiente de las laderas pueden ser clave para entender la ocurrencia. La disponibilidad de modelos digitales del terreno y sistemas de información geográfica ofrecen una excelente posibilidad de caracterizar estas relaciones sobre extensas áreas utilizando los modelos de elevación y datos estructurales.</p>
 <p>Como soporte a los modelos con base física para macizos rocosos, las técnicas computacionales actuales permiten la implementación de análisis espaciales que correlacionen información geo-estructural y morfológica de las laderas para evaluar su estabilidad (Grelle et al., 2011). Para este análisis, se definen las relaciones geométricas entre la aptitud de las discontinuidades (rumbo y buzamiento) y la geometría de la ladera (pendiente y aspecto) (Guzzetti et al., 2006; Gunther, 2003; Hammond et al., 1992; Montgomery &amp; Dietrich, 1994; Pack et al., 1998). Estos modelos requieren información espacialmente distribuida sobre la geometría de las laderas y datos estructurales de las discontinuidades para realizar los análisis celda por celda sobre toda el área de estudio (Günther, 2003; Günther et al., 2004; Santagelo et al., 2014).</p>
-<p>Los análisis cinemáticos implementados mediante SIG para extensas áreas permiten reqeuiren dominios morfoestructurales, estableciendo áreas geográficas caracterizadas por relaciones geométricas homogéneas entre la actitud de las estructuras geológicas y la geometría de las laderas. Para identificar dichos dominios morfoestructurales autores como Grelle et al. (2011) y Santagelo et al. (2014) han propuesto evaluaciones discretas mediante regla de clasificación o evaluaciones continuas a través de índices que relacionan la geometría de las laderas y la aptitud de las discontinuidades. Finalmente, cada dominio estructural, de acuerdo con la disposición estructural y geometría de la ladera, presenta un tipo principal de cinemática de falla a lo largo de las discontinuidades: fallas planares, fallas en cuña, y fallas por volcamiento. (Cruden &amp; varnes, 1996; Hoek y Bray, 1981).</p>
+<p>Los análisis cinemáticos implementados mediante SIG para extensas áreas requieren dominios morfoestructurales, estableciendo áreas geográficas caracterizadas por relaciones geométricas homogéneas entre la actitud de las estructuras geológicas y la geometría de las laderas. Para identificar dichos dominios morfoestructurales autores como Grelle et al. (2011) y Santagelo et al. (2014) han propuesto evaluaciones discretas mediante regla de clasificación o evaluaciones continuas a través de índices que relacionan la geometría de las laderas y la aptitud de las discontinuidades. Finalmente, cada dominio estructural, de acuerdo con la disposición estructural y geometría de la ladera, presenta un tipo principal de cinemática de falla a lo largo de las discontinuidades: fallas planares, fallas en cuña, y fallas por volcamiento. (Cruden &amp; varnes, 1996; Hoek y Bray, 1981).</p>
 <p>Uno de los índices utilizados es TOBIA (<em>TOpographic/Bedding plane Intersection Angle</em>) propuesto por Meentemeyer &amp; Moody (2000). este indice señala la conformidad entre la ladera y los planos del material de la ladera. Si los planos de la roca buzan en el mismo sentido del aspecto de la ladera, se clasifica como <em>cataclinal</em>, si los planos buzan en direccion opuesta, es clasificada como <em>anaclinal</em>, y si buza de forma ortogonal es clasificada como <em>ortoclinal</em>. Las cataclinales y anaclinales pueden subclasificarse de acuerdo con el ángulo de buzamiento y la pendiente de la ladera, como se presenta en la figura. Las laderas cataclinales (<em>dip slope</em> y <em>overdip sope</em>) son susceptibles a deslizamientos planares. Mientras que las laderas anaclinales son susceptibles a movimientos en  masa tipo volcamiento y caida. Y las laderas ortoclinales con diferentes familias de diaclasas pueden formar movimientos en masa tipo cuña.</p>
 <figure class="align-default" id="roca">
 <a class="reference internal image-reference" href="https://i.pinimg.com/564x/e1/b2/c9/e1b2c9845c93e4cb81807adbc02ec8cc.jpg"><img alt="roca laderas" src="https://i.pinimg.com/564x/e1/b2/c9/e1b2c9845c93e4cb81807adbc02ec8cc.jpg" style="width: 600px;" /></a>
@@ -490,7 +490,7 @@ title="Print to PDF"
 </figure>
 <p>En este sentido, y con las 4 siguientes variables pendiente (S 0-90°), aspecto (A 0-360°), buzamiento (<span class="math notranslate nohighlight">\(\theta\)</span> 0-90°) y dirección de buzamiento (<span class="math notranslate nohighlight">\(\alpha\)</span> 0-360°), puede ser clasificadas todas las celdas que representa el área de interés. Esta clasificación puede realizarse de forma categórica con el valor de <em>L</em> :</p>
 <p><span class="math notranslate nohighlight">\(L=\sqrt{(cos\alpha - cos A)^2 + (sen\alpha - senA)^2}\)</span></p>
-<p>Los rangos de los valores son considerados en este documento <span class="math notranslate nohighlight">\(\pm\)</span> 45, sin embargo este valor puede reducirse con creterio de campo, un valor razonable puede ser <span class="math notranslate nohighlight">\(\pm\)</span> 20°, como se presenta en las figuras de los análisis cinemáticos..</p>
+<p>Los rangos de los valores son considerados en este documento <span class="math notranslate nohighlight">\(\pm\)</span> 45, sin embargo este valor puede reducirse con creterio de campo, un valor razonable puede ser <span class="math notranslate nohighlight">\(\pm\)</span> 20°, como se presenta en las figuras de los análisis cinemáticos.</p>
 <section id="laderas-cataclinales">
 <h2>Laderas cataclinales<a class="headerlink" href="#laderas-cataclinales" title="Permalink to this headline">#</a></h2>
 <p>De forma categórica las laderas cataclinales corresponden cuando la diferencia entre <span class="math notranslate nohighlight">\(\alpha\)</span> y A es 0 <span class="math notranslate nohighlight">\(\pm\)</span> 45°, lo cual corresponde a <span class="math notranslate nohighlight">\(0 \leq L \leq 0.7654\)</span>. Adicionalmente, para las laderas cataclinales:</p>
@@ -579,7 +579,7 @@ title="Print to PDF"
     <a class='right-next' id="next-link" href="15_python.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Python</p>
+        <p class="prev-next-title">ANEXO: Python</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>

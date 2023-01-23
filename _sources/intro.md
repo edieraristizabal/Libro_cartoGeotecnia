@@ -8,7 +8,7 @@
 
 
 :::{note}
-Este libro se encuentra en construcción, por lo tanto su contenido se encuentra en constante cambio y ajuste. Las recomendaciones y comentarios son bienvenidos al correo evaristizabalg@unal.edu.co. Todo el contenido de este libro se soporta en el trabajo de un gran número de personas alrededor del mundo en diferentes temáticas e idiomas que han publicado su contenido libre y abierto, entre ellos: Prof. [Dani Arribas-Bel](https://geographicdata.science/book/intro.html), Prof. [Henrikki Tenkanen](https://pythongis.org/index.html).
+Este libro se encuentra en construcción, por lo tanto su contenido se encuentra en constante cambio y ajuste. Las recomendaciones y comentarios son bienvenidos al correo evaristizabalg@unal.edu.co. Todo el contenido de este libro se soporta en el trabajo de un gran número de personas alrededor del mundo en sensores remotos, análisis espacial y aprendizaje automático de máquinas, y que han publicado su contenido libre y abierto, entre ellos: Prof. [Dani Arribas-Bel](https://geographicdata.science/book/intro.html), Prof. [Henrikki Tenkanen](https://pythongis.org/index.html). Los enlaces de todos estos materiales de consulta se pueden encontrar en [Awesome Geospatial Data Science](https://github.com/edieraristizabal/Awesome-GDS)
 :::
 
 
