@@ -1,48 +1,60 @@
 
+
 <!DOCTYPE html>
 
-<html>
+
+<html lang="en" >
+
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
     <title>Métodos con base física &#8212; Cartografía Geotécnica</title>
-    
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
   <!-- Loaded before other Sphinx assets -->
-  <link href="_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
-<link href="_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+  <link href="_static/styles/theme.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
 
-    
-  <link rel="stylesheet"
-    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+  
+  <link href="_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
 
     <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
-    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
-    
+    <link rel="stylesheet" type="text/css" href="_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=365ca57ee442770a23c6" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=365ca57ee442770a23c6" />
+  <script src="_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=365ca57ee442770a23c6"></script>
 
     <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
     <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="_static/doctools.js"></script>
     <script src="_static/clipboard.min.js"></script>
     <script src="_static/copybutton.js"></script>
-    <script src="_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
     <script src="_static/togglebutton.js"></script>
-    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script src="_static/design-tabs.js"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
 const thebe_selector = ".thebe,.cell"
@@ -52,61 +64,103 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '10_fisico';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Evaluación del modelo" href="11_evaluacion.html" />
     <link rel="prev" title="Métodos basados en datos" href="09_estadistico.html" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="None">
-    
-
-    <!-- Google Analytics -->
-    
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
-<!-- Checkboxes to toggle the left sidebar -->
-<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
-<label class="overlay overlay-navbar" for="__navigation">
-    <div class="visually-hidden">Toggle navigation sidebar</div>
-</label>
-<!-- Checkboxes to toggle the in-page toc -->
-<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
-<label class="overlay overlay-pagetoc" for="__page-toc">
-    <div class="visually-hidden">Toggle in-page Table of Contents</div>
-</label>
-<!-- Headers at the top -->
-<div class="announcement header-item noprint"></div>
-<div class="header header-item noprint"></div>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
 
-    
-    <div class="container-fluid" id="banner"></div>
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
 
-    
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
 
-    <div class="container-xl">
-      <div class="row">
-          
-<!-- Sidebar -->
-<div class="bd-sidebar noprint" id="site-navigation">
-    <div class="bd-sidebar__content">
-        <div class="bd-sidebar__top"><div class="navbar-brand-box">
-    <a class="navbar-brand text-wrap" href="index.html">
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
       
-        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+      <div class="bd-sidebar-primary bd-sidebar">
         
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="intro.html">
+  
+  
+  
+  
+  
+    
+    
       
-      
-      <img src="_static/logo.png" class="logo" alt="logo">
-      
-      
-      <h1 class="site-logo" id="site-title">Cartografía Geotécnica</h1>
-      
-    </a>
-</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
-  <i class="icon fas fa-search"></i>
-  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
-</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
-    <div class="bd-toc-item active">
+    
+    
+    <img src="_static/logo.png" class="logo__image only-light" alt="Cartografía Geotécnica - Home"/>
+    <script>document.write(`<img src="_static/logo.png" class="logo__image only-dark" alt="Cartografía Geotécnica - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
@@ -116,597 +170,271 @@ const thebe_selector_output = ".output, .cell_output"
             </li>
         </ul>
         <ul class="current nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="00_medialuna.html">
-   Media Luna (1954)
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="00_introduccion.html">
-   Introducción
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="01_normatividad.html">
-   Amenaza &amp; ordenamiento territorial
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="02_estadoarte.html">
-   Estado del arte
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="03_metodos.html">
-   Caracterización de movimientos en masa
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="04_susceptibilidad.html">
-   Susceptibilidad y amenaza
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="05_inventario.html">
-   Inventario de movimientos en masa
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="06_variables.html">
-   Variables condicionantes
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="07_detonante.html">
-   Factores detonantes
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="08_heuristico.html">
-   Métodos basados en el conocimiento
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="09_estadistico.html">
-   Métodos basados en datos
-  </a>
- </li>
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
-   Métodos con base física
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="11_evaluacion.html">
-   Evaluación del modelo
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="12_amenaza.html">
-   Análisis del factor detonante
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="13_flujos.html">
-   Movimientos en masa tipo flujos
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="14_roca.html">
-   Movimientos en masa en roca
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="15_python.html">
-   ANEXO: Python
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="00_medialuna.html">Media Luna (1954)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="00_introduccion.html">Introducción</a></li>
+<li class="toctree-l1"><a class="reference internal" href="01_normatividad.html">Amenaza &amp; ordenamiento territorial</a></li>
+<li class="toctree-l1"><a class="reference internal" href="02_estadoarte.html">Estado del arte</a></li>
+<li class="toctree-l1"><a class="reference internal" href="03_metodos.html">Caracterización de movimientos en masa</a></li>
+<li class="toctree-l1"><a class="reference internal" href="04_susceptibilidad.html">Susceptibilidad y amenaza</a></li>
+<li class="toctree-l1"><a class="reference internal" href="05_inventario.html">Inventario de movimientos en masa</a></li>
+<li class="toctree-l1"><a class="reference internal" href="06_variables.html">Variables condicionantes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="07_detonante.html">Factores detonantes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="08_heuristico.html">Métodos basados en el conocimiento</a></li>
+<li class="toctree-l1"><a class="reference internal" href="09_estadistico.html">Métodos basados en datos</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Métodos con base física</a></li>
+<li class="toctree-l1"><a class="reference internal" href="11_evaluacion.html">Evaluación del modelo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="12_amenaza.html">Análisis del factor detonante</a></li>
+<li class="toctree-l1"><a class="reference internal" href="13_flujos.html">Movimientos en masa tipo flujos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="14_roca.html">Movimientos en masa en roca</a></li>
+<li class="toctree-l1"><a class="reference internal" href="15_python.html">ANEXO: Python</a></li>
+
+
 </ul>
 
     </div>
 </nav></div>
-        <div class="bd-sidebar__bottom">
-             <!-- To handle the deprecated key -->
-            
-            <div class="navbar_extra_footer">
-            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
-            </div>
-            
-        </div>
     </div>
-    <div id="rtd-footer-container"></div>
-</div>
-
-
-          
-
-
-          
-<!-- A tiny helper pixel to detect if we've scrolled -->
-<div class="sbt-scroll-pixel-helper"></div>
-<!-- Main content -->
-<div class="col py-0 content-container">
-    
-    <div class="header-article row sticky-top noprint">
-        
-
-
-
-<div class="col py-1 d-flex header-article-main">
-    <div class="header-article__left">
-        
-        <label for="__navigation"
-  class="headerbtn"
-  data-toggle="tooltip"
-data-placement="right"
-title="Toggle navigation"
->
   
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-bars"></i>
-  </span>
-
-</label>
-
-        
-    </div>
-    <div class="header-article__right">
-<div class="menu-dropdown menu-dropdown-launch-buttons">
-  <button class="headerbtn menu-dropdown__trigger"
-      aria-label="Launch interactive content">
-      <i class="fas fa-rocket"></i>
-  </button>
-  <div class="menu-dropdown__content">
-    <ul>
-      <li>
-        <a href="https://mybinder.org/v2/gh/edieraristizabal/Libro_cartoGeotecnia/master?urlpath=tree/docs/10_fisico.ipynb"
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Launch on Binder"
->
   
-
-<span class="headerbtn__icon-container">
-  
-    <img src="_static/images/logo_binder.svg">
-  </span>
-<span class="headerbtn__text-container">Binder</span>
-</a>
-
-      </li>
-      
-    </ul>
+  <div class="sidebar-primary-items__end sidebar-primary__section">
   </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/edieraristizabal/Libro_cartoGeotecnia" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/edieraristizabal/Libro_cartoGeotecnia/issues/new?title=Issue%20on%20page%20%2F10_fisico.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
 </div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/10_fisico.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
 
 <button onclick="toggleFullScreen()"
-  class="headerbtn"
-  data-toggle="tooltip"
-data-placement="bottom"
-title="Fullscreen mode"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
 >
   
 
-<span class="headerbtn__icon-container">
+<span class="btn__icon-container">
   <i class="fas fa-expand"></i>
   </span>
 
 </button>
 
-<div class="menu-dropdown menu-dropdown-repository-buttons">
-  <button class="headerbtn menu-dropdown__trigger"
-      aria-label="Source repositories">
-      <i class="fab fa-github"></i>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
   </button>
-  <div class="menu-dropdown__content">
-    <ul>
-      <li>
-        <a href="https://github.com/edieraristizabal/Libro_cartoGeotecnia"
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Source repository"
->
-  
+`);
+</script>
 
-<span class="headerbtn__icon-container">
-  <i class="fab fa-github"></i>
-  </span>
-<span class="headerbtn__text-container">repository</span>
-</a>
-
-      </li>
-      
-      <li>
-        <a href="https://github.com/edieraristizabal/Libro_cartoGeotecnia/issues/new?title=Issue%20on%20page%20%2F10_fisico.html&body=Your%20issue%20content%20here."
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Open an issue"
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-lightbulb"></i>
-  </span>
-<span class="headerbtn__text-container">open issue</span>
-</a>
-
-      </li>
-      
-    </ul>
-  </div>
-</div>
-
-<div class="menu-dropdown menu-dropdown-download-buttons">
-  <button class="headerbtn menu-dropdown__trigger"
-      aria-label="Download this page">
-      <i class="fas fa-download"></i>
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
   </button>
-  <div class="menu-dropdown__content">
-    <ul>
-      <li>
-        <a href="_sources/10_fisico.ipynb"
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Download source file"
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-file"></i>
-  </span>
-<span class="headerbtn__text-container">.ipynb</span>
-</a>
-
-      </li>
-      
-      <li>
-        
-<button onclick="printPdf(this)"
-  class="headerbtn"
-  data-toggle="tooltip"
-data-placement="left"
-title="Print to PDF"
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-file-pdf"></i>
-  </span>
-<span class="headerbtn__text-container">.pdf</span>
-</button>
-
-      </li>
-      
-    </ul>
-  </div>
-</div>
-<label for="__page-toc"
-  class="headerbtn headerbtn-page-toc"
-  
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-list"></i>
-  </span>
-
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
 </label>
-
+</div></div>
+      
     </div>
+  
 </div>
-
-<!-- Table of contents -->
-<div class="col-md-3 bd-toc show noprint">
-    <div class="tocsection onthispage pt-5 pb-3">
-        <i class="fas fa-list"></i> Contents
-    </div>
-    <nav id="bd-toc-nav" aria-label="Page">
-        <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#factor-detonante-lluvia">
-   Factor detonante lluvia
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#modelo-shalstab">
-     Modelo SHALSTAB
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#python">
-       Python
-      </a>
-     </li>
-    </ul>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#modelo-trigrs">
-     Modelo TRIGRS
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#tutorial">
-       Tutorial
-      </a>
-      <ul class="nav section-nav flex-column">
-       <li class="toc-h5 nav-item toc-entry">
-        <a class="reference internal nav-link" href="#preparacion-de-los-mapas">
-         Preparación de los mapas
-        </a>
-       </li>
-       <li class="toc-h5 nav-item toc-entry">
-        <a class="reference internal nav-link" href="#ejecucion-de-los-programas">
-         Ejecución de los programas
-        </a>
-       </li>
-       <li class="toc-h5 nav-item toc-entry">
-        <a class="reference internal nav-link" href="#grid-match">
-         Grid Match
-        </a>
-       </li>
-       <li class="toc-h5 nav-item toc-entry">
-        <a class="reference internal nav-link" href="#topo-index">
-         Topo index
-        </a>
-       </li>
-       <li class="toc-h5 nav-item toc-entry">
-        <a class="reference internal nav-link" href="#id2">
-         TRIGRS
-        </a>
-       </li>
-       <li class="toc-h5 nav-item toc-entry">
-        <a class="reference internal nav-link" href="#propiedades-fisicas-del-suelo">
-         Propiedades físicas del suelo
-        </a>
-       </li>
-       <li class="toc-h5 nav-item toc-entry">
-        <a class="reference internal nav-link" href="#intensidad-del-escenario-de-lluvia-e-incrementos-de-tiempo">
-         Intensidad del escenario de lluvia e incrementos de tiempo
-        </a>
-       </li>
-       <li class="toc-h5 nav-item toc-entry">
-        <a class="reference internal nav-link" href="#archivos-de-entrada">
-         Archivos de entrada
-        </a>
-       </li>
-       <li class="toc-h5 nav-item toc-entry">
-        <a class="reference internal nav-link" href="#archivos-de-salida">
-         Archivos de salida
-        </a>
-       </li>
-       <li class="toc-h5 nav-item toc-entry">
-        <a class="reference internal nav-link" href="#otras-opciones-de-usuario">
-         Otras opciones de usuario
-        </a>
-       </li>
-       <li class="toc-h5 nav-item toc-entry">
-        <a class="reference internal nav-link" href="#visualizar-los-resultados">
-         Visualizar los resultados
-        </a>
-       </li>
-      </ul>
-     </li>
-    </ul>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#factor-detonante-sismo">
-   Factor detonante sismo
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#analisis-seudoestatico">
-     Análisis seudoestático
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#desplazamientos-permanentes">
-     Desplazamientos permanentes
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#modelos-probabilisticos">
-   Modelos probabilísticos
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#modelo-fosm-first-order-second-moment">
-     Modelo FOSM (
-     <em>
-      First Order Second Moment
-     </em>
-     )
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#ejemplo">
-       Ejemplo
-      </a>
-     </li>
-    </ul>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#referencias">
-   Referencias
-  </a>
- </li>
-</ul>
-
-    </nav>
 </div>
-    </div>
-    <div class="article row">
-        <div class="col pl-md-3 pl-lg-5 content-container">
-            <!-- Table of contents that is only displayed when printing the page -->
-            <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Métodos con base física</h1>
-                <!-- Table of contents -->
-                <div id="print-main-content">
-                    <div id="jb-print-toc">
-                        
-                        <div>
-                            <h2> Contents </h2>
-                        </div>
-                        <nav aria-label="Page">
-                            <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#factor-detonante-lluvia">
-   Factor detonante lluvia
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#modelo-shalstab">
-     Modelo SHALSTAB
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#python">
-       Python
-      </a>
-     </li>
-    </ul>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#modelo-trigrs">
-     Modelo TRIGRS
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#tutorial">
-       Tutorial
-      </a>
-      <ul class="nav section-nav flex-column">
-       <li class="toc-h5 nav-item toc-entry">
-        <a class="reference internal nav-link" href="#preparacion-de-los-mapas">
-         Preparación de los mapas
-        </a>
-       </li>
-       <li class="toc-h5 nav-item toc-entry">
-        <a class="reference internal nav-link" href="#ejecucion-de-los-programas">
-         Ejecución de los programas
-        </a>
-       </li>
-       <li class="toc-h5 nav-item toc-entry">
-        <a class="reference internal nav-link" href="#grid-match">
-         Grid Match
-        </a>
-       </li>
-       <li class="toc-h5 nav-item toc-entry">
-        <a class="reference internal nav-link" href="#topo-index">
-         Topo index
-        </a>
-       </li>
-       <li class="toc-h5 nav-item toc-entry">
-        <a class="reference internal nav-link" href="#id2">
-         TRIGRS
-        </a>
-       </li>
-       <li class="toc-h5 nav-item toc-entry">
-        <a class="reference internal nav-link" href="#propiedades-fisicas-del-suelo">
-         Propiedades físicas del suelo
-        </a>
-       </li>
-       <li class="toc-h5 nav-item toc-entry">
-        <a class="reference internal nav-link" href="#intensidad-del-escenario-de-lluvia-e-incrementos-de-tiempo">
-         Intensidad del escenario de lluvia e incrementos de tiempo
-        </a>
-       </li>
-       <li class="toc-h5 nav-item toc-entry">
-        <a class="reference internal nav-link" href="#archivos-de-entrada">
-         Archivos de entrada
-        </a>
-       </li>
-       <li class="toc-h5 nav-item toc-entry">
-        <a class="reference internal nav-link" href="#archivos-de-salida">
-         Archivos de salida
-        </a>
-       </li>
-       <li class="toc-h5 nav-item toc-entry">
-        <a class="reference internal nav-link" href="#otras-opciones-de-usuario">
-         Otras opciones de usuario
-        </a>
-       </li>
-       <li class="toc-h5 nav-item toc-entry">
-        <a class="reference internal nav-link" href="#visualizar-los-resultados">
-         Visualizar los resultados
-        </a>
-       </li>
-      </ul>
-     </li>
-    </ul>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#factor-detonante-sismo">
-   Factor detonante sismo
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#analisis-seudoestatico">
-     Análisis seudoestático
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#desplazamientos-permanentes">
-     Desplazamientos permanentes
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#modelos-probabilisticos">
-   Modelos probabilísticos
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#modelo-fosm-first-order-second-moment">
-     Modelo FOSM (
-     <em>
-      First Order Second Moment
-     </em>
-     )
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#ejemplo">
-       Ejemplo
-      </a>
-     </li>
-    </ul>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#referencias">
-   Referencias
-  </a>
- </li>
-</ul>
+              
+              
 
-                        </nav>
-                    </div>
-                </div>
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Métodos con base física</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
             </div>
-            <main id="main-content" role="main">
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#factor-detonante-lluvia">Factor detonante lluvia</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#modelo-shalstab">Modelo SHALSTAB</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#python">Python</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#modelo-trigrs">Modelo TRIGRS</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#tutorial">Tutorial</a><ul class="nav section-nav flex-column">
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#preparacion-de-los-mapas">Preparación de los mapas</a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#ejecucion-de-los-programas">Ejecución de los programas</a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#grid-match">Grid Match</a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#topo-index">Topo index</a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">TRIGRS</a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#propiedades-fisicas-del-suelo">Propiedades físicas del suelo</a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#intensidad-del-escenario-de-lluvia-e-incrementos-de-tiempo">Intensidad del escenario de lluvia e incrementos de tiempo</a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#archivos-de-entrada">Archivos de entrada</a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#archivos-de-salida">Archivos de salida</a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#otras-opciones-de-usuario">Otras opciones de usuario</a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#visualizar-los-resultados">Visualizar los resultados</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#factor-detonante-sismo">Factor detonante sismo</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#analisis-seudoestatico">Análisis seudoestático</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#desplazamientos-permanentes">Desplazamientos permanentes</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#modelos-probabilisticos">Modelos probabilísticos</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#modelo-fosm-first-order-second-moment">Modelo FOSM (<em>First Order Second Moment</em>)</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#ejemplo">Ejemplo</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#referencias">Referencias</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
                 
-              <div>
-                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
   <section class="tex2jax_ignore mathjax_ignore" id="metodos-con-base-fisica">
-<h1>Métodos con base física<a class="headerlink" href="#metodos-con-base-fisica" title="Permalink to this headline">#</a></h1>
+<h1>Métodos con base física<a class="headerlink" href="#metodos-con-base-fisica" title="Permalink to this heading">#</a></h1>
 <p>Los modelos con base física evalúan la ocurrencia de movimientos en masa en términos de factor de seguridad o probabilidades de ocurrencia, a través de modelos numéricos. Sin embargo existen diferentes aproximaciones a la física del problema con simplificaciones diferentes, por lo cual es fundamental utilizar el modelo que se ajuste a las necesidades o particularidades del área de estudio. Los métodos con base físisca son recomendables para áreas pequeñas a escalas detalladas, ya que requieren una gran cantidad de información de entrada, que se obtiene de ensayos de laboratorio o mediciones de campo. Por lo que la parametrización de los modelos puede ser complicada, en especial la distribución espacial de la profundidad del suelo, la cual juega un papel fundamental. Los modelos con base física permiten tener en consideración la complejidad de los factores detonantes (sismo y/o lluvia) y las características geomecánicas del terreno.</p>
 <section id="factor-detonante-lluvia">
-<h2>Factor detonante lluvia<a class="headerlink" href="#factor-detonante-lluvia" title="Permalink to this headline">#</a></h2>
+<h2>Factor detonante lluvia<a class="headerlink" href="#factor-detonante-lluvia" title="Permalink to this heading">#</a></h2>
 <p>El componente hidrológico de estos modelos explica el proceso de infiltración del agua en el suelo y el avance del frente húmedo o aumento de un nivel freático colgado. Para esto utilizan modelos de flujo estático horizontal o modelos de flujo transitorio vertical. Desde el componente geotécnico, la mayoría de modelos utilizan métodos de equilibrio límite de talud infinito. Algunos han incoporado modelos de dovelas que permiten análisis de superficies de falla circulares.</p>
 <p>Como parte de los modelos físicos una gran variedad de modelos hidrológicos se han utilizado considerando el flujo de agua en el suelo en estado estático o transitorio, y en condiciones saturadas o parcialmente saturadas, utilizando las ecuaciones de Richards para el flujo vertical y las ecuaciones de Darcy para el flujo lateral. Entre estos se encuentra TOPOG (O’Loughlin, 1986), TAPES (Moore et al., 1988), TOPMODEL (Beven &amp; Kirkby, 1979), GEOtop (Bertoldi &amp; Rigon, 2004), tRIBS (Ivanov et al., 2004), SHIA (Vélez 2001), y los modelos de Green-Ampt (1911), Pradel &amp; Raad (1993) e Iverson (2000). Por el contrario, los modelos geotécnicos utilizados son muy similares, generalmente utilizando el método talud infinito y análisis de equilibrio límite, suponiendo la superficie de falla paralela a la superficie del terreno y que la longitud de falla es mucho mayor que el espesor de la capa desplazada (Borga et al., 2002).</p>
 <figure class="align-default" id="hidrologico">
@@ -730,7 +458,7 @@ title="Print to PDF"
 </figcaption>
 </figure>
 <section id="modelo-shalstab">
-<h3>Modelo SHALSTAB<a class="headerlink" href="#modelo-shalstab" title="Permalink to this headline">#</a></h3>
+<h3>Modelo SHALSTAB<a class="headerlink" href="#modelo-shalstab" title="Permalink to this heading">#</a></h3>
 <p>El modelo SHALSTAB, desarrollado por Montgomery &amp; Dietrich, (1994), emplea el modelo hidrológico TOPOG (O’Loughlin, 1986) en condiciones de lluvia estacionaria para construir un mapa del patrón de la humedad basado en el área aferente a cada punto, la pendiente y la transmisividad del suelo. En el modelo la humedad del suelo es calculada como:</p>
 <p><span class="math notranslate nohighlight">\(W=\frac{Qa}{bTsinθ}\)</span></p>
 <p>Donde <span class="math notranslate nohighlight">\(Q\)</span> es la lluvia en condiciones estacionarias (<span class="math notranslate nohighlight">\(mm/d\)</span>), a es el área de drenaje (<span class="math notranslate nohighlight">\(m^2\)</span>), <span class="math notranslate nohighlight">\(b\)</span> es la longitud de cada celda (<span class="math notranslate nohighlight">\(m\)</span>), <span class="math notranslate nohighlight">\(T\)</span> es la transmisividad del suelo en condiciones saturadas (<span class="math notranslate nohighlight">\(m^2/\)</span>), <span class="math notranslate nohighlight">\(\theta\)</span> y  es la pendiente. Asumiendo que la transmisividad no varía con la profundidad, se puede entonces asumir:</p>
@@ -748,17 +476,27 @@ title="Print to PDF"
 <p>Y las celdas inestables en condiciones secas (<span class="math notranslate nohighlight">\(h/z_t=0\)</span>) se denominan incondicionalmente inestables y cumplen la siguiente condición:</p>
 <p><span class="math notranslate nohighlight">\(tanθ &gt;= tanϕ+\frac{C'}{ρ_sgz_tcos^2θ}\)</span></p>
 <section id="python">
-<h4>Python<a class="headerlink" href="#python" title="Permalink to this headline">#</a></h4>
+<h4>Python<a class="headerlink" href="#python" title="Permalink to this heading">#</a></h4>
 <p>Se deben inicialmente importar las librerías. En este caso se instalará la librería <em>Rasterio</em></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>pip install rasterio
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>pip<span class="w"> </span>install<span class="w"> </span>rasterio
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>^C
-<span class=" -Color -Color-Red">ERROR: Operation cancelled by user</span>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: rasterio in c:\users\edier\miniconda3\lib\site-packages (1.3.9)
+Requirement already satisfied: affine in c:\users\edier\miniconda3\lib\site-packages (from rasterio) (2.4.0)
+Requirement already satisfied: attrs in c:\users\edier\miniconda3\lib\site-packages (from rasterio) (23.1.0)
+Requirement already satisfied: certifi in c:\users\edier\miniconda3\lib\site-packages (from rasterio) (2023.11.17)
+Requirement already satisfied: click&gt;=4.0 in c:\users\edier\miniconda3\lib\site-packages (from rasterio) (8.1.6)
+Requirement already satisfied: cligj&gt;=0.5 in c:\users\edier\miniconda3\lib\site-packages (from rasterio) (0.7.2)
+Requirement already satisfied: numpy in c:\users\edier\miniconda3\lib\site-packages (from rasterio) (1.25.1)
+Requirement already satisfied: snuggs&gt;=1.4.1 in c:\users\edier\miniconda3\lib\site-packages (from rasterio) (1.4.7)
+Requirement already satisfied: click-plugins in c:\users\edier\miniconda3\lib\site-packages (from rasterio) (1.1.1)
+Requirement already satisfied: setuptools in c:\users\edier\miniconda3\lib\site-packages (from rasterio) (67.8.0)
+Requirement already satisfied: colorama in c:\users\edier\miniconda3\lib\site-packages (from click&gt;=4.0-&gt;rasterio) (0.4.6)
+Requirement already satisfied: pyparsing&gt;=2.1.6 in c:\users\edier\miniconda3\lib\site-packages (from snuggs&gt;=1.4.1-&gt;rasterio) (3.0.9)
 </pre></div>
 </div>
 </div>
@@ -784,7 +522,7 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/10_fisico_11_0.png" src="_images/10_fisico_11_0.png" />
+<img alt="_images/80bc161d6b48715c2d652319bacd78583f9676b33c49752c4610c98b0770790f.png" src="_images/80bc161d6b48715c2d652319bacd78583f9676b33c49752c4610c98b0770790f.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -798,7 +536,7 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/10_fisico_12_0.png" src="_images/10_fisico_12_0.png" />
+<img alt="_images/6a6cfaf8a4a2e41b4dd27856022c61416f2f93fa039f1debb308fbebe0b4911a.png" src="_images/6a6cfaf8a4a2e41b4dd27856022c61416f2f93fa039f1debb308fbebe0b4911a.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -813,7 +551,7 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/10_fisico_13_0.png" src="_images/10_fisico_13_0.png" />
+<img alt="_images/62c80fcf591406928df74b8883fd70f28e2a1a410b53a02d26ac87c100e08520.png" src="_images/62c80fcf591406928df74b8883fd70f28e2a1a410b53a02d26ac87c100e08520.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -827,7 +565,7 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/10_fisico_14_0.png" src="_images/10_fisico_14_0.png" />
+<img alt="_images/95ee1c0690df09a4320baaf279f4b6e2630c0de68829e928dc14aedaeef37dc3.png" src="_images/95ee1c0690df09a4320baaf279f4b6e2630c0de68829e928dc14aedaeef37dc3.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -841,7 +579,7 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/10_fisico_15_0.png" src="_images/10_fisico_15_0.png" />
+<img alt="_images/7de73d5568bc3a481e123104b570e48dad2c3bf20510cf6eb215949938447370.png" src="_images/7de73d5568bc3a481e123104b570e48dad2c3bf20510cf6eb215949938447370.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -855,10 +593,10 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.colorbar.Colorbar at 0x7f55ce326a50&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.colorbar.Colorbar at 0x2301c3d2390&gt;
 </pre></div>
 </div>
-<img alt="_images/10_fisico_16_1.png" src="_images/10_fisico_16_1.png" />
+<img alt="_images/a4ad09f4a09622c2304dabe072c76bd33d5502a140a09a942074c8135245cf61.png" src="_images/a4ad09f4a09622c2304dabe072c76bd33d5502a140a09a942074c8135245cf61.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -872,10 +610,10 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.colorbar.Colorbar at 0x7f55ccc24ad0&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.colorbar.Colorbar at 0x2301c44a290&gt;
 </pre></div>
 </div>
-<img alt="_images/10_fisico_17_1.png" src="_images/10_fisico_17_1.png" />
+<img alt="_images/2d2d44e8214d94c78fa31f6cbff1fa8034a5809d77bc63b8c9d5ea9c227641ab.png" src="_images/2d2d44e8214d94c78fa31f6cbff1fa8034a5809d77bc63b8c9d5ea9c227641ab.png" />
 </div>
 </div>
 <p>Para implementar en <em>Python</em> las ecuaciones del modelo Shalstab, se debe primero definir las constantes del peso unitario del agua, y la resolución espacial del DEM utilizado.</p>
@@ -921,7 +659,8 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/usr/local/lib/python3.7/dist-packages/ipykernel_launcher.py:19: RuntimeWarning: divide by zero encountered in true_divide
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>C:\Users\edier\AppData\Local\Temp\ipykernel_10932\3061725108.py:19: RuntimeWarning: divide by zero encountered in divide
+  Matq = (1000 * 0.01 * ks * espesor * np.cos(pendiente) * np.sin(pendiente)) * (dx / flujo) * ((peso / GammaW) * (1 - (np.tan(pendiente) / np.tan(friccion))) + cohesion / (GammaW * espesor * np.cos(pendiente)**2 * np.tan(friccion)))
 </pre></div>
 </div>
 </div>
@@ -935,10 +674,10 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.colorbar.Colorbar at 0x7f55cbf71350&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.colorbar.Colorbar at 0x2301ac2a290&gt;
 </pre></div>
 </div>
-<img alt="_images/10_fisico_23_1.png" src="_images/10_fisico_23_1.png" />
+<img alt="_images/976e78ce15bad64e517524c458aef8fcad52929422942384c439f1e1a79b88fa.png" src="_images/976e78ce15bad64e517524c458aef8fcad52929422942384c439f1e1a79b88fa.png" />
 </div>
 </div>
 <p>El segundo mapa que se obtiene es Matq, que representa el valor de lluvia (q) necesario para que fallen las celdas. Este valor no aplica para celdas incondicionalmente inestables o incondicionalmente estables, solo para las celdas potencialmente inestables, es decir que arrojaron valores de 4 y 3 en el mapa MatEst.</p>
@@ -950,10 +689,10 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.colorbar.Colorbar at 0x7f55cca4bf50&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.colorbar.Colorbar at 0x2301abd1950&gt;
 </pre></div>
 </div>
-<img alt="_images/10_fisico_25_1.png" src="_images/10_fisico_25_1.png" />
+<img alt="_images/30d67ecf611e13c70fa1d8da2b817d94a68434548696f5d52f9cbd1edaf05922.png" src="_images/30d67ecf611e13c70fa1d8da2b817d94a68434548696f5d52f9cbd1edaf05922.png" />
 </div>
 </div>
 <p>Para exportar los mapas se puede utilizar el siguiente código:</p>
@@ -993,16 +732,16 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.colorbar.Colorbar at 0x7f74a7a84250&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.colorbar.Colorbar at 0x23018a1b010&gt;
 </pre></div>
 </div>
-<img alt="_images/10_fisico_30_1.png" src="_images/10_fisico_30_1.png" />
+<img alt="_images/aa42efbb182b4ba8646e08e30cb21d3f9137daa739270db1c528d0a7c075ac08.png" src="_images/aa42efbb182b4ba8646e08e30cb21d3f9137daa739270db1c528d0a7c075ac08.png" />
 </div>
 </div>
 </section>
 </section>
 <section id="modelo-trigrs">
-<h3>Modelo TRIGRS<a class="headerlink" href="#modelo-trigrs" title="Permalink to this headline">#</a></h3>
+<h3>Modelo TRIGRS<a class="headerlink" href="#modelo-trigrs" title="Permalink to this heading">#</a></h3>
 <p>El modelo TRIGRS (Transient Rainfall Infiltration and Gridbased Slope-Stability) incorpora en su análisis el proceso de infiltración del agua lluvia y el cálculo del factor de seguridad. Este es un modelo con base física que evalúa la distribución temporal y espacial de movimientos en masa superficiales detonados por lluvia a través del cálculo de los cambios transitorios de la presión de poros y su incidencia en la variación del factor de seguridad, debido a la infiltración de la lluvia.</p>
 <figure class="align-default" id="trigrs">
 <a class="reference internal image-reference" href="https://i.pinimg.com/564x/a3/c5/84/a3c584d944d2f76dc92ddebe309c571e.jpg"><img alt="TRIGRS" src="https://i.pinimg.com/564x/a3/c5/84/a3c584d944d2f76dc92ddebe309c571e.jpg" style="width: 600px;" /></a>
@@ -1032,7 +771,7 @@ del suelo y <span class="math notranslate nohighlight">\(𝜓(𝑍,𝑡)\)</span
 </figcaption>
 </figure>
 <section id="tutorial">
-<h4>Tutorial<a class="headerlink" href="#tutorial" title="Permalink to this headline">#</a></h4>
+<h4>Tutorial<a class="headerlink" href="#tutorial" title="Permalink to this heading">#</a></h4>
 <p><em>Elaborado por Maria Isabel Arango</em>.</p>
 <p>Ingrese a la página web <a class="reference external" href="https://pubs.usgs.gov/of/2008/1159/downloads/">TRIGRS</a> y descargue TRIGRS de acuerdo a su sistema operativo. Descomprima el archivo .zip y ábralo. Adicionalmente, puede descargar el <a class="reference external" href="https://pubs.usgs.gov/of/2008/1159/downloads/pdf/OF08-1159.pdf">manual del usuario</a> donde encontrará toda la base teórica detrás del modelo, ilustraciones y un tutorial.</p>
 <p>Como verá, la carpeta TRIGRS contiene varias subcarpetas y archivos en formato <em>txt</em>. TRIGRS y sus programas complementarios (TopoIndex, GridMatch y UnitConvert) no funcionan con una interfaz, sino que se ejecutan en ventanas de entrada y salida simples. Cada programa funciona a través de un ejecutable (<em>exe</em>), los cuales están ubicados en la subcarpeta <em>bin”</em>. A su vez, cada ejecutable utiliza un archivo de inicialización que contiene los datos básicos necesarios para ejecutar el programa, así como los nombres de otros archivos de entrada.</p>
@@ -1052,7 +791,7 @@ del suelo y <span class="math notranslate nohighlight">\(𝜓(𝑍,𝑡)\)</span
 <li><p>Deben estar unidades metro-kilogramo-segundo</p></li>
 </ul>
 <section id="preparacion-de-los-mapas">
-<h5>Preparación de los mapas<a class="headerlink" href="#preparacion-de-los-mapas" title="Permalink to this headline">#</a></h5>
+<h5>Preparación de los mapas<a class="headerlink" href="#preparacion-de-los-mapas" title="Permalink to this heading">#</a></h5>
 <p>En la carpeta <a class="reference external" href="https://github.com/edieraristizabal/Libro_cartoGeotecnia/tree/master/data/arenosa">Mapas Base</a>, encontrará los siguientes archivos raster. Para descargar los archivos seleccionelo, cuando Github visualice dicho archivo en la parte superior derecha seleccione <em>Raw</em> y con el boton derecho <em>Save as…</em>. Guardelos como archivos ASCII eliminando la terminación <em>txt</em> que sale por defecto.</p>
 <ul class="simple">
 <li><p>dem_arenosa_clip: modelo de elevación digital</p></li>
@@ -1097,7 +836,7 @@ En caso de utilizar <em>ArcToolbox</em>, vaya a <em>Spatial Analysis &gt; Reclas
 <p>Convierta el raster reclasificado a formato ASCII (<em>Conversion Tools &gt; From Raster &gt; Raster to ASCII</em>). Guárdelo con el nombre <em>suelos_arenosa_reclass_clip.asc</em>. Ábralo con el editor de texto y revise que los parámetros coincidan con los del resto de mapas.</p>
 </section>
 <section id="ejecucion-de-los-programas">
-<h5>Ejecución de los programas<a class="headerlink" href="#ejecucion-de-los-programas" title="Permalink to this headline">#</a></h5>
+<h5>Ejecución de los programas<a class="headerlink" href="#ejecucion-de-los-programas" title="Permalink to this heading">#</a></h5>
 <p>Una vez tenga lista la información de entrada, debe ejecutar los programas auxiliares y finalmente TRIGRS, que se encuentran en la carpeta <em>bin</em>. Los programas auxiliares tienen como objetivo preparar la información ingresada y crear capas intermedias que son necesarias para el cálculo final. Estos programas deben ejecutarse siempre en el siguiente orden, ya que normalmente, los archivos de salida de uno son los archivos de entrada del siguiente.</p>
 <ul class="simple">
 <li><p>Unit Converter (Opcional): En caso de tener archivos en unidades distintas a las aceptadas por el modelo, este programa permite convertirlas (pfs a Pa, pies a metros, etc).</p></li>
@@ -1116,7 +855,7 @@ En caso de utilizar <em>ArcToolbox</em>, vaya a <em>Spatial Analysis &gt; Reclas
 <p>Dado que toda la información está en formato metro-kilogramo-segundo, no se ejecutará <em>Unit Converter</em>. Siga los siguientes pasos para ejecutar el resto de programas:</p>
 </section>
 <section id="grid-match">
-<h5>Grid Match<a class="headerlink" href="#grid-match" title="Permalink to this headline">#</a></h5>
+<h5>Grid Match<a class="headerlink" href="#grid-match" title="Permalink to this heading">#</a></h5>
 <p>Grid Match permite asegurarse que todos los archivos tipo ASCII con los que trabajará tienen las mismas dimensiones y no tienen condiciones que generen error. Estas condiciones incluyen también que un mapa tenga una celda nula en la misma ubicación donde otros mapas tienen información.</p>
 <ul class="simple">
 <li><p>Abra el archivo <em>gm_in.txt</em>. Los archivos de entrada tienen un formato de fácil interacción, donde cada parámetro está explicado en su parte superior. Los archivos ya vienen con información cargada a modo de ejemplo, así que usted debe modificar los parámetros según su caso de estudio. También debe separar con comas los parámetros tal cual están separadas sus explicaciones. (Por ejemplo, fíjese en la línea 3 que dice: rows, columns. Eso significa que en la línea 4 usted debe reemplazar el 10, 10 por las dimensiones del DEM con el que trabajará, con el número de filas separado por una coma del número de columnas. Los espacios son indiferentes, la coma designa la separación entre dos parámetros, y el punto es el separador de decimales).</p></li>
@@ -1141,7 +880,7 @@ En caso de utilizar <em>ArcToolbox</em>, vaya a <em>Spatial Analysis &gt; Reclas
 </ul>
 </section>
 <section id="topo-index">
-<h5>Topo index<a class="headerlink" href="#topo-index" title="Permalink to this headline">#</a></h5>
+<h5>Topo index<a class="headerlink" href="#topo-index" title="Permalink to this heading">#</a></h5>
 <p>Topo Index permite calcular los tamaños de matriz para TRIGRS y preparar datos de enrutamiento de escorrentía. Utiliza el DEM y las direcciones de flujo para determinar el orden correcto para los cálculos de enrutamiento de escorrentía y para calcular los factores de ponderación que determinan cómo se distribuye el exceso de agua a las celdas de las cuadrículas adyacentes.</p>
 <ul class="simple">
 <li><p>Abra el archivo txp_in.txt</p></li>
@@ -1225,7 +964,7 @@ En caso de utilizar <em>ArcToolbox</em>, vaya a <em>Spatial Analysis &gt; Reclas
 <p>Los números en paréntesis denotan el orden en el que se deberán ingresar estos archivos en el archivo de inicio de TRIGRS, que verá más adelante.</p>
 </section>
 <section id="id2">
-<h5>TRIGRS<a class="headerlink" href="#id2" title="Permalink to this headline">#</a></h5>
+<h5>TRIGRS<a class="headerlink" href="#id2" title="Permalink to this heading">#</a></h5>
 <p>TRIGRS se basa en la suposición de la infiltración unidimensional (únicamente hacia abajo) en un campo de flujo constante para determinar los cambios en la presión de poros en un modelo de talud infinito y la estabilidad de los suelos poco profundos durante las tormentas. TRIGRS incluye modelos para condiciones iniciales saturadas y no-saturadas. Para condiciones iniciales saturadas, cada simulación con TRIGRS analiza un único punto en el tiempo especificado por el usuario durante una secuencia de tormenta. Por lo tanto, el usuario ejecuta una serie de simulaciones para diferentes tiempos específicos utilizando TRIGRS para estudiar el historial de tiempo de inestabilidad de la ladera durante una secuencia de lluvia. Para condiciones iniciales no-saturadas, TRIGRS puede analizar una serie de tiempo completa durante una única simulación.</p>
 <p>Abra el archivo <em>tr_in.txt</em>. Este archivo contiene varios tipos de información que debemos ingresar:</p>
 <ul class="simple">
@@ -1325,7 +1064,7 @@ En caso de utilizar <em>ArcToolbox</em>, vaya a <em>Spatial Analysis &gt; Reclas
 </table>
 </section>
 <section id="propiedades-fisicas-del-suelo">
-<h5>Propiedades físicas del suelo<a class="headerlink" href="#propiedades-fisicas-del-suelo" title="Permalink to this headline">#</a></h5>
+<h5>Propiedades físicas del suelo<a class="headerlink" href="#propiedades-fisicas-del-suelo" title="Permalink to this heading">#</a></h5>
 <p>Las propiedades de las unidades del suelo se deben ingresar como lo muestran las líneas 9-11 del archivo <em>tr_in</em>. En la primera línea se debe ingresar el número que asignó a la unidad de suelo, y en la segunda y tercera línea están las propiedades del suelo correspondientes. En el archivo de inicio por defecto ya están creados los campos para dos unidades de suelo, sin embargo, si usted está trabajando con una zona de estudio que incluya más unidades, debe crear los campos para cada uno de forma consecutiva en los campos inferiores. En este taller trabajará con las dos unidades de suelo presentes en el raster que se le entregó. Recuerde que a la unidad de depósitos aluviales (POc1) se le asignó el número 1, y a los suelos residuales de Batolito Antioqueño (YAE1-YAF2), se les asignó el número 2. Ingrese los parámetros recomendados a continuación, los cuales no varían en ambas modelaciones (condición saturada y no saturada), excepto por el ultimo parámetro, alpha. Recuerde también conservar siempre las unidades Kg-m-s.</p>
 <table class="colwidths-auto table">
 <thead>
@@ -1380,7 +1119,7 @@ En caso de utilizar <em>ArcToolbox</em>, vaya a <em>Spatial Analysis &gt; Reclas
 </table>
 </section>
 <section id="intensidad-del-escenario-de-lluvia-e-incrementos-de-tiempo">
-<h5>Intensidad del escenario de lluvia e incrementos de tiempo<a class="headerlink" href="#intensidad-del-escenario-de-lluvia-e-incrementos-de-tiempo" title="Permalink to this headline">#</a></h5>
+<h5>Intensidad del escenario de lluvia e incrementos de tiempo<a class="headerlink" href="#intensidad-del-escenario-de-lluvia-e-incrementos-de-tiempo" title="Permalink to this heading">#</a></h5>
 <p>La siguiente figura muestra el registro de precipitación obtenido de un pluviómetro ubicado en la cuenca de La Arenosa el día del evento.</p>
 <figure class="align-default" id="lluvia">
 <a class="reference internal image-reference" href="https://i.pinimg.com/564x/0a/bf/a1/0abfa1b6cc96eac96fa242fc76cbfa47.jpg"><img alt="lluvia" src="https://i.pinimg.com/564x/0a/bf/a1/0abfa1b6cc96eac96fa242fc76cbfa47.jpg" style="width: 600px;" /></a>
@@ -1430,7 +1169,7 @@ En caso de utilizar <em>ArcToolbox</em>, vaya a <em>Spatial Analysis &gt; Reclas
 <p>En el caso de que la intensidad de precipitación no esté como un valor homogéneo en el espacio sino como mapas de intensidades, usted debe ingresar en los campos Cri(n) valores negativos (tantos valores como periodos de tiempo nper) para dar a entender que va a ingresar más adelante mapas de intensidad de precipitación.</p>
 </section>
 <section id="archivos-de-entrada">
-<h5>Archivos de entrada<a class="headerlink" href="#archivos-de-entrada" title="Permalink to this headline">#</a></h5>
+<h5>Archivos de entrada<a class="headerlink" href="#archivos-de-entrada" title="Permalink to this heading">#</a></h5>
 <p>En las siguientes líneas, debe ingresar las rutas de los archivos que entrada que TRIGRS le requiera. Recuerde que en la sección de ingreso de parámetros de computación, cuando una propiedad era heterogénea en el área de estudio, usted podía ingresar un valor negativo, que indica que los valores se deben leer de un raster. En caso de que la propiedad fuera homogénea para toda la zona de estudio, usted podía ingresar un valor positivo, que se tomaba como constante en todo el área.</p>
 <p>Ahora, cuando usted indique un valor negativo en la sección de parámetros de computación, debe ingresar la ruta del respectivo raster en la línea donde TRIGRS lo requiera. Cuando usted haya ingresado un valor positivo homogéneo para toda el área de estudio, en el lugar donde TRIGRS le requiera el mapa correspondiente, usted debe ingresar la palabra <em>none</em>, para indicar que es un valor homogéneo.</p>
 <ul class="simple">
@@ -1441,7 +1180,7 @@ En caso de utilizar <em>ArcToolbox</em>, vaya a <em>Spatial Analysis &gt; Reclas
 </ul>
 </section>
 <section id="archivos-de-salida">
-<h5>Archivos de salida<a class="headerlink" href="#archivos-de-salida" title="Permalink to this headline">#</a></h5>
+<h5>Archivos de salida<a class="headerlink" href="#archivos-de-salida" title="Permalink to this heading">#</a></h5>
 <p>En las siguientes líneas, debe especificar las opciones de los archivos de salida de TRIGRS.</p>
 <ul class="simple">
 <li><p>Debe especificar la carpeta donde desea que TRIGRS guarde los archivos de salida. Deje la línea en blanco si desea colocar los archivos en la misma carpeta donde está el archivo de programa ejecutable TRIGRS. En este caso, cree la carpeta Resultados dentro de la carpeta bin, y especifíquela como la carpeta donde desea que se guarden los archivos de salida. No olvide siempre terminar con <em>backslash</em> ()</p></li>
@@ -1453,7 +1192,7 @@ En caso de utilizar <em>ArcToolbox</em>, vaya a <em>Spatial Analysis &gt; Reclas
 </ul>
 </section>
 <section id="otras-opciones-de-usuario">
-<h5>Otras opciones de usuario<a class="headerlink" href="#otras-opciones-de-usuario" title="Permalink to this headline">#</a></h5>
+<h5>Otras opciones de usuario<a class="headerlink" href="#otras-opciones-de-usuario" title="Permalink to this heading">#</a></h5>
 <p>Existen otras opciones de usuario explicadas a continuación. Defina los valores para este ejercicio como se indica en paréntesis:</p>
 <ul class="simple">
 <li><p>Opción de usar una solución analítica para la porosidad rellenable permite al usuario elegir la opción “Solución analítica eficiente” que converge rápidamente para tiempos intermedios y posteriores, o una integración numérica para tiempos muy pequeños (T)</p></li>
@@ -1465,7 +1204,7 @@ Cuando termine de ingresar los parámetros del archivo de inicio, guarde los cam
 </ul>
 </section>
 <section id="visualizar-los-resultados">
-<h5>Visualizar los resultados<a class="headerlink" href="#visualizar-los-resultados" title="Permalink to this headline">#</a></h5>
+<h5>Visualizar los resultados<a class="headerlink" href="#visualizar-los-resultados" title="Permalink to this heading">#</a></h5>
 <p>Mientras que TRIGRS se ejecuta, aparecerá una ventana negra mostrando el avance de los cálculos. Dependiendo del tamaño del raster que esté analizando, este proceso podría tomar desde minutos hasta días. Cuando el proceso termina, la ventana se cierra, en caso de que no haya errores. En caso de que exista algún error con los mapas o el archivo de inicio, la ventana le mostrará de qué se trata el error y la línea que debe revisar en su archivo de inicio.
 Cuando terminen los cálculos, abra el archivo TrigrsLog.txt y examínelo.</p>
 <p>Abra la carpeta Resultados. Dentro de la carpeta se encuentran los siguientes archivos de salida:</p>
@@ -1510,10 +1249,10 @@ Cuando terminen los cálculos, abra el archivo TrigrsLog.txt y examínelo.</p>
 </section>
 </section>
 <section id="factor-detonante-sismo">
-<h2>Factor detonante sismo<a class="headerlink" href="#factor-detonante-sismo" title="Permalink to this headline">#</a></h2>
+<h2>Factor detonante sismo<a class="headerlink" href="#factor-detonante-sismo" title="Permalink to this heading">#</a></h2>
 <p>Existen diferentes métodos para evaluar la estabilidad de laderas ante sismos y estimar los desplazamientos inerciales permanentes. A continuación se presentarán el denominado análisis seudoestático y el análisis de desplazamientos permanentes.</p>
 <section id="analisis-seudoestatico">
-<h3>Análisis seudoestático<a class="headerlink" href="#analisis-seudoestatico" title="Permalink to this headline">#</a></h3>
+<h3>Análisis seudoestático<a class="headerlink" href="#analisis-seudoestatico" title="Permalink to this heading">#</a></h3>
 <p>El método seudoestático es una generalización del análisis de estabilidad por equilibrio límite, en el cual los efectos de los sismos son representados
 por una fuerza estática equivalente cuya magnitud es producto del coeficiente sísmico <em>k</em> y el peso de la masa que potencialmente se va a deslizar.
 Este método evalúa los efectos sísmicos como una fuerza permanente unidireccional, mediante la simulación del incremento de las fuerzas inerciales
@@ -1555,7 +1294,7 @@ unitario, correspondiente al grupo de importancia I.</p>
 <p><span class="math notranslate nohighlight">\(K_{ST}=k_h=0.8A_max\)</span></p>
 </section>
 <section id="desplazamientos-permanentes">
-<h3>Desplazamientos permanentes<a class="headerlink" href="#desplazamientos-permanentes" title="Permalink to this headline">#</a></h3>
+<h3>Desplazamientos permanentes<a class="headerlink" href="#desplazamientos-permanentes" title="Permalink to this heading">#</a></h3>
 <p>Este método ha dado útiles resultados modelando el comportamiento dinámico de las laderas a nivel regional, aunque no necesariamente predice
 los desplazamientos medidos, sino que establece un índice útil de cómo una ladera se podría comportar durante un evento sísmico.
 El método más conocido es el denominado método de Newmark. Múltiples variaciones del método de Newmark han sido propuestas para obtener resultados precisos en términos de desplazamientos al modelar rigurosamente la respuesta dinámica de la ladera. El método requiere
@@ -1572,10 +1311,10 @@ de Newmark a través de una regresión logarítmica estimada por Jibson:</p>
 </section>
 </section>
 <section id="modelos-probabilisticos">
-<h2>Modelos probabilísticos<a class="headerlink" href="#modelos-probabilisticos" title="Permalink to this headline">#</a></h2>
+<h2>Modelos probabilísticos<a class="headerlink" href="#modelos-probabilisticos" title="Permalink to this heading">#</a></h2>
 <p>En los enfoques aneriores, determinísticos, los parámetros se suponen constantes obteniendo como resultado único el factor de seguridad como índice de estabilidad. POr le contrario, en los enfoques prababilísticos los parámetros son variables por loq ue el resultado es uan distribución de probabilidad obteniendo como resultado el índice de confiabilidad y la probabilidad de ruptura. Para esto existen métodos como <em>Montecarlo</em>, <em>Estimativas puntuales</em> y el método FOSM. A continuación se describirá el método FOSM.</p>
 <section id="modelo-fosm-first-order-second-moment">
-<h3>Modelo FOSM (<em>First Order Second Moment</em>)<a class="headerlink" href="#modelo-fosm-first-order-second-moment" title="Permalink to this headline">#</a></h3>
+<h3>Modelo FOSM (<em>First Order Second Moment</em>)<a class="headerlink" href="#modelo-fosm-first-order-second-moment" title="Permalink to this heading">#</a></h3>
 <p>El método estadístico FOSM emplea la expansión de la serie de Taylor de primer orden para derivar el
 primer y segundo momento de variables de entrada aleatorias. De esta forma, para estimar indirectamente la probabilidad de
 falla se calcula el Índice de Confiabilidad, dado por la relación entre la media y la desviación estándar de una función de
@@ -1601,7 +1340,7 @@ Taylor.</p>
 igual a 1. Este índice expresa la confiabilidad del factor de seguridad en relación con la probabilidad de falla o ruptura.
 El método FOSM permite evaluar la variabilidad de cualquiera de los parámetros incluidos dentro del análisis.</p>
 <section id="ejemplo">
-<h4>Ejemplo<a class="headerlink" href="#ejemplo" title="Permalink to this headline">#</a></h4>
+<h4>Ejemplo<a class="headerlink" href="#ejemplo" title="Permalink to this heading">#</a></h4>
 <p>Tomado del Prof. George Fernandes Azevedo de la Universidad Federal do Maranhao (Brasil)</p>
 <figure class="align-default" id="fosm1">
 <a class="reference internal image-reference" href="https://i.pinimg.com/originals/01/e4/d3/01e4d38406a12108bbb53524528f6966.jpg"><img alt="FOSM1" src="https://i.pinimg.com/originals/01/e4/d3/01e4d38406a12108bbb53524528f6966.jpg" style="width: 600px;" /></a>
@@ -1637,7 +1376,7 @@ El método FOSM permite evaluar la variabilidad de cualquiera de los parámetros
 </section>
 </section>
 <section id="referencias">
-<h2>Referencias<a class="headerlink" href="#referencias" title="Permalink to this headline">#</a></h2>
+<h2>Referencias<a class="headerlink" href="#referencias" title="Permalink to this heading">#</a></h2>
 <span class="target" id="id3"></span></section>
 </section>
 
@@ -1653,7 +1392,7 @@ El método FOSM permite evaluar la variabilidad de cualquiera de los parámetros
             mode: "python"
         },
         kernelOptions: {
-            kernelName: "python3",
+            name: "python3",
             path: "./."
         },
         predefinedOutput: true
@@ -1661,50 +1400,137 @@ El método FOSM permite evaluar la variabilidad de cualquiera de los parámetros
     </script>
     <script>kernelName = 'python3'</script>
 
-              </div>
+                </article>
               
-            </main>
-            <footer class="footer-article noprint">
-                
-    <!-- Previous / next buttons -->
-<div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="09_estadistico.html" title="previous page">
-        <i class="fas fa-angle-left"></i>
-        <div class="prev-next-info">
-            <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Métodos basados en datos</p>
-        </div>
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  <!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="09_estadistico.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Métodos basados en datos</p>
+      </div>
     </a>
-    <a class='right-next' id="next-link" href="11_evaluacion.html" title="next page">
-    <div class="prev-next-info">
+    <a class="right-next"
+       href="11_evaluacion.html"
+       title="next page">
+      <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
         <p class="prev-next-title">Evaluación del modelo</p>
-    </div>
-    <i class="fas fa-angle-right"></i>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
     </a>
 </div>
-            </footer>
-        </div>
-    </div>
-    <div class="footer-content row">
-        <footer class="col footer"><p>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#factor-detonante-lluvia">Factor detonante lluvia</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#modelo-shalstab">Modelo SHALSTAB</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#python">Python</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#modelo-trigrs">Modelo TRIGRS</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#tutorial">Tutorial</a><ul class="nav section-nav flex-column">
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#preparacion-de-los-mapas">Preparación de los mapas</a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#ejecucion-de-los-programas">Ejecución de los programas</a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#grid-match">Grid Match</a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#topo-index">Topo index</a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">TRIGRS</a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#propiedades-fisicas-del-suelo">Propiedades físicas del suelo</a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#intensidad-del-escenario-de-lluvia-e-incrementos-de-tiempo">Intensidad del escenario de lluvia e incrementos de tiempo</a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#archivos-de-entrada">Archivos de entrada</a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#archivos-de-salida">Archivos de salida</a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#otras-opciones-de-usuario">Otras opciones de usuario</a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#visualizar-los-resultados">Visualizar los resultados</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#factor-detonante-sismo">Factor detonante sismo</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#analisis-seudoestatico">Análisis seudoestático</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#desplazamientos-permanentes">Desplazamientos permanentes</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#modelos-probabilisticos">Modelos probabilísticos</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#modelo-fosm-first-order-second-moment">Modelo FOSM (<em>First Order Second Moment</em>)</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#ejemplo">Ejemplo</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#referencias">Referencias</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
   
-    By Edier V. Aristizábal G.<br/>
-  
-      &copy; Copyright 2022.<br/>
-</p>
-        </footer>
-    </div>
+  <div class="footer-item">
     
+<p class="component-author">
+By Edier V. Aristizábal G.
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2022.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
 </div>
+          </footer>
+        
 
-
-      </div>
+      </main>
     </div>
+  </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+  <script src="_static/scripts/bootstrap.js?digest=365ca57ee442770a23c6"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=365ca57ee442770a23c6"></script>
 
-
+  <footer class="bd-footer">
+  </footer>
   </body>
 </html>

@@ -1,48 +1,60 @@
 
+
 <!DOCTYPE html>
 
-<html>
+
+<html lang="en" >
+
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
     <title>Movimientos en masa tipo flujos &#8212; Cartografía Geotécnica</title>
-    
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
   <!-- Loaded before other Sphinx assets -->
-  <link href="_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
-<link href="_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+  <link href="_static/styles/theme.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
 
-    
-  <link rel="stylesheet"
-    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+  
+  <link href="_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
 
     <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
-    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
-    
+    <link rel="stylesheet" type="text/css" href="_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=365ca57ee442770a23c6" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=365ca57ee442770a23c6" />
+  <script src="_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=365ca57ee442770a23c6"></script>
 
     <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
     <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="_static/doctools.js"></script>
     <script src="_static/clipboard.min.js"></script>
     <script src="_static/copybutton.js"></script>
-    <script src="_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
     <script src="_static/togglebutton.js"></script>
-    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script src="_static/design-tabs.js"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
 const thebe_selector = ".thebe,.cell"
@@ -50,61 +62,103 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '13_flujos';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Movimientos en masa en roca" href="14_roca.html" />
     <link rel="prev" title="Análisis del factor detonante" href="12_amenaza.html" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="None">
-    
-
-    <!-- Google Analytics -->
-    
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
-<!-- Checkboxes to toggle the left sidebar -->
-<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
-<label class="overlay overlay-navbar" for="__navigation">
-    <div class="visually-hidden">Toggle navigation sidebar</div>
-</label>
-<!-- Checkboxes to toggle the in-page toc -->
-<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
-<label class="overlay overlay-pagetoc" for="__page-toc">
-    <div class="visually-hidden">Toggle in-page Table of Contents</div>
-</label>
-<!-- Headers at the top -->
-<div class="announcement header-item noprint"></div>
-<div class="header header-item noprint"></div>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
 
-    
-    <div class="container-fluid" id="banner"></div>
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
 
-    
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
 
-    <div class="container-xl">
-      <div class="row">
-          
-<!-- Sidebar -->
-<div class="bd-sidebar noprint" id="site-navigation">
-    <div class="bd-sidebar__content">
-        <div class="bd-sidebar__top"><div class="navbar-brand-box">
-    <a class="navbar-brand text-wrap" href="index.html">
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
       
-        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+      <div class="bd-sidebar-primary bd-sidebar">
         
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="intro.html">
+  
+  
+  
+  
+  
+    
+    
       
-      
-      <img src="_static/logo.png" class="logo" alt="logo">
-      
-      
-      <h1 class="site-logo" id="site-title">Cartografía Geotécnica</h1>
-      
-    </a>
-</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
-  <i class="icon fas fa-search"></i>
-  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
-</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
-    <div class="bd-toc-item active">
+    
+    
+    <img src="_static/logo.png" class="logo__image only-light" alt="Cartografía Geotécnica - Home"/>
+    <script>document.write(`<img src="_static/logo.png" class="logo__image only-dark" alt="Cartografía Geotécnica - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
@@ -114,456 +168,249 @@ const thebe_selector_output = ".output, .cell_output"
             </li>
         </ul>
         <ul class="current nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="00_medialuna.html">
-   Media Luna (1954)
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="00_introduccion.html">
-   Introducción
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="01_normatividad.html">
-   Amenaza &amp; ordenamiento territorial
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="02_estadoarte.html">
-   Estado del arte
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="03_metodos.html">
-   Caracterización de movimientos en masa
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="04_susceptibilidad.html">
-   Susceptibilidad y amenaza
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="05_inventario.html">
-   Inventario de movimientos en masa
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="06_variables.html">
-   Variables condicionantes
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="07_detonante.html">
-   Factores detonantes
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="08_heuristico.html">
-   Métodos basados en el conocimiento
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="09_estadistico.html">
-   Métodos basados en datos
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="10_fisico.html">
-   Métodos con base física
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="11_evaluacion.html">
-   Evaluación del modelo
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="12_amenaza.html">
-   Análisis del factor detonante
-  </a>
- </li>
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
-   Movimientos en masa tipo flujos
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="14_roca.html">
-   Movimientos en masa en roca
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="15_python.html">
-   ANEXO: Python
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="00_medialuna.html">Media Luna (1954)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="00_introduccion.html">Introducción</a></li>
+<li class="toctree-l1"><a class="reference internal" href="01_normatividad.html">Amenaza &amp; ordenamiento territorial</a></li>
+<li class="toctree-l1"><a class="reference internal" href="02_estadoarte.html">Estado del arte</a></li>
+<li class="toctree-l1"><a class="reference internal" href="03_metodos.html">Caracterización de movimientos en masa</a></li>
+<li class="toctree-l1"><a class="reference internal" href="04_susceptibilidad.html">Susceptibilidad y amenaza</a></li>
+<li class="toctree-l1"><a class="reference internal" href="05_inventario.html">Inventario de movimientos en masa</a></li>
+<li class="toctree-l1"><a class="reference internal" href="06_variables.html">Variables condicionantes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="07_detonante.html">Factores detonantes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="08_heuristico.html">Métodos basados en el conocimiento</a></li>
+<li class="toctree-l1"><a class="reference internal" href="09_estadistico.html">Métodos basados en datos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="10_fisico.html">Métodos con base física</a></li>
+<li class="toctree-l1"><a class="reference internal" href="11_evaluacion.html">Evaluación del modelo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="12_amenaza.html">Análisis del factor detonante</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Movimientos en masa tipo flujos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="14_roca.html">Movimientos en masa en roca</a></li>
+<li class="toctree-l1"><a class="reference internal" href="15_python.html">ANEXO: Python</a></li>
+
+
 </ul>
 
     </div>
 </nav></div>
-        <div class="bd-sidebar__bottom">
-             <!-- To handle the deprecated key -->
-            
-            <div class="navbar_extra_footer">
-            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
-            </div>
-            
-        </div>
     </div>
-    <div id="rtd-footer-container"></div>
-</div>
-
-
-          
-
-
-          
-<!-- A tiny helper pixel to detect if we've scrolled -->
-<div class="sbt-scroll-pixel-helper"></div>
-<!-- Main content -->
-<div class="col py-0 content-container">
-    
-    <div class="header-article row sticky-top noprint">
-        
-
-
-
-<div class="col py-1 d-flex header-article-main">
-    <div class="header-article__left">
-        
-        <label for="__navigation"
-  class="headerbtn"
-  data-toggle="tooltip"
-data-placement="right"
-title="Toggle navigation"
->
   
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-bars"></i>
-  </span>
-
-</label>
-
-        
-    </div>
-    <div class="header-article__right">
-<div class="menu-dropdown menu-dropdown-launch-buttons">
-  <button class="headerbtn menu-dropdown__trigger"
-      aria-label="Launch interactive content">
-      <i class="fas fa-rocket"></i>
-  </button>
-  <div class="menu-dropdown__content">
-    <ul>
-      <li>
-        <a href="https://mybinder.org/v2/gh/edieraristizabal/Libro_cartoGeotecnia/master?urlpath=tree/docs/13_flujos.ipynb"
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Launch on Binder"
->
   
-
-<span class="headerbtn__icon-container">
-  
-    <img src="_static/images/logo_binder.svg">
-  </span>
-<span class="headerbtn__text-container">Binder</span>
-</a>
-
-      </li>
-      
-    </ul>
+  <div class="sidebar-primary-items__end sidebar-primary__section">
   </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/edieraristizabal/Libro_cartoGeotecnia" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/edieraristizabal/Libro_cartoGeotecnia/issues/new?title=Issue%20on%20page%20%2F13_flujos.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
 </div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/13_flujos.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
 
 <button onclick="toggleFullScreen()"
-  class="headerbtn"
-  data-toggle="tooltip"
-data-placement="bottom"
-title="Fullscreen mode"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
 >
   
 
-<span class="headerbtn__icon-container">
+<span class="btn__icon-container">
   <i class="fas fa-expand"></i>
   </span>
 
 </button>
 
-<div class="menu-dropdown menu-dropdown-repository-buttons">
-  <button class="headerbtn menu-dropdown__trigger"
-      aria-label="Source repositories">
-      <i class="fab fa-github"></i>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
   </button>
-  <div class="menu-dropdown__content">
-    <ul>
-      <li>
-        <a href="https://github.com/edieraristizabal/Libro_cartoGeotecnia"
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Source repository"
->
-  
+`);
+</script>
 
-<span class="headerbtn__icon-container">
-  <i class="fab fa-github"></i>
-  </span>
-<span class="headerbtn__text-container">repository</span>
-</a>
-
-      </li>
-      
-      <li>
-        <a href="https://github.com/edieraristizabal/Libro_cartoGeotecnia/issues/new?title=Issue%20on%20page%20%2F13_flujos.html&body=Your%20issue%20content%20here."
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Open an issue"
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-lightbulb"></i>
-  </span>
-<span class="headerbtn__text-container">open issue</span>
-</a>
-
-      </li>
-      
-    </ul>
-  </div>
-</div>
-
-<div class="menu-dropdown menu-dropdown-download-buttons">
-  <button class="headerbtn menu-dropdown__trigger"
-      aria-label="Download this page">
-      <i class="fas fa-download"></i>
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
   </button>
-  <div class="menu-dropdown__content">
-    <ul>
-      <li>
-        <a href="_sources/13_flujos.ipynb"
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Download source file"
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-file"></i>
-  </span>
-<span class="headerbtn__text-container">.ipynb</span>
-</a>
-
-      </li>
-      
-      <li>
-        
-<button onclick="printPdf(this)"
-  class="headerbtn"
-  data-toggle="tooltip"
-data-placement="left"
-title="Print to PDF"
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-file-pdf"></i>
-  </span>
-<span class="headerbtn__text-container">.pdf</span>
-</button>
-
-      </li>
-      
-    </ul>
-  </div>
-</div>
-<label for="__page-toc"
-  class="headerbtn headerbtn-page-toc"
-  
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-list"></i>
-  </span>
-
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
 </label>
-
+</div></div>
+      
     </div>
+  
 </div>
-
-<!-- Table of contents -->
-<div class="col-md-3 bd-toc show noprint">
-    <div class="tocsection onthispage pt-5 pb-3">
-        <i class="fas fa-list"></i> Contents
-    </div>
-    <nav id="bd-toc-nav" aria-label="Page">
-        <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#flow-r">
-   Flow-R
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#tutorial">
-     Tutorial
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#working-directories">
-       <em>
-        Working directories
-       </em>
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#ingresar-los-datos">
-       Ingresar los datos
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#source-areas">
-       <em>
-        Source areas
-       </em>
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#propagation">
-       <em>
-        Propagation
-       </em>
-      </a>
-     </li>
-    </ul>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#r-avaflow">
-   r-avaflow
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#id5">
-     Tutorial
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#recomendaciones">
-       Recomendaciones
-      </a>
-     </li>
-    </ul>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#referencias">
-   Referencias
-  </a>
- </li>
-</ul>
-
-    </nav>
 </div>
-    </div>
-    <div class="article row">
-        <div class="col pl-md-3 pl-lg-5 content-container">
-            <!-- Table of contents that is only displayed when printing the page -->
-            <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Movimientos en masa tipo flujos</h1>
-                <!-- Table of contents -->
-                <div id="print-main-content">
-                    <div id="jb-print-toc">
-                        
-                        <div>
-                            <h2> Contents </h2>
-                        </div>
-                        <nav aria-label="Page">
-                            <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#flow-r">
-   Flow-R
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#tutorial">
-     Tutorial
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#working-directories">
-       <em>
-        Working directories
-       </em>
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#ingresar-los-datos">
-       Ingresar los datos
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#source-areas">
-       <em>
-        Source areas
-       </em>
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#propagation">
-       <em>
-        Propagation
-       </em>
-      </a>
-     </li>
-    </ul>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#r-avaflow">
-   r-avaflow
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#id5">
-     Tutorial
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#recomendaciones">
-       Recomendaciones
-      </a>
-     </li>
-    </ul>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#referencias">
-   Referencias
-  </a>
- </li>
-</ul>
+              
+              
 
-                        </nav>
-                    </div>
-                </div>
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Movimientos en masa tipo flujos</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
             </div>
-            <main id="main-content" role="main">
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#flow-r">Flow-R</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tutorial">Tutorial</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#working-directories"><em>Working directories</em></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#ingresar-los-datos">Ingresar los datos</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#source-areas"><em>Source areas</em></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#propagation"><em>Propagation</em></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#r-avaflow">r-avaflow</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">Tutorial</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#recomendaciones">Recomendaciones</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#referencias">Referencias</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
                 
-              <div>
-                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
   <section class="tex2jax_ignore mathjax_ignore" id="movimientos-en-masa-tipo-flujos">
-<h1>Movimientos en masa tipo flujos<a class="headerlink" href="#movimientos-en-masa-tipo-flujos" title="Permalink to this headline">#</a></h1>
+<h1>Movimientos en masa tipo flujos<a class="headerlink" href="#movimientos-en-masa-tipo-flujos" title="Permalink to this heading">#</a></h1>
 <p>Aunque las avenidas torrenciales han sido un fenómeno común en Colombia, los estudios realizados al respecto son escasos. Probablemente una de las razones está asociada a la falta de un consenso con respecto a clasificación y terminología de fenómenos tipo flujos torrenciales que permita caracterizar adecuadamente qué son las avenidas torrenciales. La literatura técnica en inglés utiliza términos como <em>flash flood</em>, <em>debris flood</em>, <em>debris torrent</em> y <em>debris flow</em> para una gran cantidad de fenómenos de mezcla de agua y sedimentos que se transportan a lo largo de un cauce. Entre tanto en español existen términos como inundación súbita, avenida torrencial e incluso avalanchas para designar este tipo de fenómenos.</p>
 <p>En Colombia las avenidas torrenciales son entendidas como movimientos en masa o como crecientes súbitas, fenómenos aparentemente muy diferentes que implica el uso de métodos con enfoques diferentes. INGEOMINAS (2001) define las avenidas torrenciales como fenómenos de remoción en masa donde el agua de una corriente aumenta considerablemente su volumen por el transporte de material solido que ha caído a su cauce desde las laderas adyacentes. En este mismo sentido, Castro (1999) propone establecer el uso del término avenidas torrenciales como un flujo de escombros canalizado. La Guía para la Evaluación de Amenazas por Movimientos en Masa en la Región Andina (PMA-GCA, 2007) define las avenidas torrenciales como flujos de detritos (<em>debris flow</em>) de acuerdo con la definición de Hungr et al (2001). Por otro lado, en el marco de los Planes de Ordenación y Manejo de Cuencas (POMCA) las avenidas torrenciales son entendidas como inundaciones de tipo fluvial rápidas o torrenciales. La Guía Técnica para la Incorporación de la Gestión del Riesgo en los POMCA define las avenidas torrenciales como crecientes súbitas que por las condiciones geomorfológicas de la cuenca están compuestas por un flujo de agua con alto contenido de materiales de arrastre, con un gran potencial destructivo debido a su alta velocidad (MADS, 2014). El Fondo de Prevención y Atención de Emergencias de la ciudad de Bogotá (FOPAE) define las avenidas torrenciales como sinónimo de inundaciones rápidas generadas por crecientes que ocurren de manera repentina debido a la alta pendiente del río o la quebrada y su cuenca, donde en ocasiones se produce el arrastre de una gran cantidad de material como detritos (FOPAE, 2011).</p>
 <p>Estas dos miradas sobre las avenidas torrenciales se reflejan en la <em>Guía Metodológica para la Evaluación de la Amenaza por Movimientos en Masa en Suelo Rural</em> del Servicio Geológico Colombiano (SGC). En esta guía las avenidas torrenciales se consideran equivalentes a los flujos de detritos y flujos de lodos descritos por el PMA-CGA (2007), pero adopta la definición de la guía de los POMCA como procesos tipo flujo que incluye eventos generados sobre ríos y quebradas de alta montaña y en cuencas con características geomorfológicas que favorecen la alta acumulación de sedimentos sobre el cauce, cambios drásticos en el gradiente del afluente, alta densidad de drenaje y eventos de precipitación (MADS &amp; UNAL, 2013).</p>
@@ -602,10 +449,21 @@ title="Print to PDF"
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_html">
+        <iframe
+            width="400"
+            height="300"
+            src="https://www.youtube.com/embed/0ENe7wDKP6I"
+            frameborder="0"
+            allowfullscreen
+            
+        ></iframe>
+        </div></div>
 </div>
 <p>Actualmente existe una gran variedad de modelos que permiten evaluar la propagación de un volumen de material a lo largo de terreno. En términos de modelos con base física, estos  difieren en el grado de complejidad d la reología del flujo y la cantidad de parámetros requeridos. A continuación se presentan dos modelos que constrastan. El modelo <em>Flow-R</em>, que requiere solo el modelo digital del terreno, y el modelo <em>r.ava.flow</em>, el cual tiene la capacidad de modelar diferentes tipos de flujos de 1, 2 ó 3 fases.</p>
 <section id="flow-r">
-<h2>Flow-R<a class="headerlink" href="#flow-r" title="Permalink to this headline">#</a></h2>
+<h2>Flow-R<a class="headerlink" href="#flow-r" title="Permalink to this heading">#</a></h2>
 <p><a class="reference external" href="https://www.flow-r.org/">Flow-R</a> (Flow path assessment of gravitational hazards at a Regional scale) es un modelo empirico disitribuido para la evaluacion de la susceptibilidad por flujos a escala regional, desarrollado por <span id="id1">Horton <em>et al.</em> [<a class="reference internal" href="#id65" title="P. Horton, M. Jaboyedoff, B. Rudaz, and M. Zimmermann. Flow-r, a model for susceptibility mapping of debris flows and other gravitational hazards at a regional scale. Natural Hazards and Earth System Sciences, 13(4):869–885, 2013. URL: https://nhess.copernicus.org/articles/13/869/2013/, doi:10.5194/nhess-13-869-2013.">2013</a>]</span> de la Universidad de Laussane. Flow-R presenta un acercamiento simplificado sin una gran exigencia de parametros.</p>
 <figure class="align-default" id="id2">
 <a class="reference internal image-reference" href="https://www.researchgate.net/profile/Michel-Jaboyedoff/publication/258806561/figure/fig4/AS:614112920887296&#64;1523427338200/Illustration-of-the-4-different-layers-of-processing-of-the-propagation-and-their_Q320.jpg"><img alt="Flow-R" src="https://www.researchgate.net/profile/Michel-Jaboyedoff/publication/258806561/figure/fig4/AS:614112920887296&#64;1523427338200/Illustration-of-the-4-different-layers-of-processing-of-the-propagation-and-their_Q320.jpg" style="width: 400px;" /></a>
@@ -621,7 +479,7 @@ title="Print to PDF"
 </figcaption>
 </figure>
 <section id="tutorial">
-<h3>Tutorial<a class="headerlink" href="#tutorial" title="Permalink to this headline">#</a></h3>
+<h3>Tutorial<a class="headerlink" href="#tutorial" title="Permalink to this heading">#</a></h3>
 <p><em>Elaborado por Maria Isabel Arango</em></p>
 <p>El modelo Flow-R se puede utilizar para modelar:</p>
 <ul class="simple">
@@ -630,7 +488,7 @@ title="Print to PDF"
 </ul>
 <p>El modelo que utiliza Flow-R para determinar las fuentes de flujos es un método heurístico basado en índices. Ya que exsiten otras herramientas que se describen en el presente libro; en esta guía solo se utilizará el componente de propagación. Por lo que para modelar utilizaremos solamente un modelo de elevación digital (<a class="reference external" href="https://github.com/edieraristizabal/Libro_cartoGeotecnia/blob/master/data/arenosa/dem_arenosa_clip.asc?raw=true">DEM</a>) y un mapa de las fuentes o <a class="reference external" href="https://raw.githubusercontent.com/edieraristizabal/Libro_cartoGeotecnia/master/data/arenosa/release.asc?raw=true">movimientos en masa</a> a propagar de la cuenca de la quebrada La Arenosa en el municipio de San Carlos (Antioquia).</p>
 <section id="working-directories">
-<h4><em>Working directories</em><a class="headerlink" href="#working-directories" title="Permalink to this headline">#</a></h4>
+<h4><em>Working directories</em><a class="headerlink" href="#working-directories" title="Permalink to this heading">#</a></h4>
 <p>Para ingresar la información al programa, se debe crear primero el proyecto y las carpetas en las cuales se almacenarán los datos de entrada y de salida. Siga los siguientes pasos:</p>
 <ul class="simple">
 <li><p>Cree en su computador la carpeta <em>La Arenosa FlowR</em>. Dentro de ella, cree dos carpetas: una que se llame <em>Datos</em> y otra que se llame <em>Resultados</em>.</p></li>
@@ -639,7 +497,7 @@ title="Print to PDF"
 </ul>
 </section>
 <section id="ingresar-los-datos">
-<h4>Ingresar los datos<a class="headerlink" href="#ingresar-los-datos" title="Permalink to this headline">#</a></h4>
+<h4>Ingresar los datos<a class="headerlink" href="#ingresar-los-datos" title="Permalink to this heading">#</a></h4>
 <ul class="simple">
 <li><p>Seleccione en la pestaña de la parte superior de la interface Tools &gt; Format Data &gt; Import Data. Seleccione el archivo <em>DEM_Arenosa.asc</em>. Le aparecerá una advertencia mostrando el tipo de información que entiende el modelo &gt; OK.</p></li>
 <li><p>En la ventana siguiente, debe seleccionar el tipo de información que está ingresando. En este caso, seleccione la primera opción (DEM). Asígnele un nombre al DEM y seleccione para este caso la zona de proyección UTM 18N, que corresponde al noroccidente de Colombia.</p></li>
@@ -652,12 +510,12 @@ title="Print to PDF"
 </ul>
 </section>
 <section id="source-areas">
-<h4><em>Source areas</em><a class="headerlink" href="#source-areas" title="Permalink to this headline">#</a></h4>
+<h4><em>Source areas</em><a class="headerlink" href="#source-areas" title="Permalink to this heading">#</a></h4>
 <p>En esta parte se va a calcular la propagación del área fuentes definidas como zonas inestables que se propagarán en forma de flujo. Para esto, utilizará una fuente elaborada para este ejercicio, pero qu eno corresponde  aun caso real. Dado que la única información necesaria para el cálculo de la propagación de flujos son el DEM y las fuentes predeterminadas, en la parte inferior izquierda <em>Source areas</em> ingrese estas dos capas únicamente. En la primera columna debe ingresar el tipo de información (<em>DEM</em>, <em>Predefined sources</em>), en la segunda columna el nombre del raster (estos corresponde a los nombres asignados al ingresar las capas), y en la tercera debe ingresar los criterios de lectura del archivo, <em>avove_0000m</em> para el DEM y <em>boolean</em> para las fuentes, respectivamente.</p>
 <p>En la parte inferior <em>Source value</em> deje seleccionada la opción <em>Binary (0/1)</em>, ya que en este caso estamos trabajando con una mapa de fuentes tipo binario, donde celdas con valor de 0 es no movimientos en masa y celdas con valor 1 son movimientos en masa para propagar.</p>
 </section>
 <section id="propagation">
-<h4><em>Propagation</em><a class="headerlink" href="#propagation" title="Permalink to this headline">#</a></h4>
+<h4><em>Propagation</em><a class="headerlink" href="#propagation" title="Permalink to this heading">#</a></h4>
 <p>En el panel derecho de la interfaz <em>Propagation</em> seleccione la pestaña <em>Propagation calculation</em>. Sobre la parte derecha se encuentran dos opciones <em>Sum of probabilities</em> y <em>Connected areas</em> que le brindan resultados adicionales. Para este ejemplo no las seleccione.</p>
 <p>Posteriormente se deben ingresar todos los parámetros de los algoritmos para el cálculo de la dirección de propagación, extensión del flujo, y la metodología a usar para realizar los cálculos. Estos parámetros se describen a continuación:</p>
 <p><strong>Calculation method &gt; Source areas selection</strong>: Se refiere al criterio a utilizar a la hora seleccionar cuáles celdas consideradas como áreas fuentes se utilizarán para el cálculo de la propagación.</p>
@@ -684,7 +542,7 @@ title="Print to PDF"
 </section>
 </section>
 <section id="r-avaflow">
-<h2>r-avaflow<a class="headerlink" href="#r-avaflow" title="Permalink to this headline">#</a></h2>
+<h2>r-avaflow<a class="headerlink" href="#r-avaflow" title="Permalink to this heading">#</a></h2>
 <p>r.avaflow es un modelo abierto y libre, desarrollado por <span id="id3">Mergili <em>et al.</em> [<a class="reference internal" href="#id67" title="Martin Mergili, Jan Thomas Fischer, Julia Krenn, and Shiva P. Pudasaini. R.avaflow v1, an advanced open-source computational framework for the propagation and interaction of two-phase mass flows. Geoscientific Model Development, 10:553-569, 2 2017. doi:10.5194/gmd-10-553-2017.">2017</a>]</span>, para simular la dinámica de flujos rápidos, que incluye avalanchas y flujos de escombros. El modelo se soporta en un ambiente SIG, que permite modelar una gran variedad de escenarios, pero sin embargo temben permite modelar escenarios con unminimo de datos. Como mínimo se requiere sólo un modelo de elevación digital y un mapa con los espesores del área fuente en mapas raster formato <em>ASCII</em>. El modelo permite simular flujos con reologias diferentes: una fase, dos fases, y mezcla; ademas permite incorporar la erosión del flujo e incorporación de material a lo largo del canal. r.avaflow también permite incorporar en la modelación hidrografas de flujos variados.</p>
 <p>Como resultado el modelo arroja la distribución espacial de la altura del flujo, velocidades y presiones, asi como tiempos de llegada e hidrógrafas en puntos de control especificados en el modelo.</p>
 <figure class="align-default" id="id4">
@@ -694,7 +552,7 @@ title="Print to PDF"
 </figcaption>
 </figure>
 <section id="id5">
-<h3>Tutorial<a class="headerlink" href="#id5" title="Permalink to this headline">#</a></h3>
+<h3>Tutorial<a class="headerlink" href="#id5" title="Permalink to this heading">#</a></h3>
 <p><em>Elaborado por Juan Diego Torres, Luisa Fernanda Cardona, y Daissy Herrera</em></p>
 <p>En este tutorial se utilizará la versión para windows r.avaflow.direct, la cual posee una interfaz que facilita el ingreso de los parámetros al modelo. Se puede acceder a esta interfaz mediante <a class="reference external" href="https://www.landslidemodels.org/r.avaflow/direct.php">https://www.landslidemodels.org/r.avaflow/direct.php</a>.</p>
 <p>Adicionalmente se debe contar como mínimo con un modelo de elevacion digital formato <em>ASCII</em>, en este caso utilizaremos <a class="reference external" href="https://github.com/edieraristizabal/Libro_cartoGeotecnia/blob/master/data/arenosa/DEM_Arenosa_Clip.asc?raw=true">La Arenosa</a>, y un archivo con las celdas fuentes que se deslizan y la profundidad, también en formato <em>ASCII</em>, para este caso denominado <a class="reference external" href="https://github.com/edieraristizabal/Libro_cartoGeotecnia/blob/master/data/arenosa/release.asc?raw=true">release</a>. También se puede ingresar el área del depósito generado por el flujo, de tal forma que se pueda evaluar la capacidad de predicción del modelo.</p>
@@ -743,7 +601,7 @@ title="Print to PDF"
 <li><p>En _plots podremos observar el avance espacial y de perfil del flujo en los diferentes saltos de tiempo, de forma que se observa claramente su evolución en el tiempo, gráfica de altura máxima de flujo, entre otros.</p></li>
 </ul>
 <section id="recomendaciones">
-<h4>Recomendaciones<a class="headerlink" href="#recomendaciones" title="Permalink to this headline">#</a></h4>
+<h4>Recomendaciones<a class="headerlink" href="#recomendaciones" title="Permalink to this heading">#</a></h4>
 <ul class="simple">
 <li><p>Almacenar r.avaflow.exe y los archivos generados por la interfaz de parámetros y comando en la carpeta de descargas.</p></li>
 <li><p>Asegurarse de añadir un frontslash (/) al final de la dirección que indica la ubicación de los archivos del caso.</p></li>
@@ -758,7 +616,7 @@ title="Print to PDF"
 </section>
 </section>
 <section id="referencias">
-<h2>Referencias<a class="headerlink" href="#referencias" title="Permalink to this headline">#</a></h2>
+<h2>Referencias<a class="headerlink" href="#referencias" title="Permalink to this heading">#</a></h2>
 <div class="docutils container" id="id6">
 <dl class="citation">
 <dt class="label" id="id65"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
@@ -784,7 +642,7 @@ title="Print to PDF"
             mode: "python"
         },
         kernelOptions: {
-            kernelName: "python3",
+            name: "python3",
             path: "./."
         },
         predefinedOutput: true
@@ -792,50 +650,118 @@ title="Print to PDF"
     </script>
     <script>kernelName = 'python3'</script>
 
-              </div>
+                </article>
               
-            </main>
-            <footer class="footer-article noprint">
-                
-    <!-- Previous / next buttons -->
-<div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="12_amenaza.html" title="previous page">
-        <i class="fas fa-angle-left"></i>
-        <div class="prev-next-info">
-            <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Análisis del factor detonante</p>
-        </div>
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  <!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="12_amenaza.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Análisis del factor detonante</p>
+      </div>
     </a>
-    <a class='right-next' id="next-link" href="14_roca.html" title="next page">
-    <div class="prev-next-info">
+    <a class="right-next"
+       href="14_roca.html"
+       title="next page">
+      <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
         <p class="prev-next-title">Movimientos en masa en roca</p>
-    </div>
-    <i class="fas fa-angle-right"></i>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
     </a>
 </div>
-            </footer>
-        </div>
-    </div>
-    <div class="footer-content row">
-        <footer class="col footer"><p>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#flow-r">Flow-R</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tutorial">Tutorial</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#working-directories"><em>Working directories</em></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#ingresar-los-datos">Ingresar los datos</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#source-areas"><em>Source areas</em></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#propagation"><em>Propagation</em></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#r-avaflow">r-avaflow</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">Tutorial</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#recomendaciones">Recomendaciones</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#referencias">Referencias</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
   
-    By Edier V. Aristizábal G.<br/>
-  
-      &copy; Copyright 2022.<br/>
-</p>
-        </footer>
-    </div>
+  <div class="footer-item">
     
+<p class="component-author">
+By Edier V. Aristizábal G.
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2022.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
 </div>
+          </footer>
+        
 
-
-      </div>
+      </main>
     </div>
+  </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+  <script src="_static/scripts/bootstrap.js?digest=365ca57ee442770a23c6"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=365ca57ee442770a23c6"></script>
 
-
+  <footer class="bd-footer">
+  </footer>
   </body>
 </html>

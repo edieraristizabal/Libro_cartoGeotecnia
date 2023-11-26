@@ -1,48 +1,60 @@
 
+
 <!DOCTYPE html>
 
-<html>
+
+<html lang="en" >
+
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
     <title>Evaluación del modelo &#8212; Cartografía Geotécnica</title>
-    
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
   <!-- Loaded before other Sphinx assets -->
-  <link href="_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
-<link href="_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+  <link href="_static/styles/theme.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
 
-    
-  <link rel="stylesheet"
-    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+  
+  <link href="_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
 
     <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
-    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
-    
+    <link rel="stylesheet" type="text/css" href="_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=365ca57ee442770a23c6" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=365ca57ee442770a23c6" />
+  <script src="_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=365ca57ee442770a23c6"></script>
 
     <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
     <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="_static/doctools.js"></script>
     <script src="_static/clipboard.min.js"></script>
     <script src="_static/copybutton.js"></script>
-    <script src="_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
     <script src="_static/togglebutton.js"></script>
-    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script src="_static/design-tabs.js"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
 const thebe_selector = ".thebe,.cell"
@@ -52,61 +64,103 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '11_evaluacion';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Análisis del factor detonante" href="12_amenaza.html" />
     <link rel="prev" title="Métodos con base física" href="10_fisico.html" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="None">
-    
-
-    <!-- Google Analytics -->
-    
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
-<!-- Checkboxes to toggle the left sidebar -->
-<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
-<label class="overlay overlay-navbar" for="__navigation">
-    <div class="visually-hidden">Toggle navigation sidebar</div>
-</label>
-<!-- Checkboxes to toggle the in-page toc -->
-<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
-<label class="overlay overlay-pagetoc" for="__page-toc">
-    <div class="visually-hidden">Toggle in-page Table of Contents</div>
-</label>
-<!-- Headers at the top -->
-<div class="announcement header-item noprint"></div>
-<div class="header header-item noprint"></div>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
 
-    
-    <div class="container-fluid" id="banner"></div>
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
 
-    
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
 
-    <div class="container-xl">
-      <div class="row">
-          
-<!-- Sidebar -->
-<div class="bd-sidebar noprint" id="site-navigation">
-    <div class="bd-sidebar__content">
-        <div class="bd-sidebar__top"><div class="navbar-brand-box">
-    <a class="navbar-brand text-wrap" href="index.html">
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
       
-        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+      <div class="bd-sidebar-primary bd-sidebar">
         
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="intro.html">
+  
+  
+  
+  
+  
+    
+    
       
-      
-      <img src="_static/logo.png" class="logo" alt="logo">
-      
-      
-      <h1 class="site-logo" id="site-title">Cartografía Geotécnica</h1>
-      
-    </a>
-</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
-  <i class="icon fas fa-search"></i>
-  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
-</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
-    <div class="bd-toc-item active">
+    
+    
+    <img src="_static/logo.png" class="logo__image only-light" alt="Cartografía Geotécnica - Home"/>
+    <script>document.write(`<img src="_static/logo.png" class="logo__image only-dark" alt="Cartografía Geotécnica - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
@@ -116,514 +170,250 @@ const thebe_selector_output = ".output, .cell_output"
             </li>
         </ul>
         <ul class="current nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="00_medialuna.html">
-   Media Luna (1954)
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="00_introduccion.html">
-   Introducción
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="01_normatividad.html">
-   Amenaza &amp; ordenamiento territorial
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="02_estadoarte.html">
-   Estado del arte
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="03_metodos.html">
-   Caracterización de movimientos en masa
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="04_susceptibilidad.html">
-   Susceptibilidad y amenaza
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="05_inventario.html">
-   Inventario de movimientos en masa
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="06_variables.html">
-   Variables condicionantes
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="07_detonante.html">
-   Factores detonantes
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="08_heuristico.html">
-   Métodos basados en el conocimiento
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="09_estadistico.html">
-   Métodos basados en datos
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="10_fisico.html">
-   Métodos con base física
-  </a>
- </li>
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
-   Evaluación del modelo
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="12_amenaza.html">
-   Análisis del factor detonante
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="13_flujos.html">
-   Movimientos en masa tipo flujos
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="14_roca.html">
-   Movimientos en masa en roca
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="15_python.html">
-   ANEXO: Python
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="00_medialuna.html">Media Luna (1954)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="00_introduccion.html">Introducción</a></li>
+<li class="toctree-l1"><a class="reference internal" href="01_normatividad.html">Amenaza &amp; ordenamiento territorial</a></li>
+<li class="toctree-l1"><a class="reference internal" href="02_estadoarte.html">Estado del arte</a></li>
+<li class="toctree-l1"><a class="reference internal" href="03_metodos.html">Caracterización de movimientos en masa</a></li>
+<li class="toctree-l1"><a class="reference internal" href="04_susceptibilidad.html">Susceptibilidad y amenaza</a></li>
+<li class="toctree-l1"><a class="reference internal" href="05_inventario.html">Inventario de movimientos en masa</a></li>
+<li class="toctree-l1"><a class="reference internal" href="06_variables.html">Variables condicionantes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="07_detonante.html">Factores detonantes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="08_heuristico.html">Métodos basados en el conocimiento</a></li>
+<li class="toctree-l1"><a class="reference internal" href="09_estadistico.html">Métodos basados en datos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="10_fisico.html">Métodos con base física</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Evaluación del modelo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="12_amenaza.html">Análisis del factor detonante</a></li>
+<li class="toctree-l1"><a class="reference internal" href="13_flujos.html">Movimientos en masa tipo flujos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="14_roca.html">Movimientos en masa en roca</a></li>
+<li class="toctree-l1"><a class="reference internal" href="15_python.html">ANEXO: Python</a></li>
+
+
 </ul>
 
     </div>
 </nav></div>
-        <div class="bd-sidebar__bottom">
-             <!-- To handle the deprecated key -->
-            
-            <div class="navbar_extra_footer">
-            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
-            </div>
-            
-        </div>
     </div>
-    <div id="rtd-footer-container"></div>
-</div>
-
-
-          
-
-
-          
-<!-- A tiny helper pixel to detect if we've scrolled -->
-<div class="sbt-scroll-pixel-helper"></div>
-<!-- Main content -->
-<div class="col py-0 content-container">
-    
-    <div class="header-article row sticky-top noprint">
-        
-
-
-
-<div class="col py-1 d-flex header-article-main">
-    <div class="header-article__left">
-        
-        <label for="__navigation"
-  class="headerbtn"
-  data-toggle="tooltip"
-data-placement="right"
-title="Toggle navigation"
->
   
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-bars"></i>
-  </span>
-
-</label>
-
-        
-    </div>
-    <div class="header-article__right">
-<div class="menu-dropdown menu-dropdown-launch-buttons">
-  <button class="headerbtn menu-dropdown__trigger"
-      aria-label="Launch interactive content">
-      <i class="fas fa-rocket"></i>
-  </button>
-  <div class="menu-dropdown__content">
-    <ul>
-      <li>
-        <a href="https://mybinder.org/v2/gh/edieraristizabal/Libro_cartoGeotecnia/master?urlpath=tree/docs/11_evaluacion.ipynb"
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Launch on Binder"
->
   
-
-<span class="headerbtn__icon-container">
-  
-    <img src="_static/images/logo_binder.svg">
-  </span>
-<span class="headerbtn__text-container">Binder</span>
-</a>
-
-      </li>
-      
-    </ul>
+  <div class="sidebar-primary-items__end sidebar-primary__section">
   </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/edieraristizabal/Libro_cartoGeotecnia" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/edieraristizabal/Libro_cartoGeotecnia/issues/new?title=Issue%20on%20page%20%2F11_evaluacion.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
 </div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/11_evaluacion.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
 
 <button onclick="toggleFullScreen()"
-  class="headerbtn"
-  data-toggle="tooltip"
-data-placement="bottom"
-title="Fullscreen mode"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
 >
   
 
-<span class="headerbtn__icon-container">
+<span class="btn__icon-container">
   <i class="fas fa-expand"></i>
   </span>
 
 </button>
 
-<div class="menu-dropdown menu-dropdown-repository-buttons">
-  <button class="headerbtn menu-dropdown__trigger"
-      aria-label="Source repositories">
-      <i class="fab fa-github"></i>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
   </button>
-  <div class="menu-dropdown__content">
-    <ul>
-      <li>
-        <a href="https://github.com/edieraristizabal/Libro_cartoGeotecnia"
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Source repository"
->
-  
+`);
+</script>
 
-<span class="headerbtn__icon-container">
-  <i class="fab fa-github"></i>
-  </span>
-<span class="headerbtn__text-container">repository</span>
-</a>
-
-      </li>
-      
-      <li>
-        <a href="https://github.com/edieraristizabal/Libro_cartoGeotecnia/issues/new?title=Issue%20on%20page%20%2F11_evaluacion.html&body=Your%20issue%20content%20here."
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Open an issue"
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-lightbulb"></i>
-  </span>
-<span class="headerbtn__text-container">open issue</span>
-</a>
-
-      </li>
-      
-    </ul>
-  </div>
-</div>
-
-<div class="menu-dropdown menu-dropdown-download-buttons">
-  <button class="headerbtn menu-dropdown__trigger"
-      aria-label="Download this page">
-      <i class="fas fa-download"></i>
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
   </button>
-  <div class="menu-dropdown__content">
-    <ul>
-      <li>
-        <a href="_sources/11_evaluacion.ipynb"
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Download source file"
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-file"></i>
-  </span>
-<span class="headerbtn__text-container">.ipynb</span>
-</a>
-
-      </li>
-      
-      <li>
-        
-<button onclick="printPdf(this)"
-  class="headerbtn"
-  data-toggle="tooltip"
-data-placement="left"
-title="Print to PDF"
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-file-pdf"></i>
-  </span>
-<span class="headerbtn__text-container">.pdf</span>
-</button>
-
-      </li>
-      
-    </ul>
-  </div>
-</div>
-<label for="__page-toc"
-  class="headerbtn headerbtn-page-toc"
-  
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-list"></i>
-  </span>
-
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
 </label>
-
+</div></div>
+      
     </div>
+  
 </div>
-
-<!-- Table of contents -->
-<div class="col-md-3 bd-toc show noprint">
-    <div class="tocsection onthispage pt-5 pb-3">
-        <i class="fas fa-list"></i> Contents
-    </div>
-    <nav id="bd-toc-nav" aria-label="Page">
-        <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#desempeno-y-prediccion">
-   Desempeño y predicción
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#validacion-cruzada">
-   Validación cruzada
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#matriz-de-confusion">
-   Matriz de confusión
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#false-positive-rate">
-     <em>
-      False positive rate
-     </em>
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#true-negative-rate">
-     <em>
-      True negative rate
-     </em>
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#false-negative-rate">
-     <em>
-      False negative rate
-     </em>
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#true-positive-rate">
-     <em>
-      True positive rate
-     </em>
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#accuracy">
-     <em>
-      Accuracy
-     </em>
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#f-measure">
-     <em>
-      F-measure
-     </em>
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#curva-roc">
-   Curva ROC
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#python">
-   <em>
-    Python
-   </em>
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#id3">
-     Validación cruzada
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#desempeno-del-modelo">
-     Desempeño del modelo
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#capacidad-de-prediccion">
-     Capacidad de predicción
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#referencias">
-   Referencias
-  </a>
- </li>
-</ul>
-
-    </nav>
 </div>
-    </div>
-    <div class="article row">
-        <div class="col pl-md-3 pl-lg-5 content-container">
-            <!-- Table of contents that is only displayed when printing the page -->
-            <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Evaluación del modelo</h1>
-                <!-- Table of contents -->
-                <div id="print-main-content">
-                    <div id="jb-print-toc">
-                        
-                        <div>
-                            <h2> Contents </h2>
-                        </div>
-                        <nav aria-label="Page">
-                            <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#desempeno-y-prediccion">
-   Desempeño y predicción
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#validacion-cruzada">
-   Validación cruzada
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#matriz-de-confusion">
-   Matriz de confusión
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#false-positive-rate">
-     <em>
-      False positive rate
-     </em>
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#true-negative-rate">
-     <em>
-      True negative rate
-     </em>
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#false-negative-rate">
-     <em>
-      False negative rate
-     </em>
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#true-positive-rate">
-     <em>
-      True positive rate
-     </em>
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#accuracy">
-     <em>
-      Accuracy
-     </em>
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#f-measure">
-     <em>
-      F-measure
-     </em>
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#curva-roc">
-   Curva ROC
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#python">
-   <em>
-    Python
-   </em>
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#id3">
-     Validación cruzada
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#desempeno-del-modelo">
-     Desempeño del modelo
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#capacidad-de-prediccion">
-     Capacidad de predicción
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#referencias">
-   Referencias
-  </a>
- </li>
-</ul>
+              
+              
 
-                        </nav>
-                    </div>
-                </div>
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Evaluación del modelo</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
             </div>
-            <main id="main-content" role="main">
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#desempeno-y-prediccion">Desempeño y predicción</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#validacion-cruzada">Validación cruzada</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#matriz-de-confusion">Matriz de confusión</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#false-positive-rate"><em>False positive rate</em></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#true-negative-rate"><em>True negative rate</em></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#false-negative-rate"><em>False negative rate</em></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#true-positive-rate"><em>True positive rate</em></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#accuracy"><em>Accuracy</em></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#f-measure"><em>F-measure</em></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#curva-roc">Curva ROC</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#python"><em>Python</em></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Validación cruzada</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#desempeno-del-modelo">Desempeño del modelo</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#capacidad-de-prediccion">Capacidad de predicción</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#referencias">Referencias</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
                 
-              <div>
-                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
   <section class="tex2jax_ignore mathjax_ignore" id="evaluacion-del-modelo">
-<h1>Evaluación del modelo<a class="headerlink" href="#evaluacion-del-modelo" title="Permalink to this headline">#</a></h1>
+<h1>Evaluación del modelo<a class="headerlink" href="#evaluacion-del-modelo" title="Permalink to this heading">#</a></h1>
 <p>Tanto los modelos heurísticos, estadísticos o con base física son simplemente simplificaciones y aproximaciones a la realidad, la cual es mucho mas compleja y guarda elementos que desconocemos. Es por eso que debemos evaluar que tanto de aquella realidad estamos realmente representando. Para esto inicicialmente debemos establecer las siguientes definiciones:</p>
 <ul class="simple">
 <li><p><strong>Exactitud</strong> (<em>accuracy</em>): se refiere al grado de qué tan cerca está la medida o valor mapeado o clase de un mapa a su valor verdadero o clase en el campo.</p></li>
@@ -640,7 +430,7 @@ title="Print to PDF"
 </figure>
 <p>Existen dos tipos de incertidumbre asociada a los modelos. La incertidumbre aleatoria que se refiere a la variabilidad que conocemos. Está implicita en muchas de las variables que incorporamos dentro de los modelos. Esta incertidumbre puede ser incorporada en nuestro análisis, y es precisamente la que tratamos de evaluar. Pero es importante tener en cuenta que existe la incertidumbre epistémica, la cual está asociada al desconocimiento o los limitantes que tenemos para describir dichos fenómenos físicos que estamos modelando. Debido precisamente a que se refire aquellos elementos que aun desconocemos, no puede entonces evaluarse o incorporarse directamente en los modelos.</p>
 <section id="desempeno-y-prediccion">
-<h2>Desempeño y predicción<a class="headerlink" href="#desempeno-y-prediccion" title="Permalink to this headline">#</a></h2>
+<h2>Desempeño y predicción<a class="headerlink" href="#desempeno-y-prediccion" title="Permalink to this heading">#</a></h2>
 <p>La aceptación de un modelo debe responder al menos a tres criterios:</p>
 <ul class="simple">
 <li><p>Su adecuación (conceptual y matemáticamente) en describir el comportamiento del sistema</p></li>
@@ -650,7 +440,7 @@ title="Print to PDF"
 <p>De esta forma la evaluación de un modelo debe ser revisada contra la información usada para construir el modelo, la cual se refiere a la bondad del ajuste del modelo, y responde a la pregunta ¿qué tan bien el modelo se desempeña?. Pero también debe evaluarse el modelo contra el <em>futuro</em>, y que responde a la pregunta ¿qué tan bien el modelo predice?, y se refiere a la habilidad del modelo para predecir, en este caso, la ocurrencia de futuros deslizamientos.</p>
 </section>
 <section id="validacion-cruzada">
-<h2>Validación cruzada<a class="headerlink" href="#validacion-cruzada" title="Permalink to this headline">#</a></h2>
+<h2>Validación cruzada<a class="headerlink" href="#validacion-cruzada" title="Permalink to this heading">#</a></h2>
 <p>Como se menciona anteriormente la evaluación del modelo se debe realizar en dos campos, en términos del desempeño y en términos de la capacidad de predicción. Las mas compleja de estas evaluaciones se refiere a la capacidad de predicción, ya que sólo la ocurrencia de nuevos eventos a lo largo del tiempo puede determinar la capacidad de predicción de nuestro modelo. Pero precisamente la evaluación del desempeño, como de la predicción, se requieren al momento de construir el modelo.</p>
 <p>Para esto existen diferentes estrategias de partición de los datos que nos permiten obtener estas evaluaciones. Esta técnica se denomina validación cruzada y se refiere a un método de remuestreo que utiliza diferentes porciones de los datos para entrenar y evaluar un modelo en diferentes iteracciones. Esta técnica se puede utilizar tanto para la partición de datos espacialmente, es decir utilizar un área especifica para entrenar el modelo y evaluar su desempeño, y otra área de la zona de estudio, para evaluar la capacidad de predicción. O es tambien posible la partición temporal, es decir utilizar los datos en un rango de tiempo para entrenar el modelo y evaluar el desempeño del modelo, y utilizar otro rango de tiempo, generalmente posterior al inicial, para evaluar la capacidad de predicción. Para la evaluación de modelos de susceptibilidad por movimientos en masa se utiliza la primera de estas estrategias, partición espacial; sin embargo dicha partición no se realiza generalmente en áreas, ya que posiblemente existan diferencias entre ambas áreas en el mecanismo que gobierna el proceso, por lo tanto el error aumenta pero debido a que el modelo construido no representa el mecanismo del área donde se va a evaluar. De esta forma la partición de los datos se realiza aleatoriamente sobre toda el área de estudio.</p>
 <figure class="align-default" id="cross-validation">
@@ -662,7 +452,7 @@ title="Print to PDF"
 <p>No existe un porcentaje o radio de separación unico utilizado, pero los porcentajes mas comunes utilizados están entre 80:20 y 70:30, lo cual significa 80% de los datos para entrenamiento o construcción del modelo, y el 20% restante para evaluar la capacidad de predicción.</p>
 </section>
 <section id="matriz-de-confusion">
-<h2>Matriz de confusión<a class="headerlink" href="#matriz-de-confusion" title="Permalink to this headline">#</a></h2>
+<h2>Matriz de confusión<a class="headerlink" href="#matriz-de-confusion" title="Permalink to this heading">#</a></h2>
 <p>Tanto para el desempeño como para la capacidad de predicción se utilizan las mismas métricas de evaluación, solo que se especifica si se refiere al desempeño del modelo o la capacidad de predicción. Generalmente, las métricas para el desempeño del modelo presentan mejores valores comparado con la capacidad de predicción. Y esto se debe a que el desempeño se evalúa con datos que el modelo conoce y a los cuales se ajustó, mientras que los datos que evaluan la capacidad de predicción no han sido conocidos por el modelo, y precisamente entre las dos métricas, la que generalmente se presenta al final de los procedimientos es la capacidad de predicción. La evaluación del desempeño del modelo corresponde a un paso interno que permite al modelador ajustar los parámetros del modelo.</p>
 <p>Para la evaluación de los modelos de susceptibildiad por movimientos en masa se utilizan diferentes métricas:</p>
 <ul class="simple">
@@ -681,33 +471,33 @@ title="Print to PDF"
 <p>Considerando que el mayor interes en los mapas de susceptibilidad corresponde a identificar aquellas áreas potencialmente inestables, generalmente son mas importantes las celdas inestables, es decir los verdaderos positivos y falsos positivos. Por lo tanto, se debe ser cuidadoso con las métricas utilizadas, ya que  esto puede llevar a errores en este tipo de modelos que son por naturaleza desbalanceados. Un modelo muy malo puede tener valores de <em>tp</em> muy altos simplemente asignándole valores de inestable a todas las celdas de la cuenca. Esto arroja un modelo con un desempeño y capacidad de predicción del 100%, sin embargo si se revisan los falsos positivos, es decir los errores por sobre estimación, estos también van a ser cercanos al 100%. Entonces un buen modelo es aquel que identifica las areas inestables, altos valores de <em>tp</em>, y al mismo tiempo valores bajos de <em>fp</em>. Pero la realidad señala que el aumento de los <em>tp</em> lleva consigo el aumento de los <em>fp</em>, por lo tanto un buen modelo debe encontrar el mejor equilibrio entre ambas métricas.</p>
 <p>A partir de esta matriz se construye una serie de métricas que permite evaluar el modelo:</p>
 <section id="false-positive-rate">
-<h3><em>False positive rate</em><a class="headerlink" href="#false-positive-rate" title="Permalink to this headline">#</a></h3>
+<h3><em>False positive rate</em><a class="headerlink" href="#false-positive-rate" title="Permalink to this heading">#</a></h3>
 <p>Tambien conocido como <strong>error tipo I</strong>, y explica la capacidad que tiene el modelo de equivocarse entre las celdas estables.</p>
 </section>
 <section id="true-negative-rate">
-<h3><em>True negative rate</em><a class="headerlink" href="#true-negative-rate" title="Permalink to this headline">#</a></h3>
+<h3><em>True negative rate</em><a class="headerlink" href="#true-negative-rate" title="Permalink to this heading">#</a></h3>
 <p>Tambien conocido como <strong>specificity</strong> o <strong>recall</strong> y explica la capacidad que tiene el modelo de acertar entre las celdas inestables.</p>
 </section>
 <section id="false-negative-rate">
-<h3><em>False negative rate</em><a class="headerlink" href="#false-negative-rate" title="Permalink to this headline">#</a></h3>
+<h3><em>False negative rate</em><a class="headerlink" href="#false-negative-rate" title="Permalink to this heading">#</a></h3>
 <p>También denominado <em>error tipo II</em>, y explica la capacidad que tiene el modelo de equivocarse entre las celdas inestables.</p>
 </section>
 <section id="true-positive-rate">
-<h3><em>True positive rate</em><a class="headerlink" href="#true-positive-rate" title="Permalink to this headline">#</a></h3>
+<h3><em>True positive rate</em><a class="headerlink" href="#true-positive-rate" title="Permalink to this heading">#</a></h3>
 <p>También conocido como <em>precision</em>, y explica la capacidad que tiene el modelo de acertar entre las celdas estables</p>
 </section>
 <section id="accuracy">
-<h3><em>Accuracy</em><a class="headerlink" href="#accuracy" title="Permalink to this headline">#</a></h3>
+<h3><em>Accuracy</em><a class="headerlink" href="#accuracy" title="Permalink to this heading">#</a></h3>
 <p>Se refiere a que también el modelo clasifica, tanto celdas estables como inestables, con respecto al total de celdas, es decir el porcentaje de celdas que acierta el modelo. Esta métrica también es afectada por el desbalanceo original que representa el problema. Es decir, que puede arrojar valores muy altos, aunque el modelo sea mediocre, ya que los verdaderos negativo <em>tn</em> tienden a ser muy altos, es facil predecir los <em>no</em>, y esto incrementa el valor del <em>accuracy</em>.</p>
 </section>
 <section id="f-measure">
-<h3><em>F-measure</em><a class="headerlink" href="#f-measure" title="Permalink to this headline">#</a></h3>
+<h3><em>F-measure</em><a class="headerlink" href="#f-measure" title="Permalink to this heading">#</a></h3>
 <p>Esta métrica trata de compensar el desbalanceo y se estima como.</p>
 <p><span class="math notranslate nohighlight">\(F-measure=\frac{2*Recall*Precision}{Recall+Precision}\)</span></p>
 </section>
 </section>
 <section id="curva-roc">
-<h2>Curva ROC<a class="headerlink" href="#curva-roc" title="Permalink to this headline">#</a></h2>
+<h2>Curva ROC<a class="headerlink" href="#curva-roc" title="Permalink to this heading">#</a></h2>
 <p>La matriz de contingencia puede llevarse a un espacio bidimensional que compara los <em>True positive rate</em> o <em>Sensitivity</em> en el eje <em>y</em> contra el <em>False positive rate</em> en el eje <em>x</em>, que se estima como <span class="math notranslate nohighlight">\(1-Specificity\)</span>. Esto nos permite comparar el desempeño de diferentes modelos. El modelo con el mejor desempeño teorico posible corresponde a la ezquina superior derecha del gráfico, ya que representa el punto con el 100% de aciertos contra el 0% de equivocaciones. La distancia euclidiana a dicho punto correpsonde a la <strong>Distancia a la clasificación perfecta (r)</strong>, por lo tanto los modelos con una menor distancia presentan un mejor desempeño.</p>
 <p><span class="math notranslate nohighlight">\(r=\sqrt{fpr^2 + (1-tpr)^2}\)</span></p>
 <figure class="align-default" id="r">
@@ -751,15 +541,26 @@ title="Print to PDF"
 </figure>
 </section>
 <section id="python">
-<h2><em>Python</em><a class="headerlink" href="#python" title="Permalink to this headline">#</a></h2>
+<h2><em>Python</em><a class="headerlink" href="#python" title="Permalink to this heading">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>pip install rasterio
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>pip<span class="w"> </span>install<span class="w"> </span>rasterio
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>^C
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: rasterio in c:\users\edier\miniconda3\lib\site-packages (1.3.9)
+Requirement already satisfied: affine in c:\users\edier\miniconda3\lib\site-packages (from rasterio) (2.4.0)
+Requirement already satisfied: attrs in c:\users\edier\miniconda3\lib\site-packages (from rasterio) (23.1.0)
+Requirement already satisfied: certifi in c:\users\edier\miniconda3\lib\site-packages (from rasterio) (2023.11.17)
+Requirement already satisfied: click&gt;=4.0 in c:\users\edier\miniconda3\lib\site-packages (from rasterio) (8.1.6)
+Requirement already satisfied: cligj&gt;=0.5 in c:\users\edier\miniconda3\lib\site-packages (from rasterio) (0.7.2)
+Requirement already satisfied: numpy in c:\users\edier\miniconda3\lib\site-packages (from rasterio) (1.25.1)
+Requirement already satisfied: snuggs&gt;=1.4.1 in c:\users\edier\miniconda3\lib\site-packages (from rasterio) (1.4.7)
+Requirement already satisfied: click-plugins in c:\users\edier\miniconda3\lib\site-packages (from rasterio) (1.1.1)
+Requirement already satisfied: setuptools in c:\users\edier\miniconda3\lib\site-packages (from rasterio) (67.8.0)
+Requirement already satisfied: colorama in c:\users\edier\miniconda3\lib\site-packages (from click&gt;=4.0-&gt;rasterio) (0.4.6)
+Requirement already satisfied: pyparsing&gt;=2.1.6 in c:\users\edier\miniconda3\lib\site-packages (from snuggs&gt;=1.4.1-&gt;rasterio) (3.0.9)
 </pre></div>
 </div>
 </div>
@@ -792,10 +593,43 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(910801,)
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">CPLE_HttpResponseError</span><span class="g g-Whitespace">                    </span>Traceback (most recent call last)
+<span class="nn">File rasterio\\_base.pyx:310,</span> in <span class="ni">rasterio._base.DatasetBase.__init__</span><span class="nt">()</span>
+
+<span class="nn">File rasterio\\_base.pyx:221,</span> in <span class="ni">rasterio._base.open_dataset</span><span class="nt">()</span>
+
+<span class="nn">File rasterio\\_err.pyx:221,</span> in <span class="ni">rasterio._err.exc_wrap_pointer</span><span class="nt">()</span>
+
+<span class="ne">CPLE_HttpResponseError</span>: HTTP response code: 404
+
+<span class="n">During</span> <span class="n">handling</span> <span class="n">of</span> <span class="n">the</span> <span class="n">above</span> <span class="n">exception</span><span class="p">,</span> <span class="n">another</span> <span class="n">exception</span> <span class="n">occurred</span><span class="p">:</span>
+
+<span class="ne">RasterioIOError</span><span class="g g-Whitespace">                           </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">3</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">raster</span> <span class="o">=</span> <span class="n">rio</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s1">&#39;https://github.com/edieraristizabal/Libro_cartoGeotecnia/blob/master/data/Inventario_MenM.tif?raw=true&#39;</span><span class="p">)</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="n">inventario</span><span class="o">=</span><span class="n">raster</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="n">raster_mask</span> <span class="o">=</span> <span class="n">rio</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s1">&#39;https://github.com/edieraristizabal/Libro_cartoGeotecnia/blob/master/data/Pendiente.tif?raw=true&#39;</span><span class="p">)</span>
+
+<span class="nn">File ~\miniconda3\Lib\site-packages\rasterio\env.py:451,</span> in <span class="ni">ensure_env_with_credentials.&lt;locals&gt;.wrapper</span><span class="nt">(*args, **kwds)</span>
+<span class="g g-Whitespace">    </span><span class="mi">448</span>     <span class="n">session</span> <span class="o">=</span> <span class="n">DummySession</span><span class="p">()</span>
+<span class="g g-Whitespace">    </span><span class="mi">450</span> <span class="k">with</span> <span class="n">env_ctor</span><span class="p">(</span><span class="n">session</span><span class="o">=</span><span class="n">session</span><span class="p">):</span>
+<span class="ne">--&gt; </span><span class="mi">451</span>     <span class="k">return</span> <span class="n">f</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwds</span><span class="p">)</span>
+
+<span class="nn">File ~\miniconda3\Lib\site-packages\rasterio\__init__.py:317,</span> in <span class="ni">open</span><span class="nt">(fp, mode, driver, width, height, count, crs, transform, dtype, nodata, sharing, **kwargs)</span>
+<span class="g g-Whitespace">    </span><span class="mi">314</span> <span class="n">path</span> <span class="o">=</span> <span class="n">_parse_path</span><span class="p">(</span><span class="n">raw_dataset_path</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">316</span> <span class="k">if</span> <span class="n">mode</span> <span class="o">==</span> <span class="s2">&quot;r&quot;</span><span class="p">:</span>
+<span class="ne">--&gt; </span><span class="mi">317</span>     <span class="n">dataset</span> <span class="o">=</span> <span class="n">DatasetReader</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">driver</span><span class="o">=</span><span class="n">driver</span><span class="p">,</span> <span class="n">sharing</span><span class="o">=</span><span class="n">sharing</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">318</span> <span class="k">elif</span> <span class="n">mode</span> <span class="o">==</span> <span class="s2">&quot;r+&quot;</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">319</span>     <span class="n">dataset</span> <span class="o">=</span> <span class="n">get_writer_for_path</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">driver</span><span class="o">=</span><span class="n">driver</span><span class="p">)(</span>
+<span class="g g-Whitespace">    </span><span class="mi">320</span>         <span class="n">path</span><span class="p">,</span> <span class="n">mode</span><span class="p">,</span> <span class="n">driver</span><span class="o">=</span><span class="n">driver</span><span class="p">,</span> <span class="n">sharing</span><span class="o">=</span><span class="n">sharing</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span>
+<span class="g g-Whitespace">    </span><span class="mi">321</span>     <span class="p">)</span>
+
+<span class="nn">File rasterio\\_base.pyx:312,</span> in <span class="ni">rasterio._base.DatasetBase.__init__</span><span class="nt">()</span>
+
+<span class="ne">RasterioIOError</span>: HTTP response code: 404
 </pre></div>
 </div>
-<img alt="_images/11_evaluacion_6_1.png" src="_images/11_evaluacion_6_1.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -814,7 +648,7 @@ title="Print to PDF"
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.colorbar.Colorbar at 0x7f22fc7bde50&gt;
 </pre></div>
 </div>
-<img alt="_images/11_evaluacion_7_1.png" src="_images/11_evaluacion_7_1.png" />
+<img alt="_images/95586db2817f035dfee8f3b8933d7dde834a0e365d2df15e12594fcc04dcfdde.png" src="_images/95586db2817f035dfee8f3b8933d7dde834a0e365d2df15e12594fcc04dcfdde.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -830,7 +664,7 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/11_evaluacion_8_0.png" src="_images/11_evaluacion_8_0.png" />
+<img alt="_images/a1df43cf2ffe6c56339dea20114ee86b101f539a287bee6ef92043c04468344d.png" src="_images/a1df43cf2ffe6c56339dea20114ee86b101f539a287bee6ef92043c04468344d.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -846,7 +680,7 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/11_evaluacion_9_0.png" src="_images/11_evaluacion_9_0.png" />
+<img alt="_images/8c62eee2d8a9bc392c508369fea668fef803b299125243ab05369514b4898269.png" src="_images/8c62eee2d8a9bc392c508369fea668fef803b299125243ab05369514b4898269.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -924,14 +758,14 @@ title="Print to PDF"
       <button class="colab-df-convert" onclick="convertToInteractive('df-665124f3-9eb5-4f11-a4bc-82998c69ca25')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
-
+        
   <svg xmlns="http://www.w3.org/2000/svg" height="24px"viewBox="0 0 24 24"
        width="24px">
     <path d="M0 0h24v24H0V0z" fill="none"/>
     <path d="M18.56 5.44l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94zm-11 1L8.5 8.5l.94-2.06 2.06-.94-2.06-.94L8.5 2.5l-.94 2.06-2.06.94zm10 10l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94z"/><path d="M17.41 7.96l-1.37-1.37c-.4-.4-.92-.59-1.43-.59-.52 0-1.04.2-1.43.59L10.3 9.45l-7.72 7.72c-.78.78-.78 2.05 0 2.83L4 21.41c.39.39.9.59 1.41.59.51 0 1.02-.2 1.41-.59l7.78-7.78 2.81-2.81c.8-.78.8-2.07 0-2.86zM5.41 20L4 18.59l7.72-7.72 1.47 1.35L5.41 20z"/>
   </svg>
       </button>
-
+      
   <style>
     .colab-df-container {
       display:flex;
@@ -996,7 +830,7 @@ title="Print to PDF"
       </script>
     </div>
   </div>
-</div></div>
+  </div></div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1007,7 +841,7 @@ title="Print to PDF"
 </div>
 </div>
 <section id="id3">
-<h3>Validación cruzada<a class="headerlink" href="#id3" title="Permalink to this headline">#</a></h3>
+<h3>Validación cruzada<a class="headerlink" href="#id3" title="Permalink to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="kn">import</span> <span class="n">train_test_split</span> 
@@ -1030,7 +864,7 @@ Tamaño de labels de validación: (182161,)
 </div>
 </section>
 <section id="desempeno-del-modelo">
-<h3>Desempeño del modelo<a class="headerlink" href="#desempeno-del-modelo" title="Permalink to this headline">#</a></h3>
+<h3>Desempeño del modelo<a class="headerlink" href="#desempeno-del-modelo" title="Permalink to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">result</span><span class="o">=</span><span class="n">model</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">x_train</span><span class="p">,</span><span class="n">y_train</span><span class="p">)</span>
@@ -1109,12 +943,12 @@ weighted avg       1.00      1.00      1.00    728640
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0.7, 0.1, &#39;AUC=1.0%&#39;)
 </pre></div>
 </div>
-<img alt="_images/11_evaluacion_20_1.png" src="_images/11_evaluacion_20_1.png" />
+<img alt="_images/938bfdaf89e1f30b867944c9922767f46394567847c188a266081b1432cf842a.png" src="_images/938bfdaf89e1f30b867944c9922767f46394567847c188a266081b1432cf842a.png" />
 </div>
 </div>
 </section>
 <section id="capacidad-de-prediccion">
-<h3>Capacidad de predicción<a class="headerlink" href="#capacidad-de-prediccion" title="Permalink to this headline">#</a></h3>
+<h3>Capacidad de predicción<a class="headerlink" href="#capacidad-de-prediccion" title="Permalink to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">confusion_matrix</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">y_val_pred</span><span class="p">)</span>
@@ -1177,7 +1011,7 @@ weighted avg       1.00      1.00      1.00    182161
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0.7, 0.1, &#39;AUC=0.5079%&#39;)
 </pre></div>
 </div>
-<img alt="_images/11_evaluacion_24_1.png" src="_images/11_evaluacion_24_1.png" />
+<img alt="_images/d16fca12656c42c6bb02050f5d9eefc0d2152e2053b83d98fe9e4c3df59a330c.png" src="_images/d16fca12656c42c6bb02050f5d9eefc0d2152e2053b83d98fe9e4c3df59a330c.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -1293,14 +1127,14 @@ weighted avg       1.00      1.00      1.00    182161
       <button class="colab-df-convert" onclick="convertToInteractive('df-3b7d443d-b54b-4ee5-8861-9a4be4accdc1')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
-
+        
   <svg xmlns="http://www.w3.org/2000/svg" height="24px"viewBox="0 0 24 24"
        width="24px">
     <path d="M0 0h24v24H0V0z" fill="none"/>
     <path d="M18.56 5.44l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94zm-11 1L8.5 8.5l.94-2.06 2.06-.94-2.06-.94L8.5 2.5l-.94 2.06-2.06.94zm10 10l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94z"/><path d="M17.41 7.96l-1.37-1.37c-.4-.4-.92-.59-1.43-.59-.52 0-1.04.2-1.43.59L10.3 9.45l-7.72 7.72c-.78.78-.78 2.05 0 2.83L4 21.41c.39.39.9.59 1.41.59.51 0 1.02-.2 1.41-.59l7.78-7.78 2.81-2.81c.8-.78.8-2.07 0-2.86zM5.41 20L4 18.59l7.72-7.72 1.47 1.35L5.41 20z"/>
   </svg>
       </button>
-
+      
   <style>
     .colab-df-container {
       display:flex;
@@ -1365,7 +1199,7 @@ weighted avg       1.00      1.00      1.00    182161
       </script>
     </div>
   </div>
-</div></div>
+  </div></div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1389,13 +1223,13 @@ weighted avg       1.00      1.00      1.00    182161
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/11_evaluacion_27_0.png" src="_images/11_evaluacion_27_0.png" />
+<img alt="_images/1d98002e7617c7df4c978805dec9e6525678c2a902887872ae9f98f85ce44bb7.png" src="_images/1d98002e7617c7df4c978805dec9e6525678c2a902887872ae9f98f85ce44bb7.png" />
 </div>
 </div>
 </section>
 </section>
 <section id="referencias">
-<h2>Referencias<a class="headerlink" href="#referencias" title="Permalink to this headline">#</a></h2>
+<h2>Referencias<a class="headerlink" href="#referencias" title="Permalink to this heading">#</a></h2>
 <span class="target" id="id4"></span></section>
 </section>
 
@@ -1411,7 +1245,7 @@ weighted avg       1.00      1.00      1.00    182161
             mode: "python"
         },
         kernelOptions: {
-            kernelName: "python3",
+            name: "python3",
             path: "./."
         },
         predefinedOutput: true
@@ -1419,50 +1253,119 @@ weighted avg       1.00      1.00      1.00    182161
     </script>
     <script>kernelName = 'python3'</script>
 
-              </div>
+                </article>
               
-            </main>
-            <footer class="footer-article noprint">
-                
-    <!-- Previous / next buttons -->
-<div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="10_fisico.html" title="previous page">
-        <i class="fas fa-angle-left"></i>
-        <div class="prev-next-info">
-            <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Métodos con base física</p>
-        </div>
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  <!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="10_fisico.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Métodos con base física</p>
+      </div>
     </a>
-    <a class='right-next' id="next-link" href="12_amenaza.html" title="next page">
-    <div class="prev-next-info">
+    <a class="right-next"
+       href="12_amenaza.html"
+       title="next page">
+      <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
         <p class="prev-next-title">Análisis del factor detonante</p>
-    </div>
-    <i class="fas fa-angle-right"></i>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
     </a>
 </div>
-            </footer>
-        </div>
-    </div>
-    <div class="footer-content row">
-        <footer class="col footer"><p>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#desempeno-y-prediccion">Desempeño y predicción</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#validacion-cruzada">Validación cruzada</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#matriz-de-confusion">Matriz de confusión</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#false-positive-rate"><em>False positive rate</em></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#true-negative-rate"><em>True negative rate</em></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#false-negative-rate"><em>False negative rate</em></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#true-positive-rate"><em>True positive rate</em></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#accuracy"><em>Accuracy</em></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#f-measure"><em>F-measure</em></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#curva-roc">Curva ROC</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#python"><em>Python</em></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Validación cruzada</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#desempeno-del-modelo">Desempeño del modelo</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#capacidad-de-prediccion">Capacidad de predicción</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#referencias">Referencias</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
   
-    By Edier V. Aristizábal G.<br/>
-  
-      &copy; Copyright 2022.<br/>
-</p>
-        </footer>
-    </div>
+  <div class="footer-item">
     
+<p class="component-author">
+By Edier V. Aristizábal G.
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2022.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
 </div>
+          </footer>
+        
 
-
-      </div>
+      </main>
     </div>
+  </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+  <script src="_static/scripts/bootstrap.js?digest=365ca57ee442770a23c6"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=365ca57ee442770a23c6"></script>
 
-
+  <footer class="bd-footer">
+  </footer>
   </body>
 </html>

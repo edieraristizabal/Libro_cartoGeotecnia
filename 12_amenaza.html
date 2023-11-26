@@ -1,48 +1,60 @@
 
+
 <!DOCTYPE html>
 
-<html>
+
+<html lang="en" >
+
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
     <title>Análisis del factor detonante &#8212; Cartografía Geotécnica</title>
-    
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
   <!-- Loaded before other Sphinx assets -->
-  <link href="_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
-<link href="_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+  <link href="_static/styles/theme.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
 
-    
-  <link rel="stylesheet"
-    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+  
+  <link href="_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
 
     <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
-    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
-    
+    <link rel="stylesheet" type="text/css" href="_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=365ca57ee442770a23c6" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=365ca57ee442770a23c6" />
+  <script src="_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=365ca57ee442770a23c6"></script>
 
     <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
     <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="_static/doctools.js"></script>
     <script src="_static/clipboard.min.js"></script>
     <script src="_static/copybutton.js"></script>
-    <script src="_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
     <script src="_static/togglebutton.js"></script>
-    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script src="_static/design-tabs.js"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
 const thebe_selector = ".thebe,.cell"
@@ -52,61 +64,103 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '12_amenaza';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Movimientos en masa tipo flujos" href="13_flujos.html" />
     <link rel="prev" title="Evaluación del modelo" href="11_evaluacion.html" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="None">
-    
-
-    <!-- Google Analytics -->
-    
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
-<!-- Checkboxes to toggle the left sidebar -->
-<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
-<label class="overlay overlay-navbar" for="__navigation">
-    <div class="visually-hidden">Toggle navigation sidebar</div>
-</label>
-<!-- Checkboxes to toggle the in-page toc -->
-<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
-<label class="overlay overlay-pagetoc" for="__page-toc">
-    <div class="visually-hidden">Toggle in-page Table of Contents</div>
-</label>
-<!-- Headers at the top -->
-<div class="announcement header-item noprint"></div>
-<div class="header header-item noprint"></div>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
 
-    
-    <div class="container-fluid" id="banner"></div>
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
 
-    
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
 
-    <div class="container-xl">
-      <div class="row">
-          
-<!-- Sidebar -->
-<div class="bd-sidebar noprint" id="site-navigation">
-    <div class="bd-sidebar__content">
-        <div class="bd-sidebar__top"><div class="navbar-brand-box">
-    <a class="navbar-brand text-wrap" href="index.html">
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
       
-        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+      <div class="bd-sidebar-primary bd-sidebar">
         
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="intro.html">
+  
+  
+  
+  
+  
+    
+    
       
-      
-      <img src="_static/logo.png" class="logo" alt="logo">
-      
-      
-      <h1 class="site-logo" id="site-title">Cartografía Geotécnica</h1>
-      
-    </a>
-</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
-  <i class="icon fas fa-search"></i>
-  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
-</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
-    <div class="bd-toc-item active">
+    
+    
+    <img src="_static/logo.png" class="logo__image only-light" alt="Cartografía Geotécnica - Home"/>
+    <script>document.write(`<img src="_static/logo.png" class="logo__image only-dark" alt="Cartografía Geotécnica - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
@@ -116,526 +170,263 @@ const thebe_selector_output = ".output, .cell_output"
             </li>
         </ul>
         <ul class="current nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="00_medialuna.html">
-   Media Luna (1954)
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="00_introduccion.html">
-   Introducción
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="01_normatividad.html">
-   Amenaza &amp; ordenamiento territorial
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="02_estadoarte.html">
-   Estado del arte
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="03_metodos.html">
-   Caracterización de movimientos en masa
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="04_susceptibilidad.html">
-   Susceptibilidad y amenaza
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="05_inventario.html">
-   Inventario de movimientos en masa
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="06_variables.html">
-   Variables condicionantes
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="07_detonante.html">
-   Factores detonantes
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="08_heuristico.html">
-   Métodos basados en el conocimiento
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="09_estadistico.html">
-   Métodos basados en datos
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="10_fisico.html">
-   Métodos con base física
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="11_evaluacion.html">
-   Evaluación del modelo
-  </a>
- </li>
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
-   Análisis del factor detonante
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="13_flujos.html">
-   Movimientos en masa tipo flujos
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="14_roca.html">
-   Movimientos en masa en roca
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="15_python.html">
-   ANEXO: Python
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="00_medialuna.html">Media Luna (1954)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="00_introduccion.html">Introducción</a></li>
+<li class="toctree-l1"><a class="reference internal" href="01_normatividad.html">Amenaza &amp; ordenamiento territorial</a></li>
+<li class="toctree-l1"><a class="reference internal" href="02_estadoarte.html">Estado del arte</a></li>
+<li class="toctree-l1"><a class="reference internal" href="03_metodos.html">Caracterización de movimientos en masa</a></li>
+<li class="toctree-l1"><a class="reference internal" href="04_susceptibilidad.html">Susceptibilidad y amenaza</a></li>
+<li class="toctree-l1"><a class="reference internal" href="05_inventario.html">Inventario de movimientos en masa</a></li>
+<li class="toctree-l1"><a class="reference internal" href="06_variables.html">Variables condicionantes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="07_detonante.html">Factores detonantes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="08_heuristico.html">Métodos basados en el conocimiento</a></li>
+<li class="toctree-l1"><a class="reference internal" href="09_estadistico.html">Métodos basados en datos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="10_fisico.html">Métodos con base física</a></li>
+<li class="toctree-l1"><a class="reference internal" href="11_evaluacion.html">Evaluación del modelo</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Análisis del factor detonante</a></li>
+<li class="toctree-l1"><a class="reference internal" href="13_flujos.html">Movimientos en masa tipo flujos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="14_roca.html">Movimientos en masa en roca</a></li>
+<li class="toctree-l1"><a class="reference internal" href="15_python.html">ANEXO: Python</a></li>
+
+
 </ul>
 
     </div>
 </nav></div>
-        <div class="bd-sidebar__bottom">
-             <!-- To handle the deprecated key -->
-            
-            <div class="navbar_extra_footer">
-            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
-            </div>
-            
-        </div>
     </div>
-    <div id="rtd-footer-container"></div>
-</div>
-
-
-          
-
-
-          
-<!-- A tiny helper pixel to detect if we've scrolled -->
-<div class="sbt-scroll-pixel-helper"></div>
-<!-- Main content -->
-<div class="col py-0 content-container">
-    
-    <div class="header-article row sticky-top noprint">
-        
-
-
-
-<div class="col py-1 d-flex header-article-main">
-    <div class="header-article__left">
-        
-        <label for="__navigation"
-  class="headerbtn"
-  data-toggle="tooltip"
-data-placement="right"
-title="Toggle navigation"
->
   
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-bars"></i>
-  </span>
-
-</label>
-
-        
-    </div>
-    <div class="header-article__right">
-<div class="menu-dropdown menu-dropdown-launch-buttons">
-  <button class="headerbtn menu-dropdown__trigger"
-      aria-label="Launch interactive content">
-      <i class="fas fa-rocket"></i>
-  </button>
-  <div class="menu-dropdown__content">
-    <ul>
-      <li>
-        <a href="https://mybinder.org/v2/gh/edieraristizabal/Libro_cartoGeotecnia/master?urlpath=tree/docs/12_amenaza.ipynb"
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Launch on Binder"
->
   
-
-<span class="headerbtn__icon-container">
-  
-    <img src="_static/images/logo_binder.svg">
-  </span>
-<span class="headerbtn__text-container">Binder</span>
-</a>
-
-      </li>
-      
-    </ul>
+  <div class="sidebar-primary-items__end sidebar-primary__section">
   </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/edieraristizabal/Libro_cartoGeotecnia" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/edieraristizabal/Libro_cartoGeotecnia/issues/new?title=Issue%20on%20page%20%2F12_amenaza.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
 </div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/12_amenaza.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
 
 <button onclick="toggleFullScreen()"
-  class="headerbtn"
-  data-toggle="tooltip"
-data-placement="bottom"
-title="Fullscreen mode"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
 >
   
 
-<span class="headerbtn__icon-container">
+<span class="btn__icon-container">
   <i class="fas fa-expand"></i>
   </span>
 
 </button>
 
-<div class="menu-dropdown menu-dropdown-repository-buttons">
-  <button class="headerbtn menu-dropdown__trigger"
-      aria-label="Source repositories">
-      <i class="fab fa-github"></i>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
   </button>
-  <div class="menu-dropdown__content">
-    <ul>
-      <li>
-        <a href="https://github.com/edieraristizabal/Libro_cartoGeotecnia"
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Source repository"
->
-  
+`);
+</script>
 
-<span class="headerbtn__icon-container">
-  <i class="fab fa-github"></i>
-  </span>
-<span class="headerbtn__text-container">repository</span>
-</a>
-
-      </li>
-      
-      <li>
-        <a href="https://github.com/edieraristizabal/Libro_cartoGeotecnia/issues/new?title=Issue%20on%20page%20%2F12_amenaza.html&body=Your%20issue%20content%20here."
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Open an issue"
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-lightbulb"></i>
-  </span>
-<span class="headerbtn__text-container">open issue</span>
-</a>
-
-      </li>
-      
-    </ul>
-  </div>
-</div>
-
-<div class="menu-dropdown menu-dropdown-download-buttons">
-  <button class="headerbtn menu-dropdown__trigger"
-      aria-label="Download this page">
-      <i class="fas fa-download"></i>
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
   </button>
-  <div class="menu-dropdown__content">
-    <ul>
-      <li>
-        <a href="_sources/12_amenaza.ipynb"
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Download source file"
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-file"></i>
-  </span>
-<span class="headerbtn__text-container">.ipynb</span>
-</a>
-
-      </li>
-      
-      <li>
-        
-<button onclick="printPdf(this)"
-  class="headerbtn"
-  data-toggle="tooltip"
-data-placement="left"
-title="Print to PDF"
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-file-pdf"></i>
-  </span>
-<span class="headerbtn__text-container">.pdf</span>
-</button>
-
-      </li>
-      
-    </ul>
-  </div>
-</div>
-<label for="__page-toc"
-  class="headerbtn headerbtn-page-toc"
-  
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-list"></i>
-  </span>
-
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
 </label>
-
+</div></div>
+      
     </div>
+  
 </div>
-
-<!-- Table of contents -->
-<div class="col-md-3 bd-toc show noprint">
-    <div class="tocsection onthispage pt-5 pb-3">
-        <i class="fas fa-list"></i> Contents
-    </div>
-    <nav id="bd-toc-nav" aria-label="Page">
-        <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#probabilidad-espacial">
-   Probabilidad espacial
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#probabilidad-temporal">
-   Probabilidad temporal
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#cualitativo">
-     Cualitativo
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#analisis-de-frecuencia-de-movimientos-en-masa-pasados">
-     Análisis de frecuencia de movimientos en masa pasados
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#probabilidad-de-poisson">
-       Probabilidad de
-       <em>
-        Poisson
-       </em>
-      </a>
-      <ul class="nav section-nav flex-column">
-       <li class="toc-h5 nav-item toc-entry">
-        <a class="reference internal nav-link" href="#ejemplo">
-         Ejemplo
-        </a>
-       </li>
-      </ul>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#probabilidad-binomial">
-       Probabilidad binomial
-      </a>
-      <ul class="nav section-nav flex-column">
-       <li class="toc-h5 nav-item toc-entry">
-        <a class="reference internal nav-link" href="#id3">
-         Ejemplo
-        </a>
-       </li>
-      </ul>
-     </li>
-    </ul>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#id4">
-     Análisis del factor detonante
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#lluvia">
-       Lluvia
-      </a>
-      <ul class="nav section-nav flex-column">
-       <li class="toc-h5 nav-item toc-entry">
-        <a class="reference internal nav-link" href="#caso-de-umbrales-de-una-variable">
-         Caso de umbrales de una variable
-        </a>
-        <ul class="nav section-nav flex-column">
-         <li class="toc-h6 nav-item toc-entry">
-          <a class="reference internal nav-link" href="#id6">
-           Ejemplo
-          </a>
-         </li>
-        </ul>
-       </li>
-       <li class="toc-h5 nav-item toc-entry">
-        <a class="reference internal nav-link" href="#caso-de-umbrales-de-dos-variables">
-         Caso de umbrales de dos variables
-        </a>
-        <ul class="nav section-nav flex-column">
-         <li class="toc-h6 nav-item toc-entry">
-          <a class="reference internal nav-link" href="#id10">
-           Ejemplo
-          </a>
-         </li>
-        </ul>
-       </li>
-      </ul>
-     </li>
-    </ul>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#probabilidad-de-magnitud">
-   Probabilidad de magnitud
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#referencias">
-   Referencias
-  </a>
- </li>
-</ul>
-
-    </nav>
 </div>
-    </div>
-    <div class="article row">
-        <div class="col pl-md-3 pl-lg-5 content-container">
-            <!-- Table of contents that is only displayed when printing the page -->
-            <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Análisis del factor detonante</h1>
-                <!-- Table of contents -->
-                <div id="print-main-content">
-                    <div id="jb-print-toc">
-                        
-                        <div>
-                            <h2> Contents </h2>
-                        </div>
-                        <nav aria-label="Page">
-                            <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#probabilidad-espacial">
-   Probabilidad espacial
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#probabilidad-temporal">
-   Probabilidad temporal
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#cualitativo">
-     Cualitativo
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#analisis-de-frecuencia-de-movimientos-en-masa-pasados">
-     Análisis de frecuencia de movimientos en masa pasados
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#probabilidad-de-poisson">
-       Probabilidad de
-       <em>
-        Poisson
-       </em>
-      </a>
-      <ul class="nav section-nav flex-column">
-       <li class="toc-h5 nav-item toc-entry">
-        <a class="reference internal nav-link" href="#ejemplo">
-         Ejemplo
-        </a>
-       </li>
-      </ul>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#probabilidad-binomial">
-       Probabilidad binomial
-      </a>
-      <ul class="nav section-nav flex-column">
-       <li class="toc-h5 nav-item toc-entry">
-        <a class="reference internal nav-link" href="#id3">
-         Ejemplo
-        </a>
-       </li>
-      </ul>
-     </li>
-    </ul>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#id4">
-     Análisis del factor detonante
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#lluvia">
-       Lluvia
-      </a>
-      <ul class="nav section-nav flex-column">
-       <li class="toc-h5 nav-item toc-entry">
-        <a class="reference internal nav-link" href="#caso-de-umbrales-de-una-variable">
-         Caso de umbrales de una variable
-        </a>
-        <ul class="nav section-nav flex-column">
-         <li class="toc-h6 nav-item toc-entry">
-          <a class="reference internal nav-link" href="#id6">
-           Ejemplo
-          </a>
-         </li>
-        </ul>
-       </li>
-       <li class="toc-h5 nav-item toc-entry">
-        <a class="reference internal nav-link" href="#caso-de-umbrales-de-dos-variables">
-         Caso de umbrales de dos variables
-        </a>
-        <ul class="nav section-nav flex-column">
-         <li class="toc-h6 nav-item toc-entry">
-          <a class="reference internal nav-link" href="#id10">
-           Ejemplo
-          </a>
-         </li>
-        </ul>
-       </li>
-      </ul>
-     </li>
-    </ul>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#probabilidad-de-magnitud">
-   Probabilidad de magnitud
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#referencias">
-   Referencias
-  </a>
- </li>
-</ul>
+              
+              
 
-                        </nav>
-                    </div>
-                </div>
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Análisis del factor detonante</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
             </div>
-            <main id="main-content" role="main">
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#probabilidad-espacial">Probabilidad espacial</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#probabilidad-temporal">Probabilidad temporal</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#cualitativo">Cualitativo</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#analisis-de-frecuencia-de-movimientos-en-masa-pasados">Análisis de frecuencia de movimientos en masa pasados</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#probabilidad-de-poisson">Probabilidad de <em>Poisson</em></a><ul class="nav section-nav flex-column">
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#ejemplo">Ejemplo</a></li>
+</ul>
+</li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#probabilidad-binomial">Probabilidad binomial</a><ul class="nav section-nav flex-column">
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Ejemplo</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Análisis del factor detonante</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#lluvia">Lluvia</a><ul class="nav section-nav flex-column">
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#caso-de-umbrales-de-una-variable">Caso de umbrales de una variable</a><ul class="nav section-nav flex-column">
+<li class="toc-h6 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">Ejemplo</a></li>
+</ul>
+</li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#caso-de-umbrales-de-dos-variables">Caso de umbrales de dos variables</a><ul class="nav section-nav flex-column">
+<li class="toc-h6 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">Ejemplo</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#probabilidad-de-magnitud">Probabilidad de magnitud</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#referencias">Referencias</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
                 
-              <div>
-                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
   <section class="tex2jax_ignore mathjax_ignore" id="analisis-del-factor-detonante">
-<h1>Análisis del factor detonante<a class="headerlink" href="#analisis-del-factor-detonante" title="Permalink to this headline">#</a></h1>
+<h1>Análisis del factor detonante<a class="headerlink" href="#analisis-del-factor-detonante" title="Permalink to this heading">#</a></h1>
 <p><span id="id1">Varnes <em>et al.</em> [<a class="reference internal" href="#id58" title="David J. Varnes, Unesco., and International Association of Engineering Geology. Landslide hazard zonation : a review of principles and practice / David J. Varnes and the International Association of Engineering Geology, Commission on Landslides and Other Mass Movements on Slopes. Unesco Paris, 1984. ISBN 9231018957.">1984</a>]</span> define la amenaza como la probabilidad de ocurrencia de un fenómeno potencialmente destructivo en un periodo de tiempo específico y sobre una determinada área. <span id="id2">Reichenbach [<a class="reference internal" href="#id62" title="Fausto Guzzetti Alberto Carrara Mauro Cardinali Paola Reichenbach. Landslide hazard evaluation: a review of current techniques and their application in a multi-scale study, central italy. Geomorphology, 31:181-216, 1999.">1999</a>]</span> incluye además, como parte de la amenaza, la magnitud o intensidad de los movimientos en masa como un componente fundamental dentro de la amenaza. De igual forma se debe considerar la propagación, especialmente para movimientos en masa tipo flujos, que se caracterizan por recorridos extensos donde generalmente se presentan los daños o afectaciones.</p>
 <p>En este sentido, la zonificación de la amenaza corresponde a la subdivisión del terreno en zonas que son caracterizadas por la probabilidad temporal de la ocurrencia de movimientos en masa de un volumen particular, en un periodo de tiempo dado. Por lo que los mapas de amenaza por movimientos en masa deben indicar tanto el área donde el movimiento puede ocurrir, como la zona de propagación. Una completa evaluación de la amenaza por movimientos en masa cuantitativa incluye:</p>
 <ul class="simple">
@@ -646,7 +437,7 @@ title="Print to PDF"
 </ul>
 <p>Para calcular la amenaza, muchos autores proponen considerar las diferentes probabilidades como independientes, de tal forma que la amenaza puede ser calculada como el producto de todas las probabilidades.</p>
 <section id="probabilidad-espacial">
-<h2>Probabilidad espacial<a class="headerlink" href="#probabilidad-espacial" title="Permalink to this headline">#</a></h2>
+<h2>Probabilidad espacial<a class="headerlink" href="#probabilidad-espacial" title="Permalink to this heading">#</a></h2>
 <p>La probabilidad espacial corresponde a la susceptibilidad del terreno a ocurrir un movimiento en masa, por lo tanto responde a la pregunta del <strong>dónde?</strong>. Se obtiene esencialmente a partir de métodos que incorporan las variables condicionantes, tales como metodologias basados en el conocimiento (heurísticas) o basadas en datos (estadísticas). Los métodos con base física generalmente incorporan dentro del análisis el factor detonante, por lo cual pueden ser consideradas para evaluar la amenaza directamente.</p>
 <p>Existen diferentes formas de expresar la probabilidad espacial de los movimientos en masa:</p>
 <ul class="simple">
@@ -656,24 +447,24 @@ title="Print to PDF"
 </ul>
 </section>
 <section id="probabilidad-temporal">
-<h2>Probabilidad temporal<a class="headerlink" href="#probabilidad-temporal" title="Permalink to this headline">#</a></h2>
+<h2>Probabilidad temporal<a class="headerlink" href="#probabilidad-temporal" title="Permalink to this heading">#</a></h2>
 <p>Mientras la probabilidad espacial está en función de las variables condicionantes, la probabilidad temporal está en función del factor detonante. Por lo tanto responde a la pregunta del <strong>cuándo?</strong>. Existen diferentes formas de expresar la probabilidad temporal de los movimientos en masa:</p>
 <section id="cualitativo">
-<h3>Cualitativo<a class="headerlink" href="#cualitativo" title="Permalink to this headline">#</a></h3>
+<h3>Cualitativo<a class="headerlink" href="#cualitativo" title="Permalink to this heading">#</a></h3>
 <p>El cual se utiliza para escalas regionales y métodos heurísticos, donde no existe información disponible con respecto a la ocurrencia de los movimientos en masa. En este caso se utilizan términos como: (i) casi seguro (el evento es esperado que ocurra), (ii) probable (el evento probablemente ocurrirá bajo condiciones adversas), (iii) posible (el evento podría ocurrir bajo condiciones adversas), (iv) improbable (el evento podría ocurrir bajo circunstancias muy adversas), (v) raro (el evento es concebible pero solamente bajo circunastancias excepcionales), (vi) no creible (el evento es inconcebible o imaginable).</p>
 </section>
 <section id="analisis-de-frecuencia-de-movimientos-en-masa-pasados">
-<h3>Análisis de frecuencia de movimientos en masa pasados<a class="headerlink" href="#analisis-de-frecuencia-de-movimientos-en-masa-pasados" title="Permalink to this headline">#</a></h3>
+<h3>Análisis de frecuencia de movimientos en masa pasados<a class="headerlink" href="#analisis-de-frecuencia-de-movimientos-en-masa-pasados" title="Permalink to this heading">#</a></h3>
 <p>Se utiliza cuando se cuenta con inventarios de eventos en un periodo específico y sin necesidad de discriminar el factor detonante. Los mas utilizados son el modelo de probabilidad de <em>Poisson</em> y el modelo Binomial a partir del intervalo de recurrencia de movimientos en masa registrados.</p>
 <section id="probabilidad-de-poisson">
-<h4>Probabilidad de <em>Poisson</em><a class="headerlink" href="#probabilidad-de-poisson" title="Permalink to this headline">#</a></h4>
+<h4>Probabilidad de <em>Poisson</em><a class="headerlink" href="#probabilidad-de-poisson" title="Permalink to this heading">#</a></h4>
 <p>La probabilida de <em>Poisson</em> de experimentar un número <em>n</em> de movimientos en masa durante un tiempo <em>t</em> está dada por:</p>
 <p><span class="math notranslate nohighlight">\(P[N(t)=n]=e^{-\lambda t} \frac{(\lambda t)^n}{n!}\)</span></p>
 <p>Donde <span class="math notranslate nohighlight">\(\lambda\)</span> es la probabilidad de ocurrencia media de un movimiento en masa. Sin embargo es mas útil para análisis de amenaza conocer la probabilidad que ocurra uno o mas movimientos en masa en un tiempo <em>t</em>:</p>
 <p><span class="math notranslate nohighlight">\(P[N(t)] \geq 1= 1-P[N(t)=0]=1-e^{-\lambda t}= 1-e^{-t/u}\)</span></p>
 <p>Donde <span class="math notranslate nohighlight">\(u\)</span> es el intervalo de recurrencia media entre movimientos en masa en años, <span class="math notranslate nohighlight">\(u=1/\lambda\)</span></p>
 <section id="ejemplo">
-<h5>Ejemplo<a class="headerlink" href="#ejemplo" title="Permalink to this headline">#</a></h5>
+<h5>Ejemplo<a class="headerlink" href="#ejemplo" title="Permalink to this heading">#</a></h5>
 <p>Suponga un registro de movimientos en masa de los pasados 100 años que señala la ocurrencia de 5 movimientos en masa.</p>
 <p><span class="math notranslate nohighlight">\(\lambda=5/100=0.05\)</span></p>
 <p>Se esperaría una tasa de recurrencia de 0.05 por año.</p>
@@ -684,25 +475,25 @@ title="Print to PDF"
 </section>
 </section>
 <section id="probabilidad-binomial">
-<h4>Probabilidad binomial<a class="headerlink" href="#probabilidad-binomial" title="Permalink to this headline">#</a></h4>
+<h4>Probabilidad binomial<a class="headerlink" href="#probabilidad-binomial" title="Permalink to this heading">#</a></h4>
 <p>La probabilidad Binomial es muy similar, donde la probabilidad de tener 1 o mas movimientos en masa en un periodo <em>t</em> es:</p>
 <p><span class="math notranslate nohighlight">\(P[N(t)\geq 1]=1-(1-1/u)^t\)</span></p>
 <section id="id3">
-<h5>Ejemplo<a class="headerlink" href="#id3" title="Permalink to this headline">#</a></h5>
+<h5>Ejemplo<a class="headerlink" href="#id3" title="Permalink to this heading">#</a></h5>
 <p>Para el caso anterior se obtendría:</p>
 <p><span class="math notranslate nohighlight">\(P[N(50)\geq 1]=1-(1-1/20)^{50}=0.923\)</span></p>
 </section>
 </section>
 </section>
 <section id="id4">
-<h3>Análisis del factor detonante<a class="headerlink" href="#id4" title="Permalink to this headline">#</a></h3>
+<h3>Análisis del factor detonante<a class="headerlink" href="#id4" title="Permalink to this heading">#</a></h3>
 <p>La probabilidad temporal a partir del factor detonante se puede establecer utilizando métodos con base física o métodos empíricos con umbrales, este último especialmente para el caso de la lluvia como factor detonante.</p>
 <p>En el caso del uso de modelos con base física la probabilidad temporal se estima generalmente en términos del período de retorno del evento detonante con una determinada magnitud. Estos métodos incorporan dentro del análisis la intensidad o magnitud del factor detonante. En modelos como SHALSTAB o TRIGRS que incorporan la lluvia como factor detonante, la probabilidad temporal corresponde al evento de lluvia utilizado ya que debe ser obtenida a partir de análisis de las series de lluvia como parte del análisis hidrológico. En estos casos es muy común utilizar curvas Intensidad - Duración - Frecuencia (IDF), en las cuales, ademas de obtener la duración e intensidad de un evento especifico de lluvia se tiene además el periodo de retorno de dicho evento.</p>
 <p>Para los métodos empíricos basados en umbrales se utiliza generalmente la probabilidad de ocurrencia de un movimiento en masa dado que se exceda un umbral, o la probabilidad condicionada que un movimiento en masa ocurra dado un evento de magnitud dada.</p>
 <section id="lluvia">
-<h4>Lluvia<a class="headerlink" href="#lluvia" title="Permalink to this headline">#</a></h4>
+<h4>Lluvia<a class="headerlink" href="#lluvia" title="Permalink to this heading">#</a></h4>
 <section id="caso-de-umbrales-de-una-variable">
-<h5>Caso de umbrales de una variable<a class="headerlink" href="#caso-de-umbrales-de-una-variable" title="Permalink to this headline">#</a></h5>
+<h5>Caso de umbrales de una variable<a class="headerlink" href="#caso-de-umbrales-de-una-variable" title="Permalink to this heading">#</a></h5>
 <p>Para movimientos en masa detonados por lluvia, <span id="id5">Berti <em>et al.</em> [<a class="reference internal" href="#id86" title="M Berti, M. L.V. Martina, S Franceschini, S Pignone, A Simoni, and M Pizziolo. Probabilistic rainfall thresholds for landslide occurrence using a bayesian approach. Journal of Geophysical Research: Earth Surface, 117:1-20, 2012. doi:10.1029/2012JF002367.">2012</a>]</span> proponen utilizar la probabilidad condicionada, definida como la probabilidad de la ocurrencia de algún evento <em>L</em> (en nuestro caso un movimiento en masa) dado la ocurrencia  de algún otro evento <em>R</em> (un evento de lluvia con una magnitud específica, expresado en términos de lluvia total, intensidad o cualquier otra variable). La probabilidad condicionada se escribe <span class="math notranslate nohighlight">\(P(L/R)\)</span> y se lee <em>la probabilidad que un movimiento en masa (L) ocurra dado un evento de lluvia (R)</em>. Esta probabilidad está determinada por el teorema de <em>Bayes</em>:</p>
 <p><span class="math notranslate nohighlight">\(P(A/B)=\frac{P(B/A)P(A)}{P(B)}\)</span></p>
 <p>Donde:</p>
@@ -717,7 +508,7 @@ title="Print to PDF"
 <p>Por lo que el teorema de <em>Bayes</em> se reduce a:</p>
 <p><span class="math notranslate nohighlight">\(P(A/B)\approx N_{B/A}/N_B\)</span></p>
 <section id="id6">
-<h6>Ejemplo<a class="headerlink" href="#id6" title="Permalink to this headline">#</a></h6>
+<h6>Ejemplo<a class="headerlink" href="#id6" title="Permalink to this heading">#</a></h6>
 <p>Si asumimos que 10 movimientos en masa ocurren en una cierta área durante un tiempo dado de referencia, y que 8 de estos movimientos en masa fueron detonados por eventos de lluvia B con una intensidad I&gt;50mm/dia.</p>
 <p>Se podria pensar <strong>erroneamente</strong> que  un evento de lluvia de magnitud B (I&gt;50mm/dia) tiene una probabilidad <span class="math notranslate nohighlight">\(8/10=0.8\)</span> de detonar un movimiento en masa. Esto es equivocado por qué <span class="math notranslate nohighlight">\(8/10\)</span> indica la probabilidad de <span class="math notranslate nohighlight">\(P(B/A)\)</span> de observar un evento de lluvia de magnitud B cuando ocurre un movimiento en masa, no la probabilidad <span class="math notranslate nohighlight">\(P(A/B)\)</span> de observar un movimiento en masa cuando ocurre un evento de lluvia B. Es por esta razon que umbrales de lluvia solamente basados en los eventos de lluvia que detonaron movimientos en masa (<em>likelihood</em>) no tiene mucho sentido, ya que las probabilidades <em>apriori</em> y marginales no son consideradas. De acuerdo con el teorema de <em>Bayes</em> el valor de <span class="math notranslate nohighlight">\(P(A/B)\)</span> depende de <span class="math notranslate nohighlight">\(P(B/A)\)</span> y también de las probabilidades <em>apriori</em> y marginales.</p>
 <p>Por lo tanto, si 1000 eventos de lluvia ocurren en el área considerada y 200 de ellos tienen una intensidad mayor a 50mm/dia, se tiene:</p>
@@ -728,7 +519,7 @@ title="Print to PDF"
 </section>
 </section>
 <section id="caso-de-umbrales-de-dos-variables">
-<h5>Caso de umbrales de dos variables<a class="headerlink" href="#caso-de-umbrales-de-dos-variables" title="Permalink to this headline">#</a></h5>
+<h5>Caso de umbrales de dos variables<a class="headerlink" href="#caso-de-umbrales-de-dos-variables" title="Permalink to this heading">#</a></h5>
 <p>De acuerdo con <span id="id7">Jaiswal and van Westen [<a class="reference internal" href="#id87" title="Pankaj Jaiswal and Cees J. van Westen. Estimating temporal probability for landslide initiation along transportation routes based on rainfall thresholds. Geomorphology, 112:96-105, 11 2009. doi:10.1016/j.geomorph.2009.05.008.">2009</a>]</span> la probabilidad temporal de movimientos en masa detonados por lluvias puede ser obtenida evaluando la probabilidad temporal de los eventos de lluvia, combinado con un análisis de umbrales de lluvia basados en dos variables. Para que un movimiento en masa <span class="math notranslate nohighlight">\(L\)</span> ocurra, la lluvia acumulada diaria debe exceder un umbral, el cual es una función <span class="math notranslate nohighlight">\(R(t)\)</span> de la lluvia total en un periodo <span class="math notranslate nohighlight">\(R_d(t)\)</span>, y de la cantidad de lluvia antecedente <span class="math notranslate nohighlight">\(R_{ad(t)}\)</span>. Estos autores proponen utilizar la probabilidad de excedencia del un umbral de lluvia y la probabilidad de ocurrencia de un movimiento en masa dado que el umbral de lluvia se supere.</p>
 <p>Si <span class="math notranslate nohighlight">\(R_T\)</span> es el valor del umbral de <span class="math notranslate nohighlight">\(R\)</span> entonces la probabilidad de ocurrencia de un movimiento en masa <span class="math notranslate nohighlight">\(P(L)\)</span> depende de la probabildid de excedencia de <span class="math notranslate nohighlight">\(P[R&gt;R_T]\)</span>. Por lo tanto, la probabilidad de ocurrencia de movimientos en masa puede ser dada por la intersección de estas dos probabilidades:</p>
 <p><span class="math notranslate nohighlight">\(P[(R&gt;R_T)L]=P[R&gt;R_T]P[L/R&gt;R_T]\)</span></p>
@@ -745,7 +536,7 @@ title="Print to PDF"
 <p><span class="math notranslate nohighlight">\(P[N(t)] \geq 1= 1-P[N(t)=0]=1-e^{-\lambda t}= 1-e^{-t/u}\)</span></p>
 <p>En cuanto a la probabilidad de ocurrencia de un movimiento en masa, dado que el umbral se supere, se puede obtener a partir de la frecuencia de los datos de lluvia y movimientos en masa. La probabilidad temporal final se obtiene de multiplicar ambas probabilidades.</p>
 <section id="id10">
-<h6>Ejemplo<a class="headerlink" href="#id10" title="Permalink to this headline">#</a></h6>
+<h6>Ejemplo<a class="headerlink" href="#id10" title="Permalink to this heading">#</a></h6>
 <p>En este ejemplo tomado de <span id="id11">Jaiswal and van Westen [<a class="reference internal" href="#id87" title="Pankaj Jaiswal and Cees J. van Westen. Estimating temporal probability for landslide initiation along transportation routes based on rainfall thresholds. Geomorphology, 112:96-105, 11 2009. doi:10.1016/j.geomorph.2009.05.008.">2009</a>]</span> se presenta el caso de un tramo de vía de 19 km en el estado de <em>Tamilnadu</em> en la India, donde para el secotr de <em>Burliyar</em> el umbral fue excedido 53 veces en 15 años. Por lo tanto el intervalo de recuerrencia medio (<span class="math notranslate nohighlight">\(u\)</span>) es <span class="math notranslate nohighlight">\(15/53 = 0.28\)</span>. Utilizando el modelo de <em>Poisson</em> la probabildiad de excedencia anual del umbral de lluvia es 0.97.  De acuerdo con la tabla el umbral de lluvia fue excedido 29, 27, 30 y 15 veces para los sectores de <em>Hillgrove</em>, <em>Marapallam</em>, <em>Runneymede</em> y para la ruta entera respectivamente, obteniendo del modelo de <em>Poisson</em> una probabilidad de excedencia anual de 0.85, 0.83, 0.86 y 0.63, respectivamente.</p>
 <p>La probabilidad de ocurrencia de movimientos en masa dado que el umbral se exceda es estimada para 8 unidades diferentes, para el sector de <em>Burliyar</em>, el <span class="math notranslate nohighlight">\(R_T\)</span> fue excedido 53 en 15 años. En la unidad I, en 17 casos se presentaron movimientos en masa, lo que corresponde a una probabilidad estimada <span class="math notranslate nohighlight">\(P[L/R&gt;R_T]\)</span> de <span class="math notranslate nohighlight">\(17/53=0.32\)</span>. Para este caso, unidad I del sector <em>Burliyar</em>, la probabilidad de tener uno o mas eventos de lluvia que puedan detonar movimientos en masa en cualquier año es de <span class="math notranslate nohighlight">\(0.97*0.32=0.31\)</span>. Las probabilidades más altas para este ejemplo se dan en las regiones II y III, y para la ruta entera.</p>
 <figure class="align-default" id="ejemplo-umbral">
@@ -760,7 +551,7 @@ title="Print to PDF"
 </section>
 </section>
 <section id="probabilidad-de-magnitud">
-<h2>Probabilidad de magnitud<a class="headerlink" href="#probabilidad-de-magnitud" title="Permalink to this headline">#</a></h2>
+<h2>Probabilidad de magnitud<a class="headerlink" href="#probabilidad-de-magnitud" title="Permalink to this heading">#</a></h2>
 <p>El principio de frecuencia y magnitud ha sido ampliamente utilizado en sismologia, donde es conocido como la relación de <em>Gutenberg-Richter</em>. Sin embargo esta relación entre magnitud y frecuencia se observa en la mayoria de los procesos morfodinámicos, entre ellos los movimientos en masa.</p>
 <p>Para el caso de movimientos en masa existe un número importante de correlaciones entre magnitud y frecuencia, pero son dificiles de comparar por que la mayoria de los inventario de movimientos en masa no distinguen entre los tipos de movimientos en masa, y esta relación parece ser dependiente del tipo de evento. Tambien las relaciones de magnitud - frecuencia para movimientos en masa utilizan diferentes tipos de ploteo, en unos casos cumulativa vs no-cumulativa, linear vs logaritmico, entre otros. Otro tema importante es que difieren en el uso de la variable que define la magnitud; algunos autores definen el área sobre la ladera, otros el cuadrado del ancho. La magnitud es una medida de la energía liberada durante el movimiento en masa. <span id="id13">Hungr <em>et al.</em> [<a class="reference internal" href="#id91" title="Oldrich Hungr, Scott McDougall, Mike Wise, and Michael Cullen. Magnitude-frequency relationships of debris flows and debris avalanches in relation to slope relief. Geomorphology, 96:355-365, 2008. doi:10.1016/j.geomorph.2007.03.020.">2008</a>]</span> proponen como variable el volumen, y como <em>proxy</em> el área. A continuación se presenta la correlación entre el volumen de los movimientos en masa y el área.</p>
 <figure class="align-default" id="magnitud">
@@ -794,7 +585,7 @@ title="Print to PDF"
 </figure>
 </section>
 <section id="referencias">
-<h2>Referencias<a class="headerlink" href="#referencias" title="Permalink to this headline">#</a></h2>
+<h2>Referencias<a class="headerlink" href="#referencias" title="Permalink to this heading">#</a></h2>
 <div class="docutils container" id="id20">
 <dl class="citation">
 <dt class="label" id="id86"><span class="brackets"><a class="fn-backref" href="#id5">1</a></span></dt>
@@ -841,7 +632,7 @@ title="Print to PDF"
             mode: "python"
         },
         kernelOptions: {
-            kernelName: "python3",
+            name: "python3",
             path: "./."
         },
         predefinedOutput: true
@@ -849,50 +640,132 @@ title="Print to PDF"
     </script>
     <script>kernelName = 'python3'</script>
 
-              </div>
+                </article>
               
-            </main>
-            <footer class="footer-article noprint">
-                
-    <!-- Previous / next buttons -->
-<div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="11_evaluacion.html" title="previous page">
-        <i class="fas fa-angle-left"></i>
-        <div class="prev-next-info">
-            <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Evaluación del modelo</p>
-        </div>
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  <!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="11_evaluacion.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Evaluación del modelo</p>
+      </div>
     </a>
-    <a class='right-next' id="next-link" href="13_flujos.html" title="next page">
-    <div class="prev-next-info">
+    <a class="right-next"
+       href="13_flujos.html"
+       title="next page">
+      <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
         <p class="prev-next-title">Movimientos en masa tipo flujos</p>
-    </div>
-    <i class="fas fa-angle-right"></i>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
     </a>
 </div>
-            </footer>
-        </div>
-    </div>
-    <div class="footer-content row">
-        <footer class="col footer"><p>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#probabilidad-espacial">Probabilidad espacial</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#probabilidad-temporal">Probabilidad temporal</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#cualitativo">Cualitativo</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#analisis-de-frecuencia-de-movimientos-en-masa-pasados">Análisis de frecuencia de movimientos en masa pasados</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#probabilidad-de-poisson">Probabilidad de <em>Poisson</em></a><ul class="nav section-nav flex-column">
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#ejemplo">Ejemplo</a></li>
+</ul>
+</li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#probabilidad-binomial">Probabilidad binomial</a><ul class="nav section-nav flex-column">
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Ejemplo</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Análisis del factor detonante</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#lluvia">Lluvia</a><ul class="nav section-nav flex-column">
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#caso-de-umbrales-de-una-variable">Caso de umbrales de una variable</a><ul class="nav section-nav flex-column">
+<li class="toc-h6 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">Ejemplo</a></li>
+</ul>
+</li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#caso-de-umbrales-de-dos-variables">Caso de umbrales de dos variables</a><ul class="nav section-nav flex-column">
+<li class="toc-h6 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">Ejemplo</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#probabilidad-de-magnitud">Probabilidad de magnitud</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#referencias">Referencias</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
   
-    By Edier V. Aristizábal G.<br/>
-  
-      &copy; Copyright 2022.<br/>
-</p>
-        </footer>
-    </div>
+  <div class="footer-item">
     
+<p class="component-author">
+By Edier V. Aristizábal G.
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2022.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
 </div>
+          </footer>
+        
 
-
-      </div>
+      </main>
     </div>
+  </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+  <script src="_static/scripts/bootstrap.js?digest=365ca57ee442770a23c6"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=365ca57ee442770a23c6"></script>
 
-
+  <footer class="bd-footer">
+  </footer>
   </body>
 </html>
