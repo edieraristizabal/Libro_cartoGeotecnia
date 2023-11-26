@@ -62,7 +62,7 @@ Flujo en San Antonio de Prado, sector Santa Rita, municipio de Medellín-Colombi
 {cite:t}`Coussot1996`  utilizan la siguiente clasificación, donde contenidos en proporción de agua muy alto se tranforman de flujos de escombros a  flujos hiperconcetrados, cuando los materiales son finos se presentan flujos de una fase, donde el agua y los sedimentos viajan a la misma velocidad, y cuando los materiales son granulares se presentan flujos de dos fases, donde el agua viaja a velocidades mas altas a los materiales sólidos.
 
 :::{figure-md} flujos1
-<img src="https://www.hec.usace.army.mil/confluence/rasdocs/rasmuddebris/files/43818444/43818443/1/1608274139394/worddave886aef821f8118d5239635c0d002ffb.png" alt="flujos1" width="800px">
+<img src="https://www.hec.usace.army.mil/confluence/rasdocs/rasmuddebris/files/43818439/139726897/1/1682116574941/worddav6176459c6f45d39f3cf5bcff67e9076f.png" alt="flujos1" width="800px">
 
 Clasificación de flujos de acuerdo con Coussot y Meuniers (1996).
 :::
@@ -82,7 +82,7 @@ Esta distinción es importante desde lo práctico, ya que implica que los métod
 Para las laderas conformadas en roca generalmente se presentan movimientos en masa tipo caída y volcamiento, los cuales suelen presentarse en conjunto. El **volcamiento** se refiere a la rotación del material con respecto un punto o eje por debajo del centro de gravedad, y la **caída** corresponde al descenso por el aire del material, donde se incluye además el rebote y/o rodamiento del material al caer.
 
 :::{figure-md} toppling
-<img src="https://online.blasttraining.com.au/pluginfile.php/94/mod_glossary/entry/268/rockTopple.jpg" alt="flujos2" width="500px">
+<img src="https://media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10064-021-02562-2/MediaObjects/10064_2021_2562_Fig1_HTML.png" alt="volcamiento" width="500px">
 
 Volcamiento y caida en laderas en roca.
 :::
