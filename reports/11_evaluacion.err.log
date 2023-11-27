@@ -45,7 +45,7 @@ File [1;32mrasterio\\_err.pyx:221[0m, in [0;36mrasterio._err.exc_wrap_pointer
 During handling of the above exception, another exception occurred:
 
 [1;31mRasterioIOError[0m                           Traceback (most recent call last)
-Cell [1;32mIn[3], line 1[0m
+Cell [1;32mIn[2], line 1[0m
 [1;32m----> 1[0m raster [38;5;241m=[39m [43mrio[49m[38;5;241;43m.[39;49m[43mopen[49m[43m([49m[38;5;124;43m'[39;49m[38;5;124;43mhttps://github.com/edieraristizabal/Libro_cartoGeotecnia/blob/master/data/Inventario_MenM.tif?raw=true[39;49m[38;5;124;43m'[39;49m[43m)[49m
 [0;32m      2[0m inventario[38;5;241m=[39mraster[38;5;241m.[39mread([38;5;241m1[39m)
 [0;32m      3[0m raster_mask [38;5;241m=[39m rio[38;5;241m.[39mopen([38;5;124m'[39m[38;5;124mhttps://github.com/edieraristizabal/Libro_cartoGeotecnia/blob/master/data/Pendiente.tif?raw=true[39m[38;5;124m'[39m)

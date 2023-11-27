@@ -470,29 +470,6 @@ document.write(`
 <p>Inicialmente se procede a importar las librerías a utilizar:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>pip<span class="w"> </span>install<span class="w"> </span>rasterio
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: rasterio in c:\users\edier\miniconda3\lib\site-packages (1.3.9)
-Requirement already satisfied: affine in c:\users\edier\miniconda3\lib\site-packages (from rasterio) (2.4.0)
-Requirement already satisfied: attrs in c:\users\edier\miniconda3\lib\site-packages (from rasterio) (23.1.0)
-Requirement already satisfied: certifi in c:\users\edier\miniconda3\lib\site-packages (from rasterio) (2023.11.17)
-Requirement already satisfied: click&gt;=4.0 in c:\users\edier\miniconda3\lib\site-packages (from rasterio) (8.1.6)
-Requirement already satisfied: cligj&gt;=0.5 in c:\users\edier\miniconda3\lib\site-packages (from rasterio) (0.7.2)
-Requirement already satisfied: numpy in c:\users\edier\miniconda3\lib\site-packages (from rasterio) (1.25.1)
-Requirement already satisfied: snuggs&gt;=1.4.1 in c:\users\edier\miniconda3\lib\site-packages (from rasterio) (1.4.7)
-Requirement already satisfied: click-plugins in c:\users\edier\miniconda3\lib\site-packages (from rasterio) (1.1.1)
-Requirement already satisfied: setuptools in c:\users\edier\miniconda3\lib\site-packages (from rasterio) (67.8.0)
-Requirement already satisfied: colorama in c:\users\edier\miniconda3\lib\site-packages (from click&gt;=4.0-&gt;rasterio) (0.4.6)
-Requirement already satisfied: pyparsing&gt;=2.1.6 in c:\users\edier\miniconda3\lib\site-packages (from snuggs&gt;=1.4.1-&gt;rasterio) (3.0.9)
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">rasterio</span> <span class="k">as</span> <span class="nn">rio</span>
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
@@ -554,7 +531,7 @@ Requirement already satisfied: pyparsing&gt;=2.1.6 in c:\users\edier\miniconda3\
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.colorbar.Colorbar at 0x1ec3a3115d0&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.colorbar.Colorbar at 0x26e1569c910&gt;
 </pre></div>
 </div>
 <img alt="_images/c52bcf75b52535cbf0e430121edbb0716662d7a36eeb57a35e654ace334bc2e3.png" src="_images/c52bcf75b52535cbf0e430121edbb0716662d7a36eeb57a35e654ace334bc2e3.png" />
@@ -641,7 +618,7 @@ Requirement already satisfied: pyparsing&gt;=2.1.6 in c:\users\edier\miniconda3\
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">8</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">7</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
 <span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">w_a</span><span class="o">=</span><span class="p">(</span><span class="n">ap1</span><span class="o">/</span><span class="n">total1</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="n">ap</span><span class="o">/</span><span class="n">total</span><span class="p">)</span>
 <span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="n">w_b</span><span class="o">=</span><span class="p">(</span><span class="n">bp1</span><span class="o">/</span><span class="n">total1</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="n">bp</span><span class="o">/</span><span class="n">total</span><span class="p">)</span>
 <span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="n">w_c</span><span class="o">=</span><span class="p">(</span><span class="n">cp1</span><span class="o">/</span><span class="n">total1</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="n">cp</span><span class="o">/</span><span class="n">total</span><span class="p">)</span>
@@ -1703,7 +1680,7 @@ Uncertainty: 0.7799834770480247 0.6685462775738931 0.8870797176808958 0.77830569
 <p><span class="math notranslate nohighlight">\(P(y/x) = \frac{1}{1+e^{-z}}\)</span></p>
 <p><span class="math notranslate nohighlight">\(\frac{p(y/x)}{1-p(y/x)} = e^{a+\sum bx}\)</span></p>
 <p><span class="math notranslate nohighlight">\(Ln(\frac{p(y/x)}{1-p(y/x)}) = a+\sum bx\)</span></p>
-<p>Donde <span class="math notranslate nohighlight">\(P(y/x)\)</span> es la probabilidad que <em>y</em> sea igual a 1, es decir la ocurrencia de movimientos en masa, dado la combinación lineal de las variables independientes:</p>
+<p>Donde <span class="math notranslate nohighlight">\(P(y/x)\)</span> es la probabilidad que <em>y</em> sea igual a 1 dado <em>X</em>, es decir la ocurrencia de movimientos en masa, dado la combinación lineal de las variables independientes:</p>
 <p><span class="math notranslate nohighlight">\(z=\beta_o+\beta_1X_1+\beta_2X_2+\beta_3X_3+...+\beta_nX_n\)</span></p>
 <p>Donde <span class="math notranslate nohighlight">\(\beta_0\)</span> es el intercepto del modelo, los valores <span class="math notranslate nohighlight">\(\beta_i\)</span> (i=1,2, 3, n) son los coeficientes de la regresión logística, es decir, los pesos de las variables, y los valores <span class="math notranslate nohighlight">\(X_i\)</span> (i=1, 2, 3,…, n) son las variables independientes. El resultado final es un valor entre 0 y 1, donde 0 es la probabilidad nula de ocurrencia de movimientos en masa y 1 la máxima probabilidad de ocurrencia. De acuerdo con esto, a pesar de que el modelo transformado es lineal en las variables, las probabilidades no son lineales.</p>
 <p>La ventaja de la RL es que las variables predictoras no requieren tener distribución normal y pueden ser discretas o continuas, o una combinación de ambas. Sin embargo, para incorporar variables categóricas se deben transformar a variables binarias todas las clases, es decir una nueva variable por cada clase. El modelo en este caso elimina una clase, que pasa a ser la clase referente, y arroja un coeficiente para las demas clases. Es decir que los coeficientes de las clases se interpretan con respecto a la clase faltante. Esta eliminación de una clase se realiza con el objeto de evitar la multicolinealidad entre variables, ya que todas las clases sumadas dan como resultado un vector constante igual a 1, es decir que se correlacionan perfectamente.</p>
@@ -1882,7 +1859,7 @@ Uncertainty: 0.7799834770480247 0.6685462775738931 0.8870797176808958 0.77830569
 </table>
 </div></div></div>
 </div>
-<p>Existen dos librerías que nos permiten resolver este modelo, <em>statsmodels</em> y <em>sklearn</em>. La primera de ellas nos ofrece un resumen con los resultados y métricas de desempeño del modelo y utilizar la librería Patsy que permite el uso de fórmulas.</p>
+<p>Existen dos librerías que nos permiten resolver este modelo, <em>statsmodels</em> y <em>sklearn</em>. La primera de ellas nos ofrece un resumen con los resultados y métricas de desempeño del modelo y utilizar la librería <strong>Patsy</strong> que permite el uso de fórmulas.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">statsmodels.formula.api</span> <span class="k">as</span> <span class="nn">sfm</span>
@@ -1929,8 +1906,8 @@ pendiente               0.4570      0.026     17.412      0.000       0.406     
 </div>
 </div>
 </div>
-<p>La librearía <em>statsmodels</em> incorpora por defecto el intercepto en el modelo y en las fórmulas pueden especificar el tipo de variables categóricas con una <em>C</em>. Como se menciono anteriormente las clases de las variables categóricas son transformadas en variables binarias, eliminando una. En este caso se eliminó la clase 2 de <em>geologia</em>, por lo que los coeficientes de las demas clases son con respecto a dicha clase. Entre los resultados se destacan el estimador para los coeficientes (maxima verosimilitud -MLE-), el logaritmo del estimador MLE (Log-likelihood), el coeficiente de ajuste (Pseudo R-squ.). Con respecto a los coeficientes se presenta el valor de la prueba de hipótesis nula que el valor del coeficiente es igual a cero (z) como el valor del coeficiente entre el error estandar (std err), y el <em>p-value</em> (P&gt;|z|), este valor debe ser menor al 5% (0.05), lo cual significa que la probabilidad que el coeficiente tenga un valor de 0 es muy bajo.  Finalmente se presenta el rango del 95% del dominio del valor del coeficiente.</p>
-<p>La librería  <em>scikit learn</em> permite parametrizar el modelo de diferentes formas, sin embargo requiere ingresar entre variables dependientes y variables independientes. Asi como transformar la variable categórica.</p>
+<p>La librearía <em>statsmodels</em> incorpora por defecto el intercepto en el modelo y en las fórmulas pueden especificar el tipo de variables categóricas con una <em>C</em>. Como se menciono anteriormente las clases de las variables categóricas son transformadas en variables binarias, eliminando una. En este caso se eliminó la clase 2 de <em>geologia</em>, por lo que los coeficientes de las demas clases son con respecto a dicha clase. Entre los resultados se destacan el estimador para los coeficientes (maxima verosimilitud -MLE-), el logaritmo del estimador MLE (Log-likelihood), el coeficiente de ajuste (Pseudo R-squ.). Con respecto a los coeficientes se presenta el valor de la prueba de hipótesis nula que el valor del coeficiente sea igual a cero (z) como el valor del coeficiente y el error estandar (std err), y el <em>p-value</em> (P&gt;|z|), este valor debe ser menor al 5% (0.05), lo cual significa que la probabilidad que el coeficiente tenga un valor de 0 es muy bajo.  Finalmente se presenta el rango del 95% del dominio del valor del coeficiente, si el coeficiente es estadísticamente significativo, dicho rango no debe contener el valor 0.</p>
+<p>La librería  <em>scikit learn</em> permite parametrizar el modelo de diferentes formas, sin embargo requiere ingresar entre variables dependientes y variables independientes. Asi como transformar la variable categórica y eliminar una clase. También es importante tener en cuenta que la función <em>LogisticRegression()</em> por defecto utiliza <em>L2 regularization</em>, por lo que adiciona un término extra a la función <em>log-loss</em>. De esta forma, si se quiere obtener valores comparables a los del statsmodels se debe utilizar <em>LogisticRegression(penalty=None)</em>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">X</span><span class="o">=</span><span class="n">df</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="s2">&quot;inventario&quot;</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
@@ -1966,32 +1943,32 @@ pendiente               0.4570      0.026     17.412      0.000       0.406     
   <tbody>
     <tr>
       <th>0</th>
-      <td>-1.582421</td>
-      <td>-0.051931</td>
+      <td>10.862183</td>
+      <td>208.523560</td>
       <td>14.0</td>
     </tr>
     <tr>
       <th>1</th>
-      <td>-1.460616</td>
-      <td>-0.062760</td>
+      <td>12.265345</td>
+      <td>207.437332</td>
       <td>14.0</td>
     </tr>
     <tr>
       <th>2</th>
-      <td>-1.442916</td>
-      <td>-0.110142</td>
+      <td>12.469252</td>
+      <td>202.684647</td>
       <td>14.0</td>
     </tr>
     <tr>
       <th>3</th>
-      <td>-1.383993</td>
-      <td>-0.021063</td>
+      <td>13.148026</td>
+      <td>211.619766</td>
       <td>14.0</td>
     </tr>
     <tr>
       <th>4</th>
-      <td>-1.302091</td>
-      <td>0.062773</td>
+      <td>14.091524</td>
+      <td>220.028976</td>
       <td>14.0</td>
     </tr>
   </tbody>
@@ -2004,6 +1981,7 @@ pendiente               0.4570      0.026     17.412      0.000       0.406     
 <span class="n">column_name</span><span class="o">=</span><span class="n">X</span><span class="o">.</span><span class="n">columns</span><span class="o">.</span><span class="n">values</span><span class="o">.</span><span class="n">tolist</span><span class="p">()</span>
 <span class="n">column_name</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="s1">&#39;geologia&#39;</span><span class="p">)</span>
 <span class="n">X1</span><span class="o">=</span><span class="n">X</span><span class="p">[</span><span class="n">column_name</span><span class="p">]</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">dummy_geologia</span><span class="p">)</span>
+<span class="n">X1</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="s1">&#39;geo_2.0&#39;</span><span class="p">,</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 <span class="n">X1</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
 </pre></div>
 </div>
@@ -2029,7 +2007,6 @@ pendiente               0.4570      0.026     17.412      0.000       0.406     
       <th></th>
       <th>pendiente</th>
       <th>aspecto</th>
-      <th>geo_2.0</th>
       <th>geo_4.0</th>
       <th>geo_6.0</th>
       <th>geo_8.0</th>
@@ -2044,9 +2021,8 @@ pendiente               0.4570      0.026     17.412      0.000       0.406     
   <tbody>
     <tr>
       <th>0</th>
-      <td>-1.582421</td>
-      <td>-0.051931</td>
-      <td>0</td>
+      <td>10.862183</td>
+      <td>208.523560</td>
       <td>0</td>
       <td>0</td>
       <td>0</td>
@@ -2059,9 +2035,8 @@ pendiente               0.4570      0.026     17.412      0.000       0.406     
     </tr>
     <tr>
       <th>1</th>
-      <td>-1.460616</td>
-      <td>-0.062760</td>
-      <td>0</td>
+      <td>12.265345</td>
+      <td>207.437332</td>
       <td>0</td>
       <td>0</td>
       <td>0</td>
@@ -2074,9 +2049,8 @@ pendiente               0.4570      0.026     17.412      0.000       0.406     
     </tr>
     <tr>
       <th>2</th>
-      <td>-1.442916</td>
-      <td>-0.110142</td>
-      <td>0</td>
+      <td>12.469252</td>
+      <td>202.684647</td>
       <td>0</td>
       <td>0</td>
       <td>0</td>
@@ -2089,9 +2063,8 @@ pendiente               0.4570      0.026     17.412      0.000       0.406     
     </tr>
     <tr>
       <th>3</th>
-      <td>-1.383993</td>
-      <td>-0.021063</td>
-      <td>0</td>
+      <td>13.148026</td>
+      <td>211.619766</td>
       <td>0</td>
       <td>0</td>
       <td>0</td>
@@ -2104,9 +2077,8 @@ pendiente               0.4570      0.026     17.412      0.000       0.406     
     </tr>
     <tr>
       <th>4</th>
-      <td>-1.302091</td>
-      <td>0.062773</td>
-      <td>0</td>
+      <td>14.091524</td>
+      <td>220.028976</td>
       <td>0</td>
       <td>0</td>
       <td>0</td>
@@ -2131,10 +2103,7 @@ pendiente               0.4570      0.026     17.412      0.000       0.406     
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>LogisticRegression(class_weight=&#39;balanced&#39;, solver=&#39;newton-cg&#39;)
-</pre></div>
-</div>
-</div>
+<div class="output text_html"><style>#sk-container-id-1 {color: black;}#sk-container-id-1 pre{padding: 0;}#sk-container-id-1 div.sk-toggleable {background-color: white;}#sk-container-id-1 label.sk-toggleable__label {cursor: pointer;display: block;width: 100%;margin-bottom: 0;padding: 0.3em;box-sizing: border-box;text-align: center;}#sk-container-id-1 label.sk-toggleable__label-arrow:before {content: "▸";float: left;margin-right: 0.25em;color: #696969;}#sk-container-id-1 label.sk-toggleable__label-arrow:hover:before {color: black;}#sk-container-id-1 div.sk-estimator:hover label.sk-toggleable__label-arrow:before {color: black;}#sk-container-id-1 div.sk-toggleable__content {max-height: 0;max-width: 0;overflow: hidden;text-align: left;background-color: #f0f8ff;}#sk-container-id-1 div.sk-toggleable__content pre {margin: 0.2em;color: black;border-radius: 0.25em;background-color: #f0f8ff;}#sk-container-id-1 input.sk-toggleable__control:checked~div.sk-toggleable__content {max-height: 200px;max-width: 100%;overflow: auto;}#sk-container-id-1 input.sk-toggleable__control:checked~label.sk-toggleable__label-arrow:before {content: "▾";}#sk-container-id-1 div.sk-estimator input.sk-toggleable__control:checked~label.sk-toggleable__label {background-color: #d4ebff;}#sk-container-id-1 div.sk-label input.sk-toggleable__control:checked~label.sk-toggleable__label {background-color: #d4ebff;}#sk-container-id-1 input.sk-hidden--visually {border: 0;clip: rect(1px 1px 1px 1px);clip: rect(1px, 1px, 1px, 1px);height: 1px;margin: -1px;overflow: hidden;padding: 0;position: absolute;width: 1px;}#sk-container-id-1 div.sk-estimator {font-family: monospace;background-color: #f0f8ff;border: 1px dotted black;border-radius: 0.25em;box-sizing: border-box;margin-bottom: 0.5em;}#sk-container-id-1 div.sk-estimator:hover {background-color: #d4ebff;}#sk-container-id-1 div.sk-parallel-item::after {content: "";width: 100%;border-bottom: 1px solid gray;flex-grow: 1;}#sk-container-id-1 div.sk-label:hover label.sk-toggleable__label {background-color: #d4ebff;}#sk-container-id-1 div.sk-serial::before {content: "";position: absolute;border-left: 1px solid gray;box-sizing: border-box;top: 0;bottom: 0;left: 50%;z-index: 0;}#sk-container-id-1 div.sk-serial {display: flex;flex-direction: column;align-items: center;background-color: white;padding-right: 0.2em;padding-left: 0.2em;position: relative;}#sk-container-id-1 div.sk-item {position: relative;z-index: 1;}#sk-container-id-1 div.sk-parallel {display: flex;align-items: stretch;justify-content: center;background-color: white;position: relative;}#sk-container-id-1 div.sk-item::before, #sk-container-id-1 div.sk-parallel-item::before {content: "";position: absolute;border-left: 1px solid gray;box-sizing: border-box;top: 0;bottom: 0;left: 50%;z-index: -1;}#sk-container-id-1 div.sk-parallel-item {display: flex;flex-direction: column;z-index: 1;position: relative;background-color: white;}#sk-container-id-1 div.sk-parallel-item:first-child::after {align-self: flex-end;width: 50%;}#sk-container-id-1 div.sk-parallel-item:last-child::after {align-self: flex-start;width: 50%;}#sk-container-id-1 div.sk-parallel-item:only-child::after {width: 0;}#sk-container-id-1 div.sk-dashed-wrapped {border: 1px dashed gray;margin: 0 0.4em 0.5em 0.4em;box-sizing: border-box;padding-bottom: 0.4em;background-color: white;}#sk-container-id-1 div.sk-label label {font-family: monospace;font-weight: bold;display: inline-block;line-height: 1.2em;}#sk-container-id-1 div.sk-label-container {text-align: center;}#sk-container-id-1 div.sk-container {/* jupyter's `normalize.less` sets `[hidden] { display: none; }` but bootstrap.min.css set `[hidden] { display: none !important; }` so we also need the `!important` here to be able to override the default hidden behavior on the sphinx rendered scikit-learn.org. See: https://github.com/scikit-learn/scikit-learn/issues/21755 */display: inline-block !important;position: relative;}#sk-container-id-1 div.sk-text-repr-fallback {display: none;}</style><div id="sk-container-id-1" class="sk-top-container"><div class="sk-text-repr-fallback"><pre>LogisticRegression(class_weight=&#x27;balanced&#x27;, solver=&#x27;newton-cg&#x27;)</pre><b>In a Jupyter environment, please rerun this cell to show the HTML representation or trust the notebook. <br />On GitHub, the HTML representation is unable to render, please try loading this page with nbviewer.org.</b></div><div class="sk-container" hidden><div class="sk-item"><div class="sk-estimator sk-toggleable"><input class="sk-toggleable__control sk-hidden--visually" id="sk-estimator-id-1" type="checkbox" checked><label for="sk-estimator-id-1" class="sk-toggleable__label sk-toggleable__label-arrow">LogisticRegression</label><div class="sk-toggleable__content"><pre>LogisticRegression(class_weight=&#x27;balanced&#x27;, solver=&#x27;newton-cg&#x27;)</pre></div></div></div></div></div></div></div>
 </div>
 <p>Luego de tener el modelo construido, se le asignan los datos con la función <em>fit</em>, en este caso, primero la matriz con las variables predictoras, y luego la variable <em>y</em>. De esta forma el modelo se entrena con los datos y se pueden obtener los resultados de los valores de los coeficientes con la función <em>coef_</em></p>
 <div class="cell docutils container">
@@ -2145,10 +2114,15 @@ pendiente               0.4570      0.026     17.412      0.000       0.406     
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[ 5.08853286e-01 -4.99256806e-03  2.53241713e+00 -1.56157800e+00
-  -3.55555293e+00  2.57767799e+00 -5.35636481e+00  2.16197921e+00
-   2.64123695e+00  1.92882797e+00  3.89784550e+00 -5.26648901e+00
-  -4.72219096e-10]]
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[ 4.4829205e-02 -6.7181507e-05 -2.8944589e-02 -4.5539367e-01
+   8.3560117e-02 -2.3148713e+00 -3.2046258e-01  1.5242295e-01
+  -5.8920914e-01  7.4672925e-01 -2.0848141e+00]]
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>c:\Users\edier\miniconda3\envs\carto\Lib\site-packages\scipy\optimize\_linesearch.py:314: LineSearchWarning: The line search algorithm did not converge
+  warn(&#39;The line search algorithm did not converge&#39;, LineSearchWarning)
+c:\Users\edier\miniconda3\envs\carto\Lib\site-packages\sklearn\utils\optimize.py:204: UserWarning: Line Search failed
+  warnings.warn(&quot;Line Search failed&quot;)
 </pre></div>
 </div>
 </div>
@@ -2223,225 +2197,10 @@ pendiente               0.4570      0.026     17.412      0.000       0.406     
 <span class="n">column_name</span><span class="o">=</span><span class="n">x_map</span><span class="o">.</span><span class="n">columns</span><span class="o">.</span><span class="n">values</span><span class="o">.</span><span class="n">tolist</span><span class="p">()</span>
 <span class="n">column_name</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="s1">&#39;geologia&#39;</span><span class="p">)</span>
 <span class="n">x_map</span><span class="o">=</span><span class="n">x_map</span><span class="p">[</span><span class="n">column_name</span><span class="p">]</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">dummy_geologia</span><span class="p">)</span>
-<span class="n">x_map</span><span class="o">=</span><span class="n">x_map</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="s1">&#39;geo_0.0&#39;</span><span class="p">,</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">x_map</span><span class="o">=</span><span class="n">x_map</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="s1">&#39;geo_2.0&#39;</span><span class="p">,</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output text_html"><div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>pendiente</th>
-      <th>aspecto</th>
-      <th>geo_2.0</th>
-      <th>geo_4.0</th>
-      <th>geo_6.0</th>
-      <th>geo_8.0</th>
-      <th>geo_9.0</th>
-      <th>geo_10.0</th>
-      <th>geo_11.0</th>
-      <th>geo_14.0</th>
-      <th>geo_15.0</th>
-      <th>geo_16.0</th>
-      <th>intercepto</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>...</th>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-    </tr>
-    <tr>
-      <th>1854705</th>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>1854706</th>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>1854707</th>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>1854708</th>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>1854709</th>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>1</td>
-    </tr>
-  </tbody>
-</table>
-<p>1854710 rows × 13 columns</p>
-</div></div></div>
 </div>
 <p>Como se puede observar, tenemos ahora una matriz con todas las variables y con un número mayor de celdas.</p>
 <p>Con esta matriz podemos entonces obtener para cada celda la probabilidad que se inestable.</p>
@@ -2954,16 +2713,16 @@ Name: inventario, dtype: int64
         },
         codeMirrorConfig: {
             theme: "abcdef",
-            mode: "carto"
+            mode: "python"
         },
         kernelOptions: {
-            name: "carto",
+            name: "python3",
             path: "./."
         },
         predefinedOutput: true
     }
     </script>
-    <script>kernelName = 'carto'</script>
+    <script>kernelName = 'python3'</script>
 
                 </article>
               
