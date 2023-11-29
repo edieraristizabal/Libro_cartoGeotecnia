@@ -64,7 +64,7 @@ Flujo en San Antonio de Prado, sector Santa Rita, municipio de Medellín-Colombi
 :::{figure-md} flujos1
 <img src="https://www.hec.usace.army.mil/confluence/rasdocs/rasmuddebris/files/43818439/139726897/1/1682116574941/worddav6176459c6f45d39f3cf5bcff67e9076f.png" alt="flujos1" width="800px">
 
-Clasificación de flujos de acuerdo con Coussot y Meuniers (1996).
+Clasificación de flujos de acuerdo con {cite:t}`Coussot1996`.
 :::
 
 Estos flujos pueden desplazarse simplemente sobre las laderas, o propagarse por largas distancias a lo largo de cauces estrechos, hasta alcanzar valles abiertos donde se deposita, o incluso alcanzar la desembocadura de la cuenca donde da lugar a geoformas tipo abanicos. estos flujos canalizados representan esencialmente lo que se denominan avenidas torrenciales en nuestro medio ({cite:t}`Aristizabalarango2020`).
@@ -72,7 +72,7 @@ Estos flujos pueden desplazarse simplemente sobre las laderas, o propagarse por 
 :::{figure-md} flujos2
 <img src="https://earthwise.bgs.ac.uk/images/thumb/3/39/OR17031fig2.jpg/600px-OR17031fig2.jpg" alt="flujos2" width="800px">
 
-Clasificacion de movimientos en masa tipo flujos de acuerdo con Varnes & Cruden (1996).
+Clasificacion de movimientos en masa tipo flujos de acuerdo con {cite:t}`Cruden1996`.
 :::
 
 Es importante resaltar que todas las avenidas torrenciales no deben ser consideradas como movimientos en masa. El término avenida torrencial incorpora fenómenos a nivel de cuenca entre procesos gravitacionales y procesos hidrológicos. La descripción que más se ajusta a los procesos denominados localmente como avenidas torrenciales corresponde a una de las primeras definiciones de flujos de escombros realizada por {cite:t}`Stiny1910` donde los describe como fenómenos que inician como una inundación en drenajes de montaña, con una importante carga de sedimentos de fondo y en suspensión, y que, de acuerdo con el incremento en el volumen de sedimentos, cambia a una masa viscosa de agua, sedimentos y madera mezclados. En esta misma dirección {cite:t}`Hungr2005` propone, a diferencia de {cite:t}`Cruden1996` que restrigen el término flujo a la deformacion progresiva de los materiales de las laderas, utilizar el término flujo de escombros para cubrir un rango amplio de flujos, que incluyen los fenómenos iniciales de origen gravitacional en las laderas de la cuenca, que aportan una gran cantidad de sedimentos a los cauces de montaña, y que se transforman a flujos rápidos a lo largo de cauces confinados de fuerte pendiente, que terminan depositándose como abanicos. En conclusión, el término avenida torrencial se ajusta a la definición de flujo de escombros dada por {cite:t}`Stiny1910` y {cite:t}`Hungr2005`, que representa un proceso amplio que va desde la ocurrencia de movimientos en masa en las laderas, hasta los diferentes flujos que se presentan a lo largo de los cauces de montaña, de acuerdo con la concentración de agua y sedimentos. 
@@ -95,7 +95,7 @@ Finalmente se encuentran los movimientos en masa tipo **extensión lateral**, lo
 :::{figure-md} estado
 <img src="https://www.researchgate.net/profile/Pierluigi-Confuorto/publication/303377557/figure/fig4/AS:669001558528004@1536513809220/Scheme-of-the-state-of-activity-of-a-landslide-modified-from-WP-WLI-1993-1-Active.ppm" alt="estado" width="800px">
 
-Estado de la actividad de movimientos en masa de acuerdo con Varnes & Cruden (1996). (1) activo, (2) suspendido, (3) reactivado, (5) latente (*dormant*), (6) abandonado, (7) estabilizado, (8) relicto. El estado inactivo se subdivide en los estados (5) al (8).
+Estado de la actividad de movimientos en masa de acuerdo con {cite:t}`Cruden1996`. (1) activo, (2) suspendido, (3) reactivado, (5) latente (*dormant*), (6) abandonado, (7) estabilizado, (8) relicto. El estado inactivo se subdivide en los estados (5) al (8).
 :::
 
 La distribución de la actividad se refiere hacia dónde se está mpviendo o desplazando la superficie de falla. Se define como *avanzando* sí la superficie de ruptura se extiende en la dirección del movimiento, *retrogresivo* cuando se mueve la superficie de falla hacia la dirección opuesta al movimiento en masa, *ampliandose* cuando se mueve hacia ambas márgenes, *alargandose* cuando el material desplazado está continuamente adicionando mas volumen de material, *reduciendoce* cuando ocurre lo contrario, finalmente se utiliza el término *confinado* cuadno se observa el escarpe pero la superficie de falla no es visible en la pata del movimiento.
@@ -107,7 +107,7 @@ En cuanto a la escala de la velocidad de los movimientos en masa {cite:t}`Cruden
 :::{figure-md} velocidad
 <img src="https://www.researchgate.net/profile/Pierluigi-Confuorto/publication/303377557/figure/fig7/AS:669001558540305@1536513809956/Velocity-of-a-landside-according-to-Cruden-and-Varnes-classification-modified-from.ppm" alt="velocidad" width="800px">
 
-Escala de velocidad de movimientos en masa de acuerdo con Varnes & Cruden (1996).
+Escala de velocidad de movimientos en masa de acuerdo con {cite:t}`Cruden1996`.
 :::
 
 ## Intensidad vs Magnitud

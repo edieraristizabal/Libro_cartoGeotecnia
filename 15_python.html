@@ -434,14 +434,10 @@ document.write(`
 <ul class="simple">
 <li><p>Numpy –&gt; Paquete fundamental para computación científica con Python</p></li>
 <li><p>Pandas –&gt; Estructuras de datos y herramientas de análisis de datos fáciles de usar y de alto rendimiento</p></li>
-<li><p>Scipy –&gt; Una colección de algoritmos numéricos y cajas de herramientas específicas de dominio, que incluyen procesamiento de señales, optimización y estadísticas</p></li>
 <li><p>Statsmodels –&gt; Modelos estadísticos para Python</p></li>
 <li><p>Scikit-learn –&gt; Aprendizaje automático para Python (clasificación, regresión, agrupamiento, etc.)</p></li>
 <li><p>Matplotlib –&gt; Biblioteca básica de trazado para Python</p></li>
 <li><p>Seaborn –&gt; Visualización de datos estadísticos</p></li>
-<li><p>Bokeh –&gt; Visualizaciones interactivas para la web (también mapas)</p></li>
-<li><p>Plotly –&gt; Visualizaciones interactivas (también mapas) para la web (comercial - gratis con fines educativos)</p></li>
-<li><p>Dash -&gt; Creación de aplicaciones web analíticas con Python (no se requiere Javascript)</p></li>
 </ul>
 </section>
 <section id="sig">
@@ -450,22 +446,11 @@ document.write(`
 <li><p>GDAL –&gt; Paquete fundamental para procesar formatos de datos vectoriales y raster (muchos módulos a continuación dependen de esto). Se utiliza para el procesamiento de tramas.</p></li>
 <li><p>Geopandas -&gt; Trabajar con datos geoespaciales en Python es más fácil, combina las capacidades de pandas y shapely.</p></li>
 <li><p>Shapely -&gt; Paquete de Python para manipulación y análisis de objetos geométricos planos (basado en GEOS ampliamente implementado).</p></li>
-<li><p>Fiona –&gt; Lectura y escritura de datos espaciales (alternativa para geopandas).</p></li>
-<li><p>Pyproj –&gt; Realiza transformaciones cartográficas y cálculos geodésicos (basado en PROJ.4).</p></li>
-<li><p>PyCRS -&gt; Trabajando fácilmente con diferentes especificaciones CRS (EPSG, ESRI, Proj4)</p></li>
 <li><p>Pysal –&gt; Biblioteca de funciones de análisis espacial escritas en Python.</p></li>
-<li><p>Geopy –&gt; Biblioteca de geocodificación: coordenadas a dirección &lt;-&gt; dirección a coordenadas.</p></li>
 <li><p>GeoViews –&gt; Mapas Interactivos para la web.</p></li>
-<li><p>Geoplot -&gt; Biblioteca de visualización de datos geoespaciales de alto nivel para Python.</p></li>
-<li><p>GeoNotebook -&gt; Entorno similar a GIS de escritorio para visualizar e interactuar con datos espaciales usando Python (basado en Jupyter Notebooks)</p></li>
 <li><p>OSMnx –&gt; Python para redes de calles. Recupere, construya, analice y visualice redes de calles desde OpenStreetMap</p></li>
-<li><p>Networkx -&gt; Análisis de red y enrutamiento en Python (por ejemplo, algoritmos Dijkstra y A*), consulte esta publicación.</p></li>
 <li><p>Cartopy -&gt; Haga que dibujar mapas para el análisis y la visualización de datos sea lo más fácil posible.</p></li>
-<li><p>Scipy.spatial –&gt; Algoritmos espaciales y estructuras de datos.</p></li>
-<li><p>Rtree -&gt; Indexación espacial para Python para búsquedas espaciales rápidas.</p></li>
 <li><p>Rasterio –&gt; E/S raster limpia y rápida y geoespacial para Python.</p></li>
-<li><p>Rasterstats -&gt; Un módulo para resumir conjuntos de datos ráster geoespaciales basados ​​en geometrías vectoriales (por ejemplo, realizar estadísticas zonales).</p></li>
-<li><p>RSGISLib –&gt; Biblioteca de Software de Teledetección y GIS para Python.</p></li>
 </ul>
 <center><img src="https://www.alpha-quantum.com/blog/wp-content/uploads/2020/05/img_5ecd875868599.png" width="1000" class="center"></center ></section>
 <section id="package-installer-for-python-pip">
@@ -475,7 +460,7 @@ document.write(`
 </pre></div>
 </div>
 <p>En caso de no tener instalado Pip puede descargarlo e instalarlo de su <a class="reference external" href="https://pypi.org/project/pip/">pagina web</a>.</p>
-<p>Para descargar e instalar paquetes de Python con Pip se debe realizar desde la linea de comandos escribiendo <em>pip install</em> y el nombre el paquete que se desea descargar e instalar. POr ejemplo para descargar el paquete JupyterLab que se utilizará en este libro se escribe:</p>
+<p>Para descargar e instalar paquetes de Python con Pip se debe realizar desde la linea de comandos escribiendo <em>pip install</em> y el nombre el paquete que se desea descargar e instalar. Por ejemplo para descargar el paquete JupyterLab que se utilizará en este libro se escribe:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">jupyterlab</span>
 </pre></div>
 </div>
@@ -526,7 +511,7 @@ document.write(`
 <li><p><strong>Texto</strong></p></li>
 <li><p><strong>Codigo</strong></p></li>
 </ul>
-<p>Las celdas de texto en un cuaderno están en un lenguaje <a class="reference external" href="https://help.github.com/articles/github-flavored-markdown/">Github Flavored Markdown</a>. Lo que significa que se debe escribir en texto plano con alguans reglas simples y el notebook mostrar el texto correspondiente interpretando las reglas insertadas para editar el texto. A continuación se presentan algunos ejemplos.</p>
+<p>Las celdas de texto en un cuaderno están en un lenguaje <a class="reference external" href="https://help.github.com/articles/github-flavored-markdown/">Github Flavored Markdown</a>. Lo que significa que se debe escribir en texto plano con algunas reglas simples y el notebook mostrar el texto correspondiente interpretando las reglas insertadas para editar el texto.</p>
 <section id="creacion-de-un-entorno">
 <h3>Creación de un entorno<a class="headerlink" href="#creacion-de-un-entorno" title="Permalink to this heading">#</a></h3>
 <p>Antes de comenzar con JupyterLab, se recomienda crear un entorno para el proyecto. Los entornos pueden considerarse repositorios en los que se instalan paquetes de Python para evitar conflictos entre paquetes y versiones. Por ejemplo, si tiene un código desarrollado con un paquete NumPy 1.18 y este código no funciona con la versión actual, que es la 1.20, puede (y debe) crear entornos específicos para cada versión.</p>
@@ -534,7 +519,7 @@ document.write(`
 <p><centro><img src="https://miro.medium.com/max/700/1*EEcFGtMxuu42T42jgmvSzA.png" width="1000"></centro></p>
 <p>Para instalar un nuevo paquete en dicho entorno, es necesario buscar el nombre del paquete deseado usando la barra de búsqueda (no olvide seleccionar <em>Todo</em> en el cuadro desplegable), seleccione el paquete de la lista y haga clic en <em>Aplicar</em>. Como los paquetes funcionan con dependencias, dependiendo del paquete a instalar, instalará todos los paquetes necesarios que aún no existen en el entorno actual.</p>
 <p><centro><img src="https://miro.medium.com/max/700/1*2BZZhxcof1eu1INPMyny6w.png" width="1000"></centro></p>
-<p>En Miniconda para crear un nuevo <a class="reference external" href="https://conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html">entorno</a> llamado <em>carto</em> se utiliza el siguiente comando:</p>
+<p>En Miniconda para crear un nuevo <a class="reference external" href="https://conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html">entorno</a>, en este caso se llamará <em>carto</em>, se utiliza el siguiente comando:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">conda</span> <span class="n">create</span> <span class="o">--</span><span class="n">name</span> <span class="n">carto</span>
 </pre></div>
 </div>
