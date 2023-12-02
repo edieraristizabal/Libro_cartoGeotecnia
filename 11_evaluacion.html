@@ -398,6 +398,7 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Validación cruzada</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#desempeno-del-modelo">Desempeño del modelo</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#capacidad-de-prediccion">Capacidad de predicción</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#calcular-mapa-de-susceptibilidad-final">Calcular mapa de susceptibilidad final</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#referencias">Referencias</a></li>
@@ -555,9 +556,9 @@ document.write(`
 <p>A continuación se importa el inventario de movimientos en masa, así como los mapas de las variables predictoras a utilizar:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">raster</span> <span class="o">=</span> <span class="n">rio</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s1">&#39;https://github.com/edieraristizabal/Libro_cartoGeotecnia/blob/master/data/Inventario_MenM.tif?raw=true&#39;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">raster</span> <span class="o">=</span> <span class="n">rio</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s1">&#39;https://github.com/edieraristizabal/Libro_cartoGeotecnia/raw/master/data/miel/Inventario_MenM.tif&#39;</span><span class="p">)</span>
 <span class="n">inventario</span><span class="o">=</span><span class="n">raster</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
-<span class="n">raster_mask</span> <span class="o">=</span> <span class="n">rio</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s1">&#39;https://github.com/edieraristizabal/Libro_cartoGeotecnia/blob/master/data/Pendiente.tif?raw=true&#39;</span><span class="p">)</span>
+<span class="n">raster_mask</span> <span class="o">=</span> <span class="n">rio</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s1">&#39;https://github.com/edieraristizabal/Libro_cartoGeotecnia/raw/master/data/miel/Pendiente.tif&#39;</span><span class="p">)</span>
 <span class="n">msk</span><span class="o">=</span><span class="n">raster_mask</span><span class="o">.</span><span class="n">read_masks</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
 <span class="n">msk</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">msk</span><span class="o">==</span><span class="mi">255</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">)</span>
 <span class="n">inventario</span><span class="o">=</span><span class="n">msk</span><span class="o">*</span><span class="n">inventario</span>
@@ -570,48 +571,15 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">CPLE_HttpResponseError</span><span class="g g-Whitespace">                    </span>Traceback (most recent call last)
-<span class="nn">File rasterio\\_base.pyx:310,</span> in <span class="ni">rasterio._base.DatasetBase.__init__</span><span class="nt">()</span>
-
-<span class="nn">File rasterio\\_base.pyx:221,</span> in <span class="ni">rasterio._base.open_dataset</span><span class="nt">()</span>
-
-<span class="nn">File rasterio\\_err.pyx:221,</span> in <span class="ni">rasterio._err.exc_wrap_pointer</span><span class="nt">()</span>
-
-<span class="ne">CPLE_HttpResponseError</span>: HTTP response code: 404
-
-<span class="n">During</span> <span class="n">handling</span> <span class="n">of</span> <span class="n">the</span> <span class="n">above</span> <span class="n">exception</span><span class="p">,</span> <span class="n">another</span> <span class="n">exception</span> <span class="n">occurred</span><span class="p">:</span>
-
-<span class="ne">RasterioIOError</span><span class="g g-Whitespace">                           </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
-<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">raster</span> <span class="o">=</span> <span class="n">rio</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s1">&#39;https://github.com/edieraristizabal/Libro_cartoGeotecnia/blob/master/data/Inventario_MenM.tif?raw=true&#39;</span><span class="p">)</span>
-<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="n">inventario</span><span class="o">=</span><span class="n">raster</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
-<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="n">raster_mask</span> <span class="o">=</span> <span class="n">rio</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s1">&#39;https://github.com/edieraristizabal/Libro_cartoGeotecnia/blob/master/data/Pendiente.tif?raw=true&#39;</span><span class="p">)</span>
-
-<span class="nn">File ~\miniconda3\Lib\site-packages\rasterio\env.py:451,</span> in <span class="ni">ensure_env_with_credentials.&lt;locals&gt;.wrapper</span><span class="nt">(*args, **kwds)</span>
-<span class="g g-Whitespace">    </span><span class="mi">448</span>     <span class="n">session</span> <span class="o">=</span> <span class="n">DummySession</span><span class="p">()</span>
-<span class="g g-Whitespace">    </span><span class="mi">450</span> <span class="k">with</span> <span class="n">env_ctor</span><span class="p">(</span><span class="n">session</span><span class="o">=</span><span class="n">session</span><span class="p">):</span>
-<span class="ne">--&gt; </span><span class="mi">451</span>     <span class="k">return</span> <span class="n">f</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwds</span><span class="p">)</span>
-
-<span class="nn">File ~\miniconda3\Lib\site-packages\rasterio\__init__.py:317,</span> in <span class="ni">open</span><span class="nt">(fp, mode, driver, width, height, count, crs, transform, dtype, nodata, sharing, **kwargs)</span>
-<span class="g g-Whitespace">    </span><span class="mi">314</span> <span class="n">path</span> <span class="o">=</span> <span class="n">_parse_path</span><span class="p">(</span><span class="n">raw_dataset_path</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">316</span> <span class="k">if</span> <span class="n">mode</span> <span class="o">==</span> <span class="s2">&quot;r&quot;</span><span class="p">:</span>
-<span class="ne">--&gt; </span><span class="mi">317</span>     <span class="n">dataset</span> <span class="o">=</span> <span class="n">DatasetReader</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">driver</span><span class="o">=</span><span class="n">driver</span><span class="p">,</span> <span class="n">sharing</span><span class="o">=</span><span class="n">sharing</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">318</span> <span class="k">elif</span> <span class="n">mode</span> <span class="o">==</span> <span class="s2">&quot;r+&quot;</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">319</span>     <span class="n">dataset</span> <span class="o">=</span> <span class="n">get_writer_for_path</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">driver</span><span class="o">=</span><span class="n">driver</span><span class="p">)(</span>
-<span class="g g-Whitespace">    </span><span class="mi">320</span>         <span class="n">path</span><span class="p">,</span> <span class="n">mode</span><span class="p">,</span> <span class="n">driver</span><span class="o">=</span><span class="n">driver</span><span class="p">,</span> <span class="n">sharing</span><span class="o">=</span><span class="n">sharing</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span>
-<span class="g g-Whitespace">    </span><span class="mi">321</span>     <span class="p">)</span>
-
-<span class="nn">File rasterio\\_base.pyx:312,</span> in <span class="ni">rasterio._base.DatasetBase.__init__</span><span class="nt">()</span>
-
-<span class="ne">RasterioIOError</span>: HTTP response code: 404
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(910801,)
 </pre></div>
 </div>
+<img alt="_images/197577bc2701a4077158f7b6d1257be0a307cd454e02605e7b57449c2239b29a.png" src="_images/197577bc2701a4077158f7b6d1257be0a307cd454e02605e7b57449c2239b29a.png" />
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">raster</span> <span class="o">=</span> <span class="n">rio</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s1">&#39;https://github.com/edieraristizabal/Libro_cartoGeotecnia/blob/master/data/Aspecto.tif?raw=true&#39;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">raster</span> <span class="o">=</span> <span class="n">rio</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s1">&#39;https://github.com/edieraristizabal/Libro_cartoGeotecnia/raw/master/data/miel/Aspecto.tif&#39;</span><span class="p">)</span>
 <span class="n">aspecto</span><span class="o">=</span><span class="n">raster</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
 <span class="n">aspecto</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">aspecto</span><span class="o">&lt;-</span><span class="mi">100</span><span class="p">,</span><span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">,</span><span class="n">aspecto</span><span class="p">)</span>
 <span class="n">aspecto_vector</span><span class="o">=</span><span class="n">aspecto</span><span class="o">.</span><span class="n">ravel</span><span class="p">()</span>
@@ -622,15 +590,15 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.colorbar.Colorbar at 0x7f22fc7bde50&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.colorbar.Colorbar at 0x24d85879890&gt;
 </pre></div>
 </div>
-<img alt="_images/95586db2817f035dfee8f3b8933d7dde834a0e365d2df15e12594fcc04dcfdde.png" src="_images/95586db2817f035dfee8f3b8933d7dde834a0e365d2df15e12594fcc04dcfdde.png" />
+<img alt="_images/c52bcf75b52535cbf0e430121edbb0716662d7a36eeb57a35e654ace334bc2e3.png" src="_images/c52bcf75b52535cbf0e430121edbb0716662d7a36eeb57a35e654ace334bc2e3.png" />
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">raster</span> <span class="o">=</span> <span class="n">rio</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s1">&#39;https://github.com/edieraristizabal/Libro_cartoGeotecnia/blob/master/data/Pendiente.tif?raw=true&#39;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">raster</span> <span class="o">=</span> <span class="n">rio</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s1">&#39;https://github.com/edieraristizabal/Libro_cartoGeotecnia/raw/master/data/miel/Pendiente.tif&#39;</span><span class="p">)</span>
 <span class="n">pendiente</span><span class="o">=</span><span class="n">raster</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
 <span class="n">pendiente</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">pendiente</span><span class="o">&lt;</span><span class="mi">0</span><span class="p">,</span><span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">,</span><span class="n">pendiente</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">pendiente</span><span class="p">);</span>
@@ -641,12 +609,12 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/a1df43cf2ffe6c56339dea20114ee86b101f539a287bee6ef92043c04468344d.png" src="_images/a1df43cf2ffe6c56339dea20114ee86b101f539a287bee6ef92043c04468344d.png" />
+<img alt="_images/242241e08d870eef0d3243cd8461b986602d28bb64977f17482341c32d155416.png" src="_images/242241e08d870eef0d3243cd8461b986602d28bb64977f17482341c32d155416.png" />
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">raster</span> <span class="o">=</span> <span class="n">rio</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s1">&#39;https://github.com/edieraristizabal/Libro_cartoGeotecnia/blob/master/data/Geologia_Superficial.tif?raw=true&#39;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">raster</span> <span class="o">=</span> <span class="n">rio</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s1">&#39;https://github.com/edieraristizabal/Libro_cartoGeotecnia/raw/master/data/miel/Geologia_Superficial.tif&#39;</span><span class="p">)</span>
 <span class="n">geologia</span><span class="o">=</span><span class="n">raster</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
 <span class="n">geologia</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">geologia</span><span class="o">&lt;</span><span class="mi">0</span><span class="p">,</span><span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">,</span><span class="n">geologia</span><span class="p">)</span>
 <span class="n">geologia_vector</span><span class="o">=</span><span class="n">geologia</span><span class="o">.</span><span class="n">ravel</span><span class="p">()</span>
@@ -657,7 +625,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/8c62eee2d8a9bc392c508369fea668fef803b299125243ab05369514b4898269.png" src="_images/8c62eee2d8a9bc392c508369fea668fef803b299125243ab05369514b4898269.png" />
+<img alt="_images/e49bf3460af74719f20c5b9faf593d88921eb0e5af292fe3f7ed6856b4849849.png" src="_images/e49bf3460af74719f20c5b9faf593d88921eb0e5af292fe3f7ed6856b4849849.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -672,10 +640,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_html">
-  <div id="df-665124f3-9eb5-4f11-a4bc-82998c69ca25">
-    <div class="colab-df-container">
-      <div>
+<div class="output text_html"><div>
 <style scoped>
     .dataframe tbody tr th:only-of-type {
         vertical-align: middle;
@@ -731,83 +696,7 @@ document.write(`
     </tr>
   </tbody>
 </table>
-</div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-665124f3-9eb5-4f11-a4bc-82998c69ca25')"
-              title="Convert this dataframe to an interactive table."
-              style="display:none;">
-        
-  <svg xmlns="http://www.w3.org/2000/svg" height="24px"viewBox="0 0 24 24"
-       width="24px">
-    <path d="M0 0h24v24H0V0z" fill="none"/>
-    <path d="M18.56 5.44l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94zm-11 1L8.5 8.5l.94-2.06 2.06-.94-2.06-.94L8.5 2.5l-.94 2.06-2.06.94zm10 10l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94z"/><path d="M17.41 7.96l-1.37-1.37c-.4-.4-.92-.59-1.43-.59-.52 0-1.04.2-1.43.59L10.3 9.45l-7.72 7.72c-.78.78-.78 2.05 0 2.83L4 21.41c.39.39.9.59 1.41.59.51 0 1.02-.2 1.41-.59l7.78-7.78 2.81-2.81c.8-.78.8-2.07 0-2.86zM5.41 20L4 18.59l7.72-7.72 1.47 1.35L5.41 20z"/>
-  </svg>
-      </button>
-      
-  <style>
-    .colab-df-container {
-      display:flex;
-      flex-wrap:wrap;
-      gap: 12px;
-    }
-
-    .colab-df-convert {
-      background-color: #E8F0FE;
-      border: none;
-      border-radius: 50%;
-      cursor: pointer;
-      display: none;
-      fill: #1967D2;
-      height: 32px;
-      padding: 0 0 0 0;
-      width: 32px;
-    }
-
-    .colab-df-convert:hover {
-      background-color: #E2EBFA;
-      box-shadow: 0px 1px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px 1px rgba(60, 64, 67, 0.15);
-      fill: #174EA6;
-    }
-
-    [theme=dark] .colab-df-convert {
-      background-color: #3B4455;
-      fill: #D2E3FC;
-    }
-
-    [theme=dark] .colab-df-convert:hover {
-      background-color: #434B5C;
-      box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
-      filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.3));
-      fill: #FFFFFF;
-    }
-  </style>
-
-      <script>
-        const buttonEl =
-          document.querySelector('#df-665124f3-9eb5-4f11-a4bc-82998c69ca25 button.colab-df-convert');
-        buttonEl.style.display =
-          google.colab.kernel.accessAllowed ? 'block' : 'none';
-
-        async function convertToInteractive(key) {
-          const element = document.querySelector('#df-665124f3-9eb5-4f11-a4bc-82998c69ca25');
-          const dataTable =
-            await google.colab.kernel.invokeFunction('convertToInteractive',
-                                                     [key], {});
-          if (!dataTable) return;
-
-          const docLinkHtml = 'Like what you see? Visit the ' +
-            '<a target="_blank" href=https://colab.research.google.com/notebooks/data_table.ipynb>data table notebook</a>'
-            + ' to learn more about interactive tables.';
-          element.innerHTML = '';
-          dataTable['output_type'] = 'display_data';
-          await google.colab.output.renderOutput(dataTable, element);
-          const docLink = document.createElement('div');
-          docLink.innerHTML = docLinkHtml;
-          element.appendChild(docLink);
-        }
-      </script>
-    </div>
-  </div>
-  </div></div>
+</div></div></div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -851,16 +740,8 @@ Tamaño de labels de validación: (182161,)
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">y_train_pred</span><span class="o">=</span><span class="n">result</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">x_train</span><span class="p">)</span> <span class="c1"># utiliza por defecto el valor de 0,5, por encime es uno y por debajo es 0</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">y_train_pred</span><span class="o">=</span><span class="n">result</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">x_train</span><span class="p">)</span> <span class="c1"># utiliza por defecto el valor de 0,5, por encima es uno y por debajo es 0</span>
 <span class="n">y_train_probs</span><span class="o">=</span><span class="n">result</span><span class="o">.</span><span class="n">predict_proba</span><span class="p">(</span><span class="n">x_train</span><span class="p">)[:,</span><span class="mi">1</span><span class="p">]</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">y_val_pred</span><span class="o">=</span><span class="n">result</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">x_test</span><span class="p">)</span> 
-<span class="n">y_val_probs</span><span class="o">=</span><span class="n">result</span><span class="o">.</span><span class="n">predict_proba</span><span class="p">(</span><span class="n">x_test</span><span class="p">)[:,</span><span class="mi">1</span><span class="p">]</span>
 </pre></div>
 </div>
 </div>
@@ -873,8 +754,8 @@ Tamaño de labels de validación: (182161,)
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[727353,      0],
-       [   391,    896]])
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[727313,      0],
+       [   395,    932]], dtype=int64)
 </pre></div>
 </div>
 </div>
@@ -889,8 +770,8 @@ Tamaño de labels de validación: (182161,)
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>              precision    recall  f1-score   support
 
-         0.0       1.00      1.00      1.00    727353
-         1.0       1.00      0.70      0.82      1287
+         0.0       1.00      1.00      1.00    727313
+         1.0       1.00      0.70      0.83      1327
 
     accuracy                           1.00    728640
    macro avg       1.00      0.85      0.91    728640
@@ -901,26 +782,24 @@ weighted avg       1.00      1.00      1.00    728640
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn</span> <span class="kn">import</span> <span class="n">metrics</span>
-<span class="n">fpr</span><span class="p">,</span> <span class="n">tpr</span><span class="p">,</span> <span class="n">_</span><span class="o">=</span><span class="n">metrics</span><span class="o">.</span><span class="n">roc_curve</span><span class="p">(</span><span class="n">y_train</span><span class="p">,</span><span class="n">y_train_probs</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">fpr</span><span class="p">,</span><span class="n">tpr</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;r&#39;</span><span class="p">)</span>
-<span class="n">xb</span><span class="o">=</span><span class="p">[</span><span class="n">i</span><span class="o">*</span><span class="mf">0.01</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">100</span><span class="p">)]</span>
-<span class="n">yb</span><span class="o">=</span><span class="p">[</span><span class="n">i</span><span class="o">*</span><span class="mf">0.01</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">100</span><span class="p">)]</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">xb</span><span class="p">,</span><span class="n">yb</span><span class="p">,</span><span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;--&#39;</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;b&#39;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">roc_curve</span><span class="p">,</span> <span class="n">auc</span>
+<span class="n">fpr</span><span class="p">,</span> <span class="n">tpr</span><span class="p">,</span> <span class="n">thresholds</span><span class="o">=</span><span class="n">roc_curve</span><span class="p">(</span><span class="n">y_train</span><span class="p">,</span><span class="n">y_train_probs</span><span class="p">)</span>
+<span class="n">roc_auc</span> <span class="o">=</span> <span class="n">auc</span><span class="p">(</span><span class="n">fpr</span><span class="p">,</span> <span class="n">tpr</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">fpr</span><span class="p">,</span> <span class="n">tpr</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;darkorange&#39;</span><span class="p">,</span> <span class="n">lw</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;ROC curve (AUC = </span><span class="si">%0.2f</span><span class="s1">)&#39;</span> <span class="o">%</span> <span class="n">roc_auc</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;navy&#39;</span><span class="p">,</span> <span class="n">lw</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;--&#39;</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;FPR&#39;</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;TPR&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">loc</span><span class="o">=</span><span class="s2">&quot;lower right&quot;</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;ROC Curve for training&#39;</span><span class="p">)</span>
-<span class="n">auc</span><span class="o">=</span><span class="nb">str</span><span class="p">(</span><span class="nb">round</span><span class="p">(</span><span class="n">metrics</span><span class="o">.</span><span class="n">auc</span><span class="p">(</span><span class="n">fpr</span><span class="p">,</span><span class="n">tpr</span><span class="p">),</span><span class="mi">4</span><span class="p">))</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="mf">0.7</span><span class="p">,</span><span class="n">y</span><span class="o">=</span><span class="mf">0.1</span><span class="p">,</span><span class="n">s</span><span class="o">=</span><span class="s1">&#39;AUC=&#39;</span><span class="o">+</span><span class="n">auc</span><span class="o">+</span><span class="s1">&#39;%&#39;</span><span class="p">,</span><span class="n">size</span><span class="o">=</span><span class="mi">12</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0.7, 0.1, &#39;AUC=1.0%&#39;)
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0.5, 1.0, &#39;ROC Curve for training&#39;)
 </pre></div>
 </div>
-<img alt="_images/938bfdaf89e1f30b867944c9922767f46394567847c188a266081b1432cf842a.png" src="_images/938bfdaf89e1f30b867944c9922767f46394567847c188a266081b1432cf842a.png" />
+<img alt="_images/3201bad08a960b5683b0e82d599911a9e85a61915349a35d7d3a577611c4a17c.png" src="_images/3201bad08a960b5683b0e82d599911a9e85a61915349a35d7d3a577611c4a17c.png" />
 </div>
 </div>
 </section>
@@ -928,13 +807,21 @@ weighted avg       1.00      1.00      1.00    728640
 <h3>Capacidad de predicción<a class="headerlink" href="#capacidad-de-prediccion" title="Permalink to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">y_val_pred</span><span class="o">=</span><span class="n">result</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">x_test</span><span class="p">)</span> 
+<span class="n">y_val_probs</span><span class="o">=</span><span class="n">result</span><span class="o">.</span><span class="n">predict_proba</span><span class="p">(</span><span class="n">x_test</span><span class="p">)[:,</span><span class="mi">1</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">confusion_matrix</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">y_val_pred</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[181828,      0],
-       [   333,      0]])
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[181864,      4],
+       [   293,      0]], dtype=int64)
 </pre></div>
 </div>
 </div>
@@ -946,51 +833,220 @@ weighted avg       1.00      1.00      1.00    728640
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/usr/local/lib/python3.7/dist-packages/sklearn/metrics/_classification.py:1318: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
-  _warn_prf(average, modifier, msg_start, len(result))
-</pre></div>
-</div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>              precision    recall  f1-score   support
 
-         0.0       1.00      1.00      1.00    181828
-         1.0       0.00      0.00      0.00       333
+         0.0       1.00      1.00      1.00    181868
+         1.0       0.00      0.00      0.00       293
 
     accuracy                           1.00    182161
    macro avg       0.50      0.50      0.50    182161
 weighted avg       1.00      1.00      1.00    182161
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/usr/local/lib/python3.7/dist-packages/sklearn/metrics/_classification.py:1318: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
-  _warn_prf(average, modifier, msg_start, len(result))
-/usr/local/lib/python3.7/dist-packages/sklearn/metrics/_classification.py:1318: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
-  _warn_prf(average, modifier, msg_start, len(result))
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fpr</span><span class="p">,</span> <span class="n">tpr</span><span class="p">,</span> <span class="n">thresholds</span><span class="o">=</span><span class="n">roc_curve</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span><span class="n">y_val_probs</span><span class="p">)</span>
+<span class="n">roc_auc</span> <span class="o">=</span> <span class="n">auc</span><span class="p">(</span><span class="n">fpr</span><span class="p">,</span> <span class="n">tpr</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">fpr</span><span class="p">,</span> <span class="n">tpr</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;darkorange&#39;</span><span class="p">,</span> <span class="n">lw</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;ROC curve (AUC = </span><span class="si">%0.2f</span><span class="s1">)&#39;</span> <span class="o">%</span> <span class="n">roc_auc</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;navy&#39;</span><span class="p">,</span> <span class="n">lw</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;--&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;FPR&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;TPR&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">loc</span><span class="o">=</span><span class="s2">&quot;lower right&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;ROC Curve for prediction&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0.5, 1.0, &#39;ROC Curve for prediction&#39;)
+</pre></div>
+</div>
+<img alt="_images/7c65cdf4aa1a3755c8c7eacc11733e6f14036e84b3ce8e643bb817f34825114f.png" src="_images/7c65cdf4aa1a3755c8c7eacc11733e6f14036e84b3ce8e643bb817f34825114f.png" />
+</div>
+</div>
+<p>Para obtener los valores del index de susceptibilidad utilizados para cada punto de la curva se obtiene el thresholds, para esto vamos a construir un dataframe calculando ademas el 1-fpr y el tf.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">i</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">tpr</span><span class="p">))</span> <span class="c1"># index for df</span>
+<span class="n">roc</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s1">&#39;fpr&#39;</span> <span class="p">:</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">fpr</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="n">i</span><span class="p">),</span><span class="s1">&#39;tpr&#39;</span> <span class="p">:</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">tpr</span><span class="p">,</span> <span class="n">index</span> <span class="o">=</span> <span class="n">i</span><span class="p">),</span> <span class="s1">&#39;1-fpr&#39;</span> <span class="p">:</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="mi">1</span><span class="o">-</span><span class="n">fpr</span><span class="p">,</span> <span class="n">index</span> <span class="o">=</span> <span class="n">i</span><span class="p">),</span> <span class="s1">&#39;tf&#39;</span> <span class="p">:</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">tpr</span> <span class="o">-</span> <span class="p">(</span><span class="mi">1</span><span class="o">-</span><span class="n">fpr</span><span class="p">),</span> <span class="n">index</span> <span class="o">=</span> <span class="n">i</span><span class="p">),</span> <span class="s1">&#39;threshold&#39;</span> <span class="p">:</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">thresholds</span><span class="p">,</span> <span class="n">index</span> <span class="o">=</span> <span class="n">i</span><span class="p">)})</span>
+<span class="n">roc</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">tpr</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>fpr</th>
+      <th>tpr</th>
+      <th>1-fpr</th>
+      <th>tf</th>
+      <th>threshold</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>1.000000</td>
+      <td>-1.000000</td>
+      <td>inf</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>0.000005</td>
+      <td>0.000000</td>
+      <td>0.999995</td>
+      <td>-0.999995</td>
+      <td>0.7</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>0.000022</td>
+      <td>0.000000</td>
+      <td>0.999978</td>
+      <td>-0.999978</td>
+      <td>0.6</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>0.000066</td>
+      <td>0.000000</td>
+      <td>0.999934</td>
+      <td>-0.999934</td>
+      <td>0.5</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>0.000225</td>
+      <td>0.000000</td>
+      <td>0.999775</td>
+      <td>-0.999775</td>
+      <td>0.4</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>0.000852</td>
+      <td>0.010239</td>
+      <td>0.999148</td>
+      <td>-0.988909</td>
+      <td>0.3</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>0.002821</td>
+      <td>0.017065</td>
+      <td>0.997179</td>
+      <td>-0.980114</td>
+      <td>0.2</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>0.011409</td>
+      <td>0.040956</td>
+      <td>0.988591</td>
+      <td>-0.947635</td>
+      <td>0.1</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>1.000000</td>
+      <td>1.000000</td>
+      <td>0.000000</td>
+      <td>1.000000</td>
+      <td>0.0</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p>Para estimar el punto mas cercano a la clasificación perfecta (ezquina superior izquierda de ROC), el cual corresponde al umbral que presenta la mejor matrz de confusiónse se puede realizar lo siguienteÑ</p>
+<ul class="simple">
+<li><p>Utilizar la función argsort</p></li>
+<li><p>Buscar en el dataframe el umbral que corresponde al valor de tf=0</p></li>
+<li><p>Graficar TPR y 1-FPR. El intercepto de dichas gráficas corresponde al umbral buscado.</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#funcion argsort</span>
+<span class="n">best</span><span class="o">=</span><span class="n">roc</span><span class="o">.</span><span class="n">iloc</span><span class="p">[(</span><span class="n">roc</span><span class="o">.</span><span class="n">tf</span><span class="o">-</span><span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">abs</span><span class="p">()</span><span class="o">.</span><span class="n">argsort</span><span class="p">()[:</span><span class="mi">1</span><span class="p">]]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">best</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>        fpr       tpr     1-fpr        tf  threshold
+7  0.011409  0.040956  0.988591 -0.947635        0.1
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fpr</span><span class="p">,</span> <span class="n">sensitivity</span><span class="p">,</span> <span class="n">_</span><span class="o">=</span><span class="n">metrics</span><span class="o">.</span><span class="n">roc_curve</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span><span class="n">y_val_probs</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">fpr</span><span class="p">,</span><span class="n">sensitivity</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;r&#39;</span><span class="p">)</span>
-<span class="n">xb</span><span class="o">=</span><span class="p">[</span><span class="n">i</span><span class="o">*</span><span class="mf">0.01</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">100</span><span class="p">)]</span>
-<span class="n">yb</span><span class="o">=</span><span class="p">[</span><span class="n">i</span><span class="o">*</span><span class="mf">0.01</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">100</span><span class="p">)]</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">xb</span><span class="p">,</span><span class="n">yb</span><span class="p">,</span><span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;--&#39;</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;b&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;FPR&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;TPR&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;ROC Curve for prediction&#39;</span><span class="p">)</span>
-<span class="n">auc</span><span class="o">=</span><span class="nb">str</span><span class="p">(</span><span class="nb">round</span><span class="p">(</span><span class="n">metrics</span><span class="o">.</span><span class="n">auc</span><span class="p">(</span><span class="n">fpr</span><span class="p">,</span><span class="n">sensitivity</span><span class="p">),</span><span class="mi">4</span><span class="p">))</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="mf">0.7</span><span class="p">,</span><span class="n">y</span><span class="o">=</span><span class="mf">0.1</span><span class="p">,</span><span class="n">s</span><span class="o">=</span><span class="s1">&#39;AUC=&#39;</span><span class="o">+</span><span class="n">auc</span><span class="o">+</span><span class="s1">&#39;%&#39;</span><span class="p">,</span><span class="n">size</span><span class="o">=</span><span class="mi">12</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Plot tpr vs 1-fpr</span>
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">roc</span><span class="p">[</span><span class="s1">&#39;tpr&#39;</span><span class="p">],</span><span class="n">label</span><span class="o">=</span><span class="s1">&#39;TPR&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">roc</span><span class="p">[</span><span class="s1">&#39;1-fpr&#39;</span><span class="p">],</span> <span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;red&#39;</span><span class="p">,</span><span class="n">label</span><span class="o">=</span><span class="s1">&#39;1-FPR&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;1-False Positive Rate&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;True Positive Rate&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Receiver operating characteristic&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">loc</span><span class="o">=</span><span class="s2">&quot;lower left&quot;</span><span class="p">)</span>
+
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xticklabels</span><span class="p">([]);</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0.7, 0.1, &#39;AUC=0.5079%&#39;)
+<img alt="_images/0c63da4b07e0090f644f8bc31f13736c733ea664a4db4d7e98e85b8e046f745e.png" src="_images/0c63da4b07e0090f644f8bc31f13736c733ea664a4db4d7e98e85b8e046f745e.png" />
+</div>
+</div>
+<p>Otra figura muy utilizada, especialmente cuando se tienen bases de datos desbalanceadas, como en estos casos, se utiliza la gráfica precicsión-recall.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">precision_recall_curve</span><span class="p">,</span> <span class="n">average_precision_score</span>
+
+<span class="c1"># Calculate the Precision-Recall curve</span>
+<span class="n">precision</span><span class="p">,</span> <span class="n">recall</span><span class="p">,</span> <span class="n">th2</span> <span class="o">=</span> <span class="n">precision_recall_curve</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">y_val_probs</span><span class="p">)</span>
+<span class="n">pr_auc</span> <span class="o">=</span> <span class="n">average_precision_score</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">y_val_probs</span><span class="p">)</span>
+
+<span class="c1"># Plot the Precision-Recall curve</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">recall</span><span class="p">,</span> <span class="n">precision</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;darkorange&#39;</span><span class="p">,</span> <span class="n">lw</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;PR curve (AUC = </span><span class="si">%0.2f</span><span class="s1">)&#39;</span> <span class="o">%</span> <span class="n">pr_auc</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlim</span><span class="p">([</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">])</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylim</span><span class="p">([</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">1.05</span><span class="p">])</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Recall&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Precision&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Precision-Recall Curve&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">loc</span><span class="o">=</span><span class="s2">&quot;lower right&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
-<img alt="_images/d16fca12656c42c6bb02050f5d9eefc0d2152e2053b83d98fe9e4c3df59a330c.png" src="_images/d16fca12656c42c6bb02050f5d9eefc0d2152e2053b83d98fe9e4c3df59a330c.png" />
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/256e13f652fc779bee1af6c69630b01624a9a4bc4d3f617b870c07479303df64.png" src="_images/256e13f652fc779bee1af6c69630b01624a9a4bc4d3f617b870c07479303df64.png" />
 </div>
 </div>
+</section>
+<section id="calcular-mapa-de-susceptibilidad-final">
+<h3>Calcular mapa de susceptibilidad final<a class="headerlink" href="#calcular-mapa-de-susceptibilidad-final" title="Permalink to this heading">#</a></h3>
+<p>Finalmente, cuando se obtiene el mejor modelo y los valores de métrica suficientes, entonces se obtiene el mapa de susceptibilidad con todos los datos, adicionalmente en este caso, para mantener la configuracion espacial del mapa se construye el dataframe donde los datos NaN se modifican a cero(0).</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pendiente_vector2</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">nan_to_num</span><span class="p">(</span><span class="n">pendiente_vector</span><span class="p">)</span>
@@ -1178,6 +1234,7 @@ weighted avg       1.00      1.00      1.00    182161
   </div>
   </div></div>
 </div>
+<p>Con este dataframe y el modelo entrenado se calcula el valor para cada celda de la cuenca.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">y_pred</span><span class="o">=</span><span class="n">model</span><span class="o">.</span><span class="n">predict_proba</span><span class="p">(</span><span class="n">x_map</span><span class="p">)[:,</span><span class="mi">1</span><span class="p">]</span>
@@ -1185,6 +1242,7 @@ weighted avg       1.00      1.00      1.00    182161
 </div>
 </div>
 </div>
+<p>Para eliminar los puntos por fuera de la cuenca, que se modificaron por 0, se importa otro mapa como mascara y se convierten los valores de estas celdas en NaN.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#mascara para crear el mapa de la cuenca</span>
@@ -1289,6 +1347,7 @@ weighted avg       1.00      1.00      1.00    182161
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Validación cruzada</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#desempeno-del-modelo">Desempeño del modelo</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#capacidad-de-prediccion">Capacidad de predicción</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#calcular-mapa-de-susceptibilidad-final">Calcular mapa de susceptibilidad final</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#referencias">Referencias</a></li>
