@@ -21,8 +21,6 @@ a factores como las condiciones tropicales húmedas, derivadas de su localizaci�
 placas (Nazca, Sur América, Caribe), y su densa ocupación poblacional de áreas susceptibles a la ocurrencia de movimientos en masa 
 ({cite:t}`Aristizabal2019a`; {cite:t}`Sepulveda2015`).
 
-[Perfil de desastres para Colombia de acuerdo con el EM-DAT](https://www.emdat.be/emdat_atlas/sub_html_pages/sub_html_COL.html)
-
 Según la Base de Datos Internacional de Desastres (EM-DAT), en el periodo transcurrido entre 1901 y 2011, en Colombia ocurrieron 
 41 desastres por movimiento en masa ocasionando 3,171 víctimas fatales, es decir, 77.34 víctimas por evento, superado únicamente por 
 Perú en donde ocurrieron 318 víctimas por evento. {cite:t}`Aristizabal2019a`, utilizando la base de datos del 
