@@ -479,14 +479,14 @@ document.write(`
 <h2>Selección de variables<a class="headerlink" href="#seleccion-de-variables" title="Permalink to this heading">#</a></h2>
 <p>Existe un gran abanico de variables predictoras utilizadas en la evaluación de la susceptibilidad y/o amenaza por movimientos en masa. Estas se definen como características o propiedades que se supone son parte de la causa de los movimientos en masa.  Por lo tanto tienden a estar asociadas con el terreno, tales como los materiales que la componen o la morfometría como la pendiente. Pero tambien es común incluir variables de las coberturas o proximidad a elementos como drenajes, vias entre otros.</p>
 <figure class="align-default" id="variables-independientes">
-<a class="reference internal image-reference" href="https://ars.els-cdn.com/content/image/1-s2.0-S0012825217305652-gr6.jpg"><img alt="variables independientes" src="https://ars.els-cdn.com/content/image/1-s2.0-S0012825217305652-gr6.jpg" style="width: 700px;" /></a>
+<a class="reference internal image-reference" href="https://i.pinimg.com/564x/a5/11/84/a511840952008aa87975920c909163ab.jpg"><img alt="https://i.pinimg.com/564x/a5/11/84/a511840952008aa87975920c909163ab.jpg" src="https://i.pinimg.com/564x/a5/11/84/a511840952008aa87975920c909163ab.jpg" style="width: 700px;" /></a>
 <figcaption>
 <p><span class="caption-number">Fig. 32 </span><span class="caption-text">Variables más utilizadas de la susceptibilidad por movimientos en masa. Reichenbach et al., (2015).</span><a class="headerlink" href="#variables-independientes" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <p>Existen diferentes categorías de datos con niveles o escalas de medida que varían. En cuanto a la categoría de las variables existen variables cualitativas, tales como geología, o cuantitativas. Las variables cuantitativas se dividen entre variables discretas y continuas. Las variables continuas se caracterizan por que no son contables y presentan valores infinitos de precisión, se pueden dividir en variables de intervalo, que son aquellas que no presentan un cero natural o con sentido físico, tal como la temperatura en grados Celsius; y las variables tipo radio, las cuales tienen un cero con sentido fisico, como la temperatura en grados Kelvin, la cohesión, la pendiente. Las variables discretas, que pueden ser cuantitativas y cualitativas, son contables, finitas, y se dividen en nominales, las cuales no tienen un orden, tal como el uso del suelo; y ordinales, las cuales tienen un orden, tal como acumulación del flujo. Es importante señalar que las variables continuas pueden ser reclasificadas a variables discretas, un ejemplo es la pendiente expresada como variable continua de 0° a 90°, o como variable discreta reclasificada en rangos de 0° - 10°, 11 - 20°, etc, etc.</p>
 <figure class="align-default" id="categorias-de-datos">
-<a class="reference internal image-reference" href="https://i.stack.imgur.com/J8Ged.jpg"><img alt="categorias de datos" src="https://i.stack.imgur.com/J8Ged.jpg" style="width: 800px;" /></a>
+<a class="reference internal image-reference" href="https://i.pinimg.com/564x/7d/4b/6a/7d4b6abf338226908d4eb0a1504a4314.jpg"><img alt="https://i.pinimg.com/564x/7d/4b/6a/7d4b6abf338226908d4eb0a1504a4314.jpg" src="https://i.pinimg.com/564x/7d/4b/6a/7d4b6abf338226908d4eb0a1504a4314.jpg" style="width: 800px;" /></a>
 <figcaption>
 <p><span class="caption-number">Fig. 33 </span><span class="caption-text">Categorías de datos y niveles o escalas de medida.</span><a class="headerlink" href="#categorias-de-datos" title="Permalink to this image">#</a></p>
 </figcaption>
@@ -810,15 +810,15 @@ memory usage: 24.3 MB
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;class &#39;pandas.core.frame.DataFrame&#39;&gt;
-Index: 92539 entries, 15 to 910781
+Index: 92557 entries, 5 to 910796
 Data columns (total 5 columns):
  #   Column      Non-Null Count  Dtype  
 ---  ------      --------------  -----  
- 0   inventario  92539 non-null  float64
- 1   pendiente   92539 non-null  float32
- 2   flujo_acum  92539 non-null  float32
- 3   aspecto     92539 non-null  float32
- 4   geologia    92539 non-null  float64
+ 0   inventario  92557 non-null  float64
+ 1   pendiente   92557 non-null  float32
+ 2   flujo_acum  92557 non-null  float32
+ 3   aspecto     92557 non-null  float32
+ 4   geologia    92557 non-null  float64
 dtypes: float32(3), float64(2)
 memory usage: 3.2 MB
 </pre></div>
@@ -834,17 +834,17 @@ memory usage: 3.2 MB
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>              count         mean           std  min         25%         50%  \
-inventario  92539.0     0.017506      0.131148  0.0    0.000000    0.000000   
-pendiente   92539.0    29.219286     11.486130  0.0   21.726616   29.586985   
-flujo_acum  92539.0  2558.723633  88398.562500  0.0    4.000000   11.000000   
-aspecto     92539.0   213.702682    100.310448 -1.0  154.032394  237.611176   
-geologia    92539.0    10.209220      5.180058  2.0    2.000000   14.000000   
+inventario  92557.0     0.017503      0.131136  0.0    0.000000    0.000000   
+pendiente   92557.0    29.170059     11.543121  0.0   21.636597   29.574785   
+flujo_acum  92557.0  3112.135010  97679.640625  0.0    4.000000   11.000000   
+aspecto     92557.0   213.600250    100.377197 -1.0  154.072083  237.586411   
+geologia    92557.0    10.205441      5.184834  2.0    2.000000   14.000000   
 
                    75%           max  
 inventario    0.000000  1.000000e+00  
-pendiente    36.956959  7.732700e+01  
-flujo_acum   26.000000  5.648921e+06  
-aspecto     291.517197  3.599995e+02  
+pendiente    36.964733  7.485513e+01  
+flujo_acum   26.000000  5.649074e+06  
+aspecto     291.423523  3.599914e+02  
 geologia     14.000000  1.600000e+01  
 </pre></div>
 </div>

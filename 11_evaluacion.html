@@ -590,7 +590,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.colorbar.Colorbar at 0x25974aebb50&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.colorbar.Colorbar at 0x21d875842d0&gt;
 </pre></div>
 </div>
 <img alt="_images/c52bcf75b52535cbf0e430121edbb0716662d7a36eeb57a35e654ace334bc2e3.png" src="_images/c52bcf75b52535cbf0e430121edbb0716662d7a36eeb57a35e654ace334bc2e3.png" />
@@ -754,8 +754,8 @@ Tamaño de labels de validación: (182161,)
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[727351,      0],
-       [   387,    902]], dtype=int64)
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[727313,      0],
+       [   395,    932]], dtype=int64)
 </pre></div>
 </div>
 </div>
@@ -770,8 +770,8 @@ Tamaño de labels de validación: (182161,)
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>              precision    recall  f1-score   support
 
-         0.0       1.00      1.00      1.00    727351
-         1.0       1.00      0.70      0.82      1289
+         0.0       1.00      1.00      1.00    727313
+         1.0       1.00      0.70      0.83      1327
 
     accuracy                           1.00    728640
    macro avg       1.00      0.85      0.91    728640
@@ -799,7 +799,7 @@ weighted avg       1.00      1.00      1.00    728640
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0.5, 1.0, &#39;ROC Curve for training&#39;)
 </pre></div>
 </div>
-<img alt="_images/163f6ecb6beb0f9e52a51587261ea1363625a3a712ec178aa775d6547d24ab88.png" src="_images/163f6ecb6beb0f9e52a51587261ea1363625a3a712ec178aa775d6547d24ab88.png" />
+<img alt="_images/3201bad08a960b5683b0e82d599911a9e85a61915349a35d7d3a577611c4a17c.png" src="_images/3201bad08a960b5683b0e82d599911a9e85a61915349a35d7d3a577611c4a17c.png" />
 </div>
 </div>
 </section>
@@ -820,8 +820,8 @@ weighted avg       1.00      1.00      1.00    728640
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[181827,      3],
-       [   331,      0]], dtype=int64)
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[181864,      4],
+       [   293,      0]], dtype=int64)
 </pre></div>
 </div>
 </div>
@@ -835,8 +835,8 @@ weighted avg       1.00      1.00      1.00    728640
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>              precision    recall  f1-score   support
 
-         0.0       1.00      1.00      1.00    181830
-         1.0       0.00      0.00      0.00       331
+         0.0       1.00      1.00      1.00    181868
+         1.0       0.00      0.00      0.00       293
 
     accuracy                           1.00    182161
    macro avg       0.50      0.50      0.50    182161
@@ -863,7 +863,7 @@ weighted avg       1.00      1.00      1.00    182161
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0.5, 1.0, &#39;ROC Curve for prediction&#39;)
 </pre></div>
 </div>
-<img alt="_images/deaf5f91cab50e3de7501d53848e2ce5fbc0868fd37cc48b053603b2a2cdf99b.png" src="_images/deaf5f91cab50e3de7501d53848e2ce5fbc0868fd37cc48b053603b2a2cdf99b.png" />
+<img alt="_images/7c65cdf4aa1a3755c8c7eacc11733e6f14036e84b3ce8e643bb817f34825114f.png" src="_images/7c65cdf4aa1a3755c8c7eacc11733e6f14036e84b3ce8e643bb817f34825114f.png" />
 </div>
 </div>
 <p>Para obtener los valores del index de susceptibilidad utilizados para cada punto de la curva se obtiene el thresholds, para esto vamos a construir un dataframe calculando ademas el 1-fpr y el tf.</p>
@@ -920,50 +920,50 @@ weighted avg       1.00      1.00      1.00    182161
     </tr>
     <tr>
       <th>2</th>
-      <td>0.000016</td>
+      <td>0.000022</td>
       <td>0.000000</td>
-      <td>0.999984</td>
-      <td>-0.999984</td>
+      <td>0.999978</td>
+      <td>-0.999978</td>
       <td>0.6</td>
     </tr>
     <tr>
       <th>3</th>
-      <td>0.000060</td>
+      <td>0.000066</td>
       <td>0.000000</td>
-      <td>0.999940</td>
-      <td>-0.999940</td>
+      <td>0.999934</td>
+      <td>-0.999934</td>
       <td>0.5</td>
     </tr>
     <tr>
       <th>4</th>
-      <td>0.000231</td>
-      <td>0.003021</td>
-      <td>0.999769</td>
-      <td>-0.996748</td>
+      <td>0.000225</td>
+      <td>0.000000</td>
+      <td>0.999775</td>
+      <td>-0.999775</td>
       <td>0.4</td>
     </tr>
     <tr>
       <th>5</th>
-      <td>0.000869</td>
-      <td>0.003021</td>
-      <td>0.999131</td>
-      <td>-0.996110</td>
+      <td>0.000852</td>
+      <td>0.010239</td>
+      <td>0.999148</td>
+      <td>-0.988909</td>
       <td>0.3</td>
     </tr>
     <tr>
       <th>6</th>
-      <td>0.002887</td>
-      <td>0.012085</td>
-      <td>0.997113</td>
-      <td>-0.985028</td>
+      <td>0.002821</td>
+      <td>0.017065</td>
+      <td>0.997179</td>
+      <td>-0.980114</td>
       <td>0.2</td>
     </tr>
     <tr>
       <th>7</th>
-      <td>0.011890</td>
-      <td>0.030211</td>
-      <td>0.988110</td>
-      <td>-0.957898</td>
+      <td>0.011409</td>
+      <td>0.040956</td>
+      <td>0.988591</td>
+      <td>-0.947635</td>
       <td>0.1</td>
     </tr>
     <tr>
@@ -993,8 +993,8 @@ weighted avg       1.00      1.00      1.00    182161
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>       fpr       tpr    1-fpr        tf  threshold
-7  0.01189  0.030211  0.98811 -0.957898        0.1
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>        fpr       tpr     1-fpr        tf  threshold
+7  0.011409  0.040956  0.988591 -0.947635        0.1
 </pre></div>
 </div>
 </div>
@@ -1015,7 +1015,7 @@ weighted avg       1.00      1.00      1.00    182161
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/9e571e309a7106bb3cca1b6f36c103e7a19ae107f041bc48b33f45481dbaccd0.png" src="_images/9e571e309a7106bb3cca1b6f36c103e7a19ae107f041bc48b33f45481dbaccd0.png" />
+<img alt="_images/0c63da4b07e0090f644f8bc31f13736c733ea664a4db4d7e98e85b8e046f745e.png" src="_images/0c63da4b07e0090f644f8bc31f13736c733ea664a4db4d7e98e85b8e046f745e.png" />
 </div>
 </div>
 <p>Otra figura muy utilizada, especialmente cuando se tienen bases de datos desbalanceadas, como en estos casos, se utiliza la gráfica precicsión-recall.</p>
@@ -1040,7 +1040,7 @@ weighted avg       1.00      1.00      1.00    182161
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/d4cafb8124e5565c523f3cf7ea23240a788c001819e0358d171d419e83aaa1d7.png" src="_images/d4cafb8124e5565c523f3cf7ea23240a788c001819e0358d171d419e83aaa1d7.png" />
+<img alt="_images/256e13f652fc779bee1af6c69630b01624a9a4bc4d3f617b870c07479303df64.png" src="_images/256e13f652fc779bee1af6c69630b01624a9a4bc4d3f617b870c07479303df64.png" />
 </div>
 </div>
 </section>
@@ -1060,7 +1060,10 @@ weighted avg       1.00      1.00      1.00    182161
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_html"><div>
+<div class="output text_html">
+  <div id="df-3b7d443d-b54b-4ee5-8861-9a4be4accdc1">
+    <div class="colab-df-container">
+      <div>
 <style scoped>
     .dataframe tbody tr th:only-of-type {
         vertical-align: middle;
@@ -1153,7 +1156,83 @@ weighted avg       1.00      1.00      1.00    182161
   </tbody>
 </table>
 <p>1854710 rows × 3 columns</p>
-</div></div></div>
+</div>
+      <button class="colab-df-convert" onclick="convertToInteractive('df-3b7d443d-b54b-4ee5-8861-9a4be4accdc1')"
+              title="Convert this dataframe to an interactive table."
+              style="display:none;">
+        
+  <svg xmlns="http://www.w3.org/2000/svg" height="24px"viewBox="0 0 24 24"
+       width="24px">
+    <path d="M0 0h24v24H0V0z" fill="none"/>
+    <path d="M18.56 5.44l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94zm-11 1L8.5 8.5l.94-2.06 2.06-.94-2.06-.94L8.5 2.5l-.94 2.06-2.06.94zm10 10l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94z"/><path d="M17.41 7.96l-1.37-1.37c-.4-.4-.92-.59-1.43-.59-.52 0-1.04.2-1.43.59L10.3 9.45l-7.72 7.72c-.78.78-.78 2.05 0 2.83L4 21.41c.39.39.9.59 1.41.59.51 0 1.02-.2 1.41-.59l7.78-7.78 2.81-2.81c.8-.78.8-2.07 0-2.86zM5.41 20L4 18.59l7.72-7.72 1.47 1.35L5.41 20z"/>
+  </svg>
+      </button>
+      
+  <style>
+    .colab-df-container {
+      display:flex;
+      flex-wrap:wrap;
+      gap: 12px;
+    }
+
+    .colab-df-convert {
+      background-color: #E8F0FE;
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+      display: none;
+      fill: #1967D2;
+      height: 32px;
+      padding: 0 0 0 0;
+      width: 32px;
+    }
+
+    .colab-df-convert:hover {
+      background-color: #E2EBFA;
+      box-shadow: 0px 1px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px 1px rgba(60, 64, 67, 0.15);
+      fill: #174EA6;
+    }
+
+    [theme=dark] .colab-df-convert {
+      background-color: #3B4455;
+      fill: #D2E3FC;
+    }
+
+    [theme=dark] .colab-df-convert:hover {
+      background-color: #434B5C;
+      box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
+      filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.3));
+      fill: #FFFFFF;
+    }
+  </style>
+
+      <script>
+        const buttonEl =
+          document.querySelector('#df-3b7d443d-b54b-4ee5-8861-9a4be4accdc1 button.colab-df-convert');
+        buttonEl.style.display =
+          google.colab.kernel.accessAllowed ? 'block' : 'none';
+
+        async function convertToInteractive(key) {
+          const element = document.querySelector('#df-3b7d443d-b54b-4ee5-8861-9a4be4accdc1');
+          const dataTable =
+            await google.colab.kernel.invokeFunction('convertToInteractive',
+                                                     [key], {});
+          if (!dataTable) return;
+
+          const docLinkHtml = 'Like what you see? Visit the ' +
+            '<a target="_blank" href=https://colab.research.google.com/notebooks/data_table.ipynb>data table notebook</a>'
+            + ' to learn more about interactive tables.';
+          element.innerHTML = '';
+          dataTable['output_type'] = 'display_data';
+          await google.colab.output.renderOutput(dataTable, element);
+          const docLink = document.createElement('div');
+          docLink.innerHTML = docLinkHtml;
+          element.appendChild(docLink);
+        }
+      </script>
+    </div>
+  </div>
+  </div></div>
 </div>
 <p>Con este dataframe y el modelo entrenado se calcula el valor para cada celda de la cuenca.</p>
 <div class="cell docutils container">
@@ -1179,44 +1258,7 @@ weighted avg       1.00      1.00      1.00    182161
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">CPLE_HttpResponseError</span><span class="g g-Whitespace">                    </span>Traceback (most recent call last)
-<span class="nn">File rasterio\\_base.pyx:310,</span> in <span class="ni">rasterio._base.DatasetBase.__init__</span><span class="nt">()</span>
-
-<span class="nn">File rasterio\\_base.pyx:221,</span> in <span class="ni">rasterio._base.open_dataset</span><span class="nt">()</span>
-
-<span class="nn">File rasterio\\_err.pyx:221,</span> in <span class="ni">rasterio._err.exc_wrap_pointer</span><span class="nt">()</span>
-
-<span class="ne">CPLE_HttpResponseError</span>: HTTP response code: 404
-
-<span class="n">During</span> <span class="n">handling</span> <span class="n">of</span> <span class="n">the</span> <span class="n">above</span> <span class="n">exception</span><span class="p">,</span> <span class="n">another</span> <span class="n">exception</span> <span class="n">occurred</span><span class="p">:</span>
-
-<span class="ne">RasterioIOError</span><span class="g g-Whitespace">                           </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">24</span><span class="p">],</span> <span class="n">line</span> <span class="mi">2</span>
-<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1">#mascara para crear el mapa de la cuenca</span>
-<span class="ne">----&gt; </span><span class="mi">2</span> <span class="n">raster</span> <span class="o">=</span> <span class="n">rio</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s1">&#39;https://github.com/edieraristizabal/Libro_cartoGeotecnia/blob/master/data/Pendiente.tif?raw=true&#39;</span><span class="p">)</span>
-<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="n">pendiente</span><span class="o">=</span><span class="n">raster</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
-<span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="c1">#Convertir el vector de resultados a la matriz del mapa de la cuenca a aprtir de la matriz de pendiente</span>
-
-<span class="nn">File ~\miniconda3\Lib\site-packages\rasterio\env.py:451,</span> in <span class="ni">ensure_env_with_credentials.&lt;locals&gt;.wrapper</span><span class="nt">(*args, **kwds)</span>
-<span class="g g-Whitespace">    </span><span class="mi">448</span>     <span class="n">session</span> <span class="o">=</span> <span class="n">DummySession</span><span class="p">()</span>
-<span class="g g-Whitespace">    </span><span class="mi">450</span> <span class="k">with</span> <span class="n">env_ctor</span><span class="p">(</span><span class="n">session</span><span class="o">=</span><span class="n">session</span><span class="p">):</span>
-<span class="ne">--&gt; </span><span class="mi">451</span>     <span class="k">return</span> <span class="n">f</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwds</span><span class="p">)</span>
-
-<span class="nn">File ~\miniconda3\Lib\site-packages\rasterio\__init__.py:317,</span> in <span class="ni">open</span><span class="nt">(fp, mode, driver, width, height, count, crs, transform, dtype, nodata, sharing, **kwargs)</span>
-<span class="g g-Whitespace">    </span><span class="mi">314</span> <span class="n">path</span> <span class="o">=</span> <span class="n">_parse_path</span><span class="p">(</span><span class="n">raw_dataset_path</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">316</span> <span class="k">if</span> <span class="n">mode</span> <span class="o">==</span> <span class="s2">&quot;r&quot;</span><span class="p">:</span>
-<span class="ne">--&gt; </span><span class="mi">317</span>     <span class="n">dataset</span> <span class="o">=</span> <span class="n">DatasetReader</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">driver</span><span class="o">=</span><span class="n">driver</span><span class="p">,</span> <span class="n">sharing</span><span class="o">=</span><span class="n">sharing</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">318</span> <span class="k">elif</span> <span class="n">mode</span> <span class="o">==</span> <span class="s2">&quot;r+&quot;</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">319</span>     <span class="n">dataset</span> <span class="o">=</span> <span class="n">get_writer_for_path</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">driver</span><span class="o">=</span><span class="n">driver</span><span class="p">)(</span>
-<span class="g g-Whitespace">    </span><span class="mi">320</span>         <span class="n">path</span><span class="p">,</span> <span class="n">mode</span><span class="p">,</span> <span class="n">driver</span><span class="o">=</span><span class="n">driver</span><span class="p">,</span> <span class="n">sharing</span><span class="o">=</span><span class="n">sharing</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span>
-<span class="g g-Whitespace">    </span><span class="mi">321</span>     <span class="p">)</span>
-
-<span class="nn">File rasterio\\_base.pyx:312,</span> in <span class="ni">rasterio._base.DatasetBase.__init__</span><span class="nt">()</span>
-
-<span class="ne">RasterioIOError</span>: HTTP response code: 404
-</pre></div>
-</div>
+<img alt="_images/1d98002e7617c7df4c978805dec9e6525678c2a902887872ae9f98f85ce44bb7.png" src="_images/1d98002e7617c7df4c978805dec9e6525678c2a902887872ae9f98f85ce44bb7.png" />
 </div>
 </div>
 </section>
