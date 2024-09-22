@@ -7,8 +7,7 @@ como precipitación o sismicidad no son considerados. Entre tanto, la amenaza se
 definidos.
 
 En este sentido, la susceptibilidad es el primer acercamiento hacia la evaluación de la amenaza, debido a que debe explicar la
-distribución de los deslizamientos de acuerdo con la evolución geomorfológica del terreno ({cite:t}`Mather2002`
-2002). El entendimiento de la ocurrencia de deslizamientos corresponde a un proceso comprensivo, donde cada paisaje es
+distribución de los deslizamientos de acuerdo con la evolución geomorfológica del terreno ({cite:t}`Mather2002`). El entendimiento de la ocurrencia de deslizamientos corresponde a un proceso comprensivo, donde cada paisaje es
 caracterizado por una jerarquía de movimientos en masa distribuidos como una secuencia en tiempo y espacio, entendido como susceptibilidad, y
 descrito por la frecuencia y magnitud incluyendo la duración y secuencia de los eventos del proceso, entendido como
 amenaza ({cite:t}`Brunsden2002`).
