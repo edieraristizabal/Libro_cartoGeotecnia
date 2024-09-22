@@ -19,11 +19,11 @@ De acuerdo con {cite:t}`Dilley2005`, 820.000$km^2$ del planeta son considerados 
 Entre los países que conforman la región Andina, Colombia es uno de los más afectados por este tipo de amenaza natural, debido 
 a factores como las condiciones tropicales húmedas, derivadas de su localización ecuatorial, su ambiente tectónico de convergencia de tres 
 placas (Nazca, Sur América, Caribe), y su densa ocupación poblacional de áreas susceptibles a la ocurrencia de movimientos en masa 
-({cite:t}`Aristizabal2019a`; {cite:t}`Sepulveda2015`).
+({cite:t}`Aristizabal2019patterns`; {cite:t}`Sepulveda2015`).
 
 Según la Base de Datos Internacional de Desastres (EM-DAT), en el periodo transcurrido entre 1901 y 2011, en Colombia ocurrieron 
 41 desastres por movimiento en masa ocasionando 3,171 víctimas fatales, es decir, 77.34 víctimas por evento, superado únicamente por 
-Perú en donde ocurrieron 318 víctimas por evento. {cite:t}`Aristizabal2019a`, utilizando la base de datos del 
+Perú en donde ocurrieron 318 víctimas por evento. {cite:t}`Aristizabal2019patterns`, utilizando la base de datos del 
 DesInventar y el Sistema de Información de Movimientos en Masa (SIMMA) del Servicio Geológico Colombiano (SGC), destacan que 
 en el periodo comprendido entre los años 1900 y 2018 han ocurrido al menos 30730 movimientos en masa en Colombia, que han dejado un saldo de 31198 víctimas fatales y pérdidas económicas por USD$ 654 millones.
 
