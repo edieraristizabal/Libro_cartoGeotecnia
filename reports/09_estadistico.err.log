@@ -18,21 +18,50 @@ Traceback (most recent call last):
     raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
 nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
 ------------------
-w_a=(ap1/total1)/(ap/total)
-w_b=(bp1/total1)/(bp/total)
-w_c=(cp1/total1)/(cp/total)
-w_d=(dp1/total1)/(dp/total)
-w_e=(ep1/total1)/(ep/total)
-print(w_a,w_b,w_c,w_d,w_e)
+pendiente_serie=pd.Series(pendiente_vector_MenM)
+ap=bp=cp=dp=ep=0
+for row in pendiente_serie:
+        if (0 <= row) & (row < 10):
+          ap+=1
+        elif (10 <= row) & (row < 20):
+          bp+=1
+        elif (20 <= row) & (row < 30):
+          cp+=1
+        elif (30 <= row) & (row < 35):
+          dp+=1
+        if (row>=35):
+          ep+=1
+
+total=ap+bp+cp+dp+ep
+print("total:", totalp,ap,bp,cp,dp,ep)
+
+pendienteconMenM=pendiente_vector_MenM*inventario_vector_MenM
+ap1=bp1=cp1=dp1=ep1=0
+for row in pendienteconMenM:
+        if (0 < row) & (row < 10):
+          ap1+=1
+        elif (10 <= row) & (row < 20):
+          bp1+=1
+        elif (20 <= row) & (row < 30):
+          cp1+=1
+        elif (30 <= row) & (row < 35):
+          dp1+=1
+        if (row>=35):
+          ep1+=1
+
+total1=ap1+bp1+cp1+dp1+ep1
+print("total1:", total1p,ap1,bp1,cp1,dp1,ep1)
 ------------------
 
 
 [1;31m---------------------------------------------------------------------------[0m
 [1;31mNameError[0m                                 Traceback (most recent call last)
-Cell [1;32mIn[7], line 1[0m
-[1;32m----> 1[0m w_a[38;5;241m=[39m(ap1[38;5;241m/[39m[43mtotal1[49m)[38;5;241m/[39m(ap[38;5;241m/[39mtotal)
-[0;32m      2[0m w_b[38;5;241m=[39m(bp1[38;5;241m/[39mtotal1)[38;5;241m/[39m(bp[38;5;241m/[39mtotal)
-[0;32m      3[0m w_c[38;5;241m=[39m(cp1[38;5;241m/[39mtotal1)[38;5;241m/[39m(cp[38;5;241m/[39mtotal)
+Cell [1;32mIn[6], line 16[0m
+[0;32m     13[0m           ep[38;5;241m+[39m[38;5;241m=[39m[38;5;241m1[39m
+[0;32m     15[0m total[38;5;241m=[39map[38;5;241m+[39mbp[38;5;241m+[39mcp[38;5;241m+[39mdp[38;5;241m+[39mep
+[1;32m---> 16[0m [38;5;28mprint[39m([38;5;124m"[39m[38;5;124mtotal:[39m[38;5;124m"[39m, [43mtotalp[49m,ap,bp,cp,dp,ep)
+[0;32m     18[0m pendienteconMenM[38;5;241m=[39mpendiente_vector_MenM[38;5;241m*[39minventario_vector_MenM
+[0;32m     19[0m ap1[38;5;241m=[39mbp1[38;5;241m=[39mcp1[38;5;241m=[39mdp1[38;5;241m=[39mep1[38;5;241m=[39m[38;5;241m0[39m
 
-[1;31mNameError[0m: name 'total1' is not defined
+[1;31mNameError[0m: name 'totalp' is not defined
 
