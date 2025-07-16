@@ -1,0 +1,1519 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Variables condicionantes &#8212; Cartografía Geotécnica</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=365ca57ee442770a23c6" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=365ca57ee442770a23c6" />
+  <script src="_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=365ca57ee442770a23c6"></script>
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '06_variables';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Factores detonantes" href="07_detonante.html" />
+    <link rel="prev" title="Inventario de movimientos en masa" href="05_inventario.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/logo.png" class="logo__image only-light" alt="Cartografía Geotécnica - Home"/>
+    <script>document.write(`<img src="_static/logo.png" class="logo__image only-dark" alt="Cartografía Geotécnica - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    .
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="00_medialuna.html">Media Luna (1954)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="00_introduccion.html">Introducción</a></li>
+<li class="toctree-l1"><a class="reference internal" href="01_normatividad.html">Amenaza &amp; ordenamiento territorial</a></li>
+<li class="toctree-l1"><a class="reference internal" href="02_estadoarte.html">Estado del arte</a></li>
+<li class="toctree-l1"><a class="reference internal" href="03_metodos.html">Caracterización de movimientos en masa</a></li>
+<li class="toctree-l1"><a class="reference internal" href="04_susceptibilidad.html">Susceptibilidad y amenaza</a></li>
+<li class="toctree-l1"><a class="reference internal" href="05_inventario.html">Inventario de movimientos en masa</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Variables condicionantes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="07_detonante.html">Factores detonantes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="08_heuristico.html">Métodos basados en el conocimiento</a></li>
+<li class="toctree-l1"><a class="reference internal" href="09_estadistico.html">Métodos basados en datos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="10_fisico.html">Métodos con base física</a></li>
+<li class="toctree-l1"><a class="reference internal" href="11_evaluacion.html">Evaluación del modelo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="12_amenaza.html">Análisis del factor detonante</a></li>
+<li class="toctree-l1"><a class="reference internal" href="13_flujos.html">Movimientos en masa tipo flujos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="14_roca.html">Movimientos en masa en roca</a></li>
+<li class="toctree-l1"><a class="reference internal" href="15_python.html">ANEXO: Python</a></li>
+
+
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/edieraristizabal/Libro_cartoGeotecnia" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/edieraristizabal/Libro_cartoGeotecnia/issues/new?title=Issue%20on%20page%20%2F06_variables.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/06_variables.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Variables condicionantes</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#seleccion-de-variables">Selección de variables</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#analisis-exploratorio-de-variables">Análisis exploratorio de variables</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#python">Python</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#muestreo">Muestreo</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#analisis-de-todas-las-variables">Análisis de todas las variables</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#analisis-univariado">Análisis univariado</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#analisis-multivariado">Análisis multivariado</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#correlacion-con-la-variable-dependiente">Correlación con la variable dependiente</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#analisis-de-componentes-principales-pca">Análisis de Componentes Principales (PCA)</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#referencias">Referencias</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="variables-condicionantes">
+<h1>Variables condicionantes<a class="headerlink" href="#variables-condicionantes" title="Permalink to this heading">#</a></h1>
+<p>Como se mencionó enteriormente la elaboración de un mapa de susceptibilidad y/o amenaza por movimientos en masa se refiere a la construcción de un modelo predictivo de la siguiente forma:</p>
+<p><span class="math notranslate nohighlight">\(y = f(X)\)</span></p>
+<p>Donde <span class="math notranslate nohighlight">\(y\)</span> es la variable dependiente, es decir la ocurrencia o no de movimientos en masa; y <span class="math notranslate nohighlight">\(X\)</span> correponde a las variables independientes, o tambien llamadas condicionantes, preparatorias, explicativas, cuasi-estáticas, predictoras, entre otros nombres asignados. y <span class="math notranslate nohighlight">\(f\)</span> representa la relación, función o el mecanismo que explica la ocurrencia de movimientos en masa.</p>
+<p><span class="math notranslate nohighlight">\(MenM[0,1] = f(pendiente, geologia, coberturas, etc, etc,)\)</span></p>
+<figure class="align-default" id="variables">
+<a class="reference internal image-reference" href="https://www.cdema.org/virtuallibrary/images/description/23%20table%201.jpg"><img alt="variables" src="https://www.cdema.org/virtuallibrary/images/description/23%20table%201.jpg" style="width: 800px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 23 </span><span class="caption-text">Variables para la evaluación de la susceptibilidad por movimientos en masa. Tomado de CDEMA &amp; CRIS.</span><a class="headerlink" href="#variables" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>Las propiedades del suelo y la intensidad de la lluvia (I) son un factor primario que controla la inestabilidad de los taludes; la magnitud y tasa de reducción en el factor de seguridad (FS) es directamente proporcional a la magnitud de la intensidad de lluvia, a mayor intensidad más rápidamente decrece el factor de seguridad (<span id="id1"></span>). Adicionalmente pequeñas variaciones en la conductividad hidráulica (k) controlan la localización de la ocurrencia de movimientos en masa, lo que explica de cierta forma el carácter aleatorio en la distribución de los movimientos sobre una misma ladera aparentemente homogénea (<span id="id2"></span>). <span id="id3"></span> y <span id="id4"></span> estudian los mecanismos de falla en taludes conformados por suelos residuales no saturados donde encuentran que el campo de los esfuerzos es modificado por la distribución de la presión de poros (Ψ), la cual es controlada por las variaciones espaciales de la conductividad hidráulica durante la infiltración de la lluvia. Y aunque el talud es homogéneo texturalmente, la conductividad hidráulica tiene una distribución no homogénea ya que es una función del contenido de agua o de la succión.</p>
+<figure class="align-default" id="id5">
+<a class="reference internal image-reference" href="https://i.pinimg.com/564x/96/21/fe/9621fe215adc31032b8e493a3382da1d.jpg"><img alt="variables" src="https://i.pinimg.com/564x/96/21/fe/9621fe215adc31032b8e493a3382da1d.jpg" style="width: 600px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 24 </span><span class="caption-text">Representación esquemática tridimensional del perfil de meteorización sobre una ladera de morfología (ML) convergente bajo lluvia (P) y las variables hidrológicas - geotécnicas que influyen en la  ocurrencia de movimientos en masa: intensidad de la precipitación (I), contenido de agua volumétrico (ө), presión de poros positiva (Ψ+) y negativa o succión (Ψ-), permeabilidad (k), peso del suelo (W), vegetación (V), infiltración, pendiente de la ladera (β), resistencia al cortante (ז), profundidad (Z), espesor suelo saturado (h).</span><a class="headerlink" href="#id5" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>De acuerdo con la mecánica descrita anteriormente la complejidad en encontrar las probabilidades de alcanzar el aumento de presión de poros crítica y por lo tanto pronosticar la ocurrencia de movimientos en masa detonados por lluvias es función de una gran cantidad de variables involucradas e íntimamente relacionadas. El aumento de la presión de poros en el suelo es función de la porosidad, la permeabilidad, la conductividad hidráulica, y el contenido de agua en el suelo. Por otra parte la pendiente y morfología del terreno juegan un papel fundamental que controlan no solo la resistencia del suelo, sino además el flujo del agua en el suelo.</p>
+<p>La <strong>permeabilidad</strong> controla el balance que debe existir entre la generación de la presión de poros y su disipación, lo cual es fundamental para la inicialización del movimiento (<span id="id6"></span>). El efecto de la lluvia antecedente es más crítico para suelos con bajos valores de permeabilidades, debido a que el tiempo requerido para que la lluvia infiltre es muy largo y la recuperación del factor de seguridad después de una lluvia es muy lento (<span id="id7"></span>,<span id="id8"></span>, <span id="id9"></span>). Esta situación también explica que los mecanismos de falla para laderas con diferentes permeabilidades no son similares. Bajo lluvias intensas, suelos de alta permeabilidad usualmente fallan por aumento de presiones de poro positiva como movimiento tipo flujos, mientras suelos de baja permeabilidad fallan por reducción de la succión como movimientos tipo deslizamientos.</p>
+<p>Adicionalmente pequeñas variaciones en la <strong>conductividad hidráulica</strong> controlan la localización de la ocurrencia de movimientos en masa ya que es una función del contenido de agua o de la succión, lo que explica de cierta forma el carácter aleatorio en la distribución de los movimientos (<span id="id10"></span>, <span id="id11"></span>, <span id="id12"></span>). La capilaridad proporciona una presión de confinamiento isotrópico que disminuye la conductividad hidráulica cuando el suelo no está saturado, pero durante una tormenta, el suelo se acerca a condiciones de saturación, por lo que la conductividad es más alta (<span id="id13"></span>). Los suelos residuales son susceptibles a la formación de conductos debido a las articulaciones relictas y efectos biológicos; y desarrollan un sistema de porosidad secundaria, el cual aumenta sustancialmente la permeabilidad y conductividad hidráulica de los suelos y actúan como trayectorias de flujo preferenciales para los flujos del subsuelo (<span id="id14"></span>).</p>
+<figure class="align-default" id="permeabilidad">
+<a class="reference internal image-reference" href="https://ars.els-cdn.com/content/image/1-s2.0-S0038071721002728-gr1.jpg"><img alt="permeabilidad" src="https://ars.els-cdn.com/content/image/1-s2.0-S0038071721002728-gr1.jpg" style="width: 600px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 25 </span><span class="caption-text">Contenido de agua en el suelo por diferentes tipos de flujos preferenciales. Tomado de <span id="id15">Franklin <em>et al.</em> [<a class="reference internal" href="#id125" title="Shane M. Franklin, Alexandra N. Kravchenko, Rodrigo Vargas, Bruce Vasilas, Jeffry J. Fuhrmann, and Yan Jin. The unexplored role of preferential flow in soil carbon dynamics. Soil Biology and Biochemistry, 161:108398, 2021. URL: https://www.sciencedirect.com/science/article/pii/S0038071721002728, doi:https://doi.org/10.1016/j.soilbio.2021.108398.">2021</a>]</span>.</span><a class="headerlink" href="#permeabilidad" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>Otro elemento importante es la <strong>porosidad efectiva</strong>. La capacidad de almacenamiento del agua en el suelo depende de los espacios abiertos o poros que se encuentran en el suelo y está determinada principalmente por la textura del suelo. Suelos con alta porosidad efectiva presentan una mayor capacidad para mantener y almacenar agua, y por lo tanto retrasan la infiltración en el sub suelo. Para tormentas no muy intensas, no se presentan movimientos superficiales cuando existen altos valores de porosidad efectiva. Sin embargo estos altos valores tienden a aumentar el contenido de agua de la masa desplazada, lo que genera finalmente movimientos más rápidos y que recorren mayores distancias, además de depositarse sobre áreas más extensas (<span id="id16"></span>).</p>
+<p>Aunque es conocida la <strong>lluvia antecedente</strong> como un factor importante que predispone las condiciones de inestabilidad de una ladera, su influencia es difícil de cuantificar, ya que depende de diferentes factores entre ellos la heterogeneidad de los suelos (<span id="id17"></span>, <span id="id18"></span>). Los movimientos superficiales son usualmente detonados por lluvias cortas e intensas, en tanto que los movimientos profundos están más relacionados con la distribución y variación de la lluvia en periodos antecedentes largos (<span id="id19"></span>). Diferentes investigadores coinciden en que la importancia de la lluvia antecedente es igual a la intensidad de la lluvia y depende de la permeabilidad del suelo (<span id="id20"></span>, <span id="id21"></span>). En general existe consenso en que para suelos de baja permeabilidad y conductividad hidráulica la lluvia antecedente juega un rol muy importante, ya que luego de la ocurrencia de lluvias conserva las presiones de poros positivas por tiempos mayores (<span id="id22"></span>, <span id="id23"></span>).</p>
+<figure class="align-default" id="lluvia-antecedente">
+<a class="reference internal image-reference" href="https://media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10346-020-01505-4/MediaObjects/10346_2020_1505_Fig4_HTML.png"><img alt="lluvia antecedente" src="https://media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10346-020-01505-4/MediaObjects/10346_2020_1505_Fig4_HTML.png" style="width: 600px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 26 </span><span class="caption-text">Lluvia antecedente. Tomado de <span id="id24"></span>.</span><a class="headerlink" href="#lluvia-antecedente" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>La <strong>succión</strong> es uno de las variables más importantes de esfuerzos en la teoría de suelos no saturados (<span id="id25"></span>, <span id="id26"></span>, <span id="id27"></span>). Para suelos no saturados la permeabilidad es función de la succión debido a la distribución heterogénea de los poros y el agua dentro de la masa de suelo. La cantidad de agua almacenada depende también de la succión de la matriz y la retención de humedad característica de la estructura del suelo (<span id="id28"></span>). Con la reducción del contenido volumétrico de agua, la succión y consecuentemente la conductividad hidráulica decrecen, debido al número menor de poros conectados dentro de la estructura del suelo que decrece el número de canales disponibles para el flujo de agua (<span id="id29"></span>). Suelos de grano fino no tienden a desarrollar presiones de poros positivas y la falla ocurre generalmente por pérdida de succión.</p>
+<figure class="align-default" id="succion">
+<a class="reference internal image-reference" href="https://www.researchgate.net/profile/Rukshan-Azoor/publication/334659960/figure/fig5/AS:793496080379906&#64;1566195616832/Schematic-of-the-soil-water-retention-curve-SWRC-illustrating-the_W640.jpg"><img alt="succion" src="https://www.researchgate.net/profile/Rukshan-Azoor/publication/334659960/figure/fig5/AS:793496080379906&#64;1566195616832/Schematic-of-the-soil-water-retention-curve-SWRC-illustrating-the_W640.jpg" style="width: 600px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 27 </span><span class="caption-text">Curva caracteristica esquemática de retención de agua en el suelo. Tomado de <a class="reference external" href="https://www.researchgate.net/publication/334659960_On_the_optimum_soil_moisture_for_underground_corrosion_in_different_soil_types">Azoor et al., 2019</a>.</span><a class="headerlink" href="#succion" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>Pocos estudios se han realizado sobre el efecto de la <strong>vegetación</strong> y el desarrollo de sus raíces sobre la ocurrencia de los movimientos en masa. Entre los estudios más reportados se encuentran <span id="id30"></span>, <span id="id31"></span>, <span id="id32"></span>, <span id="id33"></span>, <span id="id34"></span>, <span id="id35"></span>, y <span id="id36"></span>. En general la mayoría de autores han evaluado el efecto mecánico que generan las raíces de las plantas en la estabilidad de las laderas, atribuido principalmente al incremento en la resistencia al cortante de los suelos. Este incremento se le atribuye al anclaje de las raíces formando una red dentro de los horizontes de suelos más superficiales. Sin embargo es conocido que la vegetación influencia la estabilidad de las laderas en dos formas esencialmente: (i) removiendo la humedad del suelo por evapotranspiración; y (ii) generando cohesión por las raíces en el manto del suelo (<span id="id37"></span>). El primero de ellos no se considera particularmente importante en regiones para movimientos en masa superficiales que se generan en periodos lluviosos, excepto posiblemente en los trópicos y subtrópicos donde la evapotranspiración es alta durante todo el año. Las raíces, por su parte, son reconocidas como un factor más importante en la estabilidad de las vertientes, las cuales pueden responder a la fuerza de corte en tres diferentes formas: estirándose, deslizándose o rompiéndose (<span id="id38"></span>). Trabajos de laboratorio recientes han arrojado resultados interesantes que demuestran que el efecto de las raíces afecta significativamente la cohesión pero no el ángulo de fricción (<span id="id39"></span>) y que el pico adicional de la resistencia al cortante que genera las raíces se incrementa notablemente con el incremento del contenido de humedad (<span id="id40"></span>).</p>
+<figure class="align-default" id="vegetacion">
+<a class="reference internal image-reference" href="https://www.mdpi.com/geosciences/geosciences-11-00212/article_deploy/html/images/geosciences-11-00212-g001-550.jpg"><img alt="vegetación" src="https://www.mdpi.com/geosciences/geosciences-11-00212/article_deploy/html/images/geosciences-11-00212-g001-550.jpg" style="width: 500px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 28 </span><span class="caption-text">Papel de la vegetación en la susceptibilidad por movimientos en masa. <span id="id41">Masi <em>et al.</em> [<a class="reference internal" href="#id122" title="Elena Benedetta Masi, Samuele Segoni, and Veronica Tofani. Root reinforcement in slope stability models: a review. Geosciences, 2021. URL: https://www.mdpi.com/2076-3263/11/5/212, doi:10.3390/geosciences11050212.">2021</a>]</span>.</span><a class="headerlink" href="#vegetacion" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>Con respecto a la <strong>morfometría de las laderas</strong>, diferentes autores han estudiado el comportamiento hidrológico de un punto dado en una cuenca considerando la pendiente y morfología. A partir de los trabajos de <span id="id42"></span> and <span id="id43"></span> se ha demostrado que los movimientos en masa superficiales están fuertemente controlados por la topografía superficial, la cual afecta la convergencia del flujo sub-superficial, incrementando la saturación de suelo (<span id="id44"></span>, <span id="id45"></span>, <span id="id46"></span>, <span id="id47"></span>). Dichos estudios se fundamentan en que bajo un estado hidráulico estático, los flujos de agua subsuperficial están directamente relacionados con el denominado índice topográfico, el cual refleja la tendencia del agua a acumularse en cualquier punto en la cuenca (en términos de Ac) y la tendencia de las fuerzas gravitacionales de mover el agua hacia abajo (expresado en términos de tanβ como un gradiente hidráulico aproximado) (<span id="id48"></span>). Sin embargo no solo la pendiente, sino la forma de ésta (concavidad y convexidad) son factores que controlan la ocurrencia de los movimientos superficiales (<span id="id49"></span>, <span id="id50"></span>, <span id="id51"></span>). En la literatura se consideran tres vertientes hidro-geomorfológicas básicas útiles para evaluar la estabilidad (1) divergentes; (2) planas; y (3) convergentes. En las laderas divergentes o de forma convexa el flujo sub-superficial es disperso, lo que permite que un nivel freático colgado sea poco común y las presiones de poros sean más bajas que en laderas con otras geoformas (<span id="id52"></span>, <span id="id53"></span>). Específicamente la curvatura del perfil (cóncavo, recto, y convexo) controla el cambio de la velocidad del flujo de masa de agua hacia abajo de la ladera, en tanto el plano de curvatura (convergente, paralelo y divergente) define la convergencia topográfica, la cual es un control importante de la concentración del flujo sub-superficial. Los perfiles convexos son generalmente más estables que perfiles cóncavos o planos, en cuanto a los planos de curvatura la estabilidad incrementa cuando el plano cambia de convergente a divergente, especialmente para perfiles convexos (<span id="id54"></span>). En general los autores acuerdan que los controles topográficos del flujo sub-superficial afectan los patrones de humedad en el largo plazo dentro de una cuenca y determinan la cabeza de presión anterior al inicio de una tormenta.</p>
+<figure class="align-default" id="morfometria">
+<a class="reference internal image-reference" href="https://www.researchgate.net/profile/Scott-Drzyzga/post/In-Profile-curvature-a-concave-surface-accelerates-or-decelerates-the-flow/attachment/59d62e3579197b807798c6f0/AS%3A353332884459540%401461252532965/image/surfaceCurvature.gif"><img alt="morfometria" src="https://www.researchgate.net/profile/Scott-Drzyzga/post/In-Profile-curvature-a-concave-surface-accelerates-or-decelerates-the-flow/attachment/59d62e3579197b807798c6f0/AS%3A353332884459540%401461252532965/image/surfaceCurvature.gif" style="width: 400px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 29 </span><span class="caption-text">Curvatura de perfil y curvatura plana. Figura elaborada por Scott A. Drzyzga.</span><a class="headerlink" href="#morfometria" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>Finalmente, el <strong>espesor del suelo</strong> en una ladera es un parámetro crítico en la realización de un análisis de la inestabilidad de pendiente (<span id="id55"></span>, <span id="id56"></span>). Suelos relativamente delgados son más propensos a flujos terrestres saturados en comparación con los suelos más gruesos que tienen un mayor potencial de almacenamiento de agua. La profundidad del suelo se refiere obviamente a la profundidad hasta roca, sin embargo una superficie de falla puede generarse en cualquier contraste de conductividad hidráulica, por lo que la superficie de falla no se refiere estrictamente al espesor del suelo. A medida que la profundidad del suelo incrementa, mayores intervalos de lluvia antecedente deberán ser considerados. Cuando se trata con movimientos de masa con espesores de suelo superficiales puede ser suficiente considerar la lluvia de las horas previas, pero para movimientos de masa con espesores de suelo profundo horizontes de tiempo de varios meses deben ser considerados (<span id="id57"></span>).</p>
+<figure class="align-default" id="hillslope">
+<a class="reference internal image-reference" href="https://earthsurface.readthedocs.io/en/latest/_images/hill1.png"><img alt="hillslope" src="https://earthsurface.readthedocs.io/en/latest/_images/hill1.png" style="width: 700px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 30 </span><span class="caption-text">Laderas en roca y laderas en suelo. Tomado de <a class="reference external" href="https://earthsurface.readthedocs.io/en/latest/_images/hill1.png">Lecture notes on geomorphology and stratigraphy</a>.</span><a class="headerlink" href="#hillslope" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<figure class="align-default" id="mapa-conceptual">
+<a class="reference internal image-reference" href="https://i.pinimg.com/736x/7e/03/e4/7e03e4ea4834c7747e8e8df7c7b0ba32.jpg"><img alt="https://i.pinimg.com/736x/7e/03/e4/7e03e4ea4834c7747e8e8df7c7b0ba32.jpg" src="https://i.pinimg.com/736x/7e/03/e4/7e03e4ea4834c7747e8e8df7c7b0ba32.jpg" style="width: 800px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 31 </span><span class="caption-text">Mapa conceptual de las variables condicionantes y detonantes en la ocurrencia de movimientos en masa.</span><a class="headerlink" href="#mapa-conceptual" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<section id="seleccion-de-variables">
+<h2>Selección de variables<a class="headerlink" href="#seleccion-de-variables" title="Permalink to this heading">#</a></h2>
+<p>Existe un gran abanico de variables predictoras utilizadas en la evaluación de la susceptibilidad y/o amenaza por movimientos en masa. Estas se definen como características o propiedades que se supone son parte de la causa de los movimientos en masa.  Por lo tanto tienden a estar asociadas con el terreno, tales como los materiales que la componen o la morfometría como la pendiente. Pero tambien es común incluir variables de las coberturas o proximidad a elementos como drenajes, vias entre otros.</p>
+<figure class="align-default" id="variables-independientes">
+<a class="reference internal image-reference" href="https://i.pinimg.com/564x/a5/11/84/a511840952008aa87975920c909163ab.jpg"><img alt="https://i.pinimg.com/564x/a5/11/84/a511840952008aa87975920c909163ab.jpg" src="https://i.pinimg.com/564x/a5/11/84/a511840952008aa87975920c909163ab.jpg" style="width: 700px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 32 </span><span class="caption-text">Variables más utilizadas de la susceptibilidad por movimientos en masa. Reichenbach et al., (2015).</span><a class="headerlink" href="#variables-independientes" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>Existen diferentes categorías de datos con niveles o escalas de medida que varían. En cuanto a la categoría de las variables existen variables cualitativas, tales como geología, o cuantitativas. Las variables cuantitativas se dividen entre variables discretas y continuas. Las variables continuas se caracterizan por que no son contables y presentan valores infinitos de precisión, se pueden dividir en variables de intervalo, que son aquellas que no presentan un cero natural o con sentido físico, tal como la temperatura en grados Celsius; y las variables tipo radio, las cuales tienen un cero con sentido fisico, como la temperatura en grados Kelvin, la cohesión, la pendiente. Las variables discretas, que pueden ser cuantitativas y cualitativas, son contables, finitas, y se dividen en nominales, las cuales no tienen un orden, tal como el uso del suelo; y ordinales, las cuales tienen un orden, tal como acumulación del flujo. Es importante señalar que las variables continuas pueden ser reclasificadas a variables discretas, un ejemplo es la pendiente expresada como variable continua de 0° a 90°, o como variable discreta reclasificada en rangos de 0° - 10°, 11 - 20°, etc, etc.</p>
+<figure class="align-default" id="categorias-de-datos">
+<a class="reference internal image-reference" href="https://i.pinimg.com/564x/7d/4b/6a/7d4b6abf338226908d4eb0a1504a4314.jpg"><img alt="https://i.pinimg.com/564x/7d/4b/6a/7d4b6abf338226908d4eb0a1504a4314.jpg" src="https://i.pinimg.com/564x/7d/4b/6a/7d4b6abf338226908d4eb0a1504a4314.jpg" style="width: 800px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 33 </span><span class="caption-text">Categorías de datos y niveles o escalas de medida.</span><a class="headerlink" href="#categorias-de-datos" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>Cada región presenta un conjunto de variables propias que responden a la ocurrencia de los movimientos en masa. En este sentido, en el presente estudio se utilizan en una primera fase un rango amplio de variables utilizados a nivel mundial o recomendados en estudios locales.</p>
+</section>
+<section id="analisis-exploratorio-de-variables">
+<h2>Análisis exploratorio de variables<a class="headerlink" href="#analisis-exploratorio-de-variables" title="Permalink to this heading">#</a></h2>
+<p>El análisis exploratorio de variables se refiere a la selección de las mejores variables predictoras que optimicen el modelo, no solo en términos de efectividad del modelo, sino además en términos de eficiencia computacional. Por lo tanto implica evaluar qué variables son mejores predictoras para la ocurrencia de movimientos en masa, esto implica analisis univaridos, bivariados y multivariados que evalúen la relación entre cada variable predictora y la variable dependiente (<span class="math notranslate nohighlight">\(y\)</span>). Por otra parte se debe tambien analizar la colinealidad entre las variables. Cuando existe multicorrelación entre las variables predictoras se está sobre cargando el modelo con variables que no aportan información adicional, y en muchos casos no se están cumpliendo las asumpciones estadísticas que exigen los modelos, y que se refieren a la independencia entre las variables predictoras.</p>
+<p>Para este procedimiento los algoritmos disponibles en las librerías de Python resultan ser muy útiles. A continuación se presentan cada uno de ellos.</p>
+</section>
+<section id="python">
+<h2>Python<a class="headerlink" href="#python" title="Permalink to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">rasterio</span> <span class="k">as</span> <span class="nn">rio</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
+<span class="kn">from</span> <span class="nn">pandas</span> <span class="kn">import</span> <span class="n">DataFrame</span>
+<span class="kn">import</span> <span class="nn">statsmodels.graphics.api</span> <span class="k">as</span> <span class="nn">smg</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Basado en el modelo conceptual y conocimiento que se tenga de la zona de estudio y de la problemática específica de la ocurrencia de movimientos en masa, se debe realizar el levantamiento de todas las variables predictoras que se consideren juegan un papel en la ocurrencia de movimientos en masa. Posteriormente se procede a importar las variables pre-seleccionadas:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">raster</span> <span class="o">=</span> <span class="n">rio</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s1">&#39;https://github.com/edieraristizabal/Libro_cartoGeotecnia/blob/master/data/miel/Pendiente.tif?raw=true&#39;</span><span class="p">)</span>
+<span class="n">pendiente</span><span class="o">=</span><span class="n">raster</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">pendiente</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">colorbar</span><span class="p">();</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/3bf9b82ceafa08ed015e051ce07d4178948f07f9d9be02586e468e8147ae300b.png" src="_images/3bf9b82ceafa08ed015e051ce07d4178948f07f9d9be02586e468e8147ae300b.png" />
+</div>
+</div>
+<p>El mapa aparece con solo los dos colores de los extremos observados en la escala, pareciendo que todos los valores dentro de la cuenca son 0. Sin embargo, esto se debe al contraste entre los valores por fuera de la cuenca, es decir celdas que no son de la cuenca y que al parecer tienen valores negativos muy grandes; y los valores de pendiente solo varian entre 0 y 90°. Por lo tanto se debe modificar y cambiar los valores de cuenca por NaN (<em>no data</em>), los cuales Python pueda interpretar adecuadamente.</p>
+<p>En este caso se utiliza la funcion <em>np.where</em>, que para este caso cambia todos los valores menores a 0, y que para el caso del mapa de pendiente son celdas que no son cuenca. Y para los valores que no cumplen esta condición dejar el valor que trae el mapa.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pendiente</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">pendiente</span><span class="o">&lt;</span><span class="mi">0</span><span class="p">,</span><span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">,</span><span class="n">pendiente</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">pendiente</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">colorbar</span><span class="p">();</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/242241e08d870eef0d3243cd8461b986602d28bb64977f17482341c32d155416.png" src="_images/242241e08d870eef0d3243cd8461b986602d28bb64977f17482341c32d155416.png" />
+</div>
+</div>
+<p>Si observamos, estos mapas corresponden a matrices, es decir un arreglo de filas y columnas con valores, que en este caso representan la pendiente de cada celda en un área igual a la resolución espacial del raster.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">type</span><span class="p">(</span><span class="n">pendiente</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>numpy.ndarray
+</pre></div>
+</div>
+</div>
+</div>
+<p>Para explorar las variables es entonces recomendable pasarlas de matrices a vectores, y formar con todas las variables tipo vector un <em>Dataframe</em>, el cual corresponde a un objeto de la libreria <em>Pandas</em>, que facilita enormente el trabajo con estas grandes cantidades de datos. Las dimensiones de esta matriz son:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">shape</span><span class="p">(</span><span class="n">pendiente</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(1297, 1430)
+</pre></div>
+</div>
+</div>
+</div>
+<p>Para convertirlo a vector se utliza la función <em>ravel</em> y se eliminan de dicho vector los NaN, que son las celdas que no son cuenca.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pendiente_vector</span><span class="o">=</span><span class="n">pendiente</span><span class="o">.</span><span class="n">ravel</span><span class="p">()</span>  <span class="c1"># para pasarlo a un vector</span>
+<span class="n">pendiente_vector_MenM</span><span class="o">=</span><span class="n">pendiente_vector</span><span class="p">[</span><span class="o">~</span><span class="n">np</span><span class="o">.</span><span class="n">isnan</span><span class="p">(</span><span class="n">pendiente_vector</span><span class="p">)]</span> <span class="c1"># para eliminar  del vector los datos NaN</span>
+<span class="n">pendiente_vector_MenM</span><span class="o">.</span><span class="n">shape</span> <span class="c1"># otra forma de saber las dimensiones</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(910801,)
+</pre></div>
+</div>
+</div>
+</div>
+<p>Antes de generar el <em>Dataframe</em> con las diferentes variables, es necesario entonces importar todas las variables y realizar los ajustes que sean necesarios.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">raster</span> <span class="o">=</span> <span class="n">rio</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s1">&#39;https://github.com/edieraristizabal/Libro_cartoGeotecnia/blob/master/data/miel/Aspecto.tif?raw=true&#39;</span><span class="p">)</span>
+<span class="n">aspecto</span><span class="o">=</span><span class="n">raster</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">aspecto</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">aspecto</span><span class="o">&lt;-</span><span class="mi">100</span><span class="p">,</span><span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">,</span><span class="n">aspecto</span><span class="p">)</span>
+<span class="n">aspecto_vector</span><span class="o">=</span><span class="n">aspecto</span><span class="o">.</span><span class="n">ravel</span><span class="p">()</span>
+<span class="n">aspecto_vector_MenM</span><span class="o">=</span><span class="n">aspecto_vector</span><span class="p">[</span><span class="o">~</span><span class="n">np</span><span class="o">.</span><span class="n">isnan</span><span class="p">(</span><span class="n">aspecto_vector</span><span class="p">)]</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">aspecto</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">colorbar</span><span class="p">()</span>
+<span class="n">aspecto_vector_MenM</span><span class="o">.</span><span class="n">shape</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(910801,)
+</pre></div>
+</div>
+<img alt="_images/c52bcf75b52535cbf0e430121edbb0716662d7a36eeb57a35e654ace334bc2e3.png" src="_images/c52bcf75b52535cbf0e430121edbb0716662d7a36eeb57a35e654ace334bc2e3.png" />
+</div>
+</div>
+<p>Es importante revisar que todos los mapas den como resultado un vector con las mismas filas, en caso contrario no se permitirá construir el <em>Dataframe</em>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">raster</span> <span class="o">=</span> <span class="n">rio</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s1">&#39;https://github.com/edieraristizabal/Libro_cartoGeotecnia/blob/master/data/miel/FlujoAcumulado.tif?raw=true&#39;</span><span class="p">)</span>
+<span class="n">flujo</span><span class="o">=</span><span class="n">raster</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">flujo</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">flujo</span><span class="o">&lt;</span><span class="mi">0</span><span class="p">,</span><span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">,</span><span class="n">flujo</span><span class="p">)</span>
+<span class="n">flujo_vector</span><span class="o">=</span><span class="n">flujo</span><span class="o">.</span><span class="n">ravel</span><span class="p">()</span>
+<span class="n">flujo_vector_MenM</span><span class="o">=</span><span class="n">flujo_vector</span><span class="p">[</span><span class="o">~</span><span class="n">np</span><span class="o">.</span><span class="n">isnan</span><span class="p">(</span><span class="n">flujo_vector</span><span class="p">)]</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">flujo</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">colorbar</span><span class="p">()</span>
+<span class="n">flujo</span><span class="o">.</span><span class="n">shape</span>
+<span class="n">flujo_vector_MenM</span><span class="o">.</span><span class="n">shape</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(910801,)
+</pre></div>
+</div>
+<img alt="_images/ff591ccbf55576e8eabb7abd32b5939956086cc05c511fd2fecf6395a4385797.png" src="_images/ff591ccbf55576e8eabb7abd32b5939956086cc05c511fd2fecf6395a4385797.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">raster</span> <span class="o">=</span> <span class="n">rio</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s1">&#39;https://github.com/edieraristizabal/Libro_cartoGeotecnia/blob/master/data/miel/Geologia_Superficial.tif?raw=true&#39;</span><span class="p">)</span>
+<span class="n">geologia</span><span class="o">=</span><span class="n">raster</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">geologia</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">geologia</span><span class="o">&lt;</span><span class="mi">0</span><span class="p">,</span><span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">,</span><span class="n">geologia</span><span class="p">)</span>
+<span class="n">geologia_vector</span><span class="o">=</span><span class="n">geologia</span><span class="o">.</span><span class="n">ravel</span><span class="p">()</span>
+<span class="n">geologia_vector_MenM</span><span class="o">=</span><span class="n">geologia_vector</span><span class="p">[</span><span class="o">~</span><span class="n">np</span><span class="o">.</span><span class="n">isnan</span><span class="p">(</span><span class="n">geologia_vector</span><span class="p">)]</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">geologia</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">colorbar</span><span class="p">()</span>
+<span class="n">geologia_vector_MenM</span><span class="o">.</span><span class="n">shape</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(910801,)
+</pre></div>
+</div>
+<img alt="_images/e49bf3460af74719f20c5b9faf593d88921eb0e5af292fe3f7ed6856b4849849.png" src="_images/e49bf3460af74719f20c5b9faf593d88921eb0e5af292fe3f7ed6856b4849849.png" />
+</div>
+</div>
+<p>Existen otras librearias para importar como <em>gdal</em>, en las cuales el procedimiento varía ligeramente. Para saber cuantas clases tiene un mapa de variables categóricas se utiliza la función unique de numpy.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">unique</span><span class="p">(</span><span class="n">geologia</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([ 2.,  4.,  6.,  8.,  9., 10., 11., 14., 15., 16., nan])
+</pre></div>
+</div>
+</div>
+</div>
+<p>Finalmente, importamos el inventario y utilizamos como máscara el mapa de pendientes, y modificamos los valores para que las celdas con movimientos en masa tengan un valor de 1, y las celdas sin movimientos en masa un valor de 0, las celdas que no son de la cuenca tienen NaN.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">raster</span> <span class="o">=</span> <span class="n">rio</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s1">&#39;https://github.com/edieraristizabal/Libro_cartoGeotecnia/blob/master/data/miel/Inventario_MenM.tif?raw=true&#39;</span><span class="p">)</span>
+<span class="n">inventario</span><span class="o">=</span><span class="n">raster</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">raster_mask</span> <span class="o">=</span> <span class="n">rio</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s1">&#39;https://github.com/edieraristizabal/Libro_cartoGeotecnia/blob/master/data/miel/Pendiente.tif?raw=true&#39;</span><span class="p">)</span>
+<span class="n">msk</span><span class="o">=</span><span class="n">raster_mask</span><span class="o">.</span><span class="n">read_masks</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">msk</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">msk</span><span class="o">==</span><span class="mi">255</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">)</span>
+<span class="n">inventario</span><span class="o">=</span><span class="n">msk</span><span class="o">*</span><span class="n">inventario</span>
+<span class="n">inventario_vector</span><span class="o">=</span><span class="n">inventario</span><span class="o">.</span><span class="n">ravel</span><span class="p">()</span>
+<span class="n">inventario_vector_MenM</span><span class="o">=</span><span class="n">inventario_vector</span><span class="p">[</span><span class="o">~</span><span class="n">np</span><span class="o">.</span><span class="n">isnan</span><span class="p">(</span><span class="n">inventario_vector</span><span class="p">)]</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">inventario</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">colorbar</span><span class="p">()</span>
+<span class="n">inventario_vector_MenM</span><span class="o">.</span><span class="n">shape</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(910801,)
+</pre></div>
+</div>
+<img alt="_images/197577bc2701a4077158f7b6d1257be0a307cd454e02605e7b57449c2239b29a.png" src="_images/197577bc2701a4077158f7b6d1257be0a307cd454e02605e7b57449c2239b29a.png" />
+</div>
+</div>
+<p>Finalmente para crear el <em>Dataframe</em> con las variables predictoras incluidas, se crea primero un diccionario y luego se transforma a un <em>Dataframe</em>:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">d</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;inventario&#39;</span><span class="p">:</span><span class="n">inventario_vector_MenM</span><span class="p">,</span><span class="s1">&#39;pendiente&#39;</span><span class="p">:</span><span class="n">pendiente_vector_MenM</span><span class="p">,</span><span class="s1">&#39;flujo_acum&#39;</span><span class="p">:</span><span class="n">flujo_vector_MenM</span><span class="p">,</span><span class="s1">&#39;aspecto&#39;</span><span class="p">:</span><span class="n">aspecto_vector_MenM</span><span class="p">,</span> <span class="s1">&#39;geologia&#39;</span><span class="p">:</span><span class="n">geologia_vector_MenM</span><span class="p">}</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">d</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">columns</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;inventario&#39;, &#39;pendiente&#39;, &#39;flujo_acum&#39;, &#39;aspecto&#39;, &#39;geologia&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+<p>Un <em>Dataframe</em> corresponde a una tabla donde las columnas son las variables y las filas son cada observación, en este caso las celdas que componen la cuenca. Los objetos tipo <em>Dataframe</em> permiten utilizar la función <em>head</em> o <em>tail</em> para conocer las primeras o últimas filas de la tabla.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>inventario</th>
+      <th>pendiente</th>
+      <th>flujo_acum</th>
+      <th>aspecto</th>
+      <th>geologia</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>0.0</td>
+      <td>10.862183</td>
+      <td>0.0</td>
+      <td>208.523560</td>
+      <td>14.0</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>0.0</td>
+      <td>12.265345</td>
+      <td>0.0</td>
+      <td>207.437332</td>
+      <td>14.0</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>0.0</td>
+      <td>12.469252</td>
+      <td>0.0</td>
+      <td>202.684647</td>
+      <td>14.0</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>0.0</td>
+      <td>13.148026</td>
+      <td>0.0</td>
+      <td>211.619766</td>
+      <td>14.0</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>0.0</td>
+      <td>14.091524</td>
+      <td>0.0</td>
+      <td>220.028976</td>
+      <td>14.0</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">info</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;class &#39;pandas.core.frame.DataFrame&#39;&gt;
+RangeIndex: 910801 entries, 0 to 910800
+Data columns (total 5 columns):
+ #   Column      Non-Null Count   Dtype  
+---  ------      --------------   -----  
+ 0   inventario  910801 non-null  float64
+ 1   pendiente   910801 non-null  float32
+ 2   flujo_acum  910801 non-null  float32
+ 3   aspecto     910801 non-null  float32
+ 4   geologia    910801 non-null  float64
+dtypes: float32(3), float64(2)
+memory usage: 24.3 MB
+</pre></div>
+</div>
+</div>
+</div>
+<section id="muestreo">
+<h3>Muestreo<a class="headerlink" href="#muestreo" title="Permalink to this heading">#</a></h3>
+<p>Para el análisis exploratorio y selección de variables no es estrictamente necesario realizar un muestreo del <em>Dataframe</em>. Todo lo contrario, lo ideal es poder trabajar con el <em>Dataframe</em> completo. Sin embargo, existen algunas funciones, especialmente de la librería <em>seaborn</em> que pueden ser computacionalmente muy exigentes y tardar demasiado los resultados. Es por esto que a continuación se crea un nuevo <em>Dataframe</em> que toma del original todas las celdas que tienen movimiento en masa, y adicionalmente el 10% de las celdas sin movimientos en masa de forma aleatoria. Esta forma aleatoria implica que cada vez que se corran los resultados, estos varían ligeramente.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df1</span><span class="o">=</span><span class="n">df</span><span class="p">[(</span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;inventario&quot;</span><span class="p">]</span><span class="o">==</span><span class="mi">1</span><span class="p">)</span> <span class="o">|</span> <span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;inventario&quot;</span><span class="p">]</span><span class="o">==</span><span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">sample</span><span class="p">(</span><span class="n">frac</span><span class="o">=</span><span class="mf">.1</span><span class="p">)]</span>
+<span class="n">df1</span><span class="o">.</span><span class="n">info</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;class &#39;pandas.core.frame.DataFrame&#39;&gt;
+Index: 92541 entries, 14 to 910799
+Data columns (total 5 columns):
+ #   Column      Non-Null Count  Dtype  
+---  ------      --------------  -----  
+ 0   inventario  92541 non-null  float64
+ 1   pendiente   92541 non-null  float32
+ 2   flujo_acum  92541 non-null  float32
+ 3   aspecto     92541 non-null  float32
+ 4   geologia    92541 non-null  float64
+dtypes: float32(3), float64(2)
+memory usage: 3.2 MB
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">resumen</span><span class="o">=</span><span class="n">df1</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span><span class="o">.</span><span class="n">T</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">resumen</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>              count         mean           std  min         25%         50%  \
+inventario  92541.0     0.017506      0.131147  0.0    0.000000    0.000000   
+pendiente   92541.0    29.187393     11.528878  0.0   21.694567   29.613646   
+flujo_acum  92541.0  3001.890869  97207.812500  0.0    4.000000   11.000000   
+aspecto     92541.0   213.912445    100.166428 -1.0  154.072571  237.775192   
+geologia    92541.0    10.226537      5.169620  2.0    2.000000   14.000000   
+
+                   75%           max  
+inventario    0.000000  1.000000e+00  
+pendiente    36.957420  7.450255e+01  
+flujo_acum   25.000000  5.649004e+06  
+aspecto     291.198242  3.599957e+02  
+geologia     14.000000  1.600000e+01  
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">matriz</span><span class="o">=</span><span class="n">df</span><span class="o">.</span><span class="n">drop</span><span class="p">([</span><span class="s1">&#39;inventario&#39;</span><span class="p">],</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span> <span class="c1"># función para eliminar una columna (axis=1)</span>
+<span class="n">matriz</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>pendiente</th>
+      <th>flujo_acum</th>
+      <th>aspecto</th>
+      <th>geologia</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>10.862183</td>
+      <td>0.0</td>
+      <td>208.523560</td>
+      <td>14.0</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>12.265345</td>
+      <td>0.0</td>
+      <td>207.437332</td>
+      <td>14.0</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>12.469252</td>
+      <td>0.0</td>
+      <td>202.684647</td>
+      <td>14.0</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>13.148026</td>
+      <td>0.0</td>
+      <td>211.619766</td>
+      <td>14.0</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>14.091524</td>
+      <td>0.0</td>
+      <td>220.028976</td>
+      <td>14.0</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">matriz_cont</span><span class="o">=</span><span class="n">matriz</span><span class="o">.</span><span class="n">drop</span><span class="p">([</span><span class="s1">&#39;geologia&#39;</span><span class="p">],</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">matriz_cont</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>pendiente</th>
+      <th>flujo_acum</th>
+      <th>aspecto</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>10.862183</td>
+      <td>0.0</td>
+      <td>208.523560</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>12.265345</td>
+      <td>0.0</td>
+      <td>207.437332</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>12.469252</td>
+      <td>0.0</td>
+      <td>202.684647</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>13.148026</td>
+      <td>0.0</td>
+      <td>211.619766</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>14.091524</td>
+      <td>0.0</td>
+      <td>220.028976</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+</section>
+<section id="analisis-de-todas-las-variables">
+<h3>Análisis de todas las variables<a class="headerlink" href="#analisis-de-todas-las-variables" title="Permalink to this heading">#</a></h3>
+<p>Con esta matriz se puede explorar la relación entre las variables. Para el primer caso utilizamos sólo las variables continuas y usando la función de <em>Pandas</em>; y para el segundo caso utilizamos toda la matriz separando los datos de acuerdo con el inventario, con la librería de <em>seaborn</em>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pd</span><span class="o">.</span><span class="n">plotting</span><span class="o">.</span><span class="n">scatter_matrix</span><span class="p">(</span><span class="n">matriz_cont</span><span class="p">,</span> <span class="n">alpha</span> <span class="o">=</span> <span class="mf">0.3</span><span class="p">,</span> <span class="n">figsize</span> <span class="o">=</span> <span class="p">(</span><span class="mi">14</span><span class="p">,</span><span class="mi">10</span><span class="p">),</span> <span class="n">diagonal</span><span class="o">=</span><span class="s1">&#39;kde&#39;</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sns</span><span class="o">.</span><span class="n">pairplot</span><span class="p">(</span><span class="n">df1</span><span class="p">,</span> <span class="n">hue</span><span class="o">=</span><span class="s1">&#39;inventario&#39;</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Para conocer la histograma de densidad de distribución se utiliza la siguiente función:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">matriz</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">kind</span><span class="o">=</span><span class="s1">&#39;density&#39;</span><span class="p">,</span> <span class="n">subplots</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">layout</span><span class="o">=</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span> <span class="n">sharex</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">4</span><span class="p">));</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Para conocer la correlación lineal entre las variables se puede utilizar la siguiente función para objetos tipo <em>Dataframe</em>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">MatCorre</span><span class="o">=</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">corr</span><span class="p">())</span>
+<span class="n">smg</span><span class="o">.</span><span class="n">plot_corr</span><span class="p">(</span><span class="n">MatCorre</span><span class="p">,</span> <span class="n">xnames</span><span class="o">=</span><span class="nb">list</span><span class="p">(</span><span class="n">MatCorre</span><span class="o">.</span><span class="n">columns</span><span class="p">))</span> <span class="p">;</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/f655540b9b716a799ee37ba2f2751f1e89f45f632e6ee5337948fa0d427a4e89.png" src="_images/f655540b9b716a799ee37ba2f2751f1e89f45f632e6ee5337948fa0d427a4e89.png" />
+</div>
+</div>
+</section>
+<section id="analisis-univariado">
+<h3>Análisis univariado<a class="headerlink" href="#analisis-univariado" title="Permalink to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">pendiente</span><span class="o">.</span><span class="n">hist</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Histograma de Pendiente&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Pendiente&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Frecuencia&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">boxplot</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;pendiente&#39;</span><span class="p">]);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/63146c5e75c6c4cd7a43074b8b7fe5296bd298cbccd178b70fa8a2af452d277c.png" src="_images/63146c5e75c6c4cd7a43074b8b7fe5296bd298cbccd178b70fa8a2af452d277c.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sns</span><span class="o">.</span><span class="n">boxplot</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="s1">&#39;pendiente&#39;</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">df</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/a3983d024f7983d751a54880b7dd9bb3edb795dc108bc2bc20596f3b39cdcf97.png" src="_images/a3983d024f7983d751a54880b7dd9bb3edb795dc108bc2bc20596f3b39cdcf97.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sns</span><span class="o">.</span><span class="n">violinplot</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;pendiente&#39;</span><span class="p">]);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/usr/local/lib/python3.7/dist-packages/seaborn/_decorators.py:43: FutureWarning: Pass the following variable as a keyword arg: x. From version 0.12, the only valid positional argument will be `data`, and passing other arguments without an explicit keyword will result in an error or misinterpretation.
+  FutureWarning
+</pre></div>
+</div>
+<img alt="_images/60c70ac3145db757832a77d038e8ccb282f7af4bd76c119ff47dc5c6fcda37e3.png" src="_images/60c70ac3145db757832a77d038e8ccb282f7af4bd76c119ff47dc5c6fcda37e3.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sns</span><span class="o">.</span><span class="n">distplot</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;aspecto&#39;</span><span class="p">]);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/usr/local/lib/python3.7/dist-packages/seaborn/distributions.py:2619: FutureWarning: `distplot` is a deprecated function and will be removed in a future version. Please adapt your code to use either `displot` (a figure-level function with similar flexibility) or `histplot` (an axes-level function for histograms).
+  warnings.warn(msg, FutureWarning)
+</pre></div>
+</div>
+<img alt="_images/137d4e098a4142f03caca374f487b2aaaee9454ab96c4c46f159a7d4124eefd8.png" src="_images/137d4e098a4142f03caca374f487b2aaaee9454ab96c4c46f159a7d4124eefd8.png" />
+</div>
+</div>
+</section>
+<section id="analisis-multivariado">
+<h3>Análisis multivariado<a class="headerlink" href="#analisis-multivariado" title="Permalink to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sns</span><span class="o">.</span><span class="n">jointplot</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="s1">&#39;aspecto&#39;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s1">&#39;flujo_acum&#39;</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">df1</span><span class="p">,</span> <span class="n">kind</span><span class="o">=</span><span class="s1">&#39;scatter&#39;</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sns</span><span class="o">.</span><span class="n">jointplot</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="s1">&#39;pendiente&#39;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s1">&#39;flujo_acum&#39;</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">df1</span><span class="p">,</span> <span class="n">kind</span><span class="o">=</span><span class="s1">&#39;kde&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;g&#39;</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sns</span><span class="o">.</span><span class="n">scatterplot</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="s2">&quot;pendiente&quot;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s2">&quot;aspecto&quot;</span><span class="p">,</span> <span class="n">hue</span><span class="o">=</span><span class="s2">&quot;inventario&quot;</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="s1">&#39;pendiente&#39;</span><span class="p">,</span><span class="n">data</span><span class="o">=</span><span class="n">df1</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sns</span><span class="o">.</span><span class="n">lmplot</span><span class="p">(</span><span class="s1">&#39;flujo_acum&#39;</span><span class="p">,</span> <span class="s1">&#39;pendiente&#39;</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">df1</span><span class="p">,</span> <span class="n">hue</span><span class="o">=</span><span class="s1">&#39;inventario&#39;</span><span class="p">,</span> <span class="n">fit_reg</span><span class="o">=</span><span class="kc">False</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="correlacion-con-la-variable-dependiente">
+<h3>Correlación con la variable dependiente<a class="headerlink" href="#correlacion-con-la-variable-dependiente" title="Permalink to this heading">#</a></h3>
+<p>Para saber la media de cada variable independiente de acuerdo con la variable dependiente utilizamos la función <em>groupby</em>:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">media</span><span class="o">=</span><span class="n">df</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;inventario&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">media</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>            pendiente   flujo_acum     aspecto   geologia
+inventario                                               
+0.0         29.082050  2915.758057  213.785950  10.233438
+1.0         34.459793    21.809259  199.425674   8.787037
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Para contar el numero de celdas con y sin MenM</span>
+<span class="n">df</span><span class="p">[</span><span class="s1">&#39;inventario&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.0    909181
+1.0      1620
+Name: inventario, dtype: int64
+</pre></div>
+</div>
+</div>
+</div>
+<p>Es importante tambien crear dos nuevos <em>Dataframe</em> solo con las celdas que presenta movimientos en masa y otro con las celdas sin movimientos en masa.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">landslides</span><span class="o">=</span><span class="n">df</span><span class="o">.</span><span class="n">inventario</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">bool</span><span class="p">)</span>
+<span class="n">si_lands</span><span class="o">=</span><span class="n">df</span><span class="p">[</span><span class="n">landslides</span><span class="p">]</span>
+<span class="n">no_lands</span><span class="o">=</span><span class="n">df</span><span class="p">[</span><span class="o">~</span><span class="n">landslides</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">si_lands</span><span class="o">.</span><span class="n">count</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>inventario    1620
+pendiente     1620
+flujo_acum    1620
+aspecto       1620
+geologia      1620
+dtype: int64
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">no_lands</span><span class="o">.</span><span class="n">count</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>inventario    909181
+pendiente     909181
+flujo_acum    909181
+aspecto       909181
+geologia      909181
+dtype: int64
+</pre></div>
+</div>
+</div>
+</div>
+<p>De esta forma podemos empezar a mirar la capacidad de separación o predicción de cada variable: una herraeminta puede ser los diagramas de cajas con <em>notch</em>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">boxplot</span><span class="p">(</span><span class="s1">&#39;pendiente&#39;</span><span class="p">,</span> <span class="n">by</span><span class="o">=</span><span class="s1">&#39;inventario&#39;</span><span class="p">,</span> <span class="n">notch</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">widths</span><span class="o">=</span><span class="mf">0.8</span><span class="p">,</span> <span class="n">showmeans</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">meanline</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">([],</span> <span class="p">[],</span> <span class="s1">&#39;--&#39;</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;red&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;mean&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">([],</span> <span class="p">[],</span> <span class="s1">&#39;-&#39;</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;blue&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;median&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">();</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/usr/local/lib/python3.7/dist-packages/matplotlib/cbook/__init__.py:1376: VisibleDeprecationWarning: Creating an ndarray from ragged nested sequences (which is a list-or-tuple of lists-or-tuples-or ndarrays with different lengths or shapes) is deprecated. If you meant to do this, you must specify &#39;dtype=object&#39; when creating the ndarray.
+  X = np.atleast_1d(X.T if isinstance(X, np.ndarray) else np.asarray(X))
+</pre></div>
+</div>
+<img alt="_images/f2204aa1cdfbcb2d74f3e30d2bd7005a7ee7c91512617f101511daff635e82fe.png" src="_images/f2204aa1cdfbcb2d74f3e30d2bd7005a7ee7c91512617f101511daff635e82fe.png" />
+</div>
+</div>
+<p>Para confirmar si las dos poblaciones pendientes con MenM y pendientes sin MenM son poblaciones diferentes, se puede realizar una prueba de hipótesis (<em>Ttest</em>) de la siguiente forma:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">scipy</span> <span class="kn">import</span> <span class="n">stats</span>
+<span class="n">stats</span><span class="o">.</span><span class="n">ttest_ind</span><span class="p">(</span><span class="n">no_lands</span><span class="p">[</span><span class="s2">&quot;pendiente&quot;</span><span class="p">],</span> <span class="n">si_lands</span><span class="p">[</span><span class="s2">&quot;pendiente&quot;</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Ttest_indResult(statistic=-18.772609621435528, pvalue=1.3092661545639284e-78)
+</pre></div>
+</div>
+</div>
+</div>
+<p>Al obtener un valor menor al 5% confirma que la diferencia es estadísticamente significativa, por lo tanto la pendiente es una buena variable que permite diferenciar las celdas con y sin MenM.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
+<span class="n">si_lands</span><span class="p">[</span><span class="s1">&#39;pendiente&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">kde</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Sin MenM&#39;</span><span class="p">)</span>
+<span class="n">no_lands</span><span class="p">[</span><span class="s1">&#39;pendiente&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">kde</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Con MenM&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xlim</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">90</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;Pendiente (°)&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;k&#39;</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="mi">12</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;Densidad&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;k&#39;</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="mi">12</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">loc</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">tick_params</span><span class="p">(</span><span class="s1">&#39;y&#39;</span><span class="p">,</span> <span class="n">colors</span><span class="o">=</span><span class="s1">&#39;k&#39;</span><span class="p">,</span> <span class="n">labelsize</span><span class="o">=</span> <span class="mi">10</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/bd66041d381aaedbbeb75b978eae3278e5d315f0d7615344f68b48e7e6f56509.png" src="_images/bd66041d381aaedbbeb75b978eae3278e5d315f0d7615344f68b48e7e6f56509.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sns</span><span class="o">.</span><span class="n">distplot</span><span class="p">(</span><span class="n">si_lands</span><span class="p">[</span><span class="s1">&#39;pendiente&#39;</span><span class="p">])</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">distplot</span><span class="p">(</span><span class="n">no_lands</span><span class="p">[</span><span class="s1">&#39;pendiente&#39;</span><span class="p">]);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/usr/local/lib/python3.7/dist-packages/seaborn/distributions.py:2619: FutureWarning: `distplot` is a deprecated function and will be removed in a future version. Please adapt your code to use either `displot` (a figure-level function with similar flexibility) or `histplot` (an axes-level function for histograms).
+  warnings.warn(msg, FutureWarning)
+/usr/local/lib/python3.7/dist-packages/seaborn/distributions.py:2619: FutureWarning: `distplot` is a deprecated function and will be removed in a future version. Please adapt your code to use either `displot` (a figure-level function with similar flexibility) or `histplot` (an axes-level function for histograms).
+  warnings.warn(msg, FutureWarning)
+</pre></div>
+</div>
+<img alt="_images/c026b2f2d7c27a47664c0f398cf3596beae8ac999ac7934ef6d15c262618e086.png" src="_images/c026b2f2d7c27a47664c0f398cf3596beae8ac999ac7934ef6d15c262618e086.png" />
+</div>
+</div>
+</section>
+<section id="analisis-de-componentes-principales-pca">
+<h3>Análisis de Componentes Principales (PCA)<a class="headerlink" href="#analisis-de-componentes-principales-pca" title="Permalink to this heading">#</a></h3>
+<p>El PCA es un método de <em>machine learning</em> no supervisado  para reducir dimensionalmente un modelo con una gran cantidad de variables. Para esta reducción permite identificar las variables que mas le aportan a la varianza del modelo. En este ejemplo vamos a utilizar un conjunto de variables importados desde una tabla de excel.</p>
+<p>A continuación se presenta el código en Python que permite obtener el número de componentes principales a partir de una serie de vectores. Para esto se debe primero transformar los datos para escalarlos. El número de componentes obtenidos es igual al mismo número de variables o vectores que se ingresan. cada componente principal corresponde a una combinación lineal de las variables originales. Los componentes principales desde el punto de vista de algebra lineal corresponden a los vectores propios asociados a los valores propios de la matriz de covarianza. De esta forma cada componente principal es una nueva variable ortogonal a todos los demas componentes ortogonales, y cada uno de ellos representa un vector propio y la varianza del total de información que conserva.</p>
+<p>El análisis de PCA organiza los componentes principales de mayor a menor varianza. La primera gráfica que se obtiene es el porcentaje de varianza que representa cada componente principal, siendo el componente principal 1 el que mayor varianza del total de la información representa. La segunda gráfica corresponde a la varianza acumulada de los componentes, iniciando desde el primero de ellos. Finalmente, se grafica el componente principal 1 contra el componente principal 2 y se proyectan los datos sobre estos dos nuevos ejes; al igual que se grafican las anteriores ejes que corresponden a las variables originales. Esto significa que se puede obtener de esta última grafica las variables colineales y las variables que mas información propia aportan y que ayudan a separar entre celdas con MenM y sin MenM.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#se importan todas las librerias a utilizar</span>
+<span class="kn">from</span> <span class="nn">sklearn.decomposition</span> <span class="kn">import</span> <span class="n">PCA</span>
+<span class="kn">from</span> <span class="nn">sklearn.preprocessing</span> <span class="kn">import</span> <span class="n">scale</span>
+
+<span class="c1">#Se importan los archivos</span>
+<span class="n">data</span><span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_excel</span><span class="p">(</span><span class="s2">&quot;https://github.com/edieraristizabal/Libro_cartoGeotecnia/blob/master/data/PUNTOS.xlsx?raw=true&quot;</span><span class="p">,</span> <span class="n">sheet_name</span><span class="o">=</span><span class="s1">&#39;PUNTOS&#39;</span><span class="p">)</span>
+<span class="n">puntos</span><span class="o">=</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;INVENTARIO&#39;</span><span class="p">]</span>
+<span class="n">data</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="s1">&#39;INVENTARIO&#39;</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="c1"># Se debe escalar los datos antes de aplicar PCA</span>
+<span class="n">data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">scale</span><span class="p">(</span><span class="n">data</span><span class="p">),</span> <span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;DV&#39;</span><span class="p">,</span> <span class="s1">&#39;A&#39;</span><span class="p">,</span> <span class="s1">&#39;CP&#39;</span><span class="p">,</span> <span class="s1">&#39;CT&#39;</span><span class="p">,</span> <span class="s1">&#39;DF&#39;</span><span class="p">,</span> <span class="s1">&#39;GEOLOGIA&#39;</span><span class="p">,</span><span class="s1">&#39;RR&#39;</span><span class="p">,</span><span class="s1">&#39;R&#39;</span><span class="p">,</span><span class="s1">&#39;S&#39;</span><span class="p">,</span><span class="s1">&#39;TPI&#39;</span><span class="p">,</span><span class="s1">&#39;WI&#39;</span><span class="p">,</span><span class="s1">&#39;COBERTURA&#39;</span><span class="p">,</span><span class="s1">&#39;DDS&#39;</span><span class="p">,</span><span class="s1">&#39;DI&#39;</span><span class="p">])</span>
+
+<span class="c1">## Se implementa el análisi PCA con la libreria sklearn de python</span>
+<span class="n">n</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">columns</span><span class="p">)</span>
+<span class="n">pca</span> <span class="o">=</span> <span class="n">PCA</span><span class="p">(</span><span class="n">n_components</span><span class="o">=</span><span class="n">n</span><span class="p">)</span>
+<span class="n">pca</span> <span class="o">=</span> <span class="n">pca</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+<span class="n">pca_samples</span> <span class="o">=</span> <span class="n">pca</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+
+<span class="c1">#Se puede graficar cuanto aporta a la varianza cada componente generado</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">pca</span><span class="o">.</span><span class="n">explained_variance_ratio_</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Number of components&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Explained variance&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+
+<span class="c1">#graficamos el acumulado de varianza explicada en las nuevas dimensiones</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">cumsum</span><span class="p">(</span><span class="n">pca</span><span class="o">.</span><span class="n">explained_variance_ratio_</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;number of components&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;cumulative explained variance&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+
+<span class="c1">#Para identificar cada variable como se relaciona con las componentes utilizamos las figuras byplot de python</span>
+<span class="c1"># 0,1 denota el componente princiapl 1 y 2 (PC1 and PC2); para otros componentes se modifica el número</span>
+<span class="n">xvector</span> <span class="o">=</span> <span class="n">pca</span><span class="o">.</span><span class="n">components_</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> 
+<span class="n">yvector</span> <span class="o">=</span> <span class="n">pca</span><span class="o">.</span><span class="n">components_</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+
+<span class="n">xs</span> <span class="o">=</span> <span class="n">pca</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="n">data</span><span class="p">)[:,</span><span class="mi">0</span><span class="p">]</span> <span class="c1"># Componente principal 1</span>
+<span class="n">ys</span> <span class="o">=</span> <span class="n">pca</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="n">data</span><span class="p">)[:,</span><span class="mi">1</span><span class="p">]</span> <span class="c1"># Componente principal 2</span>
+
+<span class="n">mask1</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">ma</span><span class="o">.</span><span class="n">masked_where</span><span class="p">(</span><span class="n">puntos</span> <span class="o">&lt;</span> <span class="mi">1</span><span class="p">,</span><span class="n">xs</span> <span class="p">)</span>
+<span class="n">mask2</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">ma</span><span class="o">.</span><span class="n">masked_where</span><span class="p">(</span><span class="n">puntos</span> <span class="o">&lt;</span> <span class="mi">1</span><span class="p">,</span><span class="n">ys</span> <span class="p">)</span> 
+
+<span class="c1">## Para visualizar las proyecciones de cada variable en los componentes se utiliza la siguiente función</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">xvector</span><span class="p">)):</span>
+<span class="c1"># arrows project features (ie columns from csv) as vectors onto PC axes</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">arrow</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">xvector</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">*</span><span class="nb">max</span><span class="p">(</span><span class="n">xs</span><span class="p">),</span> <span class="n">yvector</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">*</span><span class="nb">max</span><span class="p">(</span><span class="n">ys</span><span class="p">),</span>
+              <span class="n">color</span><span class="o">=</span><span class="s1">&#39;r&#39;</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mf">0.0005</span><span class="p">,</span> <span class="n">head_width</span><span class="o">=</span><span class="mf">0.0025</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="n">xvector</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">*</span><span class="nb">max</span><span class="p">(</span><span class="n">xs</span><span class="p">)</span><span class="o">*</span><span class="mf">1.2</span><span class="p">,</span> <span class="n">yvector</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">*</span><span class="nb">max</span><span class="p">(</span><span class="n">ys</span><span class="p">)</span><span class="o">*</span><span class="mf">1.2</span><span class="p">,</span>
+             <span class="nb">list</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">columns</span><span class="o">.</span><span class="n">values</span><span class="p">)[</span><span class="n">i</span><span class="p">],</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;r&#39;</span><span class="p">)</span> 
+
+<span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">xs</span><span class="p">,</span> <span class="n">ys</span><span class="p">,</span> <span class="n">s</span><span class="o">=</span><span class="mi">70</span><span class="p">,</span><span class="n">marker</span><span class="o">=</span><span class="s1">&#39;x&#39;</span><span class="p">,</span><span class="n">c</span><span class="o">=</span><span class="s1">&#39;blue&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;MenM&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">mask1</span><span class="p">,</span><span class="n">mask2</span><span class="p">,</span><span class="n">facecolors</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">,</span> <span class="n">edgecolors</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">,</span> <span class="n">s</span><span class="o">=</span><span class="mi">70</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;No MenM&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">tick_params</span><span class="p">(</span><span class="s1">&#39;y&#39;</span><span class="p">,</span> <span class="n">colors</span><span class="o">=</span><span class="s1">&#39;k&#39;</span><span class="p">,</span> <span class="n">labelsize</span><span class="o">=</span><span class="mi">12</span><span class="p">,</span> <span class="n">length</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">tick_params</span><span class="p">(</span><span class="s1">&#39;x&#39;</span><span class="p">,</span> <span class="n">colors</span><span class="o">=</span><span class="s1">&#39;k&#39;</span><span class="p">,</span> <span class="n">labelsize</span><span class="o">=</span> <span class="mi">12</span><span class="p">,</span> <span class="n">length</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;Componente Principal 1&quot;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">16</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;Componente Principal 2&quot;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">16</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">fontsize</span><span class="o">=</span><span class="mi">14</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/0d87ccf89279c1aeb7e82d6890b2e37f688622d97cd0b189127298bcd802cdb0.png" src="_images/0d87ccf89279c1aeb7e82d6890b2e37f688622d97cd0b189127298bcd802cdb0.png" />
+<img alt="_images/b01bfdc21edccd289f9837c09637e61a465ca8c904e94963bcdc6a6bb9ae5806.png" src="_images/b01bfdc21edccd289f9837c09637e61a465ca8c904e94963bcdc6a6bb9ae5806.png" />
+<img alt="_images/5cc55654266fd896466d260d424e44f34dba32570e9347029c815c63942ee516.png" src="_images/5cc55654266fd896466d260d424e44f34dba32570e9347029c815c63942ee516.png" />
+</div>
+</div>
+<p>Finalmente, se presenta una función que grafica el valor de la varianza que explica cada componente y el aporte de cada variable en cada componente.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">pca_results</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">pca</span><span class="p">):</span>
+    
+    <span class="n">dimensions</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Dim. </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="nb">len</span><span class="p">(</span><span class="n">pca</span><span class="o">.</span><span class="n">components_</span><span class="p">)</span><span class="o">+</span><span class="mi">1</span><span class="p">)]</span>
+    
+    <span class="n">components</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="n">pca</span><span class="o">.</span><span class="n">components_</span><span class="p">,</span> <span class="mi">4</span><span class="p">),</span> <span class="n">columns</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">keys</span><span class="p">())</span> 
+    <span class="n">components</span><span class="o">.</span><span class="n">index</span> <span class="o">=</span> <span class="n">dimensions</span>
+
+    <span class="n">ratios</span> <span class="o">=</span> <span class="n">pca</span><span class="o">.</span><span class="n">explained_variance_ratio_</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">pca</span><span class="o">.</span><span class="n">components_</span><span class="p">),</span> <span class="mi">1</span><span class="p">)</span> 
+    <span class="n">variance_ratios</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="n">ratios</span><span class="p">,</span> <span class="mi">4</span><span class="p">),</span> <span class="n">columns</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Explained Variance&#39;</span><span class="p">])</span> 
+    <span class="n">variance_ratios</span><span class="o">.</span><span class="n">index</span> <span class="o">=</span> <span class="n">dimensions</span>
+
+    <span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span> <span class="o">=</span> <span class="p">(</span><span class="mi">14</span><span class="p">,</span><span class="mi">8</span><span class="p">))</span>
+
+    <span class="n">components</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">ax</span> <span class="o">=</span> <span class="n">ax</span><span class="p">,</span> <span class="n">kind</span> <span class="o">=</span> <span class="s1">&#39;bar&#39;</span><span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">&quot;Feature Weights&quot;</span><span class="p">)</span> 
+    <span class="n">ax</span><span class="o">.</span><span class="n">set_xticklabels</span><span class="p">(</span><span class="n">dimensions</span><span class="p">,</span> <span class="n">rotation</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+
+    <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">ev</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">pca</span><span class="o">.</span><span class="n">explained_variance_ratio_</span><span class="p">):</span> 
+        <span class="n">ax</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="n">i</span><span class="o">-</span><span class="mf">0.40</span><span class="p">,</span> <span class="n">ax</span><span class="o">.</span><span class="n">get_ylim</span><span class="p">()[</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="mf">0.05</span><span class="p">,</span> <span class="s2">&quot;Expl. Var.</span><span class="se">\n</span><span class="s2"> </span><span class="si">%.4f</span><span class="s2">&quot;</span><span class="o">%</span><span class="p">(</span><span class="n">ev</span><span class="p">))</span>
+
+    <span class="k">return</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">variance_ratios</span><span class="p">,</span> <span class="n">components</span><span class="p">],</span> <span class="n">axis</span> <span class="o">=</span> <span class="mi">1</span><span class="p">)</span>
+
+<span class="n">pca_results</span> <span class="o">=</span> <span class="n">pca_results</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">pca</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/e13442c42212c2622993b1bdb1932146a1a55c2d715be905bc7dae047d896cee.png" src="_images/e13442c42212c2622993b1bdb1932146a1a55c2d715be905bc7dae047d896cee.png" />
+</div>
+</div>
+</section>
+</section>
+<section id="referencias">
+<h2>Referencias<a class="headerlink" href="#referencias" title="Permalink to this heading">#</a></h2>
+<div class="docutils container" id="id58">
+<dl class="citation">
+<dt class="label" id="id125"><span class="brackets"><a class="fn-backref" href="#id15">1</a></span></dt>
+<dd><p>Shane M. Franklin, Alexandra N. Kravchenko, Rodrigo Vargas, Bruce Vasilas, Jeffry J. Fuhrmann, and Yan Jin. The unexplored role of preferential flow in soil carbon dynamics. <em>Soil Biology and Biochemistry</em>, 161:108398, 2021. URL: <a class="reference external" href="https://www.sciencedirect.com/science/article/pii/S0038071721002728">https://www.sciencedirect.com/science/article/pii/S0038071721002728</a>, <a class="reference external" href="https://doi.org/https://doi.org/10.1016/j.soilbio.2021.108398">doi:https://doi.org/10.1016/j.soilbio.2021.108398</a>.</p>
+</dd>
+<dt class="label" id="id122"><span class="brackets"><a class="fn-backref" href="#id41">2</a></span></dt>
+<dd><p>Elena Benedetta Masi, Samuele Segoni, and Veronica Tofani. Root reinforcement in slope stability models: a review. <em>Geosciences</em>, 2021. URL: <a class="reference external" href="https://www.mdpi.com/2076-3263/11/5/212">https://www.mdpi.com/2076-3263/11/5/212</a>, <a class="reference external" href="https://doi.org/10.3390/geosciences11050212">doi:10.3390/geosciences11050212</a>.</p>
+</dd>
+</dl>
+</div>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  <!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="05_inventario.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Inventario de movimientos en masa</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="07_detonante.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Factores detonantes</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#seleccion-de-variables">Selección de variables</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#analisis-exploratorio-de-variables">Análisis exploratorio de variables</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#python">Python</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#muestreo">Muestreo</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#analisis-de-todas-las-variables">Análisis de todas las variables</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#analisis-univariado">Análisis univariado</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#analisis-multivariado">Análisis multivariado</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#correlacion-con-la-variable-dependiente">Correlación con la variable dependiente</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#analisis-de-componentes-principales-pca">Análisis de Componentes Principales (PCA)</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#referencias">Referencias</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Edier V. Aristizábal G.
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2022.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=365ca57ee442770a23c6"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=365ca57ee442770a23c6"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
