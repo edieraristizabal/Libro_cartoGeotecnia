@@ -1,0 +1,272 @@
+Traceback (most recent call last):
+  File "C:\Users\edier\miniconda3\Lib\site-packages\jupyter_cache\executors\utils.py", line 58, in single_nb_execution
+    executenb(
+  File "C:\Users\edier\miniconda3\Lib\site-packages\nbclient\client.py", line 1305, in execute
+    return NotebookClient(nb=nb, resources=resources, km=km, **kwargs).execute()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\edier\AppData\Roaming\Python\Python311\site-packages\jupyter_core\utils\__init__.py", line 166, in wrapped
+    return loop.run_until_complete(inner)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\edier\miniconda3\Lib\asyncio\base_events.py", line 653, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\edier\miniconda3\Lib\site-packages\nbclient\client.py", line 705, in async_execute
+    await self.async_execute_cell(
+  File "C:\Users\edier\miniconda3\Lib\site-packages\nbclient\client.py", line 1058, in async_execute_cell
+    await self._check_raise_for_error(cell, cell_index, exec_reply)
+  File "C:\Users\edier\miniconda3\Lib\site-packages\nbclient\client.py", line 914, in _check_raise_for_error
+    raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
+nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
+------------------
+import rasterio as rio
+import numpy as np
+import matplotlib.pyplot as plt
+
+# --- CODIFICACIÓN DEL MAPA DE SUSCEPTIBILIDAD ---
+# El resultado principal es un mapa de estabilidad (o susceptibilidad a deslizamientos)
+# donde cada celda se clasifica en una de cuatro categorías:
+#
+# 1: Incondicionalmente Estable: Zonas que son estables incluso en las condiciones más
+#    desfavorables (suelo completamente saturado). No se espera que fallen.
+# 2: Incondicionalmente Inestable: Zonas que son inestables incluso en condiciones secas.
+#    La topografía y las propiedades del suelo por sí solas son suficientes para
+#    causar la falla. Son las zonas más críticas.
+# 3: Inestable: Zonas que son estables en condiciones secas pero se vuelven inestables
+#    bajo la lluvia estacionaria definida (Q). La inestabilidad depende de la lluvia.
+# 4: Estable: Zonas que permanecen estables bajo la lluvia estacionaria definida (Q).
+#
+# --- CODIFICACIÓN DEL MAPA DE LLUVIA CRÍTICA (q_crit) ---
+# Este mapa muestra la intensidad de lluvia mínima (en mm/h) necesaria para que una
+# celda condicionalmente estable se vuelva inestable.
+#
+# - Valores > 0: Representan la intensidad de lluvia crítica (q_crit) en mm/h.
+# - Valor = -1: Corresponde a las zonas "Incondicionalmente Estables". Teóricamente,
+#   ninguna cantidad de lluvia las haría fallar bajo los supuestos del modelo.
+# - Valor = -2: Corresponde a las zonas "Incondicionalmente Inestables". Estas zonas
+#   fallan incluso sin lluvia, por lo que el concepto de "lluvia crítica" no aplica.
+
+# --- 1. Definición de Constantes y Parámetros ---
+
+PESO_UNITARIO_AGUA = 9.81  # Peso unitario del agua (gamma_w) en [kN/m3]
+RESOLUCION_CELDA = 12.5     # Resolución espacial del raster (dx o b) en [m]
+LLUVIA_ESTACIONARIA = 100.0 # Intensidad de la precipitación (Q) en [mm/h]
+
+# --- 2. Carga de Datos Raster ---
+# Se cargan todos los datos geoespaciales necesarios para el modelo.
+# Los datos se leen y se manejan los valores Nodata.
+
+def cargar_raster(url):
+    """
+    Función auxiliar para abrir un raster desde una URL, leer la primera banda
+    y manejar los valores NoData. Asume que el valor NoData es el de la esquina
+    superior izquierda, lo cual es común en archivos .asc.
+    """
+    with rio.open(url) as raster:
+        # Guardamos la información de proyección y transformación para los archivos de salida
+        transform = raster.transform
+        crs = raster.crs
+        nodata_value = raster.nodata
+        
+        datos = raster.read(1)
+        
+        # Una forma más robusta de manejar NoData si está definido en el metadato
+        if nodata_value is not None:
+            datos = np.where(datos == nodata_value, np.nan, datos)
+        else:
+            datos = np.where(datos == datos[0, 0], np.nan, datos)
+            
+        return datos, transform, crs
+
+# URLs de los datos de entrada
+url_cohesion = 'https://github.com/edieraristizabal/Libro_cartoGeotecnia/data/arenosa/cohesion.asc?raw=true'
+url_friccion = 'https://github.com/edieraristizabal/Libro_cartoGeotecnia/data/arenosa/friction_rad.asc?raw=true'
+url_ks = 'https://github.com/edieraristizabal/Libro_cartoGeotecnia/data/arenosa/ks.asc?raw=true'
+url_peso_suelo = 'https://github.com/edieraristizabal/Libro_cartoGeotecnia/data/arenosa/gammas.asc?raw=true'
+url_acum_flujo = 'https://github.com/edieraristizabal/Libro_cartoGeotecnia/data/arenosa/flowacum_m2.asc?raw=true'
+url_pendiente = 'https://github.com/edieraristizabal/Libro_cartoGeotecnia/data/arenosa/slope_rad.asc?raw=true'
+url_espesor = 'https://github.com/edieraristizabal/Libro_cartoGeotecnia/data/arenosa/zs.asc?raw=true'
+
+# Carga de los datos
+cohesion, transform, crs = cargar_raster(url_cohesion) # C' [kN/m2]
+angulo_friccion, _, _ = cargar_raster(url_friccion) # phi [radianes]
+ks, _, _ = cargar_raster(url_ks) # Conductividad hidráulica [cm/hora]
+peso_unitario_suelo, _, _ = cargar_raster(url_peso_suelo) # gamma_s [kN/m3]
+area_drenaje, _, _ = cargar_raster(url_acum_flujo) # a [m2]
+pendiente, _, _ = cargar_raster(url_pendiente) # theta [radianes]
+espesor_suelo, _, _ = cargar_raster(url_espesor) # z_t [m]
+
+# --- 3. Conversión de Unidades ---
+# Aseguramos que todas las unidades sean consistentes (metros, horas, kN)
+
+# Convertir ks de cm/hora a m/hora
+ks_m_hr = ks * 0.01
+# Convertir lluvia de mm/hora a m/hora
+q_m_hr = LLUVIA_ESTACIONARIA * 0.001
+
+# --- 4. Análisis de Estabilidad SHALSTAB ---
+# Se implementan las ecuaciones del modelo para clasificar la estabilidad de cada celda.
+
+# Inicializar la matriz de estabilidad. Usamos np.nan para un fondo "vacío".
+matriz_estabilidad = np.full(cohesion.shape, np.nan)
+
+# Términos comunes para simplificar las ecuaciones
+tan_pendiente = np.tan(pendiente)
+tan_friccion = np.tan(angulo_friccion)
+cos2_pendiente = np.cos(pendiente)**2
+
+# --- Condición 1: Incondicionalmente Inestable (Seco) ---
+# tan(θ) >= tan(φ) + C' / (γ_s * z_t * cos²(θ))
+condicion_inestable_seco = tan_friccion + (cohesion / (peso_unitario_suelo * espesor_suelo * cos2_pendiente))
+matriz_estabilidad = np.where(tan_pendiente >= condicion_inestable_seco, 2, matriz_estabilidad)
+
+# --- Condición 2: Incondicionalmente Estable (Saturado) ---
+# tan(θ) < (1 - γ_w/γ_s) * tan(φ) + C' / (γ_s * z_t * cos²(θ))
+condicion_estable_saturado = (1 - (PESO_UNITARIO_AGUA / peso_unitario_suelo)) * tan_friccion + (cohesion / (peso_unitario_suelo * espesor_suelo * cos2_pendiente))
+matriz_estabilidad = np.where(tan_pendiente < condicion_estable_saturado, 1, matriz_estabilidad)
+
+# --- Condición 3 y 4: Estabilidad Condicional (Dependiente de la Lluvia) ---
+# Se evalúan las celdas que no cayeron en las categorías anteriores (donde la matriz aún es NaN).
+
+# Lado izquierdo de la ecuación acoplada: a/b
+ratio_hidrologico = area_drenaje / RESOLUCION_CELDA
+
+# Lado derecho de la ecuación acoplada: (T/Q) * sin(θ) * [Término Geotécnico]
+# Transmisividad (T) = ks * z_t (asumiendo flujo paralelo a la superficie)
+transmisividad = ks_m_hr * espesor_suelo
+# Término geotécnico que representa la resistencia del suelo
+termino_geotecnico = ((peso_unitario_suelo / PESO_UNITARIO_AGUA) * (1 - tan_pendiente / tan_friccion) + 
+                      (cohesion / (PESO_UNITARIO_AGUA * espesor_suelo * cos2_pendiente * tan_friccion)))
+
+# Lado derecho completo
+ratio_estabilidad = (transmisividad / q_m_hr) * np.sin(pendiente) * termino_geotecnico
+
+# Aplicar condiciones solo donde la matriz_estabilidad es todavía NaN
+# Inestable: a/b > ratio_estabilidad
+matriz_estabilidad = np.where(np.logical_and(np.isnan(matriz_estabilidad), ratio_hidrologico > ratio_estabilidad), 3, matriz_estabilidad)
+# Estable: a/b <= ratio_estabilidad
+matriz_estabilidad = np.where(np.logical_and(np.isnan(matriz_estabilidad), ratio_hidrologico <= ratio_estabilidad), 4, matriz_estabilidad)
+
+# --- 5. Cálculo de la Lluvia Crítica (q_crit) ---
+# Se calcula la intensidad de lluvia necesaria para causar la inestabilidad.
+
+# Reorganizando la ecuación acoplada para resolver para Q (q_crit):
+# q_crit = (T * sin(θ) / (a/b)) * [Término Geotécnico]
+q_crit_m_hr = (transmisividad * np.sin(pendiente) / ratio_hidrologico) * termino_geotecnico
+
+# Convertir q_crit a mm/h para una interpretación más fácil
+q_crit_mm_hr = q_crit_m_hr * 1000
+
+# Limpiar valores infinitos que pueden surgir de divisiones por cero (ej. en zonas planas)
+q_crit_mm_hr[q_crit_mm_hr == np.inf] = np.nan
+
+# Asignar códigos especiales a las zonas incondicionales en el mapa de lluvia crítica
+# -1 para incondicionalmente estable
+# -2 para incondicionalmente inestable
+mapa_q_critica = np.where(matriz_estabilidad == 1, -1, q_crit_mm_hr)
+mapa_q_critica = np.where(matriz_estabilidad == 2, -2, mapa_q_critica)
+
+
+# --- 6. Visualización de Resultados ---
+plt.figure(figsize=(18, 8))
+
+# Mapa de Estabilidad
+plt.subplot(1, 2, 1)
+im1 = plt.imshow(matriz_estabilidad, cmap='viridis_r')
+plt.title('Mapa de Estabilidad SHALSTAB')
+plt.colorbar(im1, ticks=[1, 2, 3, 4], label="Clase de Estabilidad").ax.set_yticklabels(['Incond. Estable (1)', 'Incond. Inestable (2)', 'Inestable (3)', 'Estable (4)'])
+
+# Mapa de Lluvia Crítica
+plt.subplot(1, 2, 2)
+im2 = plt.imshow(mapa_q_critica, cmap='plasma', vmin=0, vmax=np.nanpercentile(mapa_q_critica, 95)) # vmax al percentil 95 para mejor visualización
+plt.title('Mapa de Lluvia Crítica (q_crit) [mm/h]')
+plt.colorbar(im2, label="q_crit [mm/h]\n(-1: Incond. Estable, -2: Incond. Inestable)")
+
+plt.tight_layout()
+plt.show()
+
+
+# --- 7. Exportación de Resultados ---
+# Guardar los resultados como archivos GeoTIFF, preservando el sistema de coordenadas.
+
+def guardar_geotiff(nombre_archivo, datos, transform, crs):
+    """Función auxiliar para guardar un array de numpy como un GeoTIFF."""
+    with rio.open(
+        nombre_archivo, 'w',
+        driver='Gtiff',
+        height=datos.shape[0],
+        width=datos.shape[1],
+        count=1,
+        dtype=datos.dtype,
+        nodata=np.nan, # Usar NaN como valor NoData
+        crs=crs,
+        transform=transform
+    ) as dst:
+        dst.write(datos, 1)
+
+# Guardar mapa de estabilidad
+guardar_geotiff('Matriz_Estabilidad.tif', matriz_estabilidad, transform, crs)
+
+# Guardar mapa de lluvia crítica
+guardar_geotiff('Lluvia_Critica.tif', mapa_q_critica, transform, crs)
+
+# Calcular y guardar el volumen de suelo potencialmente inestable
+volumen_inestable = np.where(np.logical_or(matriz_estabilidad == 2, matriz_estabilidad == 3), 
+                             espesor_suelo * (RESOLUCION_CELDA**2), 0)
+volumen_inestable = np.where(np.isnan(matriz_estabilidad), np.nan, volumen_inestable) # Propagar NaNs
+guardar_geotiff('Volumen_Inestable.tif', volumen_inestable, transform, crs)
+
+print("Análisis completado. Se han generado los archivos 'Matriz_Estabilidad.tif', 'Lluvia_Critica.tif' y 'Volumen_Inestable.tif'.")
+
+------------------
+
+
+[1;31m---------------------------------------------------------------------------[0m
+[1;31mCPLE_HttpResponseError[0m                    Traceback (most recent call last)
+File [1;32mrasterio\\_base.pyx:310[0m, in [0;36mrasterio._base.DatasetBase.__init__[1;34m()[0m
+
+File [1;32mrasterio\\_base.pyx:221[0m, in [0;36mrasterio._base.open_dataset[1;34m()[0m
+
+File [1;32mrasterio\\_err.pyx:221[0m, in [0;36mrasterio._err.exc_wrap_pointer[1;34m()[0m
+
+[1;31mCPLE_HttpResponseError[0m: HTTP response code: 404
+
+During handling of the above exception, another exception occurred:
+
+[1;31mRasterioIOError[0m                           Traceback (most recent call last)
+Cell [1;32mIn[1], line 70[0m
+[0;32m     67[0m url_espesor [38;5;241m=[39m [38;5;124m'[39m[38;5;124mhttps://github.com/edieraristizabal/Libro_cartoGeotecnia/data/arenosa/zs.asc?raw=true[39m[38;5;124m'[39m
+[0;32m     69[0m [38;5;66;03m# Carga de los datos[39;00m
+[1;32m---> 70[0m cohesion, transform, crs [38;5;241m=[39m [43mcargar_raster[49m[43m([49m[43murl_cohesion[49m[43m)[49m [38;5;66;03m# C' [kN/m2][39;00m
+[0;32m     71[0m angulo_friccion, _, _ [38;5;241m=[39m cargar_raster(url_friccion) [38;5;66;03m# phi [radianes][39;00m
+[0;32m     72[0m ks, _, _ [38;5;241m=[39m cargar_raster(url_ks) [38;5;66;03m# Conductividad hidráulica [cm/hora][39;00m
+
+Cell [1;32mIn[1], line 44[0m, in [0;36mcargar_raster[1;34m(url)[0m
+[0;32m     38[0m [38;5;28;01mdef[39;00m [38;5;21mcargar_raster[39m(url):
+[0;32m     39[0m [38;5;250m    [39m[38;5;124;03m"""[39;00m
+[0;32m     40[0m [38;5;124;03m    Función auxiliar para abrir un raster desde una URL, leer la primera banda[39;00m
+[0;32m     41[0m [38;5;124;03m    y manejar los valores NoData. Asume que el valor NoData es el de la esquina[39;00m
+[0;32m     42[0m [38;5;124;03m    superior izquierda, lo cual es común en archivos .asc.[39;00m
+[0;32m     43[0m [38;5;124;03m    """[39;00m
+[1;32m---> 44[0m     [38;5;28;01mwith[39;00m [43mrio[49m[38;5;241;43m.[39;49m[43mopen[49m[43m([49m[43murl[49m[43m)[49m [38;5;28;01mas[39;00m raster:
+[0;32m     45[0m         [38;5;66;03m# Guardamos la información de proyección y transformación para los archivos de salida[39;00m
+[0;32m     46[0m         transform [38;5;241m=[39m raster[38;5;241m.[39mtransform
+[0;32m     47[0m         crs [38;5;241m=[39m raster[38;5;241m.[39mcrs
+
+File [1;32m~\miniconda3\Lib\site-packages\rasterio\env.py:451[0m, in [0;36mensure_env_with_credentials.<locals>.wrapper[1;34m(*args, **kwds)[0m
+[0;32m    448[0m     session [38;5;241m=[39m DummySession()
+[0;32m    450[0m [38;5;28;01mwith[39;00m env_ctor(session[38;5;241m=[39msession):
+[1;32m--> 451[0m     [38;5;28;01mreturn[39;00m [43mf[49m[43m([49m[38;5;241;43m*[39;49m[43margs[49m[43m,[49m[43m [49m[38;5;241;43m*[39;49m[38;5;241;43m*[39;49m[43mkwds[49m[43m)[49m
+
+File [1;32m~\miniconda3\Lib\site-packages\rasterio\__init__.py:317[0m, in [0;36mopen[1;34m(fp, mode, driver, width, height, count, crs, transform, dtype, nodata, sharing, **kwargs)[0m
+[0;32m    314[0m path [38;5;241m=[39m _parse_path(raw_dataset_path)
+[0;32m    316[0m [38;5;28;01mif[39;00m mode [38;5;241m==[39m [38;5;124m"[39m[38;5;124mr[39m[38;5;124m"[39m:
+[1;32m--> 317[0m     dataset [38;5;241m=[39m [43mDatasetReader[49m[43m([49m[43mpath[49m[43m,[49m[43m [49m[43mdriver[49m[38;5;241;43m=[39;49m[43mdriver[49m[43m,[49m[43m [49m[43msharing[49m[38;5;241;43m=[39;49m[43msharing[49m[43m,[49m[43m [49m[38;5;241;43m*[39;49m[38;5;241;43m*[39;49m[43mkwargs[49m[43m)[49m
+[0;32m    318[0m [38;5;28;01melif[39;00m mode [38;5;241m==[39m [38;5;124m"[39m[38;5;124mr+[39m[38;5;124m"[39m:
+[0;32m    319[0m     dataset [38;5;241m=[39m get_writer_for_path(path, driver[38;5;241m=[39mdriver)(
+[0;32m    320[0m         path, mode, driver[38;5;241m=[39mdriver, sharing[38;5;241m=[39msharing, [38;5;241m*[39m[38;5;241m*[39mkwargs
+[0;32m    321[0m     )
+
+File [1;32mrasterio\\_base.pyx:312[0m, in [0;36mrasterio._base.DatasetBase.__init__[1;34m()[0m
+
+[1;31mRasterioIOError[0m: HTTP response code: 404
+
