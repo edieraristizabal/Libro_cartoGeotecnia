@@ -78,13 +78,13 @@ def cargar_raster(url):
         return datos, transform, crs
 
 # URLs de los datos de entrada
-url_cohesion = 'https://github.com/edieraristizabal/Libro_cartoGeotecnia/data/arenosa/cohesion.asc?raw=true'
-url_friccion = 'https://github.com/edieraristizabal/Libro_cartoGeotecnia/data/arenosa/friction_rad.asc?raw=true'
-url_ks = 'https://github.com/edieraristizabal/Libro_cartoGeotecnia/data/arenosa/ks.asc?raw=true'
-url_peso_suelo = 'https://github.com/edieraristizabal/Libro_cartoGeotecnia/data/arenosa/gammas.asc?raw=true'
-url_acum_flujo = 'https://github.com/edieraristizabal/Libro_cartoGeotecnia/data/arenosa/flowacum_m2.asc?raw=true'
-url_pendiente = 'https://github.com/edieraristizabal/Libro_cartoGeotecnia/data/arenosa/slope_rad.asc?raw=true'
-url_espesor = 'https://github.com/edieraristizabal/Libro_cartoGeotecnia/data/arenosa/zs.asc?raw=true'
+url_cohesion = 'https://raw.githubusercontent.com/edieraristizabal/Libro_cartoGeotecnia/master/data/arenosa/cohesion.asc'
+url_friccion = 'https://raw.githubusercontent.com/edieraristizabal/Libro_cartoGeotecnia/master/data/arenosa/friction_rad.asc'
+url_ks = 'https://raw.githubusercontent.com/edieraristizabal/Libro_cartoGeotecnia/master/data/arenosa/ks.asc'
+url_peso_suelo = 'https://raw.githubusercontent.com/edieraristizabal/Libro_cartoGeotecnia/master/data/arenosa/gammas.asc'
+url_acum_flujo = 'https://raw.githubusercontent.com/edieraristizabal/Libro_cartoGeotecnia/master/data/arenosa/flowacum_m2.asc'
+url_pendiente = 'https://raw.githubusercontent.com/edieraristizabal/Libro_cartoGeotecnia/master/data/arenosa/slope_rad.asc'
+url_espesor = 'https://raw.githubusercontent.com/edieraristizabal/Libro_cartoGeotecnia/master/data/arenosa/zs.asc'
 
 # Carga de los datos
 cohesion, transform, crs = cargar_raster(url_cohesion) # C' [kN/m2]
@@ -234,7 +234,7 @@ During handling of the above exception, another exception occurred:
 
 [1;31mRasterioIOError[0m                           Traceback (most recent call last)
 Cell [1;32mIn[1], line 70[0m
-[0;32m     67[0m url_espesor [38;5;241m=[39m [38;5;124m'[39m[38;5;124mhttps://github.com/edieraristizabal/Libro_cartoGeotecnia/data/arenosa/zs.asc?raw=true[39m[38;5;124m'[39m
+[0;32m     67[0m url_espesor [38;5;241m=[39m [38;5;124m'[39m[38;5;124mhttps://raw.githubusercontent.com/edieraristizabal/Libro_cartoGeotecnia/master/data/arenosa/zs.asc[39m[38;5;124m'[39m
 [0;32m     69[0m [38;5;66;03m# Carga de los datos[39;00m
 [1;32m---> 70[0m cohesion, transform, crs [38;5;241m=[39m [43mcargar_raster[49m[43m([49m[43murl_cohesion[49m[43m)[49m [38;5;66;03m# C' [kN/m2][39;00m
 [0;32m     71[0m angulo_friccion, _, _ [38;5;241m=[39m cargar_raster(url_friccion) [38;5;66;03m# phi [radianes][39;00m

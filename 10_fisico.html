@@ -541,13 +541,13 @@ document.write(`
         <span class="k">return</span> <span class="n">datos</span><span class="p">,</span> <span class="n">transform</span><span class="p">,</span> <span class="n">crs</span>
 
 <span class="c1"># URLs de los datos de entrada</span>
-<span class="n">url_cohesion</span> <span class="o">=</span> <span class="s1">&#39;https://github.com/edieraristizabal/Libro_cartoGeotecnia/data/arenosa/cohesion.asc?raw=true&#39;</span>
-<span class="n">url_friccion</span> <span class="o">=</span> <span class="s1">&#39;https://github.com/edieraristizabal/Libro_cartoGeotecnia/data/arenosa/friction_rad.asc?raw=true&#39;</span>
-<span class="n">url_ks</span> <span class="o">=</span> <span class="s1">&#39;https://github.com/edieraristizabal/Libro_cartoGeotecnia/data/arenosa/ks.asc?raw=true&#39;</span>
-<span class="n">url_peso_suelo</span> <span class="o">=</span> <span class="s1">&#39;https://github.com/edieraristizabal/Libro_cartoGeotecnia/data/arenosa/gammas.asc?raw=true&#39;</span>
-<span class="n">url_acum_flujo</span> <span class="o">=</span> <span class="s1">&#39;https://github.com/edieraristizabal/Libro_cartoGeotecnia/data/arenosa/flowacum_m2.asc?raw=true&#39;</span>
-<span class="n">url_pendiente</span> <span class="o">=</span> <span class="s1">&#39;https://github.com/edieraristizabal/Libro_cartoGeotecnia/data/arenosa/slope_rad.asc?raw=true&#39;</span>
-<span class="n">url_espesor</span> <span class="o">=</span> <span class="s1">&#39;https://github.com/edieraristizabal/Libro_cartoGeotecnia/data/arenosa/zs.asc?raw=true&#39;</span>
+<span class="n">url_cohesion</span> <span class="o">=</span> <span class="s1">&#39;https://raw.githubusercontent.com/edieraristizabal/Libro_cartoGeotecnia/master/data/arenosa/cohesion.asc&#39;</span>
+<span class="n">url_friccion</span> <span class="o">=</span> <span class="s1">&#39;https://raw.githubusercontent.com/edieraristizabal/Libro_cartoGeotecnia/master/data/arenosa/friction_rad.asc&#39;</span>
+<span class="n">url_ks</span> <span class="o">=</span> <span class="s1">&#39;https://raw.githubusercontent.com/edieraristizabal/Libro_cartoGeotecnia/master/data/arenosa/ks.asc&#39;</span>
+<span class="n">url_peso_suelo</span> <span class="o">=</span> <span class="s1">&#39;https://raw.githubusercontent.com/edieraristizabal/Libro_cartoGeotecnia/master/data/arenosa/gammas.asc&#39;</span>
+<span class="n">url_acum_flujo</span> <span class="o">=</span> <span class="s1">&#39;https://raw.githubusercontent.com/edieraristizabal/Libro_cartoGeotecnia/master/data/arenosa/flowacum_m2.asc&#39;</span>
+<span class="n">url_pendiente</span> <span class="o">=</span> <span class="s1">&#39;https://raw.githubusercontent.com/edieraristizabal/Libro_cartoGeotecnia/master/data/arenosa/slope_rad.asc&#39;</span>
+<span class="n">url_espesor</span> <span class="o">=</span> <span class="s1">&#39;https://raw.githubusercontent.com/edieraristizabal/Libro_cartoGeotecnia/master/data/arenosa/zs.asc&#39;</span>
 
 <span class="c1"># Carga de los datos</span>
 <span class="n">cohesion</span><span class="p">,</span> <span class="n">transform</span><span class="p">,</span> <span class="n">crs</span> <span class="o">=</span> <span class="n">cargar_raster</span><span class="p">(</span><span class="n">url_cohesion</span><span class="p">)</span> <span class="c1"># C&#39; [kN/m2]</span>
@@ -697,7 +697,7 @@ document.write(`
 
 <span class="ne">RasterioIOError</span><span class="g g-Whitespace">                           </span>Traceback (most recent call last)
 <span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">line</span> <span class="mi">70</span>
-<span class="g g-Whitespace">     </span><span class="mi">67</span> <span class="n">url_espesor</span> <span class="o">=</span> <span class="s1">&#39;https://github.com/edieraristizabal/Libro_cartoGeotecnia/data/arenosa/zs.asc?raw=true&#39;</span>
+<span class="g g-Whitespace">     </span><span class="mi">67</span> <span class="n">url_espesor</span> <span class="o">=</span> <span class="s1">&#39;https://raw.githubusercontent.com/edieraristizabal/Libro_cartoGeotecnia/master/data/arenosa/zs.asc&#39;</span>
 <span class="g g-Whitespace">     </span><span class="mi">69</span> <span class="c1"># Carga de los datos</span>
 <span class="ne">---&gt; </span><span class="mi">70</span> <span class="n">cohesion</span><span class="p">,</span> <span class="n">transform</span><span class="p">,</span> <span class="n">crs</span> <span class="o">=</span> <span class="n">cargar_raster</span><span class="p">(</span><span class="n">url_cohesion</span><span class="p">)</span> <span class="c1"># C&#39; [kN/m2]</span>
 <span class="g g-Whitespace">     </span><span class="mi">71</span> <span class="n">angulo_friccion</span><span class="p">,</span> <span class="n">_</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">cargar_raster</span><span class="p">(</span><span class="n">url_friccion</span><span class="p">)</span> <span class="c1"># phi [radianes]</span>
