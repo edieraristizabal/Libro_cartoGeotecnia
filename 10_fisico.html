@@ -541,13 +541,13 @@ document.write(`
         <span class="k">return</span> <span class="n">datos</span><span class="p">,</span> <span class="n">transform</span><span class="p">,</span> <span class="n">crs</span>
 
 <span class="c1"># URLs de los datos de entrada</span>
-<span class="n">url_cohesion</span> <span class="o">=</span> <span class="s1">&#39;https://raw.githubusercontent.com/edieraristizabal/Libro_cartoGeotecnia/master/data/arenosa/cohesion.asc&#39;</span>
-<span class="n">url_friccion</span> <span class="o">=</span> <span class="s1">&#39;https://raw.githubusercontent.com/edieraristizabal/Libro_cartoGeotecnia/master/data/arenosa/friction_rad.asc&#39;</span>
-<span class="n">url_ks</span> <span class="o">=</span> <span class="s1">&#39;https://raw.githubusercontent.com/edieraristizabal/Libro_cartoGeotecnia/master/data/arenosa/ks.asc&#39;</span>
-<span class="n">url_peso_suelo</span> <span class="o">=</span> <span class="s1">&#39;https://raw.githubusercontent.com/edieraristizabal/Libro_cartoGeotecnia/master/data/arenosa/gammas.asc&#39;</span>
-<span class="n">url_acum_flujo</span> <span class="o">=</span> <span class="s1">&#39;https://raw.githubusercontent.com/edieraristizabal/Libro_cartoGeotecnia/master/data/arenosa/flowacum_m2.asc&#39;</span>
-<span class="n">url_pendiente</span> <span class="o">=</span> <span class="s1">&#39;https://raw.githubusercontent.com/edieraristizabal/Libro_cartoGeotecnia/master/data/arenosa/slope_rad.asc&#39;</span>
-<span class="n">url_espesor</span> <span class="o">=</span> <span class="s1">&#39;https://raw.githubusercontent.com/edieraristizabal/Libro_cartoGeotecnia/master/data/arenosa/zs.asc&#39;</span>
+<span class="n">url_cohesion</span> <span class="o">=</span> <span class="s1">&#39;https://raw.githubusercontent.com/edieraristizabal/Libro_cartoGeotecnia/master/data/Arenosa/cohesion.asc&#39;</span>
+<span class="n">url_friccion</span> <span class="o">=</span> <span class="s1">&#39;https://raw.githubusercontent.com/edieraristizabal/Libro_cartoGeotecnia/master/data/Arenosa/friction_rad.asc&#39;</span>
+<span class="n">url_ks</span> <span class="o">=</span> <span class="s1">&#39;https://raw.githubusercontent.com/edieraristizabal/Libro_cartoGeotecnia/master/data/Arenosa/ks.asc&#39;</span>
+<span class="n">url_peso_suelo</span> <span class="o">=</span> <span class="s1">&#39;https://raw.githubusercontent.com/edieraristizabal/Libro_cartoGeotecnia/master/data/Arenosa/gammas.asc&#39;</span>
+<span class="n">url_acum_flujo</span> <span class="o">=</span> <span class="s1">&#39;https://raw.githubusercontent.com/edieraristizabal/Libro_cartoGeotecnia/master/data/Arenosa/flowacum_m2.asc&#39;</span>
+<span class="n">url_pendiente</span> <span class="o">=</span> <span class="s1">&#39;https://raw.githubusercontent.com/edieraristizabal/Libro_cartoGeotecnia/master/data/Arenosa/slope_rad.asc&#39;</span>
+<span class="n">url_espesor</span> <span class="o">=</span> <span class="s1">&#39;https://raw.githubusercontent.com/edieraristizabal/Libro_cartoGeotecnia/master/data/Arenosa/zs.asc&#39;</span>
 
 <span class="c1"># Carga de los datos</span>
 <span class="n">cohesion</span><span class="p">,</span> <span class="n">transform</span><span class="p">,</span> <span class="n">crs</span> <span class="o">=</span> <span class="n">cargar_raster</span><span class="p">(</span><span class="n">url_cohesion</span><span class="p">)</span> <span class="c1"># C&#39; [kN/m2]</span>
@@ -683,55 +683,12 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">CPLE_HttpResponseError</span><span class="g g-Whitespace">                    </span>Traceback (most recent call last)
-<span class="nn">File rasterio\\_base.pyx:310,</span> in <span class="ni">rasterio._base.DatasetBase.__init__</span><span class="nt">()</span>
-
-<span class="nn">File rasterio\\_base.pyx:221,</span> in <span class="ni">rasterio._base.open_dataset</span><span class="nt">()</span>
-
-<span class="nn">File rasterio\\_err.pyx:221,</span> in <span class="ni">rasterio._err.exc_wrap_pointer</span><span class="nt">()</span>
-
-<span class="ne">CPLE_HttpResponseError</span>: HTTP response code: 404
-
-<span class="n">During</span> <span class="n">handling</span> <span class="n">of</span> <span class="n">the</span> <span class="n">above</span> <span class="n">exception</span><span class="p">,</span> <span class="n">another</span> <span class="n">exception</span> <span class="n">occurred</span><span class="p">:</span>
-
-<span class="ne">RasterioIOError</span><span class="g g-Whitespace">                           </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">line</span> <span class="mi">70</span>
-<span class="g g-Whitespace">     </span><span class="mi">67</span> <span class="n">url_espesor</span> <span class="o">=</span> <span class="s1">&#39;https://raw.githubusercontent.com/edieraristizabal/Libro_cartoGeotecnia/master/data/arenosa/zs.asc&#39;</span>
-<span class="g g-Whitespace">     </span><span class="mi">69</span> <span class="c1"># Carga de los datos</span>
-<span class="ne">---&gt; </span><span class="mi">70</span> <span class="n">cohesion</span><span class="p">,</span> <span class="n">transform</span><span class="p">,</span> <span class="n">crs</span> <span class="o">=</span> <span class="n">cargar_raster</span><span class="p">(</span><span class="n">url_cohesion</span><span class="p">)</span> <span class="c1"># C&#39; [kN/m2]</span>
-<span class="g g-Whitespace">     </span><span class="mi">71</span> <span class="n">angulo_friccion</span><span class="p">,</span> <span class="n">_</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">cargar_raster</span><span class="p">(</span><span class="n">url_friccion</span><span class="p">)</span> <span class="c1"># phi [radianes]</span>
-<span class="g g-Whitespace">     </span><span class="mi">72</span> <span class="n">ks</span><span class="p">,</span> <span class="n">_</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">cargar_raster</span><span class="p">(</span><span class="n">url_ks</span><span class="p">)</span> <span class="c1"># Conductividad hidráulica [cm/hora]</span>
-
-<span class="nn">Cell In[1], line 44,</span> in <span class="ni">cargar_raster</span><span class="nt">(url)</span>
-<span class="g g-Whitespace">     </span><span class="mi">38</span> <span class="k">def</span> <span class="nf">cargar_raster</span><span class="p">(</span><span class="n">url</span><span class="p">):</span>
-<span class="g g-Whitespace">     </span><span class="mi">39</span><span class="w">     </span><span class="sd">&quot;&quot;&quot;</span>
-<span class="g g-Whitespace">     </span><span class="mi">40</span><span class="sd">     Función auxiliar para abrir un raster desde una URL, leer la primera banda</span>
-<span class="g g-Whitespace">     </span><span class="mi">41</span><span class="sd">     y manejar los valores NoData. Asume que el valor NoData es el de la esquina</span>
-<span class="g g-Whitespace">     </span><span class="mi">42</span><span class="sd">     superior izquierda, lo cual es común en archivos .asc.</span>
-<span class="g g-Whitespace">     </span><span class="mi">43</span><span class="sd">     &quot;&quot;&quot;</span>
-<span class="ne">---&gt; </span><span class="mi">44</span>     <span class="k">with</span> <span class="n">rio</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="n">url</span><span class="p">)</span> <span class="k">as</span> <span class="n">raster</span><span class="p">:</span>
-<span class="g g-Whitespace">     </span><span class="mi">45</span>         <span class="c1"># Guardamos la información de proyección y transformación para los archivos de salida</span>
-<span class="g g-Whitespace">     </span><span class="mi">46</span>         <span class="n">transform</span> <span class="o">=</span> <span class="n">raster</span><span class="o">.</span><span class="n">transform</span>
-<span class="g g-Whitespace">     </span><span class="mi">47</span>         <span class="n">crs</span> <span class="o">=</span> <span class="n">raster</span><span class="o">.</span><span class="n">crs</span>
-
-<span class="nn">File ~\miniconda3\Lib\site-packages\rasterio\env.py:451,</span> in <span class="ni">ensure_env_with_credentials.&lt;locals&gt;.wrapper</span><span class="nt">(*args, **kwds)</span>
-<span class="g g-Whitespace">    </span><span class="mi">448</span>     <span class="n">session</span> <span class="o">=</span> <span class="n">DummySession</span><span class="p">()</span>
-<span class="g g-Whitespace">    </span><span class="mi">450</span> <span class="k">with</span> <span class="n">env_ctor</span><span class="p">(</span><span class="n">session</span><span class="o">=</span><span class="n">session</span><span class="p">):</span>
-<span class="ne">--&gt; </span><span class="mi">451</span>     <span class="k">return</span> <span class="n">f</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwds</span><span class="p">)</span>
-
-<span class="nn">File ~\miniconda3\Lib\site-packages\rasterio\__init__.py:317,</span> in <span class="ni">open</span><span class="nt">(fp, mode, driver, width, height, count, crs, transform, dtype, nodata, sharing, **kwargs)</span>
-<span class="g g-Whitespace">    </span><span class="mi">314</span> <span class="n">path</span> <span class="o">=</span> <span class="n">_parse_path</span><span class="p">(</span><span class="n">raw_dataset_path</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">316</span> <span class="k">if</span> <span class="n">mode</span> <span class="o">==</span> <span class="s2">&quot;r&quot;</span><span class="p">:</span>
-<span class="ne">--&gt; </span><span class="mi">317</span>     <span class="n">dataset</span> <span class="o">=</span> <span class="n">DatasetReader</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">driver</span><span class="o">=</span><span class="n">driver</span><span class="p">,</span> <span class="n">sharing</span><span class="o">=</span><span class="n">sharing</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">318</span> <span class="k">elif</span> <span class="n">mode</span> <span class="o">==</span> <span class="s2">&quot;r+&quot;</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">319</span>     <span class="n">dataset</span> <span class="o">=</span> <span class="n">get_writer_for_path</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">driver</span><span class="o">=</span><span class="n">driver</span><span class="p">)(</span>
-<span class="g g-Whitespace">    </span><span class="mi">320</span>         <span class="n">path</span><span class="p">,</span> <span class="n">mode</span><span class="p">,</span> <span class="n">driver</span><span class="o">=</span><span class="n">driver</span><span class="p">,</span> <span class="n">sharing</span><span class="o">=</span><span class="n">sharing</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span>
-<span class="g g-Whitespace">    </span><span class="mi">321</span>     <span class="p">)</span>
-
-<span class="nn">File rasterio\\_base.pyx:312,</span> in <span class="ni">rasterio._base.DatasetBase.__init__</span><span class="nt">()</span>
-
-<span class="ne">RasterioIOError</span>: HTTP response code: 404
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>C:\Users\edier\AppData\Local\Temp\ipykernel_1100\2575485777.py:134: RuntimeWarning: divide by zero encountered in divide
+  q_crit_m_hr = (transmisividad * np.sin(pendiente) / ratio_hidrologico) * termino_geotecnico
+</pre></div>
+</div>
+<img alt="_images/281dbc4991c657eac8c54b2780dc7e79f5b96ca074cc7962a9f67e35df605fcd.png" src="_images/281dbc4991c657eac8c54b2780dc7e79f5b96ca074cc7962a9f67e35df605fcd.png" />
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Análisis completado. Se han generado los archivos &#39;Matriz_Estabilidad.tif&#39;, &#39;Lluvia_Critica.tif&#39; y &#39;Volumen_Inestable.tif&#39;.
 </pre></div>
 </div>
 </div>
