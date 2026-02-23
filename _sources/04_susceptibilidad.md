@@ -1,7 +1,7 @@
 # Susceptibilidad y amenaza
 
 La susceptibilidad de un terreno a fallar es definida por {cite:t}`Brabb1984` como la tendencia de un deslizamiento a ser generado en el
-futuro en una área específica. En el mismo sentido, {cite:t}`Soeteres1996` define susceptibilidad como la posibilidad de que un
+futuro en una área específica. En el mismo sentido, {cite:t}`Soeters1996` define susceptibilidad como la posibilidad de que un
 fenómeno ocurra en un área de acuerdo con las condiciones locales del terreno, y especifican que factores detonantes tales
 como precipitación o sismicidad no son considerados. Entre tanto, la amenaza se define como la probabilidad de ocurrencia de un fenómeno potencialmente dañino dentro de un periodo de tiempo específico y dentro de un área dada ({cite:t}`Varnes1984`). Concretamente, el término amenaza expresa la probabilidad de ocurrencia de un potencial fenómeno destructivo en espacio y tiempo
 definidos.

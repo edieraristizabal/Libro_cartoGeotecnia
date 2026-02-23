@@ -67,7 +67,7 @@ Flujo en San Antonio de Prado, sector Santa Rita, municipio de Medellín-Colombi
 Clasificación de flujos de acuerdo con {cite:t}`Coussot1996`.
 :::
 
-Estos flujos pueden desplazarse simplemente sobre las laderas, o propagarse por largas distancias a lo largo de cauces estrechos, hasta alcanzar valles abiertos donde se deposita, o incluso alcanzar la desembocadura de la cuenca donde da lugar a geoformas tipo abanicos. estos flujos canalizados representan esencialmente lo que se denominan avenidas torrenciales en nuestro medio ({cite:t}`Aristizabalarango2020`).
+Estos flujos pueden desplazarse simplemente sobre las laderas, o propagarse por largas distancias a lo largo de cauces estrechos, hasta alcanzar valles abiertos donde se deposita, o incluso alcanzar la desembocadura de la cuenca donde da lugar a geoformas tipo abanicos. estos flujos canalizados representan esencialmente lo que se denominan avenidas torrenciales en nuestro medio ({cite:t}`Aristizabal2020torrencial`).
 
 :::{figure-md} flujos2
 <img src="https://earthwise.bgs.ac.uk/images/thumb/3/39/OR17031fig2.jpg/600px-OR17031fig2.jpg" alt="flujos2" width="800px">
