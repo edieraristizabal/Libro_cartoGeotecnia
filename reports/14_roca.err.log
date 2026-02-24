@@ -1,0 +1,164 @@
+Traceback (most recent call last):
+  File "/home/edier/miniconda3/lib/python3.13/site-packages/jupyter_core/utils/__init__.py", line 154, in wrapped
+    asyncio.get_running_loop()
+    ~~~~~~~~~~~~~~~~~~~~~~~~^^
+RuntimeError: no running event loop
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/edier/miniconda3/lib/python3.13/site-packages/jupyter_cache/executors/utils.py", line 58, in single_nb_execution
+    executenb(
+    ~~~~~~~~~^
+        nb,
+        ^^^
+    ...<4 lines>...
+        **kwargs,
+        ^^^^^^^^^
+    )
+    ^
+  File "/home/edier/miniconda3/lib/python3.13/site-packages/nbclient/client.py", line 1319, in execute
+    return NotebookClient(nb=nb, resources=resources, km=km, **kwargs).execute()
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/home/edier/miniconda3/lib/python3.13/site-packages/jupyter_core/utils/__init__.py", line 158, in wrapped
+    return loop.run_until_complete(inner)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^
+  File "/home/edier/miniconda3/lib/python3.13/asyncio/base_events.py", line 725, in run_until_complete
+    return future.result()
+           ~~~~~~~~~~~~~^^
+  File "/home/edier/miniconda3/lib/python3.13/site-packages/nbclient/client.py", line 709, in async_execute
+    await self.async_execute_cell(
+        cell, index, execution_count=self.code_cells_executed + 1
+    )
+  File "/home/edier/miniconda3/lib/python3.13/site-packages/nbclient/client.py", line 1062, in async_execute_cell
+    await self._check_raise_for_error(cell, cell_index, exec_reply)
+  File "/home/edier/miniconda3/lib/python3.13/site-packages/nbclient/client.py", line 918, in _check_raise_for_error
+    raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
+nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
+------------------
+import numpy as np
+import matplotlib.pyplot as plt
+import matplotlib.patches as mpatches
+
+def analisis_cinematico_planar(DD_disc, buz_disc, DD_ladera, buz_ladera, phi,
+                               tol_dir=20):
+    """
+    Análisis cinemático para falla planar.
+
+    Parámetros
+    ----------
+    DD_disc   : dirección de buzamiento de la discontinuidad [°]
+    buz_disc  : buzamiento de la discontinuidad [°]
+    DD_ladera : dirección de buzamiento de la ladera [°]
+    buz_ladera: buzamiento de la ladera [°]
+    phi       : ángulo de fricción [°]
+    tol_dir   : tolerancia en dirección [°] (usualmente 20°)
+
+    Retorna
+    -------
+    bool : True si la falla planar es cinemáticamente posible
+    """
+    diff_dir = abs(DD_disc - DD_ladera) % 360
+    diff_dir = min(diff_dir, 360 - diff_dir)
+    cond_dir = diff_dir < tol_dir                  # misma dirección ± 20°
+    cond_buz = (buz_disc > phi) and (buz_disc < buz_ladera)  # phi < ψp < ψf
+    return cond_dir and cond_buz
+
+def analisis_cinematico_volcamiento(DD_disc, buz_disc, DD_ladera, phi, tol_dir=20):
+    """
+    Análisis cinemático para falla por volcamiento.
+
+    Parámetros
+    ----------
+    DD_disc   : dirección de buzamiento de la discontinuidad [°]
+    buz_disc  : buzamiento de la discontinuidad [°]
+    DD_ladera : dirección de buzamiento de la ladera [°]
+    phi       : ángulo de fricción [°]
+    tol_dir   : tolerancia en dirección [°]
+
+    Retorna
+    -------
+    bool : True si el volcamiento es cinemáticamente posible
+    """
+    # Dirección opuesta a la ladera ± tolerancia
+    diff_dir = abs(DD_disc - (DD_ladera + 180) % 360) % 360
+    diff_dir = min(diff_dir, 360 - diff_dir)
+    cond_dir  = diff_dir < tol_dir
+    cond_buz  = buz_disc > (90 - phi)   # ψp > 90° − φ
+    return cond_dir and cond_buz
+
+# ── Parámetros de la ladera ───────────────────────────────────────────────────
+DD_ladera  = 130   # dirección de buzamiento de la ladera [°]
+buz_ladera = 65    # buzamiento de la ladera [°]
+phi        = 30    # ángulo de fricción de las discontinuidades [°]
+
+# ── Familias de discontinuidades medidas en campo ─────────────────────────────
+familias = [
+    {'nombre': 'J1', 'DD': 125, 'buz': 50},
+    {'nombre': 'J2', 'DD': 140, 'buz': 70},
+    {'nombre': 'J3', 'DD': 310, 'buz': 55},
+    {'nombre': 'J4', 'DD': 80,  'buz': 40},
+    {'nombre': 'S0', 'DD': 135, 'buz': 30},
+]
+
+# ── Evaluación cinemática ─────────────────────────────────────────────────────
+print('=' * 60)
+print(f'LADERA: DD = {DD_ladera}°, Buz = {buz_ladera}°')
+print(f'Ángulo de fricción: φ = {phi}°')
+print('=' * 60)
+print(f'{"Familia":<8} {"DD":<6} {"Buz":<6} {"Planar":<12} {"Volcamiento"}')
+print('-' * 50)
+
+resultados = []
+for f in familias:
+    planar = analisis_cinematico_planar(
+        f['DD'], f['buz'], DD_ladera, buz_ladera, phi)
+    volc   = analisis_cinematico_volcamiento(
+        f['DD'], f['buz'], DD_ladera, phi)
+    resultados.append({'nombre': f['nombre'], 'planar': planar, 'volcamiento': volc})
+    p_str = '⚠ POSIBLE' if planar else 'No'
+    v_str = '⚠ POSIBLE' if volc   else 'No'
+    print(f"{f['nombre']:<8} {f['DD']:<6} {f['buz']:<6} {p_str:<12} {v_str}")
+
+# ── Visualización: diagrama de barras de riesgo por familia ───────────────────
+nombres  = [r['nombre'] for r in resultados]
+planares = [1 if r['planar'] else 0 for r in resultados]
+volc_arr = [1 if r['volcamiento'] else 0 for r in resultados]
+
+x = np.arange(len(nombres))
+fig, ax = plt.subplots(figsize=(8, 4))
+bars1 = ax.bar(x - 0.2, planares, 0.35, label='Falla Planar',
+               color=['tomato' if v else 'steelblue' for v in planares],
+               edgecolor='k')
+bars2 = ax.bar(x + 0.2, volc_arr, 0.35, label='Volcamiento',
+               color=['orange' if v else 'steelblue' for v in volc_arr],
+               edgecolor='k')
+ax.set_xticks(x)
+ax.set_xticklabels(nombres, fontsize=11)
+ax.set_yticks([0, 1])
+ax.set_yticklabels(['No posible', 'Cinemáticamente\nposible'], fontsize=10)
+ax.set_xlabel('Familia de discontinuidades', fontsize=12)
+ax.set_title(
+    f'Análisis Cinemático — Ladera DD={DD_ladera}°, Buz={buz_ladera}°\n'
+    f'Ángulo de fricción φ = {phi}°',
+    fontsize=13
+)
+ax.legend(fontsize=10)
+ax.grid(axis='y', alpha=0.3)
+plt.tight_layout()
+plt.show()
+
+------------------
+
+
+[31m---------------------------------------------------------------------------[39m
+[31mModuleNotFoundError[39m                       Traceback (most recent call last)
+[36mCell[39m[36m [39m[32mIn[1][39m[32m, line 2[39m
+[32m      1[39m [38;5;28;01mimport[39;00m[38;5;250m [39m[34;01mnumpy[39;00m[38;5;250m [39m[38;5;28;01mas[39;00m[38;5;250m [39m[34;01mnp[39;00m
+[32m----> [39m[32m2[39m [38;5;28;01mimport[39;00m[38;5;250m [39m[34;01mmatplotlib[39;00m[34;01m.[39;00m[34;01mpyplot[39;00m[38;5;250m [39m[38;5;28;01mas[39;00m[38;5;250m [39m[34;01mplt[39;00m
+[32m      3[39m [38;5;28;01mimport[39;00m[38;5;250m [39m[34;01mmatplotlib[39;00m[34;01m.[39;00m[34;01mpatches[39;00m[38;5;250m [39m[38;5;28;01mas[39;00m[38;5;250m [39m[34;01mmpatches[39;00m
+[32m      5[39m [38;5;28;01mdef[39;00m[38;5;250m [39m[34manalisis_cinematico_planar[39m(DD_disc, buz_disc, DD_ladera, buz_ladera, phi,
+[32m      6[39m                                tol_dir=[32m20[39m):
+
+[31mModuleNotFoundError[39m: No module named 'matplotlib'
+

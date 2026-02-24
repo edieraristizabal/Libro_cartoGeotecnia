@@ -36,220 +36,88 @@ Traceback (most recent call last):
     raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
 nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
 ------------------
-import rasterio as rio
 import numpy as np
 import matplotlib.pyplot as plt
 
-# --- CODIFICACIÓN DEL MAPA DE SUSCEPTIBILIDAD ---
-# El resultado principal es un mapa de estabilidad (o susceptibilidad a deslizamientos)
-# donde cada celda se clasifica en una de cuatro categorías:
-#
-# 1: Incondicionalmente Estable: Zonas que son estables incluso en las condiciones más
-#    desfavorables (suelo completamente saturado). No se espera que fallen.
-# 2: Incondicionalmente Inestable: Zonas que son inestables incluso en condiciones secas.
-#    La topografía y las propiedades del suelo por sí solas son suficientes para
-#    causar la falla. Son las zonas más críticas.
-# 3: Inestable: Zonas que son estables en condiciones secas pero se vuelven inestables
-#    bajo la lluvia estacionaria definida (Q). La inestabilidad depende de la lluvia.
-# 4: Estable: Zonas que permanecen estables bajo la lluvia estacionaria definida (Q).
-#
-# --- CODIFICACIÓN DEL MAPA DE LLUVIA CRÍTICA (q_crit) ---
-# Este mapa muestra la intensidad de lluvia mínima (en mm/h) necesaria para que una
-# celda condicionalmente estable se vuelva inestable.
-#
-# - Valores > 0: Representan la intensidad de lluvia crítica (q_crit) en mm/h.
-# - Valor = -1: Corresponde a las zonas "Incondicionalmente Estables". Teóricamente,
-#   ninguna cantidad de lluvia las haría fallar bajo los supuestos del modelo.
-# - Valor = -2: Corresponde a las zonas "Incondicionalmente Inestables". Estas zonas
-#   fallan incluso sin lluvia, por lo que el concepto de "lluvia crítica" no aplica.
-
-# --- 1. Definición de Constantes y Parámetros ---
-
-PESO_UNITARIO_AGUA = 9.81  # Peso unitario del agua (gamma_w) en [kN/m3]
-RESOLUCION_CELDA = 12.5     # Resolución espacial del raster (dx o b) en [m]
-LLUVIA_ESTACIONARIA = 100.0 # Intensidad de la precipitación (Q) en [mm/h]
-
-# --- 2. Carga de Datos Raster ---
-# Se cargan todos los datos geoespaciales necesarios para el modelo.
-# Los datos se leen y se manejan los valores Nodata.
-
-def cargar_raster(url):
+def factor_seguridad(c, phi_deg, gamma_s, z, beta_deg, m=1.0, gamma_w=9.81):
     """
-    Función auxiliar para abrir un raster desde una URL, leer la primera banda
-    y manejar los valores NoData. Asume que el valor NoData es el de la esquina
-    superior izquierda, lo cual es común en archivos .asc.
+    Factor de Seguridad — Modelo de Talud Infinito.
+
+    Parámetros
+    ----------
+    c       : cohesión efectiva [kPa]
+    phi_deg : ángulo de fricción efectivo [°]
+    gamma_s : peso unitario del suelo [kN/m³]
+    z       : profundidad del plano de falla [m]
+    beta_deg: ángulo de pendiente [°]
+    m       : grado de saturación (0=seco, 1=saturado)
+    gamma_w : peso unitario del agua [kN/m³]
+
+    Retorna
+    -------
+    float o ndarray — Factor de Seguridad
     """
-    with rio.open(url) as raster:
-        # Guardamos la información de proyección y transformación para los archivos de salida
-        transform = raster.transform
-        crs = raster.crs
-        nodata_value = raster.nodata
-        
-        datos = raster.read(1)
-        
-        # Una forma más robusta de manejar NoData si está definido en el metadato
-        if nodata_value is not None:
-            datos = np.where(datos == nodata_value, np.nan, datos)
-        else:
-            datos = np.where(datos == datos[0, 0], np.nan, datos)
-            
-        return datos, transform, crs
+    beta = np.radians(beta_deg)
+    phi  = np.radians(phi_deg)
+    resistencia = c + (gamma_s - m * gamma_w) * z * np.cos(beta)**2 * np.tan(phi)
+    actuante    = gamma_s * z * np.sin(beta) * np.cos(beta)
+    return resistencia / actuante
 
-# URLs de los datos de entrada
-url_cohesion = 'https://raw.githubusercontent.com/edieraristizabal/Libro_cartoGeotecnia/master/data/Arenosa/cohesion.asc'
-url_friccion = 'https://raw.githubusercontent.com/edieraristizabal/Libro_cartoGeotecnia/master/data/Arenosa/friction_rad.asc'
-url_ks = 'https://raw.githubusercontent.com/edieraristizabal/Libro_cartoGeotecnia/master/data/Arenosa/ks.asc'
-url_peso_suelo = 'https://raw.githubusercontent.com/edieraristizabal/Libro_cartoGeotecnia/master/data/Arenosa/gammas.asc'
-url_acum_flujo = 'https://raw.githubusercontent.com/edieraristizabal/Libro_cartoGeotecnia/master/data/Arenosa/flowacum_m2.asc'
-url_pendiente = 'https://raw.githubusercontent.com/edieraristizabal/Libro_cartoGeotecnia/master/data/Arenosa/slope_rad.asc'
-url_espesor = 'https://raw.githubusercontent.com/edieraristizabal/Libro_cartoGeotecnia/master/data/Arenosa/zs.asc'
+# ── Parámetros típicos de suelo residual andino ───────────────────────────────
+c       = 5.0    # cohesión efectiva [kPa]
+phi     = 28.0   # ángulo de fricción [°]
+gamma_s = 18.0   # peso unitario del suelo [kN/m³]
+z       = 2.0    # profundidad de falla [m]
 
-# Carga de los datos
-cohesion, transform, crs = cargar_raster(url_cohesion) # C' [kN/m2]
-angulo_friccion, _, _ = cargar_raster(url_friccion) # phi [radianes]
-ks, _, _ = cargar_raster(url_ks) # Conductividad hidráulica [cm/hora]
-peso_unitario_suelo, _, _ = cargar_raster(url_peso_suelo) # gamma_s [kN/m3]
-area_drenaje, _, _ = cargar_raster(url_acum_flujo) # a [m2]
-pendiente, _, _ = cargar_raster(url_pendiente) # theta [radianes]
-espesor_suelo, _, _ = cargar_raster(url_espesor) # z_t [m]
+pendientes = np.linspace(5, 60, 200)
+FS_seco     = factor_seguridad(c, phi, gamma_s, z, pendientes, m=0.0)
+FS_parcial  = factor_seguridad(c, phi, gamma_s, z, pendientes, m=0.5)
+FS_saturado = factor_seguridad(c, phi, gamma_s, z, pendientes, m=1.0)
 
-# --- 3. Conversión de Unidades ---
-# Aseguramos que todas las unidades sean consistentes (metros, horas, kN)
-
-# Convertir ks de cm/hora a m/hora
-ks_m_hr = ks * 0.01
-# Convertir lluvia de mm/hora a m/hora
-q_m_hr = LLUVIA_ESTACIONARIA * 0.001
-
-# --- 4. Análisis de Estabilidad SHALSTAB ---
-# Se implementan las ecuaciones del modelo para clasificar la estabilidad de cada celda.
-
-# Inicializar la matriz de estabilidad. Usamos np.nan para un fondo "vacío".
-matriz_estabilidad = np.full(cohesion.shape, np.nan)
-
-# Términos comunes para simplificar las ecuaciones
-tan_pendiente = np.tan(pendiente)
-tan_friccion = np.tan(angulo_friccion)
-cos2_pendiente = np.cos(pendiente)**2
-
-# --- Condición 1: Incondicionalmente Inestable (Seco) ---
-# tan(θ) >= tan(φ) + C' / (γ_s * z_t * cos²(θ))
-condicion_inestable_seco = tan_friccion + (cohesion / (peso_unitario_suelo * espesor_suelo * cos2_pendiente))
-matriz_estabilidad = np.where(tan_pendiente >= condicion_inestable_seco, 2, matriz_estabilidad)
-
-# --- Condición 2: Incondicionalmente Estable (Saturado) ---
-# tan(θ) < (1 - γ_w/γ_s) * tan(φ) + C' / (γ_s * z_t * cos²(θ))
-condicion_estable_saturado = (1 - (PESO_UNITARIO_AGUA / peso_unitario_suelo)) * tan_friccion + (cohesion / (peso_unitario_suelo * espesor_suelo * cos2_pendiente))
-matriz_estabilidad = np.where(tan_pendiente < condicion_estable_saturado, 1, matriz_estabilidad)
-
-# --- Condición 3 y 4: Estabilidad Condicional (Dependiente de la Lluvia) ---
-# Se evalúan las celdas que no cayeron en las categorías anteriores (donde la matriz aún es NaN).
-
-# Lado izquierdo de la ecuación acoplada: a/b
-ratio_hidrologico = area_drenaje / RESOLUCION_CELDA
-
-# Lado derecho de la ecuación acoplada: (T/Q) * sin(θ) * [Término Geotécnico]
-# Transmisividad (T) = ks * z_t (asumiendo flujo paralelo a la superficie)
-transmisividad = ks_m_hr * espesor_suelo
-# Término geotécnico que representa la resistencia del suelo
-termino_geotecnico = ((peso_unitario_suelo / PESO_UNITARIO_AGUA) * (1 - tan_pendiente / tan_friccion) + 
-                      (cohesion / (PESO_UNITARIO_AGUA * espesor_suelo * cos2_pendiente * tan_friccion)))
-
-# Lado derecho completo
-ratio_estabilidad = (transmisividad / q_m_hr) * np.sin(pendiente) * termino_geotecnico
-
-# Aplicar condiciones solo donde la matriz_estabilidad es todavía NaN
-# Inestable: a/b > ratio_estabilidad
-matriz_estabilidad = np.where(np.logical_and(np.isnan(matriz_estabilidad), ratio_hidrologico > ratio_estabilidad), 3, matriz_estabilidad)
-# Estable: a/b <= ratio_estabilidad
-matriz_estabilidad = np.where(np.logical_and(np.isnan(matriz_estabilidad), ratio_hidrologico <= ratio_estabilidad), 4, matriz_estabilidad)
-
-# --- 5. Cálculo de la Lluvia Crítica (q_crit) ---
-# Se calcula la intensidad de lluvia necesaria para causar la inestabilidad.
-
-# Reorganizando la ecuación acoplada para resolver para Q (q_crit):
-# q_crit = (T * sin(θ) / (a/b)) * [Término Geotécnico]
-q_crit_m_hr = (transmisividad * np.sin(pendiente) / ratio_hidrologico) * termino_geotecnico
-
-# Convertir q_crit a mm/h para una interpretación más fácil
-q_crit_mm_hr = q_crit_m_hr * 1000
-
-# Limpiar valores infinitos que pueden surgir de divisiones por cero (ej. en zonas planas)
-q_crit_mm_hr[q_crit_mm_hr == np.inf] = np.nan
-
-# Asignar códigos especiales a las zonas incondicionales en el mapa de lluvia crítica
-# -1 para incondicionalmente estable
-# -2 para incondicionalmente inestable
-mapa_q_critica = np.where(matriz_estabilidad == 1, -1, q_crit_mm_hr)
-mapa_q_critica = np.where(matriz_estabilidad == 2, -2, mapa_q_critica)
-
-
-# --- 6. Visualización de Resultados ---
-plt.figure(figsize=(18, 8))
-
-# Mapa de Estabilidad
-plt.subplot(1, 2, 1)
-im1 = plt.imshow(matriz_estabilidad, cmap='viridis_r')
-plt.title('Mapa de Estabilidad SHALSTAB')
-plt.colorbar(im1, ticks=[1, 2, 3, 4], label="Clase de Estabilidad").ax.set_yticklabels(['Incond. Estable (1)', 'Incond. Inestable (2)', 'Inestable (3)', 'Estable (4)'])
-
-# Mapa de Lluvia Crítica
-plt.subplot(1, 2, 2)
-im2 = plt.imshow(mapa_q_critica, cmap='plasma', vmin=0, vmax=np.nanpercentile(mapa_q_critica, 95)) # vmax al percentil 95 para mejor visualización
-plt.title('Mapa de Lluvia Crítica (q_crit) [mm/h]')
-plt.colorbar(im2, label="q_crit [mm/h]\n(-1: Incond. Estable, -2: Incond. Inestable)")
-
+fig, ax = plt.subplots(figsize=(9, 5))
+ax.plot(pendientes, FS_seco,     'b-',  lw=2, label='Suelo seco (m = 0)')
+ax.plot(pendientes, FS_parcial,  'g--', lw=2, label='Parcialmente saturado (m = 0.5)')
+ax.plot(pendientes, FS_saturado, 'r-',  lw=2, label='Suelo saturado (m = 1)')
+ax.axhline(1.0, color='k',      ls='--', lw=1.5, label='FS = 1 (falla)')
+ax.axhline(1.5, color='orange', ls=':',  lw=1.5, label='FS = 1.5 (margen seguridad)')
+ax.fill_between(pendientes, 0, 1, alpha=0.12, color='red')
+ax.set_xlabel('Ángulo de pendiente β [°]', fontsize=12)
+ax.set_ylabel('Factor de Seguridad (FS)', fontsize=12)
+ax.set_title(
+    'Factor de Seguridad — Modelo de Talud Infinito\n'
+    f'c = {c} kPa,  φ = {phi}°,  γs = {gamma_s} kN/m³,  z = {z} m',
+    fontsize=13
+)
+ax.legend(fontsize=10)
+ax.set_ylim(0, 6)
+ax.set_xlim(5, 60)
+ax.grid(True, alpha=0.3)
 plt.tight_layout()
 plt.show()
 
-
-# --- 7. Exportación de Resultados ---
-# Guardar los resultados como archivos GeoTIFF, preservando el sistema de coordenadas.
-
-def guardar_geotiff(nombre_archivo, datos, transform, crs):
-    """Función auxiliar para guardar un array de numpy como un GeoTIFF."""
-    with rio.open(
-        nombre_archivo, 'w',
-        driver='Gtiff',
-        height=datos.shape[0],
-        width=datos.shape[1],
-        count=1,
-        dtype=datos.dtype,
-        nodata=np.nan, # Usar NaN como valor NoData
-        crs=crs,
-        transform=transform
-    ) as dst:
-        dst.write(datos, 1)
-
-# Guardar mapa de estabilidad
-guardar_geotiff('Matriz_Estabilidad.tif', matriz_estabilidad, transform, crs)
-
-# Guardar mapa de lluvia crítica
-guardar_geotiff('Lluvia_Critica.tif', mapa_q_critica, transform, crs)
-
-# Calcular y guardar el volumen de suelo potencialmente inestable
-volumen_inestable = np.where(np.logical_or(matriz_estabilidad == 2, matriz_estabilidad == 3), 
-                             espesor_suelo * (RESOLUCION_CELDA**2), 0)
-volumen_inestable = np.where(np.isnan(matriz_estabilidad), np.nan, volumen_inestable) # Propagar NaNs
-guardar_geotiff('Volumen_Inestable.tif', volumen_inestable, transform, crs)
-
-print("Análisis completado. Se han generado los archivos 'Matriz_Estabilidad.tif', 'Lluvia_Critica.tif' y 'Volumen_Inestable.tif'.")
+# ── Mapa de FS para rangos de pendiente ──────────────────────────────────────
+print('\nTabla de FS por rango de pendiente (suelo saturado):')
+print(f'{'Pendiente (°)':<18} {'FS':<10} {'Condición'}')
+print('-' * 40)
+for beta in [10, 15, 20, 25, 30, 35, 40]:
+    fs = factor_seguridad(c, phi, gamma_s, z, beta, m=1.0)
+    cond = 'FALLA' if fs < 1 else ('Marginal' if fs < 1.5 else 'Estable')
+    print(f'{beta:<18} {fs:<10.2f} {cond}')
 
 ------------------
 
 
 [31m---------------------------------------------------------------------------[39m
 [31mModuleNotFoundError[39m                       Traceback (most recent call last)
-[36mCell[39m[36m [39m[32mIn[1][39m[32m, line 3[39m
-[32m      1[39m [38;5;28;01mimport[39;00m[38;5;250m [39m[34;01mrasterio[39;00m[38;5;250m [39m[38;5;28;01mas[39;00m[38;5;250m [39m[34;01mrio[39;00m
-[32m      2[39m [38;5;28;01mimport[39;00m[38;5;250m [39m[34;01mnumpy[39;00m[38;5;250m [39m[38;5;28;01mas[39;00m[38;5;250m [39m[34;01mnp[39;00m
-[32m----> [39m[32m3[39m [38;5;28;01mimport[39;00m[38;5;250m [39m[34;01mmatplotlib[39;00m[34;01m.[39;00m[34;01mpyplot[39;00m[38;5;250m [39m[38;5;28;01mas[39;00m[38;5;250m [39m[34;01mplt[39;00m
-[32m      5[39m [38;5;66;03m# --- CODIFICACIÓN DEL MAPA DE SUSCEPTIBILIDAD ---[39;00m
-[32m      6[39m [38;5;66;03m# El resultado principal es un mapa de estabilidad (o susceptibilidad a deslizamientos)[39;00m
-[32m      7[39m [38;5;66;03m# donde cada celda se clasifica en una de cuatro categorías:[39;00m
-[32m   (...)[39m[32m     27[39m 
-[32m     28[39m [38;5;66;03m# --- 1. Definición de Constantes y Parámetros ---[39;00m
-[32m     30[39m PESO_UNITARIO_AGUA = [32m9.81[39m  [38;5;66;03m# Peso unitario del agua (gamma_w) en [kN/m3][39;00m
+[36mCell[39m[36m [39m[32mIn[1][39m[32m, line 2[39m
+[32m      1[39m [38;5;28;01mimport[39;00m[38;5;250m [39m[34;01mnumpy[39;00m[38;5;250m [39m[38;5;28;01mas[39;00m[38;5;250m [39m[34;01mnp[39;00m
+[32m----> [39m[32m2[39m [38;5;28;01mimport[39;00m[38;5;250m [39m[34;01mmatplotlib[39;00m[34;01m.[39;00m[34;01mpyplot[39;00m[38;5;250m [39m[38;5;28;01mas[39;00m[38;5;250m [39m[34;01mplt[39;00m
+[32m      4[39m [38;5;28;01mdef[39;00m[38;5;250m [39m[34mfactor_seguridad[39m(c, phi_deg, gamma_s, z, beta_deg, m=[32m1.0[39m, gamma_w=[32m9.81[39m):
+[32m      5[39m [38;5;250m    [39m[33;03m"""[39;00m
+[32m      6[39m [33;03m    Factor de Seguridad — Modelo de Talud Infinito.[39;00m
+[32m      7[39m 
+[32m   (...)[39m[32m     20[39m [33;03m    float o ndarray — Factor de Seguridad[39;00m
+[32m     21[39m [33;03m    """[39;00m
 
 [31mModuleNotFoundError[39m: No module named 'matplotlib'
 

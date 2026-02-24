@@ -32,7 +32,7 @@
     <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=eba8b062" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=9c3e77be" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css?v=6644e6bb" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
   
@@ -396,6 +396,8 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#objetivos-de-aprendizaje">Objetivos de aprendizaje</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#requisitos-previos">Requisitos previos</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tipos-de-analisis-heuristicos">Tipos de análisis heurísticos</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#analisis-geomorfologico">Análisis geomorfológico</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#analisis-basado-en-indices">Análisis basado en índices</a></li>
@@ -407,6 +409,7 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#metodo-combinado">Método combinado</a></li>
 </ul>
 </li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#actividades">Actividades</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#referencias">Referencias</a></li>
 </ul>
             </nav>
@@ -421,6 +424,26 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="metodos-basados-en-el-conocimiento">
 <h1>Métodos basados en el conocimiento<a class="headerlink" href="#metodos-basados-en-el-conocimiento" title="Link to this heading">#</a></h1>
+<section id="objetivos-de-aprendizaje">
+<h2>Objetivos de aprendizaje<a class="headerlink" href="#objetivos-de-aprendizaje" title="Link to this heading">#</a></h2>
+<p>Al finalizar este capítulo, el estudiante será capaz de:</p>
+<ul class="simple">
+<li><p>Comprender el fundamento del Proceso Analítico Jerárquico (AHP) como método de ponderación experta de variables.</p></li>
+<li><p>Construir una matriz de comparación por pares y calcular el vector de pesos mediante el vector propio (eigenvector).</p></li>
+<li><p>Verificar la consistencia de los juicios mediante la Razón de Consistencia (CR).</p></li>
+<li><p>Combinar variables raster ponderadas para producir un mapa de susceptibilidad heurístico.</p></li>
+<li><p>Comparar cualitativamente el resultado con mapas geomorfológicos existentes.</p></li>
+</ul>
+<p><strong>Duración estimada:</strong> 2–3 horas</p>
+</section>
+<section id="requisitos-previos">
+<h2>Requisitos previos<a class="headerlink" href="#requisitos-previos" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><strong>Python:</strong> <code class="docutils literal notranslate"><span class="pre">numpy</span></code> (álgebra lineal: <code class="docutils literal notranslate"><span class="pre">np.linalg.eig</span></code>), <code class="docutils literal notranslate"><span class="pre">rasterio</span></code>, <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code>.</p></li>
+<li><p><strong>Estadística/Álgebra:</strong> matrices, vectores propios (eigenvectors), normalización.</p></li>
+<li><p><strong>Geotecnia:</strong> conocimiento experto de los factores condicionantes de cada zona.</p></li>
+<li><p><strong>Capítulo anterior:</strong> <code class="docutils literal notranslate"><span class="pre">06_variables</span></code> — las mismas variables raster se usan aquí.</p></li>
+</ul>
 <p>Los métodos basados en el conocimiento, tambien denominados <strong>heurísticos</strong>, determinan la susceptibilidad y/o amenaza directa o indirectamente por un experto en el fenómeno y en la region de estudio. El proceso está basado en la experiencia individual y en el uso del razonamiento lógico. Las reglas de decisión son por lo tanto dificiles de formular por su complejidad y por que varían de lugar a lugar.</p>
 <p>En estos métodos el experto puede decidir las variables y clases en que subdivide cada variable, y sobre todo el peso de las clases y el peso de las variables. De tal forma que obtiene una ecuación de susceptibilidad tal como :</p>
 <p><span class="math notranslate nohighlight">\( S^n = W_1 w_c + W_2 w_c + W_3 w_c + W_n w_c \)</span></p>
@@ -428,6 +451,7 @@ document.write(`
 <p>Los criterios utilizados generalmente por el experto son evidencia de actividad reciente, ambiente geomorfológico de cada unidad identificada, tipo de material y sus condiciones geomecánicas, pendiente de las laderas, relación con las unidades adyacentes, entre otros.</p>
 <p>Entre las ventajas que se destacan de los métodos heurísticos está el papel dominante de la opinión del experto en el análisis, que puede ser un método utilizado en teoría a cualquier escala, sin embargo no son muy usados en escalas de detalle. También se destacan como ventaja que puede permitir una zonificación rápida incluyendo una gran cantidad de variables, y finalmente que cada poligono o unidad de análisis individual puede ser evaluado separadamente de acuerdo con su conjunto de condiciones únicas.</p>
 <p>Como desventajas de estos métodos se señala que es una metodología subjetiva, ya que depende de la habilidad y experiencia del experto. Que sea subjetiva no es realmente una desventaja, el problema radica en la replicabilidad del método. Los análisis no se pueden generalizar y son propios en cada región. Esto mas que una desventaja es una realidad. Finalmente, se destaca que los resultados de estas metodologías son cualitativas, aunque algunas de estas metodologías utilice valoración cuantitativa estos valores son asignados subjetivamente.</p>
+</section>
 <section id="tipos-de-analisis-heuristicos">
 <h2>Tipos de análisis heurísticos<a class="headerlink" href="#tipos-de-analisis-heuristicos" title="Link to this heading">#</a></h2>
 <p>Existen diferentes tipos de análisis heuristicos en cartografía geotécnica que se agrupan en métodos de mapeo directos, los cuales asignan el valor de susceptibilidad directamente en campo, y mapeo indirectos, que asignan dicho valor a las clases y/o variables y posteriormente se calcula la suscpetibilidad.</p>
@@ -650,65 +674,14 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Collecting rasterio
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  Downloading rasterio-1.5.0-cp313-cp313-manylinux_2_28_x86_64.whl.metadata (8.6 kB)
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Collecting affine (from rasterio)
-  Using cached affine-2.4.0-py3-none-any.whl.metadata (4.0 kB)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: rasterio in /home/edier/miniconda3/lib/python3.13/site-packages (1.5.0)
+Requirement already satisfied: affine in /home/edier/miniconda3/lib/python3.13/site-packages (from rasterio) (2.4.0)
 Requirement already satisfied: attrs in /home/edier/miniconda3/lib/python3.13/site-packages (from rasterio) (25.3.0)
 Requirement already satisfied: certifi in /home/edier/miniconda3/lib/python3.13/site-packages (from rasterio) (2025.7.14)
 Requirement already satisfied: click!=8.2.*,&gt;=4.0 in /home/edier/miniconda3/lib/python3.13/site-packages (from rasterio) (8.3.1)
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Collecting cligj&gt;=0.5 (from rasterio)
-  Using cached cligj-0.7.2-py3-none-any.whl.metadata (5.0 kB)
+Requirement already satisfied: cligj&gt;=0.5 in /home/edier/miniconda3/lib/python3.13/site-packages (from rasterio) (0.7.2)
 Requirement already satisfied: numpy&gt;=2 in /home/edier/miniconda3/lib/python3.13/site-packages (from rasterio) (2.3.1)
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Collecting pyparsing (from rasterio)
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  Downloading pyparsing-3.3.2-py3-none-any.whl.metadata (5.8 kB)
-Downloading rasterio-1.5.0-cp313-cp313-manylinux_2_28_x86_64.whl (37.5 MB)
-?25l   <span class=" -Color -Color-C237">━━━━━━━━━━━━━━━━━</span> <span class=" -Color -Color-Green">0.0/37.5 MB</span> <span class=" -Color -Color-Red">?</span> eta <span class=" -Color -Color-Cyan">-:--:--</span>
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>   ━━━<span class=" -Color -Color-C237">╺━━━━━━</span> <span class=" -Color -Color-Green">12.3/37.5 </span> <span class=" -Color -Color-Red">82.2 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:01</span>
-              <span class=" -Color -Color-Green">MB        </span>                      
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>   ━━━━━━━━━<span class=" -Color -Color-C237">╺</span> <span class=" -Color -Color-Green">35.7/37.5 </span> <span class=" -Color -Color-Red">100.7    </span> eta <span class=" -Color -Color-Cyan">0:00:01</span>
-              <span class=" -Color -Color-Green">MB        </span> <span class=" -Color -Color-Red">MB/s     </span>            
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>   <span class=" -Color -Color-Red">━━━━━━━━━━</span> <span class=" -Color -Color-Green">37.5/37.5 </span> <span class=" -Color -Color-Red">75.2 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:00</span>
-              <span class=" -Color -Color-Green">MB        </span>                      
-?25hUsing cached cligj-0.7.2-py3-none-any.whl (7.1 kB)
-Using cached affine-2.4.0-py3-none-any.whl (15 kB)
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading pyparsing-3.3.2-py3-none-any.whl (122 kB)
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Installing collected packages: pyparsing, cligj, affine, rasterio
-?25l
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>   ━━━━━━━━━━━━━━━━━━━━━<span class=" -Color -Color-C237">╺━━━━━━</span> <span class=" -Color -Color-Green">3/4</span> [rasterio]
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>   ━━━━━━━━━━━━━━━━━━━━━<span class=" -Color -Color-C237">╺━━━━━━</span> <span class=" -Color -Color-Green">3/4</span> [rasterio]
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>   ━━━━━━━━━━━━━━━━━━━━━<span class=" -Color -Color-C237">╺━━━━━━</span> <span class=" -Color -Color-Green">3/4</span> [rasterio]
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>   <span class=" -Color -Color-Red">━━━━━━━━━━━━━━━━━━━━━━━━━━━━</span> <span class=" -Color -Color-Green">4/4</span> [rasterio]
-?25h
-Successfully installed affine-2.4.0 cligj-0.7.2 pyparsing-3.3.2 rasterio-1.5.0
+Requirement already satisfied: pyparsing in /home/edier/miniconda3/lib/python3.13/site-packages (from rasterio) (3.3.2)
 </pre></div>
 </div>
 </div>
@@ -977,6 +950,15 @@ Successfully installed affine-2.4.0 cligj-0.7.2 pyparsing-3.3.2 rasterio-1.5.0
 </div>
 </section>
 </section>
+<section id="actividades">
+<h2>Actividades<a class="headerlink" href="#actividades" title="Link to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p><strong>Cambio de pesos AHP:</strong> Modifica la matriz de comparación por pares asignando mayor importancia a la geología respecto a la pendiente. Recalcula los pesos y el mapa de susceptibilidad resultante. ¿Cuánto cambia el área clasificada como alta susceptibilidad?</p></li>
+<li><p><strong>Verificación de consistencia:</strong> Implementa el cálculo de la Razón de Consistencia (CR = CI/RI) para tu nueva matriz. Si CR &gt; 0.1, ajusta los juicios hasta lograr una matriz consistente. ¿Cuántas iteraciones necesitaste?</p></li>
+<li><p><strong>Validación cruzada con inventario:</strong> Superpone el mapa de susceptibilidad AHP con el inventario de movimientos en masa y calcula qué porcentaje de los movimientos cae en zonas de susceptibilidad alta o muy alta. Compara este valor con los métodos estadísticos del capítulo 09.</p></li>
+<li><p><strong>Limitaciones del método:</strong> Discute en máximo 300 palabras las principales limitaciones del AHP para cartografía geotécnica. ¿Por qué se considera un método subjetivo y cuándo está justificado su uso?</p></li>
+</ol>
+</section>
 <section id="referencias">
 <h2>Referencias<a class="headerlink" href="#referencias" title="Link to this heading">#</a></h2>
 <div class="docutils container" id="id8">
@@ -1063,6 +1045,8 @@ Successfully installed affine-2.4.0 cligj-0.7.2 pyparsing-3.3.2 rasterio-1.5.0
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#objetivos-de-aprendizaje">Objetivos de aprendizaje</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#requisitos-previos">Requisitos previos</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tipos-de-analisis-heuristicos">Tipos de análisis heurísticos</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#analisis-geomorfologico">Análisis geomorfológico</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#analisis-basado-en-indices">Análisis basado en índices</a></li>
@@ -1074,6 +1058,7 @@ Successfully installed affine-2.4.0 cligj-0.7.2 pyparsing-3.3.2 rasterio-1.5.0
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#metodo-combinado">Método combinado</a></li>
 </ul>
 </li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#actividades">Actividades</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#referencias">Referencias</a></li>
 </ul>
   </nav></div>

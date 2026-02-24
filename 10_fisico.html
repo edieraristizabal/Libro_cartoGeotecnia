@@ -32,7 +32,7 @@
     <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=eba8b062" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=9c3e77be" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css?v=6644e6bb" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
   
@@ -396,11 +396,14 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#objetivos-de-aprendizaje">Objetivos de aprendizaje</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#requisitos-previos">Requisitos previos</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#factor-detonante-lluvia">Factor detonante lluvia</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#modelo-shalstab">Modelo SHALSTAB</a><ul class="nav section-nav flex-column">
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#python">Python</a></li>
 </ul>
 </li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#factor-de-seguridad-modelo-de-talud-infinito">Factor de Seguridad: Modelo de Talud Infinito</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#modelo-trigrs">Modelo TRIGRS</a><ul class="nav section-nav flex-column">
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#tutorial">Tutorial</a><ul class="nav section-nav flex-column">
 <li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#preparacion-de-los-mapas">Preparación de los mapas</a></li>
@@ -432,6 +435,7 @@ document.write(`
 </li>
 </ul>
 </li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#actividades">Actividades</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#referencias">Referencias</a></li>
 </ul>
             </nav>
@@ -446,7 +450,27 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="metodos-con-base-fisica">
 <h1>Métodos con base física<a class="headerlink" href="#metodos-con-base-fisica" title="Link to this heading">#</a></h1>
+<section id="objetivos-de-aprendizaje">
+<h2>Objetivos de aprendizaje<a class="headerlink" href="#objetivos-de-aprendizaje" title="Link to this heading">#</a></h2>
+<p>Al finalizar este capítulo, el estudiante será capaz de:</p>
+<ul class="simple">
+<li><p>Comprender el concepto de Factor de Seguridad (FS) y su aplicación en la estabilidad de laderas mediante el modelo de talud infinito.</p></li>
+<li><p>Interpretar los resultados del modelo SHALSTAB identificando las cuatro clases de estabilidad (incondicionalmente estable/inestable, condicionalmente estable/inestable).</p></li>
+<li><p>Describir el fundamento del modelo TRIGRS para análisis transitorios de infiltración y estabilidad.</p></li>
+<li><p>Analizar la sensibilidad del FS respecto a los parámetros geotécnicos (cohesión, ángulo de fricción, profundidad de falla).</p></li>
+</ul>
+<p><strong>Duración estimada:</strong> 3–4 horas</p>
+</section>
+<section id="requisitos-previos">
+<h2>Requisitos previos<a class="headerlink" href="#requisitos-previos" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><strong>Geotecnia:</strong> criterio de falla de Mohr-Coulomb, presión de poros, parámetros de resistencia efectivos (c’, φ’).</p></li>
+<li><p><strong>Hidrogeología:</strong> concepto de nivel freático, saturación del suelo.</p></li>
+<li><p><strong>Python:</strong> <code class="docutils literal notranslate"><span class="pre">numpy</span></code>, <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code>, <code class="docutils literal notranslate"><span class="pre">rasterio</span></code>.</p></li>
+<li><p><strong>Capítulos anteriores:</strong> <code class="docutils literal notranslate"><span class="pre">06_variables</span></code> (mapas raster de pendiente, propiedades del suelo), <code class="docutils literal notranslate"><span class="pre">07_detonante</span></code> (lluvia como factor detonante).</p></li>
+</ul>
 <p>Los modelos con base física evalúan la ocurrencia de movimientos en masa en términos de factor de seguridad o probabilidades de ocurrencia, a través de modelos numéricos. Sin embargo existen diferentes aproximaciones a la física del problema con simplificaciones diferentes, por lo cual es fundamental utilizar el modelo que se ajuste a las necesidades o particularidades del área de estudio. Los métodos con base físisca son recomendables para áreas pequeñas a escalas detalladas, ya que requieren una gran cantidad de información de entrada, que se obtiene de ensayos de laboratorio o mediciones de campo. Por lo que la parametrización de los modelos puede ser complicada, en especial la distribución espacial de la profundidad del suelo, la cual juega un papel fundamental. Los modelos con base física permiten tener en consideración la complejidad de los factores detonantes (sismo y/o lluvia) y las características geomecánicas del terreno.</p>
+</section>
 <section id="factor-detonante-lluvia">
 <h2>Factor detonante lluvia<a class="headerlink" href="#factor-detonante-lluvia" title="Link to this heading">#</a></h2>
 <p>El componente hidrológico de estos modelos explica el proceso de infiltración del agua en el suelo y el avance del frente húmedo o aumento de un nivel freático colgado. Para esto utilizan modelos de flujo estático horizontal o modelos de flujo transitorio vertical. Desde el componente geotécnico, la mayoría de modelos utilizan métodos de equilibrio límite de talud infinito. Algunos han incoporado modelos de dovelas que permiten análisis de superficies de falla circulares.</p>
@@ -495,6 +519,117 @@ document.write(`
 <h4>Python<a class="headerlink" href="#python" title="Link to this heading">#</a></h4>
 <p>A continuación se presenta el código en Python para implementar el modelo SHALSTAB. Para esto se debe contar con un mapa de cohesión [kN/m2], ángulo de fricción [radianes], conductividad hidráulica [cm/hora], peso unitario del suelo [kN/m3], área de drenaje acumulada [m2], pendiente [radianes] y espesor del suelo [m]. Estos mapas deben estar en formato raster y se importan con la librería <em>Rasterio</em>.</p>
 <p>Al inicio del código se requiere ajustar el valor que representa la resolución espacial de los mapas raster en metros. En este ejemplo se usan celdas con resolución 12,5 m. También se debe ajustar el valor de la lluvia estacionaria que se desea modelar en unidades de [mm/h]. En este ejemplo dicho valor es de 100 mm/h. Como resultado se obtienen tres (3) mapas. (i) El mapa <strong>Matriz_estabilidad</strong> con celdas estables (celdas con valor de 4), inestables (celdas con valor de 3), incondicionalmente inestables (celdas con valor de 2) e incondicionalmente estables (celdas con valor de 1). (ii) El mapa <strong>Lluvia_critica</strong>, que representa el valor de lluvia (q) necesario para que fallen las celdas. Este valor no aplica para celdas incondicionalmente inestables o incondicionalmente estables, solo para las celdas potencialmente inestables, es decir que arrojaron valores de 4 y 3 en el mapa de estabilidad. (iii) el mapa <strong>volumen_inestable</strong> que representa el volumen del material desplazado en cada celda.</p>
+</section>
+</section>
+<section id="factor-de-seguridad-modelo-de-talud-infinito">
+<h3>Factor de Seguridad: Modelo de Talud Infinito<a class="headerlink" href="#factor-de-seguridad-modelo-de-talud-infinito" title="Link to this heading">#</a></h3>
+<p>El <strong>Factor de Seguridad (FS)</strong> es la razón entre las fuerzas resistentes y las fuerzas actuantes en una ladera. Es el criterio fundamental de todos los modelos físico-determinísticos (SHALSTAB, TRIGRS, SLOP/W).</p>
+<p>Para suelos residuales poco profundos, el <strong>modelo de talud infinito</strong> es el punto de partida:</p>
+<div class="math notranslate nohighlight">
+\[FS = \frac{c' + (\gamma_s - m\cdot\gamma_w)\cdot z\cdot\cos^2\beta\cdot\tan\phi'}{\gamma_s\cdot z\cdot\sin\beta\cdot\cos\beta}\]</div>
+<p>donde:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(c'\)</span> = cohesión efectiva [kPa]</p></li>
+<li><p><span class="math notranslate nohighlight">\(\phi'\)</span> = ángulo de fricción interna efectivo [°]</p></li>
+<li><p><span class="math notranslate nohighlight">\(\gamma_s\)</span> = peso unitario del suelo [kN/m³]</p></li>
+<li><p><span class="math notranslate nohighlight">\(\gamma_w\)</span> = peso unitario del agua [kN/m³] = 9.81 kN/m³</p></li>
+<li><p><span class="math notranslate nohighlight">\(z\)</span> = profundidad del plano de falla [m]</p></li>
+<li><p><span class="math notranslate nohighlight">\(\beta\)</span> = ángulo de la pendiente [°]</p></li>
+<li><p><span class="math notranslate nohighlight">\(m\)</span> = relación altura capilar / profundidad (0 = seco, 1 = completamente saturado)</p></li>
+</ul>
+<p><strong>Condición de falla:</strong> <span class="math notranslate nohighlight">\(FS &lt; 1.0\)</span><br />
+<strong>Condición marginal:</strong> <span class="math notranslate nohighlight">\(1.0 \leq FS &lt; 1.5\)</span><br />
+<strong>Condición estable:</strong> <span class="math notranslate nohighlight">\(FS \geq 1.5\)</span></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">factor_seguridad</span><span class="p">(</span><span class="n">c</span><span class="p">,</span> <span class="n">phi_deg</span><span class="p">,</span> <span class="n">gamma_s</span><span class="p">,</span> <span class="n">z</span><span class="p">,</span> <span class="n">beta_deg</span><span class="p">,</span> <span class="n">m</span><span class="o">=</span><span class="mf">1.0</span><span class="p">,</span> <span class="n">gamma_w</span><span class="o">=</span><span class="mf">9.81</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Factor de Seguridad — Modelo de Talud Infinito.</span>
+
+<span class="sd">    Parámetros</span>
+<span class="sd">    ----------</span>
+<span class="sd">    c       : cohesión efectiva [kPa]</span>
+<span class="sd">    phi_deg : ángulo de fricción efectivo [°]</span>
+<span class="sd">    gamma_s : peso unitario del suelo [kN/m³]</span>
+<span class="sd">    z       : profundidad del plano de falla [m]</span>
+<span class="sd">    beta_deg: ángulo de pendiente [°]</span>
+<span class="sd">    m       : grado de saturación (0=seco, 1=saturado)</span>
+<span class="sd">    gamma_w : peso unitario del agua [kN/m³]</span>
+
+<span class="sd">    Retorna</span>
+<span class="sd">    -------</span>
+<span class="sd">    float o ndarray — Factor de Seguridad</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">beta</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">radians</span><span class="p">(</span><span class="n">beta_deg</span><span class="p">)</span>
+    <span class="n">phi</span>  <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">radians</span><span class="p">(</span><span class="n">phi_deg</span><span class="p">)</span>
+    <span class="n">resistencia</span> <span class="o">=</span> <span class="n">c</span> <span class="o">+</span> <span class="p">(</span><span class="n">gamma_s</span> <span class="o">-</span> <span class="n">m</span> <span class="o">*</span> <span class="n">gamma_w</span><span class="p">)</span> <span class="o">*</span> <span class="n">z</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">beta</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">tan</span><span class="p">(</span><span class="n">phi</span><span class="p">)</span>
+    <span class="n">actuante</span>    <span class="o">=</span> <span class="n">gamma_s</span> <span class="o">*</span> <span class="n">z</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">beta</span><span class="p">)</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">beta</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">resistencia</span> <span class="o">/</span> <span class="n">actuante</span>
+
+<span class="c1"># ── Parámetros típicos de suelo residual andino ───────────────────────────────</span>
+<span class="n">c</span>       <span class="o">=</span> <span class="mf">5.0</span>    <span class="c1"># cohesión efectiva [kPa]</span>
+<span class="n">phi</span>     <span class="o">=</span> <span class="mf">28.0</span>   <span class="c1"># ángulo de fricción [°]</span>
+<span class="n">gamma_s</span> <span class="o">=</span> <span class="mf">18.0</span>   <span class="c1"># peso unitario del suelo [kN/m³]</span>
+<span class="n">z</span>       <span class="o">=</span> <span class="mf">2.0</span>    <span class="c1"># profundidad de falla [m]</span>
+
+<span class="n">pendientes</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">60</span><span class="p">,</span> <span class="mi">200</span><span class="p">)</span>
+<span class="n">FS_seco</span>     <span class="o">=</span> <span class="n">factor_seguridad</span><span class="p">(</span><span class="n">c</span><span class="p">,</span> <span class="n">phi</span><span class="p">,</span> <span class="n">gamma_s</span><span class="p">,</span> <span class="n">z</span><span class="p">,</span> <span class="n">pendientes</span><span class="p">,</span> <span class="n">m</span><span class="o">=</span><span class="mf">0.0</span><span class="p">)</span>
+<span class="n">FS_parcial</span>  <span class="o">=</span> <span class="n">factor_seguridad</span><span class="p">(</span><span class="n">c</span><span class="p">,</span> <span class="n">phi</span><span class="p">,</span> <span class="n">gamma_s</span><span class="p">,</span> <span class="n">z</span><span class="p">,</span> <span class="n">pendientes</span><span class="p">,</span> <span class="n">m</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span>
+<span class="n">FS_saturado</span> <span class="o">=</span> <span class="n">factor_seguridad</span><span class="p">(</span><span class="n">c</span><span class="p">,</span> <span class="n">phi</span><span class="p">,</span> <span class="n">gamma_s</span><span class="p">,</span> <span class="n">z</span><span class="p">,</span> <span class="n">pendientes</span><span class="p">,</span> <span class="n">m</span><span class="o">=</span><span class="mf">1.0</span><span class="p">)</span>
+
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">9</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">pendientes</span><span class="p">,</span> <span class="n">FS_seco</span><span class="p">,</span>     <span class="s1">&#39;b-&#39;</span><span class="p">,</span>  <span class="n">lw</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Suelo seco (m = 0)&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">pendientes</span><span class="p">,</span> <span class="n">FS_parcial</span><span class="p">,</span>  <span class="s1">&#39;g--&#39;</span><span class="p">,</span> <span class="n">lw</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Parcialmente saturado (m = 0.5)&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">pendientes</span><span class="p">,</span> <span class="n">FS_saturado</span><span class="p">,</span> <span class="s1">&#39;r-&#39;</span><span class="p">,</span>  <span class="n">lw</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Suelo saturado (m = 1)&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">axhline</span><span class="p">(</span><span class="mf">1.0</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;k&#39;</span><span class="p">,</span>      <span class="n">ls</span><span class="o">=</span><span class="s1">&#39;--&#39;</span><span class="p">,</span> <span class="n">lw</span><span class="o">=</span><span class="mf">1.5</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;FS = 1 (falla)&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">axhline</span><span class="p">(</span><span class="mf">1.5</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;orange&#39;</span><span class="p">,</span> <span class="n">ls</span><span class="o">=</span><span class="s1">&#39;:&#39;</span><span class="p">,</span>  <span class="n">lw</span><span class="o">=</span><span class="mf">1.5</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;FS = 1.5 (margen seguridad)&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">fill_between</span><span class="p">(</span><span class="n">pendientes</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.12</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;red&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;Ángulo de pendiente β [°]&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">12</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;Factor de Seguridad (FS)&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">12</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span>
+    <span class="s1">&#39;Factor de Seguridad — Modelo de Talud Infinito</span><span class="se">\n</span><span class="s1">&#39;</span>
+    <span class="sa">f</span><span class="s1">&#39;c = </span><span class="si">{</span><span class="n">c</span><span class="si">}</span><span class="s1"> kPa,  φ = </span><span class="si">{</span><span class="n">phi</span><span class="si">}</span><span class="s1">°,  γs = </span><span class="si">{</span><span class="n">gamma_s</span><span class="si">}</span><span class="s1"> kN/m³,  z = </span><span class="si">{</span><span class="n">z</span><span class="si">}</span><span class="s1"> m&#39;</span><span class="p">,</span>
+    <span class="n">fontsize</span><span class="o">=</span><span class="mi">13</span>
+<span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">fontsize</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylim</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">6</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xlim</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">60</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">True</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.3</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+
+<span class="c1"># ── Mapa de FS para rangos de pendiente ──────────────────────────────────────</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">Tabla de FS por rango de pendiente (suelo saturado):&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="s1">&#39;Pendiente (°)&#39;</span><span class="si">:</span><span class="s1">&lt;18</span><span class="si">}</span><span class="s1"> </span><span class="si">{</span><span class="s1">&#39;FS&#39;</span><span class="si">:</span><span class="s1">&lt;10</span><span class="si">}</span><span class="s1"> </span><span class="si">{</span><span class="s1">&#39;Condición&#39;</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;-&#39;</span> <span class="o">*</span> <span class="mi">40</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">beta</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">10</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">25</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">35</span><span class="p">,</span> <span class="mi">40</span><span class="p">]:</span>
+    <span class="n">fs</span> <span class="o">=</span> <span class="n">factor_seguridad</span><span class="p">(</span><span class="n">c</span><span class="p">,</span> <span class="n">phi</span><span class="p">,</span> <span class="n">gamma_s</span><span class="p">,</span> <span class="n">z</span><span class="p">,</span> <span class="n">beta</span><span class="p">,</span> <span class="n">m</span><span class="o">=</span><span class="mf">1.0</span><span class="p">)</span>
+    <span class="n">cond</span> <span class="o">=</span> <span class="s1">&#39;FALLA&#39;</span> <span class="k">if</span> <span class="n">fs</span> <span class="o">&lt;</span> <span class="mi">1</span> <span class="k">else</span> <span class="p">(</span><span class="s1">&#39;Marginal&#39;</span> <span class="k">if</span> <span class="n">fs</span> <span class="o">&lt;</span> <span class="mf">1.5</span> <span class="k">else</span> <span class="s1">&#39;Estable&#39;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">beta</span><span class="si">:</span><span class="s1">&lt;18</span><span class="si">}</span><span class="s1"> </span><span class="si">{</span><span class="n">fs</span><span class="si">:</span><span class="s1">&lt;10.2f</span><span class="si">}</span><span class="s1"> </span><span class="si">{</span><span class="n">cond</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">line</span> <span class="mi">2</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="ne">----&gt; </span><span class="mi">2</span> <span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="k">def</span><span class="w"> </span><span class="nf">factor_seguridad</span><span class="p">(</span><span class="n">c</span><span class="p">,</span> <span class="n">phi_deg</span><span class="p">,</span> <span class="n">gamma_s</span><span class="p">,</span> <span class="n">z</span><span class="p">,</span> <span class="n">beta_deg</span><span class="p">,</span> <span class="n">m</span><span class="o">=</span><span class="mf">1.0</span><span class="p">,</span> <span class="n">gamma_w</span><span class="o">=</span><span class="mf">9.81</span><span class="p">):</span>
+<span class="g g-Whitespace">      </span><span class="mi">5</span><span class="w">     </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="g g-Whitespace">      </span><span class="mi">6</span><span class="sd">     Factor de Seguridad — Modelo de Talud Infinito.</span>
+<span class="g g-Whitespace">      </span><span class="mi">7</span><span class="sd"> </span>
+<span class="sd">   (...)     20     float o ndarray — Factor de Seguridad</span>
+<span class="g g-Whitespace">     </span><span class="mi">21</span><span class="sd">     &quot;&quot;&quot;</span>
+
+<span class="ne">ModuleNotFoundError</span>: No module named &#39;matplotlib&#39;
+</pre></div>
+</div>
+</div>
+</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">rasterio</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">rio</span>
@@ -699,20 +834,12 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">line</span> <span class="mi">3</span>
-<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="kn">import</span><span class="w"> </span><span class="nn">rasterio</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">rio</span>
-<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
-<span class="ne">----&gt; </span><span class="mi">3</span> <span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
-<span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="c1"># --- CODIFICACIÓN DEL MAPA DE SUSCEPTIBILIDAD ---</span>
-<span class="g g-Whitespace">      </span><span class="mi">6</span> <span class="c1"># El resultado principal es un mapa de estabilidad (o susceptibilidad a deslizamientos)</span>
-<span class="g g-Whitespace">      </span><span class="mi">7</span> <span class="c1"># donde cada celda se clasifica en una de cuatro categorías:</span>
-   <span class="p">(</span><span class="o">...</span><span class="p">)</span>     <span class="mi">27</span> 
-<span class="g g-Whitespace">     </span><span class="mi">28</span> <span class="c1"># --- 1. Definición de Constantes y Parámetros ---</span>
-<span class="g g-Whitespace">     </span><span class="mi">30</span> <span class="n">PESO_UNITARIO_AGUA</span> <span class="o">=</span> <span class="mf">9.81</span>  <span class="c1"># Peso unitario del agua (gamma_w) en [kN/m3]</span>
-
-<span class="ne">ModuleNotFoundError</span>: No module named &#39;matplotlib&#39;
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>C:\Users\edier\AppData\Local\Temp\ipykernel_25124\2575485777.py:134: RuntimeWarning: divide by zero encountered in divide
+  q_crit_m_hr = (transmisividad * np.sin(pendiente) / ratio_hidrologico) * termino_geotecnico
+</pre></div>
+</div>
+<img alt="_images/8eb371face2cdfcd33cd8d2470ae0677344a857664a978b7c7e7b01e270131af.png" src="_images/8eb371face2cdfcd33cd8d2470ae0677344a857664a978b7c7e7b01e270131af.png" />
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Análisis completado. Se han generado los archivos &#39;Matriz_Estabilidad.tif&#39;, &#39;Lluvia_Critica.tif&#39; y &#39;Volumen_Inestable.tif&#39;.
 </pre></div>
 </div>
 </div>
@@ -774,7 +901,6 @@ document.write(`
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">r</span><span class="o">.</span><span class="n">shalstab</span><span class="o">.</span><span class="n">py</span> <span class="n">dem</span><span class="o">=</span><span class="n">dem</span> <span class="n">gamma</span><span class="o">=</span><span class="n">mapa_densidad</span> <span class="n">phy</span><span class="o">=</span><span class="n">mapa_friccion</span> <span class="n">c_soil</span><span class="o">=</span><span class="n">mapa_cohesion</span> <span class="n">z</span><span class="o">=</span><span class="n">mapa_grosor</span> <span class="n">k</span><span class="o">=</span><span class="n">mapa_conductividad</span> <span class="n">susceptibility</span><span class="o">=</span><span class="n">susceptibilidad_variable</span> <span class="n">critic_rain</span><span class="o">=</span><span class="n">lluvia_critica_variable</span>
 </pre></div>
 </div>
-</section>
 </section>
 <section id="modelo-trigrs">
 <h3>Modelo TRIGRS<a class="headerlink" href="#modelo-trigrs" title="Link to this heading">#</a></h3>
@@ -1432,6 +1558,15 @@ El método FOSM permite evaluar la variabilidad de cualquiera de los parámetros
 </section>
 </section>
 </section>
+<section id="actividades">
+<h2>Actividades<a class="headerlink" href="#actividades" title="Link to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p><strong>Análisis de sensibilidad paramétrica:</strong> Usando la función <code class="docutils literal notranslate"><span class="pre">factor_seguridad()</span></code> implementada en este capítulo, varía los parámetros c’ (0–20 kPa), φ’ (20°–35°) y z (0.5–5 m) manteniendo los demás constantes. Construye una tabla que muestre el ángulo crítico de pendiente (donde FS=1) para cada combinación. ¿Cuál parámetro tiene mayor influencia?</p></li>
+<li><p><strong>Mapa de FS con datos reales:</strong> Usando los rasters de pendiente, cohesión y ángulo de fricción de la cuenca La Arenosa (disponibles en el repositorio), calcula el mapa de FS para condiciones saturadas (m=1). Clasifícalo en: FS&lt;1 (falla), 1≤FS&lt;1.5 (marginal), FS≥1.5 (estable). ¿Qué porcentaje del área está en condición de falla?</p></li>
+<li><p><strong>Validación con inventario:</strong> Superpone el mapa de FS calculado con el inventario de la cuenca. ¿Qué porcentaje de los movimientos en masa inventariados ocurre en zonas con FS&lt;1.5? ¿Es el modelo SHALSTAB conservador o subestima la inestabilidad?</p></li>
+<li><p><strong>Comparación SHALSTAB vs. método estadístico:</strong> Compara el mapa de estabilidad SHALSTAB con el mapa de susceptibilidad por Regresión Logística del capítulo 09. Calcula el coeficiente de correlación espacial entre ambos. ¿En qué zonas difieren significativamente los resultados?</p></li>
+</ol>
+</section>
 <section id="referencias">
 <h2>Referencias<a class="headerlink" href="#referencias" title="Link to this heading">#</a></h2>
 <span class="target" id="id3"></span></section>
@@ -1501,11 +1636,14 @@ El método FOSM permite evaluar la variabilidad de cualquiera de los parámetros
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#objetivos-de-aprendizaje">Objetivos de aprendizaje</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#requisitos-previos">Requisitos previos</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#factor-detonante-lluvia">Factor detonante lluvia</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#modelo-shalstab">Modelo SHALSTAB</a><ul class="nav section-nav flex-column">
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#python">Python</a></li>
 </ul>
 </li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#factor-de-seguridad-modelo-de-talud-infinito">Factor de Seguridad: Modelo de Talud Infinito</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#modelo-trigrs">Modelo TRIGRS</a><ul class="nav section-nav flex-column">
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#tutorial">Tutorial</a><ul class="nav section-nav flex-column">
 <li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#preparacion-de-los-mapas">Preparación de los mapas</a></li>
@@ -1537,6 +1675,7 @@ El método FOSM permite evaluar la variabilidad de cualquiera de los parámetros
 </li>
 </ul>
 </li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#actividades">Actividades</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#referencias">Referencias</a></li>
 </ul>
   </nav></div>

@@ -32,7 +32,7 @@
     <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=eba8b062" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=9c3e77be" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css?v=6644e6bb" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
   
@@ -396,6 +396,8 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#objetivos-de-aprendizaje">Objetivos de aprendizaje</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#requisitos-previos">Requisitos previos</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#probabilidad-espacial">Probabilidad espacial</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#probabilidad-temporal">Probabilidad temporal</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#cualitativo">Cualitativo</a></li>
@@ -426,7 +428,11 @@ document.write(`
 </li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#probabilidad-de-magnitud">Probabilidad de magnitud</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#probabilidad-de-magnitud">Probabilidad de magnitud</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#implementacion-umbrales-de-lluvia-intensidadduracion-i-d">Implementación: Umbrales de Lluvia Intensidad–Duración (I-D)</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#actividades">Actividades</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#referencias">Referencias</a></li>
 </ul>
             </nav>
@@ -441,7 +447,7 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="analisis-del-factor-detonante">
 <h1>Análisis del factor detonante<a class="headerlink" href="#analisis-del-factor-detonante" title="Link to this heading">#</a></h1>
-<p><span id="id1">Varnes <em>et al.</em> [<a class="reference internal" href="#id60" title="David Varnes, Unesco, and International Association of Engineering Geology. Landslide hazard zonation : a review of principles and practice / David J. Varnes and the International Association of Engineering Geology, Commission on Landslides and Other Mass Movements on Slopes. Unesco Paris, 1984. ISBN 9231018957.">1984</a>]</span> define la amenaza como la probabilidad de ocurrencia de un fenómeno potencialmente destructivo en un periodo de tiempo específico y sobre una determinada área. <span id="id2">Reichenbach [<a class="reference internal" href="#id64" title="Fausto Guzzetti Alberto Carrara Mauro Cardinali Paola Reichenbach. Landslide hazard evaluation: a review of current techniques and their application in a multi-scale study, central italy. Geomorphology, 31:181-216, 1999.">1999</a>]</span> incluye además, como parte de la amenaza, la magnitud o intensidad de los movimientos en masa como un componente fundamental dentro de la amenaza. De igual forma se debe considerar la propagación, especialmente para movimientos en masa tipo flujos, que se caracterizan por recorridos extensos donde generalmente se presentan los daños o afectaciones.</p>
+<p><span id="id1">Varnes <em>et al.</em> [<a class="reference internal" href="#id62" title="David Varnes, Unesco, and International Association of Engineering Geology. Landslide hazard zonation : a review of principles and practice / David J. Varnes and the International Association of Engineering Geology, Commission on Landslides and Other Mass Movements on Slopes. Unesco Paris, 1984. ISBN 9231018957.">1984</a>]</span> define la amenaza como la probabilidad de ocurrencia de un fenómeno potencialmente destructivo en un periodo de tiempo específico y sobre una determinada área. <span id="id2">Reichenbach [<a class="reference internal" href="#id66" title="Fausto Guzzetti Alberto Carrara Mauro Cardinali Paola Reichenbach. Landslide hazard evaluation: a review of current techniques and their application in a multi-scale study, central italy. Geomorphology, 31:181-216, 1999.">1999</a>]</span> incluye además, como parte de la amenaza, la magnitud o intensidad de los movimientos en masa como un componente fundamental dentro de la amenaza. De igual forma se debe considerar la propagación, especialmente para movimientos en masa tipo flujos, que se caracterizan por recorridos extensos donde generalmente se presentan los daños o afectaciones.</p>
 <p>En este sentido, la zonificación de la amenaza corresponde a la subdivisión del terreno en zonas que son caracterizadas por la probabilidad temporal de la ocurrencia de movimientos en masa de un volumen particular, en un periodo de tiempo dado. Por lo que los mapas de amenaza por movimientos en masa deben indicar tanto el área donde el movimiento puede ocurrir, como la zona de propagación. Una completa evaluación de la amenaza por movimientos en masa cuantitativa incluye:</p>
 <ul class="simple">
 <li><p><strong>Probabilidad espacial (<span class="math notranslate nohighlight">\(P_s\)</span>):</strong>. La probabilidad que un área dada sea golpeada por un deslizamiento</p></li>
@@ -450,6 +456,26 @@ document.write(`
 <li><p><strong>Probabilidad propagación (<span class="math notranslate nohighlight">\(P_p\)</span>):</strong>. La probabilidad que un deslizamiento alcanzará una cierta distancia ladera abajo</p></li>
 </ul>
 <p>Para calcular la amenaza, muchos autores proponen considerar las diferentes probabilidades como independientes, de tal forma que la amenaza puede ser calculada como el producto de todas las probabilidades.</p>
+<section id="objetivos-de-aprendizaje">
+<h2>Objetivos de aprendizaje<a class="headerlink" href="#objetivos-de-aprendizaje" title="Link to this heading">#</a></h2>
+<p>Al finalizar este capítulo, el estudiante será capaz de:</p>
+<ul class="simple">
+<li><p>Distinguir entre susceptibilidad, amenaza y riesgo en el contexto de movimientos en masa.</p></li>
+<li><p>Comprender las tres componentes de la amenaza: probabilidad espacial, temporal y de magnitud.</p></li>
+<li><p>Calcular umbrales de lluvia intensidad-duración (I-D) mediante ajuste de curvas potenciales con datos históricos.</p></li>
+<li><p>Evaluar si un evento de lluvia específico supera el umbral de detonación.</p></li>
+</ul>
+<p><strong>Duración estimada:</strong> 2–3 horas</p>
+</section>
+<section id="requisitos-previos">
+<h2>Requisitos previos<a class="headerlink" href="#requisitos-previos" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><strong>Python:</strong> <code class="docutils literal notranslate"><span class="pre">numpy</span></code>, <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code>, <code class="docutils literal notranslate"><span class="pre">scipy.optimize</span></code> (ajuste de curvas).</p></li>
+<li><p><strong>Hidrología:</strong> intensidad de lluvia, duración de eventos, pluviógrafos.</p></li>
+<li><p><strong>Estadística:</strong> regresión potencial, análisis de frecuencia, intervalos de confianza.</p></li>
+<li><p><strong>Capítulos anteriores:</strong> <code class="docutils literal notranslate"><span class="pre">07_detonante</span></code> (factores detonantes), <code class="docutils literal notranslate"><span class="pre">09_estadistico</span></code> (susceptibilidad como probabilidad espacial).</p></li>
+</ul>
+</section>
 <section id="probabilidad-espacial">
 <h2>Probabilidad espacial<a class="headerlink" href="#probabilidad-espacial" title="Link to this heading">#</a></h2>
 <p>La probabilidad espacial corresponde a la susceptibilidad del terreno a ocurrir un movimiento en masa, por lo tanto responde a la pregunta del <strong>dónde?</strong>. Se obtiene esencialmente a partir de métodos que incorporan las variables condicionantes, tales como metodologias basados en el conocimiento (heurísticas) o basadas en datos (estadísticas). Los métodos con base física generalmente incorporan dentro del análisis el factor detonante, por lo cual pueden ser consideradas para evaluar la amenaza directamente.</p>
@@ -508,7 +534,7 @@ document.write(`
 <h4>Lluvia<a class="headerlink" href="#lluvia" title="Link to this heading">#</a></h4>
 <section id="caso-de-umbrales-de-una-variable">
 <h5>Caso de umbrales de una variable<a class="headerlink" href="#caso-de-umbrales-de-una-variable" title="Link to this heading">#</a></h5>
-<p>Para movimientos en masa detonados por lluvia, <span id="id5">Berti <em>et al.</em> [<a class="reference internal" href="#id88" title="M Berti, M. L.V. Martina, S Franceschini, S Pignone, A Simoni, and M Pizziolo. Probabilistic rainfall thresholds for landslide occurrence using a bayesian approach. Journal of Geophysical Research: Earth Surface, 117:1-20, 2012. doi:10.1029/2012JF002367.">2012</a>]</span> proponen utilizar la probabilidad condicionada, definida como la probabilidad de la ocurrencia de algún evento <em>L</em> (en nuestro caso un movimiento en masa) dado la ocurrencia  de algún otro evento <em>R</em> (un evento de lluvia con una magnitud específica, expresado en términos de lluvia total, intensidad o cualquier otra variable). La probabilidad condicionada se escribe <span class="math notranslate nohighlight">\(P(L/R)\)</span> y se lee <em>la probabilidad que un movimiento en masa (L) ocurra dado un evento de lluvia (R)</em>. Esta probabilidad está determinada por el teorema de <em>Bayes</em>:</p>
+<p>Para movimientos en masa detonados por lluvia, <span id="id5">Berti <em>et al.</em> [<a class="reference internal" href="#id90" title="M Berti, M. L.V. Martina, S Franceschini, S Pignone, A Simoni, and M Pizziolo. Probabilistic rainfall thresholds for landslide occurrence using a bayesian approach. Journal of Geophysical Research: Earth Surface, 117:1-20, 2012. doi:10.1029/2012JF002367.">2012</a>]</span> proponen utilizar la probabilidad condicionada, definida como la probabilidad de la ocurrencia de algún evento <em>L</em> (en nuestro caso un movimiento en masa) dado la ocurrencia  de algún otro evento <em>R</em> (un evento de lluvia con una magnitud específica, expresado en términos de lluvia total, intensidad o cualquier otra variable). La probabilidad condicionada se escribe <span class="math notranslate nohighlight">\(P(L/R)\)</span> y se lee <em>la probabilidad que un movimiento en masa (L) ocurra dado un evento de lluvia (R)</em>. Esta probabilidad está determinada por el teorema de <em>Bayes</em>:</p>
 <p><span class="math notranslate nohighlight">\(P(A/B)=\frac{P(B/A)P(A)}{P(B)}\)</span></p>
 <p>Donde:</p>
 <p><span class="math notranslate nohighlight">\(P(B/A)\)</span>= probabilidad condicionada de R dado L (tambien llamado probabilidad (<em>likelihood</em>)), que es la probabilidad de observar un evento de lluvia de magnitud R cuando ocurre un movimiento en masa.</p>
@@ -534,17 +560,17 @@ document.write(`
 </section>
 <section id="caso-de-umbrales-de-dos-variables">
 <h5>Caso de umbrales de dos variables<a class="headerlink" href="#caso-de-umbrales-de-dos-variables" title="Link to this heading">#</a></h5>
-<p>De acuerdo con <span id="id7">Jaiswal and van Westen [<a class="reference internal" href="#id89" title="Pankaj Jaiswal and Cees J. van Westen. Estimating temporal probability for landslide initiation along transportation routes based on rainfall thresholds. Geomorphology, 112:96-105, 11 2009. doi:10.1016/j.geomorph.2009.05.008.">2009</a>]</span> la probabilidad temporal de movimientos en masa detonados por lluvias puede ser obtenida evaluando la probabilidad temporal de los eventos de lluvia, combinado con un análisis de umbrales de lluvia basados en dos variables. Para que un movimiento en masa <span class="math notranslate nohighlight">\(L\)</span> ocurra, la lluvia acumulada diaria debe exceder un umbral, el cual es una función <span class="math notranslate nohighlight">\(R(t)\)</span> de la lluvia total en un periodo <span class="math notranslate nohighlight">\(R_d(t)\)</span>, y de la cantidad de lluvia antecedente <span class="math notranslate nohighlight">\(R_{ad(t)}\)</span>. Estos autores proponen utilizar la probabilidad de excedencia del un umbral de lluvia y la probabilidad de ocurrencia de un movimiento en masa dado que el umbral de lluvia se supere.</p>
+<p>De acuerdo con <span id="id7">Jaiswal and van Westen [<a class="reference internal" href="#id91" title="Pankaj Jaiswal and Cees J. van Westen. Estimating temporal probability for landslide initiation along transportation routes based on rainfall thresholds. Geomorphology, 112:96-105, 11 2009. doi:10.1016/j.geomorph.2009.05.008.">2009</a>]</span> la probabilidad temporal de movimientos en masa detonados por lluvias puede ser obtenida evaluando la probabilidad temporal de los eventos de lluvia, combinado con un análisis de umbrales de lluvia basados en dos variables. Para que un movimiento en masa <span class="math notranslate nohighlight">\(L\)</span> ocurra, la lluvia acumulada diaria debe exceder un umbral, el cual es una función <span class="math notranslate nohighlight">\(R(t)\)</span> de la lluvia total en un periodo <span class="math notranslate nohighlight">\(R_d(t)\)</span>, y de la cantidad de lluvia antecedente <span class="math notranslate nohighlight">\(R_{ad(t)}\)</span>. Estos autores proponen utilizar la probabilidad de excedencia del un umbral de lluvia y la probabilidad de ocurrencia de un movimiento en masa dado que el umbral de lluvia se supere.</p>
 <p>Si <span class="math notranslate nohighlight">\(R_T\)</span> es el valor del umbral de <span class="math notranslate nohighlight">\(R\)</span> entonces la probabilidad de ocurrencia de un movimiento en masa <span class="math notranslate nohighlight">\(P(L)\)</span> depende de la probabildid de excedencia de <span class="math notranslate nohighlight">\(P[R&gt;R_T]\)</span>. Por lo tanto, la probabilidad de ocurrencia de movimientos en masa puede ser dada por la intersección de estas dos probabilidades:</p>
 <p><span class="math notranslate nohighlight">\(P[(R&gt;R_T)L]=P[R&gt;R_T]P[L/R&gt;R_T]\)</span></p>
 <p>Esto significa que la probabilidad de ocurrencia de [<span class="math notranslate nohighlight">\(R&gt;R_T\)</span>] y [<span class="math notranslate nohighlight">\(L\)</span>] es igual a la probabilidad de [<span class="math notranslate nohighlight">\(R&gt;R_T\)</span>] multiplicada por la probabilidad de ocurrencia de [L], asumiendo que [<span class="math notranslate nohighlight">\(R&gt;R_T\)</span>] ha ocurrido. La probabilidad de [<span class="math notranslate nohighlight">\(R&gt;R_T\)</span>] puede ser obtenida determinando la probabilidad de excedencia del umbral de lluvia y la probabilidad de [<span class="math notranslate nohighlight">\(L R&gt;R_T\)</span>] se obtiene de la frecuencia de ocurrencia de movimientos en masa luego que el umbral ha sido excedido. En este análisis se está asumiendo que siempre se presentan movimientos en masa cuando se sobrepasa el umbral, y que no ocurren movimientos en masa por debajo del umbral.</p>
-<p>Dependiendo del tipo de movimiento en masa y sus factores condicionantes, el número de dias de lluvia antecedente del umbral puede variar. <span id="id8">Jaiswal and van Westen [<a class="reference internal" href="#id89" title="Pankaj Jaiswal and Cees J. van Westen. Estimating temporal probability for landslide initiation along transportation routes based on rainfall thresholds. Geomorphology, 112:96-105, 11 2009. doi:10.1016/j.geomorph.2009.05.008.">2009</a>]</span> proponen desde 3 dias para deslizamientos superficiales hasta 30 para deslizamientos profundos. Sin embargo esto debe ser establecido para cada caso.</p>
+<p>Dependiendo del tipo de movimiento en masa y sus factores condicionantes, el número de dias de lluvia antecedente del umbral puede variar. <span id="id8">Jaiswal and van Westen [<a class="reference internal" href="#id91" title="Pankaj Jaiswal and Cees J. van Westen. Estimating temporal probability for landslide initiation along transportation routes based on rainfall thresholds. Geomorphology, 112:96-105, 11 2009. doi:10.1016/j.geomorph.2009.05.008.">2009</a>]</span> proponen desde 3 dias para deslizamientos superficiales hasta 30 para deslizamientos profundos. Sin embargo esto debe ser establecido para cada caso.</p>
 <p>En este sentido, lo primero que se debe establecer es el umbral, para estos se utiliza una figura como la siguiente, doden se debe graficar la ocurrencia de movimientos en masa de acuerdo con la lluvia acumulada de 24h del dia de ocurrencia y la lluvia acumulada antecedente del número de dias que se defina.</p>
 <figure class="align-default" id="umbral">
 <a class="reference internal image-reference" href="https://i.pinimg.com/564x/c4/65/56/c4655678889264757b5725e1e5e8700e.jpg"><img alt="umbral" src="https://i.pinimg.com/564x/c4/65/56/c4655678889264757b5725e1e5e8700e.jpg" style="width: 600px;" />
 </a>
 <figcaption>
-<p><span class="caption-number">Fig. 92 </span><span class="caption-text">Umbrales de lluvia para lluvia de 24h y lluvia antecedente. Tomado de <span id="id9">Castiblanco <em>et al.</em> [<a class="reference internal" href="#id43" title="E.A. Rodríguez Castiblanco, J.H. Sandoval Ramírez, J.L. Chaparro Cordón, G.A. Trejos González, E. Medina Bello, K.C. Ramírez Hernández, E. Castro Marín, J.A. Castro Guerra, and G.L Ruiz Peña. Guía metodológica para la zonificación de amenaza por movimientos en masa escala 1: 25.000. Guías técnicas y métodos de trabajo en geociencias y asuntos nucleares. Libros del Servicio Geológico Colombiano, dic. 2017. URL: https://libros.sgc.gov.co/index.php/editorial/catalog/book/34.">2017</a>]</span></span><a class="headerlink" href="#umbral" title="Link to this image">#</a></p>
+<p><span class="caption-number">Fig. 92 </span><span class="caption-text">Umbrales de lluvia para lluvia de 24h y lluvia antecedente. Tomado de <span id="id9">Castiblanco <em>et al.</em> [<a class="reference internal" href="#id45" title="E.A. Rodríguez Castiblanco, J.H. Sandoval Ramírez, J.L. Chaparro Cordón, G.A. Trejos González, E. Medina Bello, K.C. Ramírez Hernández, E. Castro Marín, J.A. Castro Guerra, and G.L Ruiz Peña. Guía metodológica para la zonificación de amenaza por movimientos en masa escala 1: 25.000. Guías técnicas y métodos de trabajo en geociencias y asuntos nucleares. Libros del Servicio Geológico Colombiano, dic. 2017. URL: https://libros.sgc.gov.co/index.php/editorial/catalog/book/34.">2017</a>]</span></span><a class="headerlink" href="#umbral" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 <p>Posteriormente, la probabilidad de excedencia anual del umbral se puede estimar utilizando el modelo de <em>Poisson</em> visto anteriormente. Donde la probabilidad de excedencia del umbral <span class="math notranslate nohighlight">\(R_T\)</span> durante el tiempo <em>t</em> está dada por:</p>
@@ -552,13 +578,13 @@ document.write(`
 <p>En cuanto a la probabilidad de ocurrencia de un movimiento en masa, dado que el umbral se supere, se puede obtener a partir de la frecuencia de los datos de lluvia y movimientos en masa. La probabilidad temporal final se obtiene de multiplicar ambas probabilidades.</p>
 <section id="id10">
 <h6>Ejemplo<a class="headerlink" href="#id10" title="Link to this heading">#</a></h6>
-<p>En este ejemplo tomado de <span id="id11">Jaiswal and van Westen [<a class="reference internal" href="#id89" title="Pankaj Jaiswal and Cees J. van Westen. Estimating temporal probability for landslide initiation along transportation routes based on rainfall thresholds. Geomorphology, 112:96-105, 11 2009. doi:10.1016/j.geomorph.2009.05.008.">2009</a>]</span> se presenta el caso de un tramo de vía de 19 km en el estado de <em>Tamilnadu</em> en la India, donde para el secotr de <em>Burliyar</em> el umbral fue excedido 53 veces en 15 años. Por lo tanto el intervalo de recuerrencia medio (<span class="math notranslate nohighlight">\(u\)</span>) es <span class="math notranslate nohighlight">\(15/53 = 0.28\)</span>. Utilizando el modelo de <em>Poisson</em> la probabildiad de excedencia anual del umbral de lluvia es 0.97.  De acuerdo con la tabla el umbral de lluvia fue excedido 29, 27, 30 y 15 veces para los sectores de <em>Hillgrove</em>, <em>Marapallam</em>, <em>Runneymede</em> y para la ruta entera respectivamente, obteniendo del modelo de <em>Poisson</em> una probabilidad de excedencia anual de 0.85, 0.83, 0.86 y 0.63, respectivamente.</p>
+<p>En este ejemplo tomado de <span id="id11">Jaiswal and van Westen [<a class="reference internal" href="#id91" title="Pankaj Jaiswal and Cees J. van Westen. Estimating temporal probability for landslide initiation along transportation routes based on rainfall thresholds. Geomorphology, 112:96-105, 11 2009. doi:10.1016/j.geomorph.2009.05.008.">2009</a>]</span> se presenta el caso de un tramo de vía de 19 km en el estado de <em>Tamilnadu</em> en la India, donde para el secotr de <em>Burliyar</em> el umbral fue excedido 53 veces en 15 años. Por lo tanto el intervalo de recuerrencia medio (<span class="math notranslate nohighlight">\(u\)</span>) es <span class="math notranslate nohighlight">\(15/53 = 0.28\)</span>. Utilizando el modelo de <em>Poisson</em> la probabildiad de excedencia anual del umbral de lluvia es 0.97.  De acuerdo con la tabla el umbral de lluvia fue excedido 29, 27, 30 y 15 veces para los sectores de <em>Hillgrove</em>, <em>Marapallam</em>, <em>Runneymede</em> y para la ruta entera respectivamente, obteniendo del modelo de <em>Poisson</em> una probabilidad de excedencia anual de 0.85, 0.83, 0.86 y 0.63, respectivamente.</p>
 <p>La probabilidad de ocurrencia de movimientos en masa dado que el umbral se exceda es estimada para 8 unidades diferentes, para el sector de <em>Burliyar</em>, el <span class="math notranslate nohighlight">\(R_T\)</span> fue excedido 53 en 15 años. En la unidad I, en 17 casos se presentaron movimientos en masa, lo que corresponde a una probabilidad estimada <span class="math notranslate nohighlight">\(P[L/R&gt;R_T]\)</span> de <span class="math notranslate nohighlight">\(17/53=0.32\)</span>. Para este caso, unidad I del sector <em>Burliyar</em>, la probabilidad de tener uno o mas eventos de lluvia que puedan detonar movimientos en masa en cualquier año es de <span class="math notranslate nohighlight">\(0.97*0.32=0.31\)</span>. Las probabilidades más altas para este ejemplo se dan en las regiones II y III, y para la ruta entera.</p>
 <figure class="align-default" id="ejemplo-umbral">
 <a class="reference internal image-reference" href="https://i.pinimg.com/564x/98/80/0a/98800ad48141befad2aaa130876d2dab.jpg"><img alt="ejemplo umbral" src="https://i.pinimg.com/564x/98/80/0a/98800ad48141befad2aaa130876d2dab.jpg" style="width: 600px;" />
 </a>
 <figcaption>
-<p><span class="caption-number">Fig. 93 </span><span class="caption-text">Ejemplo tomado de <span id="id12">Jaiswal and van Westen [<a class="reference internal" href="#id89" title="Pankaj Jaiswal and Cees J. van Westen. Estimating temporal probability for landslide initiation along transportation routes based on rainfall thresholds. Geomorphology, 112:96-105, 11 2009. doi:10.1016/j.geomorph.2009.05.008.">2009</a>]</span></span><a class="headerlink" href="#ejemplo-umbral" title="Link to this image">#</a></p>
+<p><span class="caption-number">Fig. 93 </span><span class="caption-text">Ejemplo tomado de <span id="id12">Jaiswal and van Westen [<a class="reference internal" href="#id91" title="Pankaj Jaiswal and Cees J. van Westen. Estimating temporal probability for landslide initiation along transportation routes based on rainfall thresholds. Geomorphology, 112:96-105, 11 2009. doi:10.1016/j.geomorph.2009.05.008.">2009</a>]</span></span><a class="headerlink" href="#ejemplo-umbral" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 </section>
@@ -569,12 +595,12 @@ document.write(`
 <section id="probabilidad-de-magnitud">
 <h2>Probabilidad de magnitud<a class="headerlink" href="#probabilidad-de-magnitud" title="Link to this heading">#</a></h2>
 <p>El principio de frecuencia y magnitud ha sido ampliamente utilizado en sismologia, donde es conocido como la relación de <em>Gutenberg-Richter</em>. Sin embargo esta relación entre magnitud y frecuencia se observa en la mayoria de los procesos morfodinámicos, entre ellos los movimientos en masa.</p>
-<p>Para el caso de movimientos en masa existe un número importante de correlaciones entre magnitud y frecuencia, pero son dificiles de comparar por que la mayoria de los inventario de movimientos en masa no distinguen entre los tipos de movimientos en masa, y esta relación parece ser dependiente del tipo de evento. Tambien las relaciones de magnitud - frecuencia para movimientos en masa utilizan diferentes tipos de ploteo, en unos casos cumulativa vs no-cumulativa, linear vs logaritmico, entre otros. Otro tema importante es que difieren en el uso de la variable que define la magnitud; algunos autores definen el área sobre la ladera, otros el cuadrado del ancho. La magnitud es una medida de la energía liberada durante el movimiento en masa. <span id="id13">Hungr <em>et al.</em> [<a class="reference internal" href="#id93" title="Oldrich Hungr, Scott McDougall, Mike Wise, and Michael Cullen. Magnitude-frequency relationships of debris flows and debris avalanches in relation to slope relief. Geomorphology, 96:355-365, 2008. doi:10.1016/j.geomorph.2007.03.020.">2008</a>]</span> proponen como variable el volumen, y como <em>proxy</em> el área. A continuación se presenta la correlación entre el volumen de los movimientos en masa y el área.</p>
+<p>Para el caso de movimientos en masa existe un número importante de correlaciones entre magnitud y frecuencia, pero son dificiles de comparar por que la mayoria de los inventario de movimientos en masa no distinguen entre los tipos de movimientos en masa, y esta relación parece ser dependiente del tipo de evento. Tambien las relaciones de magnitud - frecuencia para movimientos en masa utilizan diferentes tipos de ploteo, en unos casos cumulativa vs no-cumulativa, linear vs logaritmico, entre otros. Otro tema importante es que difieren en el uso de la variable que define la magnitud; algunos autores definen el área sobre la ladera, otros el cuadrado del ancho. La magnitud es una medida de la energía liberada durante el movimiento en masa. <span id="id13">Hungr <em>et al.</em> [<a class="reference internal" href="#id95" title="Oldrich Hungr, Scott McDougall, Mike Wise, and Michael Cullen. Magnitude-frequency relationships of debris flows and debris avalanches in relation to slope relief. Geomorphology, 96:355-365, 2008. doi:10.1016/j.geomorph.2007.03.020.">2008</a>]</span> proponen como variable el volumen, y como <em>proxy</em> el área. A continuación se presenta la correlación entre el volumen de los movimientos en masa y el área.</p>
 <figure class="align-default" id="magnitud">
 <a class="reference internal image-reference" href="https://ars.els-cdn.com/content/image/1-s2.0-S0169555X07001912-gr5.gif"><img alt="magnitud" src="https://ars.els-cdn.com/content/image/1-s2.0-S0169555X07001912-gr5.gif" style="width: 500px;" />
 </a>
 <figcaption>
-<p><span class="caption-number">Fig. 94 </span><span class="caption-text">Autores como <span id="id14">Hungr <em>et al.</em> [<a class="reference internal" href="#id93" title="Oldrich Hungr, Scott McDougall, Mike Wise, and Michael Cullen. Magnitude-frequency relationships of debris flows and debris avalanches in relation to slope relief. Geomorphology, 96:355-365, 2008. doi:10.1016/j.geomorph.2007.03.020.">2008</a>]</span> han correlacionado diferentes variables de los movimientos en masa con el volumen, en este caso volumen total, área fuente, area total, longitud sobre la ladera.</span><a class="headerlink" href="#magnitud" title="Link to this image">#</a></p>
+<p><span class="caption-number">Fig. 94 </span><span class="caption-text">Autores como <span id="id14">Hungr <em>et al.</em> [<a class="reference internal" href="#id95" title="Oldrich Hungr, Scott McDougall, Mike Wise, and Michael Cullen. Magnitude-frequency relationships of debris flows and debris avalanches in relation to slope relief. Geomorphology, 96:355-365, 2008. doi:10.1016/j.geomorph.2007.03.020.">2008</a>]</span> han correlacionado diferentes variables de los movimientos en masa con el volumen, en este caso volumen total, área fuente, area total, longitud sobre la ladera.</span><a class="headerlink" href="#magnitud" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 <p>Considerando el volumen o área de los movimientos en masa como variable que expresa la magnitud, se puede observar una relación tipo ley potencial entre la magnitud y la frecuencia para movimientos medios y grandes, para el caso de eventos pequeños se aleja de esta distribución con un cambio del signo de la pendiente. El punto a partir del cual se presenta este cambio se conoce como <em>rollover point</em>.</p>
@@ -582,69 +608,169 @@ document.write(`
 <a class="reference internal image-reference" href="https://onlinelibrary.wiley.com/cms/asset/8a1e2fa6-efbd-46b7-9f86-2f03aa9a35e5/esp4359-fig-0001-m.jpg"><img alt="magnitud-frecuencia" src="https://onlinelibrary.wiley.com/cms/asset/8a1e2fa6-efbd-46b7-9f86-2f03aa9a35e5/esp4359-fig-0001-m.jpg" style="width: 600px;" />
 </a>
 <figcaption>
-<p><span class="caption-number">Fig. 95 </span><span class="caption-text">Relacion entre frecuencia y magnitud de movimiento en masa. Tomado de <span id="id15">Tanyaş <em>et al.</em> [<a class="reference internal" href="#id90" title="Hakan Tanyaş, Kate E. Allstadt, and Cees J. van Westen. An updated method for estimating landslide-event magnitude. Earth Surface Processes and Landforms, 43:1836-1847, 7 2018. doi:10.1002/esp.4359.">2018</a>]</span>.</span><a class="headerlink" href="#magnitud-frecuencia" title="Link to this image">#</a></p>
+<p><span class="caption-number">Fig. 95 </span><span class="caption-text">Relacion entre frecuencia y magnitud de movimiento en masa. Tomado de <span id="id15">Tanyaş <em>et al.</em> [<a class="reference internal" href="#id92" title="Hakan Tanyaş, Kate E. Allstadt, and Cees J. van Westen. An updated method for estimating landslide-event magnitude. Earth Surface Processes and Landforms, 43:1836-1847, 7 2018. doi:10.1002/esp.4359.">2018</a>]</span>.</span><a class="headerlink" href="#magnitud-frecuencia" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
-<p>Para representar esta relación entre magnitud y frecuencia se proponen dos tipos de ajustes. La distribución de <em>double-Pareto</em> y la distribución <em>gamma</em> inversa . Para el caso de <em>double-Pareto</em>, propuesta por <span id="id16">Stark and Hovius [<a class="reference internal" href="#id92" title="C. P. Stark and N. Hovius. The characterization of landslide size distributions. Geophysical Research Letters, 28:1091-1094, 3 2001. doi:10.1029/2000GL008527.">2001</a>]</span>, se utilizan dos régimenes de escalamiento, un decaimiento con una función potencial negativa para los grandes y medios movimientos en masa, y una funcion potencial positiva para los pequeños movimientos en masa.</p>
+<p>Para representar esta relación entre magnitud y frecuencia se proponen dos tipos de ajustes. La distribución de <em>double-Pareto</em> y la distribución <em>gamma</em> inversa . Para el caso de <em>double-Pareto</em>, propuesta por <span id="id16">Stark and Hovius [<a class="reference internal" href="#id94" title="C. P. Stark and N. Hovius. The characterization of landslide size distributions. Geophysical Research Letters, 28:1091-1094, 3 2001. doi:10.1029/2000GL008527.">2001</a>]</span>, se utilizan dos régimenes de escalamiento, un decaimiento con una función potencial negativa para los grandes y medios movimientos en masa, y una funcion potencial positiva para los pequeños movimientos en masa.</p>
 <figure class="align-default" id="double-pareto">
 <a class="reference internal image-reference" href="https://i.pinimg.com/564x/3b/d8/dd/3bd8dded02edae032a316c715c73f374.jpg"><img alt="double-pareto" src="https://i.pinimg.com/564x/3b/d8/dd/3bd8dded02edae032a316c715c73f374.jpg" style="width: 600px;" />
 </a>
 <figcaption>
-<p><span class="caption-number">Fig. 96 </span><span class="caption-text">Relacion entre frecuencia y magnitud de movimiento en masa ajustada a la distribución de <em>double-Pareto</em>. Tomado de <span id="id17">Stark and Hovius [<a class="reference internal" href="#id92" title="C. P. Stark and N. Hovius. The characterization of landslide size distributions. Geophysical Research Letters, 28:1091-1094, 3 2001. doi:10.1029/2000GL008527.">2001</a>]</span>.</span><a class="headerlink" href="#double-pareto" title="Link to this image">#</a></p>
+<p><span class="caption-number">Fig. 96 </span><span class="caption-text">Relacion entre frecuencia y magnitud de movimiento en masa ajustada a la distribución de <em>double-Pareto</em>. Tomado de <span id="id17">Stark and Hovius [<a class="reference internal" href="#id94" title="C. P. Stark and N. Hovius. The characterization of landslide size distributions. Geophysical Research Letters, 28:1091-1094, 3 2001. doi:10.1029/2000GL008527.">2001</a>]</span>.</span><a class="headerlink" href="#double-pareto" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
-<p>La función <em>gamma</em> inversa es propuesta por <span id="id18">Malamud <em>et al.</em> [<a class="reference internal" href="#id91">2004</a>]</span>, donde para incluir el <em>rollover point</em> utiliza tres parámetros.</p>
+<p>La función <em>gamma</em> inversa es propuesta por <span id="id18">Malamud <em>et al.</em> [<a class="reference internal" href="#id93">2004</a>]</span>, donde para incluir el <em>rollover point</em> utiliza tres parámetros.</p>
 <p><span class="math notranslate nohighlight">\(p(A_L; \rho, a, s)=\frac{1}{ar(\rho)}[\frac{a}{A_L-s}]^{\rho+1}exp[-\frac{a}{A_L - s}]\)</span></p>
 <p>Donde <span class="math notranslate nohighlight">\(\rho\)</span> es el parámetro que controla el decaimiento de la ley potencial para valores medios y grandes de movimientos en masa, <span class="math notranslate nohighlight">\(r(\rho)\)</span> es la función <em>gamma</em> de <span class="math notranslate nohighlight">\(\rho\)</span>, <span class="math notranslate nohighlight">\(A_L\)</span> es el área de movimientos en masa (<span class="math notranslate nohighlight">\(m^2\)</span>), <span class="math notranslate nohighlight">\(a\)</span> es la localización del máximo de la distribución de probabilidad (<span class="math notranslate nohighlight">\(m^2\)</span>), el cual se refiere al <em>rollover point</em>, <span class="math notranslate nohighlight">\(s\)</span> es el decaimiento exponencial para movimientos en masa pequeños (<span class="math notranslate nohighlight">\(m^2\)</span>), y <span class="math notranslate nohighlight">\(-(\rho +1)\)</span> es el exponente de la ley potencial.</p>
 <figure class="align-default" id="gamma-inverso">
 <a class="reference internal image-reference" href="https://i.pinimg.com/564x/4b/54/a4/4b54a4b73c0116d24ed9004e866aeaa9.jpg"><img alt="gamma inverso" src="https://i.pinimg.com/564x/4b/54/a4/4b54a4b73c0116d24ed9004e866aeaa9.jpg" style="width: 600px;" />
 </a>
 <figcaption>
-<p><span class="caption-number">Fig. 97 </span><span class="caption-text">Relacion entre frecuencia y magnitud de movimiento en masa ajusta a la función <em>gamma</em> inversa. Tomado de <span id="id19">Malamud <em>et al.</em> [<a class="reference internal" href="#id91">2004</a>]</span>.</span><a class="headerlink" href="#gamma-inverso" title="Link to this image">#</a></p>
+<p><span class="caption-number">Fig. 97 </span><span class="caption-text">Relacion entre frecuencia y magnitud de movimiento en masa ajusta a la función <em>gamma</em> inversa. Tomado de <span id="id19">Malamud <em>et al.</em> [<a class="reference internal" href="#id93">2004</a>]</span>.</span><a class="headerlink" href="#gamma-inverso" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
+<section id="implementacion-umbrales-de-lluvia-intensidadduracion-i-d">
+<h3>Implementación: Umbrales de Lluvia Intensidad–Duración (I-D)<a class="headerlink" href="#implementacion-umbrales-de-lluvia-intensidadduracion-i-d" title="Link to this heading">#</a></h3>
+<p>Los umbrales de lluvia relacionan la <strong>intensidad</strong> (I, mm/h) y la <strong>duración</strong> (D, h) de eventos de lluvia que detonaron deslizamientos históricos. El modelo más utilizado es la ley de potencia:</p>
+<div class="math notranslate nohighlight">
+\[I = \alpha \cdot D^{\beta}\]</div>
+<p>donde <span class="math notranslate nohighlight">\(\alpha\)</span> es la intercepción y <span class="math notranslate nohighlight">\(\beta &lt; 0\)</span> el exponente de decaimiento. El umbral se define como la envolvente inferior de los puntos que representan eventos detonantes (Caine, 1980; Guzzetti et al., 2008).</p>
+<p>El siguiente código reproduce el análisis para los Andes colombianos, tomando como referencia los umbrales reportados por <span id="id20"></span>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">scipy.optimize</span><span class="w"> </span><span class="kn">import</span> <span class="n">curve_fit</span>
+
+<span class="c1"># ── Datos de ejemplo: eventos de lluvia detonantes (Andes colombianos) ────────</span>
+<span class="c1"># Cada par (D, I) corresponde a un evento que generó movimientos en masa</span>
+<span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">seed</span><span class="p">(</span><span class="mi">42</span><span class="p">)</span>
+<span class="c1"># Simulamos eventos siguiendo la distribución típica reportada para Colombia</span>
+<span class="n">duracion</span>  <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">0.5</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">24</span><span class="p">,</span> <span class="mi">24</span><span class="p">,</span> <span class="mi">48</span><span class="p">,</span> <span class="mi">48</span><span class="p">,</span> <span class="mi">72</span><span class="p">])</span>
+<span class="n">intensidad</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">40</span><span class="p">,</span> <span class="mi">35</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="mi">28</span><span class="p">,</span> <span class="mi">38</span><span class="p">,</span> <span class="mi">22</span><span class="p">,</span> <span class="mi">18</span><span class="p">,</span> <span class="mi">14</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">4</span><span class="p">])</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">umbral_id</span><span class="p">(</span><span class="n">D</span><span class="p">,</span> <span class="n">alpha</span><span class="p">,</span> <span class="n">beta</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Relación potencial Intensidad-Duración: I = alpha * D^beta</span>
+
+<span class="sd">    Parámetros</span>
+<span class="sd">    ----------</span>
+<span class="sd">    D     : duración [h]</span>
+<span class="sd">    alpha : intercepto (intensidad a D=1 h)</span>
+<span class="sd">    beta  : exponente (negativo → menor intensidad con mayor duración)</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="n">alpha</span> <span class="o">*</span> <span class="n">D</span><span class="o">**</span><span class="n">beta</span>
+
+<span class="c1"># ── Ajuste por mínimos cuadrados en escala logarítmica ───────────────────────</span>
+<span class="n">popt</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">curve_fit</span><span class="p">(</span><span class="n">umbral_id</span><span class="p">,</span> <span class="n">duracion</span><span class="p">,</span> <span class="n">intensidad</span><span class="p">,</span> <span class="n">p0</span><span class="o">=</span><span class="p">[</span><span class="mi">30</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.5</span><span class="p">])</span>
+<span class="n">alpha_fit</span><span class="p">,</span> <span class="n">beta_fit</span> <span class="o">=</span> <span class="n">popt</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Umbral ajustado: I = </span><span class="si">{</span><span class="n">alpha_fit</span><span class="si">:</span><span class="s1">.2f</span><span class="si">}</span><span class="s1"> · D^(</span><span class="si">{</span><span class="n">beta_fit</span><span class="si">:</span><span class="s1">.3f</span><span class="si">}</span><span class="s1">)&#39;</span><span class="p">)</span>
+
+<span class="c1"># Umbrales de referencia para Colombia (Aristizábal et al., 2015)</span>
+<span class="n">alpha_ref</span><span class="p">,</span> <span class="n">beta_ref</span> <span class="o">=</span> <span class="mf">21.4</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.57</span>   <span class="c1"># umbral inferior regional</span>
+
+<span class="c1"># ── Visualización ─────────────────────────────────────────────────────────────</span>
+<span class="n">D_plot</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">logspace</span><span class="p">(</span><span class="o">-</span><span class="mf">0.5</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">200</span><span class="p">)</span>  <span class="c1"># 0.3 h a 100 h</span>
+
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">9</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">duracion</span><span class="p">,</span> <span class="n">intensidad</span><span class="p">,</span> <span class="n">s</span><span class="o">=</span><span class="mi">80</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;royalblue&#39;</span><span class="p">,</span>
+           <span class="n">edgecolors</span><span class="o">=</span><span class="s1">&#39;k&#39;</span><span class="p">,</span> <span class="n">zorder</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Eventos detonantes&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">D_plot</span><span class="p">,</span> <span class="n">umbral_id</span><span class="p">(</span><span class="n">D_plot</span><span class="p">,</span> <span class="n">alpha_fit</span><span class="p">,</span> <span class="n">beta_fit</span><span class="p">),</span>
+        <span class="s1">&#39;r-&#39;</span><span class="p">,</span> <span class="n">lw</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="sa">f</span><span class="s1">&#39;Umbral ajustado: I = </span><span class="si">{</span><span class="n">alpha_fit</span><span class="si">:</span><span class="s1">.1f</span><span class="si">}</span><span class="s1">·D^</span><span class="si">{</span><span class="n">beta_fit</span><span class="si">:</span><span class="s1">.2f</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">D_plot</span><span class="p">,</span> <span class="n">umbral_id</span><span class="p">(</span><span class="n">D_plot</span><span class="p">,</span> <span class="n">alpha_ref</span><span class="p">,</span> <span class="n">beta_ref</span><span class="p">),</span>
+        <span class="s1">&#39;k--&#39;</span><span class="p">,</span> <span class="n">lw</span><span class="o">=</span><span class="mf">1.5</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="sa">f</span><span class="s1">&#39;Umbral ref. Colombia: I = </span><span class="si">{</span><span class="n">alpha_ref</span><span class="si">}</span><span class="s1">·D^</span><span class="si">{</span><span class="n">beta_ref</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">fill_between</span><span class="p">(</span><span class="n">D_plot</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">umbral_id</span><span class="p">(</span><span class="n">D_plot</span><span class="p">,</span> <span class="n">alpha_fit</span><span class="p">,</span> <span class="n">beta_fit</span><span class="p">),</span>
+                <span class="n">alpha</span><span class="o">=</span><span class="mf">0.1</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;red&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Zona de detonación&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xscale</span><span class="p">(</span><span class="s1">&#39;log&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_yscale</span><span class="p">(</span><span class="s1">&#39;log&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;Duración D [h]&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">12</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;Intensidad I [mm/h]&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">12</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span>
+    <span class="s1">&#39;Umbral de Lluvia Intensidad–Duración (I-D)</span><span class="se">\n</span><span class="s1">&#39;</span>
+    <span class="s1">&#39;para Detonación de Movimientos en Masa — Andes Colombianos&#39;</span><span class="p">,</span>
+    <span class="n">fontsize</span><span class="o">=</span><span class="mi">13</span>
+<span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">fontsize</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">True</span><span class="p">,</span> <span class="n">which</span><span class="o">=</span><span class="s1">&#39;both&#39;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.3</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+
+<span class="c1"># ── Verificación de un evento específico ──────────────────────────────────────</span>
+<span class="n">D_evento</span><span class="p">,</span> <span class="n">I_evento</span> <span class="o">=</span> <span class="mf">6.0</span><span class="p">,</span> <span class="mf">20.0</span>   <span class="c1"># evento de prueba: 6h de duración, 20 mm/h</span>
+<span class="n">I_umbral</span> <span class="o">=</span> <span class="n">umbral_id</span><span class="p">(</span><span class="n">D_evento</span><span class="p">,</span> <span class="n">alpha_fit</span><span class="p">,</span> <span class="n">beta_fit</span><span class="p">)</span>
+<span class="n">estado</span> <span class="o">=</span> <span class="s1">&#39;DETONANTE (supera el umbral)&#39;</span> <span class="k">if</span> <span class="n">I_evento</span> <span class="o">&gt;=</span> <span class="n">I_umbral</span> <span class="k">else</span> <span class="s1">&#39;No detonante&#39;</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">Evento: D=</span><span class="si">{</span><span class="n">D_evento</span><span class="si">}</span><span class="s1"> h, I=</span><span class="si">{</span><span class="n">I_evento</span><span class="si">}</span><span class="s1"> mm/h&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Intensidad umbral a </span><span class="si">{</span><span class="n">D_evento</span><span class="si">}</span><span class="s1">h: </span><span class="si">{</span><span class="n">I_umbral</span><span class="si">:</span><span class="s1">.1f</span><span class="si">}</span><span class="s1"> mm/h&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Estado: </span><span class="si">{</span><span class="n">estado</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">line</span> <span class="mi">2</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="ne">----&gt; </span><span class="mi">2</span> <span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="kn">from</span><span class="w"> </span><span class="nn">scipy.optimize</span><span class="w"> </span><span class="kn">import</span> <span class="n">curve_fit</span>
+<span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="c1"># ── Datos de ejemplo: eventos de lluvia detonantes (Andes colombianos) ────────</span>
+<span class="g g-Whitespace">      </span><span class="mi">6</span> <span class="c1"># Cada par (D, I) corresponde a un evento que generó movimientos en masa</span>
+
+<span class="ne">ModuleNotFoundError</span>: No module named &#39;matplotlib&#39;
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="actividades">
+<h2>Actividades<a class="headerlink" href="#actividades" title="Link to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p><strong>Umbral I-D propio:</strong> Consulta el IDEAM o la red pluviométrica del IGAC y descarga al menos 10 registros de eventos de lluvia que hayan detonado movimientos en masa en tu región de interés. Ajusta el umbral I-D con <code class="docutils literal notranslate"><span class="pre">scipy.optimize</span></code> y compara los parámetros α y β con los reportados por <span id="id21"></span>.</p></li>
+<li><p><strong>Incertidumbre del umbral:</strong> Para el umbral ajustado en el código de este capítulo, calcula el intervalo de confianza del 95% usando la función <code class="docutils literal notranslate"><span class="pre">scipy.optimize.curve_fit</span></code> (parámetro <code class="docutils literal notranslate"><span class="pre">pcov</span></code>). Grafica las bandas de incertidumbre junto con el umbral ajustado. ¿Cuántos puntos del inventario caen dentro de las bandas?</p></li>
+<li><p><strong>Sistema de alerta simplificado:</strong> Usando los datos de lluvia horaria de una estación pluviográfica, escribe un script Python que evalúe en tiempo real si la intensidad acumulada en ventanas de 1h, 3h, 6h, 12h y 24h supera el umbral I-D correspondiente. Devuelve una alerta <code class="docutils literal notranslate"><span class="pre">VERDE</span> <span class="pre">/</span> <span class="pre">AMARILLO</span> <span class="pre">/</span> <span class="pre">ROJO</span></code>.</p></li>
+</ol>
 </section>
 <section id="referencias">
 <h2>Referencias<a class="headerlink" href="#referencias" title="Link to this heading">#</a></h2>
-<div class="docutils container" id="id20">
+<div class="docutils container" id="id22">
 <div role="list" class="citation-list">
-<div class="citation" id="id88" role="doc-biblioentry">
+<div class="citation" id="id90" role="doc-biblioentry">
 <span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id5">1</a><span class="fn-bracket">]</span></span>
 <p>M Berti, M. L.V. Martina, S Franceschini, S Pignone, A Simoni, and M Pizziolo. Probabilistic rainfall thresholds for landslide occurrence using a bayesian approach. <em>Journal of Geophysical Research: Earth Surface</em>, 117:1–20, 2012. <a class="reference external" href="https://doi.org/10.1029/2012JF002367">doi:10.1029/2012JF002367</a>.</p>
 </div>
-<div class="citation" id="id43" role="doc-biblioentry">
+<div class="citation" id="id45" role="doc-biblioentry">
 <span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id9">2</a><span class="fn-bracket">]</span></span>
 <p>E.A. Rodríguez Castiblanco, J.H. Sandoval Ramírez, J.L. Chaparro Cordón, G.A. Trejos González, E. Medina Bello, K.C. Ramírez Hernández, E. Castro Marín, J.A. Castro Guerra, and G.L Ruiz Peña. <em>Guía metodológica para la zonificación de amenaza por movimientos en masa escala 1: 25.000</em>. Guías técnicas y métodos de trabajo en geociencias y asuntos nucleares. Libros del Servicio Geológico Colombiano, dic. 2017. URL: <a class="reference external" href="https://libros.sgc.gov.co/index.php/editorial/catalog/book/34">https://libros.sgc.gov.co/index.php/editorial/catalog/book/34</a>.</p>
 </div>
-<div class="citation" id="id93" role="doc-biblioentry">
+<div class="citation" id="id95" role="doc-biblioentry">
 <span class="label"><span class="fn-bracket">[</span>3<span class="fn-bracket">]</span></span>
 <span class="backrefs">(<a role="doc-backlink" href="#id13">1</a>,<a role="doc-backlink" href="#id14">2</a>)</span>
 <p>Oldrich Hungr, Scott McDougall, Mike Wise, and Michael Cullen. Magnitude-frequency relationships of debris flows and debris avalanches in relation to slope relief. <em>Geomorphology</em>, 96:355–365, 2008. <a class="reference external" href="https://doi.org/10.1016/j.geomorph.2007.03.020">doi:10.1016/j.geomorph.2007.03.020</a>.</p>
 </div>
-<div class="citation" id="id89" role="doc-biblioentry">
+<div class="citation" id="id91" role="doc-biblioentry">
 <span class="label"><span class="fn-bracket">[</span>4<span class="fn-bracket">]</span></span>
 <span class="backrefs">(<a role="doc-backlink" href="#id7">1</a>,<a role="doc-backlink" href="#id8">2</a>,<a role="doc-backlink" href="#id11">3</a>,<a role="doc-backlink" href="#id12">4</a>)</span>
 <p>Pankaj Jaiswal and Cees J. van Westen. Estimating temporal probability for landslide initiation along transportation routes based on rainfall thresholds. <em>Geomorphology</em>, 112:96–105, 11 2009. <a class="reference external" href="https://doi.org/10.1016/j.geomorph.2009.05.008">doi:10.1016/j.geomorph.2009.05.008</a>.</p>
 </div>
-<div class="citation" id="id91" role="doc-biblioentry">
+<div class="citation" id="id93" role="doc-biblioentry">
 <span class="label"><span class="fn-bracket">[</span>5<span class="fn-bracket">]</span></span>
 <span class="backrefs">(<a role="doc-backlink" href="#id18">1</a>,<a role="doc-backlink" href="#id19">2</a>)</span>
 <p><strong>missing journal in Malamud2004</strong></p>
 </div>
-<div class="citation" id="id64" role="doc-biblioentry">
+<div class="citation" id="id66" role="doc-biblioentry">
 <span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id2">6</a><span class="fn-bracket">]</span></span>
 <p>Fausto Guzzetti Alberto Carrara Mauro Cardinali Paola Reichenbach. Landslide hazard evaluation: a review of current techniques and their application in a multi-scale study, central italy. <em>Geomorphology</em>, 31:181–216, 1999.</p>
 </div>
-<div class="citation" id="id92" role="doc-biblioentry">
+<div class="citation" id="id94" role="doc-biblioentry">
 <span class="label"><span class="fn-bracket">[</span>7<span class="fn-bracket">]</span></span>
 <span class="backrefs">(<a role="doc-backlink" href="#id16">1</a>,<a role="doc-backlink" href="#id17">2</a>)</span>
 <p>C. P. Stark and N. Hovius. The characterization of landslide size distributions. <em>Geophysical Research Letters</em>, 28:1091–1094, 3 2001. <a class="reference external" href="https://doi.org/10.1029/2000GL008527">doi:10.1029/2000GL008527</a>.</p>
 </div>
-<div class="citation" id="id90" role="doc-biblioentry">
+<div class="citation" id="id92" role="doc-biblioentry">
 <span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id15">8</a><span class="fn-bracket">]</span></span>
 <p>Hakan Tanyaş, Kate E. Allstadt, and Cees J. van Westen. An updated method for estimating landslide-event magnitude. <em>Earth Surface Processes and Landforms</em>, 43:1836–1847, 7 2018. <a class="reference external" href="https://doi.org/10.1002/esp.4359">doi:10.1002/esp.4359</a>.</p>
 </div>
-<div class="citation" id="id60" role="doc-biblioentry">
+<div class="citation" id="id62" role="doc-biblioentry">
 <span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id1">9</a><span class="fn-bracket">]</span></span>
 <p>David Varnes, Unesco, and International Association of Engineering Geology. <em>Landslide hazard zonation : a review of principles and practice / David J. Varnes and the International Association of Engineering Geology, Commission on Landslides and Other Mass Movements on Slopes</em>. Unesco Paris, 1984. ISBN 9231018957.</p>
 </div>
@@ -717,6 +843,8 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#objetivos-de-aprendizaje">Objetivos de aprendizaje</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#requisitos-previos">Requisitos previos</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#probabilidad-espacial">Probabilidad espacial</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#probabilidad-temporal">Probabilidad temporal</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#cualitativo">Cualitativo</a></li>
@@ -747,7 +875,11 @@ document.write(`
 </li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#probabilidad-de-magnitud">Probabilidad de magnitud</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#probabilidad-de-magnitud">Probabilidad de magnitud</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#implementacion-umbrales-de-lluvia-intensidadduracion-i-d">Implementación: Umbrales de Lluvia Intensidad–Duración (I-D)</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#actividades">Actividades</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#referencias">Referencias</a></li>
 </ul>
   </nav></div>

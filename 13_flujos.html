@@ -32,7 +32,7 @@
     <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=eba8b062" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=9c3e77be" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css?v=6644e6bb" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
   
@@ -57,6 +57,8 @@
     <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = '13_flujos';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
@@ -394,6 +396,9 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#objetivos-de-aprendizaje">Objetivos de aprendizaje</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#requisitos-previos">Requisitos previos</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#implementacion-estimacion-de-runout-angulo-de-viaje-fahrboschung">Implementación: Estimación de Runout — Ángulo de Viaje (Fahrböschung)</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#flow-r">Flow-R</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tutorial">Tutorial</a><ul class="nav section-nav flex-column">
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#working-directories"><em>Working directories</em></a></li>
@@ -411,6 +416,7 @@ document.write(`
 </li>
 </ul>
 </li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#actividades">Actividades</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#referencias">Referencias</a></li>
 </ul>
             </nav>
@@ -425,6 +431,25 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="movimientos-en-masa-tipo-flujos">
 <h1>Movimientos en masa tipo flujos<a class="headerlink" href="#movimientos-en-masa-tipo-flujos" title="Link to this heading">#</a></h1>
+<section id="objetivos-de-aprendizaje">
+<h2>Objetivos de aprendizaje<a class="headerlink" href="#objetivos-de-aprendizaje" title="Link to this heading">#</a></h2>
+<p>Al finalizar este capítulo, el estudiante será capaz de:</p>
+<ul class="simple">
+<li><p>Distinguir entre flujos de detritos, avenidas torrenciales y otros tipos de movimientos en masa con componente fluida.</p></li>
+<li><p>Estimar la distancia de alcance (<em>runout</em>) de un flujo usando el ángulo de viaje (Fahrböschung) y la relación empírica de Corominas (1996).</p></li>
+<li><p>Describir los modelos de propagación disponibles (Flow-R, r.avaflow, FLO-2D) y sus datos de entrada requeridos.</p></li>
+<li><p>Comprender el impacto de las avenidas torrenciales en Colombia y los factores que incrementan su frecuencia.</p></li>
+</ul>
+<p><strong>Duración estimada:</strong> 2–3 horas</p>
+</section>
+<section id="requisitos-previos">
+<h2>Requisitos previos<a class="headerlink" href="#requisitos-previos" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><strong>Python:</strong> <code class="docutils literal notranslate"><span class="pre">numpy</span></code>, <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code> (para el modelo de runout).</p></li>
+<li><p><strong>Hidráulica/Hidrología:</strong> flujo en canales, número de Froude, sedimento.</p></li>
+<li><p><strong>Geomorfología:</strong> morfología de cuencas torrenciales, abanicos aluviales, procesos de transporte de masa.</p></li>
+<li><p><strong>Capítulos anteriores:</strong> <code class="docutils literal notranslate"><span class="pre">07_detonante</span></code> (lluvia como detonante), <code class="docutils literal notranslate"><span class="pre">05_inventario</span></code> (inventario de flujos).</p></li>
+</ul>
 <p>Aunque las avenidas torrenciales han sido un fenómeno común en Colombia, los estudios realizados al respecto son escasos. Probablemente una de las razones está asociada a la falta de un consenso con respecto a clasificación y terminología de fenómenos tipo flujos torrenciales que permita caracterizar adecuadamente qué son las avenidas torrenciales. La literatura técnica en inglés utiliza términos como <em>flash flood</em>, <em>debris flood</em>, <em>debris torrent</em> y <em>debris flow</em> para una gran cantidad de fenómenos de mezcla de agua y sedimentos que se transportan a lo largo de un cauce. Entre tanto en español existen términos como inundación súbita, avenida torrencial e incluso avalanchas para designar este tipo de fenómenos.</p>
 <p>En Colombia las avenidas torrenciales son entendidas como movimientos en masa o como crecientes súbitas, fenómenos aparentemente muy diferentes que implica el uso de métodos con enfoques diferentes. INGEOMINAS (2001) define las avenidas torrenciales como fenómenos de remoción en masa donde el agua de una corriente aumenta considerablemente su volumen por el transporte de material solido que ha caído a su cauce desde las laderas adyacentes. En este mismo sentido, Castro (1999) propone establecer el uso del término avenidas torrenciales como un flujo de escombros canalizado. La Guía para la Evaluación de Amenazas por Movimientos en Masa en la Región Andina (PMA-GCA, 2007) define las avenidas torrenciales como flujos de detritos (<em>debris flow</em>) de acuerdo con la definición de Hungr et al (2001). Por otro lado, en el marco de los Planes de Ordenación y Manejo de Cuencas (POMCA) las avenidas torrenciales son entendidas como inundaciones de tipo fluvial rápidas o torrenciales. La Guía Técnica para la Incorporación de la Gestión del Riesgo en los POMCA define las avenidas torrenciales como crecientes súbitas que por las condiciones geomorfológicas de la cuenca están compuestas por un flujo de agua con alto contenido de materiales de arrastre, con un gran potencial destructivo debido a su alta velocidad (MADS, 2014). El Fondo de Prevención y Atención de Emergencias de la ciudad de Bogotá (FOPAE) define las avenidas torrenciales como sinónimo de inundaciones rápidas generadas por crecientes que ocurren de manera repentina debido a la alta pendiente del río o la quebrada y su cuenca, donde en ocasiones se produce el arrastre de una gran cantidad de material como detritos (FOPAE, 2011).</p>
 <p>Estas dos miradas sobre las avenidas torrenciales se reflejan en la <em>Guía Metodológica para la Evaluación de la Amenaza por Movimientos en Masa en Suelo Rural</em> del Servicio Geológico Colombiano (SGC). En esta guía las avenidas torrenciales se consideran equivalentes a los flujos de detritos y flujos de lodos descritos por el PMA-CGA (2007), pero adopta la definición de la guía de los POMCA como procesos tipo flujo que incluye eventos generados sobre ríos y quebradas de alta montaña y en cuencas con características geomorfológicas que favorecen la alta acumulación de sedimentos sobre el cauce, cambios drásticos en el gradiente del afluente, alta densidad de drenaje y eventos de precipitación (MADS &amp; UNAL, 2013).</p>
@@ -478,6 +503,148 @@ document.write(`
         </div></div>
 </div>
 <p>Actualmente existe una gran variedad de modelos que permiten evaluar la propagación de un volumen de material a lo largo de terreno. En términos de modelos con base física, estos  difieren en el grado de complejidad d la reología del flujo y la cantidad de parámetros requeridos. A continuación se presentan dos modelos que constrastan. El modelo <em>Flow-R</em>, que requiere solo el modelo digital del terreno, y el modelo <em>r.ava.flow</em>, el cual tiene la capacidad de modelar diferentes tipos de flujos de 1, 2 ó 3 fases.</p>
+</section>
+<section id="implementacion-estimacion-de-runout-angulo-de-viaje-fahrboschung">
+<h2>Implementación: Estimación de Runout — Ángulo de Viaje (Fahrböschung)<a class="headerlink" href="#implementacion-estimacion-de-runout-angulo-de-viaje-fahrboschung" title="Link to this heading">#</a></h2>
+<p>El <strong>ángulo de viaje</strong> o <em>Fahrböschung</em> (H/L) es el método empírico más utilizado para estimar la distancia de alcance (<em>runout</em>) de flujos y deslizamientos (Corominas, 1996). Se define como:</p>
+<div class="math notranslate nohighlight">
+\[\tan\alpha = \frac{H}{L}\]</div>
+<p>donde <span class="math notranslate nohighlight">\(H\)</span> es la diferencia de elevación entre el punto de inicio y el depósito, y <span class="math notranslate nohighlight">\(L\)</span> es la distancia horizontal total recorrida. Los valores típicos varían según el tipo de movimiento:</p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Tipo de movimiento</p></th>
+<th class="head"><p><span class="math notranslate nohighlight">\(\tan(\alpha)\)</span> típico</p></th>
+<th class="head"><p>Runout relativo</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Avalancha de roca</p></td>
+<td><p>0.10 – 0.20</p></td>
+<td><p>Muy largo</p></td>
+</tr>
+<tr class="row-odd"><td><p>Flujo de detritos</p></td>
+<td><p>0.20 – 0.40</p></td>
+<td><p>Largo</p></td>
+</tr>
+<tr class="row-even"><td><p>Deslizamiento traslacional</p></td>
+<td><p>0.40 – 0.70</p></td>
+<td><p>Moderado</p></td>
+</tr>
+<tr class="row-odd"><td><p>Caída de roca</p></td>
+<td><p>&gt; 0.70</p></td>
+<td><p>Corto</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>Corominas (1996) propuso relaciones empíricas de la forma <span class="math notranslate nohighlight">\(\log(L) = a + b\cdot\log(V)\)</span>, donde <span class="math notranslate nohighlight">\(V\)</span> es el volumen del movimiento.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+
+<span class="c1"># ── Modelo 1: Ángulo de viaje (Fahrböschung) ─────────────────────────────────</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">runout_angulo_viaje</span><span class="p">(</span><span class="n">H</span><span class="p">,</span> <span class="n">tan_alpha</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Estima la distancia de alcance horizontal a partir del ángulo de viaje.</span>
+
+<span class="sd">    Parámetros</span>
+<span class="sd">    ----------</span>
+<span class="sd">    H         : diferencia de altura entre inicio y depósito [m]</span>
+<span class="sd">    tan_alpha : tangente del ángulo de viaje (H/L típico)</span>
+
+<span class="sd">    Retorna</span>
+<span class="sd">    -------</span>
+<span class="sd">    L : distancia de runout horizontal [m]</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="n">H</span> <span class="o">/</span> <span class="n">tan_alpha</span>
+
+<span class="c1"># ── Modelo 2: Relación empírica volumen-runout (Corominas, 1996) ──────────────</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">runout_corominas</span><span class="p">(</span><span class="n">V_m3</span><span class="p">,</span> <span class="n">tipo</span><span class="o">=</span><span class="s1">&#39;flujo_detritos&#39;</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Estima L/H a partir del volumen del movimiento (Corominas, 1996).</span>
+<span class="sd">    Coeficientes para flujo de detritos: log(L/H) = 0.581 + 0.162*log(V)</span>
+
+<span class="sd">    Parámetros</span>
+<span class="sd">    ----------</span>
+<span class="sd">    V_m3 : volumen del movimiento [m³]</span>
+<span class="sd">    tipo : tipo de movimiento (para futuras extensiones)</span>
+
+<span class="sd">    Retorna</span>
+<span class="sd">    -------</span>
+<span class="sd">    LH : relación L/H (adimensional)</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="c1"># Coeficientes para flujos de detritos (Corominas, 1996)</span>
+    <span class="n">a</span><span class="p">,</span> <span class="n">b</span> <span class="o">=</span> <span class="mf">0.581</span><span class="p">,</span> <span class="mf">0.162</span>
+    <span class="k">return</span> <span class="mi">10</span> <span class="o">**</span> <span class="p">(</span><span class="n">a</span> <span class="o">+</span> <span class="n">b</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">log10</span><span class="p">(</span><span class="n">V_m3</span><span class="p">))</span>
+
+<span class="c1"># ── Ejemplo: Avenida torrencial — Cuenca La Liboriana (Salgar, 2015) ──────────</span>
+<span class="n">H</span>        <span class="o">=</span> <span class="mi">1800</span>   <span class="c1"># desnivel aproximado [m]</span>
+<span class="n">V_est</span>    <span class="o">=</span> <span class="mf">5e5</span>    <span class="c1"># volumen estimado [m³]</span>
+<span class="n">tan_alph</span> <span class="o">=</span> <span class="mf">0.25</span>   <span class="c1"># ángulo de viaje típico para flujo de detritos</span>
+
+<span class="n">L_angulo</span>    <span class="o">=</span> <span class="n">runout_angulo_viaje</span><span class="p">(</span><span class="n">H</span><span class="p">,</span> <span class="n">tan_alph</span><span class="p">)</span>
+<span class="n">LH_corominias</span> <span class="o">=</span> <span class="n">runout_corominas</span><span class="p">(</span><span class="n">V_est</span><span class="p">)</span>
+<span class="n">L_corominas</span> <span class="o">=</span> <span class="n">LH_corominias</span> <span class="o">*</span> <span class="n">H</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;=== Estimación de Runout — Flujo de Detritos ===&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;H = </span><span class="si">{</span><span class="n">H</span><span class="si">}</span><span class="s1"> m,  V = </span><span class="si">{</span><span class="n">V_est</span><span class="si">:</span><span class="s1">.0e</span><span class="si">}</span><span class="s1"> m³&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Método ángulo de viaje (tan α=</span><span class="si">{</span><span class="n">tan_alph</span><span class="si">}</span><span class="s1">): L ≈ </span><span class="si">{</span><span class="n">L_angulo</span><span class="si">:</span><span class="s1">.0f</span><span class="si">}</span><span class="s1"> m&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Método Corominas (1996):                   L ≈ </span><span class="si">{</span><span class="n">L_corominas</span><span class="si">:</span><span class="s1">.0f</span><span class="si">}</span><span class="s1"> m&#39;</span><span class="p">)</span>
+
+<span class="c1"># ── Análisis de sensibilidad: runout vs volumen ───────────────────────────────</span>
+<span class="n">volumenes</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">logspace</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>  <span class="c1"># 100 m³ a 10,000,000 m³</span>
+<span class="n">LH_vals</span>   <span class="o">=</span> <span class="n">runout_corominas</span><span class="p">(</span><span class="n">volumenes</span><span class="p">)</span>
+
+<span class="n">fig</span><span class="p">,</span> <span class="n">axes</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">13</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>
+
+<span class="c1"># Panel izquierdo: L/H vs Volumen</span>
+<span class="n">axes</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">loglog</span><span class="p">(</span><span class="n">volumenes</span><span class="p">,</span> <span class="n">LH_vals</span><span class="p">,</span> <span class="s1">&#39;b-&#39;</span><span class="p">,</span> <span class="n">lw</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">axes</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">scatter</span><span class="p">([</span><span class="n">V_est</span><span class="p">],</span> <span class="p">[</span><span class="n">LH_corominias</span><span class="p">],</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;red&#39;</span><span class="p">,</span> <span class="n">s</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span> <span class="n">zorder</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span>
+                <span class="n">label</span><span class="o">=</span><span class="sa">f</span><span class="s1">&#39;Liboriana: V=</span><span class="si">{</span><span class="n">V_est</span><span class="si">:</span><span class="s1">.0e</span><span class="si">}</span><span class="s1"> m³</span><span class="se">\n</span><span class="s1">L/H = </span><span class="si">{</span><span class="n">LH_corominias</span><span class="si">:</span><span class="s1">.1f</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="n">axes</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;Volumen V [m³]&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">12</span><span class="p">)</span>
+<span class="n">axes</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;Relación L/H (adimensional)&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">12</span><span class="p">)</span>
+<span class="n">axes</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;Relación Empírica Volumen – Runout</span><span class="se">\n</span><span class="s1">(Corominas, 1996 — Flujos de Detritos)&#39;</span><span class="p">,</span>
+                  <span class="n">fontsize</span><span class="o">=</span><span class="mi">12</span><span class="p">)</span>
+<span class="n">axes</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">fontsize</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+<span class="n">axes</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">True</span><span class="p">,</span> <span class="n">which</span><span class="o">=</span><span class="s1">&#39;both&#39;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.3</span><span class="p">)</span>
+
+<span class="c1"># Panel derecho: perfil longitudinal esquemático</span>
+<span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="n">L_angulo</span><span class="p">])</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="n">H</span><span class="p">,</span> <span class="mi">0</span><span class="p">])</span>
+<span class="n">axes</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">fill_between</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="n">L_angulo</span><span class="p">],</span> <span class="p">[</span><span class="n">H</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.3</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;saddlebrown&#39;</span><span class="p">,</span>
+                     <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Zona de deposición&#39;</span><span class="p">)</span>
+<span class="n">axes</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="s1">&#39;k-&#39;</span><span class="p">,</span> <span class="n">lw</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">axes</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">annotate</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">xy</span><span class="o">=</span><span class="p">(</span><span class="n">L_angulo</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="n">xytext</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">H</span><span class="p">),</span>
+                 <span class="n">arrowprops</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">arrowstyle</span><span class="o">=</span><span class="s1">&#39;-&gt;&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;red&#39;</span><span class="p">,</span> <span class="n">lw</span><span class="o">=</span><span class="mi">2</span><span class="p">))</span>
+<span class="n">axes</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="n">L_angulo</span><span class="o">/</span><span class="mi">2</span><span class="p">,</span> <span class="n">H</span><span class="o">/</span><span class="mi">2</span> <span class="o">+</span> <span class="mi">50</span><span class="p">,</span> <span class="sa">f</span><span class="s1">&#39;α = arctan(</span><span class="si">{</span><span class="n">tan_alph</span><span class="si">}</span><span class="s1">) = </span><span class="si">{</span><span class="n">np</span><span class="o">.</span><span class="n">degrees</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">arctan</span><span class="p">(</span><span class="n">tan_alph</span><span class="p">))</span><span class="si">:</span><span class="s1">.0f</span><span class="si">}</span><span class="s1">°&#39;</span><span class="p">,</span>
+             <span class="n">ha</span><span class="o">=</span><span class="s1">&#39;center&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">11</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;red&#39;</span><span class="p">)</span>
+<span class="n">axes</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;Distancia horizontal L [m]&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">12</span><span class="p">)</span>
+<span class="n">axes</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;Elevación H [m]&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">12</span><span class="p">)</span>
+<span class="n">axes</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Perfil de Runout — Ángulo de Viaje</span><span class="se">\n</span><span class="s1">&#39;</span>
+                  <span class="sa">f</span><span class="s1">&#39;L = </span><span class="si">{</span><span class="n">L_angulo</span><span class="si">:</span><span class="s1">.0f</span><span class="si">}</span><span class="s1"> m,  H = </span><span class="si">{</span><span class="n">H</span><span class="si">}</span><span class="s1"> m&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">12</span><span class="p">)</span>
+<span class="n">axes</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">True</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.3</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="n">line</span> <span class="mi">2</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="ne">----&gt; </span><span class="mi">2</span> <span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="c1"># ── Modelo 1: Ángulo de viaje (Fahrböschung) ─────────────────────────────────</span>
+<span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="k">def</span><span class="w"> </span><span class="nf">runout_angulo_viaje</span><span class="p">(</span><span class="n">H</span><span class="p">,</span> <span class="n">tan_alpha</span><span class="p">):</span>
+
+<span class="ne">ModuleNotFoundError</span>: No module named &#39;matplotlib&#39;
+</pre></div>
+</div>
+</div>
+</div>
+</section>
 <section id="flow-r">
 <h2>Flow-R<a class="headerlink" href="#flow-r" title="Link to this heading">#</a></h2>
 <p><a class="reference external" href="https://www.flow-r.org/">Flow-R</a> (Flow path assessment of gravitational hazards at a Regional scale) es un modelo empirico disitribuido para la evaluacion de la susceptibilidad por flujos a escala regional, desarrollado por <span id="id1">Horton <em>et al.</em> [<a class="reference internal" href="#id67" title="P. Horton, M. Jaboyedoff, B. Rudaz, and M. Zimmermann. Flow-r, a model for susceptibility mapping of debris flows and other gravitational hazards at a regional scale. Natural Hazards and Earth System Sciences, 13(4):869–885, 2013. URL: https://nhess.copernicus.org/articles/13/869/2013/, doi:10.5194/nhess-13-869-2013.">2013</a>]</span> de la Universidad de Laussane. Flow-R presenta un acercamiento simplificado sin una gran exigencia de parametros.</p>
@@ -634,6 +801,15 @@ document.write(`
 </section>
 </section>
 </section>
+<section id="actividades">
+<h2>Actividades<a class="headerlink" href="#actividades" title="Link to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p><strong>Runout histórico:</strong> Consulta el evento de La Liboriana (Salgar, Antioquia, 2015) o la avenida de Mocoa (2017) en la literatura. Extrae los datos de volumen (V), diferencia de elevación (H) y distancia de alcance (L) reportados. Compara el L observado con el estimado por el modelo de Corominas (1996) implementado en este capítulo. ¿Qué tanto difieren?</p></li>
+<li><p><strong>Análisis de sensibilidad del runout:</strong> Para el evento de La Liboriana, varía el volumen estimado entre 10⁴ y 10⁷ m³ y grafica cómo cambia la distancia L predicha por el modelo de Corominas. ¿A partir de qué volumen el alcance supera 5 km?</p></li>
+<li><p><strong>Zonificación de amenaza por flujos:</strong> Usando el ángulo de viaje, estima la zona de depositación para un flujo hipotético en una cuenca con desnivel H = 500 m y tan(α) = 0.30. Dibuja un perfil longitudinal esquemático indicando zona de inicio, tránsito y depósito.</p></li>
+<li><p><strong>Cambio climático y flujos:</strong> Investiga cómo el cambio climático puede modificar la frecuencia y magnitud de las avenidas torrenciales en los Andes colombianos. Cita al menos dos estudios recientes (post-2015).</p></li>
+</ol>
+</section>
 <section id="referencias">
 <h2>Referencias<a class="headerlink" href="#referencias" title="Link to this heading">#</a></h2>
 <div class="docutils container" id="id6">
@@ -715,6 +891,9 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#objetivos-de-aprendizaje">Objetivos de aprendizaje</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#requisitos-previos">Requisitos previos</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#implementacion-estimacion-de-runout-angulo-de-viaje-fahrboschung">Implementación: Estimación de Runout — Ángulo de Viaje (Fahrböschung)</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#flow-r">Flow-R</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tutorial">Tutorial</a><ul class="nav section-nav flex-column">
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#working-directories"><em>Working directories</em></a></li>
@@ -732,6 +911,7 @@ document.write(`
 </li>
 </ul>
 </li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#actividades">Actividades</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#referencias">Referencias</a></li>
 </ul>
   </nav></div>

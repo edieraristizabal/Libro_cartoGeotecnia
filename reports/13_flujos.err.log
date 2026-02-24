@@ -1,0 +1,139 @@
+Traceback (most recent call last):
+  File "/home/edier/miniconda3/lib/python3.13/site-packages/jupyter_core/utils/__init__.py", line 154, in wrapped
+    asyncio.get_running_loop()
+    ~~~~~~~~~~~~~~~~~~~~~~~~^^
+RuntimeError: no running event loop
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/edier/miniconda3/lib/python3.13/site-packages/jupyter_cache/executors/utils.py", line 58, in single_nb_execution
+    executenb(
+    ~~~~~~~~~^
+        nb,
+        ^^^
+    ...<4 lines>...
+        **kwargs,
+        ^^^^^^^^^
+    )
+    ^
+  File "/home/edier/miniconda3/lib/python3.13/site-packages/nbclient/client.py", line 1319, in execute
+    return NotebookClient(nb=nb, resources=resources, km=km, **kwargs).execute()
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/home/edier/miniconda3/lib/python3.13/site-packages/jupyter_core/utils/__init__.py", line 158, in wrapped
+    return loop.run_until_complete(inner)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^
+  File "/home/edier/miniconda3/lib/python3.13/asyncio/base_events.py", line 725, in run_until_complete
+    return future.result()
+           ~~~~~~~~~~~~~^^
+  File "/home/edier/miniconda3/lib/python3.13/site-packages/nbclient/client.py", line 709, in async_execute
+    await self.async_execute_cell(
+        cell, index, execution_count=self.code_cells_executed + 1
+    )
+  File "/home/edier/miniconda3/lib/python3.13/site-packages/nbclient/client.py", line 1062, in async_execute_cell
+    await self._check_raise_for_error(cell, cell_index, exec_reply)
+  File "/home/edier/miniconda3/lib/python3.13/site-packages/nbclient/client.py", line 918, in _check_raise_for_error
+    raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
+nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
+------------------
+import numpy as np
+import matplotlib.pyplot as plt
+
+# ── Modelo 1: Ángulo de viaje (Fahrböschung) ─────────────────────────────────
+def runout_angulo_viaje(H, tan_alpha):
+    """
+    Estima la distancia de alcance horizontal a partir del ángulo de viaje.
+
+    Parámetros
+    ----------
+    H         : diferencia de altura entre inicio y depósito [m]
+    tan_alpha : tangente del ángulo de viaje (H/L típico)
+
+    Retorna
+    -------
+    L : distancia de runout horizontal [m]
+    """
+    return H / tan_alpha
+
+# ── Modelo 2: Relación empírica volumen-runout (Corominas, 1996) ──────────────
+def runout_corominas(V_m3, tipo='flujo_detritos'):
+    """
+    Estima L/H a partir del volumen del movimiento (Corominas, 1996).
+    Coeficientes para flujo de detritos: log(L/H) = 0.581 + 0.162*log(V)
+
+    Parámetros
+    ----------
+    V_m3 : volumen del movimiento [m³]
+    tipo : tipo de movimiento (para futuras extensiones)
+
+    Retorna
+    -------
+    LH : relación L/H (adimensional)
+    """
+    # Coeficientes para flujos de detritos (Corominas, 1996)
+    a, b = 0.581, 0.162
+    return 10 ** (a + b * np.log10(V_m3))
+
+# ── Ejemplo: Avenida torrencial — Cuenca La Liboriana (Salgar, 2015) ──────────
+H        = 1800   # desnivel aproximado [m]
+V_est    = 5e5    # volumen estimado [m³]
+tan_alph = 0.25   # ángulo de viaje típico para flujo de detritos
+
+L_angulo    = runout_angulo_viaje(H, tan_alph)
+LH_corominias = runout_corominas(V_est)
+L_corominas = LH_corominias * H
+
+print('=== Estimación de Runout — Flujo de Detritos ===')
+print(f'H = {H} m,  V = {V_est:.0e} m³')
+print(f'Método ángulo de viaje (tan α={tan_alph}): L ≈ {L_angulo:.0f} m')
+print(f'Método Corominas (1996):                   L ≈ {L_corominas:.0f} m')
+
+# ── Análisis de sensibilidad: runout vs volumen ───────────────────────────────
+volumenes = np.logspace(2, 7, 100)  # 100 m³ a 10,000,000 m³
+LH_vals   = runout_corominas(volumenes)
+
+fig, axes = plt.subplots(1, 2, figsize=(13, 5))
+
+# Panel izquierdo: L/H vs Volumen
+axes[0].loglog(volumenes, LH_vals, 'b-', lw=2)
+axes[0].scatter([V_est], [LH_corominias], color='red', s=100, zorder=5,
+                label=f'Liboriana: V={V_est:.0e} m³\nL/H = {LH_corominias:.1f}')
+axes[0].set_xlabel('Volumen V [m³]', fontsize=12)
+axes[0].set_ylabel('Relación L/H (adimensional)', fontsize=12)
+axes[0].set_title('Relación Empírica Volumen – Runout\n(Corominas, 1996 — Flujos de Detritos)',
+                  fontsize=12)
+axes[0].legend(fontsize=10)
+axes[0].grid(True, which='both', alpha=0.3)
+
+# Panel derecho: perfil longitudinal esquemático
+x = np.array([0, L_angulo])
+y = np.array([H, 0])
+axes[1].fill_between([0, L_angulo], [H, 0], alpha=0.3, color='saddlebrown',
+                     label='Zona de deposición')
+axes[1].plot(x, y, 'k-', lw=2)
+axes[1].annotate('', xy=(L_angulo, 0), xytext=(0, H),
+                 arrowprops=dict(arrowstyle='->', color='red', lw=2))
+axes[1].text(L_angulo/2, H/2 + 50, f'α = arctan({tan_alph}) = {np.degrees(np.arctan(tan_alph)):.0f}°',
+             ha='center', fontsize=11, color='red')
+axes[1].set_xlabel('Distancia horizontal L [m]', fontsize=12)
+axes[1].set_ylabel('Elevación H [m]', fontsize=12)
+axes[1].set_title(f'Perfil de Runout — Ángulo de Viaje\n'
+                  f'L = {L_angulo:.0f} m,  H = {H} m', fontsize=12)
+axes[1].grid(True, alpha=0.3)
+
+plt.tight_layout()
+plt.show()
+
+------------------
+
+
+[31m---------------------------------------------------------------------------[39m
+[31mModuleNotFoundError[39m                       Traceback (most recent call last)
+[36mCell[39m[36m [39m[32mIn[2][39m[32m, line 2[39m
+[32m      1[39m [38;5;28;01mimport[39;00m[38;5;250m [39m[34;01mnumpy[39;00m[38;5;250m [39m[38;5;28;01mas[39;00m[38;5;250m [39m[34;01mnp[39;00m
+[32m----> [39m[32m2[39m [38;5;28;01mimport[39;00m[38;5;250m [39m[34;01mmatplotlib[39;00m[34;01m.[39;00m[34;01mpyplot[39;00m[38;5;250m [39m[38;5;28;01mas[39;00m[38;5;250m [39m[34;01mplt[39;00m
+[32m      4[39m [38;5;66;03m# ── Modelo 1: Ángulo de viaje (Fahrböschung) ─────────────────────────────────[39;00m
+[32m      5[39m [38;5;28;01mdef[39;00m[38;5;250m [39m[34mrunout_angulo_viaje[39m(H, tan_alpha):
+
+[31mModuleNotFoundError[39m: No module named 'matplotlib'
+
