@@ -16,41 +16,44 @@
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
     document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
   </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-<link href="_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-<link href="_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-
-  
-  <link href="_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+  <link href="_static/styles/theme.css?digest=55c26ed414f5f8a31ebb" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=55c26ed414f5f8a31ebb" rel="stylesheet" />
 
     <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
-    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=3c74b3bc" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=9c3e77be" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css?v=6644e6bb" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
   
+  <!-- So that users can add custom icons -->
+  <script defer src="_static/scripts/fontawesome.js?digest=55c26ed414f5f8a31ebb"></script>
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
-<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
-  <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=55c26ed414f5f8a31ebb" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=55c26ed414f5f8a31ebb" />
 
     <script src="_static/documentation_options.js?v=9eb32ce0"></script>
     <script src="_static/doctools.js?v=9a2dae69"></script>
     <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="_static/clipboard.min.js?v=a7894cd8"></script>
     <script src="_static/copybutton.js?v=f281be69"></script>
-    <script src="_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=fab101a9"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="_static/togglebutton.js?v=1ae7504c"></script>
+    <script src="_static/togglebutton.js?v=b8b12719"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script src="_static/design-tabs.js?v=f930bc37"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
@@ -60,40 +63,37 @@
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = '09_estadistico';</script>
+    <script>DOCUMENTATION_OPTIONS.search_as_you_type = false;</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Métodos con base física" href="10_fisico.html" />
     <link rel="prev" title="Métodos basados en el conocimiento" href="08_heuristico.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
+  
+    
+    <script src="_static/searchtools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <script src="searchindex.js"></script>
+  
   </head>
-  
-  
-  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
-
+  <body data-default-mode="">
   
   
   <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+
   
   <div id="pst-scroll-pixel-helper"></div>
   
   <button type="button" class="btn rounded-pill" id="pst-back-to-top">
     <i class="fa-solid fa-arrow-up"></i>Back to top</button>
-
   
-  <input type="checkbox"
-          class="sidebar-toggle"
-          id="pst-primary-sidebar-checkbox"/>
-  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
   
-  <input type="checkbox"
-          class="sidebar-toggle"
-          id="pst-secondary-sidebar-checkbox"/>
-  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
   
-  <div class="search-button__wrapper">
-    <div class="search-button__overlay"></div>
-    <div class="search-button__search-container">
+  
+  <dialog id="pst-search-dialog">
+    
 <form class="bd-search d-flex align-items-center"
       action="search.html"
       method="get">
@@ -101,7 +101,6 @@
   <input type="search"
          class="form-control"
          name="q"
-         id="search-input"
          placeholder="Search this book..."
          aria-label="Search this book..."
          autocomplete="off"
@@ -109,15 +108,59 @@
          autocapitalize="off"
          spellcheck="false"/>
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
-</form></div>
-  </div>
+</form>
+  </dialog>
 
   <div class="pst-async-banner-revealer d-none">
   <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
 </div>
 
   
-    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    <header id="pst-header" class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+        </div>
+      
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+    </div>
+  
+
+  
+    <button class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="On this page">
+      <span class="fa-solid fa-outdent"></span>
+    </button>
+  
+</div>
+
     </header>
   
 
@@ -126,7 +169,8 @@
       
       
       
-      <div class="bd-sidebar-primary bd-sidebar">
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
         
 
   
@@ -156,21 +200,17 @@
     
     
     <img src="_static/logo.png" class="logo__image only-light" alt="Cartografía Geotécnica - Home"/>
-    <script>document.write(`<img src="_static/logo.png" class="logo__image only-dark" alt="Cartografía Geotécnica - Home"/>`);</script>
+    <img src="_static/logo.png" class="logo__image only-dark pst-js-only" alt="Cartografía Geotécnica - Home"/>
   
   
 </a></div>
         <div class="sidebar-primary-item">
 
- <script>
- document.write(`
-   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
-    <span class="search-button__default-text">Search</span>
-    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
-   </button>
- `);
- </script></div>
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
         <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         
@@ -201,6 +241,7 @@
 <li class="toctree-l1"><a class="reference internal" href="15_python.html">Python</a></li>
 
 
+<li class="toctree-l1"><a class="reference internal" href="100_references.html">Referencias</a></li>
 </ul>
 
     </div>
@@ -209,9 +250,14 @@
   
   
   <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
   </div>
-  
-  <div id="rtd-footer-container"></div>
 
 
       </div>
@@ -341,7 +387,7 @@
 
 
 <button onclick="toggleFullScreen()"
-  class="btn btn-sm btn-fullscreen-button"
+  class="btn btn-sm btn-fullscreen-button pst-navbar-icon"
   title="Fullscreen mode"
   data-bs-placement="bottom" data-bs-toggle="tooltip"
 >
@@ -355,25 +401,17 @@
 
 
 
-<script>
-document.write(`
-  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
-    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
-    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
-  </button>
-`);
-</script>
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
 
 
-<script>
-document.write(`
-  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
-  </button>
-`);
-</script>
-<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+</button>
+<button class="sidebar-toggle secondary-toggle btn btn-sm pst-navbar-icon" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <span class="fa-solid fa-list"></span>
 </button>
 </div></div>
@@ -395,7 +433,7 @@ document.write(`
                 <h2> Contents </h2>
             </div>
             <nav aria-label="Page">
-                <ul class="visible nav section-nav flex-column">
+                <ul class="pst-show_toc_level nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#objetivos-de-aprendizaje">Objetivos de aprendizaje</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#requisitos-previos">Requisitos previos</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bivariados">Bivariados</a><ul class="nav section-nav flex-column">
@@ -426,11 +464,11 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#metodos-de-machine-learning">Métodos de <em>machine learning</em></a><ul class="nav section-nav flex-column">
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#modelos-parametricos">Modelos Paramétricos</a><ul class="nav section-nav flex-column">
 <li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#analisis-discriminante-lineal">Análisis Discriminante Lineal</a><ul class="nav section-nav flex-column">
-<li class="toc-h6 nav-item toc-entry"><a class="reference internal nav-link" href="#id7"><em>Python</em></a></li>
+<li class="toc-h6 nav-item toc-entry"><a class="reference internal nav-link" href="#id6"><em>Python</em></a></li>
 </ul>
 </li>
 <li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#regresion-logistica">Regresión logística</a><ul class="nav section-nav flex-column">
-<li class="toc-h6 nav-item toc-entry"><a class="reference internal nav-link" href="#id8"><em>Python</em></a></li>
+<li class="toc-h6 nav-item toc-entry"><a class="reference internal nav-link" href="#id7"><em>Python</em></a></li>
 </ul>
 </li>
 <li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#modelo-de-poisson">Modelo de Poisson</a><ul class="nav section-nav flex-column">
@@ -441,22 +479,22 @@ document.write(`
 </li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#modelos-semiparametricos">Modelos Semiparamétricos</a><ul class="nav section-nav flex-column">
 <li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#modelos-aditivos-generalizados-gam">Modelos Aditivos Generalizados (GAM)</a><ul class="nav section-nav flex-column">
-<li class="toc-h6 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">Ejemplo</a></li>
+<li class="toc-h6 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">Ejemplo</a></li>
 </ul>
 </li>
 </ul>
 </li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#modelos-no-parametricos">Modelos No-Paramétricos</a><ul class="nav section-nav flex-column">
 <li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#support-vector-machine-svm"><em>Support Vector Machine (SVM)</em></a><ul class="nav section-nav flex-column">
-<li class="toc-h6 nav-item toc-entry"><a class="reference internal nav-link" href="#id10"><em>Python</em></a></li>
+<li class="toc-h6 nav-item toc-entry"><a class="reference internal nav-link" href="#id9"><em>Python</em></a></li>
 </ul>
 </li>
 <li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#random-forest"><em>Random forest</em></a><ul class="nav section-nav flex-column">
-<li class="toc-h6 nav-item toc-entry"><a class="reference internal nav-link" href="#id11"><em>Python</em></a></li>
+<li class="toc-h6 nav-item toc-entry"><a class="reference internal nav-link" href="#id10"><em>Python</em></a></li>
 </ul>
 </li>
 <li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#redes-neuronales">Redes neuronales</a><ul class="nav section-nav flex-column">
-<li class="toc-h6 nav-item toc-entry"><a class="reference internal nav-link" href="#id12"><em>Python</em></a></li>
+<li class="toc-h6 nav-item toc-entry"><a class="reference internal nav-link" href="#id11"><em>Python</em></a></li>
 </ul>
 </li>
 </ul>
@@ -470,7 +508,6 @@ document.write(`
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#actividades">Actividades</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#referencias">Referencias</a></li>
 </ul>
             </nav>
         </div>
@@ -508,13 +545,13 @@ document.write(`
 <section id="bivariados">
 <h2>Bivariados<a class="headerlink" href="#bivariados" title="Link to this heading">#</a></h2>
 <p>En los métodos bivariados cada mapa factor (geología, pendiente, coberturas, etc) es combinado con el inventario de movimientos en masa, para obtener los pesos de las clases que conforman las variables, basados generalmente en densidad de movimientos en masa. Los métodos estadísticos bivariados son una buena herramienta de aprendizaje para el analista encontrar qué factores o combinación de factores juegan un papel importante en la ocurrencia de movimientos en masa.</p>
-<p>Como se mencionó anteriormente, estos métodos están basados en la asociación observada entre la distribución de los movimientos en masa y cada clase de la variable, lo que exige que cada variable sea transforamda a una variable categórica dividida por clases. De esta misma forma los métodos bivariados sólo permiten asignar peso a las clases y no a las variables, por lo que todas las variables tienen una importancia igual sobre la ocurrencia de movimientos en masa. Considerando esta desventaja, es muy común combinar los métodos estadísticos bivariados con métodos heurísticos como AHP para poder asignar peso a las variables.</p>
+<p>Como se mencionó anteriormente, estos métodos están basados en la asociación observada entre la distribución de los movimientos en masa y cada clase de la variable, lo que exige que cada variable sea transformada a una variable categórica dividida por clases. De esta misma forma los métodos bivariados sólo permiten asignar peso a las clases y no a las variables, por lo que todas las variables tienen una importancia igual sobre la ocurrencia de movimientos en masa. Considerando esta desventaja, es muy común combinar los métodos estadísticos bivariados con métodos heurísticos como AHP para poder asignar peso a las variables.</p>
 <p>Existe una gran cantidad de métodos estadísticos bivariados, los cuales se subdividen esencialmente en métodos basados en la densidad del número de movimientos en masa en cada clase (<em>Frequency ratio</em>, <em>Statistical index</em>), y los métodos basados en el teorema de Bayes (<em>Weight-of-evidence</em>, <em>Evidential belief function</em>,  <em>Certainty factor</em>).</p>
 <section id="frequency-ratio-model-likelihood">
 <h3><em>Frequency ratio model</em> (<em>Likelihood</em>)<a class="headerlink" href="#frequency-ratio-model-likelihood" title="Link to this heading">#</a></h3>
 <p>Este método, al igual que todos los métodos bivariados, calcula un peso para cada clase en la cual es dividida cada variable. En este caso el peso de la clase n (<span class="math notranslate nohighlight">\(w_n\)</span>) se calcula dividiendo la relación de la ocurrencia de movimientos en masa (<span class="math notranslate nohighlight">\(L_r\)</span>) por la relación del área de la clase (<span class="math notranslate nohighlight">\(A_r\)</span>):</p>
 <p><span class="math notranslate nohighlight">\(w_n = \frac{L_r}{A_r}\)</span></p>
-<p>Donde <span class="math notranslate nohighlight">\(L_r\)</span> es el porcentaje de movimientos en masa total que contiene la clase <span class="math notranslate nohighlight">\(n\)</span>, y <span class="math notranslate nohighlight">\(A_r\)</span> es el porcentaje del área total de representa dicha clase:</p>
+<p>Donde <span class="math notranslate nohighlight">\(L_r\)</span> es el porcentaje de movimientos en masa total que contiene la clase <span class="math notranslate nohighlight">\(n\)</span>, y <span class="math notranslate nohighlight">\(A_r\)</span> es el porcentaje del área total que representa dicha clase:</p>
 <p><span class="math notranslate nohighlight">\(L_r = \frac{L_{clase}}{L_{total}}\)</span></p>
 <p><span class="math notranslate nohighlight">\(A_r = \frac{A_{clase}}{A_{total}}\)</span></p>
 <p>Finalmente, la susceptibilidad de una celda es igual a la sumatoria del peso de cada clase (<span class="math notranslate nohighlight">\(w\)</span>) a la que pertenece en cada variable:</p>
@@ -528,7 +565,7 @@ document.write(`
 </figure>
 <section id="python">
 <h4><em>Python</em><a class="headerlink" href="#python" title="Link to this heading">#</a></h4>
-<p>En el presente ejemplo, y solo con propósitos pedagógicos, se utilizarán solo tres variables (pendiente, geologia, aspecto) pero el procedimiento señalado se debera utilizar para todas las variables incorporadas en el modelo de susceptibilidad.</p>
+<p>En el presente ejemplo, y solo con propósitos pedagógicos, se utilizarán solo tres variables (pendiente, geologia, aspecto) pero el procedimiento señalado se deberá utilizar para todas las variables incorporadas en el modelo de susceptibilidad.</p>
 <p>Inicialmente se procede a importar las librerías a utilizar:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -536,19 +573,6 @@ document.write(`
 <span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">line</span> <span class="mi">3</span>
-<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="kn">import</span><span class="w"> </span><span class="nn">rasterio</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">rio</span>
-<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
-<span class="ne">----&gt; </span><span class="mi">3</span> <span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
-<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
-
-<span class="ne">ModuleNotFoundError</span>: No module named &#39;matplotlib&#39;
 </pre></div>
 </div>
 </div>
@@ -571,10 +595,48 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(910801,)
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">CPLE_HttpResponseError</span><span class="g g-Whitespace">                    </span>Traceback (most recent call last)
+<span class="nn">File rasterio/_base.pyx:320,</span> in <span class="ni">rasterio._base.DatasetBase.__init__</span><span class="nt">()</span>
+<span class="ne">--&gt; </span><span class="mi">320</span> <span class="s1">&#39;Could not get source, probably due dynamically evaluated source code.&#39;</span>
+
+<span class="nn">File rasterio/_base.pyx:232,</span> in <span class="ni">rasterio._base.open_dataset</span><span class="nt">()</span>
+<span class="ne">--&gt; </span><span class="mi">232</span> <span class="s1">&#39;Could not get source, probably due dynamically evaluated source code.&#39;</span>
+
+<span class="nn">File rasterio/_err.pyx:359,</span> in <span class="ni">rasterio._err.exc_wrap_pointer</span><span class="nt">()</span>
+<span class="ne">--&gt; </span><span class="mi">359</span> <span class="s1">&#39;Could not get source, probably due dynamically evaluated source code.&#39;</span>
+
+<span class="ne">CPLE_HttpResponseError</span>: HTTP response code: 404
+
+<span class="n">During</span> <span class="n">handling</span> <span class="n">of</span> <span class="n">the</span> <span class="n">above</span> <span class="n">exception</span><span class="p">,</span> <span class="n">another</span> <span class="n">exception</span> <span class="n">occurred</span><span class="p">:</span>
+
+<span class="ne">RasterioIOError</span><span class="g g-Whitespace">                           </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">raster</span> <span class="o">=</span> <span class="n">rio</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s1">&#39;https://github.com/edieraristizabal/Libro_cartoGeotecnia/blob/master/data/miel/Inventario_MenM.tif?raw=true&#39;</span><span class="p">)</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="n">inventario</span><span class="o">=</span><span class="n">raster</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="n">raster_mask</span> <span class="o">=</span> <span class="n">rio</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s1">&#39;https://github.com/edieraristizabal/Libro_cartoGeotecnia/blob/master/data/miel/Pendiente.tif?raw=true&#39;</span><span class="p">)</span>
+<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="n">msk</span><span class="o">=</span><span class="n">raster_mask</span><span class="o">.</span><span class="n">read_masks</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+
+<span class="nn">File ~\AppData\Roaming\Python\Python314\site-packages\rasterio\env.py:464,</span> in <span class="ni">ensure_env_with_credentials.&lt;locals&gt;.wrapper</span><span class="nt">(*args, **kwds)</span>
+<span class="g g-Whitespace">    </span><span class="mi">461</span>     <span class="n">session</span> <span class="o">=</span> <span class="n">DummySession</span><span class="p">()</span>
+<span class="g g-Whitespace">    </span><span class="mi">463</span> <span class="k">with</span> <span class="n">env_ctor</span><span class="p">(</span><span class="n">session</span><span class="o">=</span><span class="n">session</span><span class="p">):</span>
+<span class="ne">--&gt; </span><span class="mi">464</span>     <span class="k">return</span> <span class="n">f</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwds</span><span class="p">)</span>
+
+<span class="nn">File ~\AppData\Roaming\Python\Python314\site-packages\rasterio\__init__.py:379,</span> in <span class="ni">open</span><span class="nt">(fp, mode, driver, width, height, count, crs, transform, dtype, nodata, sharing, thread_safe, opener, **kwargs)</span>
+<span class="g g-Whitespace">    </span><span class="mi">376</span>     <span class="n">path</span> <span class="o">=</span> <span class="n">_parse_path</span><span class="p">(</span><span class="n">raw_dataset_path</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">378</span> <span class="k">if</span> <span class="n">mode</span> <span class="o">==</span> <span class="s2">&quot;r&quot;</span><span class="p">:</span>
+<span class="ne">--&gt; </span><span class="mi">379</span>     <span class="n">dataset</span> <span class="o">=</span> <span class="n">DatasetReader</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">driver</span><span class="o">=</span><span class="n">driver</span><span class="p">,</span> <span class="n">sharing</span><span class="o">=</span><span class="n">sharing</span><span class="p">,</span> <span class="n">thread_safe</span><span class="o">=</span><span class="n">thread_safe</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">380</span> <span class="k">elif</span> <span class="n">mode</span> <span class="o">==</span> <span class="s2">&quot;r+&quot;</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">381</span>     <span class="n">dataset</span> <span class="o">=</span> <span class="n">get_writer_for_path</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">driver</span><span class="o">=</span><span class="n">driver</span><span class="p">)(</span>
+<span class="g g-Whitespace">    </span><span class="mi">382</span>         <span class="n">path</span><span class="p">,</span> <span class="n">mode</span><span class="p">,</span> <span class="n">driver</span><span class="o">=</span><span class="n">driver</span><span class="p">,</span> <span class="n">sharing</span><span class="o">=</span><span class="n">sharing</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span>
+<span class="g g-Whitespace">    </span><span class="mi">383</span>     <span class="p">)</span>
+
+<span class="nn">File rasterio/_base.pyx:329,</span> in <span class="ni">rasterio._base.DatasetBase.__init__</span><span class="nt">()</span>
+<span class="ne">--&gt; </span><span class="mi">329</span> <span class="s1">&#39;Could not get source, probably due dynamically evaluated source code.&#39;</span>
+
+<span class="ne">RasterioIOError</span>: HTTP response code: 404
 </pre></div>
 </div>
-<img alt="_images/197577bc2701a4077158f7b6d1257be0a307cd454e02605e7b57449c2239b29a.png" src="_images/197577bc2701a4077158f7b6d1257be0a307cd454e02605e7b57449c2239b29a.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -629,7 +691,7 @@ document.write(`
 </div>
 </div>
 <p>Para implementar todos lo métodos estadísticos bivariados se deben conocer para cada clase de las variables, el número de celdas que pertenecen a dicha clase y el número de celdas con MenM.</p>
-<p>A continuación se presenta el procedimiento para el mapa de pendiente, el cual es una variable continua. Como se mencionó anteriormente en los metodos estadísticos bivariados se deben transformar las variables continuas a categóricas. En este caso el mapa de pendientes se convierte a 5 clases [0-10, 10-20, 20-30, 30-35, &gt;35].</p>
+<p>A continuación se presenta el procedimiento para el mapa de pendiente, el cual es una variable continua. Como se mencionó anteriormente en los métodos estadísticos bivariados se deben transformar las variables continuas a categóricas. En este caso el mapa de pendientes se convierte a 5 clases [0-10, 10-20, 20-30, 30-35, &gt;35].</p>
 <p>Para realizar este procedimiento se utiliza el vector que se generó con el mapa de pendiente, y se convierte a una serie de Pandas, de tal forma que permita iterar.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -720,7 +782,7 @@ total1: 1620 13 108 411 301 787
 <img alt="_images/8ae6d61d1a5bdd27b879e2cf57d7a56d524e6a30d68be6cb3752b9efe8c10f34.png" src="_images/8ae6d61d1a5bdd27b879e2cf57d7a56d524e6a30d68be6cb3752b9efe8c10f34.png" />
 </div>
 </div>
-<p>Ahora se realiza el mismo procedimiento para la variable <em>aspecto</em>, la cual tambien es continua, en este caso se divide en 4 clases [0-90, 90-180, 180-270, 270-360]:</p>
+<p>Ahora se realiza el mismo procedimiento para la variable <em>aspecto</em>, la cual también es continua, en este caso se divide en 4 clases [0-90, 90-180, 180-270, 270-360]:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># ── Recuento por clase de aspecto (vectorizado con pd.cut) ───────────────────</span>
@@ -828,7 +890,7 @@ w: 1.4494735418196658 0.0 0.0 1.703073635991745 0.0 1.0790262039172254 1.5901796
 <h3><em>Statistical index model</em><a class="headerlink" href="#statistical-index-model" title="Link to this heading">#</a></h3>
 <p>El valor del peso para cada clase en el método <em>Statistical index model</em> es definido como el logaritmo natural de la densidad de movimientos en masa en una clase (<span class="math notranslate nohighlight">\(\rho_{clase}\)</span>) dividido la densidad de deslizamientos en toda la zona de estudio (<span class="math notranslate nohighlight">\(\rho_{total}\)</span>), de acuerdo con la siguiente ecuación:</p>
 <p><span class="math notranslate nohighlight">\(w_{ij}^n = \ln(\frac{\rho_{clase}}{\rho_{total}}) = \ln(\frac{\frac{N_{ij}}{S_{ij}}}{\frac{N}{S}}) \)</span></p>
-<p>Donde <span class="math notranslate nohighlight">\(w_{ij}^n\)</span> es el peso de la celda <span class="math notranslate nohighlight">\(n\)</span> que pertenece a la clase <span class="math notranslate nohighlight">\(i\)</span> de la variable <span class="math notranslate nohighlight">\(j\)</span>. <span class="math notranslate nohighlight">\(\rho_{clase}\)</span> es la densidad de deslizamientos de la clase <span class="math notranslate nohighlight">\(i\)</span> del parámetro <span class="math notranslate nohighlight">\(j\)</span>, calculado a  partir de <span class="math notranslate nohighlight">\(N_{ij}\)</span> como el número de pixeles con MenM en una cierta clase <span class="math notranslate nohighlight">\(i\)</span> del parametro <span class="math notranslate nohighlight">\(j\)</span>, <span class="math notranslate nohighlight">\(S_{ij}\)</span> como el número de pixeles de la clase <span class="math notranslate nohighlight">\(i\)</span> del parametro <span class="math notranslate nohighlight">\(j\)</span>. N es el total de celdas que corresponden a deslizamientos en todo el mapa y S es el total de celdas del área de estudio.</p>
+<p>Donde <span class="math notranslate nohighlight">\(w_{ij}^n\)</span> es el peso de la celda <span class="math notranslate nohighlight">\(n\)</span> que pertenece a la clase <span class="math notranslate nohighlight">\(i\)</span> de la variable <span class="math notranslate nohighlight">\(j\)</span>. <span class="math notranslate nohighlight">\(\rho_{clase}\)</span> es la densidad de deslizamientos de la clase <span class="math notranslate nohighlight">\(i\)</span> del parámetro <span class="math notranslate nohighlight">\(j\)</span>, calculado a  partir de <span class="math notranslate nohighlight">\(N_{ij}\)</span> como el número de pixeles con MenM en una cierta clase <span class="math notranslate nohighlight">\(i\)</span> del parámetro <span class="math notranslate nohighlight">\(j\)</span>, <span class="math notranslate nohighlight">\(S_{ij}\)</span> como el número de pixeles de la clase <span class="math notranslate nohighlight">\(i\)</span> del parámetro <span class="math notranslate nohighlight">\(j\)</span>. N es el total de celdas que corresponden a deslizamientos en todo el mapa y S es el total de celdas del área de estudio.</p>
 <p>Finalmente la susceptibilidad a movimientos en masa de cada celda es igual a:</p>
 <p><span class="math notranslate nohighlight">\(S^n = \sum w = w_{pendiente} + w_{geologia} + w_{coberturas} + ...w_{n} \)</span></p>
 <section id="id1">
@@ -1008,6 +1070,7 @@ la clase  <span class="math notranslate nohighlight">\(\hat{B}_i\)</span>.</p>
 <p><span class="math notranslate nohighlight">\(C = W^+ - W^-\)</span></p>
 <p>Y el contraste C refleja el espacio de asociación respecto a la clase en la predicción del movimiento en masa, la cual
 es cero cuando la clase no afecta, es positivo cuando existe una correlación directa y negativo cuando existe una correlación inversa con la distribución de movimientos en masa.</p>
+<p>La formulación bayesiana del WoE se apoya en un supuesto fundamental: que los mapas de factores condicionantes (pendiente, litología, uso del suelo, etc.) son condicionalmente independientes entre sí con respecto a la ocurrencia de movimientos en masa. Si este supuesto se viola, el modelo tiende a sobreestimar las probabilidades posteriores. Para evaluar esta condición se utilizan pruebas como la Razón de Independencia Condicional (CI Ratio), que compara el número de movimientos en masa predicho (<span class="math notranslate nohighlight">\(T\)</span>, la suma de las probabilidades posteriores ponderada por el área de cada celda) con el número observado (<span class="math notranslate nohighlight">\(n\)</span>); si <span class="math notranslate nohighlight">\(T\)</span> supera a <span class="math notranslate nohighlight">\(n\)</span> entre un 10% y un 15%, existe una violación significativa de la independencia condicional, lo que indica que las variables están altamente correlacionadas entre sí. De forma más rigurosa, la prueba de Agterberg-Cheng aplica un contraste de hipótesis formal sobre la diferencia <span class="math notranslate nohighlight">\(T-n\)</span>, mediante el estadístico <span class="math notranslate nohighlight">\(Z=(T-n)/\sigma_T\)</span>, donde <span class="math notranslate nohighlight">\(\sigma_T\)</span> es la desviación estándar de la suma predicha; ambas pruebas suelen implementarse en herramientas de modelado espacial como ArcSDM.</p>
 <section id="id2">
 <h4>Python<a class="headerlink" href="#id2" title="Link to this heading">#</a></h4>
 <p>Para calcular el <span class="math notranslate nohighlight">\(W^+\)</span> (wp), <span class="math notranslate nohighlight">\(W^-\)</span> (wn), y <span class="math notranslate nohighlight">\(C\)</span> de cada clase se utilizan las siguientes ecuaciones del método WoE: <span class="math notranslate nohighlight">\(N_{pix1}\)</span>=a1, son las celdas que pertenecen a la clase a y tienen MenM. <span class="math notranslate nohighlight">\(N_{pix2}\)</span>=total1-a1, son las celdas que no pertenecen a la clase a y que tienen MenM, <span class="math notranslate nohighlight">\(N_{pix3}\)</span>=a-a1, son las celdas que pertenecen a la clase a pero que no tienen MenM. y <span class="math notranslate nohighlight">\(N_{pix4}\)</span>=(b+c+d+e)-(b1+c1+d1+e1), son las celdas que no pertenecen a la clase a y que no tienen MenM.</p>
@@ -1218,7 +1281,7 @@ es cero cuando la clase no afecta, es positivo cuando existe una correlación di
 <img alt="_images/969866083ce801f1a601b3244b9464bc730b938e8fdbe9eb7162fa0905c5d07e.png" src="_images/969866083ce801f1a601b3244b9464bc730b938e8fdbe9eb7162fa0905c5d07e.png" />
 </div>
 </div>
-<p>En el método <em>Peso de la evidencia</em> se debe tener en cuenta que las clases que no presentan movimientos en masa generan un matemático, ya que no se puede estimar el logaritmo natural de cero. Por lo tanto, se debe proceder a esas clases donde se obtuvo cero celdas asignarles un valor de 1, de tal forma que se pueda ejecutar el cálculo.</p>
+<p>En el método <em>Peso de la evidencia</em> se debe tener en cuenta que las clases que no presentan movimientos en masa generan un problema matemático, ya que no se puede estimar el logaritmo natural de cero. Por lo tanto, se debe proceder a esas clases donde se obtuvo cero celdas asignarles un valor de 1, de tal forma que se pueda ejecutar el cálculo.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">bg1</span><span class="o">=</span><span class="n">cg1</span><span class="o">=</span><span class="n">eg1</span><span class="o">=</span><span class="n">jg1</span><span class="o">=</span><span class="mi">1</span>   <span class="c1">#clases que obtuvieron 0 celdas con movimientos en masa</span>
@@ -1379,7 +1442,7 @@ es cero cuando la clase no afecta, es positivo cuando existe una correlación di
 <img alt="_images/addd0e57326496dba1fff8575afe14fd7ae58d3c3594a9007fd2c6df5090ff16.png" src="_images/addd0e57326496dba1fff8575afe14fd7ae58d3c3594a9007fd2c6df5090ff16.png" />
 </div>
 </div>
-<p>Finalmente se calcula el Indice de Susceptibildiad (IS), el cual corresponde a la suma de los mapas reclasificados con el valor del Contraste, de la siguiente forma.</p>
+<p>Finalmente se calcula el Índice de Susceptibilidad (IS), el cual corresponde a la suma de los mapas reclasificados con el valor del Contraste, de la siguiente forma.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">IS</span><span class="o">=</span><span class="n">pendiente_c</span><span class="o">+</span><span class="n">aspecto_c</span><span class="o">+</span><span class="n">geologia_c</span>
@@ -1699,7 +1762,7 @@ Uncertainty: 0.779945631519558 0.6685805967883163 0.887081357121326 0.7783177630
 <p>Donde PPa es la probabilidad condicional de la ocurrencia de un deslizamiento en la clase a. PPs es la probabilidad priori del número total de deslizamientos en el área.</p>
 <section id="id4">
 <h4><em>Python</em><a class="headerlink" href="#id4" title="Link to this heading">#</a></h4>
-<p>Los mapas finales los podemos exportar en formato <em>tif</em>, para eso en el siguiente ejemplo se utiliza el mapa de pendientes para extraer las dimensiones de la matriz (mapa) a crear de la zoan de estudio.</p>
+<p>Los mapas finales los podemos exportar en formato <em>tif</em>, para eso en el siguiente ejemplo se utiliza el mapa de pendientes para extraer las dimensiones de la matriz (mapa) a crear de la zona de estudio.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">meta</span><span class="o">=</span><span class="n">raster</span><span class="o">.</span><span class="n">profile</span>
@@ -1723,13 +1786,13 @@ Uncertainty: 0.779945631519558 0.6685805967883163 0.887081357121326 0.7783177630
 <p>Inicialmente se describe el método denominado <em>análisis condicional</em>, el cual es el único de los métodos que NO se considera una técnica de <em>machine learning</em>.</p>
 <section id="metodo-de-analisis-condicional">
 <h3>Método de Análisis Condicional<a class="headerlink" href="#metodo-de-analisis-condicional" title="Link to this heading">#</a></h3>
-<p>El método de análisis condicional, o también denominado <em>matrix assessment</em> fue desarrollado por <span id="id5">Clerici <em>et al.</em> [<a class="reference internal" href="#id72" title="Aldo Clerici, Susanna Perego, Claudio Tellini, and Paolo Vescovi. A procedure for landslide susceptibility zonation by the conditional analysis method. Geomorphology, 48:349-364, 2002. doi:10.1016/S0169-555X(02)00079-X.">2002</a>]</span>, y no requiere asunciones de aleatoriedad del fenómeno bajo análisis. En general es utilizado por su simpleza conceptual y matemática, sin embargo desde el punto de vista procedimental puede ser demandante.</p>
+<p>El método de análisis condicional, o también denominado <em>matrix assessment</em> fue desarrollado por <span class="bibtex-citation" id="id5">Clerici <em>et al.</em> [<a class="reference internal" href="100_references.html#id60" title="Aldo Clerici, Susanna Perego, Claudio Tellini, and Paolo Vescovi. A procedure for landslide susceptibility zonation by the conditional analysis method. Geomorphology, 48:349-364, 2002. doi:10.1016/S0169-555X(02)00079-X.">2002</a>]</span>, y no requiere asunciones de aleatoriedad del fenómeno bajo análisis. En general es utilizado por su simpleza conceptual y matemática, sin embargo desde el punto de vista procedimental puede ser demandante.</p>
 <p>Se fundamente en el uso de la unidad de análisis denominada Unidad de Condiciones Unicas (UCU). El procedimiento es el siguiente: (i) elaborar el mapa de UCU a partir de las variables predictoras seleccionadas, (ii) se cruza el mapa de UCU con el inventario de movimientos en masa, (iii) se calcula para cada UCU el porcentaje de área con movimientos en masa, (iv) finalmente, se clasifican de acuerdo con el porcentaje de área afectada. Ese porcentaje, que corresponde a una densidad relativa, es equivalente a la probabilidad futura de la ocurrencia de movimientos en masa.</p>
 <figure class="align-default" id="metodo-ucu">
 <a class="reference internal image-reference" href="https://i.pinimg.com/564x/cc/6d/00/cc6d00fc1e76c817cac53b08377c25b2.jpg"><img alt="metodo ucu" src="https://i.pinimg.com/564x/cc/6d/00/cc6d00fc1e76c817cac53b08377c25b2.jpg" style="width: 500px;" />
 </a>
 <figcaption>
-<p><span class="caption-number">Fig. 59 </span><span class="caption-text">Método de análisis condicional. Tomado de Urquia et al., (2020).</span><a class="headerlink" href="#metodo-ucu" title="Link to this image">#</a></p>
+<p><span class="caption-number">Fig. 59 </span><span class="caption-text">Método de análisis condicional. Tomado de Urquia et al. (2020).</span><a class="headerlink" href="#metodo-ucu" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 </section>
@@ -1748,11 +1811,11 @@ Uncertainty: 0.779945631519558 0.6685805967883163 0.887081357121326 0.7783177630
 </ul>
 <p>En contraste, aplicamos el aprendizaje no supervisado cuando solo disponemos del conjunto de datos de las variables predictoras <span class="math notranslate nohighlight">\(X\)</span>, pero desconocemos por completo los valores de la variable de respuesta <span class="math notranslate nohighlight">\(y\)</span>.</p>
 <p>Como no hay una <span class="math notranslate nohighlight">\(y\)</span> para “supervisar” el aprendizaje, el objetivo del modelo no es encontrar la función <span class="math notranslate nohighlight">\(f\)</span> que predice <span class="math notranslate nohighlight">\(y\)</span>. En su lugar, el objetivo es descubrir la estructura intrínseca y los patrones ocultos dentro de los propios datos <span class="math notranslate nohighlight">\(X\)</span>. La técnica más común es el análisis de clústeres, que agrupa los datos en clases basándose únicamente en su similitud. Por ejemplo, podría identificar zonas de terreno con características geotécnicas similares, que luego el experto debe interpretar para asignarles un grado de susceptibilidad.</p>
-<figure class="align-default" id="ml">
+<figure class="align-default" id="ml-algoritmos">
 <a class="reference internal image-reference" href="https://miro.medium.com/max/477/1*KFQI59Yv7m1f3fwG68KSEA.jpeg"><img alt="ml" src="https://miro.medium.com/max/477/1*KFQI59Yv7m1f3fwG68KSEA.jpeg" style="width: 500px;" />
 </a>
 <figcaption>
-<p><span class="caption-number">Fig. 60 </span><span class="caption-text">Algoritmos utilizados en <em>machine learning</em></span><a class="headerlink" href="#ml" title="Link to this image">#</a></p>
+<p><span class="caption-number">Fig. 60 </span><span class="caption-text">Algoritmos utilizados en <em>machine learning</em></span><a class="headerlink" href="#ml-algoritmos" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 <p>Ahora, centrándonos en el aprendizaje supervisado, los modelos que usamos para estimar la función f se pueden clasificar en dos grandes familias: paramétricos y no paramétricos.</p>
@@ -1765,20 +1828,20 @@ Uncertainty: 0.779945631519558 0.6685805967883163 0.887081357121326 0.7783177630
 <p>En este sentido, un buen modelo se soporta en un balance entre el ajuste y la varianza, desafortunadamente mejorar en uno de estos aspectos implica generalmente reducción en el otro.  La elección del modelo debe ser una decisión informada. Si la prioridad es entender los factores detonantes y su peso relativo, un modelo paramétrico como la regresión logística es una excelente opción. Si, en cambio, la prioridad absoluta es la capacidad predictiva del mapa final, los modelos no paramétricos de machine learning suelen ofrecer un rendimiento superior o, como mínimo, muy competitivo.</p>
 <section id="modelos-parametricos">
 <h4>Modelos Paramétricos<a class="headerlink" href="#modelos-parametricos" title="Link to this heading">#</a></h4>
-<p>Una ventaja clave de de los métodos paramétricos es que mantienen un alto grado de interpretabilidad, lo que permite al usuario evaluar directamente el papel de las covariables en relación con la ocurrencia de deslizamientos. Esto contrasta con la mayoría de los modelos de <strong>machine learning</strong>, en los que la interpretabilidad a menudo se pierde. Los métodos no paramétricos tienden a sacrificar la interpretabilidad en favor de un mayor poder predictivo. Sin embargo, la interpretabilidad es un aspecto fundamental en la modelación, ya que no se trata únicamente de realizar buenas predicciones, sino también de establecer de manera clara la relación entre las variables predictoras y la variable dependiente.</p>
+<p>Una ventaja clave de los métodos paramétricos es que mantienen un alto grado de interpretabilidad, lo que permite al usuario evaluar directamente el papel de las covariables en relación con la ocurrencia de deslizamientos. Esto contrasta con la mayoría de los modelos de <strong>machine learning</strong>, en los que la interpretabilidad a menudo se pierde. Los métodos no paramétricos tienden a sacrificar la interpretabilidad en favor de un mayor poder predictivo. Sin embargo, la interpretabilidad es un aspecto fundamental en la modelación, ya que no se trata únicamente de realizar buenas predicciones, sino también de establecer de manera clara la relación entre las variables predictoras y la variable dependiente.</p>
 <section id="analisis-discriminante-lineal">
 <h5>Análisis Discriminante Lineal<a class="headerlink" href="#analisis-discriminante-lineal" title="Link to this heading">#</a></h5>
 <p>El análisis discriminante lineal (LDA) es una técnica estadística que crea una función capaz de clasificar los fenómenos, teniendo en cuenta una serie de variables discriminadoras y una probabilidad de pertenencia. LDA encuentra combinaciones lineales de variables que mejor “discriminan” las clases de la variable respuesta. LDA supone que las variables predictoras son variables aleatorias continuas normalmente distribuidas y con la misma varianza.</p>
 <p>El enfoque de Fisher para LDA es encontrar una combinación lineal de predictores que maximice la matriz de covarianza entre grupos, relativo a la matriz de covarianza dentro del grupo (intra-grupo). La solución a este problema de optimización es el vector propio correspondiente al valor propio más grande. Este vector es un discriminante lineal (e.g. una variable). Resolver para la configuración para dos grupos la función discriminante <span class="math notranslate nohighlight">\(S^{-1}(X_1-X_2)\)</span> donde <span class="math notranslate nohighlight">\(S^{-1}\)</span> es la inversa de la matriz de covarianza de los datos <span class="math notranslate nohighlight">\(X_1\)</span> y <span class="math notranslate nohighlight">\(X_2\)</span> son las medias de cada predictor en los grupos de respuesta 1 y 2. En la práctica, una nueva muestra, <span class="math notranslate nohighlight">\(u\)</span>, se proyecta sobre la función discriminante como <span class="math notranslate nohighlight">\(uS^{-1}(X_1-X_2)\)</span>, que devuelve una puntuación discriminante. Luego, una nueva muestra se clasifica en el grupo 1 si la muestra está más cerca de la media del grupo 1 que de la media del grupo 2 en la proyección.</p>
-<figure class="align-default" id="id6">
+<figure class="align-default" id="ml-discriminante">
 <a class="reference internal image-reference" href="https://i.pinimg.com/736x/d2/c5/52/d2c552375b74bf0ca9c3aee1f9d9dc07.jpg"><img alt="ml" src="https://i.pinimg.com/736x/d2/c5/52/d2c552375b74bf0ca9c3aee1f9d9dc07.jpg" style="width: 500px;" />
 </a>
 <figcaption>
-<p><span class="caption-number">Fig. 61 </span><span class="caption-text">Análisis discriminante</span><a class="headerlink" href="#id6" title="Link to this image">#</a></p>
+<p><span class="caption-number">Fig. 61 </span><span class="caption-text">Análisis discriminante</span><a class="headerlink" href="#ml-discriminante" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
-<section id="id7">
-<h6><em>Python</em><a class="headerlink" href="#id7" title="Link to this heading">#</a></h6>
+<section id="id6">
+<h6><em>Python</em><a class="headerlink" href="#id6" title="Link to this heading">#</a></h6>
 <p>El procedimiento para todos los métodos de <em>machine learning</em> con <em>sklearn</em> son muy similares. Se importa la librería, se instancia el modelo con los <a class="reference external" href="https://scikit-learn.org/stable/modules/generated/sklearn.discriminant_analysis.LinearDiscriminantAnalysis.html">hiperparámetros</a> deseados, en este caso vamos a proyectar los datos sobre un nuevo eje (función discriminante), se entrena el modelo, y se predice.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -2151,14 +2214,14 @@ Uncertainty: 0.779945631519558 0.6685805967883163 0.887081357121326 0.7783177630
 </section>
 <section id="regresion-logistica">
 <h5>Regresión logística<a class="headerlink" href="#regresion-logistica" title="Link to this heading">#</a></h5>
-<p>La regresión logística  (RL) ha sido, durante mucho tiempo, un método GLM ampliamente utilizado para modelar la susceptibilidad a movimientos en masa. La RL estima la relación de una variable dependiente categórica (la ocurrencia de movimientos en masa) de valores binarios de 0 (no ocurrencia) y 1 (si ocurrencia), con un grupo de variables independientes, en este caso las variables condicionantes del terreno. De esta forma, la RL se utiliza para clasificar a qué grupo, ocurrencia=1 ó no-ocurrencia=0, pertenece una observación en función de diferentes variables predictoras. Para esto la RL estima la probabilidad de <em>y</em> de pertenecer a cada grupo transformando la combinación lineal de las variables predictoras (<em>x</em>) mediante la función <em>logit</em> o <em>sigmoid</em>. Lo que le permite transformar los valores arrojados por la combinación lineal a un dominio entre 0 y 1. La función <em>logit</em> se define como el logaritmo natural de la relación entre la probabilidad de ocurrencia y la probabilidad de no ocurrencia, también denominada <em>odds</em></p>
+<p>La regresión logística (RL) ha sido, durante mucho tiempo, un método GLM ampliamente utilizado para modelar la susceptibilidad a movimientos en masa. La RL estima la relación de una variable dependiente categórica (la ocurrencia de movimientos en masa) de valores binarios de 0 (no ocurrencia) y 1 (sí ocurrencia), con un grupo de variables independientes, en este caso las variables condicionantes del terreno. De esta forma, la RL se utiliza para clasificar a qué grupo, ocurrencia=1 ó no-ocurrencia=0, pertenece una observación en función de diferentes variables predictoras. Para esto la RL estima la probabilidad de <em>y</em> de pertenecer a cada grupo transformando la combinación lineal de las variables predictoras (<em>x</em>) mediante la función <em>logit</em> o <em>sigmoid</em>. Lo que le permite transformar los valores arrojados por la combinación lineal a un dominio entre 0 y 1. La función <em>logit</em> se define como el logaritmo natural de la relación entre la probabilidad de ocurrencia y la probabilidad de no ocurrencia, también denominada <em>odds</em></p>
 <p><span class="math notranslate nohighlight">\(P(y/x) = \frac{1}{1+e^{-z}}\)</span></p>
 <p><span class="math notranslate nohighlight">\(\frac{p(y/x)}{1-p(y/x)} = e^{a+\sum bx}\)</span></p>
 <p><span class="math notranslate nohighlight">\(Ln(\frac{p(y/x)}{1-p(y/x)}) = a+\sum bx\)</span></p>
 <p>Donde <span class="math notranslate nohighlight">\(P(y/x)\)</span> es la probabilidad que <em>y</em> sea igual a 1 dado <em>X</em>, es decir la ocurrencia de movimientos en masa, dado la combinación lineal de las variables independientes:</p>
 <p><span class="math notranslate nohighlight">\(z=\beta_o+\beta_1X_1+\beta_2X_2+\beta_3X_3+...+\beta_nX_n\)</span></p>
 <p>Donde <span class="math notranslate nohighlight">\(\beta_0\)</span> es el intercepto del modelo, los valores <span class="math notranslate nohighlight">\(\beta_i\)</span> (i=1,2, 3, n) son los coeficientes de la regresión logística, es decir, los pesos de las variables, y los valores <span class="math notranslate nohighlight">\(X_i\)</span> (i=1, 2, 3,…, n) son las variables independientes. El resultado final es un valor entre 0 y 1, donde 0 es la probabilidad nula de ocurrencia de movimientos en masa y 1 la máxima probabilidad de ocurrencia. De acuerdo con esto, a pesar de que el modelo transformado es lineal en las variables, las probabilidades no son lineales.</p>
-<p>La ventaja de la RL es que las variables predictoras no requieren tener distribución normal y pueden ser discretas o continuas, o una combinación de ambas. Sin embargo, para incorporar variables categóricas se deben transformar a variables binarias todas las clases, es decir una nueva variable por cada clase. El modelo en este caso elimina una clase, que pasa a ser la clase referente, y arroja un coeficiente para las demas clases. Es decir que los coeficientes de las clases se interpretan con respecto a la clase faltante. Esta eliminación de una clase se realiza con el objeto de evitar la multicolinealidad entre variables, ya que todas las clases sumadas dan como resultado un vector constante igual a 1, es decir que se correlacionan perfectamente.</p>
+<p>La ventaja de la RL es que las variables predictoras no requieren tener distribución normal y pueden ser discretas o continuas, o una combinación de ambas. Sin embargo, para incorporar variables categóricas se deben transformar a variables binarias todas las clases, es decir una nueva variable por cada clase. El modelo en este caso elimina una clase, que pasa a ser la clase referente, y arroja un coeficiente para las demás clases. Es decir que los coeficientes de las clases se interpretan con respecto a la clase faltante. Esta eliminación de una clase se realiza con el objeto de evitar la multicolinealidad entre variables, ya que todas las clases sumadas dan como resultado un vector constante igual a 1, es decir que se correlacionan perfectamente.</p>
 <p>Sin embargo, la regresión logística puede ser inconsistente al aplicarse en diferentes resoluciones espaciales y unidades de mapeo, debido a la naturaleza binaria de la variable de respuesta, la cual solo indica la presencia o ausencia de uno o más deslizamientos, sin diferenciar entre el número de eventos.</p>
 <figure class="align-default" id="rl0">
 <a class="reference internal image-reference" href="https://i0.wp.com/www.jacobsoft.com.mx/wp-content/uploads/2018/10/grafica-sigmoi.png?resize=800%2C420&amp;ssl=1"><img alt="rl0" src="https://i0.wp.com/www.jacobsoft.com.mx/wp-content/uploads/2018/10/grafica-sigmoi.png?resize=800%2C420&amp;ssl=1" style="width: 600px;" />
@@ -2184,9 +2247,9 @@ Uncertainty: 0.779945631519558 0.6685805967883163 0.887081357121326 0.7783177630
 <p><span class="caption-number">Fig. 64 </span><span class="caption-text">Ejemplo 2 regresión logística.</span><a class="headerlink" href="#rl2" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
-<p>Como se puede observar, cuando se aplica la función <em>e</em> al coeficiente de la pendiente se obtiene los <em>odds</em>, es decir la probabilidad de ocurrencia de movimientos en masa dado que la pendiente sea <span class="math notranslate nohighlight">\(&gt;20°\)</span>  sobre la probabilidad de ocurrencia de movimientos en masa dado que la pendiente sea <span class="math notranslate nohighlight">\(&lt;20°\)</span>. En este caso que el valor obtenido es 0.63 significa que es mas probale la ocurrencia para celdas con pendiente <span class="math notranslate nohighlight">\(&lt;20°\)</span>.</p>
-<section id="id8">
-<h6><em>Python</em><a class="headerlink" href="#id8" title="Link to this heading">#</a></h6>
+<p>Como se puede observar, cuando se aplica la función <em>e</em> al coeficiente de la pendiente se obtiene los <em>odds</em>, es decir la probabilidad de ocurrencia de movimientos en masa dado que la pendiente sea <span class="math notranslate nohighlight">\(&gt;20°\)</span>  sobre la probabilidad de ocurrencia de movimientos en masa dado que la pendiente sea <span class="math notranslate nohighlight">\(&lt;20°\)</span>. En este caso que el valor obtenido es 0.63 significa que es más probable la ocurrencia para celdas con pendiente <span class="math notranslate nohighlight">\(&lt;20°\)</span>.</p>
+<section id="id7">
+<h6><em>Python</em><a class="headerlink" href="#id7" title="Link to this heading">#</a></h6>
 <p>A continuación se implementará el método de RL para evaluar la susceptibilidad por movimientos en masa con los datos utilizados en el método anterior. En este ejemplo sólo se utilizarán tres variables (<em>pendiente</em>, <em>aspecto</em> y <em>geologia</em>).</p>
 <p>Existen dos librerías que nos permiten resolver este modelo, <em>statsmodels</em> y <em>sklearn</em>. La primera de ellas nos ofrece un resumen con los resultados y métricas de desempeño del modelo y utilizar la librería <strong>Patsy</strong> que permite el uso de fórmulas.</p>
 <div class="cell docutils container">
@@ -2235,7 +2298,7 @@ pendiente               0.4571      0.026     17.412      0.000       0.406     
 </div>
 </div>
 </div>
-<p>La librearía <em>statsmodels</em> incorpora por defecto el intercepto en el modelo y en las fórmulas pueden especificar el tipo de variables categóricas con una <em>C</em>. Utiliza por defecto <em>solver = newton-cg</em>. Como se menciono anteriormente las clases de las variables categóricas son transformadas en variables binarias, eliminando una. En este caso se eliminó la clase 2 de <em>geologia</em>, por lo que los coeficientes de las demas clases son con respecto a dicha clase. Entre los resultados se destacan el estimador para los coeficientes (maxima verosimilitud -MLE-), el logaritmo del estimador MLE (Log-likelihood), el coeficiente de ajuste (Pseudo R-squ.). Con respecto a los coeficientes se presenta el valor de la prueba de hipótesis nula que el valor del coeficiente sea igual a cero (z) como el valor del coeficiente y el error estandar (std err), y el <em>p-value</em> (P&gt;|z|), este valor debe ser menor al 5% (0.05), lo cual significa que la probabilidad que el coeficiente tenga un valor de 0 es muy bajo.  Finalmente se presenta el rango del 95% del dominio del valor del coeficiente, si el coeficiente es estadísticamente significativo, dicho rango no debe contener el valor 0.</p>
+<p>La librearía <em>statsmodels</em> incorpora por defecto el intercepto en el modelo y en las fórmulas pueden especificar el tipo de variables categóricas con una <em>C</em>. Utiliza por defecto <em>solver = newton-cg</em>. Como se mencionó anteriormente las clases de las variables categóricas son transformadas en variables binarias, eliminando una. En este caso se eliminó la clase 2 de <em>geología</em>, por lo que los coeficientes de las demas clases son con respecto a dicha clase. Entre los resultados se destacan el estimador para los coeficientes (máxima verosimilitud -MLE-), el logaritmo del estimador MLE (Log-likelihood), el coeficiente de ajuste (Pseudo R-squ.). Con respecto a los coeficientes se presenta el valor de la prueba de hipótesis nula que el valor del coeficiente sea igual a cero (z) como el valor del coeficiente y el error estándar (std err), y el <em>p-value</em> (P&gt;|z|), este valor debe ser menor al 5% (0.05), lo cual significa que la probabilidad que el coeficiente tenga un valor de 0 es muy bajo.  Finalmente se presenta el rango del 95% del dominio del valor del coeficiente, si el coeficiente es estadísticamente significativo, dicho rango no debe contener el valor 0.</p>
 <p>La librería  <em>scikit learn</em> permite parametrizar el modelo de diferentes formas, sin embargo requiere separar variables dependientes y variables independientes. Asi como transformar la variable categórica y eliminar una clase. También es importante tener en cuenta que la función <em>LogisticRegression()</em> por defecto utiliza como <em>solver = lbfgs</em> y <em>L2 regularization</em>, por lo que adiciona un término extra a la función <em>log-loss</em>. De esta forma, si se quiere obtener valores comparables a los del statsmodels se debe utilizar <em>LogisticRegression(penalty=None)</em>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -2355,7 +2418,7 @@ pendiente               0.4571      0.026     17.412      0.000       0.406     
 </table>
 </div></div></div>
 </div>
-<p>Inicialmente, se importa la función para RL, y se construye el modelo con los hiperparámetros. En este caso, estamos asignándole un <em>class_weight</em> = balanced para que asigne mas peso a las celdas minoritarias, en este caso las celdas donde y=1. De esta forma RL nos ayuda a resolver el problema de la base de datos original  desbalanceada. El segundo hiperparámetro que utilizamos es el tipo de algoritmo para resolver la RL, en este caso utilizaremos <em>newton-cg</em>. La librera “skilearn” utiliza por defecto el hiperparámetro <em>fit_intercept</em> con un valor de <em>True</em> que equivale a incluir el intercepto.</p>
+<p>Inicialmente, se importa la función para RL, y se construye el modelo con los hiperparámetros. En este caso, estamos asignándole un <em>class_weight</em> = balanced para que asigne mas peso a las celdas minoritarias, en este caso las celdas donde y=1. De esta forma RL nos ayuda a resolver el problema de la base de datos original  desbalanceada. El segundo hiperparámetro que utilizamos es el tipo de algoritmo para resolver la RL, en este caso utilizaremos <em>newton-cg</em>. La librería “sklearn” utiliza por defecto el hiperparámetro <em>fit_intercept</em> con un valor de <em>True</em> que equivale a incluir el intercepto.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">sklearn.linear_model</span><span class="w"> </span><span class="kn">import</span> <span class="n">LogisticRegression</span>
@@ -2409,7 +2472,7 @@ C:\Users\edier\miniconda3\Lib\site-packages\sklearn\utils\optimize.py:204: UserW
 </div>
 </div>
 </div>
-<p>Sin embargo, tambien se puede obtener los resultados del modelo antes de clasificarlo como (0,1). es decir la probabilidad de cada celda de ser 0 o de ser 1. Para eso se utiliza la función <em>predict_proba</em>. La cual puede ser mas útil para nuestro mapa.</p>
+<p>Sin embargo, también se puede obtener los resultados del modelo antes de clasificarlo como (0,1). es decir la probabilidad de cada celda de ser 0 o de ser 1. Para eso se utiliza la función <em>predict_proba</em>. La cual puede ser mas útil para nuestro mapa.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">y_prob</span><span class="o">=</span><span class="n">result</span><span class="o">.</span><span class="n">predict_proba</span><span class="p">(</span><span class="n">X1</span><span class="p">)</span>
@@ -2429,7 +2492,7 @@ C:\Users\edier\miniconda3\Lib\site-packages\sklearn\utils\optimize.py:204: UserW
 </div>
 </div>
 </div>
-<p>Como se puede observar el resultado en este caso, en lugar de ser un vector con la clasificación de cada celda, es un matriz de dos columnas. Donde la primera columna es la probabilidad de cada celda de ser 0, es decir estable, y la segudna columna la probabilidad de ser 1, es decir inestable. Para nuestro propósito es mas útil obtener la probabilidad de cada celda de ser inestable. Para eso seleccionamos entonces solo la segunda columna de la matriz obtenida.</p>
+<p>Como se puede observar el resultado en este caso, en lugar de ser un vector con la clasificación de cada celda, es un matriz de dos columnas. Donde la primera columna es la probabilidad de cada celda de ser 0, es decir estable, y la segunda columna la probabilidad de ser 1, es decir inestable. Para nuestro propósito es más útil obtener la probabilidad de cada celda de ser inestable. Para eso seleccionamos entonces solo la segunda columna de la matriz obtenida.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">y_probs</span><span class="o">=</span><span class="n">result</span><span class="o">.</span><span class="n">predict_proba</span><span class="p">(</span><span class="n">X1</span><span class="p">)[:,</span><span class="mi">1</span><span class="p">]</span>
@@ -2652,8 +2715,8 @@ g(\mathbb{E}[Y]) = \beta_0 + \beta_1 X_1 + \cdots + \beta_p X_p
 <li><p>Conservan muchas de las propiedades de los GLM, incluyendo la elección de la función de enlace y distribución de la respuesta.</p></li>
 </ul>
 <p>Los GAM son particularmente útiles en estudios de susceptibilidad a movimientos en masa, donde la relación entre la probabilidad de ocurrencia y variables como pendiente, litología o curvatura del terreno puede ser altamente no lineal.</p>
-<section id="id9">
-<h6>Ejemplo<a class="headerlink" href="#id9" title="Link to this heading">#</a></h6>
+<section id="id8">
+<h6>Ejemplo<a class="headerlink" href="#id8" title="Link to this heading">#</a></h6>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">pygam</span><span class="w"> </span><span class="kn">import</span> <span class="n">LogisticGAM</span><span class="p">,</span> <span class="n">s</span><span class="p">,</span> <span class="n">f</span>
@@ -2706,12 +2769,12 @@ Pseudo R2: OrderedDict([(&#39;explained_deviance&#39;, 0.03226871783801588), (&#
 <section id="support-vector-machine-svm">
 <h5><em>Support Vector Machine (SVM)</em><a class="headerlink" href="#support-vector-machine-svm" title="Link to this heading">#</a></h5>
 <p>SVM es un modelo que representa a los puntos de muestra en el espacio, separando las clases a 2 espacios lo más amplios posibles mediante un hiperplano de separación definido como el vector entre los 2 puntos, de las 2 clases, más cercanos al que se llama vector soporte. Cuando las nuevas muestras se ponen en correspondencia con dicho modelo, en función de los espacios a los que pertenezcan, pueden ser clasificadas a una o la otra clase.</p>
-<p>Los vectores de soporte son los puntos que definen el margen máximo de separación del hiperplano que separa las clases. Se llaman vectores, en lugar de puntos, porque estos «puntos» tienen tantos elementos como dimensiones tenga nuestro espacio de entrada. Es decir, estos puntos multi-dimensionales se representan con con vector de n dimensiones.</p>
+<p>Los vectores de soporte son los puntos que definen el margen máximo de separación del hiperplano que separa las clases. Se llaman vectores, en lugar de puntos, porque estos «puntos» tienen tantos elementos como dimensiones tenga nuestro espacio de entrada. Es decir, estos puntos multi-dimensionales se representan con un vector de n dimensiones.</p>
 <figure class="align-default" id="svm">
 <a class="reference internal image-reference" href="https://i.pinimg.com/736x/15/e8/b0/15e8b0954323dc7bc6164ba7e23d8f4e.jpg"><img alt="svm" src="https://i.pinimg.com/736x/15/e8/b0/15e8b0954323dc7bc6164ba7e23d8f4e.jpg" style="width: 400px;" />
 </a>
 <figcaption>
-<p><span class="caption-number">Fig. 65 </span><span class="caption-text">Intrepretación geométrica de SVM.</span><a class="headerlink" href="#svm" title="Link to this image">#</a></p>
+<p><span class="caption-number">Fig. 65 </span><span class="caption-text">Interpretación geométrica de SVM.</span><a class="headerlink" href="#svm" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 <p>El <em>Maximal Margin Classifier</em> tiene poca aplicación práctica, ya que rara vez se encuentran casos en los que las clases sean perfecta y linealmente separables. De hecho, incluso cumpliéndose estas condiciones ideales, en las que exista un hiperplano capaz de separar perfectamente las observaciones en dos clases, esta aproximación sigue presentando dos inconvenientes:</p>
@@ -2721,9 +2784,9 @@ Pseudo R2: OrderedDict([(&#39;explained_deviance&#39;, 0.03226871783801588), (&#
 </ul>
 <p>Por estas razones, es preferible crear un clasificador basado en un hiperplano que, aunque no separe perfectamente las dos clases, sea más robusto y tenga mayor capacidad predictiva al aplicarlo a nuevas observaciones (menos problemas de overfitting). Esto es exactamente lo que consiguen los clasificadores de vector soporte, también conocidos como <em>soft margin classifiers</em> o <em>Support Vector Classifiers</em>. Para lograrlo, en lugar de buscar el margen de clasificación más ancho posible que consigue que las observaciones estén en el lado correcto del margen; se permite que ciertas observaciones estén en el lado incorrecto del margen o incluso del hiperplano (Tomado de <a class="reference external" href="https://www.cienciadedatos.net/documentos/34_maquinas_de_vector_soporte_support_vector_machines">cienciadedatos.net</a>).</p>
 <p>La naturaleza del hiperplano y el comportamiento del modelo se controlan principalmente con tres hiperparámetros. El primero es el kernel, que define la forma de la función de decisión; puede ser ‘linear’ para fronteras simples y rectas, o ‘rbf’ (Función de Base Radial), una opción más flexible y comúnmente usada que permite crear fronteras de separación muy complejas y no lineales. El segundo es C, el parámetro de regularización. Este hiperparámetro gestiona el balance entre clasificar correctamente los datos de entrenamiento y mantener un margen de separación simple y amplio. Un valor de C bajo permite un margen más amplio y suave a costa de clasificar erróneamente algunos puntos (más generalización), mientras que un C alto intenta clasificar cada punto correctamente, lo que puede resultar en un modelo más complejo y sobreajustado. Finalmente, para el kernel ‘rbf’, el hiperparámetro gamma define la influencia de un único punto de entrenamiento; valores bajos de gamma significan una influencia amplia (frontera más suave), y valores altos significan una influencia cercana y localizada (frontera más ajustada a los datos de entrenamiento).</p>
-<section id="id10">
-<h6><em>Python</em><a class="headerlink" href="#id10" title="Link to this heading">#</a></h6>
-<p>Similar a los casos anteriores, se importa la librearía de SVC, y se instancia. En este caso se utlizará un kernel lineal y un valor de regularizacion de 1xE10. Existen otra serie de hiperparámetros para instanciar el modelo que se pueden consultar en la <a class="reference external" href="https://scikit-learn.org/stable/modules/generated/sklearn.svm.LinearSVC.html">guía del usuario</a>.</p>
+<section id="id9">
+<h6><em>Python</em><a class="headerlink" href="#id9" title="Link to this heading">#</a></h6>
+<p>Similar a los casos anteriores, se importa la librería de SVC, y se instancia. En este caso se utlizará un kernel lineal y un valor de regularización de 1xE10. Existen otra serie de hiperparámetros para instanciar el modelo que se pueden consultar en la <a class="reference external" href="https://scikit-learn.org/stable/modules/generated/sklearn.svm.LinearSVC.html">guía del usuario</a>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">sklearn.svm</span><span class="w"> </span><span class="kn">import</span> <span class="n">SVC</span>
@@ -2732,8 +2795,9 @@ Pseudo R2: OrderedDict([(&#39;explained_deviance&#39;, 0.03226871783801588), (&#
 </div>
 </div>
 </div>
-<p>Si se utiliza toda la base de datos, los resultados obtenidos clasifican todas las celdas con valores muy bajos. Esto se debe a que se utilizó para el entrenamiento la matriz desbalanceada, es decir con las celdas del <em>si</em> (1) y con todas las celdas del <em>no</em> (0). Lo que genera que el modelo no aprenda adecuadamente a predecir los <em>si</em>, ya que aprende esencialmente el <em>no</em>.</p>
+<p>Si se utiliza toda la base de datos, los resultados obtenidos clasifican todas las celdas con valores muy bajos. Esto se debe a que se utilizó para el entrenamiento la matriz desbalanceada, es decir con las celdas del <em>sí</em> (1) y con todas las celdas del <em>no</em> (0). Lo que genera que el modelo no aprenda adecuadamente a predecir los <em>sí</em>, ya que aprende esencialmente el <em>no</em>.</p>
 <p>Como este método no tiene un hiperparámetro para manejar esta situación, como RL, entonces debemos remuestrear nuestros datos de entrenamiento de tal forma que se reduzca el desbalance. En este caso utilizaremos el 1% de los <em>no</em>.</p>
+<p>Más allá de este ejemplo pedagógico, la práctica más extendida en estudios colombianos de susceptibilidad (como los desarrollados para el departamento de Antioquia) es utilizar una razón de muestreo balanceada 1:1, seleccionando para el entrenamiento la misma cantidad de celdas estables que de celdas con movimientos en masa, reservando típicamente el 80% del inventario histórico para el entrenamiento del modelo y el 20% restante para su validación. Esta precaución es crítica: si el modelo se entrena sobre un dataset altamente desbalanceado y sin corregir (por ejemplo, una relación real de 1:100 entre celdas con y sin movimientos en masa), la métrica de eficiencia (accuracy) se vuelve matemáticamente engañosa, pues queda dominada por la clase mayoritaria (las laderas estables), lo que se traduce en una sensibilidad muy pobre del modelo para detectar los casos raros de interés, es decir, las celdas inestables.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df1</span><span class="o">=</span><span class="n">df</span><span class="p">[(</span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;inventario&quot;</span><span class="p">]</span><span class="o">==</span><span class="mi">1</span><span class="p">)</span> <span class="o">|</span> <span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;inventario&quot;</span><span class="p">]</span><span class="o">==</span><span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">sample</span><span class="p">(</span><span class="n">frac</span><span class="o">=</span><span class="mf">0.01</span><span class="p">)]</span>
@@ -2794,12 +2858,12 @@ Name: inventario, dtype: int64
 <a class="reference internal image-reference" href="https://www.tibco.com/sites/tibco/files/media_entity/2021-05/random-forest-diagram.svg"><img alt="rf" src="https://www.tibco.com/sites/tibco/files/media_entity/2021-05/random-forest-diagram.svg" style="width: 400px;" />
 </a>
 <figcaption>
-<p><span class="caption-number">Fig. 66 </span><span class="caption-text">Intrepretación geométrica de <em>random forest</em>*</span><a class="headerlink" href="#rf" title="Link to this image">#</a></p>
+<p><span class="caption-number">Fig. 66 </span><span class="caption-text">Interpretación geométrica de <em>random forest</em>.</span><a class="headerlink" href="#rf" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
-<section id="id11">
-<h6><em>Python</em><a class="headerlink" href="#id11" title="Link to this heading">#</a></h6>
-<p>De forma similar se importa la librearía, y se instancia con los <a class="reference external" href="https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.RandomForestRegressor.html">hiperparámetros</a> deseados. Igualmente se trabajará solo con el 1% de las celdas del <em>si</em> (1)</p>
+<section id="id10">
+<h6><em>Python</em><a class="headerlink" href="#id10" title="Link to this heading">#</a></h6>
+<p>De forma similar se importa la librería, y se instancia con los <a class="reference external" href="https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.RandomForestRegressor.html">hiperparámetros</a> deseados. Igualmente se trabajará solo con el 1% de las celdas del <em>sí</em> (1)</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">sklearn.ensemble</span><span class="w"> </span><span class="kn">import</span> <span class="n">RandomForestRegressor</span>
@@ -2862,14 +2926,14 @@ Name: inventario, dtype: int64
 <a class="reference internal image-reference" href="https://upload.wikimedia.org/wikipedia/commons/thumb/1/11/Colored_neural_network_es.svg/300px-Colored_neural_network_es.svg.png"><img alt="rna" src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/11/Colored_neural_network_es.svg/300px-Colored_neural_network_es.svg.png" style="width: 400px;" />
 </a>
 <figcaption>
-<p><span class="caption-number">Fig. 67 </span><span class="caption-text">Intrepretación geométrica de redes neuronales. Tomado de <a class="reference external" href="https://es.wikipedia.org/wiki/Red_neuronal_artificial">Wikipedia</a></span><a class="headerlink" href="#rna" title="Link to this image">#</a></p>
+<p><span class="caption-number">Fig. 67 </span><span class="caption-text">Interpretación geométrica de redes neuronales. Tomado de <a class="reference external" href="https://es.wikipedia.org/wiki/Red_neuronal_artificial">Wikipedia</a></span><a class="headerlink" href="#rna" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 <p>Cada neurona está conectada con otras a través de unos enlaces. En estos enlaces el valor de salida de la neurona anterior es multiplicado por un valor de peso. Estos pesos en los enlaces pueden incrementar o inhibir el estado de activación de las neuronas adyacentes. Del mismo modo, a la salida de la neurona, puede existir una función limitadora o umbral, que modifica el valor resultado o impone un límite que no se debe sobrepasar antes de propagarse a otra neurona. Esta función se conoce como función de activación. Estos sistemas aprenden y se forman a sí mismos, en lugar de ser programados de forma explícita. Para realizar este aprendizaje automático, normalmente, se intenta minimizar una función de pérdida que evalúa la red en su total. Los valores de los pesos de las neuronas se van actualizando buscando reducir el valor de la función de pérdida. Este proceso se realiza mediante la propagación hacia atrás.</p>
 <p>Su gran flexibilidad proviene de la capacidad de ajustar su arquitectura y su proceso de aprendizaje mediante hiperparámetros. Los más importantes definen la arquitectura de la red: el número de capas ocultas (<em>hidden_layer_sizes</em>) y el número de neuronas en cada una de ellas. Más capas y neuronas permiten al modelo aprender patrones extremadamente complejos, pero aumentan el riesgo de sobreajuste y el costo computacional. La función de activación (<em>activation</em>), como ‘ReLU’ o ‘sigmoid’, es otro hiperparámetro crucial, ya que determina la salida de cada neurona y permite al modelo capturar relaciones no lineales. Finalmente, el proceso de entrenamiento se controla con el optimizador (<em>solver u optimizer</em>), como ‘adam’, que es el algoritmo que ajusta los pesos de la red para minimizar el error, y la tasa de aprendizaje (learning_rate), que controla la magnitud de dichos ajustes en cada paso. Una tasa de aprendizaje adecuada es vital para asegurar que el modelo converja a una buena solución de manera eficiente.</p>
-<section id="id12">
-<h6><em>Python</em><a class="headerlink" href="#id12" title="Link to this heading">#</a></h6>
-<p>La librearía <em>sklearn</em> permite implementar el <em>Multi-layer Perceptron classifier</em> (MLP). Para redes neuronales mas complejas se deben utilizar otras librearías como TensorFlow. Sin embargo MLP permite un importante número de <a class="reference external" href="https://scikit-learn.org/stable/modules/generated/sklearn.neural_network.MLPClassifier.html">hiperparámetros</a>, tales como el número de capas escondidas y el número de neuronas en cada una, asi como el número de iteracciones que deseamos realice la RNA.</p>
+<section id="id11">
+<h6><em>Python</em><a class="headerlink" href="#id11" title="Link to this heading">#</a></h6>
+<p>La librería <em>sklearn</em> permite implementar el <em>Multi-layer Perceptron classifier</em> (MLP). Para redes neuronales más complejas se deben utilizar otras librerías como TensorFlow. Sin embargo MLP permite un importante número de <a class="reference external" href="https://scikit-learn.org/stable/modules/generated/sklearn.neural_network.MLPClassifier.html">hiperparámetros</a>, tales como el número de capas escondidas y el número de neuronas en cada una, así como el número de iteraciones que deseamos realice la RNA.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">sklearn.neural_network</span><span class="w"> </span><span class="kn">import</span> <span class="n">MLPClassifier</span>
@@ -2885,7 +2949,7 @@ Name: inventario, dtype: int64
 </div>
 </div>
 </div>
-<p>Para RNA es importante escalar las variables, para esto utilizamos la función <em>StandarScaler</em>:</p>
+<p>Para RNA es importante escalar las variables, para esto utilizamos la función <em>StandardScaler</em>:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">sklearn.preprocessing</span><span class="w"> </span><span class="kn">import</span> <span class="n">StandardScaler</span>
@@ -2896,7 +2960,7 @@ Name: inventario, dtype: int64
 </div>
 </div>
 </div>
-<p>Finlamente, se entrena el modelo y se predeci.</p>
+<p>Finalmente, se entrena el modelo y se predice.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">mlp</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_01</span><span class="p">,</span><span class="n">y_01</span><span class="p">)</span>
@@ -2941,6 +3005,7 @@ Name: inventario, dtype: int64
 <section id="comparativa-de-metodos-guia-de-interpretacion">
 <h2>Comparativa de Métodos: Guía de Interpretación<a class="headerlink" href="#comparativa-de-metodos-guia-de-interpretacion" title="Link to this heading">#</a></h2>
 <p>La siguiente tabla resume las características clave de cada método implementado en este capítulo. Esta comparativa ayuda a seleccionar el método más apropiado según los datos disponibles, el objetivo del análisis y el contexto de aplicación.</p>
+<p>Estudios colombianos que han aplicado varios de estos métodos sobre el mismo conjunto de datos permiten dimensionar sus diferencias reales de desempeño. En el Valle de Aburrá, <span class="bibtex-citation" id="id12">Aristizábal <em>et al.</em> [<a class="reference internal" href="100_references.html#id23" title="Edier Aristizábal, López S., Sánchez O., Vásquez M., Rincón F., Ruiz-Vásquez D., Restrepo S., and Valencia J.S. Evaluación de la amenaza por movimientos en masa detonados por lluvias para una región de los andes colombianos estimando la probabilidad espacial, temporal, y magnitud. Boletín de Geología, pages 85-105, 2019. URL: http://eusoils.jrc.ec.europa.eu/library/themes/Landslides/, doi:10.18273/revbol.v41n3-2019004.">2019</a>]</span> compararon un modelo bivariado (WoE) con uno multivariado (Regresión Logística) sobre el mismo inventario, obteniendo un AUC de 76,8% para el WoE frente a 77,8% para la Regresión Logística, una diferencia modesta que respalda el uso del WoE cuando se prioriza la interpretabilidad física de las variables. En un estudio posterior a escala 1:10.000 en el municipio de Andes (Antioquia), <span class="bibtex-citation" id="id13"></span> aplicaron el método WoE dividiendo el municipio en dos sectores por su variabilidad geomorfológica: el sector occidental obtuvo un AUC de ajuste (tasa de éxito) de 60,6% y un AUC de predicción de 59,2%, mientras que el sector oriental alcanzó valores considerablemente más altos, de 71,9% y 71,7% respectivamente, evidenciando cómo la heterogeneidad geológica y geomorfológica local puede afectar sustancialmente el desempeño de un mismo método estadístico dentro de un mismo municipio.</p>
 <div class="pst-scrollable-table-container"><table class="table">
 <thead>
 <tr class="row-odd"><th class="head"><p>Método</p></th>
@@ -3157,17 +3222,6 @@ Aplícalo a la variable pendiente y compara el mapa resultante con el Frequency 
 <li><p><strong>Selección de variables:</strong> Usa <code class="docutils literal notranslate"><span class="pre">RandomForestClassifier.feature_importances_</span></code> para identificar las 3 variables más importantes. ¿Coincide con tu intuición geomorfológica? Entrena de nuevo el modelo solo con esas 3 variables y compara el AUC.</p></li>
 </ol>
 </section>
-<section id="referencias">
-<h2>Referencias<a class="headerlink" href="#referencias" title="Link to this heading">#</a></h2>
-<div class="docutils container" id="id13">
-<div role="list" class="citation-list">
-<div class="citation" id="id72" role="doc-biblioentry">
-<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id5">1</a><span class="fn-bracket">]</span></span>
-<p>Aldo Clerici, Susanna Perego, Claudio Tellini, and Paolo Vescovi. A procedure for landslide susceptibility zonation by the conditional analysis method. <em>Geomorphology</em>, 48:349–364, 2002. <a class="reference external" href="https://doi.org/10.1016/S0169-555X(02)00079-X">doi:10.1016/S0169-555X(02)00079-X</a>.</p>
-</div>
-</div>
-</div>
-</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -3225,15 +3279,17 @@ Aplícalo a la variable pendiente y compara el mapa resultante con el Frequency 
             
             
               
-                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
 
 
-  <div class="sidebar-secondary-item">
-  <div class="page-toc tocsection onthispage">
+  <div class="sidebar-secondary-item"><div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
     <i class="fa-solid fa-list"></i> Contents
   </div>
-  <nav class="bd-toc-nav page-toc">
-    <ul class="visible nav section-nav flex-column">
+  <nav id="pst-page-toc-nav" class="page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="pst-show_toc_level nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#objetivos-de-aprendizaje">Objetivos de aprendizaje</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#requisitos-previos">Requisitos previos</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bivariados">Bivariados</a><ul class="nav section-nav flex-column">
@@ -3264,11 +3320,11 @@ Aplícalo a la variable pendiente y compara el mapa resultante con el Frequency 
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#metodos-de-machine-learning">Métodos de <em>machine learning</em></a><ul class="nav section-nav flex-column">
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#modelos-parametricos">Modelos Paramétricos</a><ul class="nav section-nav flex-column">
 <li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#analisis-discriminante-lineal">Análisis Discriminante Lineal</a><ul class="nav section-nav flex-column">
-<li class="toc-h6 nav-item toc-entry"><a class="reference internal nav-link" href="#id7"><em>Python</em></a></li>
+<li class="toc-h6 nav-item toc-entry"><a class="reference internal nav-link" href="#id6"><em>Python</em></a></li>
 </ul>
 </li>
 <li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#regresion-logistica">Regresión logística</a><ul class="nav section-nav flex-column">
-<li class="toc-h6 nav-item toc-entry"><a class="reference internal nav-link" href="#id8"><em>Python</em></a></li>
+<li class="toc-h6 nav-item toc-entry"><a class="reference internal nav-link" href="#id7"><em>Python</em></a></li>
 </ul>
 </li>
 <li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#modelo-de-poisson">Modelo de Poisson</a><ul class="nav section-nav flex-column">
@@ -3279,22 +3335,22 @@ Aplícalo a la variable pendiente y compara el mapa resultante con el Frequency 
 </li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#modelos-semiparametricos">Modelos Semiparamétricos</a><ul class="nav section-nav flex-column">
 <li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#modelos-aditivos-generalizados-gam">Modelos Aditivos Generalizados (GAM)</a><ul class="nav section-nav flex-column">
-<li class="toc-h6 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">Ejemplo</a></li>
+<li class="toc-h6 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">Ejemplo</a></li>
 </ul>
 </li>
 </ul>
 </li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#modelos-no-parametricos">Modelos No-Paramétricos</a><ul class="nav section-nav flex-column">
 <li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#support-vector-machine-svm"><em>Support Vector Machine (SVM)</em></a><ul class="nav section-nav flex-column">
-<li class="toc-h6 nav-item toc-entry"><a class="reference internal nav-link" href="#id10"><em>Python</em></a></li>
+<li class="toc-h6 nav-item toc-entry"><a class="reference internal nav-link" href="#id9"><em>Python</em></a></li>
 </ul>
 </li>
 <li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#random-forest"><em>Random forest</em></a><ul class="nav section-nav flex-column">
-<li class="toc-h6 nav-item toc-entry"><a class="reference internal nav-link" href="#id11"><em>Python</em></a></li>
+<li class="toc-h6 nav-item toc-entry"><a class="reference internal nav-link" href="#id10"><em>Python</em></a></li>
 </ul>
 </li>
 <li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#redes-neuronales">Redes neuronales</a><ul class="nav section-nav flex-column">
-<li class="toc-h6 nav-item toc-entry"><a class="reference internal nav-link" href="#id12"><em>Python</em></a></li>
+<li class="toc-h6 nav-item toc-entry"><a class="reference internal nav-link" href="#id11"><em>Python</em></a></li>
 </ul>
 </li>
 </ul>
@@ -3308,7 +3364,6 @@ Aplícalo a la variable pendiente y compara el mapa resultante con el Frequency 
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#actividades">Actividades</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#referencias">Referencias</a></li>
 </ul>
   </nav></div>
 
@@ -3357,8 +3412,8 @@ By Edier V. Aristizábal G.
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
-<script src="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+  <script defer src="_static/scripts/bootstrap.js?digest=55c26ed414f5f8a31ebb"></script>
+<script defer src="_static/scripts/pydata-sphinx-theme.js?digest=55c26ed414f5f8a31ebb"></script>
 
   <footer class="bd-footer">
   </footer>

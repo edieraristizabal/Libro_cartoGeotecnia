@@ -16,41 +16,44 @@
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
     document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
   </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-<link href="_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-<link href="_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-
-  
-  <link href="_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+  <link href="_static/styles/theme.css?digest=55c26ed414f5f8a31ebb" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=55c26ed414f5f8a31ebb" rel="stylesheet" />
 
     <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
-    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=3c74b3bc" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=9c3e77be" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css?v=6644e6bb" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
   
+  <!-- So that users can add custom icons -->
+  <script defer src="_static/scripts/fontawesome.js?digest=55c26ed414f5f8a31ebb"></script>
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
-<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
-  <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=55c26ed414f5f8a31ebb" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=55c26ed414f5f8a31ebb" />
 
     <script src="_static/documentation_options.js?v=9eb32ce0"></script>
     <script src="_static/doctools.js?v=9a2dae69"></script>
     <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="_static/clipboard.min.js?v=a7894cd8"></script>
     <script src="_static/copybutton.js?v=f281be69"></script>
-    <script src="_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=fab101a9"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="_static/togglebutton.js?v=1ae7504c"></script>
+    <script src="_static/togglebutton.js?v=b8b12719"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script src="_static/design-tabs.js?v=f930bc37"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
@@ -60,40 +63,37 @@
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = '13_flujos';</script>
+    <script>DOCUMENTATION_OPTIONS.search_as_you_type = false;</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Movimientos en masa en roca" href="14_roca.html" />
     <link rel="prev" title="Análisis del factor detonante" href="12_amenaza.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
+  
+    
+    <script src="_static/searchtools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <script src="searchindex.js"></script>
+  
   </head>
-  
-  
-  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
-
+  <body data-default-mode="">
   
   
   <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+
   
   <div id="pst-scroll-pixel-helper"></div>
   
   <button type="button" class="btn rounded-pill" id="pst-back-to-top">
     <i class="fa-solid fa-arrow-up"></i>Back to top</button>
-
   
-  <input type="checkbox"
-          class="sidebar-toggle"
-          id="pst-primary-sidebar-checkbox"/>
-  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
   
-  <input type="checkbox"
-          class="sidebar-toggle"
-          id="pst-secondary-sidebar-checkbox"/>
-  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
   
-  <div class="search-button__wrapper">
-    <div class="search-button__overlay"></div>
-    <div class="search-button__search-container">
+  
+  <dialog id="pst-search-dialog">
+    
 <form class="bd-search d-flex align-items-center"
       action="search.html"
       method="get">
@@ -101,7 +101,6 @@
   <input type="search"
          class="form-control"
          name="q"
-         id="search-input"
          placeholder="Search this book..."
          aria-label="Search this book..."
          autocomplete="off"
@@ -109,15 +108,59 @@
          autocapitalize="off"
          spellcheck="false"/>
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
-</form></div>
-  </div>
+</form>
+  </dialog>
 
   <div class="pst-async-banner-revealer d-none">
   <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
 </div>
 
   
-    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    <header id="pst-header" class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+        </div>
+      
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+    </div>
+  
+
+  
+    <button class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="On this page">
+      <span class="fa-solid fa-outdent"></span>
+    </button>
+  
+</div>
+
     </header>
   
 
@@ -126,7 +169,8 @@
       
       
       
-      <div class="bd-sidebar-primary bd-sidebar">
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
         
 
   
@@ -156,21 +200,17 @@
     
     
     <img src="_static/logo.png" class="logo__image only-light" alt="Cartografía Geotécnica - Home"/>
-    <script>document.write(`<img src="_static/logo.png" class="logo__image only-dark" alt="Cartografía Geotécnica - Home"/>`);</script>
+    <img src="_static/logo.png" class="logo__image only-dark pst-js-only" alt="Cartografía Geotécnica - Home"/>
   
   
 </a></div>
         <div class="sidebar-primary-item">
 
- <script>
- document.write(`
-   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
-    <span class="search-button__default-text">Search</span>
-    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
-   </button>
- `);
- </script></div>
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
         <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         
@@ -201,6 +241,7 @@
 <li class="toctree-l1"><a class="reference internal" href="15_python.html">Python</a></li>
 
 
+<li class="toctree-l1"><a class="reference internal" href="100_references.html">Referencias</a></li>
 </ul>
 
     </div>
@@ -209,9 +250,14 @@
   
   
   <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
   </div>
-  
-  <div id="rtd-footer-container"></div>
 
 
       </div>
@@ -341,7 +387,7 @@
 
 
 <button onclick="toggleFullScreen()"
-  class="btn btn-sm btn-fullscreen-button"
+  class="btn btn-sm btn-fullscreen-button pst-navbar-icon"
   title="Fullscreen mode"
   data-bs-placement="bottom" data-bs-toggle="tooltip"
 >
@@ -355,25 +401,17 @@
 
 
 
-<script>
-document.write(`
-  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
-    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
-    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
-  </button>
-`);
-</script>
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
 
 
-<script>
-document.write(`
-  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
-  </button>
-`);
-</script>
-<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+</button>
+<button class="sidebar-toggle secondary-toggle btn btn-sm pst-navbar-icon" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <span class="fa-solid fa-list"></span>
 </button>
 </div></div>
@@ -395,7 +433,7 @@ document.write(`
                 <h2> Contents </h2>
             </div>
             <nav aria-label="Page">
-                <ul class="visible nav section-nav flex-column">
+                <ul class="pst-show_toc_level nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#objetivos-de-aprendizaje">Objetivos de aprendizaje</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#requisitos-previos">Requisitos previos</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#implementacion-estimacion-de-runout-angulo-de-viaje-fahrboschung">Implementación: Estimación de Runout — Ángulo de Viaje (Fahrböschung)</a></li>
@@ -417,7 +455,6 @@ document.write(`
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#actividades">Actividades</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#referencias">Referencias</a></li>
 </ul>
             </nav>
         </div>
@@ -454,7 +491,7 @@ document.write(`
 <p>En Colombia las avenidas torrenciales son entendidas como movimientos en masa o como crecientes súbitas, fenómenos aparentemente muy diferentes que implica el uso de métodos con enfoques diferentes. INGEOMINAS (2001) define las avenidas torrenciales como fenómenos de remoción en masa donde el agua de una corriente aumenta considerablemente su volumen por el transporte de material solido que ha caído a su cauce desde las laderas adyacentes. En este mismo sentido, Castro (1999) propone establecer el uso del término avenidas torrenciales como un flujo de escombros canalizado. La Guía para la Evaluación de Amenazas por Movimientos en Masa en la Región Andina (PMA-GCA, 2007) define las avenidas torrenciales como flujos de detritos (<em>debris flow</em>) de acuerdo con la definición de Hungr et al (2001). Por otro lado, en el marco de los Planes de Ordenación y Manejo de Cuencas (POMCA) las avenidas torrenciales son entendidas como inundaciones de tipo fluvial rápidas o torrenciales. La Guía Técnica para la Incorporación de la Gestión del Riesgo en los POMCA define las avenidas torrenciales como crecientes súbitas que por las condiciones geomorfológicas de la cuenca están compuestas por un flujo de agua con alto contenido de materiales de arrastre, con un gran potencial destructivo debido a su alta velocidad (MADS, 2014). El Fondo de Prevención y Atención de Emergencias de la ciudad de Bogotá (FOPAE) define las avenidas torrenciales como sinónimo de inundaciones rápidas generadas por crecientes que ocurren de manera repentina debido a la alta pendiente del río o la quebrada y su cuenca, donde en ocasiones se produce el arrastre de una gran cantidad de material como detritos (FOPAE, 2011).</p>
 <p>Estas dos miradas sobre las avenidas torrenciales se reflejan en la <em>Guía Metodológica para la Evaluación de la Amenaza por Movimientos en Masa en Suelo Rural</em> del Servicio Geológico Colombiano (SGC). En esta guía las avenidas torrenciales se consideran equivalentes a los flujos de detritos y flujos de lodos descritos por el PMA-CGA (2007), pero adopta la definición de la guía de los POMCA como procesos tipo flujo que incluye eventos generados sobre ríos y quebradas de alta montaña y en cuencas con características geomorfológicas que favorecen la alta acumulación de sedimentos sobre el cauce, cambios drásticos en el gradiente del afluente, alta densidad de drenaje y eventos de precipitación (MADS &amp; UNAL, 2013).</p>
 <p>Estas dos miradas han dado como resultado metodologías con enfoques diferentes para evaluar la susceptibilidad o amenaza ante avenidas torrenciales. En la guía de los POMCA se propone el uso de índices morfométricos para evaluar la respuesta hidrológica de la cuenca, específicamente el Índice de Vulnerabilidad frente a Eventos Torrenciales (IVET), combinado con análisis geomorfológicos para evaluar el potencial aporte de sedimentos de la cuenca. Y en las guías que ha elaborado el SGC se han propuesto métodos estadísticos para evaluar la susceptibilidad por movimientos en masa sobre las laderas de la cuenca, como potencial aporte de sedimentos, combinado con análisis geomorfológico (Ingeominas, 1988; SGC, 2017).</p>
-<p>La reciente Guía metodológica para zonificación de amenaza por avenidas torrenciales del Servicio Geológico Colombiano, elaborada por la Pontificia Universidad Javeriana, adopta la definición de avenidas torrenciales como flujos rápidos que transitan por cauces permanentes o  intermitentes con pendientes longitudinales altas que puede ser generado por efecto de lluvias intensas. Término que ocmprende para los autores flujos de detritos, flujos de lodos y flujos hiperconcentrados. De esta forma proponen un esquema metodológico  que combina criterios geológico-geomorfológicos, análisis geotécnicos sobre las laderas para evaluar el potencial aporte de sedimentos por movimientos en masa y erosión laminar, análisis hidrológicos para estimar el factor detonante lluvia, y finalmente modelos fluidodinámicos de acuerdo con la reología, para propagar el flujo.</p>
+<p>La reciente Guía metodológica para zonificación de amenaza por avenidas torrenciales del Servicio Geológico Colombiano, elaborada por la Pontificia Universidad Javeriana, adopta la definición de avenidas torrenciales como flujos rápidos que transitan por cauces permanentes o  intermitentes con pendientes longitudinales altas que puede ser generado por efecto de lluvias intensas. Término que comprende para los autores flujos de detritos, flujos de lodos y flujos hiperconcentrados. De esta forma proponen un esquema metodológico  que combina criterios geológico-geomorfológicos, análisis geotécnicos sobre las laderas para evaluar el potencial aporte de sedimentos por movimientos en masa y erosión laminar, análisis hidrológicos para estimar el factor detonante lluvia, y finalmente modelos fluidodinámicos de acuerdo con la reología, para propagar el flujo.</p>
 <p>Las diferencias entre fenómenos puramente hidrológicos y movimientos en masa están bien establecidas físicamente (Coussot and Meunier 1996; O’Brien and Julien 1985; Pierson and Costa 1987; Takahashi 1981); sin embargo, no existe unanimidad sobre definiciones específicas para flujos torrenciales que contienen una mezcla de agua y sedimentos en proporciones variables. De forma general, los flujos se definen como un fenómeno de transporte de sedimentos compuesto por una mezcla de material fino y grueso con una cantidad variable de agua, donde tanto las fuerzas sólidas como las fluidas influyen fuertemente (Iverson 1997; Nettleton et al. 2005). Según el tipo de proceso dominante y relación sedimentos-agua, esta mezcla es considerada desde procesos gravitacionales tipo flujo (Cruden and Varnes 1996) hasta procesos hidrológicos tipo inundaciones súbitas (NWS, 2005), donde en muchos casos el término flujo hiperconcentrado es utilizado para describir flujos intermedios entre estos dos fenómenos.</p>
 <p>Iverson (1997) distingue los procesos gravitacionales como aquellos donde las interacciones entre los fragmentos sólidos dominan la transferencia de momento, y las inundaciones cargadas de sedimentos como aquellas donde la turbulencia del fluido domina la transferencia de momento; para casos intermedios usa el término flujos de escombros, donde los sólidos y fluidos deben transferir el momento de forma sinérgica para sostener el movimiento. Takahashi (1981) distingue el transporte de sedimentos entre flujos fluidos y movimientos en masa, porque mientras que en los fluidos las fuerzas de arrastre y levantamiento, dadas por la alta velocidad relativa, son claves para el transporte individual de partículas, en los movimientos tipo caída, deslizamiento o flujos todas las partículas, así como el fluido intersticial, son movidos por la fuerza de la gravedad, de modo que la velocidad relativa entre la fase sólida y la líquida desempeña un papel menor. En este mismo sentido, Ancey (2001) distingue entre dos regímenes de flujo, flujos de dos fases, donde el agua es el agente principal y el pequeño porcentaje de sedimentos es transportado como carga de fondo y por suspensión; y flujos de una fase, compuestos por una mezcla altamente concentrada de sedimentos y agua. Sin embargo, Pierson (2005) propone que, además de la concentración de sedimentos suspendidos, la distribución del tamaño de granos y la densidad de los granos se debe utilizar para definir las mezclas sedimento-agua.</p>
 <figure class="align-default" id="rheology">
@@ -483,6 +520,7 @@ document.write(`
 <p>Otras clasificaciones de mezclas de sedimentos y agua usan el término inundación súbita en un sentido general, para denominar flujos de alta descarga en corrientes que drenan cuencas hidrográficas pequeñas y de fuerte pendiente. El Servicio Geológico de los Estados Unidos (USGS por sus siglas en ingles), basado en Crosta et al. (1990) y Jakob &amp; Hungr (2005), dividen las inundaciones súbitas en tres tipos de flujos: flujos de agua, flujos hiperconcentrados y flujos de escombros. En los flujos de agua, la cantidad de sedimento suspendido es insuficiente para afectar el comportamiento del agua, mientras que en los flujos hiperconcentrados la cantidad de sedimentos cambia significativamente las propiedades del fluido y los mecanismos de transporte, y los flujos de escombros se consideran cuando la mezcla de agua y sedimentos se convierte en una mezcla capaz de soportar partículas de tamaño grava en suspensión incluso a baja velocidad o estático. Gaume et al. (2009) utilizan la misma clasificación del USGS para clasificar las inundaciones súbitas que ocurren en Europa, pero proponen usar el término inundación de escombros en lugar de flujos hiperconcentrados.</p>
 <p>En cuanto a los flujos tipo torrentes de escombros, considerados por diferentes autores en sus clasificaciones, Aulitzky (1980) los diferencia entre torrentes de flujo de escombros y torrentes de flujo de lodos, donde los torrentes de flujos escombros, considerados como una forma de flujos de escombros canalizados cuando se presentan como resultado de enjambre de movimientos en masa (Sterling and Slaymaker 2007), corresponden a flujos viscosos no newtonianos con pulsos y velocidades que alcanzan los 30 m/s, y los torrentes de inundación de escombros como flujos viscosos sin pulsos y que alcanzan velocidades menores y menor capacidad de transporte, que se caracterizan por la ausencia de material fino, y la presencia de escombros de origen orgánico y grandes dimensiones (Slaymaker, 1988).</p>
 <p>Todas estas clasificaciones de mezclas de agua y sedimentos tienen una escala continua de estos dos materiales; sin embargo, no incluyen un término que pueda traducirse literalmente como avenida torrencial. Por el contrario, utilizan diferentes términos como inundación súbita, flujo de escombros, inundación de escombros, torrente de escombros, los cuales son correlacionables según las descripciones proporcionadas a fenómenos descritos en nuestro país como avenidas torrenciales.</p>
+<p>Un caso reciente y ampliamente documentado de este tipo de fenómeno en Colombia corresponde al evento de Mocoa (Putumayo) ocurrido el 31 de marzo de 2017, detonado por una lluvia intensa de corta duración precedida de una alta precipitación antecedente que saturó los materiales de ladera; el periodo de retorno estimado para el evento de lluvia detonante se ubica entre 25 y 50 años. En las guías de amenaza a escala 1:25.000 elaboradas para esta cuenca, las zonas de alta susceptibilidad cubren aproximadamente el 20,4% del área de estudio (872 ha), y se modela que una tormenta de esta magnitud, bajo condiciones de saturación completa, puede generar densidades de hasta 46 movimientos en masa por kilómetro cuadrado. Precisamente por la dificultad de extrapolar directamente escenarios de cambio climático a escalas y resoluciones específicas de modelos de actividad de movimientos en masa, el Servicio Geológico Colombiano recomienda que tanto los umbrales regionales de lluvia-movimientos en masa como el diseño de obras estructurales de mitigación (diques, presas de retención, muros) incorporen explícitamente los escenarios proyectados de cambio climático y los cambios de uso del suelo de origen antrópico.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">IPython.lib.display</span><span class="w"> </span><span class="kn">import</span> <span class="n">YouTubeVideo</span>
@@ -502,7 +540,7 @@ document.write(`
         ></iframe>
         </div></div>
 </div>
-<p>Actualmente existe una gran variedad de modelos que permiten evaluar la propagación de un volumen de material a lo largo de terreno. En términos de modelos con base física, estos  difieren en el grado de complejidad d la reología del flujo y la cantidad de parámetros requeridos. A continuación se presentan dos modelos que constrastan. El modelo <em>Flow-R</em>, que requiere solo el modelo digital del terreno, y el modelo <em>r.ava.flow</em>, el cual tiene la capacidad de modelar diferentes tipos de flujos de 1, 2 ó 3 fases.</p>
+<p>Actualmente existe una gran variedad de modelos que permiten evaluar la propagación de un volumen de material a lo largo de terreno. En términos de modelos con base física, estos difieren en el grado de complejidad de la reología del flujo y la cantidad de parámetros requeridos. A continuación se presentan dos modelos que constrastan. El modelo <em>Flow-R</em>, que requiere solo el modelo digital del terreno, y el modelo <em>r.ava.flow</em>, el cual tiene la capacidad de modelar diferentes tipos de flujos de 1, 2 ó 3 fases.</p>
 </section>
 <section id="implementacion-estimacion-de-runout-angulo-de-viaje-fahrboschung">
 <h2>Implementación: Estimación de Runout — Ángulo de Viaje (Fahrböschung)<a class="headerlink" href="#implementacion-estimacion-de-runout-angulo-de-viaje-fahrboschung" title="Link to this heading">#</a></h2>
@@ -538,6 +576,7 @@ document.write(`
 </table>
 </div>
 <p>Corominas (1996) propuso relaciones empíricas de la forma <span class="math notranslate nohighlight">\(\log(L) = a + b\cdot\log(V)\)</span>, donde <span class="math notranslate nohighlight">\(V\)</span> es el volumen del movimiento.</p>
+<p>De forma más específica, Corominas (1996) reporta coeficientes de regresión distintos según el tipo de movimiento y las condiciones del recorrido (trayectoria obstruida o sin obstruir): para flujos de detritos, combinando todas las trayectorias, <span class="math notranslate nohighlight">\(a=-0,012\)</span> y <span class="math notranslate nohighlight">\(b=-0,105\)</span> (<span class="math notranslate nohighlight">\(R^2=0,76\)</span>), valores que mejoran a <span class="math notranslate nohighlight">\(a=-0,031\)</span>, <span class="math notranslate nohighlight">\(b=-0,102\)</span> (<span class="math notranslate nohighlight">\(R^2=0,87\)</span>) cuando la trayectoria no está obstruida; para deslizamientos traslacionales, <span class="math notranslate nohighlight">\(a=-0,159\)</span> y <span class="math notranslate nohighlight">\(b=-0,068\)</span> (<span class="math notranslate nohighlight">\(R^2=0,67\)</span>) combinando todas las trayectorias; y para caídas de roca, <span class="math notranslate nohighlight">\(a=0,210\)</span> y <span class="math notranslate nohighlight">\(b=-0,109\)</span> (<span class="math notranslate nohighlight">\(R^2=0,76\)</span>). Como referencia general e independiente del tipo de movimiento, el propio Corominas (1996) reporta un coeficiente promedio global de <span class="math notranslate nohighlight">\(a=-0,047\)</span> y <span class="math notranslate nohighlight">\(b=-0,085\)</span>, con un coeficiente de correlación <span class="math notranslate nohighlight">\(R=0,79\)</span>. Estas diferencias evidencian que, a igual volumen desplazado, los flujos de detritos y deslizamientos traslacionales tienden a presentar un alcance relativo mayor que las caídas de roca, y que el grado de confinamiento del cauce o la ladera (obstruido vs. sin obstruir) modifica sustancialmente la calidad del ajuste estadístico de la relación runout-volumen.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
@@ -631,23 +670,19 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="n">line</span> <span class="mi">2</span>
-<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
-<span class="ne">----&gt; </span><span class="mi">2</span> <span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
-<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="c1"># ── Modelo 1: Ángulo de viaje (Fahrböschung) ─────────────────────────────────</span>
-<span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="k">def</span><span class="w"> </span><span class="nf">runout_angulo_viaje</span><span class="p">(</span><span class="n">H</span><span class="p">,</span> <span class="n">tan_alpha</span><span class="p">):</span>
-
-<span class="ne">ModuleNotFoundError</span>: No module named &#39;matplotlib&#39;
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>=== Estimación de Runout — Flujo de Detritos ===
+H = 1800 m,  V = 5e+05 m³
+Método ángulo de viaje (tan α=0.25): L ≈ 7200 m
+Método Corominas (1996):                   L ≈ 57479 m
 </pre></div>
 </div>
+<img alt="_images/6e43c36de8e699a61ae65f059433e324af2d5c3a2265ed703f8910acd51c1997.png" src="_images/6e43c36de8e699a61ae65f059433e324af2d5c3a2265ed703f8910acd51c1997.png" />
 </div>
 </div>
 </section>
 <section id="flow-r">
 <h2>Flow-R<a class="headerlink" href="#flow-r" title="Link to this heading">#</a></h2>
-<p><a class="reference external" href="https://www.flow-r.org/">Flow-R</a> (Flow path assessment of gravitational hazards at a Regional scale) es un modelo empirico disitribuido para la evaluacion de la susceptibilidad por flujos a escala regional, desarrollado por <span id="id1">Horton <em>et al.</em> [<a class="reference internal" href="#id67" title="P. Horton, M. Jaboyedoff, B. Rudaz, and M. Zimmermann. Flow-r, a model for susceptibility mapping of debris flows and other gravitational hazards at a regional scale. Natural Hazards and Earth System Sciences, 13(4):869–885, 2013. URL: https://nhess.copernicus.org/articles/13/869/2013/, doi:10.5194/nhess-13-869-2013.">2013</a>]</span> de la Universidad de Laussane. Flow-R presenta un acercamiento simplificado sin una gran exigencia de parametros.</p>
+<p><a class="reference external" href="https://www.flow-r.org/">Flow-R</a> (Flow path assessment of gravitational hazards at a Regional scale) es un modelo empírico distribuido para la evaluación de la susceptibilidad por flujos a escala regional, desarrollado por <span class="bibtex-citation" id="id1">Horton <em>et al.</em> [<a class="reference internal" href="100_references.html#id62" title="P. Horton, M. Jaboyedoff, B. Rudaz, and M. Zimmermann. Flow-r, a model for susceptibility mapping of debris flows and other gravitational hazards at a regional scale. Natural Hazards and Earth System Sciences, 13(4):869–885, 2013. URL: https://nhess.copernicus.org/articles/13/869/2013/, doi:10.5194/nhess-13-869-2013.">2013</a>]</span> de la Universidad de Laussane. Flow-R presenta un acercamiento simplificado sin una gran exigencia de parámetros.</p>
 <figure class="align-default" id="id2">
 <a class="reference internal image-reference" href="https://www.researchgate.net/profile/Michel-Jaboyedoff/publication/258806561/figure/fig4/AS:614112920887296&#64;1523427338200/Illustration-of-the-4-different-layers-of-processing-of-the-propagation-and-their_Q320.jpg"><img alt="Flow-R" src="https://www.researchgate.net/profile/Michel-Jaboyedoff/publication/258806561/figure/fig4/AS:614112920887296&#64;1523427338200/Illustration-of-the-4-different-layers-of-processing-of-the-propagation-and-their_Q320.jpg" style="width: 400px;" />
 </a>
@@ -655,7 +690,7 @@ document.write(`
 <p><span class="caption-number">Fig. 100 </span><span class="caption-text">Modelo Flow-R (<a class="reference external" href="https://www.flow-r.org/">https://www.flow-r.org/</a>).</span><a class="headerlink" href="#id2" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
-<p>Flow-R estima la propagación de los flujos mediante un balance energético básico y una propagación probabilística. Los algoritmos de la dirección de fujo calculan la probabilidad de que un fujo de detrito se mueva de una celda hacia las próximas 8 celdas. Estas probabilidades dependen de la pendiente y la persistencia que representa la inercia del flujo.</p>
+<p>Flow-R estima la propagación de los flujos mediante un balance energético básico y una propagación probabilística. Los algoritmos de la dirección de flujo calculan la probabilidad de que un flujo de detrito se mueva de una celda hacia las próximas 8 celdas. Estas probabilidades dependen de la pendiente y la persistencia que representa la inercia del flujo.</p>
 <figure class="align-default" id="flow-r1">
 <a class="reference internal image-reference" href="https://geotechpedia.com/Images/Software/Flow_-_R_software.jpg"><img alt="Flow-R1" src="https://geotechpedia.com/Images/Software/Flow_-_R_software.jpg" style="width: 500px;" />
 </a>
@@ -665,13 +700,13 @@ document.write(`
 </figure>
 <section id="tutorial">
 <h3>Tutorial<a class="headerlink" href="#tutorial" title="Link to this heading">#</a></h3>
-<p><em>Elaborado por Maria Isabel Arango</em></p>
+<p><em>Elaborado por María Isabel Arango</em></p>
 <p>El modelo Flow-R se puede utilizar para modelar:</p>
 <ul class="simple">
 <li><p>Las fuentes de flujos (zonas inestables)</p></li>
 <li><p>La propagación de flujos</p></li>
 </ul>
-<p>El modelo que utiliza Flow-R para determinar las fuentes de flujos es un método heurístico basado en índices. Ya que exsiten otras herramientas que se describen en el presente libro; en esta guía solo se utilizará el componente de propagación. Por lo que para modelar utilizaremos solamente un modelo de elevación digital (<a class="reference external" href="https://github.com/edieraristizabal/Libro_cartoGeotecnia/blob/master/data/arenosa/dem_arenosa_clip.asc?raw=true">DEM</a>) y un mapa de las fuentes o <a class="reference external" href="https://raw.githubusercontent.com/edieraristizabal/Libro_cartoGeotecnia/master/data/arenosa/release.asc?raw=true">movimientos en masa</a> a propagar de la cuenca de la quebrada La Arenosa en el municipio de San Carlos (Antioquia).</p>
+<p>El modelo que utiliza Flow-R para determinar las fuentes de flujos es un método heurístico basado en índices. Ya que existen otras herramientas que se describen en el presente libro; en esta guía solo se utilizará el componente de propagación. Por lo que para modelar utilizaremos solamente un modelo de elevación digital (<a class="reference external" href="https://github.com/edieraristizabal/Libro_cartoGeotecnia/blob/master/data/arenosa/dem_arenosa_clip.asc?raw=true">DEM</a>) y un mapa de las fuentes o <a class="reference external" href="https://raw.githubusercontent.com/edieraristizabal/Libro_cartoGeotecnia/master/data/arenosa/release.asc?raw=true">movimientos en masa</a> a propagar de la cuenca de la quebrada La Arenosa en el municipio de San Carlos (Antioquia).</p>
 <section id="working-directories">
 <h4><em>Working directories</em><a class="headerlink" href="#working-directories" title="Link to this heading">#</a></h4>
 <p>Para ingresar la información al programa, se debe crear primero el proyecto y las carpetas en las cuales se almacenarán los datos de entrada y de salida. Siga los siguientes pasos:</p>
@@ -690,13 +725,13 @@ document.write(`
 <li><p>Cuando termine de importar los raster, en la pestaña <em>Determination of the case study area</em> debe definir su zona de estudio. Usted puede ingresar un DEM de una zona grande en la cual quiere analizar una o varias zonas pequeñas. No es la opción más recomendable, pues el tiempo de procesamiento normalmente se hace mayor. Si a pesar de esto lo desea hacer, puede seleccionar cada una de las zonas de estudio y darle un nombre. Dado que en este ejercicio se analizará toda la cuenca de la Arenosa, que corresponde al DEM completo, seleccione <em>Select the whole DEM</em>. Llame a la zona de estudio <em>Toda</em>. Fíjese que en caso de querer, puede seleccionar la zona de estudio manualmente, dando unas coordenadas o a través de un raster que la delimite. Usted puede crear tantas zonas de estudio como desee.</p></li>
 <li><p>En la ventana de importación de datos, también están disponibles las opciones para la identificación de ríos y la selección de un búfer. Estas opciones son útiles en caso de que queramos reducir la búsqueda de áreas fuente a cierta distancia de las quebradas. Dado que no se limitará la búsqueda en este ejercicio, no ingrese nada en esa parte.</p></li>
 <li><p>Cierre la ventana de importación de datos</p></li>
-<li><p>En el campo <em>Choice of the study área</em>, seleccione la zona “Toda”, y en el campo <em>Choice of the rivers layer</em> seleccione <em>Toda_no_river</em>, que significa que nó utilizará la información de las quebradas. Finalmente, asígnele en <em>Enter run name</em> un nombre a su corrida. Con este nombre se creará una subcarpeta en <em>Resultados</em> donde se guardarán los resultados de su modelación.</p></li>
+<li><p>En el campo <em>Choice of the study área</em>, seleccione la zona “Toda”, y en el campo <em>Choice of the rivers layer</em> seleccione <em>Toda_no_river</em>, que significa que no utilizará la información de las quebradas. Finalmente, asígnele en <em>Enter run name</em> un nombre a su corrida. Con este nombre se creará una subcarpeta en <em>Resultados</em> donde se guardarán los resultados de su modelación.</p></li>
 <li><p><strong>Recomendación</strong>: <em>Asígnele un número y en una hoja relacione este número con los parámetros de los algoritmos que utilizó en dicha corrida. De tal forma que pueda trabajar ordenadamente las multiples modelaciones que seguramente realizará</em>.</p></li>
 </ul>
 </section>
 <section id="source-areas">
 <h4><em>Source areas</em><a class="headerlink" href="#source-areas" title="Link to this heading">#</a></h4>
-<p>En esta parte se va a calcular la propagación del área fuentes definidas como zonas inestables que se propagarán en forma de flujo. Para esto, utilizará una fuente elaborada para este ejercicio, pero qu eno corresponde  aun caso real. Dado que la única información necesaria para el cálculo de la propagación de flujos son el DEM y las fuentes predeterminadas, en la parte inferior izquierda <em>Source areas</em> ingrese estas dos capas únicamente. En la primera columna debe ingresar el tipo de información (<em>DEM</em>, <em>Predefined sources</em>), en la segunda columna el nombre del raster (estos corresponde a los nombres asignados al ingresar las capas), y en la tercera debe ingresar los criterios de lectura del archivo, <em>avove_0000m</em> para el DEM y <em>boolean</em> para las fuentes, respectivamente.</p>
+<p>En esta parte se va a calcular la propagación del área fuentes definidas como zonas inestables que se propagarán en forma de flujo. Para esto, utilizará una fuente elaborada para este ejercicio, pero que no corresponde a un caso real. Dado que la única información necesaria para el cálculo de la propagación de flujos son el DEM y las fuentes predeterminadas, en la parte inferior izquierda <em>Source areas</em> ingrese estas dos capas únicamente. En la primera columna debe ingresar el tipo de información (<em>DEM</em>, <em>Predefined sources</em>), en la segunda columna el nombre del raster (estos corresponde a los nombres asignados al ingresar las capas), y en la tercera debe ingresar los criterios de lectura del archivo, <em>avove_0000m</em> para el DEM y <em>boolean</em> para las fuentes, respectivamente.</p>
 <p>En la parte inferior <em>Source value</em> deje seleccionada la opción <em>Binary (0/1)</em>, ya que en este caso estamos trabajando con una mapa de fuentes tipo binario, donde celdas con valor de 0 es no movimientos en masa y celdas con valor 1 son movimientos en masa para propagar.</p>
 </section>
 <section id="propagation">
@@ -716,20 +751,20 @@ document.write(`
 <p><em>M/D</em>: Relación mass-to-drag</p>
 <p><em>µ</em>: Coeficiente de fricción</p>
 <p>Los valores óptimos de estos valores deben ser calibrados también para cada zona de estudio. Seleccione en este caso la primera opción, con valores de md y mu de 10 y 0.01, respectivamente.</p>
-<p>Si se tienen estudios de la zona de interés relacionada con la velocidad máxima alcanzada por flujos en eventos pasados, se puede indicar ese valor en el campo “Energy limitation”, para evitar que los flujos tomen velocidades irreales, y que en consecuencia se propaguen más de lo que lo harían en la realidad. Dado que nó se cuenta con información de este tipo para la zona de estudio, deje la celda vacía.</p>
+<p>Si se tienen estudios de la zona de interés relacionada con la velocidad máxima alcanzada por flujos en eventos pasados, se puede indicar ese valor en el campo “Energy limitation”, para evitar que los flujos tomen velocidades irreales, y que en consecuencia se propaguen más de lo que lo harían en la realidad. Dado que no se cuenta con información de este tipo para la zona de estudio, deje la celda vacía.</p>
 <ul class="simple">
 <li><p>Finalmente, asegúrese de activar los campos <em>Display source áreas</em>, y <em>Display the propagation extent</em></p></li>
 <li><p>Haga click sobre el botón “Run”</p></li>
 <li><p>Inmediatamente aparecerá una primera ventana mostrando las áreas fuentes en el mapa, y luego otra ventana mostrando el proceso de cálculo. Usted sabrá que el cálculo de la propagación terminó porque aparecerá una tercera ventana con los resultados de la propagación.</p></li>
-<li><p>Para ver el mapa resultante consulte la subcarpeta con el nombre asignado por usted dentro de la carpeta <em>Resultados</em>, puede abrir el raster <em>Ekin.asc</em> que muestra la propagación del flujo en función de su energía cinética, o  el raster <em>ProbMax.asc</em>, que muestra la propagación en función de la probabilidad máxima de una celda de ser cubierta por un flujo. Tambien en esta subcarpeta se crea un archivo con las áreas fuentes utilizadas y un archivo <em>xml</em> con los parámetros utilizados en la modelación.</p></li>
+<li><p>Para ver el mapa resultante consulte la subcarpeta con el nombre asignado por usted dentro de la carpeta <em>Resultados</em>, puede abrir el raster <em>Ekin.asc</em> que muestra la propagación del flujo en función de su energía cinética, o  el raster <em>ProbMax.asc</em>, que muestra la propagación en función de la probabilidad máxima de una celda de ser cubierta por un flujo. También en esta subcarpeta se crea un archivo con las áreas fuentes utilizadas y un archivo <em>xml</em> con los parámetros utilizados en la modelación.</p></li>
 </ul>
 </section>
 </section>
 </section>
 <section id="r-avaflow">
 <h2>r-avaflow<a class="headerlink" href="#r-avaflow" title="Link to this heading">#</a></h2>
-<p>r.avaflow es un modelo abierto y libre, desarrollado por <span id="id3">Mergili <em>et al.</em> [<a class="reference internal" href="#id69" title="Martin Mergili, Jan Thomas Fischer, Julia Krenn, and Shiva P. Pudasaini. R.avaflow v1, an advanced open-source computational framework for the propagation and interaction of two-phase mass flows. Geoscientific Model Development, 10:553-569, 2 2017. doi:10.5194/gmd-10-553-2017.">2017</a>]</span>, para simular la dinámica de flujos rápidos, que incluye avalanchas y flujos de escombros. El modelo se soporta en un ambiente SIG, que permite modelar una gran variedad de escenarios, pero sin embargo temben permite modelar escenarios con un mínimo de datos. Como mínimo se requiere sólo un modelo de elevación digital y un mapa con los espesores del área fuente en mapas raster formato <em>ASCII</em>. El modelo permite simular flujos con reologias diferentes: una fase, dos fases, y mezcla; ademas permite incorporar la erosión del flujo e incorporación de material a lo largo del canal. r.avaflow también permite incorporar en la modelación hidrografas de flujos variados.</p>
-<p>Como resultado el modelo arroja la distribución espacial de la altura del flujo, velocidades y presiones, asi como tiempos de llegada e hidrógrafas en puntos de control especificados en el modelo.</p>
+<p>r.avaflow es un modelo abierto y libre, desarrollado por <span class="bibtex-citation" id="id3">Mergili <em>et al.</em> [<a class="reference internal" href="100_references.html#id64" title="Martin Mergili, Jan Thomas Fischer, Julia Krenn, and Shiva P. Pudasaini. R.avaflow v1, an advanced open-source computational framework for the propagation and interaction of two-phase mass flows. Geoscientific Model Development, 10:553-569, 2 2017. doi:10.5194/gmd-10-553-2017.">2017</a>]</span>, para simular la dinámica de flujos rápidos, que incluye avalanchas y flujos de escombros. El modelo se soporta en un ambiente SIG, que permite modelar una gran variedad de escenarios, pero sin embargo también permite modelar escenarios con un mínimo de datos. Como mínimo se requiere sólo un modelo de elevación digital y un mapa con los espesores del área fuente en mapas raster formato <em>ASCII</em>. El modelo permite simular flujos con reologías diferentes: una fase, dos fases, y mezcla; además permite incorporar la erosión del flujo e incorporación de material a lo largo del canal. r.avaflow también permite incorporar en la modelación hidrografas de flujos variados.</p>
+<p>Como resultado el modelo arroja la distribución espacial de la altura del flujo, velocidades y presiones, así como tiempos de llegada e hidrógrafas en puntos de control especificados en el modelo.</p>
 <figure class="align-default" id="id4">
 <a class="reference internal image-reference" href="https://www.landslidemodels.org/symbols/logo_avaflow.png"><img alt="r.avaflow" src="https://www.landslidemodels.org/symbols/logo_avaflow.png" style="width: 100px;" />
 </a>
@@ -741,7 +776,7 @@ document.write(`
 <h3>Tutorial<a class="headerlink" href="#id5" title="Link to this heading">#</a></h3>
 <p><em>Elaborado por Juan Diego Torres, Luisa Fernanda Cardona, y Daissy Herrera</em></p>
 <p>En este tutorial se utilizará la versión para windows r.avaflow.direct, la cual posee una interfaz que facilita el ingreso de los parámetros al modelo. Se puede acceder a esta interfaz mediante <a class="reference external" href="https://www.landslidemodels.org/r.avaflow/direct.php">https://www.landslidemodels.org/r.avaflow/direct.php</a>.</p>
-<p>Adicionalmente se debe contar como mínimo con un modelo de elevacion digital formato <em>ASCII</em>, en este caso utilizaremos <a class="reference external" href="https://github.com/edieraristizabal/Libro_cartoGeotecnia/blob/master/data/arenosa/DEM_Arenosa_Clip.asc?raw=true">La Arenosa</a>, y un archivo con las celdas fuentes que se deslizan y la profundidad, también en formato <em>ASCII</em>, para este caso denominado <a class="reference external" href="https://github.com/edieraristizabal/Libro_cartoGeotecnia/blob/master/data/arenosa/release.asc?raw=true">release</a>. También se puede ingresar el área del depósito generado por el flujo, de tal forma que se pueda evaluar la capacidad de predicción del modelo.</p>
+<p>Adicionalmente se debe contar como mínimo con un modelo de elevación digital formato <em>ASCII</em>, en este caso utilizaremos <a class="reference external" href="https://github.com/edieraristizabal/Libro_cartoGeotecnia/blob/master/data/arenosa/DEM_Arenosa_Clip.asc?raw=true">La Arenosa</a>, y un archivo con las celdas fuentes que se deslizan y la profundidad, también en formato <em>ASCII</em>, para este caso denominado <a class="reference external" href="https://github.com/edieraristizabal/Libro_cartoGeotecnia/blob/master/data/arenosa/release.asc?raw=true">release</a>. También se puede ingresar el área del depósito generado por el flujo, de tal forma que se pueda evaluar la capacidad de predicción del modelo.</p>
 <p><strong>1- Para el uso del modelo r.avaflow se debe tener instalado los siguientes programas:</strong></p>
 <ul class="simple">
 <li><p>Sistema operativo Windows 10/11</p></li>
@@ -778,7 +813,7 @@ document.write(`
 <li><p><strong>Create a start script and run your simulation → Directory with cygwin1.dll</strong> : La dirección de cygwin.</p></li>
 </ul>
 <p>Se procede a crear el archivo [prefix]avaflow.cmd. Este archivo es el que corre el modelo, por lo cual se debe almacenar en la misma carpeta donde esta el <em>r.avaflow.exe</em> y el archivo de parámetros creado en el paso anterior.</p>
-<p>se ejecuta el archivo <em>.cmd</em>, el computador lo reconocerá como un programa no seguro, sin embargo, se selecciona continuar de todos modos. Una vez se abra la línea de comandos, se escribe la letra <em>S</em> ó <em>Y</em> y se da <em>enter</em> para que comience a correr. Mientras corre el modelo se debe observar uan pantalla de la siguiente manera.</p>
+<p>se ejecuta el archivo <em>.cmd</em>, el computador lo reconocerá como un programa no seguro, sin embargo, se selecciona continuar de todos modos. Una vez se abra la línea de comandos, se escribe la letra <em>S</em> ó <em>Y</em> y se da <em>enter</em> para que comience a correr. Mientras corre el modelo se debe observar una pantalla de la siguiente manera.</p>
 <p><strong>4- Una vez se observa que el modelo ha finalizado se puede observar diferentes carpetas con resultados</strong>.</p>
 <ul class="simple">
 <li><p>En _ascii se almacenan resultados que pueden ser cargados en un SIG.</p></li>
@@ -809,21 +844,6 @@ document.write(`
 <li><p><strong>Zonificación de amenaza por flujos:</strong> Usando el ángulo de viaje, estima la zona de depositación para un flujo hipotético en una cuenca con desnivel H = 500 m y tan(α) = 0.30. Dibuja un perfil longitudinal esquemático indicando zona de inicio, tránsito y depósito.</p></li>
 <li><p><strong>Cambio climático y flujos:</strong> Investiga cómo el cambio climático puede modificar la frecuencia y magnitud de las avenidas torrenciales en los Andes colombianos. Cita al menos dos estudios recientes (post-2015).</p></li>
 </ol>
-</section>
-<section id="referencias">
-<h2>Referencias<a class="headerlink" href="#referencias" title="Link to this heading">#</a></h2>
-<div class="docutils container" id="id6">
-<div role="list" class="citation-list">
-<div class="citation" id="id67" role="doc-biblioentry">
-<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id1">1</a><span class="fn-bracket">]</span></span>
-<p>P. Horton, M. Jaboyedoff, B. Rudaz, and M. Zimmermann. Flow-r, a model for susceptibility mapping of debris flows and other gravitational hazards at a regional scale. <em>Natural Hazards and Earth System Sciences</em>, 13(4):869–885, 2013. URL: <a class="reference external" href="https://nhess.copernicus.org/articles/13/869/2013/">https://nhess.copernicus.org/articles/13/869/2013/</a>, <a class="reference external" href="https://doi.org/10.5194/nhess-13-869-2013">doi:10.5194/nhess-13-869-2013</a>.</p>
-</div>
-<div class="citation" id="id69" role="doc-biblioentry">
-<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id3">2</a><span class="fn-bracket">]</span></span>
-<p>Martin Mergili, Jan Thomas Fischer, Julia Krenn, and Shiva P. Pudasaini. R.avaflow v1, an advanced open-source computational framework for the propagation and interaction of two-phase mass flows. <em>Geoscientific Model Development</em>, 10:553–569, 2 2017. <a class="reference external" href="https://doi.org/10.5194/gmd-10-553-2017">doi:10.5194/gmd-10-553-2017</a>.</p>
-</div>
-</div>
-</div>
 </section>
 </section>
 
@@ -882,15 +902,17 @@ document.write(`
             
             
               
-                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
 
 
-  <div class="sidebar-secondary-item">
-  <div class="page-toc tocsection onthispage">
+  <div class="sidebar-secondary-item"><div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
     <i class="fa-solid fa-list"></i> Contents
   </div>
-  <nav class="bd-toc-nav page-toc">
-    <ul class="visible nav section-nav flex-column">
+  <nav id="pst-page-toc-nav" class="page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="pst-show_toc_level nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#objetivos-de-aprendizaje">Objetivos de aprendizaje</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#requisitos-previos">Requisitos previos</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#implementacion-estimacion-de-runout-angulo-de-viaje-fahrboschung">Implementación: Estimación de Runout — Ángulo de Viaje (Fahrböschung)</a></li>
@@ -912,7 +934,6 @@ document.write(`
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#actividades">Actividades</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#referencias">Referencias</a></li>
 </ul>
   </nav></div>
 
@@ -961,8 +982,8 @@ By Edier V. Aristizábal G.
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
-<script src="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+  <script defer src="_static/scripts/bootstrap.js?digest=55c26ed414f5f8a31ebb"></script>
+<script defer src="_static/scripts/pydata-sphinx-theme.js?digest=55c26ed414f5f8a31ebb"></script>
 
   <footer class="bd-footer">
   </footer>

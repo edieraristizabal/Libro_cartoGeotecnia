@@ -16,41 +16,44 @@
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
     document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
   </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-<link href="_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-<link href="_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-
-  
-  <link href="_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+  <link href="_static/styles/theme.css?digest=55c26ed414f5f8a31ebb" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=55c26ed414f5f8a31ebb" rel="stylesheet" />
 
     <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
-    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=3c74b3bc" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=9c3e77be" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css?v=6644e6bb" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
   
+  <!-- So that users can add custom icons -->
+  <script defer src="_static/scripts/fontawesome.js?digest=55c26ed414f5f8a31ebb"></script>
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
-<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
-  <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=55c26ed414f5f8a31ebb" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=55c26ed414f5f8a31ebb" />
 
     <script src="_static/documentation_options.js?v=9eb32ce0"></script>
     <script src="_static/doctools.js?v=9a2dae69"></script>
     <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="_static/clipboard.min.js?v=a7894cd8"></script>
     <script src="_static/copybutton.js?v=f281be69"></script>
-    <script src="_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=fab101a9"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="_static/togglebutton.js?v=1ae7504c"></script>
+    <script src="_static/togglebutton.js?v=b8b12719"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script src="_static/design-tabs.js?v=f930bc37"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
@@ -60,40 +63,37 @@
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = '07_detonante';</script>
+    <script>DOCUMENTATION_OPTIONS.search_as_you_type = false;</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Métodos basados en el conocimiento" href="08_heuristico.html" />
     <link rel="prev" title="Variables condicionantes" href="06_variables.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
+  
+    
+    <script src="_static/searchtools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <script src="searchindex.js"></script>
+  
   </head>
-  
-  
-  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
-
+  <body data-default-mode="">
   
   
   <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+
   
   <div id="pst-scroll-pixel-helper"></div>
   
   <button type="button" class="btn rounded-pill" id="pst-back-to-top">
     <i class="fa-solid fa-arrow-up"></i>Back to top</button>
-
   
-  <input type="checkbox"
-          class="sidebar-toggle"
-          id="pst-primary-sidebar-checkbox"/>
-  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
   
-  <input type="checkbox"
-          class="sidebar-toggle"
-          id="pst-secondary-sidebar-checkbox"/>
-  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
   
-  <div class="search-button__wrapper">
-    <div class="search-button__overlay"></div>
-    <div class="search-button__search-container">
+  
+  <dialog id="pst-search-dialog">
+    
 <form class="bd-search d-flex align-items-center"
       action="search.html"
       method="get">
@@ -101,7 +101,6 @@
   <input type="search"
          class="form-control"
          name="q"
-         id="search-input"
          placeholder="Search this book..."
          aria-label="Search this book..."
          autocomplete="off"
@@ -109,15 +108,59 @@
          autocapitalize="off"
          spellcheck="false"/>
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
-</form></div>
-  </div>
+</form>
+  </dialog>
 
   <div class="pst-async-banner-revealer d-none">
   <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
 </div>
 
   
-    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    <header id="pst-header" class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+        </div>
+      
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+    </div>
+  
+
+  
+    <button class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="On this page">
+      <span class="fa-solid fa-outdent"></span>
+    </button>
+  
+</div>
+
     </header>
   
 
@@ -126,7 +169,8 @@
       
       
       
-      <div class="bd-sidebar-primary bd-sidebar">
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
         
 
   
@@ -156,21 +200,17 @@
     
     
     <img src="_static/logo.png" class="logo__image only-light" alt="Cartografía Geotécnica - Home"/>
-    <script>document.write(`<img src="_static/logo.png" class="logo__image only-dark" alt="Cartografía Geotécnica - Home"/>`);</script>
+    <img src="_static/logo.png" class="logo__image only-dark pst-js-only" alt="Cartografía Geotécnica - Home"/>
   
   
 </a></div>
         <div class="sidebar-primary-item">
 
- <script>
- document.write(`
-   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
-    <span class="search-button__default-text">Search</span>
-    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
-   </button>
- `);
- </script></div>
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
         <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         
@@ -201,6 +241,7 @@
 <li class="toctree-l1"><a class="reference internal" href="15_python.html">Python</a></li>
 
 
+<li class="toctree-l1"><a class="reference internal" href="100_references.html">Referencias</a></li>
 </ul>
 
     </div>
@@ -209,9 +250,14 @@
   
   
   <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
   </div>
-  
-  <div id="rtd-footer-container"></div>
 
 
       </div>
@@ -341,7 +387,7 @@
 
 
 <button onclick="toggleFullScreen()"
-  class="btn btn-sm btn-fullscreen-button"
+  class="btn btn-sm btn-fullscreen-button pst-navbar-icon"
   title="Fullscreen mode"
   data-bs-placement="bottom" data-bs-toggle="tooltip"
 >
@@ -355,25 +401,17 @@
 
 
 
-<script>
-document.write(`
-  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
-    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
-    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
-  </button>
-`);
-</script>
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
 
 
-<script>
-document.write(`
-  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
-  </button>
-`);
-</script>
-<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+</button>
+<button class="sidebar-toggle secondary-toggle btn btn-sm pst-navbar-icon" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <span class="fa-solid fa-list"></span>
 </button>
 </div></div>
@@ -395,7 +433,7 @@ document.write(`
                 <h2> Contents </h2>
             </div>
             <nav aria-label="Page">
-                <ul class="visible nav section-nav flex-column">
+                <ul class="pst-show_toc_level nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#objetivos-de-aprendizaje">Objetivos de aprendizaje</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#requisitos-previos">Requisitos previos</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#la-precipitacion-como-factor-detonante">La precipitación como factor detonante</a></li>
@@ -404,7 +442,6 @@ document.write(`
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#actividades">Actividades</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#referencias">Referencias</a></li>
 </ul>
             </nav>
         </div>
@@ -440,10 +477,10 @@ document.write(`
 </section>
 <section id="la-precipitacion-como-factor-detonante">
 <h2>La precipitación como factor detonante<a class="headerlink" href="#la-precipitacion-como-factor-detonante" title="Link to this heading">#</a></h2>
-<p>Los movimientos en masa detonados por lluvias, generalmente denominados deslizamientos superficiales planares o <em>soil slip</em>, se caracterizan por su pequeño espesor (0,3 – 2 m) mucho menor a la longitud del movimiento, superficie de falla sub paralela a la pendiente y escarpe de área reducida (<span id="id1"></span>). Estos movimientos son generados durante eventos intensos de lluvia por el aumento rápido de la presión de poros o por la pérdida del componente de cohesión aparente (<span id="id2"></span>, <span id="id3"></span>, <span id="id4"></span>, <span id="id5"></span>). Posteriormente el material desplazado, por procesos de licuefacción  o reducción rápida de la resistencia al cortante en condiciones no drenadas (<span id="id6"></span>), se convierte en un flujo que se propaga ladera abajo erodando y trasportando sedimentos del canal, incrementando el volumen de material inicial desplazado (<span id="id7"></span>;<span id="id8"></span>). Para suelos parcialmente saturados, <span id="id9"></span> describen dicho proceso como el resultado de la infiltración de lluvia que reduce la succión de la matriz de los suelos en la ladera, esa reducción reduce a su vez la resistencia al cortante del material. Una vez el suelo está completamente saturado, la succión desaparece completamente, y un nivel freático colgado con presión de poros positiva se desarrolla. Esta presión de poros positiva reduce aun más la resistencia al cortante aumentando la probabilidad de ocurrencia de un movimiento.</p>
-<p><span id="id10"></span> e <span id="id11"></span> consideran que la lluvia puede actuar de dos formas diferentes en la estabilidad de las laderas: (1) eventos de lluvia muy intensos que causan una reducción de la resistencia al cortante por reducción de la cohesión aparente generando movimientos inicialmente superficiales y (2) eventos de lluvia de larga duración que causan el incremento en la presión de poros sobre una superficie de falla potencial generando movimientos de masa mucho más profundos y frecuentemente a lo largo de superficies de cizalla pre-existentes. Los movimientos superficiales son usualmente detonados por lluvias cortas e intensas (<span id="id12"></span>), en tanto que los movimientos profundos están más relacionados con la distribución y variación de la lluvia en periodos largos (<span id="id13"></span>).</p>
-<p><span id="id14"></span> sugieren que la precipitación puede inducir la generación de una zona saturada con el incremento lógico del nivel freático, especialmente para perfiles poco profundos; y por otro lado, Rahardjo et al. (1995) sugieren que un nivel freático colgado y temporal se forma en perfiles de suelo profundos, entre la superficie del terreno y el frente húmedo, reduciendo la presión de poros negativa e iniciando un flujo paralelo a la ladera que contribuye a la inestabilidad de la vertiente (<span id="id15"></span>). Estas consideraciones permiten evaluar la presión de poros generada por el aumento de una capa saturada sobre una superficie de falla crítica predefinida, o por el contrario evaluar el desarrollo de la presión de poros a partir del avance de un frente húmedo.</p>
-<p><span id="id16"></span> proponen dos distintos mecanismos de falla generados por la infiltración. En el primer mecanismo la falla ocurre el aumento en la presión de poros positiva originando licuefacción del material, en tanto el segundo mecanismo la falla ocurre en presiones de poros negativas donde el material está aun en estado no saturado y la falla ocurre por reducción de la succión y la masa se comporta similar a un cuerpo rígido. Suelos de grano fino y baja infiltración no tienden a desarrollar presiones de poros positivas y la falla ocurre generalmente por reducción de la resistencia al cortante causada por pérdida de succión. En general los movimientos en masa superficiales están asociados con el desarrollo de presiones de poros positivas mientras movimientos más profundos están asociados a pérdida de succión (<span id="id17"></span>).</p>
+<p>Los movimientos en masa detonados por lluvias, generalmente denominados deslizamientos superficiales planares o <em>soil slip</em>, se caracterizan por su pequeño espesor (0,3 – 2 m) mucho menor a la longitud del movimiento, superficie de falla sub paralela a la pendiente y escarpe de área reducida (<span class="bibtex-citation" id="id1"></span>). Estos movimientos son generados durante eventos intensos de lluvia por el aumento rápido de la presión de poros o por la pérdida del componente de cohesión aparente (<span class="bibtex-citation" id="id2"></span>, <span class="bibtex-citation" id="id3"></span>, <span class="bibtex-citation" id="id4"></span>, <span class="bibtex-citation" id="id5"></span>). Posteriormente el material desplazado, por procesos de licuefacción o reducción rápida de la resistencia al cortante en condiciones no drenadas (<span class="bibtex-citation" id="id6"></span>), se convierte en un flujo que se propaga ladera abajo erodando y trasportando sedimentos del canal, incrementando el volumen de material inicial desplazado (<span class="bibtex-citation" id="id7"></span>;<span class="bibtex-citation" id="id8"></span>). Para suelos parcialmente saturados, <span class="bibtex-citation" id="id9"></span> describen dicho proceso como el resultado de la infiltración de lluvia que reduce la succión de la matriz de los suelos en la ladera, esa reducción reduce a su vez la resistencia al cortante del material. Una vez el suelo está completamente saturado, la succión desaparece completamente, y un nivel freático colgado con presión de poros positiva se desarrolla. Esta presión de poros positiva reduce aun más la resistencia al cortante aumentando la probabilidad de ocurrencia de un movimiento.</p>
+<p><span class="bibtex-citation" id="id10"></span> e <span class="bibtex-citation" id="id11"></span> consideran que la lluvia puede actuar de dos formas diferentes en la estabilidad de las laderas: (1) eventos de lluvia muy intensos que causan una reducción de la resistencia al cortante por reducción de la cohesión aparente generando movimientos inicialmente superficiales y (2) eventos de lluvia de larga duración que causan el incremento en la presión de poros sobre una superficie de falla potencial generando movimientos de masa mucho más profundos y frecuentemente a lo largo de superficies de cizalla pre-existentes. Los movimientos superficiales son usualmente detonados por lluvias cortas e intensas (<span class="bibtex-citation" id="id12"></span>), en tanto que los movimientos profundos están más relacionados con la distribución y variación de la lluvia en periodos largos (<span class="bibtex-citation" id="id13"></span>).</p>
+<p><span class="bibtex-citation" id="id14"></span> sugieren que la precipitación puede inducir la generación de una zona saturada con el incremento lógico del nivel freático, especialmente para perfiles poco profundos; y por otro lado, <span class="bibtex-citation" id="id15"></span> sugieren que un nivel freático colgado y temporal se forma en perfiles de suelo profundos, entre la superficie del terreno y el frente húmedo, reduciendo la presión de poros negativa e iniciando un flujo paralelo a la ladera que contribuye a la inestabilidad de la vertiente (<span class="bibtex-citation" id="id16"></span>). Estas consideraciones permiten evaluar la presión de poros generada por el aumento de una capa saturada sobre una superficie de falla crítica predefinida, o por el contrario evaluar el desarrollo de la presión de poros a partir del avance de un frente húmedo.</p>
+<p><span class="bibtex-citation" id="id17"></span> proponen dos distintos mecanismos de falla generados por la infiltración. En el primer mecanismo la falla ocurre el aumento en la presión de poros positiva originando licuefacción del material, en tanto el segundo mecanismo la falla ocurre en presiones de poros negativas donde el material está aun en estado no saturado y la falla ocurre por reducción de la succión y la masa se comporta similar a un cuerpo rígido. Suelos de grano fino y baja infiltración no tienden a desarrollar presiones de poros positivas y la falla ocurre generalmente por reducción de la resistencia al cortante causada por pérdida de succión. En general los movimientos en masa superficiales están asociados con el desarrollo de presiones de poros positivas mientras movimientos más profundos están asociados a pérdida de succión (<span class="bibtex-citation" id="id18"></span>).</p>
 <p>Para describir los mecanismos que dan lugar a dichos eventos es necesario conocer el perfil de meteorización y comprender el comportamiento del agua a través del suelo. Inicialmente el agua precipitada se infiltra en el suelo en función de la permeabilidad de los horizontes superficiales del suelo. Cuando la intensidad de la lluvia es mayor a la permeabilidad del suelo los excedentes de agua drenan sobre la superficie de acuerdo con la pendiente y morfología del terreno. Entre tanto el agua que se infiltra ocupa los poros en el suelo y tiende a drenar hacia horizontes de suelo más profundos por efectos de la gravedad. Sin embargo los suelos pueden mantener un contenido de agua dentro de los poros más pequeños, debido a la adhesión (agua higroscópica) y la tensión superficial (agua capilar) que actúan como una película alrededor de las partículas del suelo contrarrestando el efecto de la gravedad. La fracción de agua capilar es utilizable por las plantas, a diferencia del agua higroscópica que no puede ser extraída por las raíces de las plantas. Si el contenido de agua aumenta del contenido capilar entonces la gravedad es suficiente para superar las tensiones superficiales, y el exceso de agua, denominada agua gravitacional o libre, percola como un frente húmedo hacia profundidad.</p>
 <figure class="align-default" id="perfil1">
 <a class="reference internal image-reference" href="https://www.researchgate.net/profile/Edier-Aristizabal/publication/275723803/figure/fig2/AS:614061867802642&#64;1523415166398/Water-content-into-the-soil-and-water-available-Root-depth-Z-r-soil-thickness-Z-s_W640.jpg"><img alt="perfil1" src="https://www.researchgate.net/profile/Edier-Aristizabal/publication/275723803/figure/fig2/AS:614061867802642&#64;1523415166398/Water-content-into-the-soil-and-water-available-Root-depth-Z-r-soil-thickness-Z-s_W640.jpg" style="width: 700px;" />
@@ -452,7 +489,7 @@ document.write(`
 <p><span class="caption-number">Fig. 39 </span><span class="caption-text">Contenido de agua en el suelo. Profundidad de raices (Zr), profundidad del suelo (Zs), humedad a punto de marchitex (Wpwp), humedad a capacidad de campo (Wfc), saturación (Ws)</span><a class="headerlink" href="#perfil1" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
-<p>El proceso de percolación es controlado por el perfil de suelo. La parte superior de los horizontes de suelo, que generalmente corresponden a suelos residuales, se caracterizan por la extinción total de la fábrica y estructura de la roca parental, y la influencia de la vegetación, la perturbación de los animales y los procesos químicos, que generan macroporos o estructuras relictas abiertas que incrementan en varios órdenes de magnitud la conductividad del agua en el suelo. A estos horizontes altamente perturbados le siguen horizontes saprolitícos, definidos como un material blando producto de la meteorización química de las rocas, y caracterizados por la formación de minerales secundarios, en los que la estructura y fábrica originales son preservadas debido al emplazamiento seudomórfico de los minerales originales sin alteración y transporte subsecuentes (<span id="id18"></span>, <span id="id19"></span>). Debido a sus características físicas la conductividad hidráulica del suelo saprolítico es mucho menor a la capa superior de suelo residual, formando un contraste entre las conductividades, donde la tasa de lluvia e infiltración excede la tasa de percolación. A partir de esta superficie se forma como consecuencia un nivel freático colgado y flujo lateral saturado paralelo a la ladera denominado flujo subsuperficial (<span id="id20"></span>; <span id="id21"></span>; <span id="id22"></span>).</p>
+<p>El proceso de percolación es controlado por el perfil de suelo. La parte superior de los horizontes de suelo, que generalmente corresponden a suelos residuales, se caracterizan por la extinción total de la fábrica y estructura de la roca parental, y la influencia de la vegetación, la perturbación de los animales y los procesos químicos, que generan macroporos o estructuras relictas abiertas que incrementan en varios órdenes de magnitud la conductividad del agua en el suelo. A estos horizontes altamente perturbados le siguen horizontes saprolitícos, definidos como un material blando producto de la meteorización química de las rocas, y caracterizados por la formación de minerales secundarios, en los que la estructura y fábrica originales son preservadas debido al emplazamiento seudomórfico de los minerales originales sin alteración y transporte subsecuentes (<span class="bibtex-citation" id="id19"></span>, <span class="bibtex-citation" id="id20"></span>). Debido a sus características físicas la conductividad hidráulica del suelo saprolítico es mucho menor a la capa superior de suelo residual, formando un contraste entre las conductividades, donde la tasa de lluvia e infiltración excede la tasa de percolación. A partir de esta superficie se forma como consecuencia un nivel freático colgado y flujo lateral saturado paralelo a la ladera denominado flujo subsuperficial (<span class="bibtex-citation" id="id21"></span>; <span class="bibtex-citation" id="id22"></span>; <span class="bibtex-citation" id="id23"></span>).</p>
 <figure class="align-default" id="perfil">
 <a class="reference internal image-reference" href="https://i.pinimg.com/564x/97/3e/bb/973ebb0ba09a295860f11f5ebf7df5ff.jpg"><img alt="perfil" src="https://i.pinimg.com/564x/97/3e/bb/973ebb0ba09a295860f11f5ebf7df5ff.jpg" style="width: 500px;" />
 </a>
@@ -476,14 +513,15 @@ document.write(`
 <p><span class="caption-number">Fig. 42 </span><span class="caption-text">Mecanismo de avance del frente humedo.</span><a class="headerlink" href="#frente-humedo" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
-<p>En términos de estabilidad los esfuerzos que son transmitidos al suelo son soportados por las partículas y los fluidos dentro de los poros. Sin embargo solo las partículas del suelo pueden soportar los esfuerzos de corte responsable de la ocurrencia de movimientos en masa. Por lo tanto, cuando la presión de poros aumenta los esfuerzos que son transmitidos a las partículas del suelo disminuyen porque son soportados por el agua en los poros, conservando los esfuerzos totales esencialmente constantes pero disminuyendo los esfuerzos efectivos (<span id="id23"></span>). La situación más crítica para la estabilidad de la ladera corresponde cuando la zona saturada alcanza la superficie de la ladera y la presión de poros es máxima (<span id="id24"></span>).</p>
-<p>La falla de la ladera se puede presentar durante o después del evento de lluvia en condiciones saturadas o parcialmente saturadas. Para condiciones parcialmente saturadas la falla puede ocurrir en presiones de poros negativas por reducción de la succión, y la masa de suelo fallada se comporta similar a un cuerpo rígido. Por otra parte, una vez el suelo está completamente saturado, la succión desaparece completamente, y se desarrollan presiones de poro positiva. Este aumento de presión de poros reduce la resistencia al cortante originando licuefacción estática del material o reducción rápida de la resistencia al cortante en condiciones no drenadas, y la masa de suelo fallada se comporta como un flujo (<span id="id25"></span>; <span id="id26"></span>; <span id="id27"></span>; <span id="id28"></span>).</p>
+<p>En términos de estabilidad los esfuerzos que son transmitidos al suelo son soportados por las partículas y los fluidos dentro de los poros. Sin embargo solo las partículas del suelo pueden soportar los esfuerzos de corte responsable de la ocurrencia de movimientos en masa. Por lo tanto, cuando la presión de poros aumenta los esfuerzos que son transmitidos a las partículas del suelo disminuyen porque son soportados por el agua en los poros, conservando los esfuerzos totales esencialmente constantes pero disminuyendo los esfuerzos efectivos (<span class="bibtex-citation" id="id24"></span>). La situación más crítica para la estabilidad de la ladera corresponde cuando la zona saturada alcanza la superficie de la ladera y la presión de poros es máxima (<span class="bibtex-citation" id="id25"></span>).</p>
+<p>La falla de la ladera se puede presentar durante o después del evento de lluvia en condiciones saturadas o parcialmente saturadas. Para condiciones parcialmente saturadas la falla puede ocurrir en presiones de poros negativas por reducción de la succión, y la masa de suelo fallada se comporta similar a un cuerpo rígido. Por otra parte, una vez el suelo está completamente saturado, la succión desaparece completamente, y se desarrollan presiones de poro positiva. Este aumento de presión de poros reduce la resistencia al cortante originando licuefacción estática del material o reducción rápida de la resistencia al cortante en condiciones no drenadas, y la masa de suelo fallada se comporta como un flujo (<span class="bibtex-citation" id="id26"></span>; <span class="bibtex-citation" id="id27"></span>; <span class="bibtex-citation" id="id28"></span>; <span class="bibtex-citation" id="id29"></span>).</p>
 <p>Sin embargo es necesario tener en cuenta que para lograr una condición del suelo parcialmente saturado en ambientes tropicales húmedos, se requieren largos periodos de tiempo anteriores sin lluvia, y dicha condición no saturada se conserva justo en el comienzo del evento de lluvia. Por lo que durante el período de lluvia inicial, la condición no saturada controla la mecánica de suelos y los movimientos en masa superficiales se producen por la reducción de succión, pero después de un corto período de lluvias, las condiciones de saturación aparecen y controlan la ocurrencia de deslizamientos superficiales por presiones de poros positivas. Para las condiciones de clima tropical húmedo, la lluvia es un fenómeno común, lo que resulta en un perfil de suelo a capacidad de campo muy cerca a condiciones de saturación, y los deslizamientos de tierra en consecuencia son poco profundos y se producen en su mayoría debido a presiones de poro positivas.</p>
-<p>El flujo el agua en el suelo se presenta en dos escalas espaciales y temporales diferentes. El flujo horizontal en condiciones estáticas, y el flujo vertical en condiciones transitorias. Para considerar el aumento de la presión de poros como el resultado del flujo subsuperficial paralelo a la ladera se consideran condiciones de flujo estáticas que evalúan el control topográfico en la presión de poros. Por el contrario, cuando se quiere considerar el aumento de presiones de poros por el avance del frente húmedo generalmente se consideran flujos dinámicos transitorios. En términos generales los autores concuerdan que las condiciones de flujo estáticas responden a condiciones iniciales o antecedentes como resultado del largo plazo, en tanto que las condiciones transitorias responde a eventos de lluvia específicos. Por lo tanto la cabeza de presión de agua dentro del suelo puede ser expresada como la suma de dos componentes, la cabeza producida por el flujo lateral en el largo plazo en estado estático asociado a la lluvia antecedente, y la respuesta de la cabeza de presión en el corto plazo en estado transitorio asociado a un evento de lluvia específico (<span id="id29"></span>; <span id="id30"></span>, <span id="id31"></span>, <span id="id32"></span>, <span id="id33"></span>).</p>
+<p>El flujo el agua en el suelo se presenta en dos escalas espaciales y temporales diferentes. El flujo horizontal en condiciones estáticas, y el flujo vertical en condiciones transitorias. Para considerar el aumento de la presión de poros como el resultado del flujo subsuperficial paralelo a la ladera se consideran condiciones de flujo estáticas que evalúan el control topográfico en la presión de poros. Por el contrario, cuando se quiere considerar el aumento de presiones de poros por el avance del frente húmedo generalmente se consideran flujos dinámicos transitorios. En términos generales los autores concuerdan que las condiciones de flujo estáticas responden a condiciones iniciales o antecedentes como resultado del largo plazo, en tanto que las condiciones transitorias responde a eventos de lluvia específicos. Por lo tanto la cabeza de presión de agua dentro del suelo puede ser expresada como la suma de dos componentes, la cabeza producida por el flujo lateral en el largo plazo en estado estático asociado a la lluvia antecedente, y la respuesta de la cabeza de presión en el corto plazo en estado transitorio asociado a un evento de lluvia específico (<span class="bibtex-citation" id="id30"></span>; <span class="bibtex-citation" id="id31"></span>, <span class="bibtex-citation" id="id32"></span>, <span class="bibtex-citation" id="id33"></span>, <span class="bibtex-citation" id="id34"></span>).</p>
+<p>Para la aplicación práctica de estos conceptos en estudios de amenaza en Colombia, la metodología hidrológica se traduce en herramientas de umbral concretas. En los Estudios Detallados de Amenaza (escala 1:2.000) se emplean curvas de Intensidad-Duración-Frecuencia (IDF) calculadas para periodos de retorno de 2.33, 5, 10, 20, 50 y 100 años, mediante la ecuación <span class="math notranslate nohighlight">\(i = c \cdot T^m / (T_d^e + f)\)</span>, donde <span class="math notranslate nohighlight">\(i\)</span> es la intensidad, <span class="math notranslate nohighlight">\(T_d\)</span> la duración de la tormenta y <span class="math notranslate nohighlight">\(c\)</span>, <span class="math notranslate nohighlight">\(e\)</span>, <span class="math notranslate nohighlight">\(f\)</span>, <span class="math notranslate nohighlight">\(m\)</span> son coeficientes regionales específicos de cada estación pluviométrica. Para deslizamientos superficiales detonados por lluvias de alta intensidad y corta duración, la guía unificada SGC-UNAL aplica la formulación de Pradel y Raad (1993), que calcula la intensidad mínima requerida para saturar completamente el suelo hasta la profundidad del frente húmedo, en función de la conductividad hidráulica saturada, la porosidad efectiva y la saturación antecedente. Para umbrales de lluvia acumulada se emplea un modelo lineal del tipo <span class="math notranslate nohighlight">\(P_T = b + m \cdot P_{ant}\)</span>, donde <span class="math notranslate nohighlight">\(P_T\)</span> es el umbral diario crítico, <span class="math notranslate nohighlight">\(P_{ant}\)</span> la lluvia acumulada antecedente (típicamente de 15 días) y <span class="math notranslate nohighlight">\(b\)</span>, <span class="math notranslate nohighlight">\(m\)</span> el intercepto y la pendiente del ajuste. En el Valle de Aburrá, <span class="bibtex-citation" id="id35">Aristizábal <em>et al.</em> [<a class="reference internal" href="100_references.html#id23" title="Edier Aristizábal, López S., Sánchez O., Vásquez M., Rincón F., Ruiz-Vásquez D., Restrepo S., and Valencia J.S. Evaluación de la amenaza por movimientos en masa detonados por lluvias para una región de los andes colombianos estimando la probabilidad espacial, temporal, y magnitud. Boletín de Geología, pages 85-105, 2019. URL: http://eusoils.jrc.ec.europa.eu/library/themes/Landslides/, doi:10.18273/revbol.v41n3-2019004.">2019</a>]</span> analizaron combinaciones de lluvia acumulada de 1, 3 y 5 días (LA) con lluvia acumulada antecedente de 10, 15, 30, 60 y 90 días (LAA), encontrando que la combinación LA1 (1 día) frente a LAA30 (30 días) separa mejor los días estables de los inestables: la mayor probabilidad condicionada de ocurrencia se registra al superar combinaciones de 350 a 400 mm de lluvia acumulada de 30 días con 30 mm de lluvia diaria, mientras que la mayor densidad histórica de deslizamientos se concentra en valores inferiores a 250 mm de lluvia antecedente de 30 días combinados con lluvias diarias entre 0 y 30 mm.</p>
 </section>
 <section id="los-sismos-como-factor-detonante">
 <h2>Los sismos como factor detonante<a class="headerlink" href="#los-sismos-como-factor-detonante" title="Link to this heading">#</a></h2>
-<p>Segun <span id="id34">Keefer [<a class="reference internal" href="#id111" title="David K Keefer. Landslides caused by earthquakes. Geological Society of American BUlletin, 95:406-421, 1984.">1984</a>]</span> los sismos a partir de <span class="math notranslate nohighlight">\(M_L 4.0\)</span> tienen la capacidad de detonar movimientos en masa, denominados cosísmicos. En general los sismos pueden detonar movimientos en masa de diferentes tamaños, superficiales en suelos, caidas de roca y movimientos profundos en roca.</p>
+<p>Según <span class="bibtex-citation" id="id36">Keefer [<a class="reference internal" href="100_references.html#id75" title="David K Keefer. Landslides caused by earthquakes. Geological Society of American BUlletin, 95:406-421, 1984.">1984</a>]</span> los sismos a partir de <span class="math notranslate nohighlight">\(M_L 4.0\)</span> tienen la capacidad de detonar movimientos en masa, denominados cosísmicos. En general los sismos pueden detonar movimientos en masa de diferentes tamaños, superficiales en suelos, caídas de roca y movimientos profundos en roca.</p>
 <p>Diferentes estudios han señalado la relación entre la magnitud de los sismos y el número de movimientos en masa y el área afectada por los movimientos, al igual la magnitud de los sismos y la máxima distancia donde se presentan movimientos en masa. Existen tres tipos de factores que afectan los movimientos en masa cosísmicos: (i) factores sísmicos, (ii) factores topográficos, y (iii) factores geológicos. A continuación se describe cada uno de ellos:</p>
 <section id="factores-sismicos">
 <h3>Factores sísmicos<a class="headerlink" href="#factores-sismicos" title="Link to this heading">#</a></h3>
@@ -495,10 +533,10 @@ document.write(`
 <a class="reference internal image-reference" href="https://agupubs.onlinelibrary.wiley.com/cms/asset/00e4704b-6823-43df-ae91-d866f2dafc57/rog20192-fig-0008-m.jpg"><img alt="sismos" src="https://agupubs.onlinelibrary.wiley.com/cms/asset/00e4704b-6823-43df-ae91-d866f2dafc57/rog20192-fig-0008-m.jpg" style="width: 500px;" />
 </a>
 <figcaption>
-<p><span class="caption-number">Fig. 43 </span><span class="caption-text">Efecto del tipo de falla en la distribución de movimientos en masa cosísmicos. Tomado de <span id="id35">Fan <em>et al.</em> [<a class="reference internal" href="#id112" title="Xuanmei Fan, Gianvito Scaringi, Oliver Korup, A. Joshua West, Cees J. van Westen, Hakan Tanyas, Niels Hovius, Tristram C. Hales, Randall W. Jibson, Kate E. Allstadt, Limin Zhang, Stephen G. Evans, Chong Xu, Gen Li, Xiangjun Pei, Qiang Xu, and Runqiu Huang. Earthquake-induced chains of geologic hazards: patterns, mechanisms, and impacts. Reviews of Geophysics, 57:421-503, 2019. URL: https://doi.org/10.1029/2018RG000626, doi:10.1029/2018RG000626.">2019</a>]</span>.</span><a class="headerlink" href="#sismos" title="Link to this image">#</a></p>
+<p><span class="caption-number">Fig. 43 </span><span class="caption-text">Efecto del tipo de falla en la distribución de movimientos en masa cosísmicos. Tomado de <span class="bibtex-citation" id="id37">Fan <em>et al.</em> [<a class="reference internal" href="100_references.html#id76" title="Xuanmei Fan, Gianvito Scaringi, Oliver Korup, A. Joshua West, Cees J. van Westen, Hakan Tanyas, Niels Hovius, Tristram C. Hales, Randall W. Jibson, Kate E. Allstadt, Limin Zhang, Stephen G. Evans, Chong Xu, Gen Li, Xiangjun Pei, Qiang Xu, and Runqiu Huang. Earthquake-induced chains of geologic hazards: patterns, mechanisms, and impacts. Reviews of Geophysics, 57:421-503, 2019. URL: https://doi.org/10.1029/2018RG000626, doi:10.1029/2018RG000626.">2019</a>]</span>.</span><a class="headerlink" href="#sismos" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
-<p>Con respecto al tipo de falla se observa un área mas extensa para fallas de componente de buzamiento, mientras que áreas afectadas de menor extensión para fallas de componente de rumbo.</p>
+<p>Con respecto al tipo de falla se observa un área más extensa para fallas de componente de buzamiento, mientras que áreas afectadas de menor extensión para fallas de componente de rumbo.</p>
 <figure class="align-default" id="sismos2">
 <a class="reference internal image-reference" href="https://media.springernature.com/lw685/springer-static/image/art%3A10.1186%2Fs40677-016-0041-1/MediaObjects/40677_2016_41_Fig1_HTML.gif"><img alt="sismos2" src="https://media.springernature.com/lw685/springer-static/image/art%3A10.1186%2Fs40677-016-0041-1/MediaObjects/40677_2016_41_Fig1_HTML.gif" style="width: 500px;" />
 </a>
@@ -511,33 +549,19 @@ document.write(`
 <a class="reference internal image-reference" href="https://static.actu.fr/uploads/2018/09/a131e573b391863a0fc4f8e6995cc7c1.jpg"><img alt="sismos3" src="https://static.actu.fr/uploads/2018/09/a131e573b391863a0fc4f8e6995cc7c1.jpg" style="width: 600px;" />
 </a>
 <figcaption>
-<p><span class="caption-number">Fig. 45 </span><span class="caption-text">Distribución de movimientos en masa cosísmicos en Hokkaido (Japón) en 2018. Los eventos se presentán en la parte alta donde se dá el cambio de pendiente.</span><a class="headerlink" href="#sismos3" title="Link to this image">#</a></p>
+<p><span class="caption-number">Fig. 45 </span><span class="caption-text">Distribución de movimientos en masa cosísmicos en Hokkaido (Japón) en 2018. Los eventos se presentan en la parte alta donde se da el cambio de pendiente.</span><a class="headerlink" href="#sismos3" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
+<p>Para cuantificar el desempeño sísmico de una ladera se recurre a métodos de desplazamiento permanente, siendo el más extendido el método de Newmark, que calcula el desplazamiento acumulado (<span class="math notranslate nohighlight">\(D_n\)</span>) de la masa inestable mediante modelos de regresión empírica como el de Jibson (2007): <span class="math notranslate nohighlight">\(\log(D_n) = 0.215 + \log\left[\left(1-\frac{a_c}{PGA}\right)^{2.341} \left(\frac{a_c}{PGA}\right)^{-1.438}\right] \pm 0.510\)</span>, donde <span class="math notranslate nohighlight">\(PGA\)</span> es la aceleración máxima del terreno y <span class="math notranslate nohighlight">\(a_c\)</span> es la aceleración crítica o de fluencia de la ladera, definida como el umbral mínimo necesario para superar la resistencia al corte basal e iniciar el movimiento. En evaluaciones de amenaza a escala municipal en Colombia se recurre también al análisis pseudo-estático simplificado, en el cual el coeficiente sísmico horizontal (<span class="math notranslate nohighlight">\(k\)</span>) se asigna según el nivel de amenaza sísmica del municipio conforme al Reglamento Colombiano de Construcción Sismo Resistente (NSR-10): <span class="math notranslate nohighlight">\(k=0.1\)</span> para amenaza severa, <span class="math notranslate nohighlight">\(k=0.25\)</span> para amenaza destructiva y <span class="math notranslate nohighlight">\(k=0.5\)</span> para amenaza catastrófica. Para evaluaciones de susceptibilidad a escala regional, el método de Mora-Vahrson pondera el factor de disparo por sismicidad correlacionando el PGA estimado para un periodo de retorno de 100 años con las intensidades de la escala de Mercalli Modificada, asignando pesos crecientes de 6 a 9 para las intensidades VI a IX, respectivamente.</p>
 </section>
 </section>
 <section id="actividades">
 <h2>Actividades<a class="headerlink" href="#actividades" title="Link to this heading">#</a></h2>
 <ol class="arabic simple">
-<li><p><strong>Lluvia detonante en Colombia:</strong> Consulta el artículo de <span id="id36"></span> sobre umbrales de lluvia para Colombia. Extrae los valores de <span class="math notranslate nohighlight">\(\alpha\)</span> y <span class="math notranslate nohighlight">\(\beta\)</span> del umbral I-D reportado y grafícalo usando el código del capítulo 12. ¿Cómo se compara con el umbral global de Caine (1980)?</p></li>
+<li><p><strong>Lluvia detonante en Colombia:</strong> Consulta el artículo de <span class="bibtex-citation" id="id38"></span> sobre umbrales de lluvia para Colombia. Extrae los valores de <span class="math notranslate nohighlight">\(\alpha\)</span> y <span class="math notranslate nohighlight">\(\beta\)</span> del umbral I-D reportado y grafícalo usando el código del capítulo 12. ¿Cómo se compara con el umbral global de Caine (1980)?</p></li>
 <li><p><strong>Umbral de lluvia acumulada:</strong> Investiga la diferencia entre el umbral Intensidad-Duración (I-D) y el umbral Lluvia Acumulada-Lluvia del Evento (E-D). ¿Cuál es más adecuado para cuencas con registro pluviométrico limitado?</p></li>
 <li><p><strong>Detonantes sísmicos:</strong> Consulta la base de datos USGS y encuentra un evento sísmico que haya desencadenado movimientos en masa en Colombia o Ecuador en los últimos 20 años. Describe el mecanismo de falla y la escala del desastre.</p></li>
 </ol>
-</section>
-<section id="referencias">
-<h2>Referencias<a class="headerlink" href="#referencias" title="Link to this heading">#</a></h2>
-<div class="docutils container" id="id37">
-<div role="list" class="citation-list">
-<div class="citation" id="id112" role="doc-biblioentry">
-<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id35">1</a><span class="fn-bracket">]</span></span>
-<p>Xuanmei Fan, Gianvito Scaringi, Oliver Korup, A. Joshua West, Cees J. van Westen, Hakan Tanyas, Niels Hovius, Tristram C. Hales, Randall W. Jibson, Kate E. Allstadt, Limin Zhang, Stephen G. Evans, Chong Xu, Gen Li, Xiangjun Pei, Qiang Xu, and Runqiu Huang. Earthquake-induced chains of geologic hazards: patterns, mechanisms, and impacts. <em>Reviews of Geophysics</em>, 57:421–503, 2019. URL: <a class="reference external" href="https://doi.org/10.1029/2018RG000626">https://doi.org/10.1029/2018RG000626</a>, <a class="reference external" href="https://doi.org/10.1029/2018RG000626">doi:10.1029/2018RG000626</a>.</p>
-</div>
-<div class="citation" id="id111" role="doc-biblioentry">
-<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id34">2</a><span class="fn-bracket">]</span></span>
-<p>David K Keefer. Landslides caused by earthquakes. <em>Geological Society of American BUlletin</em>, 95:406–421, 1984.</p>
-</div>
-</div>
-</div>
 </section>
 </section>
 
@@ -596,15 +620,17 @@ document.write(`
             
             
               
-                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
 
 
-  <div class="sidebar-secondary-item">
-  <div class="page-toc tocsection onthispage">
+  <div class="sidebar-secondary-item"><div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
     <i class="fa-solid fa-list"></i> Contents
   </div>
-  <nav class="bd-toc-nav page-toc">
-    <ul class="visible nav section-nav flex-column">
+  <nav id="pst-page-toc-nav" class="page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="pst-show_toc_level nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#objetivos-de-aprendizaje">Objetivos de aprendizaje</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#requisitos-previos">Requisitos previos</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#la-precipitacion-como-factor-detonante">La precipitación como factor detonante</a></li>
@@ -613,7 +639,6 @@ document.write(`
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#actividades">Actividades</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#referencias">Referencias</a></li>
 </ul>
   </nav></div>
 
@@ -662,8 +687,8 @@ By Edier V. Aristizábal G.
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
-<script src="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+  <script defer src="_static/scripts/bootstrap.js?digest=55c26ed414f5f8a31ebb"></script>
+<script defer src="_static/scripts/pydata-sphinx-theme.js?digest=55c26ed414f5f8a31ebb"></script>
 
   <footer class="bd-footer">
   </footer>

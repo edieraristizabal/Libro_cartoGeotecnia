@@ -16,41 +16,44 @@
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
     document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
   </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-<link href="_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-<link href="_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-
-  
-  <link href="_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+  <link href="_static/styles/theme.css?digest=55c26ed414f5f8a31ebb" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=55c26ed414f5f8a31ebb" rel="stylesheet" />
 
     <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
-    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=3c74b3bc" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=9c3e77be" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css?v=6644e6bb" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
   
+  <!-- So that users can add custom icons -->
+  <script defer src="_static/scripts/fontawesome.js?digest=55c26ed414f5f8a31ebb"></script>
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
-<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
-  <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=55c26ed414f5f8a31ebb" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=55c26ed414f5f8a31ebb" />
 
     <script src="_static/documentation_options.js?v=9eb32ce0"></script>
     <script src="_static/doctools.js?v=9a2dae69"></script>
     <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="_static/clipboard.min.js?v=a7894cd8"></script>
     <script src="_static/copybutton.js?v=f281be69"></script>
-    <script src="_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=fab101a9"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="_static/togglebutton.js?v=1ae7504c"></script>
+    <script src="_static/togglebutton.js?v=b8b12719"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script src="_static/design-tabs.js?v=f930bc37"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
@@ -60,40 +63,37 @@
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = '05_inventario';</script>
+    <script>DOCUMENTATION_OPTIONS.search_as_you_type = false;</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Variables condicionantes" href="06_variables.html" />
     <link rel="prev" title="Susceptibilidad y amenaza" href="04_susceptibilidad.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
+  
+    
+    <script src="_static/searchtools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <script src="searchindex.js"></script>
+  
   </head>
-  
-  
-  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
-
+  <body data-default-mode="">
   
   
   <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+
   
   <div id="pst-scroll-pixel-helper"></div>
   
   <button type="button" class="btn rounded-pill" id="pst-back-to-top">
     <i class="fa-solid fa-arrow-up"></i>Back to top</button>
-
   
-  <input type="checkbox"
-          class="sidebar-toggle"
-          id="pst-primary-sidebar-checkbox"/>
-  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
   
-  <input type="checkbox"
-          class="sidebar-toggle"
-          id="pst-secondary-sidebar-checkbox"/>
-  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
   
-  <div class="search-button__wrapper">
-    <div class="search-button__overlay"></div>
-    <div class="search-button__search-container">
+  
+  <dialog id="pst-search-dialog">
+    
 <form class="bd-search d-flex align-items-center"
       action="search.html"
       method="get">
@@ -101,7 +101,6 @@
   <input type="search"
          class="form-control"
          name="q"
-         id="search-input"
          placeholder="Search this book..."
          aria-label="Search this book..."
          autocomplete="off"
@@ -109,15 +108,59 @@
          autocapitalize="off"
          spellcheck="false"/>
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
-</form></div>
-  </div>
+</form>
+  </dialog>
 
   <div class="pst-async-banner-revealer d-none">
   <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
 </div>
 
   
-    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    <header id="pst-header" class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+        </div>
+      
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+    </div>
+  
+
+  
+    <button class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="On this page">
+      <span class="fa-solid fa-outdent"></span>
+    </button>
+  
+</div>
+
     </header>
   
 
@@ -126,7 +169,8 @@
       
       
       
-      <div class="bd-sidebar-primary bd-sidebar">
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
         
 
   
@@ -156,21 +200,17 @@
     
     
     <img src="_static/logo.png" class="logo__image only-light" alt="Cartografía Geotécnica - Home"/>
-    <script>document.write(`<img src="_static/logo.png" class="logo__image only-dark" alt="Cartografía Geotécnica - Home"/>`);</script>
+    <img src="_static/logo.png" class="logo__image only-dark pst-js-only" alt="Cartografía Geotécnica - Home"/>
   
   
 </a></div>
         <div class="sidebar-primary-item">
 
- <script>
- document.write(`
-   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
-    <span class="search-button__default-text">Search</span>
-    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
-   </button>
- `);
- </script></div>
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
         <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         
@@ -201,6 +241,7 @@
 <li class="toctree-l1"><a class="reference internal" href="15_python.html">Python</a></li>
 
 
+<li class="toctree-l1"><a class="reference internal" href="100_references.html">Referencias</a></li>
 </ul>
 
     </div>
@@ -209,9 +250,14 @@
   
   
   <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
   </div>
-  
-  <div id="rtd-footer-container"></div>
 
 
       </div>
@@ -341,7 +387,7 @@
 
 
 <button onclick="toggleFullScreen()"
-  class="btn btn-sm btn-fullscreen-button"
+  class="btn btn-sm btn-fullscreen-button pst-navbar-icon"
   title="Fullscreen mode"
   data-bs-placement="bottom" data-bs-toggle="tooltip"
 >
@@ -355,25 +401,17 @@
 
 
 
-<script>
-document.write(`
-  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
-    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
-    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
-  </button>
-`);
-</script>
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
 
 
-<script>
-document.write(`
-  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
-  </button>
-`);
-</script>
-<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+</button>
+<button class="sidebar-toggle secondary-toggle btn btn-sm pst-navbar-icon" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <span class="fa-solid fa-list"></span>
 </button>
 </div></div>
@@ -395,7 +433,7 @@ document.write(`
                 <h2> Contents </h2>
             </div>
             <nav aria-label="Page">
-                <ul class="visible nav section-nav flex-column">
+                <ul class="pst-show_toc_level nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#objetivos-de-aprendizaje">Objetivos de aprendizaje</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#requisitos-previos">Requisitos previos</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#atributos-de-los-movimientos-en-masa">Atributos de los movimientos en masa</a></li>
@@ -413,7 +451,6 @@ document.write(`
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#python">Python</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#actividades">Actividades</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#referencias">Referencias</a></li>
 </ul>
             </nav>
         </div>
@@ -451,7 +488,7 @@ document.write(`
 <p><span class="math notranslate nohighlight">\(y = f(X)\)</span></p>
 <p>Donde <span class="math notranslate nohighlight">\(y\)</span> es la variable dependiente, es decir la ocurrencia o no de movimientos en masa; y <span class="math notranslate nohighlight">\(X\)</span> correponde a las variables independientes o condicionantes.</p>
 <p><span class="math notranslate nohighlight">\(MenM[0,1] = f(pendiente, geologia, coberturas, etc, etc,)\)</span></p>
-<p>De esta forma, el inventario de movimientos en masa es una herramienta fundamental para la evaluación de la probabilidad espacial, temporal y magnitud. Además, constituyen la principal fuente de información con fines de validación de los resultados de los mapas de zonificación de la amenaza. El inventario de movimientos en masa corresponde a un registro detallado de los eventos que han ocurrido en el pasado proporcionando información útil sobre su distribución y características (<span id="id1">DenEeckhaut and Hervás [<a class="reference internal" href="#id27" title="Miet Van DenEeckhaut and Javier Hervás. Landslide inventories in europe and policy recommendations for their interoperability and harmonization a jrc contribution to the eu-fp7 safeland project. http://eusoils.jrc.ec.europa.eu/library/themes/Landslides/, 2012. doi:10.2788/75587.">2012</a>]</span>).</p>
+<p>De esta forma, el inventario de movimientos en masa es una herramienta fundamental para la evaluación de la probabilidad espacial, temporal y magnitud. Además, constituyen la principal fuente de información con fines de validación de los resultados de los mapas de zonificación de la amenaza. El inventario de movimientos en masa corresponde a un registro detallado de los eventos que han ocurrido en el pasado proporcionando información útil sobre su distribución y características (<span class="bibtex-citation" id="id1">DenEeckhaut and Hervás [<a class="reference internal" href="100_references.html#id21" title="Miet Van DenEeckhaut and Javier Hervás. Landslide inventories in europe and policy recommendations for their interoperability and harmonization a jrc contribution to the eu-fp7 safeland project. http://eusoils.jrc.ec.europa.eu/library/themes/Landslides/, 2012. doi:10.2788/75587.">2012</a>]</span>).</p>
 </section>
 <section id="atributos-de-los-movimientos-en-masa">
 <h2>Atributos de los movimientos en masa<a class="headerlink" href="#atributos-de-los-movimientos-en-masa" title="Link to this heading">#</a></h2>
@@ -474,19 +511,19 @@ document.write(`
 <li><p>procesamiento de imágenes de satélite</p></li>
 <li><p>Levantamiento de</p></li>
 </ul>
-<p>Debido al acelerado desarrollo de las técnicas de sensores remotos, y la disponibilidad, cada vez mayor de esta información, se vienen desarrollando técnicas basadas en imégenes de satelitales o modelos del elevación del terreno que faciliten la identificación y mapeo de los movimientos en masa. Entre ellas se resaltan el uso de índices espectrales, tales como el Indice de Diferencia Normalizada de Vegetacion (NDVI). En donde se pueden identificar áreas cubiertas por vegetación y que por causa de movimientos en masa pierden dicha cobertura a suelos desnudos. Para esto se debe utilizar una imagen previa a la ocurrencia del evento, y otra imagen posterior y calcular el NDVI para cada una de ellas y posteriormente la diferenencia entre dichos índices calculados. Las zonas de movimientos en masa representan las celdas con valores diferentes a cero, señalando el cambio de cobertura.</p>
-<figure class="align-default" id="inventario">
+<p>Debido al acelerado desarrollo de las técnicas de sensores remotos, y la disponibilidad, cada vez mayor de esta información, se vienen desarrollando técnicas basadas en imágenes satelitales o modelos de elevación del terreno que faciliten la identificación y mapeo de los movimientos en masa. Entre ellas se resaltan el uso de índices espectrales, tales como el Índice de Diferencia Normalizada de Vegetación (NDVI). En donde se pueden identificar áreas cubiertas por vegetación y que por causa de movimientos en masa pierden dicha cobertura a suelos desnudos. Para esto se debe utilizar una imagen previa a la ocurrencia del evento, y otra imagen posterior y calcular el NDVI para cada una de ellas y posteriormente la diferencia entre dichos índices calculados. Las zonas de movimientos en masa representan las celdas con valores diferentes a cero, señalando el cambio de cobertura.</p>
+<figure class="align-default" id="inventario-tipo">
 <a class="reference internal image-reference" href="https://www.researchgate.net/profile/Dario-Gioia-2/publication/234111493/figure/fig2/AS:393517898715136&#64;1470833386263/Landslide-inventory-map-of-the-study-area-Landslides-types-are-classified-according-to.png"><img alt="inventario" src="https://www.researchgate.net/profile/Dario-Gioia-2/publication/234111493/figure/fig2/AS:393517898715136&#64;1470833386263/Landslide-inventory-map-of-the-study-area-Landslides-types-are-classified-according-to.png" style="width: 800px;" />
 </a>
 <figcaption>
-<p><span class="caption-number">Fig. 17 </span><span class="caption-text">Inventario de movimientos en masa por tipo de evento. Tomado de Santagelo et al., (2013)</span><a class="headerlink" href="#inventario" title="Link to this image">#</a></p>
+<p><span class="caption-number">Fig. 17 </span><span class="caption-text">Inventario de movimientos en masa por tipo de evento. Tomado de Santagelo et al., (2013)</span><a class="headerlink" href="#inventario-tipo" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
-<figure class="align-default" id="id2">
+<figure class="align-default" id="inventario-actividad">
 <a class="reference internal image-reference" href="https://d3i71xaburhd42.cloudfront.net/b29fda1ca9630cdb7118a107d420a8f7b91406ad/5-Figure3-1.png"><img alt="inventario" src="https://d3i71xaburhd42.cloudfront.net/b29fda1ca9630cdb7118a107d420a8f7b91406ad/5-Figure3-1.png" style="width: 800px;" />
 </a>
 <figcaption>
-<p><span class="caption-number">Fig. 18 </span><span class="caption-text">Inventario de movimientos en masa por actividad. Tomado de Ventisette et al (2014).</span><a class="headerlink" href="#id2" title="Link to this image">#</a></p>
+<p><span class="caption-number">Fig. 18 </span><span class="caption-text">Inventario de movimientos en masa por actividad. Tomado de Ventisette et al (2014).</span><a class="headerlink" href="#inventario-actividad" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 </section>
@@ -494,7 +531,7 @@ document.write(`
 <h2>Tipos de inventarios<a class="headerlink" href="#tipos-de-inventarios" title="Link to this heading">#</a></h2>
 <p>Existen los siguientes tipos de inventarios de movimientos en masa:</p>
 <ul class="simple">
-<li><p><strong>Inventario de movimientos en masa multitemporales</strong>: son elaborados a partir de información de diferentes periodos de tiempo, por lo tanto permiten establecer la fecha o rango de ocurrencia de los eventos. Cuando se utilizan fogografías aéreas o imágenes satelitales, se tiene la fecha de un periodo donde todavía no se había presentado el movimiento en masa, y una fecha posterior donde el evento ya se encuentra, por lo tanto no se se tiene la fecha exacta de ocurrencia, pero si el rango (entre la fecha anterior donde no se había presentado el evento y la fecha donde se registra). Son los mas recomendados para la construcción de modelos de susceptibilidad, ya que agregan eventos ocurridos por diferentes condiciones detonantes. Sin embargo para mapas de amenaza deben ser utilizados con cuidado, por lo que precisamente se requiere diferenciar las condiciones detonantes.</p></li>
+<li><p><strong>Inventario de movimientos en masa multitemporales</strong>: son elaborados a partir de información de diferentes periodos de tiempo, por lo tanto permiten establecer la fecha o rango de ocurrencia de los eventos. Cuando se utilizan fotografías aéreas o imágenes satelitales, se tiene la fecha de un periodo donde todavía no se había presentado el movimiento en masa, y una fecha posterior donde el evento ya se encuentra, por lo tanto no se tiene la fecha exacta de ocurrencia, pero sí el rango (entre la fecha anterior donde no se había presentado el evento y la fecha donde se registra). Son los mas recomendados para la construcción de modelos de susceptibilidad, ya que agregan eventos ocurridos por diferentes condiciones detonantes. Sin embargo para mapas de amenaza deben ser utilizados con cuidado, por lo que precisamente se requiere diferenciar las condiciones detonantes.</p></li>
 </ul>
 <figure class="align-default" id="inventario-multi">
 <a class="reference internal image-reference" href="https://www.irpi.cnr.it/wp-content/uploads/2015/02/Prodotto_LIM-595x290.png"><img alt="inventario multi" src="https://www.irpi.cnr.it/wp-content/uploads/2015/02/Prodotto_LIM-595x290.png" style="width: 600px;" />
@@ -532,21 +569,22 @@ document.write(`
 <li><p>la corona del evento</p></li>
 <li><p>la celula semilla (<em>see-cell approach</em>) seleccionando pixeles dentro de un <em>buffer</em> a lo largo de la corona, y en algunos de los flancos de la zona de acumulación</p></li>
 </ul>
-<figure class="align-default" id="id3">
+<figure class="align-default" id="inventario-cartografia">
 <a class="reference internal image-reference" href="https://i.pinimg.com/564x/08/3e/23/083e23fa25cc6e95f3539d73fa09017f.jpg"><img alt="inventario" src="https://i.pinimg.com/564x/08/3e/23/083e23fa25cc6e95f3539d73fa09017f.jpg" style="width: 500px;" />
 </a>
 <figcaption>
-<p><span class="caption-number">Fig. 22 </span><span class="caption-text">Cartografía de movimientos en masa.</span><a class="headerlink" href="#id3" title="Link to this image">#</a></p>
+<p><span class="caption-number">Fig. 22 </span><span class="caption-text">Cartografía de movimientos en masa.</span><a class="headerlink" href="#inventario-cartografia" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
-<p>No existe hasta el momento un acuerdo en la mejor estrategia de cartografía. Para entrenar modelos de susceptibildiad o amenaza se debe considerar para la selección de la estrategia que el objetivo es representar las condiciones previas a la ocurrencia del evento, y no a las condiciones posteriores a la ocurrencia. En este caso el uso del depósito o incluso la corona no representaría adecuadamente la morfometría inestable que precisamente es inestable, la nueva geometría que representa el depósito entrenaría erroneamante el modelo de forma tal que las zonas de pendiente baja (representativas del depósito) son inestables, lo cual no es cierto. En este sentido, se recomienda durante el proceso de cartografía de los movimientos en masa separar la corona y escarpe del depósito. Obviamente esto depende de la técnica utilizada para el levantamiento del inventario. Para inventarios a partir de registros históricos se cuenta en muchos casos solo con las coordenadas, lo cual permite solo ubicar el evento como un punto, desconociendo qué parte del movimiento en masa representa dicho punto. Para inventarios a partir de fotografía aéreas o imágenes satelitales depende de la escala o resolucion de las imágenes.</p>
-<p>Otra discusión importante que se dá sobre el método utilizado para cartografiar los movimientos, y específicamente como se incorporan para entrenar los modelos estadísticos, se refiere al número de celdas que se debe tomar. Muchos autores plantean que el entrenamiento de los modelos estadísticos debe ser independiente del tamaño del movimiento. Cuando se utiliza todos los pixeles del movimiento en masa o toda la corona del evento para eventos de gran tamaño, a diferencia de utilizar un pixel que representa el centro, se puede estar sesgando el modelo ya que el modelo <em>aprende</em> mas entre mas celdas se le ingresen, por lo tanto terminan pesando mas que los eventos de menor tamaño. Esto se evita utlizando solo un pixel, independiente del tamaño del evento. La pregunta en este caso sería qué pixel es representativo de las condiciones de inestabilidad originales, es decir previas a la ocurrencia del evento, probablemente el pixel sobre el centro del evento no cumpla esta condición.</p>
+<p>No existe hasta el momento un acuerdo en la mejor estrategia de cartografía. Para entrenar modelos de susceptibilidad o amenaza se debe considerar para la selección de la estrategia que el objetivo es representar las condiciones previas a la ocurrencia del evento, y no a las condiciones posteriores a la ocurrencia. En este caso el uso del depósito o incluso la corona no representaría adecuadamente la morfometría inestable que precisamente es inestable, la nueva geometría que representa el depósito entrenaría erróneamente el modelo de forma tal que las zonas de pendiente baja (representativas del depósito) son inestables, lo cual no es cierto. En este sentido, se recomienda durante el proceso de cartografía de los movimientos en masa separar la corona y escarpe del depósito. Obviamente esto depende de la técnica utilizada para el levantamiento del inventario. Para inventarios a partir de registros históricos se cuenta en muchos casos solo con las coordenadas, lo cual permite solo ubicar el evento como un punto, desconociendo qué parte del movimiento en masa representa dicho punto. Para inventarios a partir de fotografía aéreas o imágenes satelitales depende de la escala o resolución de las imágenes.
+Si se introduce todo el cuerpo del movimiento (inicio y depósito) en un modelo de susceptibilidad estadística de forma indiferenciada, el modelo se calibrará de forma errónea, sugiriendo que las zonas planas de baja pendiente –que corresponden al depósito y que en muchos casos invaden laderas suaves, llanuras de inundación o fondos de valle estables que por sí mismos no habrían fallado– son altamente propensas a generar deslizamientos; el análisis del depósito debe reservarse más bien para estimar el alcance, volumen, intensidad y distancia de viaje (<em>runout</em>). Como alternativa heurística, metodologías nacionales como la del SGC (2017) proponen, como primera aproximación, agrupar geomáticamente todo el polígono (inicio y depósito); no obstante, establecen la buena práctica explícita de que, si esta simplificación no satisface o no explica coherentemente las hipótesis de falla física del terreno, el geocientífico debe refinar la variable de agrupamiento para utilizar únicamente las áreas de inicio (escarpes). Adicionalmente, la representación cartográfica depende de la escala: para garantizar la legibilidad en mapas análogos a escala 1:25.000, por ejemplo, la unidad mínima cartografiable corresponde a un área de 4x4 mm, equivalente a 10.000 m² o 1 ha.
+Otra discusión importante que se da sobre el método utilizado para cartografiar los movimientos, y específicamente como se incorporan para entrenar los modelos estadísticos, se refiere al número de celdas que se debe tomar. Muchos autores plantean que el entrenamiento de los modelos estadísticos debe ser independiente del tamaño del movimiento. Cuando se utiliza todos los pixeles del movimiento en masa o toda la corona del evento para eventos de gran tamaño, a diferencia de utilizar un pixel que representa el centro, se puede estar sesgando el modelo ya que el modelo <em>aprende</em> mas entre mas celdas se le ingresen, por lo tanto terminan pesando mas que los eventos de menor tamaño. Esto se evita utilizando solo un pixel, independiente del tamaño del evento. La pregunta en este caso sería qué pixel es representativo de las condiciones de inestabilidad originales, es decir previas a la ocurrencia del evento, probablemente el pixel sobre el centro del evento no cumpla esta condición.</p>
 </section>
 <section id="modelos-desbalanceados">
 <h2>Modelos desbalanceados<a class="headerlink" href="#modelos-desbalanceados" title="Link to this heading">#</a></h2>
 <p>La variable dependiente <span class="math notranslate nohighlight">\(y\)</span> para la construcción de un modelo sale parcialmente del inventario de movimientos en masa, donde las celdas con ocurrencia de uno o mas eventos representa un 1. Para que el modelo no esté sesgado se debe alimentar con celdas estables, es decir que no hayan presentado movimientos en masa en el pasado. Estas celdas se pueden representar con un valor igual a 0. Sin embargo, si se seleccionan todas las celdas del área de estudio, que no han presentado movimientos en masa en el pasado, se crearía un modelo desbalanceado, ya que las celdas estables son mucho mas numerosas que las celdas inestables. La mayor parte del terreno es estable, pero precisamente, en este tipo de modelos, nos interesa principalmente las celdas donde es probable que ocurra el evento, es decir las celdas minoritarias. Este tipo de modelos es común en la evaluación de amenazas, donde la no ocurrencia es mucho mas común o frecuente que la ocurrencia, sin embargo el interés se centra en la ocurrencia.</p>
 <p>Estos modelos desbalanceados no necesariamente significan sesgados, ya que la susceptibilidad o probabilidad espacial corresponde realmente a valores muy pequeños, sin embargo las técnicas utilizadas para establecer la función <span class="math notranslate nohighlight">\(f\)</span> son sensibles a este desbalance, por lo que requieren que sea balanceado el modelo, de tal forma que puedan <em>aprender</em> de igual forma de las celdas inestables como de las estables.</p>
-<p>Para esto no necesariamente las celdas estables e inestables deben ser un número igual, puede mantenerse relaciones entre ambos tipos de celdas 2:1 ó hasta 10:1, lo importante es que el modelo a utilizar pueda aprender de las celdas inestables, por eso se debe verificar hasta que relación de desbalance es posible utilizar. Probablemente la relación mas utilizada por los autores es 1:1, es decir seleccionar un número de celdas estables igual al número de celdas inestables que se obtiene del inventario de movimientos en masa. Luego de establecer la relacion de celdas estables:inestables se debe ser cuidadoso con el muestreo para las celdas estables. Debe ser un muestreo aleatorio de tal forma que no se vaya a sesgar el modelo, pero que al mismo tiempo se representativo de la zona de estudio.</p>
+<p>Para esto no necesariamente las celdas estables e inestables deben ser un número igual, puede mantenerse relaciones entre ambos tipos de celdas 2:1 ó hasta 10:1, lo importante es que el modelo a utilizar pueda aprender de las celdas inestables, por eso se debe verificar hasta qué relación de desbalance es posible utilizar. Probablemente la relación mas utilizada por los autores es 1:1, es decir seleccionar un número de celdas estables igual al número de celdas inestables que se obtiene del inventario de movimientos en masa. Luego de establecer la relación de celdas estables:inestables se debe ser cuidadoso con el muestreo para las celdas estables. Debe ser un muestreo aleatorio de tal forma que no se vaya a sesgar el modelo, pero que al mismo tiempo se representativo de la zona de estudio. La metodología técnica adoptada por el Servicio Geológico Colombiano (SGC) y estudios de referencia andinos confirman que esta relación equilibrada 1:1 es la óptima: en la práctica, se toma una porción del inventario de deslizamientos para el entrenamiento del modelo (típicamente el 80%) y se selecciona aleatoriamente la misma cantidad de píxeles estables dentro de la zona de estudio. Esta relación tiene además un sustento matemático: para modelos estadísticos dicotómicos como la regresión logística, el punto de corte probabilístico por defecto es 0,5; cuando los grupos de celdas estables e inestables son iguales en tamaño y su distribución se asemeja a la normal, este umbral maximiza matemáticamente el porcentaje de celdas correctamente clasificadas.</p>
 </section>
 <section id="herramientas-web">
 <h2>Herramientas web<a class="headerlink" href="#herramientas-web" title="Link to this heading">#</a></h2>
@@ -591,11 +629,11 @@ document.write(`
 <section id="simma">
 <h3>SIMMA<a class="headerlink" href="#simma" title="Link to this heading">#</a></h3>
 <p>El SIMMA (<a class="reference external" href="https://simma.sgc.gov.co/#/">https://simma.sgc.gov.co/#/</a>) es la plataforma geoespacial oficial y centralizada del Servicio Geológico Colombiano para la gestión, consulta y divulgación de toda la información relacionada con los movimientos en masa (deslizamientos, flujos, caídas de rocas, etc.) en Colombia.  El SIMMA sirve como visor para los mapas oficiales de susceptibilidad y amenaza por movimientos en masa generados por el SGC a diferentes escalas (principalmente escala 1:100.000 para el cubrimiento nacional y escalas más detalladas para zonas priorizadas). Funciona como un repositorio que vincula cada evento georreferenciado con los documentos técnicos, informes de campo y estudios que lo respaldan.</p>
-<figure class="align-default" id="id4">
+<figure class="align-default" id="id2">
 <a class="reference internal image-reference" href="https://i.pinimg.com/736x/91/26/c0/9126c04578bc6e3fab3854417eb68c94.jpg"><img alt="SIMMA" src="https://i.pinimg.com/736x/91/26/c0/9126c04578bc6e3fab3854417eb68c94.jpg" style="width: 500px;" />
 </a>
 <figcaption>
-<p><span class="caption-number">Fig. 26 </span><span class="caption-text">SIMMA.</span><a class="headerlink" href="#id4" title="Link to this image">#</a></p>
+<p><span class="caption-number">Fig. 26 </span><span class="caption-text">SIMMA.</span><a class="headerlink" href="#id2" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 </section>
@@ -604,18 +642,18 @@ document.write(`
 <p>GeoHazards (<a class="reference external" href="https://geohazards.com.co/visor-geohazard.html">https://geohazards.com.co/visor-geohazard.html</a>) es una iniciativa académica, desarrollada y gestionada por el Semillero de Investigación GeoHazards de la Universidad Nacional de Colombia. Se posiciona como un sistema de información geográfico (SIG) y un inventario de desastres enfocado principalmente en movimientos en masa y otros geopeligros en Colombia, con un énfasis particular en el departamento de Antioquia.</p>
 <p>A diferencia del SIMMA (que es la base de datos oficial del Estado), GeoHazards tiene un enfoque que combina la investigación académica, la recopilación de datos históricos y, potencialmente, un carácter más dinámico y colaborativo.</p>
 <p>La plataforma se estructura en torno a dos bases de datos principales que alimentan el geovisor: Base de Datos Nacional (Colombia) cuyo enfoque registra eventos de tipo torrencial y movimientos en masa que han resultado en pérdidas humanas (muertes) a nivel nacional. Base de Datos Departamental (Antioquia) cuyo enfoque es mucho más detallada. Incluye un espectro más amplio de fenómenos: movimientos en masa, eventos torrenciales, inundaciones y sismos. Registra los eventos independientemente de si causaron o no pérdidas humanas.</p>
-<figure class="align-default" id="id5">
+<figure class="align-default" id="id3">
 <a class="reference internal image-reference" href="https://i.pinimg.com/736x/ba/31/e9/ba31e92b4a5c5e731339dbade6b2b459.jpg"><img alt="geohazards" src="https://i.pinimg.com/736x/ba/31/e9/ba31e92b4a5c5e731339dbade6b2b459.jpg" style="width: 500px;" />
 </a>
 <figcaption>
-<p><span class="caption-number">Fig. 27 </span><span class="caption-text">GEOHAZARDS.</span><a class="headerlink" href="#id5" title="Link to this image">#</a></p>
+<p><span class="caption-number">Fig. 27 </span><span class="caption-text">GEOHAZARDS.</span><a class="headerlink" href="#id3" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 </section>
 </section>
 <section id="python">
 <h2>Python<a class="headerlink" href="#python" title="Link to this heading">#</a></h2>
-<p>A continuación se presenta como se pueden importar y manipular el mapa raster del inventario de eventos en python. Primero se deben importar llas librerías que se van a utilizar. La libreria denominada rasterio sirve para importar y trabajar con mapas tipo raster, y numpy para trabajar con matrices y métodos matemáticos. la funcion %matplotlib funciona para visualizar las figuras en los archivos de Jupiter.</p>
+<p>A continuación se presenta como se pueden importar y manipular el mapa raster del inventario de eventos en python. Primero se deben importar las librerías que se van a utilizar. La librería denominada rasterio sirve para importar y trabajar con mapas tipo raster, y numpy para trabajar con matrices y métodos matemáticos. la función %matplotlib funciona para visualizar las figuras en los archivos de Jupyter.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">rasterio</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">rio</span>
@@ -625,20 +663,8 @@ document.write(`
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
-<span class="ne">----&gt; </span><span class="mi">1</span> <span class="kn">import</span><span class="w"> </span><span class="nn">rasterio</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">rio</span>
-<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
-<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
-
-<span class="ne">ModuleNotFoundError</span>: No module named &#39;rasterio&#39;
-</pre></div>
 </div>
-</div>
-</div>
-<p>Para importar el inventario desde un archivo <em>.tif</em> (raster) se importa el archivo, indicando la ruta y abriendo el archivo, y posteriormente leyendo con la funcion read. Se debe especificar el numero de la capa. en algunos casos los mapas raster tienen diferentes capas, por ejemplo las imágenes de satelite. y la funcion show permite ver el mapa.</p>
+<p>Para importar el inventario desde un archivo <em>.tif</em> (raster) se importa el archivo, indicando la ruta y abriendo el archivo, y posteriormente leyendo con la función read. Se debe especificar el número de la capa. en algunos casos los mapas raster tienen diferentes capas, por ejemplo las imágenes de satelite. y la función show permite ver el mapa.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">raster</span> <span class="o">=</span> <span class="n">rio</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s1">&#39;https://github.com/edieraristizabal/Libro_cartoGeotecnia/blob/master/data/miel/Inventario_MenM.tif?raw=true&#39;</span><span class="p">)</span>
@@ -650,10 +676,48 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(1297, 1430)
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">CPLE_HttpResponseError</span><span class="g g-Whitespace">                    </span>Traceback (most recent call last)
+<span class="nn">File rasterio/_base.pyx:320,</span> in <span class="ni">rasterio._base.DatasetBase.__init__</span><span class="nt">()</span>
+<span class="ne">--&gt; </span><span class="mi">320</span> <span class="s1">&#39;Could not get source, probably due dynamically evaluated source code.&#39;</span>
+
+<span class="nn">File rasterio/_base.pyx:232,</span> in <span class="ni">rasterio._base.open_dataset</span><span class="nt">()</span>
+<span class="ne">--&gt; </span><span class="mi">232</span> <span class="s1">&#39;Could not get source, probably due dynamically evaluated source code.&#39;</span>
+
+<span class="nn">File rasterio/_err.pyx:359,</span> in <span class="ni">rasterio._err.exc_wrap_pointer</span><span class="nt">()</span>
+<span class="ne">--&gt; </span><span class="mi">359</span> <span class="s1">&#39;Could not get source, probably due dynamically evaluated source code.&#39;</span>
+
+<span class="ne">CPLE_HttpResponseError</span>: HTTP response code: 404
+
+<span class="n">During</span> <span class="n">handling</span> <span class="n">of</span> <span class="n">the</span> <span class="n">above</span> <span class="n">exception</span><span class="p">,</span> <span class="n">another</span> <span class="n">exception</span> <span class="n">occurred</span><span class="p">:</span>
+
+<span class="ne">RasterioIOError</span><span class="g g-Whitespace">                           </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">raster</span> <span class="o">=</span> <span class="n">rio</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s1">&#39;https://github.com/edieraristizabal/Libro_cartoGeotecnia/blob/master/data/miel/Inventario_MenM.tif?raw=true&#39;</span><span class="p">)</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="n">inventario</span><span class="o">=</span><span class="n">raster</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="nb">print</span><span class="p">(</span><span class="n">inventario</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">inventario</span><span class="p">)</span>
+
+<span class="nn">File ~\AppData\Roaming\Python\Python314\site-packages\rasterio\env.py:464,</span> in <span class="ni">ensure_env_with_credentials.&lt;locals&gt;.wrapper</span><span class="nt">(*args, **kwds)</span>
+<span class="g g-Whitespace">    </span><span class="mi">461</span>     <span class="n">session</span> <span class="o">=</span> <span class="n">DummySession</span><span class="p">()</span>
+<span class="g g-Whitespace">    </span><span class="mi">463</span> <span class="k">with</span> <span class="n">env_ctor</span><span class="p">(</span><span class="n">session</span><span class="o">=</span><span class="n">session</span><span class="p">):</span>
+<span class="ne">--&gt; </span><span class="mi">464</span>     <span class="k">return</span> <span class="n">f</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwds</span><span class="p">)</span>
+
+<span class="nn">File ~\AppData\Roaming\Python\Python314\site-packages\rasterio\__init__.py:379,</span> in <span class="ni">open</span><span class="nt">(fp, mode, driver, width, height, count, crs, transform, dtype, nodata, sharing, thread_safe, opener, **kwargs)</span>
+<span class="g g-Whitespace">    </span><span class="mi">376</span>     <span class="n">path</span> <span class="o">=</span> <span class="n">_parse_path</span><span class="p">(</span><span class="n">raw_dataset_path</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">378</span> <span class="k">if</span> <span class="n">mode</span> <span class="o">==</span> <span class="s2">&quot;r&quot;</span><span class="p">:</span>
+<span class="ne">--&gt; </span><span class="mi">379</span>     <span class="n">dataset</span> <span class="o">=</span> <span class="n">DatasetReader</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">driver</span><span class="o">=</span><span class="n">driver</span><span class="p">,</span> <span class="n">sharing</span><span class="o">=</span><span class="n">sharing</span><span class="p">,</span> <span class="n">thread_safe</span><span class="o">=</span><span class="n">thread_safe</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">380</span> <span class="k">elif</span> <span class="n">mode</span> <span class="o">==</span> <span class="s2">&quot;r+&quot;</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">381</span>     <span class="n">dataset</span> <span class="o">=</span> <span class="n">get_writer_for_path</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">driver</span><span class="o">=</span><span class="n">driver</span><span class="p">)(</span>
+<span class="g g-Whitespace">    </span><span class="mi">382</span>         <span class="n">path</span><span class="p">,</span> <span class="n">mode</span><span class="p">,</span> <span class="n">driver</span><span class="o">=</span><span class="n">driver</span><span class="p">,</span> <span class="n">sharing</span><span class="o">=</span><span class="n">sharing</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span>
+<span class="g g-Whitespace">    </span><span class="mi">383</span>     <span class="p">)</span>
+
+<span class="nn">File rasterio/_base.pyx:329,</span> in <span class="ni">rasterio._base.DatasetBase.__init__</span><span class="nt">()</span>
+<span class="ne">--&gt; </span><span class="mi">329</span> <span class="s1">&#39;Could not get source, probably due dynamically evaluated source code.&#39;</span>
+
+<span class="ne">RasterioIOError</span>: HTTP response code: 404
 </pre></div>
 </div>
-<img alt="_images/1a31db91789f76d0c14a7dff5f752c84c2539d36f65c062d83252d7b664ffaac.png" src="_images/1a31db91789f76d0c14a7dff5f752c84c2539d36f65c062d83252d7b664ffaac.png" />
 </div>
 </div>
 <p>Para conocer los valores alamacenados en la capa se utiliza</p>
@@ -729,19 +793,8 @@ document.write(`
 <li><p><strong>Análisis de densidad de inventario:</strong> Usando el raster del inventario cargado, calcula el porcentaje de celdas con movimientos en masa dentro de la cuenca. ¿Qué porcentaje del área total está afectada? Compara este valor con datos reportados en la literatura para cuencas andinas colombianas.</p></li>
 <li><p><strong>Comparación de cuencas:</strong> Descarga el inventario de una segunda cuenca de tu región de interés. Compara visualmente la distribución espacial de los movimientos en masa. ¿En qué zonas se concentran? ¿Qué factores geomorfológicos podrían explicar esas diferencias?</p></li>
 <li><p><strong>Calidad del inventario:</strong> Investiga las diferencias entre un inventario <em>histórico</em> (basado en reportes) y uno <em>geomorfológico</em> (basado en interpretación de imágenes). ¿Cuál tiene mayor sesgo de detección? ¿Cómo afecta esto la estimación de susceptibilidad?</p></li>
-<li><p><strong>Escala temporal:</strong> Analiza el inventario multi-temporal reportado por <span id="id6"></span> para el Valle de Aburrá. ¿Qué ventajas ofrece respecto a un inventario puntual para la estimación de amenaza?</p></li>
+<li><p><strong>Escala temporal:</strong> Analiza el inventario multi-temporal reportado por Aristizábal (2016) para el Valle de Aburrá. ¿Qué ventajas ofrece respecto a un inventario puntual para la estimación de amenaza?</p></li>
 </ol>
-</section>
-<section id="referencias">
-<h2>Referencias<a class="headerlink" href="#referencias" title="Link to this heading">#</a></h2>
-<div class="docutils container" id="id7">
-<div role="list" class="citation-list">
-<div class="citation" id="id27" role="doc-biblioentry">
-<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id1">1</a><span class="fn-bracket">]</span></span>
-<p>Miet Van DenEeckhaut and Javier Hervás. Landslide inventories in europe and policy recommendations for their interoperability and harmonization a jrc contribution to the eu-fp7 safeland project. <em>http://eusoils.jrc.ec.europa.eu/library/themes/Landslides/</em>, 2012. <a class="reference external" href="https://doi.org/10.2788/75587">doi:10.2788/75587</a>.</p>
-</div>
-</div>
-</div>
 </section>
 </section>
 
@@ -800,15 +853,17 @@ document.write(`
             
             
               
-                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
 
 
-  <div class="sidebar-secondary-item">
-  <div class="page-toc tocsection onthispage">
+  <div class="sidebar-secondary-item"><div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
     <i class="fa-solid fa-list"></i> Contents
   </div>
-  <nav class="bd-toc-nav page-toc">
-    <ul class="visible nav section-nav flex-column">
+  <nav id="pst-page-toc-nav" class="page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="pst-show_toc_level nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#objetivos-de-aprendizaje">Objetivos de aprendizaje</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#requisitos-previos">Requisitos previos</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#atributos-de-los-movimientos-en-masa">Atributos de los movimientos en masa</a></li>
@@ -826,7 +881,6 @@ document.write(`
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#python">Python</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#actividades">Actividades</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#referencias">Referencias</a></li>
 </ul>
   </nav></div>
 
@@ -875,8 +929,8 @@ By Edier V. Aristizábal G.
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
-<script src="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+  <script defer src="_static/scripts/bootstrap.js?digest=55c26ed414f5f8a31ebb"></script>
+<script defer src="_static/scripts/pydata-sphinx-theme.js?digest=55c26ed414f5f8a31ebb"></script>
 
   <footer class="bd-footer">
   </footer>

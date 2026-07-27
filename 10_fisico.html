@@ -16,41 +16,44 @@
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
     document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
   </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-<link href="_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-<link href="_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-
-  
-  <link href="_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+  <link href="_static/styles/theme.css?digest=55c26ed414f5f8a31ebb" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=55c26ed414f5f8a31ebb" rel="stylesheet" />
 
     <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
-    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=3c74b3bc" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=9c3e77be" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css?v=6644e6bb" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
   
+  <!-- So that users can add custom icons -->
+  <script defer src="_static/scripts/fontawesome.js?digest=55c26ed414f5f8a31ebb"></script>
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
-<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
-  <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=55c26ed414f5f8a31ebb" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=55c26ed414f5f8a31ebb" />
 
     <script src="_static/documentation_options.js?v=9eb32ce0"></script>
     <script src="_static/doctools.js?v=9a2dae69"></script>
     <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="_static/clipboard.min.js?v=a7894cd8"></script>
     <script src="_static/copybutton.js?v=f281be69"></script>
-    <script src="_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=fab101a9"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="_static/togglebutton.js?v=1ae7504c"></script>
+    <script src="_static/togglebutton.js?v=b8b12719"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script src="_static/design-tabs.js?v=f930bc37"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
@@ -60,40 +63,37 @@
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = '10_fisico';</script>
+    <script>DOCUMENTATION_OPTIONS.search_as_you_type = false;</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Evaluación del modelo" href="11_evaluacion.html" />
     <link rel="prev" title="Métodos basados en datos" href="09_estadistico.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
+  
+    
+    <script src="_static/searchtools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <script src="searchindex.js"></script>
+  
   </head>
-  
-  
-  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
-
+  <body data-default-mode="">
   
   
   <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+
   
   <div id="pst-scroll-pixel-helper"></div>
   
   <button type="button" class="btn rounded-pill" id="pst-back-to-top">
     <i class="fa-solid fa-arrow-up"></i>Back to top</button>
-
   
-  <input type="checkbox"
-          class="sidebar-toggle"
-          id="pst-primary-sidebar-checkbox"/>
-  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
   
-  <input type="checkbox"
-          class="sidebar-toggle"
-          id="pst-secondary-sidebar-checkbox"/>
-  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
   
-  <div class="search-button__wrapper">
-    <div class="search-button__overlay"></div>
-    <div class="search-button__search-container">
+  
+  <dialog id="pst-search-dialog">
+    
 <form class="bd-search d-flex align-items-center"
       action="search.html"
       method="get">
@@ -101,7 +101,6 @@
   <input type="search"
          class="form-control"
          name="q"
-         id="search-input"
          placeholder="Search this book..."
          aria-label="Search this book..."
          autocomplete="off"
@@ -109,15 +108,59 @@
          autocapitalize="off"
          spellcheck="false"/>
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
-</form></div>
-  </div>
+</form>
+  </dialog>
 
   <div class="pst-async-banner-revealer d-none">
   <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
 </div>
 
   
-    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    <header id="pst-header" class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+        </div>
+      
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+    </div>
+  
+
+  
+    <button class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="On this page">
+      <span class="fa-solid fa-outdent"></span>
+    </button>
+  
+</div>
+
     </header>
   
 
@@ -126,7 +169,8 @@
       
       
       
-      <div class="bd-sidebar-primary bd-sidebar">
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
         
 
   
@@ -156,21 +200,17 @@
     
     
     <img src="_static/logo.png" class="logo__image only-light" alt="Cartografía Geotécnica - Home"/>
-    <script>document.write(`<img src="_static/logo.png" class="logo__image only-dark" alt="Cartografía Geotécnica - Home"/>`);</script>
+    <img src="_static/logo.png" class="logo__image only-dark pst-js-only" alt="Cartografía Geotécnica - Home"/>
   
   
 </a></div>
         <div class="sidebar-primary-item">
 
- <script>
- document.write(`
-   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
-    <span class="search-button__default-text">Search</span>
-    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
-   </button>
- `);
- </script></div>
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
         <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         
@@ -201,6 +241,7 @@
 <li class="toctree-l1"><a class="reference internal" href="15_python.html">Python</a></li>
 
 
+<li class="toctree-l1"><a class="reference internal" href="100_references.html">Referencias</a></li>
 </ul>
 
     </div>
@@ -209,9 +250,14 @@
   
   
   <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
   </div>
-  
-  <div id="rtd-footer-container"></div>
 
 
       </div>
@@ -341,7 +387,7 @@
 
 
 <button onclick="toggleFullScreen()"
-  class="btn btn-sm btn-fullscreen-button"
+  class="btn btn-sm btn-fullscreen-button pst-navbar-icon"
   title="Fullscreen mode"
   data-bs-placement="bottom" data-bs-toggle="tooltip"
 >
@@ -355,25 +401,17 @@
 
 
 
-<script>
-document.write(`
-  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
-    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
-    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
-  </button>
-`);
-</script>
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
 
 
-<script>
-document.write(`
-  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
-  </button>
-`);
-</script>
-<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+</button>
+<button class="sidebar-toggle secondary-toggle btn btn-sm pst-navbar-icon" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <span class="fa-solid fa-list"></span>
 </button>
 </div></div>
@@ -395,7 +433,7 @@ document.write(`
                 <h2> Contents </h2>
             </div>
             <nav aria-label="Page">
-                <ul class="visible nav section-nav flex-column">
+                <ul class="pst-show_toc_level nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#objetivos-de-aprendizaje">Objetivos de aprendizaje</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#requisitos-previos">Requisitos previos</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#factor-detonante-lluvia">Factor detonante lluvia</a><ul class="nav section-nav flex-column">
@@ -410,7 +448,7 @@ document.write(`
 <li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#ejecucion-de-los-programas">Ejecución de los programas</a></li>
 <li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#grid-match">Grid Match</a></li>
 <li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#topo-index">Topo index</a></li>
-<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">TRIGRS</a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">TRIGRS</a></li>
 <li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#propiedades-fisicas-del-suelo">Propiedades físicas del suelo</a></li>
 <li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#intensidad-del-escenario-de-lluvia-e-incrementos-de-tiempo">Intensidad del escenario de lluvia e incrementos de tiempo</a></li>
 <li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#archivos-de-entrada">Archivos de entrada</a></li>
@@ -436,7 +474,6 @@ document.write(`
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#actividades">Actividades</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#referencias">Referencias</a></li>
 </ul>
             </nav>
         </div>
@@ -469,11 +506,11 @@ document.write(`
 <li><p><strong>Python:</strong> <code class="docutils literal notranslate"><span class="pre">numpy</span></code>, <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code>, <code class="docutils literal notranslate"><span class="pre">rasterio</span></code>.</p></li>
 <li><p><strong>Capítulos anteriores:</strong> <code class="docutils literal notranslate"><span class="pre">06_variables</span></code> (mapas raster de pendiente, propiedades del suelo), <code class="docutils literal notranslate"><span class="pre">07_detonante</span></code> (lluvia como factor detonante).</p></li>
 </ul>
-<p>Los modelos con base física evalúan la ocurrencia de movimientos en masa en términos de factor de seguridad o probabilidades de ocurrencia, a través de modelos numéricos. Sin embargo existen diferentes aproximaciones a la física del problema con simplificaciones diferentes, por lo cual es fundamental utilizar el modelo que se ajuste a las necesidades o particularidades del área de estudio. Los métodos con base físisca son recomendables para áreas pequeñas a escalas detalladas, ya que requieren una gran cantidad de información de entrada, que se obtiene de ensayos de laboratorio o mediciones de campo. Por lo que la parametrización de los modelos puede ser complicada, en especial la distribución espacial de la profundidad del suelo, la cual juega un papel fundamental. Los modelos con base física permiten tener en consideración la complejidad de los factores detonantes (sismo y/o lluvia) y las características geomecánicas del terreno.</p>
+<p>Los modelos con base física evalúan la ocurrencia de movimientos en masa en términos de factor de seguridad o probabilidades de ocurrencia, a través de modelos numéricos. Sin embargo existen diferentes aproximaciones a la física del problema con simplificaciones diferentes, por lo cual es fundamental utilizar el modelo que se ajuste a las necesidades o particularidades del área de estudio. Los métodos con base física son recomendables para áreas pequeñas a escalas detalladas, ya que requieren una gran cantidad de información de entrada, que se obtiene de ensayos de laboratorio o mediciones de campo. Por lo que la parametrización de los modelos puede ser complicada, en especial la distribución espacial de la profundidad del suelo, la cual juega un papel fundamental. Los modelos con base física permiten tener en consideración la complejidad de los factores detonantes (sismo y/o lluvia) y las características geomecánicas del terreno.</p>
 </section>
 <section id="factor-detonante-lluvia">
 <h2>Factor detonante lluvia<a class="headerlink" href="#factor-detonante-lluvia" title="Link to this heading">#</a></h2>
-<p>El componente hidrológico de estos modelos explica el proceso de infiltración del agua en el suelo y el avance del frente húmedo o aumento de un nivel freático colgado. Para esto utilizan modelos de flujo estático horizontal o modelos de flujo transitorio vertical. Desde el componente geotécnico, la mayoría de modelos utilizan métodos de equilibrio límite de talud infinito. Algunos han incoporado modelos de dovelas que permiten análisis de superficies de falla circulares.</p>
+<p>El componente hidrológico de estos modelos explica el proceso de infiltración del agua en el suelo y el avance del frente húmedo o aumento de un nivel freático colgado. Para esto utilizan modelos de flujo estático horizontal o modelos de flujo transitorio vertical. Desde el componente geotécnico, la mayoría de modelos utilizan métodos de equilibrio límite de talud infinito. Algunos han incorporado modelos de dovelas que permiten análisis de superficies de falla circulares.</p>
 <p>Como parte de los modelos físicos una gran variedad de modelos hidrológicos se han utilizado considerando el flujo de agua en el suelo en estado estático o transitorio, y en condiciones saturadas o parcialmente saturadas, utilizando las ecuaciones de Richards para el flujo vertical y las ecuaciones de Darcy para el flujo lateral. Entre estos se encuentra TOPOG (O’Loughlin, 1986), TAPES (Moore et al., 1988), TOPMODEL (Beven &amp; Kirkby, 1979), GEOtop (Bertoldi &amp; Rigon, 2004), tRIBS (Ivanov et al., 2004), SHIA (Vélez 2001), y los modelos de Green-Ampt (1911), Pradel &amp; Raad (1993) e Iverson (2000). Por el contrario, los modelos geotécnicos utilizados son muy similares, generalmente utilizando el método talud infinito y análisis de equilibrio límite, suponiendo la superficie de falla paralela a la superficie del terreno y que la longitud de falla es mucho mayor que el espesor de la capa desplazada (Borga et al., 2002).</p>
 <figure class="align-default" id="hidrologico">
 <a class="reference internal image-reference" href="https://i.pinimg.com/564x/52/32/4a/52324a660eca43147a3ad80d2da9f621.jpg"><img alt="modelo hidrologico" src="https://i.pinimg.com/564x/52/32/4a/52324a660eca43147a3ad80d2da9f621.jpg" style="width: 600px;" />
@@ -490,6 +527,7 @@ document.write(`
 <p>El modelo Transient Rainfall Infiltration and Gridbased Slope-Stability (TRIGRS), desarrollado por Baum et al. (2002), utiliza el modelo hidrológico transitorio unidimensional para infiltración vertical propuesto por Iverson (2000), con un modelo de estabilidad de talud infinita asumiendo condiciones saturadas. El modelo evalúa el factor de seguridad como respuesta de las presiones de poros durante un evento de lluvia función de la profundidad y el tiempo, para lo cual divide el factor de seguridad en un componente estático (Fs0) asociados al estado estático o de largo plazo, y un componente que varía con el tiempo (FS)’ asociado al estado transitorio del evento de lluvia simulado.</p>
 <p>Arnone et al. (2011) proponen un modelo físico distribuido, en el cual acoplan un modelo de talud infinita con el modelo hidrológico tRIBS (Triangulated Irregular Network Real-Time Integrated Basin Simulator) desarrollado por Ivanov et al. (2004). El modelo simula la intercepción de la lluvia, la evapotranspiración, la infiltración del agua en el suelo, la escorrentía superficial, y el flujo subsuperficial lateral a la ladera en condiciones saturadas y parcialmente saturadas, representando la heterogeneidad espacial de la topografía por una red irregular triangular (TIN) utilizada ampliamente por Sistemas de Información Geográfica (SIG) que reduce el tiempo computacional sin pérdidas aparentes de información. El modelo es también capaz de simular el volumen del material fallado y su posible trayecto.</p>
 <p>Finalmente el modelo SHIA_Landslide propuesto por Aristizábal et al. (2014) acopla un modelo de talud infinita en condiciones saturadas con el modelo hidrológico distribuido de tanques a escala de cuenca que considera los flujos verticales y horizontales, denominado SHIA (Vélez, 2001). El modelo hidrológico está conformado por dos componentes: un balance de agua que simula los proceso hidrológicos dominantes en la cuenca, tales como infiltración, percolación, escorrentía superficial, flujo sub superficial, y flujo subterráneo; y un componente que simula el flujo del agua a través de la red de drenaje, lo que permite calibrar con valores observados la hidrología de la cuenca y las laderas previo a la simulación de estabilidad de las vertientes.</p>
+<p>Un ejemplo de aplicación de estos modelos físicos en un contexto de riesgo, más allá de la simple susceptibilidad, corresponde al estudio de amenaza por movimientos en masa en el municipio de Copacabana (Valle de Aburrá), donde el modelo SHALSTAB fue implementado junto con modelos de vulnerabilidad física estructural (tipo T) para estimar el riesgo de las edificaciones expuestas, obteniendo valores ilustrativos de vulnerabilidad física estructural (VP-S) de 0,53 y un riesgo estimado de 1,2x10⁻¹ personas para una estructura tipo V1, lo cual evidencia cómo los resultados de los modelos físicos de estabilidad pueden acoplarse directamente con modelos de vulnerabilidad para completar la cadena de análisis de riesgo.</p>
 <figure class="align-default" id="modelos">
 <a class="reference internal image-reference" href="https://i.pinimg.com/564x/83/23/d3/8323d33e987c258078dd4d5e13d2f241.jpg"><img alt="modelos" src="https://i.pinimg.com/564x/83/23/d3/8323d33e987c258078dd4d5e13d2f241.jpg" style="width: 500px;" />
 </a>
@@ -499,7 +537,7 @@ document.write(`
 </figure>
 <section id="modelo-shalstab">
 <h3>Modelo SHALSTAB<a class="headerlink" href="#modelo-shalstab" title="Link to this heading">#</a></h3>
-<p>El modelo SHALSTAB, desarrollado por Montgomery &amp; Dietrich, (1994), emplea el modelo hidrológico TOPOG (O’Loughlin, 1986) en condiciones de lluvia estacionaria para construir un mapa del patrón de la humedad basado en el área aferente a cada punto, la pendiente y la transmisividad del suelo. En el modelo la humedad del suelo es calculada como:</p>
+<p>El modelo SHALSTAB, desarrollado por Montgomery &amp; Dietrich (1994), emplea el modelo hidrológico TOPOG (O’Loughlin, 1986) en condiciones de lluvia estacionaria para construir un mapa del patrón de la humedad basado en el área aferente a cada punto, la pendiente y la transmisividad del suelo. En el modelo la humedad del suelo es calculada como:</p>
 <p><span class="math notranslate nohighlight">\(W=\frac{Qa}{bTsinθ}\)</span></p>
 <p>Donde <span class="math notranslate nohighlight">\(Q\)</span> es la lluvia en condiciones estacionarias (<span class="math notranslate nohighlight">\(mm/d\)</span>), a es el área de drenaje (<span class="math notranslate nohighlight">\(m^2\)</span>), <span class="math notranslate nohighlight">\(b\)</span> es la longitud de cada celda (<span class="math notranslate nohighlight">\(m\)</span>), <span class="math notranslate nohighlight">\(T\)</span> es la transmisividad del suelo en condiciones saturadas (<span class="math notranslate nohighlight">\(m^2/\)</span>), <span class="math notranslate nohighlight">\(\theta\)</span> y  es la pendiente. Asumiendo que la transmisividad no varía con la profundidad, se puede entonces asumir:</p>
 <p><span class="math notranslate nohighlight">\(W= \frac{h}{z_t}\)</span></p>
@@ -613,19 +651,17 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">line</span> <span class="mi">2</span>
-<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
-<span class="ne">----&gt; </span><span class="mi">2</span> <span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
-<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="k">def</span><span class="w"> </span><span class="nf">factor_seguridad</span><span class="p">(</span><span class="n">c</span><span class="p">,</span> <span class="n">phi_deg</span><span class="p">,</span> <span class="n">gamma_s</span><span class="p">,</span> <span class="n">z</span><span class="p">,</span> <span class="n">beta_deg</span><span class="p">,</span> <span class="n">m</span><span class="o">=</span><span class="mf">1.0</span><span class="p">,</span> <span class="n">gamma_w</span><span class="o">=</span><span class="mf">9.81</span><span class="p">):</span>
-<span class="g g-Whitespace">      </span><span class="mi">5</span><span class="w">     </span><span class="sd">&quot;&quot;&quot;</span>
-<span class="g g-Whitespace">      </span><span class="mi">6</span><span class="sd">     Factor de Seguridad — Modelo de Talud Infinito.</span>
-<span class="g g-Whitespace">      </span><span class="mi">7</span><span class="sd"> </span>
-<span class="sd">   (...)     20     float o ndarray — Factor de Seguridad</span>
-<span class="g g-Whitespace">     </span><span class="mi">21</span><span class="sd">     &quot;&quot;&quot;</span>
-
-<span class="ne">ModuleNotFoundError</span>: No module named &#39;matplotlib&#39;
+<img alt="_images/025ddd0f5de6a2f5a393b2571684f5e52bb44d52e21e0c337489594de25e656c.png" src="_images/025ddd0f5de6a2f5a393b2571684f5e52bb44d52e21e0c337489594de25e656c.png" />
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Tabla de FS por rango de pendiente (suelo saturado):
+Pendiente (°)      FS         Condición
+----------------------------------------
+10                 2.18       Estable
+15                 1.46       Marginal
+20                 1.10       Marginal
+25                 0.88       FALLA
+30                 0.74       FALLA
+35                 0.64       FALLA
+40                 0.57       FALLA
 </pre></div>
 </div>
 </div>
@@ -833,18 +869,8 @@ document.write(`
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>C:\Users\edier\AppData\Local\Temp\ipykernel_25124\2575485777.py:134: RuntimeWarning: divide by zero encountered in divide
-  q_crit_m_hr = (transmisividad * np.sin(pendiente) / ratio_hidrologico) * termino_geotecnico
-</pre></div>
 </div>
-<img alt="_images/8eb371face2cdfcd33cd8d2470ae0677344a857664a978b7c7e7b01e270131af.png" src="_images/8eb371face2cdfcd33cd8d2470ae0677344a857664a978b7c7e7b01e270131af.png" />
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Análisis completado. Se han generado los archivos &#39;Matriz_Estabilidad.tif&#39;, &#39;Lluvia_Critica.tif&#39; y &#39;Volumen_Inestable.tif&#39;.
-</pre></div>
-</div>
-</div>
-</div>
-<p>El modelo SHALSTAB también es posible implementarlo mediante los sistemas de informacion geográfica SAGA o GRASS SIG.</p>
+<p>El modelo SHALSTAB también es posible implementarlo mediante los sistemas de información geográfica SAGA o GRASS SIG.</p>
 <p>Para el caso de SAGA, la herramienta <em>Shalstab</em> se encuentra dentro de la caja de herramientas denominada <em>Terrain Analysis - Morphometry</em>. Como parámetros de entrada requiere:</p>
 <ul class="simple">
 <li><p><em>Slope grid (rad)</em> un mapa raster de pendientes en radianes.</p></li>
@@ -857,10 +883,10 @@ document.write(`
 <li><p>*Min Friction angle grid (degree) y <em>Max Friction angle grid (degree)</em>. Mapas opcionales del valor del ángulo de fricción mínimo y máximo del suelo.</p></li>
 <li><p>Valores globales mínimos y máximos de densidad del suelo, conductividad, espesor, ángulo de fricción, cohesión y un parámetro de corridas del modelo.</p></li>
 </ul>
-<p>El modelo arroja como resultados el mapa tipo raster con los valores críticos de lluvia que genera la falla en cada celda, asi como los valores de lluvia criticos utilizados para reclasificar el mapa.</p>
+<p>El modelo arroja como resultados el mapa tipo raster con los valores críticos de lluvia que genera la falla en cada celda, así como los valores de lluvia críticos utilizados para reclasificar el mapa.</p>
 <p>La herramienta SHALSTAB de SAGA trabaja con los mapas grid si los proporcionas; si dejas los campos de los mapas grid vacíos, entonces utilizará los valores globales que definas. Esta dualidad ofrece flexibilidad: puedes realizar un análisis rápido con valores constantes o un análisis detallado con datos espacialmente variables.</p>
 <p>La razón por la que SAGA pide un rango (mínimo y máximo), tanto para los mapas grid como para los valores globales, es para poder realizar un análisis de incertidumbre o de tipo probabilístico. Cuando se ejecuta el modelo, en lugar de usar un solo valor, SAGA puede tomar un valor aleatorio dentro del rango que le has proporcionado (entre el mínimo y el máximo) para cada celda. Esto permite simular la variabilidad natural de las propiedades del suelo. Si quieres un análisis determinista (no aleatorio), simplemente introduce el mismo mapa o el mismo valor tanto en el campo de mínimo como en el de máximo. Para un resultado rápido y determinista se deja el valor de <em>Parameter sampling runs</em> en 1. Para un análisis de riesgo más robusto y probabilístico se debe usar un número más alto, como 100. en este caso el mapa de salida no muestra el resultado de una sola simulación. En su lugar, da un resultado estadístico que resume todas las corridas. Un valor en una celda de 0.8 significaría que la celda falló en el 80% de las simulaciones.</p>
-<p>Para el caso de GRASS SIG, <em>r.shalstab</em> no es un comando que venga instalado por defecto en GRASS. Es un “add-on” o una extensión que se debe instalar por separado. POr lo cual hay qeu abrir la términal de GRASS (la que se inicia cuando se abre el programa) y usar:</p>
+<p>Para el caso de GRASS SIG, <em>r.shalstab</em> no es un comando que venga instalado por defecto en GRASS. Es un “add-on” o una extensión que se debe instalar por separado. Por lo cual hay que abrir la terminal de GRASS (la que se inicia cuando se abre el programa) y usar:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">g</span><span class="o">.</span><span class="n">extension</span> <span class="n">extension</span><span class="o">=</span><span class="n">r</span><span class="o">.</span><span class="n">shalstab</span>
 </pre></div>
 </div>
@@ -893,7 +919,7 @@ document.write(`
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">r</span><span class="o">.</span><span class="n">shalstab</span> <span class="n">elevation</span><span class="o">=</span><span class="n">dem</span> <span class="n">density</span><span class="o">=</span><span class="mi">1800</span> <span class="n">friction</span><span class="o">=</span><span class="mi">35</span> <span class="n">cohesion</span><span class="o">=</span><span class="mi">500</span> <span class="n">transmissivity</span><span class="o">=</span><span class="mf">0.001</span> <span class="n">output</span><span class="o">=</span><span class="n">shalstab_mapa</span>
 </pre></div>
 </div>
-<p>Puedes consultar lso mapas generados con el siguiente comando:</p>
+<p>Puedes consultar los mapas generados con el siguiente comando:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">g</span><span class="o">.</span><span class="n">list</span> <span class="nb">type</span><span class="o">=</span><span class="n">raster</span>
 </pre></div>
 </div>
@@ -936,9 +962,9 @@ del suelo y <span class="math notranslate nohighlight">\(𝜓(𝑍,𝑡)\)</span
 </figure>
 <section id="tutorial">
 <h4>Tutorial<a class="headerlink" href="#tutorial" title="Link to this heading">#</a></h4>
-<p><em>Elaborado por Maria Isabel Arango</em>.</p>
+<p><em>Elaborado por María Isabel Arango</em>.</p>
 <p>Ingrese a la página web <a class="reference external" href="https://pubs.usgs.gov/of/2008/1159/downloads/">TRIGRS</a> y descargue TRIGRS de acuerdo a su sistema operativo. Descomprima el archivo .zip y ábralo. Adicionalmente, puede descargar el <a class="reference external" href="https://pubs.usgs.gov/of/2008/1159/downloads/pdf/OF08-1159.pdf">manual del usuario</a> donde encontrará toda la base teórica detrás del modelo, ilustraciones y un tutorial.</p>
-<p>Como verá, la carpeta TRIGRS contiene varias subcarpetas y archivos en formato <em>txt</em>. TRIGRS y sus programas complementarios (TopoIndex, GridMatch y UnitConvert) no funcionan con una interfaz, sino que se ejecutan en ventanas de entrada y salida simples. Cada programa funciona a través de un ejecutable (<em>exe</em>), los cuales están ubicados en la subcarpeta <em>bin”</em>. A su vez, cada ejecutable utiliza un archivo de inicialización que contiene los datos básicos necesarios para ejecutar el programa, así como los nombres de otros archivos de entrada.</p>
+<p>Como verá, la carpeta TRIGRS contiene varias subcarpetas y archivos en formato <em>txt</em>. TRIGRS y sus programas complementarios (TopoIndex, GridMatch y UnitConvert) no funcionan con una interfaz, sino que se ejecutan en ventanas de entrada y salida simples. Cada programa funciona a través de un ejecutable (<em>exe</em>), los cuales están ubicados en la subcarpeta <em>bin</em>. A su vez, cada ejecutable utiliza un archivo de inicialización que contiene los datos básicos necesarios para ejecutar el programa, así como los nombres de otros archivos de entrada.</p>
 <p>En este taller, se trabajará sobre una zona de estudio ubicada en el municipio de San Carlos (Antioquia-Colombia) correspondiente a una parte de la cuenca de la quebrada La Arenosa, donde el 21 de septiembre de 1990 se presentó un evento de lluvia extremo que causó cientos de deslizamientos, muchos de los cuales alcanzaron los cauces y causaron una avenida torrencial. En este tutorial se implementará el modelo TRIGRS para identificar las zonas inestables usando los parámetros de la zona de estudio y bajo el escenario de precipitación del 21 de septiembre de 1990. La información requerida para llevar a cabo el análisis de estabilidad con TRIGRS incluye:</p>
 <ul class="simple">
 <li><p>Modelo de elevación digital (DEM)</p></li>
@@ -956,7 +982,7 @@ del suelo y <span class="math notranslate nohighlight">\(𝜓(𝑍,𝑡)\)</span
 </ul>
 <section id="preparacion-de-los-mapas">
 <h5>Preparación de los mapas<a class="headerlink" href="#preparacion-de-los-mapas" title="Link to this heading">#</a></h5>
-<p>En la carpeta <a class="reference external" href="https://github.com/edieraristizabal/Libro_cartoGeotecnia/tree/master/data/arenosa">Mapas Base</a>, encontrará los siguientes archivos raster. Para descargar los archivos seleccionelo, cuando Github visualice dicho archivo en la parte superior derecha seleccione <em>Raw</em> y con el boton derecho <em>Save as…</em>. Guardelos como archivos ASCII eliminando la terminación <em>txt</em> que sale por defecto.</p>
+<p>En la carpeta <a class="reference external" href="https://github.com/edieraristizabal/Libro_cartoGeotecnia/tree/master/data/arenosa">Mapas Base</a>, encontrará los siguientes archivos raster. Para descargar los archivos selecciónelo, cuando Github visualice dicho archivo en la parte superior derecha seleccione <em>Raw</em> y con el botón derecho <em>Save as…</em>. Guárdelos como archivos ASCII eliminando la terminación <em>txt</em> que sale por defecto.</p>
 <ul class="simple">
 <li><p>dem_arenosa_clip: modelo de elevación digital</p></li>
 <li><p>pendiente_arenosa_clip: pendiente en grados</p></li>
@@ -1010,12 +1036,12 @@ En caso de utilizar <em>ArcToolbox</em>, vaya a <em>Spatial Analysis &gt; Reclas
 <li><p>Topo Index: Utiliza el DEM y la dirección de flujo para definir el patrón de distribución del flujo, calcular los factores de ponderación para distribuir la escorrentía de la superficie y calcular los tamaños de la matriz que utilizará TRIGRS para sus cálculos.</p></li>
 <li><p>TRIGRS: Una vez preparados los mapas y generado las capas intermedias, se corre el ejecutable final que realiza los cálculos de presión de poros y factor de seguridad para los instantes de tiempo que usted determine.</p></li>
 </ul>
-<p>Cada ejecutable que se encuentra en la carpeta <em>bin</em> contiene un código que se ejecuta cada vez que se dá doble click sobre el archivo <em>.exe</em>. Estos códigos necesitan para su correcto funcionamiento un archivo de entrada, el cual contiene los parámetros con los que debe correr el código, y es el archivo que usted como usuario debe modificar. Los archivos de entrada los encuentra en la carpeta TRIGRS con los siguientes nombres:</p>
+<p>Cada ejecutable que se encuentra en la carpeta <em>bin</em> contiene un código que se ejecuta cada vez que se da doble click sobre el archivo <em>.exe</em>. Estos códigos necesitan para su correcto funcionamiento un archivo de entrada, el cual contiene los parámetros con los que debe correr el código, y es el archivo que usted como usuario debe modificar. Los archivos de entrada los encuentra en la carpeta TRIGRS con los siguientes nombres:</p>
 <ul class="simple">
 <li><p>uc_in.txt. archivo de inicio del Unit Coverter</p></li>
 <li><p>gm_in.txt. Archivo de inicio del Grid Match</p></li>
 <li><p>tpx_in.txt. archivo de inicio de Topo Index</p></li>
-<li><p>tr_in.txt. Archivo deinicio de TRIGRS</p></li>
+<li><p>tr_in.txt. Archivo de inicio de TRIGRS</p></li>
 </ul>
 <p>Cada vez  que se ejecuta los <em>.exe</em>, este buscará su archivo de inicio en la misma carpeta donde está el archivo <em>.exe</em>. Por lo tanto, organice todos los archivos de inicio de la carpeta TRIGRS en la misma carpeta con los archivos <em>.exe</em>. Trate de conservar los archivos de inicio originales en la carpeta TRIGRS siempre, ya que le serán de utilidad para detectar errores en el archivo que está editando. También, evite cambiar los nombres de los archivos de inicio, ya que esto genera fácilmente errores.</p>
 <p>Dado que toda la información está en formato metro-kilogramo-segundo, no se ejecutará <em>Unit Converter</em>. Siga los siguientes pasos para ejecutar el resto de programas:</p>
@@ -1031,11 +1057,11 @@ En caso de utilizar <em>ArcToolbox</em>, vaya a <em>Spatial Analysis &gt; Reclas
 <li><p>Para este ejercicio, seguirá la opción más simple de ingreso de los archivos. Para esto, copie y pegue los archivos ASCII de información base (<em>dem_arenosa_clip.asc</em>, <em>pendiente_arenosa_clip.asc</em>, <em>flowdir_arenosa_clip.asc</em>, <em>profsuelo_arenosa_clip.asc</em>, y <em>suelos_arenosa_reclass_clip.asc</em>) en la carpeta donde tenga los ejecutables <em>.exe</em>(sólo copie y pegue los archivos .asc).</p></li>
 <li><p>su archivo gm_in debe lucir así:</p></li>
 </ul>
-<figure class="align-default" id="gm">
+<figure class="align-default" id="gm-archivo1">
 <a class="reference internal image-reference" href="https://i.pinimg.com/564x/e1/eb/66/e1eb661f2b5c6deffbba5f6e3ed842dc.jpg"><img alt="gm" src="https://i.pinimg.com/564x/e1/eb/66/e1eb661f2b5c6deffbba5f6e3ed842dc.jpg" style="width: 600px;" />
 </a>
 <figcaption>
-<p><span class="caption-number">Fig. 73 </span><span class="caption-text">Archivo <em>gm_in.txt</em></span><a class="headerlink" href="#gm" title="Link to this image">#</a></p>
+<p><span class="caption-number">Fig. 73 </span><span class="caption-text">Archivo <em>gm_in.txt</em></span><a class="headerlink" href="#gm-archivo1" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 <ul class="simple">
@@ -1088,11 +1114,11 @@ En caso de utilizar <em>ArcToolbox</em>, vaya a <em>Spatial Analysis &gt; Reclas
 <li><p><strong>Recomendación</strong>: <em>Asígnele un código numérico que designe el lugar y el número de la corrida. En este caso, asigne el código Arenosa_01</em></p></li>
 <li><p>Cuando termine de editar el archivo tpx_in, guarde los cambios. Su archivo debe lucir así:</p></li>
 </ul>
-<figure class="align-default" id="id1">
+<figure class="align-default" id="gm-archivo2">
 <a class="reference internal image-reference" href="https://i.pinimg.com/564x/8c/87/62/8c87622bebacf2962926c5321a6d64f1.jpg"><img alt="gm" src="https://i.pinimg.com/564x/8c/87/62/8c87622bebacf2962926c5321a6d64f1.jpg" style="width: 600px;" />
 </a>
 <figcaption>
-<p><span class="caption-number">Fig. 74 </span><span class="caption-text">Archivo gm_in.txt</span><a class="headerlink" href="#id1" title="Link to this image">#</a></p>
+<p><span class="caption-number">Fig. 74 </span><span class="caption-text">Archivo gm_in.txt</span><a class="headerlink" href="#gm-archivo2" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 <ul class="simple">
@@ -1133,14 +1159,14 @@ En caso de utilizar <em>ArcToolbox</em>, vaya a <em>Spatial Analysis &gt; Reclas
 </div>
 <p>Los números en paréntesis denotan el orden en el que se deberán ingresar estos archivos en el archivo de inicio de TRIGRS, que verá más adelante.</p>
 </section>
-<section id="id2">
-<h5>TRIGRS<a class="headerlink" href="#id2" title="Link to this heading">#</a></h5>
+<section id="id1">
+<h5>TRIGRS<a class="headerlink" href="#id1" title="Link to this heading">#</a></h5>
 <p>TRIGRS se basa en la suposición de la infiltración unidimensional (únicamente hacia abajo) en un campo de flujo constante para determinar los cambios en la presión de poros en un modelo de talud infinito y la estabilidad de los suelos poco profundos durante las tormentas. TRIGRS incluye modelos para condiciones iniciales saturadas y no-saturadas. Para condiciones iniciales saturadas, cada simulación con TRIGRS analiza un único punto en el tiempo especificado por el usuario durante una secuencia de tormenta. Por lo tanto, el usuario ejecuta una serie de simulaciones para diferentes tiempos específicos utilizando TRIGRS para estudiar el historial de tiempo de inestabilidad de la ladera durante una secuencia de lluvia. Para condiciones iniciales no-saturadas, TRIGRS puede analizar una serie de tiempo completa durante una única simulación.</p>
 <p>Abra el archivo <em>tr_in.txt</em>. Este archivo contiene varios tipos de información que debemos ingresar:</p>
 <ul class="simple">
-<li><p>En este taller, se modela con condiciones saturadas y luego con condiciones no saturadas, para compararar los resultados. Primero, realice la modelación usando los parámetros sugeridos en la columna <em>Valor Arenosa Sat</em>. Después, la modelación usando los parámetros sugeridos en la columna <em>Valor Arenosa no Sat</em></p></li>
+<li><p>En este taller, se modela con condiciones saturadas y luego con condiciones no saturadas, para comparar los resultados. Primero, realice la modelación usando los parámetros sugeridos en la columna <em>Valor Arenosa Sat</em>. Después, la modelación usando los parámetros sugeridos en la columna <em>Valor Arenosa no Sat</em></p></li>
 <li><p>En la línea 2, debe ingresar el nombre del proyecto. Defínalo como <em>Arenosa Clip</em></p></li>
-<li><p>En los primeros cuatro valores de la línea 4 debe ingresar los datos de tamaño de matriz y dimensiones del cálculo de escorrentía. Copie estos valores del archivo <em>TopoIndexLog</em> (<em>Data cells</em>, <em>Rows</em>, <em>Columns</em>, <em>Downslope cells</em>) que corresponden, respectivamente, a los campos <em>imax</em>, <em>row</em>, <em>col</em>, <em>nwf</em> en el archivo de inicio de TRIGRS. Los parámetros <em>tx</em>, <em>nmax</em>, y todos los demas en las lineas siguientes se explican a continuación:</p></li>
+<li><p>En los primeros cuatro valores de la línea 4 debe ingresar los datos de tamaño de matriz y dimensiones del cálculo de escorrentía. Copie estos valores del archivo <em>TopoIndexLog</em> (<em>Data cells</em>, <em>Rows</em>, <em>Columns</em>, <em>Downslope cells</em>) que corresponden, respectivamente, a los campos <em>imax</em>, <em>row</em>, <em>col</em>, <em>nwf</em> en el archivo de inicio de TRIGRS. Los parámetros <em>tx</em>, <em>nmax</em>, y todos los demás en las líneas siguientes se explican a continuación:</p></li>
 </ul>
 <div class="pst-scrollable-table-container"><table class="table">
 <thead>
@@ -1467,8 +1493,9 @@ unitario, correspondiente al grupo de importancia I.</p>
 </tbody>
 </table>
 </div>
-<p>A partir de <span class="math notranslate nohighlight">\(A_max\)</span> se obtiene el <span class="math notranslate nohighlight">\(k_h\)</span> con la siguiente ecuación teniendo en cuenta los criterios para el análisis seudoestático dados en la tabla de la NSR-10 [50, H.5.2.5]. POr ejemplo el valor 0,8 representa <em>Suelos, enrocados y macizos rocosos muy fracturados (RQD1&lt;50%)</em>:</p>
+<p>A partir de <span class="math notranslate nohighlight">\(A_max\)</span> se obtiene el <span class="math notranslate nohighlight">\(k_h\)</span> con la siguiente ecuación teniendo en cuenta los criterios para el análisis seudoestático dados en la tabla de la NSR-10 [50, H.5.2.5]. Por ejemplo el valor 0,8 representa <em>Suelos, enrocados y macizos rocosos muy fracturados (RQD1&lt;50%)</em>:</p>
 <p><span class="math notranslate nohighlight">\(K_{ST}=k_h=0.8A_max\)</span></p>
+<p>Alternativamente, para estudios de planificación municipal a menor detalle, la normativa colombiana también permite asignar el coeficiente sísmico horizontal (<span class="math notranslate nohighlight">\(k\)</span>) directamente según el nivel de amenaza sísmica histórica de la región, sin requerir el espectro de sitio completo: <span class="math notranslate nohighlight">\(k=0,1\)</span> para amenaza sísmica severa, <span class="math notranslate nohighlight">\(k=0,25\)</span> para amenaza destructiva y <span class="math notranslate nohighlight">\(k=0,5\)</span> para amenaza catastrófica. Para efectos de microzonificación sísmica detallada, el estudio de referencia para el Valle de Aburrá corresponde a la Microzonificación Sísmica Detallada del Valle de Aburrá (AMVA, 2007), que cubre los municipios de Barbosa, Girardota, Copacabana, Sabaneta, La Estrella, Caldas y Envigado; para sitios por fuera de las ciudades microzonificadas, deben emplearse las curvas de amenaza regionales del Estudio General de Amenaza Sísmica de Colombia (AIS, 2009). Como ejemplo de aplicación del análisis pseudo-estático a nivel municipal, en el municipio de Andes (Antioquia) se evaluaron las aceleraciones horizontales generadas por dos escenarios sísmicos, históricos y potenciales, correspondientes a las fuentes sismogénicas del Eje Cafetero y de Murindó.</p>
 </section>
 <section id="desplazamientos-permanentes">
 <h3>Desplazamientos permanentes<a class="headerlink" href="#desplazamientos-permanentes" title="Link to this heading">#</a></h3>
@@ -1489,7 +1516,7 @@ de Newmark a través de una regresión logarítmica estimada por Jibson:</p>
 </section>
 <section id="modelos-probabilisticos">
 <h2>Modelos probabilísticos<a class="headerlink" href="#modelos-probabilisticos" title="Link to this heading">#</a></h2>
-<p>En los enfoques aneriores, determinísticos, los parámetros se suponen constantes obteniendo como resultado único el factor de seguridad como índice de estabilidad. POr le contrario, en los enfoques prababilísticos los parámetros son variables por loq ue el resultado es uan distribución de probabilidad obteniendo como resultado el índice de confiabilidad y la probabilidad de ruptura. Para esto existen métodos como <em>Montecarlo</em>, <em>Estimativas puntuales</em> y el método FOSM. A continuación se describirá el método FOSM.</p>
+<p>En los enfoques anteriores, determinísticos, los parámetros se suponen constantes obteniendo como resultado único el factor de seguridad como índice de estabilidad. Por el contrario, en los enfoques probabilísticos los parámetros son variables por lo que el resultado es una distribución de probabilidad obteniendo como resultado el índice de confiabilidad y la probabilidad de ruptura. Para esto existen métodos como <em>Montecarlo</em>, <em>Estimativas puntuales</em> y el método FOSM. A continuación se describirá el método FOSM.</p>
 <section id="modelo-fosm-first-order-second-moment">
 <h3>Modelo FOSM (<em>First Order Second Moment</em>)<a class="headerlink" href="#modelo-fosm-first-order-second-moment" title="Link to this heading">#</a></h3>
 <p>El método estadístico FOSM emplea la expansión de la serie de Taylor de primer orden para derivar el
@@ -1509,17 +1536,17 @@ aleatorias no correlacionadas F (<span class="math notranslate nohighlight">\(x_
 Taylor.</p>
 <p>Para el uso de N variables independientes con naturaleza probabilística inicialmente se calcula el factor de seguridad media <span class="math notranslate nohighlight">\(E[FS]\)</span> utilizando los valores de los parámetros medios:</p>
 <p><span class="math notranslate nohighlight">\(E[FS]=F(\bar{x}_1, \bar{x}_2, ..., \bar{x}_N)\)</span></p>
-<p>Posteriormente se debe calcular la varianza del factr de seguridad con la siguiente expresión:</p>
+<p>Posteriormente se debe calcular la varianza del factor de seguridad con la siguiente expresión:</p>
 <p><span class="math notranslate nohighlight">\(V[FS]=\sum_{i=1}^{N}(\frac{dFS}{dx_i})^2 V(x_i)\)</span></p>
 <p>Donde <span class="math notranslate nohighlight">\(\bar{x}_𝑖\)</span> y <span class="math notranslate nohighlight">\(V(𝑥_𝑖)\)</span> son la media y varianza de cada variable aleatoria, respectivamente.</p>
-<p>Con la varianza, se determina la desviación estandar y finalmente, se obtiene el Índice de Confiabilidad del Factor de Seguridad, calculado por:</p>
+<p>Con la varianza, se determina la desviación estándar y finalmente, se obtiene el Índice de Confiabilidad del Factor de Seguridad, calculado por:</p>
 <p><span class="math notranslate nohighlight">\(\beta I=\frac{E[FS]-1}{\sigma[FS]}\)</span></p>
-<p>Donde 𝐸[𝐹𝑆] es el valor esperado del factor de seguridad calculado con los parámetros medios de las variables independientes y 𝜎[𝐹𝑆] es la desviación estándar del Factor de Seguridad (FS) obtenida , teniendo como el FS crítico el valor
+<p>Donde 𝐸[𝐹𝑆] es el valor esperado del factor de seguridad calculado con los parámetros medios de las variables independientes y 𝜎[𝐹𝑆] es la desviación estándar del Factor de Seguridad (FS) obtenida, teniendo como el FS crítico el valor
 igual a 1. Este índice expresa la confiabilidad del factor de seguridad en relación con la probabilidad de falla o ruptura.
 El método FOSM permite evaluar la variabilidad de cualquiera de los parámetros incluidos dentro del análisis.</p>
 <section id="ejemplo">
 <h4>Ejemplo<a class="headerlink" href="#ejemplo" title="Link to this heading">#</a></h4>
-<p>Tomado del Prof. George Fernandes Azevedo de la Universidad Federal do Maranhao (Brasil)</p>
+<p>Tomado del Prof. George Fernandes Azevedo de la Universidad Federal do Maranhão (Brasil)</p>
 <figure class="align-default" id="fosm1">
 <a class="reference internal image-reference" href="https://i.pinimg.com/originals/01/e4/d3/01e4d38406a12108bbb53524528f6966.jpg"><img alt="FOSM1" src="https://i.pinimg.com/originals/01/e4/d3/01e4d38406a12108bbb53524528f6966.jpg" style="width: 600px;" />
 </a>
@@ -1552,9 +1579,10 @@ El método FOSM permite evaluar la variabilidad de cualquiera de los parámetros
 <a class="reference internal image-reference" href="https://i.pinimg.com/564x/85/a8/ae/85a8ae2bbd1112bf02d9e230df78d4b7.jpg"><img alt="FOSM5" src="https://i.pinimg.com/564x/85/a8/ae/85a8ae2bbd1112bf02d9e230df78d4b7.jpg" style="width: 600px;" />
 </a>
 <figcaption>
-<p><span class="caption-number">Fig. 82 </span><span class="caption-text">Cálculo del Indice de Confiabilidad</span><a class="headerlink" href="#fosm5" title="Link to this image">#</a></p>
+<p><span class="caption-number">Fig. 82 </span><span class="caption-text">Cálculo del Índice de Confiabilidad</span><a class="headerlink" href="#fosm5" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
+<p>Un ejemplo clásico e ilustrativo de la aplicación del método FOSM corresponde al análisis de un corte vertical cohesivo de 10 m de altura, en el que se evalúa el margen de seguridad <span class="math notranslate nohighlight">\(M=c-\gamma H/4\)</span>, tratando la cohesión (<span class="math notranslate nohighlight">\(\mu_c=100\)</span> kPa, <span class="math notranslate nohighlight">\(\sigma_c=30\)</span> kPa) y el peso unitario (<span class="math notranslate nohighlight">\(\mu_\gamma=20\)</span> kN/m³, <span class="math notranslate nohighlight">\(\sigma_\gamma=2\)</span> kN/m³) como variables aleatorias. Asumiendo variables no correlacionadas, se obtiene un margen de seguridad esperado <span class="math notranslate nohighlight">\(\mu_M=50\)</span> kPa con una varianza <span class="math notranslate nohighlight">\(\sigma_M^2=925\)</span> kPa², de donde resulta un índice de confiabilidad <span class="math notranslate nohighlight">\(\beta=1,64\)</span> y una probabilidad de falla <span class="math notranslate nohighlight">\(P_f\approx5,01\)</span>x<span class="math notranslate nohighlight">\(10^{-2}\)</span> (5,01%). Este tipo de ejercicio permite dimensionar de forma concreta cómo la incertidumbre en los parámetros geotécnicos de entrada se traduce directamente en una probabilidad de falla cuantificable, en lugar de un único valor determinístico del factor de seguridad.</p>
 </section>
 </section>
 </section>
@@ -1567,9 +1595,6 @@ El método FOSM permite evaluar la variabilidad de cualquiera de los parámetros
 <li><p><strong>Comparación SHALSTAB vs. método estadístico:</strong> Compara el mapa de estabilidad SHALSTAB con el mapa de susceptibilidad por Regresión Logística del capítulo 09. Calcula el coeficiente de correlación espacial entre ambos. ¿En qué zonas difieren significativamente los resultados?</p></li>
 </ol>
 </section>
-<section id="referencias">
-<h2>Referencias<a class="headerlink" href="#referencias" title="Link to this heading">#</a></h2>
-<span class="target" id="id3"></span></section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -1627,15 +1652,17 @@ El método FOSM permite evaluar la variabilidad de cualquiera de los parámetros
             
             
               
-                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
 
 
-  <div class="sidebar-secondary-item">
-  <div class="page-toc tocsection onthispage">
+  <div class="sidebar-secondary-item"><div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
     <i class="fa-solid fa-list"></i> Contents
   </div>
-  <nav class="bd-toc-nav page-toc">
-    <ul class="visible nav section-nav flex-column">
+  <nav id="pst-page-toc-nav" class="page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="pst-show_toc_level nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#objetivos-de-aprendizaje">Objetivos de aprendizaje</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#requisitos-previos">Requisitos previos</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#factor-detonante-lluvia">Factor detonante lluvia</a><ul class="nav section-nav flex-column">
@@ -1650,7 +1677,7 @@ El método FOSM permite evaluar la variabilidad de cualquiera de los parámetros
 <li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#ejecucion-de-los-programas">Ejecución de los programas</a></li>
 <li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#grid-match">Grid Match</a></li>
 <li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#topo-index">Topo index</a></li>
-<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">TRIGRS</a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">TRIGRS</a></li>
 <li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#propiedades-fisicas-del-suelo">Propiedades físicas del suelo</a></li>
 <li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#intensidad-del-escenario-de-lluvia-e-incrementos-de-tiempo">Intensidad del escenario de lluvia e incrementos de tiempo</a></li>
 <li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#archivos-de-entrada">Archivos de entrada</a></li>
@@ -1676,7 +1703,6 @@ El método FOSM permite evaluar la variabilidad de cualquiera de los parámetros
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#actividades">Actividades</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#referencias">Referencias</a></li>
 </ul>
   </nav></div>
 
@@ -1725,8 +1751,8 @@ By Edier V. Aristizábal G.
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
-<script src="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+  <script defer src="_static/scripts/bootstrap.js?digest=55c26ed414f5f8a31ebb"></script>
+<script defer src="_static/scripts/pydata-sphinx-theme.js?digest=55c26ed414f5f8a31ebb"></script>
 
   <footer class="bd-footer">
   </footer>
